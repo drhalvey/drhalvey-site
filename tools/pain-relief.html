@@ -67,8 +67,6 @@
 </head>
 <body>
 
-<div class="proto-banner"><strong>PROTOTYPE - not live.</strong> For Dr Halvey's review only. Not for patient use yet.</div>
-
 <header class="site">
   <a href="../index.html" title="Home" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:14px">
     <div class="logo">EH</div>
@@ -79,44 +77,24 @@
 
 <div class="wrap">
 
-  <section id="screen-select" class="panel">
-    <h2>Find the pain relief plan your anaesthetist gave you</h2>
-    <p class="lede">These are the recovery pain relief plans Dr Halvey prescribes. Select the plan you were
-      given to see it on screen.</p>
-    <div class="framing"><b>Please read:</b> each plan is set in advance. This page only <b>shows</b> a plan -
-      it does not work anything out for you and does not change your doses. Only follow the plan that
+  <section id="screen-code" class="panel">
+    <h2>View your pain relief plan</h2>
+    <p class="lede">Enter the code Dr Halvey sent you to see the recovery pain relief plan for your operation.</p>
+    <div class="framing"><b>Please read:</b> this page only <b>shows</b> the plan Dr Halvey set for you. It does
+      not work anything out and does not change your doses. Only follow the plan that
       <b>Dr Halvey or your anaesthetist has confirmed is for you.</b></div>
-    <label class="field" for="op">Which plan were you given?</label>
-    <select id="op">
-      <option value="">- Select your plan -</option>
-      <option value="etoricoxib">General post-operative pain relief - with etoricoxib</option>
-      <option value="celecoxib">General post-operative pain relief - with celecoxib</option>
-      <option value="ibuprofen">General post-operative pain relief - with ibuprofen</option>
-      <option value="caesarean">Caesarean section</option>
-      <option value="acl_cel">ACL reconstruction - with celecoxib (slow-release plan)</option>
-      <option value="acl_eto">ACL reconstruction - with etoricoxib (slow-release plan)</option>
-      <option value="joint">Hip and knee replacement (slow-release plan)</option>
-    </select>
-    <p class="hint">Most operations use a general plan. The slow-release plans are used for ACL reconstruction and hip and knee replacement.</p>
-    <button class="btn" id="toGate" disabled>Continue</button>
-  </section>
-
-  <section id="screen-gate" class="panel hidden">
-    <div class="backbar"><button class="btn ghost" data-back="screen-select">← Back</button></div>
-    <h2>Confirm this plan is yours</h2>
-    <p class="lede">These plans include strong (Schedule 8) pain medicines that are not suitable for
-      everyone, so they are only shown to patients Dr Halvey has given them to.</p>
-    <label class="field" for="code">Access code from Dr Halvey's rooms</label>
-    <input type="text" id="code" autocomplete="off" placeholder="Enter the code you were given">
-    <p class="hint">Prototype: enter any code (e.g. <b>DEMO</b>) to continue.</p>
+    <label class="field" for="codein">Your code</label>
+    <input type="text" id="codein" autocomplete="off" autocapitalize="characters" placeholder="Enter the code from your text message">
+    <p class="hint" id="codeerr" style="display:none;color:var(--stop-ink);font-weight:600">That code was not recognised. Please check the code Dr Halvey sent you, or contact the rooms.</p>
     <label class="check"><input type="checkbox" id="confirm">
       <span>I confirm <b>Dr Halvey or my anaesthetist has given me this plan for my own operation.</b> I understand it is my personal plan, not general advice.</span></label>
     <button class="btn" id="toPlan" disabled>View my plan</button>
+    <input type="hidden" id="op">
   </section>
 
   <section id="screen-plan" class="hidden">
     <div class="panel">
-      <div class="backbar noprint"><button class="btn ghost" data-back="screen-gate">← Back</button></div>
+      <div class="backbar noprint"><button class="btn ghost" data-back="screen-code">← Back</button></div>
       <h2 id="planTitle">Your recovery pain relief plan</h2>
       <div class="plan-meta"><span class="tag" id="planTag"></span><span class="tag grey">Set by Dr Ed Halvey</span><span class="tag grey">Display only</span></div>
       <p class="lede" id="planLede"></p>
@@ -247,15 +225,20 @@ function fullBody(p){
       '<p class="hint">You should no longer be taking slow-release tapentadol beyond 3 weeks, ideally 2 weeks.</p></div>';
 }
 
-/* ===== navigation ===== */
-var op=document.getElementById('op'),toGate=document.getElementById('toGate'),toPlan=document.getElementById('toPlan'),
-    code=document.getElementById('code'),confirm=document.getElementById('confirm');
-function show(id){['screen-select','screen-gate','screen-plan'].forEach(function(s){document.getElementById(s).classList.toggle('hidden',s!==id);});window.scrollTo({top:0,behavior:'smooth'});}
-op.addEventListener('change',function(){toGate.disabled=!op.value;});
-toGate.addEventListener('click',function(){if(op.value)show('screen-gate');});
-function gate(){toPlan.disabled=!(code.value.trim()&&confirm.checked);}
-code.addEventListener('input',gate);confirm.addEventListener('change',gate);
-toPlan.addEventListener('click',function(){if(code.value.trim()&&confirm.checked)renderPlan();});
+/* ===== navigation (code first, then plan) ===== */
+var op=document.getElementById('op'),toPlan=document.getElementById('toPlan'),
+    codein=document.getElementById('codein'),confirm=document.getElementById('confirm'),codeerr=document.getElementById('codeerr');
+function show(id){['screen-code','screen-plan'].forEach(function(s){document.getElementById(s).classList.toggle('hidden',s!==id);});window.scrollTo({top:0,behavior:'smooth'});}
+function lookupCode(raw){var c=(raw||'').toUpperCase().replace(/\s+/g,'');if(!c)return null;if(CODES[c])return CODES[c];for(var k in CODES){if(k.replace(/-/g,'')===c.replace(/-/g,''))return CODES[k];}return null;}
+function gate(){toPlan.disabled=!(codein.value.trim()&&confirm.checked);if(codeerr)codeerr.style.display='none';}
+codein.addEventListener('input',gate);confirm.addEventListener('change',gate);
+codein.addEventListener('keydown',function(e){if(e.key==='Enter'&&!toPlan.disabled){e.preventDefault();toPlan.click();}});
+toPlan.addEventListener('click',function(){
+  if(!(codein.value.trim()&&confirm.checked))return;
+  var key=lookupCode(codein.value);
+  if(!key){codeerr.style.display='block';return;}
+  op.value=key; renderPlan();
+});
 document.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-back'));});});
 
 function renderPlan(){
