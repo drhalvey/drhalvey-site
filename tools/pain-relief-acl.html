@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Tool is access-gated and must never be indexed by search engines -->
+<meta name="robots" content="noindex, nofollow">
+<title>Your pain relief plan - Dr Ed Halvey</title>
+<style>
+  :root{
+    --teal:#16726b;
+    --teal-d:#0f544f;
+    --teal-l:#e7f1f0;
+    --ink:#1d2b2a;
+    --muted:#5a6b6a;
+    --line:#d6e0df;
+    --bg:#f6f8f8;
+    --card:#ffffff;
+    --warn-bg:#fef4ec;
+    --warn-line:#e8a06a;
+    --warn-ink:#8a4b16;
+    --stop-bg:#fbecec;
+    --stop-line:#d98a8a;
+    --stop-ink:#9a2b2b;
+    --radius:14px;
+    --shadow:0 1px 3px rgba(16,40,38,.08), 0 8px 24px rgba(16,40,38,.06);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1040px;margin:0 auto;padding:24px 20px 80px}
+  .proto-banner{
+    background:#2b2b2b;color:#fff;font-size:13px;text-align:center;
+    padding:8px 16px;letter-spacing:.02em;
+  }
+  .proto-banner strong{color:#ffd9a6}
+  header.site{
+    display:flex;align-items:center;gap:14px;padding:22px 20px;max-width:1040px;margin:0 auto;
+  }
+  .logo{
+    width:42px;height:42px;border-radius:11px;background:var(--teal);
+    display:grid;place-items:center;color:#fff;font-weight:700;font-size:17px;flex:0 0 auto;
+  }
+  .site h1{font-size:17px;margin:0;font-weight:650}
+  .site .sub{font-size:13px;color:var(--muted);margin:0}
+
+  .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    box-shadow:var(--shadow);padding:28px;margin-bottom:22px}
+  h2{font-size:24px;margin:0 0 6px;letter-spacing:-.01em}
+  h3{font-size:16px;margin:22px 0 8px}
+  p.lede{font-size:16px;color:var(--muted);margin:0 0 18px;max-width:62ch}
+
+  .framing{
+    background:var(--teal-l);border:1px solid #c5dedb;border-radius:12px;
+    padding:16px 18px;font-size:14.5px;color:#214b47;margin:18px 0 4px;max-width:70ch
+  }
+  .framing b{color:var(--teal-d)}
+
+  label.field{display:block;font-weight:600;font-size:14px;margin:18px 0 6px}
+  select,input[type=text]{
+    width:100%;max-width:480px;font-size:16px;padding:12px 14px;border:1.5px solid var(--line);
+    border-radius:10px;background:#fff;color:var(--ink);font-family:inherit
+  }
+  select:focus,input:focus{outline:none;border-color:var(--teal)}
+  .hint{font-size:12.5px;color:var(--muted);margin:6px 0 0}
+
+  .btn{
+    appearance:none;border:0;cursor:pointer;font-family:inherit;font-size:15px;font-weight:600;
+    background:var(--teal);color:#fff;padding:12px 22px;border-radius:10px;margin-top:22px;
+    transition:background .15s
+  }
+  .btn:hover{background:var(--teal-d)}
+  .btn:disabled{background:#a9c2bf;cursor:not-allowed}
+  .btn.ghost{background:transparent;color:var(--teal-d);border:1.5px solid var(--line);margin-top:0}
+  .btn.ghost:hover{background:var(--teal-l)}
+
+  .check{display:flex;gap:11px;align-items:flex-start;margin:16px 0 0;max-width:62ch;font-size:14.5px}
+  .check input{margin-top:3px;width:18px;height:18px;flex:0 0 auto;accent-color:var(--teal)}
+
+  .hidden{display:none}
+
+  /* steps intro */
+  .steps{display:grid;gap:14px;grid-template-columns:repeat(3,1fr);margin:6px 0 8px}
+  .step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
+  .step .n{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+    background:var(--teal);color:#fff;font-weight:700;font-size:14px;margin-bottom:8px}
+  .step h4{margin:0 0 4px;font-size:15px}
+  .step p{margin:0;font-size:13.5px;color:var(--muted)}
+  @media(max-width:720px){.steps{grid-template-columns:1fr}}
+
+  /* schedule table */
+  .tablecard{padding:0;overflow:hidden}
+  .table-scroll{overflow-x:auto}
+  table.sched{border-collapse:collapse;width:100%;min-width:760px;font-size:13.5px}
+  .sched thead th{background:var(--teal);color:#fff;font-weight:600;padding:10px 12px;text-align:left;
+    border-right:1px solid rgba(255,255,255,.18);vertical-align:middle}
+  .sched .dayhdr th{background:var(--teal-d);font-size:12px;text-align:center;padding:7px 6px}
+  .sched td{border-top:1px solid var(--line);border-right:1px solid var(--line);padding:11px 12px;vertical-align:top}
+  .sched tbody tr:nth-child(even){background:#fbfcfc}
+  .timecol{font-weight:700;color:var(--teal-d);white-space:nowrap;background:#f0f5f4 !important;width:64px}
+  .med{font-weight:650}
+  .med .dose{display:block;font-weight:400;color:var(--muted);font-size:12.5px}
+  .safety{color:var(--muted);font-size:12.5px;max-width:200px}
+  .regimen{color:#2f3f3e;font-size:13px}
+  .regimen.note-prn{background:#f3f7f6}
+  .pill{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:4px}
+  .pill.opioid{background:#efe4f3;color:#6b3a82}
+  .pill.s8{background:#fde8e8;color:#9a2b2b}
+
+  /* safety blocks */
+  .safety-grid{display:grid;gap:14px;grid-template-columns:1fr 1fr;margin-top:6px}
+  @media(max-width:720px){.safety-grid{grid-template-columns:1fr}}
+  .alert{border-radius:12px;padding:15px 17px;font-size:14px}
+  .alert h4{margin:0 0 5px;font-size:14.5px;display:flex;align-items:center;gap:8px}
+  .alert.warn{background:var(--warn-bg);border:1px solid var(--warn-line);color:var(--warn-ink)}
+  .alert.stop{background:var(--stop-bg);border:1px solid var(--stop-line);color:var(--stop-ink)}
+  .alert.info{background:var(--teal-l);border:1px solid #c5dedb;color:#214b47}
+  .alert .ico{font-size:16px}
+
+  .help{background:#fff;border:1.5px solid var(--teal);border-radius:12px;padding:18px 20px;margin-top:16px}
+  .help h3{margin:0 0 8px;color:var(--teal-d)}
+  .help .row{display:flex;gap:8px;align-items:baseline;font-size:14.5px;margin:4px 0}
+  .help .row b{min-width:128px;color:var(--ink)}
+  .emerg{color:var(--stop-ink);font-weight:600}
+
+  .footnote{font-size:12px;color:var(--muted);margin-top:26px;border-top:1px solid var(--line);padding-top:16px}
+  .backbar{margin-bottom:16px}
+  .plan-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:2px 0 14px}
+  .tag{font-size:12px;font-weight:600;background:var(--teal-l);color:var(--teal-d);padding:4px 11px;border-radius:20px}
+  .tag.grey{background:#eef1f1;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<div class="proto-banner">
+  <strong>PROTOTYPE - not live.</strong> For Dr Halvey's review only. Display-only mock-up; not for patient use yet.
+</div>
+
+<header class="site">
+  <div class="logo">EH</div>
+  <div>
+    <h1>Dr Ed Halvey</h1>
+    <p class="sub">Specialist Anaesthetist · Recovery &amp; pain relief plans</p>
+  </div>
+  <a href="../pre-op-guidance.html" style="margin-left:auto;font-size:13.5px;color:var(--teal-d);text-decoration:none;font-weight:600">← Back to guidance</a>
+</header>
+
+<div class="wrap">
+
+  <!-- ===================== SCREEN 1: SELECT OPERATION ===================== -->
+  <section id="screen-select" class="panel">
+    <h2>Find the pain relief plan your anaesthetist gave you</h2>
+    <p class="lede">These are the recovery pain relief plans Dr Halvey prescribes for specific
+      operations. Select the operation you were given a plan for to see it on screen.</p>
+
+    <div class="framing">
+      <b>Please read:</b> Each plan is set in advance for a specific operation. This page only
+      <b>shows</b> a plan - it does not work anything out for you and it does not change your doses.
+      Only follow the plan that <b>Dr Halvey or your anaesthetist has personally confirmed is for you.</b>
+      If you are not sure which plan is yours, do not guess - contact the rooms.
+    </div>
+
+    <label class="field" for="op">Which operation were you given a plan for?</label>
+    <select id="op">
+      <option value="">- Select your operation -</option>
+      <option value="acl">ACL knee reconstruction</option>
+      <option value="" disabled>Knee arthroscopy - (plan not loaded in this prototype)</option>
+      <option value="" disabled>Total knee replacement - (plan not loaded in this prototype)</option>
+      <option value="" disabled>Total hip replacement - (plan not loaded in this prototype)</option>
+      <option value="" disabled>Shoulder reconstruction - (plan not loaded in this prototype)</option>
+      <option value="" disabled>Rotator cuff repair - (plan not loaded in this prototype)</option>
+    </select>
+    <p class="hint">This prototype has the ACL plan wired up. Other operations are placeholders to show how the list will work.</p>
+
+    <button class="btn" id="toGate" disabled>Continue</button>
+  </section>
+
+  <!-- ===================== SCREEN 2: ACCESS STEP ===================== -->
+  <section id="screen-gate" class="panel hidden">
+    <div class="backbar"><button class="btn ghost" data-back="screen-select">← Back</button></div>
+    <h2>Confirm this plan is yours</h2>
+    <p class="lede">This plan includes a strong (Schedule 8) pain medicine and anti-inflammatory
+      medicines that are not suitable for everyone. For that reason it is only shown to patients
+      Dr Halvey has given it to.</p>
+
+    <label class="field" for="code">Access code from Dr Halvey's rooms</label>
+    <input type="text" id="code" autocomplete="off" placeholder="Enter the code you were given">
+    <p class="hint">Prototype: enter any code (e.g. <b>DEMO</b>) to continue. In the live tool this is the code Dr Halvey gives you with your plan.</p>
+
+    <label class="check">
+      <input type="checkbox" id="confirm">
+      <span>I confirm that <b>Dr Halvey or my anaesthetist has given me this ACL plan for my own operation.</b> I understand it is my personal plan and is not general advice.</span>
+    </label>
+
+    <button class="btn" id="toPlan" disabled>View my plan</button>
+  </section>
+
+  <!-- ===================== SCREEN 3: THE PLAN ===================== -->
+  <section id="screen-plan" class="hidden">
+    <div class="panel">
+      <div class="backbar"><button class="btn ghost" data-back="screen-gate">← Back</button></div>
+      <h2>Pain relief plan - ACL knee reconstruction</h2>
+      <div class="plan-meta">
+        <span class="tag">Days 0-14 (first 2 weeks)</span>
+        <span class="tag grey">Set by Dr Ed Halvey</span>
+        <span class="tag grey">Display only - not personalised</span>
+      </div>
+      <p class="lede">Most patients recover well with a simple layered approach. Take the regular
+        medicines on schedule; only step up to the stronger medicine if you genuinely need it.</p>
+
+      <div class="steps">
+        <div class="step">
+          <span class="n">1</span>
+          <h4>Regular medicines</h4>
+          <p>Take paracetamol (Panadol Osteo) and your anti-inflammatory regularly. These do most of the work.</p>
+        </div>
+        <div class="step">
+          <span class="n">2</span>
+          <h4>Check your pain</h4>
+          <p>Still stopping you moving or sleeping, or 7/10 or higher? Wait 30-60 min after your regular medicines before deciding.</p>
+        </div>
+        <div class="step">
+          <span class="n">3</span>
+          <h4>Stronger medicine, only if needed</h4>
+          <p>Tapentadol is a strong opioid baseline. Many patients need little or none. Use for the shortest time possible.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- schedule table -->
+    <div class="panel tablecard">
+      <div class="table-scroll">
+        <table class="sched">
+          <thead>
+            <tr>
+              <th rowspan="2">Time</th>
+              <th rowspan="2">Medicine</th>
+              <th rowspan="2">Important safety message</th>
+              <th colspan="2" style="text-align:center">When to take it</th>
+            </tr>
+            <tr class="dayhdr">
+              <th>1st night &amp; days 1-5</th>
+              <th>Days 6-14</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- 8 am -->
+            <tr>
+              <td class="timecol" rowspan="5">8 am</td>
+              <td class="med">Panadol Osteo<span class="dose">two 665 mg tablets</span></td>
+              <td class="safety">Good background pain killer</td>
+              <td class="regimen">Take regularly</td>
+              <td class="regimen note-prn">Then use only as required</td>
+            </tr>
+            <tr>
+              <td class="med">Celecoxib 100-200 mg<br><span class="dose">OR Etoricoxib 90-120 mg daily</span></td>
+              <td class="safety">If you become dehydrated through vomiting, diarrhoea etc, <b>stop taking this medication</b></td>
+              <td class="regimen">Take regularly</td>
+              <td class="regimen note-prn">Then use only as required</td>
+            </tr>
+            <tr>
+              <td class="med"><span class="pill s8">S8 opioid</span><br>Tapentadol<span class="dose">sustained release</span></td>
+              <td class="safety">Strong opioid, baseline pain killer</td>
+              <td class="regimen" colspan="2">Only sometimes used, for short duration only</td>
+            </tr>
+            <tr>
+              <td class="med">Coloxyl with Senna &amp; Movicol<span class="dose">laxatives</span></td>
+              <td class="safety">Helps stop pain-killer related constipation</td>
+              <td class="regimen" colspan="2">Can be used after surgery to help prevent constipation</td>
+            </tr>
+            <tr>
+              <td class="med">Vitamin C<span class="dose">1 g daily</span></td>
+              <td class="safety">Helps healing and may lower risk of nerve pain</td>
+              <td class="regimen" colspan="2">Can be used after surgery; available in most stores</td>
+            </tr>
+            <!-- 2 pm -->
+            <tr>
+              <td class="timecol">2 pm</td>
+              <td class="med">Panadol Osteo<span class="dose">two 665 mg tablets</span></td>
+              <td class="safety"></td>
+              <td class="regimen">Take regularly</td>
+              <td class="regimen note-prn">Then use only as required</td>
+            </tr>
+            <!-- 8 pm -->
+            <tr>
+              <td class="timecol" rowspan="3">8 pm</td>
+              <td class="med">Panadol Osteo<span class="dose">two 665 mg tablets</span></td>
+              <td class="safety"></td>
+              <td class="regimen">Take regularly</td>
+              <td class="regimen note-prn">Then use only as required</td>
+            </tr>
+            <tr>
+              <td class="med">Celecoxib 100-200 mg<br><span class="dose">OR Etoricoxib 90-120 mg daily</span></td>
+              <td class="safety"></td>
+              <td class="regimen">Take regularly</td>
+              <td class="regimen note-prn">Then use only as required</td>
+            </tr>
+            <tr>
+              <td class="med"><span class="pill s8">S8 opioid</span><br>Tapentadol<span class="dose">sustained release</span></td>
+              <td class="safety">Strong opioid, baseline pain killer</td>
+              <td class="regimen" colspan="2">Only sometimes used, for short duration only</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- safety messages -->
+    <div class="panel">
+      <h3>Important safety information</h3>
+      <div class="safety-grid">
+        <div class="alert warn">
+          <h4><span class="ico">💧</span> If you become dehydrated, stop the anti-inflammatory</h4>
+          If you are vomiting, have diarrhoea or are not drinking enough, <b>stop the celecoxib /
+          etoricoxib</b> until you are well and drinking normally again.
+        </div>
+        <div class="alert stop">
+          <h4><span class="ico">⏱️</span> Stop the strong opioid by 2 weeks</h4>
+          You should <b>no longer be taking sustained / slow-release tapentadol beyond 3 weeks -
+          ideally by 2 weeks.</b> Use it for the shortest time you can.
+        </div>
+        <div class="alert info">
+          <h4><span class="ico">🔒</span> This is your personal plan</h4>
+          This plan was prescribed for you and your operation. <b>Do not share your medicines or
+          this plan with anyone else.</b>
+        </div>
+        <div class="alert info">
+          <h4><span class="ico">💊</span> Don't double up</h4>
+          Only take what is listed, at the times listed. Never exceed the maximum dose written on
+          your prescription label. If unsure, contact the rooms before taking more.
+        </div>
+      </div>
+    </div>
+
+    <!-- when to seek help -->
+    <div class="panel">
+      <div class="help">
+        <h3>When and who to contact for help</h3>
+        <div class="row"><b>Dr Halvey's rooms</b><span>(business hours) - phone number to be confirmed</span></div>
+        <div class="row"><b>After hours / urgent</b><span>Contact your hospital ward or your GP</span></div>
+        <div class="row"><b class="emerg">Emergency</b><span class="emerg">Severe chest pain, trouble breathing, uncontrolled bleeding, or you cannot wake the patient - call 000</span></div>
+        <p class="hint" style="margin-top:12px">Contact the rooms if: your pain is not controlled by this plan, you cannot tolerate a medicine, you have ongoing vomiting or can't keep fluids down, or you have side effects that worry you.</p>
+      </div>
+    </div>
+
+    <p class="footnote">
+      This screen <b>displays</b> a fixed plan that Dr Halvey set in advance for ACL reconstruction.
+      It does not calculate, personalise, or recommend doses, and nothing you enter changes the plan
+      shown. Always follow the plan and prescription your anaesthetist confirmed for you. ·
+      Prototype build for review - content digitised from Dr Halvey's existing ACL 0-14 day sheet.
+    </p>
+  </section>
+
+</div>
+
+<script>
+  // Pure display navigation. No input affects the plan content.
+  var op = document.getElementById('op');
+  var toGate = document.getElementById('toGate');
+  var toPlan = document.getElementById('toPlan');
+  var code = document.getElementById('code');
+  var confirm = document.getElementById('confirm');
+
+  function show(id){
+    ['screen-select','screen-gate','screen-plan'].forEach(function(s){
+      document.getElementById(s).classList.toggle('hidden', s !== id);
+    });
+    window.scrollTo({top:0,behavior:'smooth'});
+  }
+
+  op.addEventListener('change', function(){ toGate.disabled = !op.value; });
+  toGate.addEventListener('click', function(){ if(op.value) show('screen-gate'); });
+
+  function gateReady(){ toPlan.disabled = !(code.value.trim() && confirm.checked); }
+  code.addEventListener('input', gateReady);
+  confirm.addEventListener('change', gateReady);
+  toPlan.addEventListener('click', function(){
+    if(code.value.trim() && confirm.checked) show('screen-plan');
+  });
+
+  document.querySelectorAll('[data-back]').forEach(function(b){
+    b.addEventListener('click', function(){ show(b.getAttribute('data-back')); });
+  });
+</script>
+</body>
+</html>

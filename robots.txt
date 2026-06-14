@@ -1,0 +1,8 @@
+# Staging configuration - keep the whole site out of search engines until cutover.
+# At go-live, replace this file to allow the public pages, but ALWAYS keep /tools/ disallowed.
+User-agent: *
+Disallow: /
+
+# The pain relief tool must never be indexed, even after go-live:
+# User-agent: *
+# Disallow: /tools/

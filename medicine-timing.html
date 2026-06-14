@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My medicine timing planner - Dr Ed Halvey</title>
+<meta name="description" content="A planner to help you see when to take your last dose of common medicines before surgery. General guidance only.">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .tool{max-width:840px}
+  .field-row{display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:18px 0}
+  .field-row label{font-weight:600;font-size:14px;display:block;margin-bottom:6px}
+  input[type=date],#medsearch{font-size:16px;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);font-family:inherit}
+  input[type=date]{min-width:190px}
+  .searchbox{position:relative;flex:1 1 320px}
+  #medsearch{width:100%}
+  .suggest{position:absolute;left:0;right:0;top:100%;background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 10px 10px;max-height:300px;overflow:auto;z-index:30;box-shadow:var(--shadow)}
+  .suggest div{padding:10px 13px;cursor:pointer;font-size:14.5px;border-bottom:1px solid var(--line)}
+  .suggest div:hover,.suggest div.active{background:var(--teal-l)}
+  .suggest .gen{font-weight:600}.suggest .br{color:var(--muted);font-size:13px}
+  .added{margin-top:10px}
+  .medrow{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:13px 15px;margin:10px 0;background:#fff}
+  .medrow.stop{border-left-color:#c98a2b;background:#fff9f0}
+  .medrow.glp{border-left-color:#2b7cc9;background:#f0f6fc}
+  .medrow.insulin{border-left-color:#7a4fc0;background:#f7f4fc}
+  .medrow.ask{border-left-color:#6b7a78;background:#f7f9f9}
+  .medrow .mname{font-weight:680;font-size:15px}
+  .medrow .minstr{font-size:14px;color:#2f3f3e;margin-top:2px}
+  .medrow .mdate{font-weight:700;color:var(--teal-d);margin-top:4px;font-size:14.5px}
+  .medrow.stop .mdate{color:#9a5a12}
+  .medrow .rm{margin-left:auto;border:0;background:none;color:var(--muted);font-size:22px;cursor:pointer;line-height:1;padding:0 4px}
+  .askq{margin-top:8px;font-size:14px}
+  .askq button{font-family:inherit;font-size:13.5px;font-weight:600;border:1.5px solid var(--teal);background:#fff;color:var(--teal-d);border-radius:8px;padding:6px 12px;margin:6px 8px 0 0;cursor:pointer}
+  .askq button:hover{background:var(--teal-l)}
+  .chip{display:inline-block;font-size:12px;font-weight:700;background:#eef1f1;color:#5a6b6a;border-radius:20px;padding:2px 9px;margin-left:6px;cursor:pointer}
+  .empty{color:var(--muted);font-size:14px;padding:8px 0}
+  .actions-row{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+  .cal-wrap{margin-top:22px;display:flex;gap:20px;flex-wrap:wrap}
+  .cal{border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;min-width:266px}
+  .cal h4{margin:0 0 8px;font-size:15px;color:var(--teal-d);text-align:center}
+  .cal table{border-collapse:collapse;width:100%}
+  .cal th{font-size:11px;color:var(--muted);font-weight:600;padding:3px 0}
+  .cal td{text-align:center;padding:2px}
+  .cal .day{width:30px;height:30px;line-height:30px;border-radius:50%;font-size:13px;margin:0 auto;color:var(--ink)}
+  .cal .surg{background:var(--teal);color:#fff;font-weight:700}
+  .cal .dose{box-shadow:inset 0 0 0 2px #c98a2b;color:#9a5a12;font-weight:700;cursor:default}
+  .legend{font-size:12.5px;color:var(--muted);margin-top:10px;display:flex;gap:16px;flex-wrap:wrap}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .sw{width:14px;height:14px;border-radius:50%;display:inline-block}
+  .sw.s{background:var(--teal)}.sw.d{box-shadow:inset 0 0 0 2px #c98a2b}
+  .printhead{display:none}
+  @media print{.topbar,footer.site,.noprint,.searchbox,.field-row label[for=medsearch]{display:none !important}
+    .medrow .rm,.askq button{display:none}.printhead{display:block;margin-bottom:14px}body{background:#fff}}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo">EH</span>
+      <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
+    </a>
+    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <div class="navlinks" id="nav">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="services.html">Services</a>
+      <a class="navlink" href="procedures.html">Procedures</a>
+      <a class="navlink" href="hospitals.html">Hospitals</a>
+      <a class="navlink active" href="pre-op-guidance.html">Pre-op guidance</a>
+      <a class="navlink" href="clinical-research.html">Research</a>
+      <a class="navlink" href="tools/pain-relief.html">Pain plan</a>
+      <a class="navlink" href="clinicians.html" style="opacity:.55">Clinician</a>
+      <a class="cta" href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="block">
+  <div class="wrap tool">
+    <p class="eyebrow"><a href="medicines-before-surgery.html">Medicines before surgery</a> › Timing planner</p>
+    <h2 class="sec">My medicine timing planner</h2>
+    <p class="lead">Enter your surgery date and your medicines to see when to take your last dose. You can
+      print the list, or add the dates to your calendar.</p>
+
+    <div class="callout warn" style="margin-top:16px">
+      <b>This is a general guide.</b> It is based on Dr Halvey's standard pre-operative medication plan.
+      Always follow any different instructions you are given by Dr Halvey, your surgeon or the
+      pre-admission clinic - if they differ from this page, follow them. A few medicines ask you one
+      extra question so the advice fits you.
+    </div>
+
+    <div class="printhead"><strong>My medicine plan before surgery</strong> &nbsp;·&nbsp; prepared from Dr Halvey's general guide</div>
+
+    <div class="field-row">
+      <div>
+        <label for="surgdate">Date of your surgery</label>
+        <input type="date" id="surgdate">
+      </div>
+      <div class="searchbox">
+        <label for="medsearch">Add a medicine (type a brand or generic name)</label>
+        <input type="text" id="medsearch" autocomplete="off" placeholder="e.g. Xarelto, Coversyl, Lantus, fish oil">
+        <div class="suggest" id="suggest" style="display:none"></div>
+      </div>
+    </div>
+
+    <p class="empty" id="emptymsg">No medicines added yet. Set your surgery date, then start typing a medicine name above. You can add as many as you like.</p>
+    <div class="added" id="added"></div>
+
+    <div id="calwrap" class="cal-wrap noprint" style="display:none"></div>
+
+    <div class="actions-row noprint" id="actionsrow" style="display:none">
+      <button class="btn primary" onclick="window.print()">🖨️ Print my list</button>
+      <button class="btn ghost" onclick="downloadICS()">📅 Add dates to my calendar</button>
+      <button class="btn ghost" onclick="clearAll()">Start again</button>
+    </div>
+
+    <div class="callout info" style="margin-top:24px">
+      <b>Can't find your medicine, or not sure?</b> Bring all your medicines (or a full list) to hospital
+      and ask, or <a href="contact.html">contact the rooms</a>.
+    </div>
+
+    <p style="font-size:12px;color:var(--muted);margin-top:18px">
+      This planner runs entirely in your browser. Nothing you type is sent anywhere or stored. In an
+      emergency call 000.
+    </p>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h4>Dr Ed Halvey</h4><p style="color:#9fb6b3;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p></div>
+      <div><h4>Site</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="procedures.html">Procedures</a><a href="pre-op-guidance.html">Pre-op guidance</a><a href="clinical-research.html">Research</a><a href="fees.html">Fees</a><a href="contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a href="contact.html">Make an enquiry</a><a href="tel:0862676200">(08) 6267 6200</a><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a></div>
+    </div>
+    <div class="legal">
+      <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000.</p>
+      <p>© <span id="yr"></span> Dr Ed Halvey.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* ============ rules (based on SCGH peri-operative medication guideline 2023) ============ */
+var RULES={
+  CONTINUE:{cls:"",    instr:"Continue as normal, including on the morning of surgery (with a small sip of water)."},
+  ASPIRIN: {cls:"",    instr:"Low-dose aspirin is usually continued. Keep taking it unless Dr Halvey or your surgeon has told you to stop."},
+  BRING:   {cls:"",    instr:"Continue as normal and bring it to hospital with you."},
+  SKIP_DAY:{cls:"stop",instr:"Take as usual until the day before surgery. Do not take it on the morning of surgery.", dateDays:1, dateLabel:"Last dose"},
+  DIAB_TABLET:{cls:"stop",instr:"Take as usual until the night before surgery. Do not take it on the day of surgery. Restart when you are eating and drinking normally.", dateDays:1, dateLabel:"Last dose"},
+  COX2:    {cls:"",    instr:"This anti-inflammatory (a coxib) is usually fine to continue, as it has little effect on bleeding. Your anaesthetist may pause it if your kidneys are a concern."},
+  NSAID:   {cls:"stop",instr:"Stop this anti-inflammatory 2 to 3 days before surgery, because it can increase bleeding.", dateDays:3, dateLabel:"Last dose"},
+  STEROID: {cls:"",    instr:"Do not stop suddenly. Continue, and tell your anaesthetist - you may need extra 'stress' doses around surgery."},
+  STOP7:   {cls:"stop",instr:"Stop at least 7 days before surgery.", dateDays:7, dateLabel:"Last dose"},
+  GLP1:    {cls:"glp", instr:"Keep taking this as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the <a href='medicines-before-surgery.html'>medicines page</a>."},
+  SGLT2:   {cls:"stop",instr:"Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. Restart only when you are eating, drinking and well.", dateDays:3, dateLabel:"Last dose"},
+  WARFARIN:{cls:"stop",instr:"Stop warfarin 5 days before surgery. You will usually need an INR blood test, and some people need 'bridging' injections - the rooms or your warfarin clinic will arrange this.", dateDays:5, dateLabel:"Last dose"},
+  CLOPIDOGREL:{cls:"stop",instr:"Stop 7 days before surgery. <b>If you have a heart stent, do not stop without checking with the rooms first</b> - it may need to continue.", dateDays:7, dateLabel:"Last dose"},
+  TICAGRELOR:{cls:"stop",instr:"Stop 5 days before surgery. <b>If you have a heart stent, do not stop without checking with the rooms first.</b>", dateDays:5, dateLabel:"Last dose"},
+  PRASUGREL:{cls:"stop",instr:"Stop 7 days before surgery. <b>If you have a heart stent, do not stop without checking with the rooms first.</b>", dateDays:7, dateLabel:"Last dose"},
+  DIPYRIDAMOLE:{cls:"stop",instr:"Stop 2 days before surgery. If it is combined with aspirin (Asasantin), the aspirin part is usually continued - check with the rooms.", dateDays:2, dateLabel:"Last dose"},
+  LMWH:    {cls:"stop",instr:"If you take a low (preventive) dose: last dose at least 12 hours before surgery. If you take a high (treatment) dose: last dose at least 24 hours before. The rooms will confirm which applies to you."},
+  LITHIUM: {cls:"stop",instr:"Continue for minor surgery. For major surgery, take your last dose the day before (stop about 24 hours before). The rooms will confirm, and you may need a blood test.", dateDays:1, dateLabel:"Last dose (major surgery)"},
+  HRT:     {cls:"",    instr:"Usually continued, with measures to prevent blood clots. If you are at higher risk of clots, it may be stopped 4 to 6 weeks before surgery - the rooms will advise based on your operation and your risk."},
+  BIOLOGIC:{cls:"stop",instr:"These are usually paused before surgery (often skipping 1 to 2 doses) to lower the risk of infection. Your specialist or the rooms will tell you which dose to skip."},
+  MAOI:    {cls:"stop",instr:"This older antidepressant needs to be stopped about 2 weeks before surgery, arranged together with your psychiatrist. Do not stop it on your own."},
+  DOAC:    {cls:"ask"},   /* asks kidney question, then gives a date */
+  INSULIN: {cls:"insulin"}/* asks type 1 / type 2 */
+};
+
+/* DOAC stop days from SCGH CrCl table (conservative simplification) */
+function doacDays(sub,kidney){
+  if(sub==='DAB') return kidney==='yes'?5:3;   /* dabigatran */
+  return kidney==='yes'?4:3;                    /* apixaban / rivaroxaban / edoxaban */
+}
+
+/* insulin instructions per SCGH guideline (by insulin type). Type 1 adds a safety note. */
+var INS={
+  basal:"Reduce your dose by 50% (take half) the evening before surgery, and take 50% (half) of your morning dose on the day. Check your blood glucose. Do not stop it completely.",
+  meal:"Do not take short-acting or meal-time insulin while you are fasting.",
+  intermediate:"Reduce your dose by 50% (take half) the evening before surgery, and take 50% (half) of your morning dose on the day. Check your blood glucose.",
+  premix:"Reduce your dose by 20% the evening before surgery. On the morning of surgery, take 50% (half) of your usual morning dose and check your blood glucose; then no more insulin while fasting.",
+  pump:"Do not stop or suspend your insulin pump. Continue your usual basal rate, and contact the rooms before surgery so the hospital can plan your pump and check your blood glucose."
+};
+var INS_T1_NOTE=" Because you have type 1 diabetes, never stop your insulin completely - the hospital will watch your blood glucose closely on the day, and may use an insulin drip for bigger operations. Please contact the rooms to confirm your plan.";
+
+/* ============ database ============ */
+function M(g,b,r,sub){return {g:g,b:b,r:r,sub:sub};}
+var MEDS=[
+  M("perindopril",["Coversyl"],"SKIP_DAY"),M("ramipril",["Tritace"],"SKIP_DAY"),
+  M("lisinopril",["Zestril"],"SKIP_DAY"),M("enalapril",["Renitec"],"SKIP_DAY"),
+  M("captopril",["Capoten"],"SKIP_DAY"),M("quinapril",["Accupril"],"SKIP_DAY"),
+  M("fosinopril",["Monopril"],"SKIP_DAY"),M("trandolapril",["Gopten","Odrik"],"SKIP_DAY"),
+  M("irbesartan",["Avapro","Karvea"],"SKIP_DAY"),M("candesartan",["Atacand"],"SKIP_DAY"),
+  M("valsartan",["Diovan"],"SKIP_DAY"),M("telmisartan",["Micardis"],"SKIP_DAY"),
+  M("losartan",["Cozaar"],"SKIP_DAY"),M("olmesartan",["Olmetec"],"SKIP_DAY"),M("eprosartan",["Teveten"],"SKIP_DAY"),
+  M("atenolol",["Tenormin"],"CONTINUE"),M("metoprolol",["Betaloc","Lopresor","Toprol"],"CONTINUE"),
+  M("bisoprolol",["Bicor"],"CONTINUE"),M("propranolol",["Inderal"],"CONTINUE"),
+  M("carvedilol",["Dilatrend"],"CONTINUE"),M("nebivolol",["Nebilet"],"CONTINUE"),
+  M("sotalol",["Sotacor"],"CONTINUE"),M("labetalol",[],"CONTINUE"),
+  M("amlodipine",["Norvasc"],"CONTINUE"),M("diltiazem",["Cardizem","Vasocardol"],"CONTINUE"),
+  M("verapamil",["Isoptin"],"CONTINUE"),M("felodipine",["Plendil"],"CONTINUE"),
+  M("nifedipine",["Adalat"],"CONTINUE"),M("lercanidipine",["Zanidip"],"CONTINUE"),
+  M("digoxin",["Lanoxin"],"CONTINUE"),M("amiodarone",["Cordarone"],"CONTINUE"),
+  M("frusemide (furosemide)",["Lasix","Frusid","Uremide"],"SKIP_DAY"),
+  M("hydrochlorothiazide",["Dithiazide"],"SKIP_DAY"),M("indapamide",["Natrilix","Dapa-tabs"],"SKIP_DAY"),
+  M("spironolactone",["Aldactone","Spiractin"],"SKIP_DAY"),M("chlorthalidone",["Hygroton"],"SKIP_DAY"),
+  M("amiloride",["Kaluril"],"SKIP_DAY"),M("eplerenone",["Inspra"],"SKIP_DAY"),
+  M("prazosin",["Minipress"],"CONTINUE"),M("clonidine",["Catapres"],"STEROID"),
+  M("methyldopa",["Aldomet"],"CONTINUE"),M("hydralazine",[],"CONTINUE"),
+  M("warfarin",["Coumadin","Marevan"],"WARFARIN"),
+  M("apixaban",["Eliquis"],"DOAC","AR"),M("rivaroxaban",["Xarelto"],"DOAC","AR"),
+  M("edoxaban",["Lixiana"],"DOAC","AR"),M("dabigatran",["Pradaxa"],"DOAC","DAB"),
+  M("clopidogrel",["Plavix","Iscover"],"CLOPIDOGREL"),M("ticagrelor",["Brilinta"],"TICAGRELOR"),
+  M("prasugrel",["Effient"],"PRASUGREL"),M("dipyridamole",["Persantin","Asasantin"],"DIPYRIDAMOLE"),
+  M("enoxaparin",["Clexane"],"LMWH"),M("dalteparin",["Fragmin"],"LMWH"),
+  M("aspirin (low dose)",["Cartia","Astrix","Cardiprin","Disprin"],"ASPIRIN"),
+  M("metformin",["Diabex","Diaformin","Glucophage","Metex"],"DIAB_TABLET"),
+  M("gliclazide",["Diamicron"],"DIAB_TABLET"),M("glimepiride",["Amaryl","Diapride"],"DIAB_TABLET"),
+  M("glipizide",["Minidiab"],"DIAB_TABLET"),M("sitagliptin",["Januvia"],"DIAB_TABLET"),
+  M("linagliptin",["Trajenta"],"DIAB_TABLET"),M("vildagliptin",["Galvus"],"DIAB_TABLET"),
+  M("saxagliptin",["Onglyza"],"DIAB_TABLET"),M("pioglitazone",["Actos"],"DIAB_TABLET"),M("acarbose",["Glucobay"],"DIAB_TABLET"),
+  M("empagliflozin",["Jardiance","Jardiamet","Glyxambi"],"SGLT2"),
+  M("dapagliflozin",["Forxiga","Xigduo","Qtern"],"SGLT2"),
+  M("ertugliflozin",["Steglatro","Segluromet","Steglujan"],"SGLT2"),
+  M("semaglutide",["Ozempic","Wegovy","Rybelsus"],"GLP1"),
+  M("dulaglutide",["Trulicity"],"GLP1"),M("tirzepatide",["Mounjaro"],"GLP1"),
+  M("exenatide",["Byetta","Bydureon"],"GLP1"),M("liraglutide",["Victoza","Saxenda"],"GLP1"),
+  M("long-acting (basal) insulin",["Lantus","Optisulin","Toujeo","Tresiba","Levemir","Semglee"],"INSULIN","basal"),
+  M("short-acting / meal-time insulin",["NovoRapid","Fiasp","Humalog","Apidra","Actrapid"],"INSULIN","meal"),
+  M("intermediate-acting insulin",["Protaphane","Humulin NPH","Hypurin Isophane"],"INSULIN","intermediate"),
+  M("premixed insulin",["NovoMix 30","Ryzodeg","Humalog Mix","Mixtard 30/70","Humulin 30/70"],"INSULIN","premix"),
+  M("insulin pump",["pump","CSII"],"INSULIN","pump"),
+  M("atorvastatin",["Lipitor"],"CONTINUE"),M("rosuvastatin",["Crestor"],"CONTINUE"),
+  M("simvastatin",["Zocor","Lipex"],"CONTINUE"),M("pravastatin",["Pravachol"],"CONTINUE"),
+  M("fluvastatin",["Lescol"],"CONTINUE"),M("ezetimibe",["Ezetrol","Atozet","Vytorin"],"CONTINUE"),
+  M("fenofibrate",["Lipidil"],"CONTINUE"),M("gemfibrozil",["Lopid"],"CONTINUE"),
+  M("sertraline",["Zoloft"],"CONTINUE"),M("escitalopram",["Lexapro"],"CONTINUE"),
+  M("citalopram",["Cipramil"],"CONTINUE"),M("fluoxetine",["Prozac","Lovan"],"CONTINUE"),
+  M("paroxetine",["Aropax","Paxtine"],"CONTINUE"),M("venlafaxine",["Efexor"],"CONTINUE"),
+  M("desvenlafaxine",["Pristiq"],"CONTINUE"),M("duloxetine",["Cymbalta"],"CONTINUE"),
+  M("mirtazapine",["Avanza"],"CONTINUE"),M("amitriptyline",["Endep"],"CONTINUE"),M("nortriptyline",["Allegron"],"CONTINUE"),
+  M("phenelzine (MAOI)",["Nardil"],"MAOI"),M("tranylcypromine (MAOI)",["Parnate"],"MAOI"),
+  M("sodium valproate",["Epilim"],"CONTINUE"),M("carbamazepine",["Tegretol"],"CONTINUE"),
+  M("levetiracetam",["Keppra"],"CONTINUE"),M("lamotrigine",["Lamictal"],"CONTINUE"),
+  M("phenytoin",["Dilantin"],"CONTINUE"),M("topiramate",["Topamax"],"CONTINUE"),
+  M("gabapentin",["Neurontin"],"CONTINUE"),M("pregabalin",["Lyrica"],"CONTINUE"),
+  M("lithium",["Lithicarb","Quilonum"],"LITHIUM"),
+  M("salbutamol",["Ventolin","Asmol"],"BRING"),M("fluticasone/salmeterol",["Seretide"],"BRING"),
+  M("budesonide/formoterol",["Symbicort"],"BRING"),M("tiotropium",["Spiriva"],"BRING"),M("budesonide",["Pulmicort"],"BRING"),
+  M("prednisone / prednisolone",["Panafcort","Sone","Redipred"],"STEROID"),
+  M("dexamethasone",[],"STEROID"),M("hydrocortisone",["Hysone"],"STEROID"),
+  M("paracetamol",["Panadol","Panamax"],"CONTINUE"),
+  M("ibuprofen",["Nurofen","Brufen","Advil"],"NSAID"),M("diclofenac",["Voltaren"],"NSAID"),
+  M("naproxen",["Naprosyn","Aleve"],"NSAID"),M("indomethacin",["Indocid"],"NSAID"),M("ketoprofen",["Orudis"],"NSAID"),
+  M("celecoxib",["Celebrex"],"COX2"),M("etoricoxib",["Arcoxia"],"COX2"),M("meloxicam",["Mobic"],"COX2"),
+  M("oxycodone",["Endone","OxyContin","OxyNorm","Targin"],"CONTINUE"),
+  M("tapentadol",["Palexia"],"CONTINUE"),M("tramadol",["Tramal"],"CONTINUE"),
+  M("buprenorphine",["Norspan","Temgesic"],"CONTINUE"),M("morphine",["MS Contin","Kapanol","Ordine"],"CONTINUE"),
+  M("codeine",["Panadeine Forte"],"CONTINUE"),
+  M("oestrogen / HRT or the combined pill",["Estalis","Femoston","Levlen","Microgynon","Yaz","Zoely","Premarin"],"HRT"),
+  M("methotrexate",[],"CONTINUE"),M("adalimumab",["Humira"],"BIOLOGIC"),
+  M("etanercept",["Enbrel"],"BIOLOGIC"),M("infliximab",["Remicade"],"BIOLOGIC"),
+  M("fish oil",["Omega-3"],"STOP7"),M("vitamin E",[],"STOP7"),M("garlic supplement",[],"STOP7"),
+  M("ginkgo biloba",[],"STOP7"),M("ginseng",[],"STOP7"),M("St John's Wort",[],"STOP7"),
+  M("turmeric / curcumin",[],"STOP7"),M("glucosamine",[],"STOP7")
+];
+
+/* ============ elements ============ */
+var searchEl=document.getElementById('medsearch');
+var suggEl=document.getElementById('suggest');
+var surgEl=document.getElementById('surgdate');
+var added=[]; var matches=[]; var activeIdx=-1;   /* added = [{m, dtype, kidney}] */
+
+/* ============ search ============ */
+function findMatches(q){
+  q=(q||"").toLowerCase().trim(); if(!q) return [];
+  var res=[];
+  for(var i=0;i<MEDS.length;i++){var m=MEDS[i];
+    if((m.g+" "+m.b.join(" ")).toLowerCase().indexOf(q)>-1) res.push(m);}
+  return res.slice(0,12);
+}
+function renderSuggest(){
+  if(!matches.length){suggEl.style.display='none';suggEl.innerHTML='';return;}
+  var html='';
+  for(var i=0;i<matches.length;i++){var m=matches[i];
+    html+='<div data-idx="'+i+'" class="'+(i===activeIdx?'active':'')+'"><span class="gen">'+m.g+'</span>'+
+      (m.b.length?' <span class="br">('+m.b.join(', ')+')</span>':'')+'</div>';}
+  suggEl.innerHTML=html; suggEl.style.display='block';
+}
+searchEl.addEventListener('input',function(){matches=findMatches(searchEl.value);activeIdx=-1;renderSuggest();});
+searchEl.addEventListener('keydown',function(e){
+  if(!matches.length) return;
+  if(e.key==='ArrowDown'){activeIdx=Math.min(activeIdx+1,matches.length-1);renderSuggest();e.preventDefault();}
+  else if(e.key==='ArrowUp'){activeIdx=Math.max(activeIdx-1,0);renderSuggest();e.preventDefault();}
+  else if(e.key==='Enter'){e.preventDefault();addMed(matches[activeIdx>=0?activeIdx:0]);}
+  else if(e.key==='Escape'){suggEl.style.display='none';}
+});
+suggEl.addEventListener('mousedown',function(e){
+  var t=e.target; while(t&&t!==suggEl&&!t.hasAttribute('data-idx')) t=t.parentNode;
+  if(t&&t.hasAttribute('data-idx')){e.preventDefault();addMed(matches[+t.getAttribute('data-idx')]);}
+});
+document.addEventListener('click',function(e){
+  if(e.target!==searchEl && !suggEl.contains(e.target)) suggEl.style.display='none';
+});
+
+/* ============ dates ============ */
+function surgeryDate(){var v=surgEl.value;if(!v)return null;var p=v.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
+function minusDays(d,n){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate());x.setDate(x.getDate()-n);return x;}
+function fmt(d){
+  var dy=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  var mo=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  return dy[d.getDay()]+' '+d.getDate()+' '+mo[d.getMonth()]+' '+d.getFullYear();
+}
+function itemDays(it){
+  var r=RULES[it.m.r];
+  if(it.m.r==='DOAC') return it.kidney?doacDays(it.m.sub,it.kidney):null;
+  return r.dateDays||null;
+}
+function doseDate(it){var sd=surgeryDate(); if(!sd) return null; var d=itemDays(it); return d?minusDays(sd,d):null;}
+
+/* ============ add / remove ============ */
+function addMed(m){
+  if(!m) return;
+  for(var i=0;i<added.length;i++){ if(added[i].m===m){searchEl.value='';matches=[];suggEl.style.display='none';suggEl.innerHTML='';searchEl.focus();return;} }
+  added.push({m:m,dtype:null,kidney:null});
+  searchEl.value=''; matches=[]; activeIdx=-1; suggEl.style.display='none'; suggEl.innerHTML='';
+  render(); searchEl.focus();
+}
+function removeMed(i){added.splice(i,1);render();}
+function clearAll(){added=[];surgEl.value='';render();}
+function setType(i,t){added[i].dtype=t;render();}
+function setKidney(i,k){added[i].kidney=k;render();}
+window.removeMed=removeMed; window.clearAll=clearAll; window.setType=setType; window.setKidney=setKidney;
+
+/* ============ per-row content ============ */
+function rowContent(it,i){
+  var m=it.m,r=RULES[m.r],cls=r.cls,instr=r.instr,extra='';
+  if(m.r==='INSULIN'){
+    if(m.sub==='pump'){instr=INS.pump;cls='stop';}
+    else if(!it.dtype){instr="Insulin needs one detail to advise you safely.";
+      extra='<div class="askq">Do you have <b>type 1</b> or <b>type 2</b> diabetes?<br>'+
+        '<button onclick="setType('+i+',\'1\')">Type 1</button><button onclick="setType('+i+',\'2\')">Type 2</button></div>';}
+    else{instr=INS[m.sub]+(it.dtype==='1'?INS_T1_NOTE:'');cls=it.dtype==='1'?'stop':'insulin';
+      extra='<span class="chip" onclick="setType('+i+',null)">Type '+it.dtype+' · change</span>';}
+  } else if(m.r==='DOAC'){
+    if(!it.kidney){instr="Blood thinners depend on your kidney function.";cls='ask';
+      extra='<div class="askq">Do you have kidney problems (reduced kidney function)?<br>'+
+        '<button onclick="setKidney('+i+',\'no\')">No</button><button onclick="setKidney('+i+',\'yes\')">Yes</button></div>';}
+    else{var dys=doacDays(m.sub,it.kidney);
+      instr="Take your last dose "+dys+" days before surgery."+(it.kidney==='yes'?" If your kidney function is very reduced, your anaesthetist may ask for a little longer.":"");
+      cls='stop'; extra='<span class="chip" onclick="setKidney('+i+',null)">Kidney problems: '+it.kidney+' · change</span>';}
+  }
+  return {cls:cls,instr:instr,extra:extra};
+}
+
+/* ============ render ============ */
+function render(){
+  var box=document.getElementById('added'), empty=document.getElementById('emptymsg');
+  if(!added.length){box.innerHTML='';empty.style.display='block';
+    document.getElementById('actionsrow').style.display='none';
+    document.getElementById('calwrap').style.display='none';return;}
+  empty.style.display='none';
+  document.getElementById('actionsrow').style.display='flex';
+  var html='';
+  for(var i=0;i<added.length;i++){
+    var it=added[i],m=it.m,rc=rowContent(it,i),dd=doseDate(it),need=itemDays(it);
+    var dateLine='';
+    if(m.r==='DOAC'||RULES[m.r].dateDays){
+      if(dd) dateLine=(RULES[m.r].dateLabel||'Last dose')+': '+fmt(dd)+((m.r==='SKIP_DAY'||m.r==='DIAB_TABLET')?' (the day before). None on the day of surgery.':'.');
+      else if(need!==null||m.r!=='DOAC') if(need===null && m.r!=='DOAC'){} else if(!surgeryDate()) dateLine='Enter your surgery date above to see your last-dose date.';
+    }
+    var brands=m.b.length?' <span style="color:var(--muted);font-weight:400">('+m.b.join(', ')+')</span>':'';
+    html+='<div class="medrow '+rc.cls+'"><div style="flex:1">'+
+      '<div class="mname">'+m.g+brands+'</div>'+
+      '<div class="minstr">'+rc.instr+'</div>'+
+      (dateLine?'<div class="mdate">'+dateLine+'</div>':'')+rc.extra+'</div>'+
+      '<button class="rm noprint" title="Remove" onclick="removeMed('+i+')">&times;</button></div>';
+  }
+  box.innerHTML=html;
+  renderCalendar();
+}
+
+/* ============ calendar ============ */
+function ymd(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
+function renderCalendar(){
+  var wrap=document.getElementById('calwrap'), sd=surgeryDate(), doseMap={};
+  added.forEach(function(it){var dd=doseDate(it);if(dd){var k=ymd(dd);(doseMap[k]=doseMap[k]||[]).push(it.m.g);}});
+  if(!sd){wrap.style.display='none';return;}
+  var earliest=new Date(sd.getFullYear(),sd.getMonth(),1);
+  Object.keys(doseMap).forEach(function(k){var p=k.split('-');var d=new Date(+p[0],+p[1]-1,1);if(d<earliest)earliest=d;});
+  var months=[],cur=new Date(earliest),end=new Date(sd.getFullYear(),sd.getMonth(),1),guard=0;
+  while(cur<=end && guard<6){months.push(new Date(cur));cur.setMonth(cur.getMonth()+1);guard++;}
+  var mn=['January','February','March','April','May','June','July','August','September','October','November','December'],html='';
+  months.forEach(function(mo){
+    var y=mo.getFullYear(),mm=mo.getMonth(),startDow=(new Date(y,mm,1).getDay()+6)%7,dim=new Date(y,mm+1,0).getDate();
+    html+='<div class="cal"><h4>'+mn[mm]+' '+y+'</h4><table><thead><tr><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th><th>S</th></tr></thead><tbody><tr>';
+    for(var b=0;b<startDow;b++) html+='<td></td>';
+    for(var day=1;day<=dim;day++){
+      var dow=(startDow+day-1)%7; if(day>1&&dow===0) html+='</tr><tr>';
+      var k=y+'-'+(mm+1)+'-'+day,cls='day',title='';
+      if(sd.getFullYear()===y&&sd.getMonth()===mm&&sd.getDate()===day){cls+=' surg';title='Surgery day';}
+      else if(doseMap[k]){cls+=' dose';title='Last dose: '+doseMap[k].join(', ');}
+      html+='<td><div class="'+cls+'"'+(title?' title="'+title+'"':'')+'>'+day+'</div></td>';
+    }
+    html+='</tr></tbody></table></div>';
+  });
+  html+='<div style="flex-basis:100%"></div><div class="legend"><span><span class="sw s"></span> Surgery day</span><span><span class="sw d"></span> Take your last dose</span></div>';
+  wrap.innerHTML=html; wrap.style.display='flex';
+}
+
+/* ============ iCal ============ */
+function pad(n){return (n<10?'0':'')+n;}
+function icsDate(d){return d.getFullYear()+pad(d.getMonth()+1)+pad(d.getDate());}
+function icsNext(d){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate()+1);return icsDate(x);}
+function downloadICS(){
+  var sd=surgeryDate(); if(!sd){alert('Please enter your surgery date first.');return;}
+  var now=new Date(), stamp=now.getFullYear()+pad(now.getMonth()+1)+pad(now.getDate())+'T'+pad(now.getHours())+pad(now.getMinutes())+'00';
+  var lines=['BEGIN:VCALENDAR','VERSION:2.0','PRODID:-//Dr Ed Halvey//Medicine timing//EN','CALSCALE:GREGORIAN'];
+  function ev(date,summary,desc){lines.push('BEGIN:VEVENT','UID:'+Math.random().toString(36).slice(2)+'@drhalvey','DTSTAMP:'+stamp,
+    'DTSTART;VALUE=DATE:'+icsDate(date),'DTEND;VALUE=DATE:'+icsNext(date),'SUMMARY:'+summary,'DESCRIPTION:'+desc,
+    'BEGIN:VALARM','TRIGGER:-PT15H','ACTION:DISPLAY','DESCRIPTION:'+summary,'END:VALARM','END:VEVENT');}
+  ev(sd,'Surgery day','Your operation with Dr Halvey. Follow your fasting and medicine instructions.');
+  added.forEach(function(it){var dd=doseDate(it); if(dd) ev(dd,'Last dose: '+it.m.g,'Take your last dose of '+it.m.g+' today (before surgery). General guide only - follow your anaesthetist.');});
+  lines.push('END:VCALENDAR');
+  var blob=new Blob([lines.join('\r\n')],{type:'text/calendar'});
+  var a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='my-medicine-plan.ics';
+  document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+window.downloadICS=downloadICS;
+
+surgEl.addEventListener('change',render);
+</script>
+</body>
+</html>

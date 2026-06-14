@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Clinician tools - Dr Ed Halvey</title>
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .tool{max-width:880px}
+  .gate{max-width:420px;margin:8vh auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:30px}
+  .gate h2{margin:0 0 6px;font-size:22px}
+  .gate input{width:100%;font-size:20px;letter-spacing:.3em;text-align:center;padding:12px;border:1.5px solid var(--line);border-radius:10px;margin:14px 0}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin:18px 0 6px;border-bottom:1px solid var(--line)}
+  .tabs button{border:0;background:none;font-family:inherit;font-size:14.5px;font-weight:600;color:var(--muted);padding:10px 14px;cursor:pointer;border-bottom:3px solid transparent}
+  .tabs button.active{color:var(--teal-d);border-bottom-color:var(--teal)}
+  .pane{display:none;padding-top:10px}.pane.active{display:block}
+  .seg{display:inline-flex;border:1.5px solid var(--teal);border-radius:10px;overflow:hidden;margin:8px 0 14px}
+  .seg button{border:0;background:#fff;color:var(--teal-d);font-family:inherit;font-weight:600;font-size:14px;padding:9px 18px;cursor:pointer}
+  .seg button.on{background:var(--teal);color:#fff}
+  .qblock{border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0;background:#fff}
+  .qblock h4{margin:0 0 10px;font-size:15px}
+  .chk{display:flex;gap:10px;align-items:flex-start;padding:6px 0;font-size:14px}
+  .chk input{width:18px;height:18px;margin-top:2px;accent-color:var(--teal);flex:0 0 auto}
+  .yn{display:flex;gap:10px;margin-top:6px}
+  .yn label{display:flex;gap:7px;align-items:center;font-size:14.5px;border:1.5px solid var(--line);border-radius:9px;padding:8px 14px;cursor:pointer}
+  .yn input{accent-color:var(--teal)}
+  .outcome{margin-top:14px;border-radius:12px;padding:16px 18px;font-size:14.5px}
+  .outcome.go{background:var(--teal-l);color:#1c4a45;border:1px solid #c5dedb}
+  .outcome.stop{background:#fbecec;color:#9a2b2b;border:1px solid #d98a8a}
+  .outcome.caution{background:#fef4ec;color:#8a4b16;border:1px solid #e8a06a}
+  .outcome b{display:block;margin-bottom:6px;font-size:15.5px}
+  .outcome ul{margin:8px 0 0;padding-left:20px}.outcome li{margin:4px 0}
+  table.ref{border-collapse:collapse;width:100%;font-size:13.5px;margin-top:10px}
+  table.ref th{background:var(--teal);color:#fff;text-align:left;padding:8px 10px;font-weight:600}
+  table.ref td{border-top:1px solid var(--line);padding:8px 10px;vertical-align:top}
+  table.ref tr:nth-child(even){background:#fbfcfc}
+  .ome-row{display:flex;gap:10px;align-items:center;margin:6px 0;font-size:14px;flex-wrap:wrap}
+  .ome-row input{width:70px;font-size:15px;padding:6px 8px;border:1.5px solid var(--line);border-radius:8px}
+  .total{font-size:18px;font-weight:700;color:var(--teal-d);margin-top:12px}
+  .editnote{font-size:12.5px;color:#8a5a12;background:#fff7e9;border:1px dashed #e3b15f;border-radius:8px;padding:8px 11px;margin:10px 0}
+  .src{font-size:12.5px;color:var(--muted);margin-top:14px}
+</style>
+</head>
+<body>
+
+<!-- soft PIN gate -->
+<div id="gate" class="gate">
+  <h2>Clinician tools</h2>
+  <p style="color:var(--muted);font-size:14px;margin:0">Private reference for Dr Halvey. Enter the access PIN.</p>
+  <input type="password" id="pin" inputmode="numeric" maxlength="8" placeholder="PIN" autocomplete="off">
+  <button class="btn primary" style="width:100%" onclick="checkPin()">Enter</button>
+  <p id="pinerr" style="color:#9a2b2b;font-size:13px;margin:10px 0 0;display:none">Incorrect PIN.</p>
+  <p style="font-size:11.5px;color:var(--muted);margin-top:16px">Reach this page directly at /clinicians.html. This PIN
+    is a basic gate, not strong security; the page holds no patient data. Change the PIN in the page source before go-live.</p>
+</div>
+
+<div id="app" style="display:none">
+<header class="topbar"><nav class="nav"><a class="brand" href="index.html"><span class="logo">EH</span>
+  <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Clinician tools (private)</span></span></a></nav></header>
+
+<section class="block"><div class="wrap tool">
+  <h2 class="sec">Clinician decision tools</h2>
+  <p class="lead">Private decision support. Everything runs in your browser and <b>nothing is saved</b> -
+    no patient data is stored on this site.</p>
+
+  <div class="tabs">
+    <button class="active" data-pane="nsaid">NSAID / Coxib prescribing</button>
+    <button data-pane="vte">Aspirin vs rivaroxaban (arthroplasty)</button>
+    <button data-pane="ref">Medicine stop-timing</button>
+    <button data-pane="opioid">Opioid reference</button>
+    <button data-pane="links">Patient plan links</button>
+  </div>
+
+  <!-- ============ NSAID / Coxib decision tool ============ -->
+  <div class="pane active" id="nsaid">
+    <p style="font-size:14px;color:var(--muted);margin:6px 0 0">Perioperative anti-inflammatory prescribing, based on
+      Dr Halvey's algorithm (<a href="https://doi.org/10.1016/j.bjae.2023.08.001" target="_blank" rel="noopener">Halvey EJ, Haslam N, Mariano ER. BJA Education 2023</a>).</p>
+    <div class="seg" id="path">
+      <button class="on" data-path="nsaid">Non-selective NSAID</button>
+      <button data-path="coxib">Coxib</button>
+    </div>
+
+    <div class="qblock">
+      <h4>1. Rule out contraindications (tick any present)</h4>
+      <div id="ciList"></div>
+    </div>
+    <div class="qblock">
+      <h4 id="q1label"></h4>
+      <div class="yn"><label><input type="radio" name="q1" value="yes"> Yes</label><label><input type="radio" name="q1" value="no"> No</label></div>
+    </div>
+    <div class="qblock">
+      <h4 id="q2label"></h4>
+      <div class="yn"><label><input type="radio" name="q2" value="yes"> Yes</label><label><input type="radio" name="q2" value="no"> No</label></div>
+    </div>
+    <button class="btn primary" onclick="recommend()">Show recommendation</button>
+    <div id="rxout"></div>
+    <div class="editnote">Decision support only - confirm against current product information and local guidance, and use clinical judgement for the individual patient.</div>
+  </div>
+
+  <!-- ============ VTE / aspirin vs rivaroxaban ============ -->
+  <div class="pane" id="vte">
+    <h3 style="margin-top:6px">Post-arthroplasty VTE prophylaxis: aspirin vs rivaroxaban</h3>
+    <p style="font-size:14px;color:var(--muted)">Select the procedure and tick any factors present. The tool
+      suggests a pathway, weighing VTE risk against bleeding risk. <b>Set the exact thresholds and agents to your protocol.</b></p>
+
+    <div style="margin:8px 0 4px"><b style="font-size:14px">Procedure</b></div>
+    <div class="seg" id="vproc"><button class="on" data-p="tka">Total knee (TKA)</button><button data-p="tha">Total hip (THA)</button><button data-p="rev">Revision / partial</button></div>
+
+    <div class="qblock"><h4>Higher VTE risk factors</h4><div id="vte-risk"></div></div>
+    <div class="qblock"><h4>Higher bleeding risk factors</h4><div id="vte-bleed"></div></div>
+
+    <div id="vteout" class="outcome go" style="margin-top:6px"></div>
+
+    <div class="editnote" style="margin-top:14px"><b>Evidence (decision support only):</b>
+      <ul style="margin:6px 0 0;padding-left:18px">
+        <li><b>CRISTAL</b> (JAMA 2022, Australian, 31 hospitals): enoxaparin 40 mg was <b>superior</b> to aspirin 100 mg for 90-day symptomatic VTE (1.8% vs 3.3%) after THA/TKA. Aspirin is not optimal for every patient.</li>
+        <li><b>EPCAT II</b> (NEJM 2018): after 5 days of rivaroxaban, switching to aspirin was <b>non-inferior</b> to continuing rivaroxaban in selected patients - supporting aspirin for lower-risk patients after an initial potent agent.</li>
+        <li>Duration guide: extended prophylaxis up to ~35 days after THA and ~14 days after TKA.</li>
+      </ul>
+      Confirm against your local protocol and the
+      <a href="https://doi.org/10.1016/j.bjae.2024.03.002" target="_blank" rel="noopener">hip arthroplasty review (BJA Education 2024)</a>.</div>
+  </div>
+
+  <!-- ============ stop-timing reference ============ -->
+  <div class="pane" id="ref">
+    <table class="ref"><thead><tr><th>Medicine class</th><th>Action before surgery</th></tr></thead><tbody>
+      <tr><td>ACE inhibitors / ARBs</td><td>Withhold 24h (omit morning of surgery)</td></tr>
+      <tr><td>Beta-blockers, CCBs</td><td>Continue</td></tr>
+      <tr><td>Diuretics</td><td>Omit morning of surgery</td></tr>
+      <tr><td>Warfarin</td><td>Stop ~5 days; bridge per indication/INR target</td></tr>
+      <tr><td>DOACs (apixaban, rivaroxaban, dabigatran, edoxaban)</td><td>Stop ~2-3 days; longer if reduced CrCl / high bleed-risk surgery (see SCGH CrCl table)</td></tr>
+      <tr><td>Clopidogrel / ticagrelor / prasugrel</td><td>Stop ~5-7 days (weigh stent / ACS risk)</td></tr>
+      <tr><td>Aspirin (low dose)</td><td>Usually continue</td></tr>
+      <tr><td>SGLT2 inhibitors</td><td>Stop 3 days (ketoacidosis risk)</td></tr>
+      <tr><td>GLP-1 agonists</td><td>Continue; modified fasting, consider gastric stasis</td></tr>
+      <tr><td>Metformin / oral hypoglycaemics</td><td>Omit on day of surgery</td></tr>
+      <tr><td>Insulin</td><td>Dose-adjust per fasting protocol (basal 50%)</td></tr>
+      <tr><td>NSAIDs</td><td>Stop 2-3 days (bleeding/renal). Coxibs: little platelet effect</td></tr>
+      <tr><td>Statins, antidepressants, antiepileptics, inhalers</td><td>Continue</td></tr>
+      <tr><td>Steroids</td><td>Continue; consider stress dosing</td></tr>
+      <tr><td>Oestrogen / HRT / COCP</td><td>Consider stopping per VTE risk</td></tr>
+      <tr><td>Supplements (fish oil, vitamin E, garlic, ginkgo, ginseng, St John's Wort)</td><td>Stop ~7 days</td></tr>
+    </tbody></table>
+    <div class="editnote">Confirm intervals against the SCGH peri-operative medication guideline before use.</div>
+  </div>
+
+  <!-- ============ opioid reference ============ -->
+  <div class="pane" id="opioid">
+    <h3 style="margin-top:6px">Discharge opioid reference (knee / hip)</h3>
+    <table class="ref"><thead><tr><th>Procedure</th><th>Typical discharge supply (set to your protocol)</th></tr></thead><tbody>
+      <tr><td>Total knee replacement</td><td>e.g. tapentadol SR + IR, limited supply, wean by ~6 weeks</td></tr>
+      <tr><td>Total hip replacement</td><td>e.g. tapentadol SR + IR, smaller supply than TKR</td></tr>
+    </tbody></table>
+    <h3>Oral morphine equivalent (OME) quick calc</h3>
+    <p style="font-size:13.5px;color:var(--muted)">Approximate conversion factors - <b>verify before relying on them.</b> Enter total mg taken.</p>
+    <div id="omerows"></div>
+    <div class="total" id="ometotal">Total OME: 0 mg</div>
+    <p class="src">Actual patient opioid-consumption follow-up should be captured in your Microsoft Forms / tenant, not on this website.</p>
+  </div>
+
+  <!-- ============ patient plan links / codes ============ -->
+  <div class="pane" id="links">
+    <h3 style="margin-top:6px">Direct links and codes for each plan</h3>
+    <p style="font-size:14px;color:var(--muted)">Give the patient the direct link (or the code). The link opens
+      their plan straight away - they do not have to choose it from the list. Click a link to open it now.</p>
+    <table class="ref"><thead><tr><th>Plan</th><th>Code</th><th>Direct link</th></tr></thead><tbody>
+      <tr><td>General - etoricoxib</td><td><b>GEN-ETO</b></td><td><a href="tools/pain-relief.html?c=GEN-ETO" target="_blank" rel="noopener">/tools/pain-relief.html?c=GEN-ETO</a></td></tr>
+      <tr><td>General - celecoxib</td><td><b>GEN-CEL</b></td><td><a href="tools/pain-relief.html?c=GEN-CEL" target="_blank" rel="noopener">/tools/pain-relief.html?c=GEN-CEL</a></td></tr>
+      <tr><td>General - ibuprofen</td><td><b>GEN-IBU</b></td><td><a href="tools/pain-relief.html?c=GEN-IBU" target="_blank" rel="noopener">/tools/pain-relief.html?c=GEN-IBU</a></td></tr>
+      <tr><td>Caesarean section</td><td><b>CAES</b></td><td><a href="tools/pain-relief.html?c=CAES" target="_blank" rel="noopener">/tools/pain-relief.html?c=CAES</a></td></tr>
+      <tr><td>ACL reconstruction - celecoxib</td><td><b>ACL-CEL</b></td><td><a href="tools/pain-relief.html?c=ACL-CEL" target="_blank" rel="noopener">/tools/pain-relief.html?c=ACL-CEL</a></td></tr>
+      <tr><td>ACL reconstruction - etoricoxib</td><td><b>ACL-ETO</b></td><td><a href="tools/pain-relief.html?c=ACL-ETO" target="_blank" rel="noopener">/tools/pain-relief.html?c=ACL-ETO</a></td></tr>
+      <tr><td>Hip and knee replacement</td><td><b>JOINT</b></td><td><a href="tools/pain-relief.html?c=JOINT" target="_blank" rel="noopener">/tools/pain-relief.html?c=JOINT</a></td></tr>
+    </tbody></table>
+    <div class="editnote">When the site is live, the full link is <b>https://drhalvey.com.au/tools/pain-relief.html?c=CODE</b>
+      (replace CODE). You can text or email this to the patient, or set up your SMS to include it.</div>
+  </div>
+
+  <p class="src">References: Halvey EJ, Haslam N, Mariano ER. Non-steroidal anti-inflammatory drugs in the perioperative period.
+    <a href="https://doi.org/10.1016/j.bjae.2023.08.001" target="_blank" rel="noopener">BJA Education 2023;23(11):440-447</a>.
+    Haslam N, Halvey E, Scott C. Perioperative care of patients undergoing total hip arthroplasty.
+    <a href="https://doi.org/10.1016/j.bjae.2024.03.002" target="_blank" rel="noopener">BJA Education 2024;24(6)</a>.</p>
+</div></section>
+</div>
+
+<script>
+var PIN="7253";
+function checkPin(){if(document.getElementById('pin').value===PIN){document.getElementById('gate').style.display='none';document.getElementById('app').style.display='block';}else{document.getElementById('pinerr').style.display='block';}}
+document.getElementById('pin').addEventListener('keydown',function(e){if(e.key==='Enter')checkPin();});
+document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){
+  document.querySelectorAll('.tabs button').forEach(function(x){x.classList.remove('active');});
+  document.querySelectorAll('.pane').forEach(function(x){x.classList.remove('active');});
+  b.classList.add('active');document.getElementById(b.getAttribute('data-pane')).classList.add('active');};});
+
+/* ---------- NSAID / Coxib algorithm (Halvey et al, BJA Ed 2023) ---------- */
+var PATHS={
+  nsaid:{
+    ci:["Heart failure","Inflammatory bowel disease","GI ulceration","Hepatic impairment (albumin < 25 g/L)",
+        "Uncontrolled hypertension","Von Willebrand disease","Established ischaemic heart, peripheral arterial or cerebrovascular disease (diclofenac/coxibs contraindicated)",
+        "eGFR < 60 mL/min","Current physiological stress (hypotension, dehydration, significant blood loss)",
+        "Bronchospasm related to aspirin or other non-selective NSAIDs"],
+    bronchoIdx:9,
+    q1:"Age over 75 AND/OR taking drugs affecting the renin-angiotensin system (ACE inhibitor / ARB)?",
+    q1actions:["eGFR must be ≥ 60","Limit course to a maximum of 3 days","Cease earlier if no benefit or creatinine rise > 20 µmol/L","Do not use a high-dose NSAID","Patient must know to stop the NSAID if they become dehydrated"],
+    q1cap:3,
+    q2:"Taking low-dose aspirin?",
+    q2actions:["Limit course to a maximum of 7 days","Do not use a high-dose NSAID","Co-prescribe a PPI"],
+    q2cap:7,
+    defCap:14,
+    rx:"Ibuprofen 400 mg every 8 hours, with a PPI, for the shortest effective course.",
+    notes:["1st line ibuprofen (single doses never above 400 mg; max 1.2 g/day). 2nd line naproxen. 3rd line diclofenac potassium 25 mg or etoricoxib 90-120 mg (contraindicated with prior MI/stroke/vascular disease).",
+           "GI risk: naproxen > ibuprofen > diclofenac > coxib. MI risk: coxib = diclofenac > ibuprofen = naproxen.",
+           "PPI not required if a coxib is used, or if no GI risk factors (age > 65, concurrent aspirin, high-dose NSAID)."]
+  },
+  coxib:{
+    ci:["Ischaemic heart disease, cerebrovascular disease or peripheral arterial disease","Inflammatory bowel disease",
+        "Hepatic impairment (albumin < 25 g/L)","Uncontrolled hypertension","eGFR < 60",
+        "Current physiological stress (hypotension, dehydration, prolonged surgery, significant blood loss, sepsis)",
+        "Significant drug interaction (e.g. diuretics and anticoagulants)"],
+    bronchoIdx:-1,
+    q1:"Age over 75 AND/OR taking drugs affecting the renin-angiotensin system (ACE inhibitor / ARB)?",
+    q1actions:["eGFR must be ≥ 60","Limit course to a maximum of 3 days","Use low dose (etoricoxib 60 mg OD or celecoxib 100 mg)","Patient must be aware to stop the coxib if they become dehydrated"],
+    q1cap:3,
+    q2:"History of an uncomplicated peptic ulcer?",
+    q2actions:["Limit course to a maximum of 7 days","Use low dose (etoricoxib 60 mg OD or celecoxib 100 mg)","Co-prescribe a PPI whilst on the coxib"],
+    q2cap:7,
+    defCap:7,
+    rx:"Celecoxib 200 mg BD or etoricoxib 90-120 mg once daily, for the shortest effective course.",
+    notes:["Courses over 7 days carry renal injury risk in those aged > 65.","Courses over 10 days start to carry increased cardiac risk.",
+           "Coxibs do not induce bronchospasm in a well-controlled asthmatic who tolerates paracetamol."]
+  }
+};
+var curPath='nsaid';
+function buildPath(){
+  var p=PATHS[curPath];
+  var ci=document.getElementById('ciList');
+  ci.innerHTML=p.ci.map(function(t,i){return '<label class="chk"><input type="checkbox" data-ci="'+i+'"> '+t+'</label>';}).join('');
+  document.getElementById('q1label').textContent='2. '+p.q1;
+  document.getElementById('q2label').textContent='3. '+p.q2;
+  document.querySelectorAll('input[name=q1],input[name=q2]').forEach(function(r){r.checked=false;});
+  document.getElementById('rxout').innerHTML='';
+}
+document.querySelectorAll('#path button').forEach(function(b){b.onclick=function(){
+  document.querySelectorAll('#path button').forEach(function(x){x.classList.remove('on');});
+  b.classList.add('on');curPath=b.getAttribute('data-path');buildPath();};});
+
+function recommend(){
+  var p=PATHS[curPath],out=document.getElementById('rxout');
+  var ci=[].slice.call(document.querySelectorAll('#ciList input:checked')).map(function(c){return +c.getAttribute('data-ci');});
+  if(ci.length){
+    var bron=(p.bronchoIdx>=0 && ci.indexOf(p.bronchoIdx)>-1);
+    out.innerHTML='<div class="outcome stop"><b>Not recommended - contraindication present</b>'+
+      (bron?'Aspirin/NSAID-related bronchospasm: a coxib is usually tolerated - switch to the Coxib pathway above and reassess.':'A contraindication is ticked. Avoid this anti-inflammatory and consider an alternative analgesic approach.')+'</div>';
+    return;
+  }
+  var q1=(document.querySelector('input[name=q1]:checked')||{}).value;
+  var q2=(document.querySelector('input[name=q2]:checked')||{}).value;
+  if(!q1||!q2){out.innerHTML='<div class="outcome caution">Answer questions 2 and 3 to get a recommendation.</div>';return;}
+  var actions=[],cap=p.defCap,ppi=(curPath==='nsaid');
+  if(q1==='yes'){actions=actions.concat(p.q1actions);cap=Math.min(cap,p.q1cap);}
+  if(q2==='yes'){p.q2actions.forEach(function(a){if(actions.indexOf(a)<0)actions.push(a);});cap=Math.min(cap,p.q2cap);ppi=true;}
+  var html='<div class="outcome go"><b>Reasonable to prescribe</b>'+p.rx+
+    '<ul><li><b>Maximum course: '+cap+' days.</b></li>'+(ppi?'<li>Co-prescribe a PPI.</li>':'')+'</ul>';
+  if(actions.length){html+='<div style="margin-top:8px"><b style="font-size:14px">Essential actions:</b><ul>'+actions.map(function(a){return '<li>'+a+'</li>';}).join('')+'</ul></div>';}
+  html+='<div style="margin-top:8px"><b style="font-size:14px">Notes:</b><ul>'+p.notes.map(function(n){return '<li>'+n+'</li>';}).join('')+'</ul></div></div>';
+  out.innerHTML=html;
+}
+
+/* ---------- VTE: aspirin vs rivaroxaban ---------- */
+var VRISK=["Previous VTE (DVT or PE)","Active cancer","Known thrombophilia","BMI over 35",
+  "Significantly reduced mobility / unable to weight-bear","Current oestrogen / HRT or recent pregnancy",
+  "Strong family history of VTE","Age over 75","Prolonged surgery / prolonged immobilisation expected"];
+var VBLEED=["High bleeding-risk surgery or intra-operative bleeding","On an antiplatelet or anticoagulant that cannot stop",
+  "Recent GI bleed or active peptic ulcer","Known bleeding disorder","Severe renal impairment (CrCl < 30)","Thrombocytopenia"];
+var vproc='tka';
+document.querySelectorAll('#vproc button').forEach(function(b){b.onclick=function(){document.querySelectorAll('#vproc button').forEach(function(x){x.classList.remove('on');});b.classList.add('on');vproc=b.getAttribute('data-p');computeVTE();};});
+function fill(id,arr){document.getElementById(id).innerHTML=arr.map(function(t,i){return '<label class="chk"><input type="checkbox" data-k="'+id+'-'+i+'"> '+t+'</label>';}).join('');}
+fill('vte-risk',VRISK); fill('vte-bleed',VBLEED);
+function computeVTE(){
+  var risk=[].some.call(document.querySelectorAll('#vte-risk input'),function(c){return c.checked;}) || vproc==='rev';
+  var bleed=[].some.call(document.querySelectorAll('#vte-bleed input'),function(c){return c.checked;});
+  var dur = vproc==='tha' ? 'about 35 days' : (vproc==='rev' ? 'individualise (often extended)' : 'about 14 days');
+  var o=document.getElementById('vteout');
+  if(bleed){
+    o.className='outcome caution';
+    o.innerHTML='<b>Higher bleeding risk - favour mechanical prophylaxis</b>Use intermittent pneumatic compression and early mobilisation. If pharmacological prophylaxis is used, prefer low-dose aspirin or delayed / shortened anticoagulation, and discuss timing with the surgical and haematology teams. Duration of any pharmacological cover: '+dur+'.';
+  } else if(risk){
+    o.className='outcome high';
+    o.innerHTML='<b>Higher VTE risk - rivaroxaban (or extended LMWH)</b>Recommend rivaroxaban (or extended LMWH) per your protocol for '+dur+', with mechanical prophylaxis. CRISTAL showed enoxaparin superior to aspirin for symptomatic VTE - reserve aspirin for lower-risk patients.';
+  } else {
+    o.className='outcome go';
+    o.innerHTML='<b>Standard risk - aspirin is reasonable</b>Low-dose aspirin (100 mg daily) is a reasonable option, ideally after an initial short course of rivaroxaban (EPCAT II: rivaroxaban for ~5 days then aspirin was non-inferior), or rivaroxaban throughout per your protocol. Add mechanical prophylaxis and early mobilisation. Duration: '+dur+'.';
+  }
+}
+document.getElementById('vte-risk').addEventListener('change',computeVTE);
+document.getElementById('vte-bleed').addEventListener('change',computeVTE);
+computeVTE();
+
+/* ---------- OME ---------- */
+var OME=[["Oxycodone (oral)",1.5],["Tapentadol",0.4],["Tramadol",0.15],["Codeine",0.15],["Hydromorphone (oral)",5],["Morphine (oral)",1]];
+var orr=document.getElementById('omerows');
+orr.innerHTML=OME.map(function(p,i){return '<div class="ome-row"><span style="min-width:200px">'+p[0]+'</span><input type="number" min="0" id="o'+i+'" data-f="'+p[1]+'"> mg total <span style="color:var(--muted)">(x'+p[1]+')</span></div>';}).join('');
+orr.addEventListener('input',function(){var t=0;orr.querySelectorAll('input').forEach(function(i){t+=(parseFloat(i.value)||0)*parseFloat(i.getAttribute('data-f'));});document.getElementById('ometotal').textContent='Total OME: '+Math.round(t)+' mg';});
+
+buildPath();
+</script>
+</body>
+</html>

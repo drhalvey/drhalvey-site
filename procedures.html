@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procedures - Dr Ed Halvey</title>
+<meta name="description" content="Anaesthetic information for common procedures: hip and knee replacement, knee arthroscopy, caesarean section.">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  .psearch{position:relative;max-width:560px;margin:6px 0 4px}
+  #procq{width:100%;font-size:17px;padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;font-family:inherit}
+  #procq:focus{outline:none;border-color:var(--teal)}
+  .presults{margin-top:14px;display:grid;gap:10px}
+  .presult{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-decoration:none;color:inherit;transition:transform .12s,box-shadow .12s}
+  .presult:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+  .presult .ico{width:38px;height:38px;border-radius:10px;background:var(--teal-l);display:grid;place-items:center;font-size:18px;flex:0 0 auto}
+  .presult h4{margin:0;font-size:16px}.presult p{margin:2px 0 0;font-size:13.5px;color:var(--muted)}
+  .nohit{color:var(--muted);font-size:14.5px;padding:6px 0}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="logo">EH</span>
+      <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
+    </a>
+    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <div class="navlinks" id="nav">
+      <a class="navlink" href="index.html">Home</a>
+      <a class="navlink" href="about.html">About</a>
+      <a class="navlink" href="services.html">Services</a>
+      <a class="navlink active" href="procedures.html">Procedures</a>
+      <a class="navlink" href="hospitals.html">Hospitals</a>
+      <a class="navlink" href="pre-op-guidance.html">Pre-op guidance</a>
+      <a class="navlink" href="clinical-research.html">Research</a>
+      <a class="navlink" href="tools/pain-relief.html">Pain plan</a>
+      <a class="navlink" href="clinicians.html" style="opacity:.55">Clinician</a>
+      <a class="cta" href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div class="calm-band" aria-hidden="true">
+  <svg viewBox="0 0 1440 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
+    <defs><linearGradient id="skyB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#eaf3f1"/><stop offset="1" stop-color="#dcefeb"/></linearGradient></defs>
+    <rect width="1440" height="220" fill="url(#skyB)"/>
+    <circle cx="300" cy="70" r="38" fill="#fbe7c6" opacity="0.85"/>
+    <path d="M0,150 C240,140 480,160 720,150 C960,140 1200,160 1440,150 L1440,220 L0,220 Z" fill="#bcdcd7"/>
+    <path d="M0,172 C240,164 480,182 720,174 C960,166 1200,184 1440,176 L1440,220 L0,220 Z" fill="#8fc0b8" opacity="0.9"/>
+    <path d="M0,196 C240,190 480,206 720,200 C960,194 1200,208 1440,202 L1440,220 L0,220 Z" fill="#5a9a91"/>
+    <g stroke="#ffffff" stroke-width="2" opacity="0.5"><line x1="120" y1="186" x2="200" y2="186"/><line x1="900" y1="190" x2="1010" y2="190"/><line x1="600" y1="182" x2="680" y2="182"/></g>
+  </svg>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <p class="eyebrow">Procedures</p>
+    <h2 class="sec">Anaesthetic information by procedure</h2>
+    <p class="lead">Find clear information about the anaesthetic and recovery for your operation. Type the
+      name of your operation below - it understands common names and copes with spelling.</p>
+
+    <div class="psearch">
+      <input type="text" id="procq" autocomplete="off" placeholder="e.g. knee replacement, c-section, hip, arthroscopy">
+    </div>
+    <div class="presults" id="presults"></div>
+  </div>
+</section>
+
+<script>
+document.getElementById('yr')&&(document.getElementById('yr').textContent=new Date().getFullYear());
+
+var PROCS=[
+  {slug:"hip-replacement.html",icon:"🦴",name:"Hip replacement",
+   desc:"Total hip replacement: anaesthetic, recovery and pain relief.",
+   keys:["hip","hip replacement","total hip","total hip replacement","thr","hip arthroplasty","new hip","hip op","hip surgery","hip joint","hip replacment"]},
+  {slug:"knee-replacement.html",icon:"🦵",name:"Knee replacement",
+   desc:"Total knee replacement: anaesthetic, nerve catheter and recovery.",
+   keys:["knee","knee replacement","total knee","total knee replacement","tkr","knee arthroplasty","new knee","knee op","knee surgery","knee joint","knee replacment"]},
+  {slug:"acl-reconstruction.html",icon:"🔬",name:"ACL reconstruction",
+   desc:"Keyhole ACL knee surgery: adductor canal block and pain relief.",
+   keys:["acl","acl reconstruction","acl repair","anterior cruciate ligament","cruciate","knee ligament","knee arthroscopy","knee scope","keyhole knee","meniscus","cartilage","acl recon","knee reconstruction"]},
+  {slug:"joint-arthroscopy.html",icon:"🔬",name:"Joint arthroscopy",
+   desc:"Keyhole surgery for knee, shoulder or ankle joints.",
+   keys:["arthroscopy","joint arthroscopy","scope","keyhole","keyhole surgery","shoulder arthroscopy","shoulder scope","ankle arthroscopy","knee arthroscopy","meniscus","labral repair","loose body","arthroscope","day surgery joint","arthroscapy"]},
+  {slug:"caesarean.html",icon:"🤰",name:"Caesarean birth",
+   desc:"Anaesthetic for a planned or emergency caesarean birth.",
+   keys:["caesarean","caesarean section","caesarean birth","cesarean","c section","csection","c-section","lscs","caesar","having a baby","birth","delivery","spinal for birth","epidural birth","cesar","caesarian"]},
+  {slug:"cervical-cerclage.html",icon:"🤰",name:"Cervical cerclage",
+   desc:"Anaesthetic for a cervical stitch in pregnancy.",
+   keys:["cervical cerclage","cerclage","cervical stitch","cervix stitch","shirodkar","mcdonald stitch","pregnancy stitch","short cervix","cervical suture","cerclage stitch"]},
+  {slug:"haemorrhoidectomy.html",icon:"🩺",name:"Haemorrhoidectomy",
+   desc:"Anaesthetic, caudal injection option and recovery for haemorrhoid surgery.",
+   keys:["haemorrhoidectomy","hemorrhoidectomy","haemorrhoids","hemorrhoids","piles","haemorrhoid surgery","hemorrhoid surgery","haemroids","caudal","anal surgery","bottom surgery"]},
+  {slug:"hernia-surgery.html",icon:"🩺",name:"Hernia surgery",
+   desc:"Anaesthetic and pain relief for inguinal, incisional and keyhole hernia repair.",
+   keys:["hernia","hernia surgery","hernia repair","inguinal hernia","incisional hernia","umbilical hernia","groin hernia","laparoscopic hernia","keyhole hernia","mesh repair","hernea"]},
+  {slug:"bowel-resection.html",icon:"🩺",name:"Bowel resection",
+   desc:"Anaesthetic, spinal block and enhanced recovery for bowel surgery and bowel cancer.",
+   keys:["bowel resection","bowel surgery","bowel cancer","colorectal","colon surgery","colon cancer","colectomy","hemicolectomy","anterior resection","bowel op","colorectal surgery","large bowel","colon resection"]},
+  {slug:"infusaport.html",icon:"💉",name:"Infusaport insertion",
+   desc:"Anaesthetic and recovery for insertion of a port for long-term venous access.",
+   keys:["infusaport","infusa port","port","portacath","port-a-cath","port insertion","chemo port","central line","venous access","port a cath","chemotherapy port"]}
+];
+
+/* Levenshtein distance for typo tolerance */
+function lev(a,b){
+  a=a||"";b=b||"";var m=a.length,n=b.length;if(!m)return n;if(!n)return m;
+  var d=[];for(var i=0;i<=m;i++)d[i]=[i];for(var j=0;j<=n;j++)d[0][j]=j;
+  for(i=1;i<=m;i++)for(j=1;j<=n;j++){
+    var c=a[i-1]===b[j-1]?0:1;
+    d[i][j]=Math.min(d[i-1][j]+1,d[i][j-1]+1,d[i-1][j-1]+c);
+  }
+  return d[m][n];
+}
+function scoreProc(p,q){
+  q=q.toLowerCase().trim();if(!q)return 0;
+  var qtok=q.split(/\s+/);var best=0;
+  p.keys.forEach(function(k){
+    k=k.toLowerCase();
+    if(k===q) best=Math.max(best,100);
+    if(k.indexOf(q)>-1||q.indexOf(k)>-1) best=Math.max(best,80);
+    // token-level: each query token vs key tokens, allow small typo
+    qtok.forEach(function(t){
+      if(t.length<3)return;
+      k.split(/\s+/).forEach(function(kt){
+        if(kt.indexOf(t)>-1) best=Math.max(best,60);
+        else{var dd=lev(t,kt);if(dd<=1) best=Math.max(best,55);else if(dd===2&&t.length>4) best=Math.max(best,40);}
+      });
+    });
+  });
+  return best;
+}
+var input=document.getElementById('procq');
+var out=document.getElementById('presults');
+function renderAll(list,heading){
+  out.innerHTML=(heading?'<p class="nohit">'+heading+'</p>':'')+list.map(function(p){
+    return '<a class="presult" href="'+p.slug+'"><span class="ico">'+p.icon+'</span>'+
+      '<span><h4>'+p.name+'</h4><p>'+p.desc+'</p></span></a>';
+  }).join('');
+}
+function search(){
+  var q=input.value;
+  if(!q.trim()){renderAll(PROCS,'All procedures:');return;}
+  var ranked=PROCS.map(function(p){return {p:p,s:scoreProc(p,q)};})
+    .filter(function(x){return x.s>=40;}).sort(function(a,b){return b.s-a.s;});
+  if(!ranked.length){
+    out.innerHTML='<p class="nohit">No match found. Here are all procedures - or <a href="contact.html">contact the rooms</a> if your operation is not listed.</p>'+
+      PROCS.map(function(p){return '<a class="presult" href="'+p.slug+'"><span class="ico">'+p.icon+'</span><span><h4>'+p.name+'</h4><p>'+p.desc+'</p></span></a>';}).join('');
+    return;
+  }
+  renderAll(ranked.map(function(x){return x.p;}),null);
+}
+input.addEventListener('input',search);
+renderAll(PROCS,'All procedures:');
+</script>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="fgrid">
+      <div><h4>Dr Ed Halvey</h4><p style="color:#9fb6b3;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p></div>
+      <div><h4>Site</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="procedures.html">Procedures</a><a href="pre-op-guidance.html">Pre-op guidance</a><a href="clinical-research.html">Research</a><a href="fees.html">Fees</a><a href="contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a href="contact.html">Make an enquiry</a><a href="tel:0862676200">(08) 6267 6200</a><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a></div>
+    </div>
+    <div class="legal">
+      <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000.</p>
+      <p>© <span id="yr2"></span> Dr Ed Halvey.</p>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('yr2').textContent=new Date().getFullYear();</script>
+</body>
+</html>
