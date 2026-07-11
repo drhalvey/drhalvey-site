@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<title>QR card - print ready (A5)</title>
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:#fff}
+  .card{width:559px;height:794px;background:#fbf6ef;font-family:"Public Sans",sans-serif;color:#241a18;
+    display:flex;flex-direction:column;position:relative;overflow:hidden}
+  .inner{padding:52px 48px 0;flex:1;display:flex;flex-direction:column}
+  .eyebrow{text-transform:uppercase;letter-spacing:.09em;font-size:11px;font-weight:600;color:#6b2530}
+  .wordmark{width:190px;margin:14px 0 2px}
+  .role{font-size:12.5px;color:#5b4d49}
+  h1{font-size:29px;font-weight:800;letter-spacing:-.02em;line-height:1.18;margin:30px 0 14px}
+  ul{list-style:none;margin:0 0 26px}
+  li{font-size:14px;padding:7px 0 7px 0;border-bottom:1px solid #e7dcd2;display:flex;gap:9px;align-items:baseline}
+  li::before{content:"";width:7px;height:7px;background:#d98b3c;flex:0 0 auto;transform:translateY(-1px)}
+  .qrrow{display:flex;align-items:center;gap:22px;margin-top:auto;padding-bottom:34px}
+  .qr{width:148px;height:148px;border:1px solid #e7dcd2;border-radius:6px;background:#fff;padding:10px}
+  .qr img{width:100%;height:100%;display:block}
+  .scan{font-size:13px;color:#5b4d49;margin-bottom:6px}
+  .url{font-family:"Public Sans",sans-serif;font-weight:800;font-size:24px;letter-spacing:-.02em;color:#4e1d24}
+  .band{background:#4e1d24;color:#f3e0d9;padding:16px 48px;font-size:12.5px;display:flex;justify-content:space-between;gap:10px}
+  .band b{color:#fff}
+  @media print{ body{margin:0} .card{page-break-inside:avoid} }
+</style>
+</head>
+<body>
+<div class="card" data-screen-label="QR card A5">
+  <div class="inner">
+    <p class="eyebrow">Patient information</p>
+    <img class="wordmark" src="../assets/img/wordmark-maroon.png" alt="Dr Ed Halvey">
+    <p class="role">Specialist Anaesthetist · Perth, Western Australia</p>
+    <h1>Having surgery soon?<br>Everything about your anaesthetic, in one place.</h1>
+    <ul>
+      <li>When to stop eating and drinking</li>
+      <li>Which medicines to take or pause, day by day</li>
+      <li>What happens on the day of surgery</li>
+      <li>Your pain relief plan for after</li>
+    </ul>
+    <div class="qrrow">
+      <div class="qr"><img src="../assets/img/qr-drhalvey.png" alt="QR code linking to drhalvey.com.au"></div>
+      <div>
+        <p class="scan">Scan with your phone camera,<br>or visit</p>
+        <p class="url">drhalvey.com.au</p>
+      </div>
+    </div>
+  </div>
+  <div class="band"><span>Questions? <b>(08) 6267 6200</b></span><span>rooms@metroanaes.com.au</span></div>
+</div>
+</body>
+</html>
