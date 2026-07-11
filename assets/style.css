@@ -4,7 +4,7 @@
    Maroon/oxblood on warm paper, Public Sans, near-square corners.
    Drop-in replacement: all selectors match the original markup.
    ============================================================ */
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap");
+@import url("fonts.css");
 
 :root{
   --teal:#4e1d24;          /* maroon-700: primary */
@@ -70,7 +70,7 @@ h1,h2,h3,h4{letter-spacing:-.02em}
 
 /* - hero - */
 .hero{background:var(--teal);border-bottom:0;color:#fff}
-.hero.photo{background:linear-gradient(rgba(52,18,23,.88),rgba(52,18,23,.82)),url("https://images.unsplash.com/photo-1701042038426-1d47b910f43c?q=70&w=1800&auto=format&fit=crop") center/cover}
+.hero.photo{background:linear-gradient(rgba(52,18,23,.88),rgba(52,18,23,.82)),url("img/hero-swan-river.jpg") center/cover}
 .hero.centered .actions{justify-content:center}
 .hero .wrap{padding:72px 22px 64px}
 .hero h1{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(42px,6vw,64px);line-height:1.02;letter-spacing:0;margin:0 0 14px;max-width:20ch;color:#fff}
