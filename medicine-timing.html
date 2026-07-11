@@ -63,15 +63,13 @@
     </a>
     <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     <div class="navlinks" id="nav">
-      <a class="navlink" href="index.html">Home</a>
-      <a class="navlink" href="about.html">About</a>
-      <a class="navlink" href="services.html">Services</a>
+      <a class="navlink" href="pre-op-guidance.html">Before</a>
+      <a class="navlink" href="day-of-surgery.html">Day of</a>
+      <a class="navlink" href="tools/pain-relief.html">After</a>
+      <a class="navlink active" href="medicine-timing.html">Planner</a>
       <a class="navlink" href="procedures.html">Procedures</a>
-      <a class="navlink" href="hospitals.html">Hospitals</a>
-      <a class="navlink active" href="pre-op-guidance.html">Pre-op guidance</a>
-      <a class="navlink" href="clinical-research.html">Research</a>
-      <a class="navlink" href="tools/pain-relief.html">Pain plan</a>
-      <a class="navlink" href="clinicians.html" style="opacity:.55">Clinician</a>
+      <a class="navlink" href="fees.html">Fees</a>
+      <a class="navlink" href="about.html">About</a>
       <a class="cta" href="contact.html">Contact</a>
     </div>
   </nav>
@@ -111,8 +109,8 @@
     <div id="calwrap" class="cal-wrap noprint" style="display:none"></div>
 
     <div class="actions-row noprint" id="actionsrow" style="display:none">
-      <button class="btn primary" onclick="window.print()">🖨️ Print my list</button>
-      <button class="btn ghost" onclick="downloadICS()">📅 Add dates to my calendar</button>
+      <button class="btn primary" onclick="window.print()"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg> Print my list</button>
+      <button class="btn ghost" onclick="downloadICS()"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg> Add dates to my calendar</button>
       <button class="btn ghost" onclick="clearAll()">Start again</button>
     </div>
 
@@ -169,7 +167,15 @@ var RULES={
   BIOLOGIC:{cls:"stop",instr:"These are usually paused before surgery (often skipping 1 to 2 doses) to lower the risk of infection. Your specialist or the rooms will tell you which dose to skip."},
   MAOI:    {cls:"stop",instr:"This older antidepressant needs to be stopped about 2 weeks before surgery, arranged together with your psychiatrist. Do not stop it on your own."},
   DOAC:    {cls:"ask"},   /* asks kidney question, then gives a date */
-  INSULIN: {cls:"insulin"}/* asks type 1 / type 2 */
+  INSULIN: {cls:"insulin"},/* asks type 1 / type 2 */
+  /* ---- added from UKCPA Handbook of Perioperative Medicines (secondary source; existing rules above take precedence) ---- */
+  ASKROOMS:{cls:"ask", instr:"The right plan for this medicine depends on why you take it and your operation. Please <a href='contact.html'>check with the rooms</a> before surgery - do not stop it on your own."},
+  PARKINSONS:{cls:"", instr:"Keep taking this on time, including on the morning of surgery with a sip of water. Timing matters a lot for Parkinson's medicines - tell your anaesthetist and the ward staff."},
+  TRANSPLANT:{cls:"", instr:"Transplant anti-rejection medicines continue as normal - do not stop. Tell the rooms and the hospital you take it so doses and blood levels can be planned around surgery."},
+  EYEDROP: {cls:"", instr:"Keep using your eye drops as normal, including on the day of surgery."},
+  TELL:    {cls:"", instr:"Continue as normal, and make sure your anaesthetist knows you take it - it can affect the anaesthetic plan."},
+  PDE5:    {cls:"stop",instr:"Do not take this on the day of surgery.", dateDays:1, dateLabel:"Last dose"},
+  STIMULANT:{cls:"stop",instr:"Take as usual until the day before surgery. Do not take it on the morning of surgery.", dateDays:1, dateLabel:"Last dose"}
 };
 
 /* DOAC stop days from SCGH CrCl table (conservative simplification) */
@@ -267,7 +273,78 @@ var MEDS=[
   M("etanercept",["Enbrel"],"BIOLOGIC"),M("infliximab",["Remicade"],"BIOLOGIC"),
   M("fish oil",["Omega-3"],"STOP7"),M("vitamin E",[],"STOP7"),M("garlic supplement",[],"STOP7"),
   M("ginkgo biloba",[],"STOP7"),M("ginseng",[],"STOP7"),M("St John's Wort",[],"STOP7"),
-  M("turmeric / curcumin",[],"STOP7"),M("glucosamine",[],"STOP7")
+  M("turmeric / curcumin",[],"STOP7"),M("glucosamine",[],"STOP7"),
+  /* ---- expanded coverage (UKCPA periop handbook as secondary source - review by Dr Halvey) ---- */
+  M("moxonidine",["Physiotens"],"CONTINUE"),M("nicorandil",["Ikorel"],"CONTINUE"),
+  M("isosorbide mononitrate",["Imdur","Monodur","Duride"],"CONTINUE"),
+  M("glyceryl trinitrate (GTN)",["Nitrolingual","Anginine","Transiderm-Nitro"],"BRING"),
+  M("ivabradine",["Coralan"],"CONTINUE"),M("flecainide",["Tambocor"],"CONTINUE"),
+  M("dronedarone",["Multaq"],"CONTINUE"),M("bumetanide",["Burinex"],"SKIP_DAY"),
+  M("metolazone",["Zaroxolyn"],"SKIP_DAY"),M("triamterene",["Hydrene"],"SKIP_DAY"),
+  M("doxazosin",["Carduran"],"CONTINUE"),M("tamsulosin",["Flomaxtra","Duodart"],"CONTINUE"),
+  M("terazosin",["Hytrin"],"CONTINUE"),M("alfuzosin",["Xatral"],"CONTINUE"),
+  M("alogliptin",["Nesina"],"DIAB_TABLET"),M("glibenclamide",["Daonil","Glimel"],"DIAB_TABLET"),
+  M("tolbutamide",[],"DIAB_TABLET"),M("canagliflozin",["Invokana"],"SGLT2"),
+  M("tinzaparin",["Innohep"],"LMWH"),M("cilostazol",["Pletal"],"ASKROOMS"),
+  M("omeprazole",["Losec","Maxor"],"CONTINUE"),M("esomeprazole",["Nexium"],"CONTINUE"),
+  M("pantoprazole",["Somac"],"CONTINUE"),M("rabeprazole",["Pariet"],"CONTINUE"),
+  M("lansoprazole",["Zoton"],"CONTINUE"),M("famotidine",["Pepcid"],"CONTINUE"),M("nizatidine",["Tazac"],"CONTINUE"),
+  M("macrogol laxative",["Movicol","OsmoLax"],"CONTINUE"),M("senna",["Senokot","Coloxyl with Senna"],"CONTINUE"),
+  M("docusate",["Coloxyl"],"CONTINUE"),M("lactulose",["Duphalac","Actilax"],"CONTINUE"),
+  M("bisacodyl",["Durolax","Bisalax"],"CONTINUE"),M("loperamide",["Gastro-Stop","Imodium"],"CONTINUE"),
+  M("mebeverine",["Colofac"],"CONTINUE"),M("pancreatic enzymes",["Creon"],"CONTINUE"),
+  M("ursodeoxycholic acid",["Ursofalk"],"CONTINUE"),
+  M("levothyroxine (thyroid hormone)",["Oroxine","Eutroxsig","Eltroxin"],"CONTINUE"),
+  M("liothyronine",["Tertroxin"],"CONTINUE"),M("carbimazole",["Neo-Mercazole"],"CONTINUE"),
+  M("propylthiouracil (PTU)",[],"CONTINUE"),
+  M("olanzapine",["Zyprexa"],"CONTINUE"),M("quetiapine",["Seroquel"],"CONTINUE"),
+  M("risperidone",["Risperdal"],"CONTINUE"),M("aripiprazole",["Abilify"],"CONTINUE"),
+  M("amisulpride",["Solian"],"CONTINUE"),M("paliperidone",["Invega"],"CONTINUE"),
+  M("clozapine",["Clozaril","Clopine"],"ASKROOMS"),
+  M("diazepam",["Valium"],"CONTINUE"),M("temazepam",["Temaze","Normison"],"CONTINUE"),
+  M("oxazepam",["Serepax"],"CONTINUE"),M("alprazolam",["Kalma"],"CONTINUE"),
+  M("clonazepam",["Rivotril","Paxam"],"CONTINUE"),M("zolpidem",["Stilnox"],"CONTINUE"),M("zopiclone",["Imovane"],"CONTINUE"),
+  M("levodopa/carbidopa",["Sinemet","Kinson"],"PARKINSONS"),M("levodopa/benserazide",["Madopar"],"PARKINSONS"),
+  M("pramipexole",["Sifrol"],"PARKINSONS"),M("ropinirole",["Repreve"],"PARKINSONS"),
+  M("rotigotine patch",["Neupro"],"PARKINSONS"),M("entacapone",["Comtan","Stalevo"],"PARKINSONS"),
+  M("rasagiline",["Azilect"],"PARKINSONS"),M("selegiline",["Eldepryl"],"PARKINSONS"),M("safinamide",["Xadago"],"PARKINSONS"),
+  M("donepezil",["Aricept"],"TELL"),M("galantamine",["Reminyl"],"TELL"),
+  M("rivastigmine",["Exelon"],"TELL"),M("memantine",["Ebixa","Memanxa"],"CONTINUE"),
+  M("pyridostigmine",["Mestinon"],"TELL"),
+  M("methylphenidate",["Ritalin","Concerta"],"STIMULANT"),M("dexamfetamine",[],"STIMULANT"),
+  M("lisdexamfetamine",["Vyvanse"],"STIMULANT"),M("moclobemide",["Aurorix"],"SKIP_DAY"),
+  M("sumatriptan and other triptans",["Imigran","Relpax","Maxalt","Zomig","Naramig"],"CONTINUE"),
+  M("baclofen",["Lioresal"],"CONTINUE"),M("tizanidine",[],"CONTINUE"),
+  M("methadone",["Physeptone","Biodone"],"TELL"),M("fentanyl patch",["Durogesic","Denpax"],"TELL"),
+  M("montelukast",["Singulair"],"CONTINUE"),M("theophylline",["Nuelin"],"CONTINUE"),
+  M("other inhalers (combination / once-daily)",["Breo","Trelegy","Anoro","Spiolto","Incruse","Onbrez"],"BRING"),
+  M("alendronate",["Fosamax","Alendro"],"SKIP_DAY"),M("risedronate",["Actonel"],"SKIP_DAY"),
+  M("ibandronate",[],"SKIP_DAY"),M("raloxifene",["Evista"],"HRT"),
+  M("tamoxifen",["Nolvadex"],"ASKROOMS"),M("anastrozole",["Arimidex"],"CONTINUE"),
+  M("letrozole",["Femara"],"CONTINUE"),M("exemestane",["Aromasin"],"CONTINUE"),
+  M("finasteride",["Proscar"],"CONTINUE"),M("dutasteride",["Avodart","Duodart"],"CONTINUE"),
+  M("allopurinol",["Zyloprim","Progout"],"CONTINUE"),M("febuxostat",["Adenuric"],"CONTINUE"),
+  M("colchicine",["Colgout","Lengout"],"CONTINUE"),
+  M("azathioprine",["Imuran","Azasan"],"CONTINUE"),M("tacrolimus",["Prograf","Advagraf"],"TRANSPLANT"),
+  M("ciclosporin",["Neoral","Sandimmun"],"TRANSPLANT"),M("mycophenolate",["CellCept","Myfortic"],"TRANSPLANT"),
+  M("hydroxychloroquine",["Plaquenil"],"CONTINUE"),M("sulfasalazine",["Salazopyrin"],"CONTINUE"),
+  M("leflunomide",["Arava"],"ASKROOMS"),
+  M("tofacitinib",["Xeljanz"],"BIOLOGIC"),M("baricitinib",["Olumiant"],"BIOLOGIC"),M("upadacitinib",["Rinvoq"],"BIOLOGIC"),
+  M("golimumab",["Simponi"],"BIOLOGIC"),M("certolizumab",["Cimzia"],"BIOLOGIC"),
+  M("secukinumab",["Cosentyx"],"BIOLOGIC"),M("ustekinumab",["Stelara"],"BIOLOGIC"),
+  M("ixekizumab",["Taltz"],"BIOLOGIC"),M("abatacept",["Orencia"],"BIOLOGIC"),
+  M("anakinra",["Kineret"],"BIOLOGIC"),M("guselkumab",["Tremfya"],"BIOLOGIC"),
+  M("glaucoma eye drops",["Xalatan","Timoptol","Alphagan","Trusopt","Lumigan","Travatan","Ganfort","Combigan"],"EYEDROP"),
+  M("desmopressin",["Minirin"],"ASKROOMS"),M("varenicline",["Champix"],"CONTINUE"),
+  M("sildenafil",["Viagra"],"PDE5"),M("tadalafil",["Cialis"],"PDE5"),M("vardenafil",["Levitra"],"PDE5"),
+  M("mirabegron",["Betmiga"],"CONTINUE"),M("oxybutynin",["Ditropan"],"CONTINUE"),
+  M("solifenacin",["Vesicare"],"CONTINUE"),M("tolterodine",["Detrusitol"],"CONTINUE"),
+  M("progestogen-only pill (mini-pill)",["Microlut","Noriday","Cerazette","Slinda"],"CONTINUE"),
+  M("iron supplement",["Ferro-Grad","Maltofer","Ferro-Liquid"],"CONTINUE"),
+  M("vitamin D",["Ostelin"],"CONTINUE"),M("calcium supplement",["Caltrate","Citracal"],"CONTINUE"),
+  M("folic acid",["Megafol"],"CONTINUE"),M("vitamin B12",[],"CONTINUE"),
+  M("quinine (for cramps)",[],"CONTINUE"),
+  M("antihistamines",["Claratyne","Zyrtec","Telfast","Aerius","Phenergan"],"CONTINUE")
 ];
 
 /* ============ elements ============ */

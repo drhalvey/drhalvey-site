@@ -17,119 +17,130 @@
     </a>
     <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     <div class="navlinks" id="nav">
-      <a class="navlink active" href="index.html">Home</a>
-      <a class="navlink" href="about.html">About</a>
-      <a class="navlink" href="services.html">Services</a>
+      <a class="navlink" href="pre-op-guidance.html">Before</a>
+      <a class="navlink" href="day-of-surgery.html">Day of</a>
+      <a class="navlink" href="tools/pain-relief.html">After</a>
+      <a class="navlink" href="medicine-timing.html">Planner</a>
       <a class="navlink" href="procedures.html">Procedures</a>
-      <a class="navlink" href="hospitals.html">Hospitals</a>
-      <a class="navlink" href="pre-op-guidance.html">Pre-op guidance</a>
-      <a class="navlink" href="clinical-research.html">Research</a>
-      <a class="navlink" href="tools/pain-relief.html">Pain plan</a>
-      <a class="navlink" href="clinicians.html" style="opacity:.55">Clinician</a>
+      <a class="navlink" href="fees.html">Fees</a>
+      <a class="navlink" href="about.html">About</a>
       <a class="cta" href="contact.html">Contact</a>
     </div>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="wrap" style="display:flex;gap:36px;align-items:center;flex-wrap:wrap">
-    <div style="flex:1 1 360px">
-      <h1>Calm, careful anaesthesia and clear guidance for your surgery</h1>
-      <p>Dr Ed Halvey is a specialist anaesthetist working with patients across Perth.
-         This site gives you straightforward information to help you prepare for your
-         procedure and recover well afterwards.</p>
-      <div class="actions">
-        <a class="btn primary" href="pre-op-guidance.html">Preparing for surgery</a>
-        <a class="btn ghost" href="about.html">About Dr Halvey</a>
-      </div>
-      <div class="sitesearch">
-        <span class="mag">🔍</span>
-        <input type="text" id="siteq" autocomplete="off" placeholder="Search the site - e.g. sleep, fasting, knee replacement, fees">
-        <div class="searchres" id="searchres"></div>
-      </div>
+<section class="hero centered">
+  <div class="wrap">
+    <p class="eyebrow">Patient information</p>
+    <h1>Everything about your anaesthetic</h1>
+    <p>Plain-English answers, written by your anaesthetist. From fasting times to your
+       pain relief plan after surgery, it is all here.</p>
+    <div class="sitesearch">
+      <span class="mag"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+      <input type="text" id="siteq" autocomplete="off" placeholder="Search the site - e.g. sleep, fasting, knee replacement, fees">
+      <div class="searchres" id="searchres"></div>
     </div>
-    <img class="hero-portrait" src="assets/img/ed-halvey.webp" alt="Dr Ed Halvey"
-         style="width:190px;height:190px" onerror="this.style.display='none'">
   </div>
 </section>
 
-<div class="calm-band" aria-hidden="true">
-  <svg viewBox="0 0 1440 220" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block">
-    <defs>
-      <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#eaf3f1"/><stop offset="1" stop-color="#cfe6e2"/>
-      </linearGradient>
-    </defs>
-    <rect width="1440" height="220" fill="url(#sky)"/>
-    <circle cx="1140" cy="78" r="46" fill="#fbe7c6" opacity="0.9"/>
-    <circle cx="1140" cy="78" r="64" fill="#fbe7c6" opacity="0.35"/>
-    <path d="M0,150 C240,110 480,170 720,150 C960,130 1200,165 1440,140 L1440,220 L0,220 Z" fill="#cfe1dd"/>
-    <path d="M0,176 C260,150 520,196 800,178 C1080,160 1280,192 1440,176 L1440,220 L0,220 Z" fill="#9cc3bc"/>
-    <path d="M0,202 C300,188 560,212 880,200 C1140,190 1300,210 1440,202 L1440,220 L0,220 Z" fill="#5a9a91"/>
-  </svg>
-</div>
+
 
 <section class="block">
   <div class="wrap">
-    <p class="eyebrow">How this site helps</p>
-    <h2 class="sec">Everything you need before and after your procedure</h2>
-    <p class="lead">Clear, practical information - written by your anaesthetist - so you know
-      what to expect and what to do at each step.</p>
-
-    <div class="grid c3" style="margin-top:28px">
-      <a class="card" href="pre-op-guidance.html">
-        <div class="ico">🗓️</div>
-        <h3 id="preparing-for-surgery">Preparing for surgery</h3>
-        <p>Fasting instructions, what to bring, and how to get ready for the day of your operation.</p>
+    <p class="eyebrow">Your journey</p>
+    <h2 class="sec">Step by step, in the right order</h2>
+    <div class="journey">
+      <div class="jcol">
+      <a class="jcard first" href="pre-op-guidance.html">
+        <span class="jnum">1</span>
+        <h3>Before surgery</h3>
+        <p>Fasting times, which medicines to pause, and what to bring on the day.</p>
         <span class="more">Read the guidance →</span>
       </a>
-      <a class="card" href="pre-op-guidance.html#recovery">
-        <div class="ico">💊</div>
-        <h3 id="your-recovery-pain-relief-plan">Your recovery pain relief plan</h3>
-        <p>If Dr Halvey has given you a pain relief plan for your operation, you can view it online.</p>
-        <span class="more">Find your plan →</span>
+      <img src="https://images.unsplash.com/photo-1639391302869-9e3b130487cd?q=70&w=900&auto=format&fit=crop" alt="Person resting on a bench under a tree by the Swan River" style="width:100%;height:150px;object-fit:cover;border-radius:4px">
+      </div>
+      <span class="arrow">→</span>
+      <div class="jcol">
+      <a class="jcard" href="day-of-surgery.html">
+        <span class="jnum">2</span>
+        <h3>Day of surgery</h3>
+        <p>What happens when you arrive, meeting Dr Halvey, and going off to sleep.</p>
+        <span class="more">Read the guidance →</span>
       </a>
-      <a class="card" href="services.html">
-        <div class="ico">🩺</div>
-        <h3 id="anaesthetic-services">Anaesthetic services</h3>
-        <p>The types of surgery and procedures Dr Halvey provides anaesthesia for.</p>
-        <span class="more">See services →</span>
+      <img src="https://images.unsplash.com/photo-1701042038426-1d47b910f43c?q=70&w=900&auto=format&fit=crop" alt="Bridge over the Swan River at dawn" style="width:100%;height:150px;object-fit:cover;border-radius:4px">
+      </div>
+      <span class="arrow">→</span>
+      <div class="jcol">
+      <a class="jcard" href="tools/pain-relief.html">
+        <span class="jnum">3</span>
+        <h3>After surgery</h3>
+        <p>Your pain relief plan, common side effects, and when to call.</p>
+        <span class="more">Read the guidance →</span>
       </a>
+      <img src="https://images.unsplash.com/photo-1639390930123-cff16d1d1682?q=70&w=900&auto=format&fit=crop" alt="Birds at the edge of the Swan River" style="width:100%;height:150px;object-fit:cover;border-radius:4px">
+      </div>
     </div>
   </div>
 </section>
 
 <section class="block alt">
   <div class="wrap">
-    <div class="grid c2" style="align-items:center">
-      <div>
-        <p class="eyebrow">About</p>
-        <h2 class="sec">Specialist anaesthetic care in Perth</h2>
-        <p class="lead">Dr Ed Halvey provides anaesthesia for patients undergoing surgery at
-          public and private hospitals in Perth. He focuses on safe, comfortable care and on
-          making sure every patient understands their plan before and after their procedure.</p>
-        <p style="margin-top:18px"><a class="btn ghost" href="about.html">More about Dr Halvey</a></p>
+    <div class="toolgrid">
+      <div class="toolcard">
+        <div class="ico"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Medicine timing planner</h3>
+        <p>Enter your surgery time and get exact stop times for food, drink and each of your medicines.</p>
+        <a class="btn primary" href="medicine-timing.html">Open the planner</a>
       </div>
-      <div class="card">
-        <h3 id="where-dr-halvey-practises">Where Dr Halvey practises</h3>
-        <div class="rowlist">
-          <div class="rowitem"><span class="dot">🏥</span><div><h4>Sir Charles Gairdner Hospital</h4><p>Public hospital, Nedlands</p></div></div>
-          <div class="rowitem"><span class="dot">🏥</span><div><h4>Hollywood Private Hospital</h4><p>Private hospital, Nedlands</p></div></div>
-          <div class="rowitem"><span class="dot">🏥</span><div><h4>St John of God Subiaco</h4><p>Private hospital, Subiaco</p></div></div>
-          <div class="rowitem"><span class="dot">🏥</span><div><h4>Bethesda Hospital</h4><p>Private hospital, Claremont</p></div></div>
-        </div>
-        <p style="margin-top:16px"><a href="hospitals.html">Hospital details →</a></p>
+      <div class="toolcard">
+        <div class="ico"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg></div>
+        <h3>Pain relief planner</h3>
+        <p>If Dr Halvey has given you a pain relief plan for your operation, you can view it online.</p>
+        <a class="btn primary" href="tools/pain-relief.html">Find your plan</a>
       </div>
+    </div>
+    <div class="card procbox">
+      <h3>Find your procedure</h3>
+      <p>Specific guides for common operations, with what to expect from your anaesthetic for each.</p>
+      <div class="psearch">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="procq" autocomplete="off" placeholder="Type your operation - e.g. knee, caesarean, hernia">
+      </div>
+      <div class="procgrid" id="procgrid">
+        <a href="general-anaesthetic.html"><b>General anaesthetic - any operation</b></a>
+        <a href="knee-replacement.html">Knee replacement</a>
+        <a href="hip-replacement.html">Hip replacement</a>
+        <a href="caesarean.html">Caesarean section</a>
+        <a href="acl-reconstruction.html">ACL reconstruction</a>
+        <a href="joint-arthroscopy.html">Joint arthroscopy</a>
+        <a href="hernia-surgery.html">Hernia surgery</a>
+        <a href="bowel-resection.html">Bowel resection</a>
+        <a href="haemorrhoidectomy.html">Haemorrhoidectomy</a>
+        <a href="cervical-cerclage.html">Cervical cerclage</a>
+        <a href="infusaport.html">Infusaport insertion</a>
+      </div>
+      <p id="procnone" hidden>Nothing matching that yet - see <a href="procedures.html">all procedures</a> or <a href="contact.html">ask the rooms</a>.</p>
+      <p style="margin-top:16px"><a href="procedures.html">All procedures →</a></p>
     </div>
   </div>
 </section>
 
 <section class="block">
-  <div class="wrap" style="text-align:center">
-    <h2 class="sec">Questions about your anaesthetic?</h2>
-    <p class="lead" style="margin:0 auto 22px">If you have a question before your surgery, the best way to
-      reach Dr Halvey's rooms is through the contact page.</p>
-    <a class="btn primary" href="contact.html">Contact the rooms</a>
+  <div class="wrap">
+    <div class="aboutrow">
+      <img src="assets/img/ed-halvey.webp" alt="Dr Ed Halvey" onerror="this.style.display='none'">
+      <div>
+        <h3>Dr Ed Halvey, Specialist Anaesthetist</h3>
+        <p>Providing anaesthesia for patients undergoing surgery at public and private hospitals
+           in Perth, with a focus on safe, comfortable care and a clear plan at every step.</p>
+        <a href="about.html">About Dr Halvey →</a>
+      </div>
+      <div class="feecol">
+        <p class="eyebrow" style="margin-bottom:4px">Fees</p>
+        <p>A written estimate before surgery, with any gap explained up front.</p>
+        <a href="fees.html">How billing works →</a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -138,16 +149,18 @@
     <div class="fgrid">
       <div>
         <h4>Dr Ed Halvey</h4>
-        <p style="color:#9fb6b3;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia.
+        <p style="color:#b08a83;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia.
           Patient information and pre-operative guidance.</p>
       </div>
       <div>
         <h4>Site</h4>
         <a href="about.html">About</a>
         <a href="services.html">Services</a>
+        <a href="procedures.html">Procedures</a>
         <a href="hospitals.html">Hospitals</a>
         <a href="pre-op-guidance.html">Pre-op guidance</a>
-        <a href="contact.html">Contact</a>
+        <a href="clinical-research.html">Research</a>
+        <a href="clinicians.html">Clinician tools</a>
       </div>
       <div>
         <h4>Contact</h4>
@@ -165,6 +178,20 @@
   </div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
+(function(){
+  var q=document.getElementById('procq'),grid=document.getElementById('procgrid'),none=document.getElementById('procnone');
+  if(!q)return;
+  q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(),shown=0;
+    Array.prototype.forEach.call(grid.children,function(a){
+      var hit=!v||a.textContent.toLowerCase().indexOf(v)!==-1;
+      a.style.display=hit?'':'none';if(hit)shown++;
+    });
+    none.hidden=shown>0;
+  });
+})();
+</script>
 <script src="assets/search-index.js"></script>
 <script src="assets/search.js"></script>
 </body>
