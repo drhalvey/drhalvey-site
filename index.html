@@ -6,6 +6,14 @@
 <title>Dr Ed Halvey - Specialist Anaesthetist, Perth</title>
 <meta name="description" content="Dr Ed Halvey is a specialist anaesthetist in Perth, Western Australia. Clear pre-operative guidance and recovery information for patients.">
 <link rel="stylesheet" href="assets/style.css">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y67N59R0N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1Y67N59R0N');
+</script>
 </head>
 <body>
 
@@ -15,12 +23,10 @@
       <span class="logo">EH</span>
       <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
     </a>
+    <div class="stepnav"><a href="pre-op-guidance.html">Before surgery</a><a href="day-of-surgery.html">Day of surgery</a><a href="tools/pain-relief.html">After surgery</a><a class="clin" href="clinicians.html">Clinician tools</a></div>
     <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
     <div class="navlinks" id="nav">
-      <a class="navlink" href="pre-op-guidance.html">Before</a>
-      <a class="navlink" href="day-of-surgery.html">Day of</a>
-      <a class="navlink" href="tools/pain-relief.html">After</a>
-      <a class="navlink" href="medicine-timing.html">Planner</a>
+      <a class="navlink" href="medicine-timing.html">My medicines before surgery planner</a>
       <a class="navlink" href="procedures.html">Procedures</a>
       <a class="navlink" href="fees.html">Fees</a>
       <a class="navlink" href="about.html">About</a>
@@ -29,18 +35,25 @@
   </nav>
 </header>
 
-<section class="hero centered">
+<section class="hero centered photo">
   <div class="wrap">
-    <p class="eyebrow">Patient information</p>
-    <h1>Everything about your anaesthetic</h1>
-    <p>Plain-English answers, written by your anaesthetist. From fasting times to your
-       pain relief plan after surgery, it is all here.</p>
+    <p class="eyebrow" style="color:#f0d9b8">Patient information</p>
+    <h1>Having surgery soon?</h1>
+    <p>Everything about your anaesthetic in plain English, written by your anaesthetist.
+       From fasting times to your pain relief plan after surgery, it is all here.</p>
     <div class="sitesearch">
       <span class="mag"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
       <input type="text" id="siteq" autocomplete="off" placeholder="Search the site - e.g. sleep, fasting, knee replacement, fees">
       <div class="searchres" id="searchres"></div>
     </div>
+    <div class="actions" style="margin-top:22px">
+      <a class="btn primary" href="pre-op-guidance.html">Start here: before surgery</a>
+    </div>
   </div>
+</section>
+
+<section class="mostasked">
+  <div class="wrap"><b>Most asked:</b><a href="fasting.html">When do I stop eating and drinking?</a><a href="medicines-before-surgery.html">Which medicines do I stop?</a><a href="fees.html">What will it cost?</a></div>
 </section>
 
 
@@ -172,7 +185,7 @@
     <div class="legal">
       <p>The information on this website is general in nature and is provided for education only. It is
         not a substitute for individual medical advice. Always follow the specific instructions given to
-        you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000.</p>
+        you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
       <p>© <span id="yr"></span> Dr Ed Halvey. </p>
     </div>
   </div>
