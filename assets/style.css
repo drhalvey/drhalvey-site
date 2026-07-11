@@ -47,6 +47,18 @@ h1,h2,h3,h4{letter-spacing:-.02em}
 .nav .cta:hover{background:var(--teal-d)}
 .nav .cta:active{transform:translateY(1px)}
 .navtoggle{display:none;background:none;border:1.5px solid var(--line);border-radius:3px;padding:7px 10px;font-size:16px;cursor:pointer;color:var(--ink)}
+/* step buttons - always visible in the header */
+.stepnav{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.stepnav a{display:inline-flex;align-items:center;text-decoration:none;font-size:13.5px;font-weight:600;border-radius:3px;padding:8px 14px;color:var(--teal);background:#fff;border:1px solid var(--line);white-space:nowrap}
+.stepnav a:hover{border-color:var(--teal);background:var(--teal-l)}
+.stepnav a.active{background:var(--teal);color:#fff;border-color:var(--teal)}
+.stepnav a.clin{background:#f5ece1;color:var(--teal-d)}
+.stepnav a.clin:hover{background:#ecdcc8}
+@media(max-width:900px){
+  .nav{flex-wrap:wrap}
+  .stepnav{width:100%;order:3;padding-top:2px}
+  .stepnav a{flex:1;justify-content:center;padding:9px 6px;font-size:12.5px}
+}
 @media(max-width:1150px){
   .nav .navlinks{display:none;position:absolute;top:64px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);
     flex-direction:column;align-items:flex-start;padding:10px 22px 18px;gap:4px}
@@ -58,6 +70,8 @@ h1,h2,h3,h4{letter-spacing:-.02em}
 
 /* - hero - */
 .hero{background:var(--teal);border-bottom:0;color:#fff}
+.hero.photo{background:linear-gradient(rgba(52,18,23,.88),rgba(52,18,23,.82)),url("https://images.unsplash.com/photo-1701042038426-1d47b910f43c?q=70&w=1800&auto=format&fit=crop") center/cover}
+.hero.centered .actions{justify-content:center}
 .hero .wrap{padding:72px 22px 64px}
 .hero h1{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(42px,6vw,64px);line-height:1.02;letter-spacing:0;margin:0 0 14px;max-width:20ch;color:#fff}
 .hero p{font-size:18px;color:#f3e0d9;max-width:60ch;margin:0 0 26px}
@@ -67,6 +81,13 @@ h1,h2,h3,h4{letter-spacing:-.02em}
 .hero .btn.ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.45)}
 .hero .btn.ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
 .hero-portrait{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.9);box-shadow:0 8px 28px rgba(46,17,21,.4)}
+
+/* - most-asked strip - */
+.mostasked{background:#f5ece1;border-bottom:1px solid var(--line)}
+.mostasked .wrap{display:flex;gap:8px 22px;flex-wrap:wrap;align-items:center;padding:13px 22px;font-size:14.5px}
+.mostasked b{color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:12px}
+.mostasked a{color:#6b2530;font-weight:600;text-decoration:none}
+.mostasked a:hover{text-decoration:underline}
 
 /* - buttons - */
 .btn{display:inline-block;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:15px;
