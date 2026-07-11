@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Your pain relief plan - Dr Ed Halvey</title>
+<link rel="stylesheet" href="../assets/style.css">
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap");
   :root{--teal:#4e1d24;--teal-d:#3d161c;--teal-l:#f9f0ec;--ink:#241a18;--muted:#5b4d49;--line:#e7dcd2;
     --bg:#fbf6ef;--card:#fff;--warn-bg:#fef4ec;--warn-line:#e8a06a;--warn-ink:#8a4b16;
     --stop-bg:#fbecec;--stop-line:#d98a8a;--stop-ink:#9a2b2b;--radius:6px;--shadow:0 1px 3px rgba(78,29,36,.08),0 8px 24px rgba(78,29,36,.06)}
@@ -14,9 +14,6 @@
   .wrap{max-width:1040px;margin:0 auto;padding:24px 20px 80px}
   .proto-banner{background:#2b2b2b;color:#fff;font-size:13px;text-align:center;padding:8px 16px}
   .proto-banner strong{color:#ffd9a6}
-  header.site{display:flex;align-items:center;gap:14px;padding:22px 20px;max-width:1040px;margin:0 auto}
-  .logo{width:42px;height:42px;border-radius:6px;background:var(--teal);display:grid;place-items:center;color:#fff;font-weight:700;font-size:17px;flex:0 0 auto}
-  .site h1{font-size:17px;margin:0;font-weight:650}.site .sub{font-size:13px;color:var(--muted);margin:0}
   .panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px;margin-bottom:20px}
   h2{font-size:23px;margin:0 0 6px}h3{font-size:17px;margin:22px 0 8px}
   p.lede{font-size:16px;color:var(--muted);margin:0 0 16px;max-width:66ch}
@@ -65,17 +62,35 @@
   .plan-meta{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 8px}
   @media print{.proto-banner,.backbar,.noprint{display:none !important}body{background:#fff}}
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y67N59R0N"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-1Y67N59R0N');
+</script>
 </head>
 <body>
 
-<header class="site">
-  <a href="../index.html" title="Home" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:14px">
-    <div class="logo">EH</div>
-    <div><h1>Dr Ed Halvey</h1><p class="sub">Specialist Anaesthetist · Recovery &amp; pain relief plans</p></div>
-  </a>
-  <a href="../pre-op-guidance.html" class="noprint" style="margin-left:auto;font-size:13.5px;color:var(--teal-d);text-decoration:none;font-weight:600">← Back to guidance</a>
+<header class="topbar">
+  <nav class="nav">
+    <a class="brand" href="../index.html">
+      <span class="logo">EH</span>
+      <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
+    </a>
+    <div class="stepnav"><a href="../pre-op-guidance.html">Before surgery</a><a href="../day-of-surgery.html">Day of surgery</a><a class="active" href="../tools/pain-relief.html">After surgery</a><a class="clin" href="../clinicians.html">Clinician tools</a></div>
+    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <div class="navlinks" id="nav">
+      <a class="navlink" href="../medicine-timing.html">My medicines before surgery planner</a>
+      <a class="navlink" href="../procedures.html">Procedures</a>
+      <a class="navlink" href="../fees.html">Fees</a>
+      <a class="navlink" href="../about.html">About</a>
+      <a class="cta" href="../contact.html">Contact</a>
+    </div>
+  </nav>
 </header>
-<nav class="noprint" aria-label="Your journey" style="display:flex;gap:8px;flex-wrap:wrap;max-width:1040px;margin:0 auto;padding:0 20px"><a href="../pre-op-guidance.html" style="display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:14.5px;font-weight:600;border-radius:3px;padding:10px 18px;color:var(--teal);background:#fff;border:1px solid var(--line)">1 · Before surgery</a><a href="../day-of-surgery.html" style="display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:14.5px;font-weight:600;border-radius:3px;padding:10px 18px;color:var(--teal);background:#fff;border:1px solid var(--line)">2 · Day of surgery</a><span style="display:inline-flex;align-items:center;gap:9px;text-decoration:none;font-size:14.5px;font-weight:600;border-radius:3px;padding:10px 18px;color:#fff;background:var(--teal);border:1px solid var(--teal)">3 · After surgery</span></nav>
+
 
 
 <div class="wrap">
@@ -141,6 +156,9 @@ var PLANS={
   etoricoxib:{label:'General post-operative pain relief (etoricoxib)',tag:'General plan',kind:'simple',nsaid:{name:'Etoricoxib',dose:'120 mg',times:['8 am']}},
   celecoxib:{label:'General post-operative pain relief (celecoxib)',tag:'General plan',kind:'simple',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
   ibuprofen:{label:'General post-operative pain relief (ibuprofen)',tag:'General plan',kind:'simple',nsaid:{name:'Ibuprofen',dose:'200-400 mg',times:['8 am','2 pm','8 pm']}},
+  tap_ibu:{label:'General pain relief with tapentadol SR (ibuprofen)',tag:'Tapentadol SR plan',kind:'tapsr',nsaid:{name:'Ibuprofen',dose:'200-400 mg',times:['8 am','2 pm','8 pm']}},
+  tap_cel:{label:'General pain relief with tapentadol SR (celecoxib)',tag:'Tapentadol SR plan',kind:'tapsr',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  tap_eto:{label:'General pain relief with tapentadol SR (etoricoxib)',tag:'Tapentadol SR plan',kind:'tapsr',nsaid:{name:'Etoricoxib',dose:'120 mg',times:['8 am']}},
   caesarean:{label:'Caesarean section',tag:'Caesarean plan',kind:'caesarean'},
   acl_cel:{label:'ACL reconstruction (celecoxib)',tag:'Slow-release plan',kind:'full',variant:'acl',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
   acl_eto:{label:'ACL reconstruction (etoricoxib)',tag:'Slow-release plan',kind:'full',variant:'acl',nsaid:{name:'Etoricoxib',dose:'120 mg once daily',times:['8 am']}},
@@ -154,6 +172,21 @@ var ONLY_IF_PAIN='<div class="alert info" style="margin-bottom:16px"><h4><svg wi
   'and step it down as soon as your pain settles.</div>';
 
 function row(time,med,dose,note){return '<tr><td class="timecol">'+time+'</td><td class="med">'+med+(dose?'<span class="dose">'+dose+'</span>':'')+'</td><td class="note">'+note+'</td></tr>';}
+
+/* ----- generic tapentadol SR plan: 1 week of SR + regular paracetamol + an anti-inflammatory ----- */
+function tapsrBody(p){
+  var n=p.nsaid, rows='', first=true;
+  ['8 am','2 pm','8 pm'].forEach(function(t){
+    rows+=row(t,'Panadol Osteo','two 665 mg tablets', first?'Good background pain reliever. Take regularly at 8 am, 2 pm and 8 pm while you have pain.':'Take regularly while you have pain.');
+    if(n.times.indexOf(t)>-1) rows+=row(t,n.name,n.dose,NSAID_NOTE);
+    if(t!=='2 pm') rows+=row(t,'<span class="pill">S8</span> Tapentadol SR','50 mg or 100 mg, as prescribed for you','<b>Take twice a day (8 am and 8 pm) for 1 week only, then stop.</b> Strong slow-release baseline pain relief. Do not drive while taking it.');
+    first=false;
+  });
+  rows+=TOPUP_ROW;
+  rows+='<tr><td class="timecol">As needed</td><td class="med">Laxative - a suggestion<span class="dose">Coloxyl with Senna, or Movicol</span></td><td class="note">Worth having at home: tapentadol commonly causes constipation. Drink plenty of fluids.</td></tr>';
+  return '<div class="panel">'+ONLY_IF_PAIN+'<table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>What it is / when to take it</th></tr></thead><tbody>'+rows+'</tbody></table>'+
+    '<div class="alert warn" style="margin-top:14px"><h4>Stop the tapentadol SR after 1 week</h4>The slow-release strong medicine is a short course: <b>1 week from discharge, then stop.</b> Keep going with the paracetamol and anti-inflammatory while you have pain. You can also take a little tapentadol immediate release as a top-up if you really need it - see the as-needed row above.</div></div>';
+}
 
 /* ----- general (simple) plan: a grid, in time order ----- */
 function simpleBody(p){
@@ -221,9 +254,9 @@ function fullBody(p){
     '<div class="tabpane" id="t4"><p class="note" style="margin-top:10px">Days 45 onward. Paracetamol: stop if able. The anti-inflammatory and vitamin C: 6-week course complete. Tapentadol: aim to finish the wean.</p></div>'+
     '</div>'+
     '<div class="panel"><h3>Reducing your slow-release medicine (tapentadol / Palexia SR wean)</h3>'+
-      '<p class="note">Choose the dose you are taking at the 2-week mark to see your week-by-week plan. Reduce the daytime dose first and keep the night-time dose longest.</p>'+
-      '<label class="field" for="wdose">My tapentadol dose at 2 weeks</label>'+
-      '<select id="wdose" style="max-width:320px"><option value="">- Select your dose -</option><option value="50">50 mg twice a day</option><option value="100">100 mg twice a day</option><option value="200">200 mg twice a day</option></select>'+
+      '<p class="note">Choose the dose you were taking when you left hospital to see your week-by-week plan. Reduce the daytime dose first and keep the night-time dose longest.</p>'+
+      '<label class="field" for="wdose">My tapentadol dose on discharge</label>'+
+      '<select id="wdose" style="max-width:320px"><option value="">- Select your dose -</option><option value="50">50 mg twice a day</option><option value="100">100 mg twice a day</option>'+(p.variant==='acl'?'':'<option value="200">200 mg twice a day</option>')+'</select>'+
       '<div class="weanbox hidden" id="weanout"></div>'+
       '<p class="hint">You should no longer be taking slow-release tapentadol beyond 3 weeks, ideally 2 weeks.</p></div>';
 }
@@ -252,6 +285,9 @@ function renderPlan(){
   if(p.kind==='full'){
     document.getElementById('planLede').textContent='Take the regular medicines on the clock (8 am, 2 pm, 8 pm). Only step up to the stronger top-up if you need it. As you recover you reduce and stop the slow-release medicine using the wean plan.';
     body.innerHTML=fullBody(p); wireFull();
+  } else if(p.kind==='tapsr'){
+    document.getElementById('planLede').textContent='Take the regular medicines on the clock (8 am, 2 pm, 8 pm). The slow-release strong medicine (tapentadol SR) is a short course: twice a day for 1 week, then stop.';
+    body.innerHTML=tapsrBody(p);
   } else if(p.kind==='caesarean'){
     document.getElementById('planLede').textContent='Pain after a caesarean usually improves over the first 1-2 weeks. We control it in layers: regular medicines, with a stronger medicine only if needed.';
     body.innerHTML=caesareanBody();
@@ -278,18 +314,35 @@ function rangeText(s,e){var sd=dischDate();if(!sd)return '';var a=addDays(sd,+s)
 function setBan(b){var t=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));document.getElementById('dateban').textContent=t?('Your dates for this stage: '+t):'';}
 function updateDates(){document.querySelectorAll('#tabs button').forEach(function(b){b.querySelector('.rng').textContent=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));});var a=document.querySelector('#tabs button.active');if(a)setBan(a);if(document.getElementById('wdose').value)renderWean();}
 var WEAN={
-  "50":[[3,"Stop the daytime dose. Continue 50 mg at night."],[4,"Stop the night-time dose. You are now off tapentadol."]],
-  "100":[[3,"Reduce daytime dose to 50 mg. Continue 100 mg at night."],[4,"Stop the daytime dose. Reduce the night dose to 50 mg."],[5,"Stop the night-time dose. You are now off tapentadol."]],
-  "200":[[3,"Reduce daytime dose to 100 mg. Continue 200 mg at night."],[4,"Reduce daytime dose to 50 mg. Reduce night dose to 100 mg."],[5,"Stop the daytime dose. Reduce the night dose to 50 mg."],[6,"Stop the night-time dose. You are now off tapentadol."]]
+  "50":[[1,"Take 50 mg twice a day for 1 week, then stop. You are now off tapentadol."]],
+  "100_acl":[[1,"Take 100 mg twice a day for 1 week, then stop. You are now off tapentadol."]],
+  "100":[[1,"Reduce daytime dose to 50 mg. Continue 100 mg at night."],[2,"Stop the daytime dose. Reduce the night dose to 50 mg."],[3,"Stop the night-time dose. You are now off tapentadol."]],
+  "200":[[1,"Reduce daytime dose to 100 mg. Continue 200 mg at night."],[2,"Reduce daytime dose to 50 mg. Reduce night dose to 100 mg."],[3,"Stop the daytime dose. Reduce the night dose to 50 mg."],[4,"Stop the night-time dose. You are now off tapentadol."]]
 };
+function weanKey(v){var p=PLANS[op.value];return (v==='100'&&p&&p.variant==='acl')?'100_acl':v;}
 function renderWean(){var v=document.getElementById('wdose').value,box=document.getElementById('weanout');if(!v){box.classList.add('hidden');return;}
-  box.innerHTML='<div style="font-weight:600;margin-bottom:6px">Starting at '+v+' mg twice a day:</div>'+WEAN[v].map(function(s){var wk=s[0],dr=rangeText((wk-1)*7,wk*7-1);var lab='Week '+wk+(dr?' <span style="color:var(--muted);font-weight:400">('+dr+')</span>':'');return '<div class="weanstep"><b>'+lab+'</b><span>'+s[1]+'</span></div>';}).join('');
+  box.innerHTML='<div style="font-weight:600;margin-bottom:6px">Starting at '+v+' mg twice a day on discharge:</div>'+WEAN[weanKey(v)].map(function(s){var wk=s[0],dr=rangeText((wk-1)*7,wk*7-1);var lab='Week '+wk+(dr?' <span style="color:var(--muted);font-weight:400">('+dr+')</span>':'');return '<div class="weanstep"><b>'+lab+'</b><span>'+s[1]+'</span></div>';}).join('');
   box.classList.remove('hidden');}
 
 /* ===== direct access by code in the URL (?c=CODE) - the link Dr Halvey gives the patient ===== */
-var CODES={'GEN-ETO':'etoricoxib','GEN-CEL':'celecoxib','GEN-IBU':'ibuprofen','CAES':'caesarean','ACL-CEL':'acl_cel','ACL-ETO':'acl_eto','JOINT':'joint'};
+var CODES={'GEN-ETO':'etoricoxib','GEN-CEL':'celecoxib','GEN-IBU':'ibuprofen','GEN-TAP-ETO':'tap_eto','GEN-TAP-CEL':'tap_cel','GEN-TAP-IBU':'tap_ibu','CAES':'caesarean','ACL-CEL':'acl_cel','ACL-ETO':'acl_eto','JOINT':'joint'};
 (function(){var c=(new URLSearchParams(location.search).get('c')||'').toUpperCase();if(c&&CODES[c]){op.value=CODES[c];renderPlan();}})();
 </script>
 <nav class="noprint" aria-label="Your journey" style="display:flex;justify-content:flex-start;max-width:1040px;margin:0 auto;padding:0 20px 40px"><a href="../day-of-surgery.html" style="display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 20px;max-width:340px"><small style="display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;font-weight:600;color:var(--muted)">&larr; Previous step</small><b style="font-size:16px;color:var(--teal)">Day of surgery</b></a></nav>
+
+<footer class="site">
+  <div style="max-width:1140px;margin:0 auto;padding:46px 22px 30px">
+    <div class="fgrid">
+      <div><h4>Dr Ed Halvey</h4><p style="color:#e8cfc7;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p></div>
+      <div><h4>Site</h4><a href="../about.html">About</a><a href="../services.html">Services</a><a href="../procedures.html">Procedures</a><a href="../pre-op-guidance.html">Pre-op guidance</a><a href="../fees.html">Fees</a><a href="../contact.html">Contact</a></div>
+      <div><h4>Contact</h4><a href="../contact.html">Make an enquiry</a><a href="tel:0862676200">(08) 6267 6200</a><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a></div>
+    </div>
+    <div class="legal">
+      <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
+      <p>© <span id="yr"></span> Dr Ed Halvey.</p>
+    </div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
