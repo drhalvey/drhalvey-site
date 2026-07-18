@@ -171,6 +171,7 @@ var RULES={
   COX2:    {cls:"",    instr:"This anti-inflammatory (a coxib) is usually fine to continue, as it has little effect on bleeding. Your anaesthetist may pause it if your kidneys are a concern."},
   NSAID:   {cls:"stop",instr:"Stop this anti-inflammatory 2 to 3 days before surgery, because it can increase bleeding.", dateDays:3, dateLabel:"Last dose"},
   STEROID: {cls:"",    instr:"Do not stop suddenly. Continue, and tell your anaesthetist - you may need extra 'stress' doses around surgery."},
+  CLONIDINE:{cls:"",   instr:"Continue as normal, including on the morning of surgery. Do not stop this suddenly - stopping can cause rebound high blood pressure."},
   STOP7:   {cls:"stop",instr:"Stop at least 7 days before surgery.", dateDays:7, dateLabel:"Last dose"},
   GLP1:    {cls:"glp", instr:"Keep taking this as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the <a href='medicines-before-surgery.html'>medicines page</a>."},
   SGLT2:   {cls:"stop",instr:"Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. Restart only when you are eating, drinking and well.", dateDays:3, dateLabel:"Last dose"},
@@ -202,15 +203,25 @@ function doacDays(sub,kidney){
   return kidney==='yes'?4:3;                    /* apixaban / rivaroxaban / edoxaban */
 }
 
-/* insulin instructions per SCGH guideline (by insulin type). Type 1 adds a safety note. */
+/* insulin instructions per SCGH guideline (by insulin type). Type 1 adds a safety note.
+   PENDING CLINICAL CONFIRMATION (Dr Halvey): the 50% / 20% reduction figures are placeholders from the
+   current guideline text - confirm against ADS/ANZCA perioperative diabetes guidance and SCGH / Hollywood /
+   SJOG pre-admission clinic practice before go-live. Some protocols use ~80% of usual glargine dose in
+   well-controlled type 1 patients. */
 var INS={
-  basal:"Reduce your dose by 50% (take half) the evening before surgery, and take 50% (half) of your morning dose on the day. Check your blood glucose. Do not stop it completely.",
-  meal:"Do not take short-acting or meal-time insulin while you are fasting.",
-  intermediate:"Reduce your dose by 50% (take half) the evening before surgery, and take 50% (half) of your morning dose on the day. Check your blood glucose.",
-  premix:"Reduce your dose by 20% the evening before surgery. On the morning of surgery, take 50% (half) of your usual morning dose and check your blood glucose; then no more insulin while fasting.",
+  meal:"Do not take short-acting or meal-time insulin while you are fasting - you only take this insulin with food. Keep taking your background (long-acting) insulin as advised on its own card - add it to this list to see its instruction.",
+  premix:"If you take an evening dose: reduce it by 20% the evening before surgery. If you take a morning dose: on the morning of surgery take half (50%) of it and check your blood glucose; then no more insulin while you are fasting. Do not take any dose you would not normally take.",
   pump:"Do not stop or suspend your insulin pump. Continue your usual basal rate, and contact the rooms before surgery so the hospital can plan your pump and check your blood glucose."
 };
-var INS_T1_NOTE=" Because you have type 1 diabetes, never stop your insulin completely - the hospital will watch your blood glucose closely on the day, and may use an insulin drip for bigger operations. Please contact the rooms to confirm your plan.";
+/* basal + intermediate insulin: the instruction depends on when the patient normally takes it,
+   so the card asks first and shows only the matching instruction (no phantom morning dose). */
+var INS_TIMED={
+  am:"Take half (50%) of your usual morning dose on the morning of surgery, at your usual time. Do not take any other insulin dose you would not normally take. Check your blood glucose.",
+  pm:"Take half (50%) of your usual evening dose the evening before surgery. You do not normally take a morning dose, so take no insulin on the morning of surgery. Check your blood glucose.",
+  bd:"Take half (50%) of your usual evening dose the evening before surgery, and half (50%) of your usual morning dose on the morning of surgery. Check your blood glucose."
+};
+var TIME_LABEL={am:"in the morning",pm:"in the evening",bd:"twice a day"};
+var INS_T1_NOTE=" Because you have type 1 diabetes, never stop your background (long-acting) insulin completely - the hospital will watch your blood glucose closely on the day, and may use an insulin drip for bigger operations. Please contact the rooms to confirm your plan.";
 
 /* ============ database ============ */
 function M(g,b,r,sub){return {g:g,b:b,r:r,sub:sub};}
@@ -234,7 +245,7 @@ var MEDS=[
   M("hydrochlorothiazide",["Dithiazide"],"SKIP_DAY"),M("indapamide",["Natrilix","Dapa-tabs"],"SKIP_DAY"),
   M("spironolactone",["Aldactone","Spiractin"],"SKIP_DAY"),M("chlorthalidone",["Hygroton"],"SKIP_DAY"),
   M("amiloride",["Kaluril"],"SKIP_DAY"),M("eplerenone",["Inspra"],"SKIP_DAY"),
-  M("prazosin",["Minipress"],"CONTINUE"),M("clonidine",["Catapres"],"STEROID"),
+  M("prazosin",["Minipress"],"CONTINUE"),M("clonidine",["Catapres"],"CLONIDINE"),
   M("methyldopa",["Aldomet"],"CONTINUE"),M("hydralazine",[],"CONTINUE"),
   M("warfarin",["Coumadin","Marevan"],"WARFARIN"),
   M("apixaban",["Eliquis"],"DOAC","AR"),M("rivaroxaban",["Xarelto"],"DOAC","AR"),
@@ -429,8 +440,9 @@ function addMed(m){
 function removeMed(i){added.splice(i,1);render();}
 function clearAll(){added=[];surgEl.value='';render();}
 function setType(i,t){added[i].dtype=t;render();}
+function setBtime(i,t){added[i].btime=t;render();}
 function setKidney(i,k){added[i].kidney=k;render();}
-window.removeMed=removeMed; window.clearAll=clearAll; window.setType=setType; window.setKidney=setKidney;
+window.removeMed=removeMed; window.clearAll=clearAll; window.setType=setType; window.setBtime=setBtime; window.setKidney=setKidney;
 
 /* ============ per-row content ============ */
 function rowContent(it,i){
@@ -440,8 +452,18 @@ function rowContent(it,i){
     else if(!it.dtype){instr="Insulin needs one detail to advise you safely.";
       extra='<div class="askq">Do you have <b>type 1</b> or <b>type 2</b> diabetes?<br>'+
         '<button onclick="setType('+i+',\'1\')">Type 1</button><button onclick="setType('+i+',\'2\')">Type 2</button></div>';}
-    else{instr=INS[m.sub]+(it.dtype==='1'?INS_T1_NOTE:'');cls=it.dtype==='1'?'stop':'insulin';
-      extra='<span class="chip" onclick="setType('+i+',null)">Type '+it.dtype+' · change</span>';}
+    else if((m.sub==='basal'||m.sub==='intermediate')&&!it.btime){
+      instr="One more detail so the timing is right for you.";cls='insulin';
+      extra='<div class="askq">When do you normally take this insulin?<br>'+
+        '<button onclick="setBtime('+i+',\'am\')">In the morning</button>'+
+        '<button onclick="setBtime('+i+',\'pm\')">In the evening</button>'+
+        '<button onclick="setBtime('+i+',\'bd\')">Twice a day</button></div>'+
+        '<span class="chip" onclick="setType('+i+',null)">Type '+it.dtype+' · change</span>';}
+    else{
+      var binstr=(m.sub==='basal'||m.sub==='intermediate')?(INS_TIMED[it.btime]+(m.sub==='basal'?' Do not stop it completely.':'')):INS[m.sub];
+      instr=binstr+(it.dtype==='1'?INS_T1_NOTE:'');cls=it.dtype==='1'?'stop':'insulin';
+      extra='<span class="chip" onclick="setType('+i+',null)">Type '+it.dtype+' · change</span>'+
+        ((m.sub==='basal'||m.sub==='intermediate')?'<span class="chip" onclick="setBtime('+i+',null)">Taken '+TIME_LABEL[it.btime]+' · change</span>':'');}
   } else if(m.r==='DOAC'){
     if(!it.kidney){instr="Blood thinners depend on your kidney function.";cls='ask';
       extra='<div class="askq">Do you have kidney problems (reduced kidney function)?<br>'+
