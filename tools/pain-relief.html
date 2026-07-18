@@ -136,7 +136,7 @@
       <div class="safety-grid">
         <div class="alert warn"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Dehydrated? Stop the anti-inflammatory</h4>If you are vomiting, have diarrhoea or are not drinking enough, <b>stop the anti-inflammatory</b> until you are well again.</div>
         <div class="alert info"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> This is your personal plan</h4>It was prescribed for you and your operation. <b>Do not share your medicines or this plan with anyone else.</b></div>
-        <div class="alert info"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg> Don't double up</h4>Take only what is listed, at the times listed. Never exceed the maximum on your prescription label. Do not take with other anti-inflammatory medicines.</div>
+        <div class="alert info"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg> Don't double up</h4>Take only what is listed, at the times listed. Never exceed the maximum on your prescription label. Do not take with other anti-inflammatory medicines. Panadol Osteo is paracetamol - do not take any other medicine containing paracetamol on top of your plan.</div>
         <div class="alert warn"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg> Strong medicines and driving</h4><b>Do not drive</b> or operate machinery while taking a strong (opioid) top-up medicine.</div>
       </div>
     </div>
@@ -160,7 +160,7 @@
 /* ===== shared rows ===== */
 var NSAID_NOTE='Take regularly for pain for up to 10 days after surgery. Stop as soon as your pain has settled - take it only if you need it. Do not take with other anti-inflammatory medicines. Stop if you become dehydrated.';
 var TOPUP_ROW='<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> Tapentadol immediate release<span class="dose">or an alternative your anaesthetist has prescribed</span></td>'+
-  '<td class="note"><b>Top-up only if you need it</b> - if your pain is 7/10 or higher, or is stopping you moving or sleeping. Wait at least 4 hours between doses, never more than 6 in a day, use it for the shortest time, and do not drive while taking it.</td></tr>';
+  '<td class="note"><b>Top-up only if you need it</b> - if your pain is 7/10 or higher, or is stopping you moving or sleeping. Wait at least 4 hours between doses, no more than 6 doses in 24 hours, use it for the shortest time, and do not drive while taking it.</td></tr>';
 var LAX_ROW='<tr><td class="timecol">As needed</td><td class="med">Laxative<span class="dose">Coloxyl with Senna, or Movicol</span></td><td class="note">Helps prevent constipation from the stronger medicines. Drink plenty of fluids.</td></tr>';
 
 /* ===== plan data ===== */
@@ -219,7 +219,7 @@ function caesareanBody(){
   rows+=row('8 am, 2 pm, 8 pm','Paracetamol','1 g, up to four times a day','Regular baseline pain relief. Take on schedule for the first few days.');
   rows+=row('8 am &amp; 8 pm','Celecoxib','200 mg','Anti-inflammatory, if appropriate for you. Take regularly for 5 days, then only as you need it.');
   rows+='<tr class="topup-row"><td class="timecol">As needed</td><td class="med">Tramadol</td><td class="note"><b>A stronger medicine for breakthrough pain</b> - a short course for severe pain, only if the regular medicines are not enough.</td></tr>';
-  rows+='<tr class="topup-row"><td class="timecol">As needed</td><td class="med">Buprenorphine</td><td class="note"><b>A stronger medicine for breakthrough pain</b> - an alternative to tramadol, only if needed.</td></tr>';
+  rows+='<tr class="topup-row"><td class="timecol">As needed</td><td class="med">Buprenorphine</td><td class="note"><b>A stronger medicine for breakthrough pain</b> - an alternative to tramadol, only if needed. Use tramadol or buprenorphine, not both.</td></tr>';
   rows+=LAX_ROW;
   return '<div class="panel">'+ONLY_IF_PAIN+'<table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>What it is / when to take it</th></tr></thead><tbody>'+rows+'</tbody></table>'+
     '<div class="alert info" style="margin-top:14px"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg> Breastfeeding</h4>These medicines are compatible with breastfeeding when taken as prescribed. If your baby is very sleepy, hard to wake or feeding poorly, seek medical advice.</div>'+
@@ -259,7 +259,7 @@ function fullBody(p){
       '<button data-tab="t4" data-s="42" data-e="">Week 7+<span class="rng"></span></button>'+
     '</div><div id="dateban"></div>'+
     '<div class="tabpane active" id="t1"><table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>Notes</th></tr></thead><tbody>'+t1+
-      '<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> Tapentadol immediate release<span class="dose">or an alternative as prescribed</span></td><td class="note">Top-up only if pain is 7/10+ or stopping movement/sleep. Wait 4 hours between doses, max 6/day, do not drive.</td></tr>'+
+      '<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> Tapentadol immediate release<span class="dose">or an alternative as prescribed</span></td><td class="note">Top-up only if pain is 7/10+ or stopping movement/sleep. Wait 4 hours between doses, no more than 6 doses in 24 hours, do not drive.</td></tr>'+
     '</tbody></table></div>'+
     '<div class="tabpane" id="t2"><p class="note" style="margin-top:10px">Days 15-29. Continue paracetamol, the anti-inflammatory and vitamin C. <b>Begin to wean the tapentadol</b> (see below).'+(dn?' Pregabalin and melatonin can usually stop around now.':'')+'</p></div>'+
     '<div class="tabpane" id="t3"><p class="note" style="margin-top:10px">Days 30-44. Continue background medicines and keep weaning the tapentadol.</p></div>'+
@@ -270,7 +270,7 @@ function fullBody(p){
       '<label class="field" for="wdose">My tapentadol dose on discharge</label>'+
       '<select id="wdose" style="max-width:320px"><option value="">- Select your dose -</option><option value="50">50 mg twice a day</option><option value="100">100 mg twice a day</option>'+(p.variant==='acl'?'':'<option value="200">200 mg twice a day</option>')+'</select>'+
       '<div class="weanbox hidden" id="weanout"></div>'+
-      '<p class="hint">You should no longer be taking slow-release tapentadol beyond 3 weeks, ideally 2 weeks.</p></div>';
+      '<p class="hint">'+(p.variant==='acl'?'After an ACL reconstruction the slow-release course is 1 week. Contact the rooms if you feel you still need it beyond that.':'Aim to be off the slow-release medicine by around week 5 to 6. Contact the rooms if you are still needing it.')+'</p></div>';
 }
 
 /* ===== navigation (code first, then plan) ===== */
@@ -331,9 +331,14 @@ var WEAN={
   "100":[[1,"Reduce daytime dose to 50 mg. Continue 100 mg at night."],[2,"Stop the daytime dose. Reduce the night dose to 50 mg."],[3,"Stop the night-time dose. You are now off tapentadol."]],
   "200":[[1,"Reduce daytime dose to 100 mg. Continue 200 mg at night."],[2,"Reduce daytime dose to 50 mg. Reduce night dose to 100 mg."],[3,"Stop the daytime dose. Reduce the night dose to 50 mg."],[4,"Stop the night-time dose. You are now off tapentadol."]]
 };
+/* Wean timelines PENDING CLINICAL SIGN-OFF (Dr Halvey): joint 100/200 step-down weans start at week 3
+   (day 15) to match the plan-stage tabs above; 50 mg (and 100 mg for ACL) is a 1-week course from
+   discharge per Ed's instruction. Confirm before go-live. */
 function weanKey(v){var p=PLANS[op.value];return (v==='100'&&p&&p.variant==='acl')?'100_acl':v;}
 function renderWean(){var v=document.getElementById('wdose').value,box=document.getElementById('weanout');if(!v){box.classList.add('hidden');return;}
-  box.innerHTML='<div style="font-weight:600;margin-bottom:6px">Starting at '+v+' mg twice a day on discharge:</div>'+WEAN[weanKey(v)].map(function(s){var wk=s[0],dr=rangeText((wk-1)*7,wk*7-1);var lab='Week '+wk+(dr?' <span style="color:var(--muted);font-weight:400">('+dr+')</span>':'');return '<div class="weanstep"><b>'+lab+'</b><span>'+s[1]+'</span></div>';}).join('');
+  var p=PLANS[op.value],key=weanKey(v),off=(p&&p.variant==='joint'&&(v==='100'||v==='200'))?14:0;
+  var head=off?'You continue '+v+' mg twice a day for the first 2 weeks. The wean starts at week 3 (day 15 after discharge):':'Starting at '+v+' mg twice a day on discharge:';
+  box.innerHTML='<div style="font-weight:600;margin-bottom:6px">'+head+'</div>'+WEAN[key].map(function(s){var wk=s[0],dr=rangeText(off+(wk-1)*7,off+wk*7-1);var lab='Week '+(wk+off/7)+(dr?' <span style="color:var(--muted);font-weight:400">('+dr+')</span>':'');return '<div class="weanstep"><b>'+lab+'</b><span>'+s[1]+'</span></div>';}).join('');
   box.classList.remove('hidden');}
 
 /* ===== direct access by code in the URL (?c=CODE) - the link Dr Halvey gives the patient ===== */
