@@ -83,11 +83,11 @@ h1,h2,h3,h4{letter-spacing:-.02em}
 .hero-portrait{width:150px;height:150px;border-radius:50%;object-fit:cover;border:4px solid rgba(255,255,255,.9);box-shadow:0 8px 28px rgba(46,17,21,.4)}
 
 /* - most-asked strip - */
-.mostasked{background:#f5ece1;border-bottom:1px solid var(--line)}
-.mostasked .wrap{display:flex;gap:8px 22px;flex-wrap:wrap;align-items:center;padding:13px 22px;font-size:14.5px}
-.mostasked b{color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:12px}
-.mostasked a{color:#6b2530;font-weight:600;text-decoration:none}
-.mostasked a:hover{text-decoration:underline}
+.mostasked{background:#faeedd;border-top:3px solid var(--accent);border-bottom:1px solid #ead9bd}
+.mostasked .wrap{display:flex;gap:10px 12px;flex-wrap:wrap;align-items:center;padding:15px 22px;font-size:15.5px}
+.mostasked b{color:#8a4b16;font-weight:700;text-transform:uppercase;letter-spacing:.07em;font-size:12.5px;margin-right:8px}
+.mostasked a{color:#4e1d24;font-weight:600;font-size:15px;text-decoration:none;background:#fff;border:1px solid #e2c9a0;border-radius:3px;padding:8px 14px;box-shadow:0 1px 2px rgba(78,29,36,.06)}
+.mostasked a:hover{border-color:var(--accent);color:#8a4b16}
 
 /* - buttons - */
 .btn{display:inline-block;text-decoration:none;border:0;cursor:pointer;font-family:inherit;font-size:15px;
@@ -256,3 +256,15 @@ a.jcard.first{border-top:4px solid var(--teal)}
 
 /* ---------- calming banner (removed site-wide; kept for safety) ---------- */
 .calm-band{display:none}
+
+/* - footer wordmark in the handwritten brand style - */
+footer.site h4.fscript{font-family:"Caveat",cursive;font-size:30px;font-weight:700;text-transform:none;letter-spacing:0;line-height:1;margin:0 0 10px}
+/* - extra-prominent callout - */
+.callout.big{font-size:16px;padding:20px 24px;border-width:2px;border-left:6px solid #e8a06a}
+.callout.big .kick{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.07em;font-size:12.5px;margin-bottom:6px}
+/* - gentle hero photo drift (homepage) - */
+.hero.photo.moving{position:relative;overflow:hidden;background:#341217}
+.hero.moving .heroimg{position:absolute;inset:-3% 0;background:linear-gradient(rgba(52,18,23,.82),rgba(52,18,23,.74)),url("img/hero-perth-aerial.jpg") center/cover;animation:herodrift 45s ease-in-out infinite alternate;will-change:transform}
+.hero.moving .wrap{position:relative}
+@keyframes herodrift{to{transform:scale(1.08)}}
+@media(prefers-reduced-motion:reduce){.hero.moving .heroimg{animation:none}}
