@@ -136,7 +136,7 @@
       <div class="safety-grid">
         <div class="alert warn"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"/></svg> Dehydrated? Stop the anti-inflammatory</h4>If you are vomiting, have diarrhoea or are not drinking enough, <b>stop the anti-inflammatory</b> until you are well again.</div>
         <div class="alert info"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> This is your personal plan</h4>It was prescribed for you and your operation. <b>Do not share your medicines or this plan with anyone else.</b></div>
-        <div class="alert info"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg> Don't double up</h4>Take only what is listed, at the times listed. Never exceed the maximum on your prescription label. Do not take with other anti-inflammatory medicines. Panadol Osteo is paracetamol - do not take any other medicine containing paracetamol on top of your plan.</div>
+        <div class="alert info"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/></svg> Don't double up</h4>Take only what is listed, at the times listed. Never exceed the maximum on your prescription label. Do not take with other anti-inflammatory medicines. <span id="dblparac">Panadol Osteo is paracetamol - do not take any other medicine containing paracetamol on top of your plan.</span></div>
         <div class="alert warn"><h4><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg> Strong medicines and driving</h4><b>Do not drive</b> or operate machinery while taking a strong (opioid) top-up medicine.</div>
       </div>
     </div>
@@ -174,7 +174,9 @@ var PLANS={
   caesarean:{label:'Caesarean section',tag:'Caesarean plan',kind:'caesarean'},
   acl_cel:{label:'ACL reconstruction (celecoxib)',tag:'Slow-release plan',kind:'full',variant:'acl',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
   acl_eto:{label:'ACL reconstruction (etoricoxib)',tag:'Slow-release plan',kind:'full',variant:'acl',nsaid:{name:'Etoricoxib',dose:'120 mg once daily',times:['8 am']}},
-  joint:{label:'Hip and knee replacement',tag:'Slow-release plan',kind:'full',variant:'joint',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}}
+  joint:{label:'Hip and knee replacement',tag:'Slow-release plan',kind:'full',variant:'joint',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  paeds_tram:{label:'ACL reconstruction (teenager) - tramadol plan',tag:'Teen plan (45-70 kg)',kind:'paeds',prn:{name:'Tramadol',sched:'S4',dose:'50 mg (one to two capsules, i.e. 50-100 mg)',rule:'Wait at least 6 hours between doses, no more than 400 mg in 24 hours.'}},
+  paeds_oxy:{label:'ACL reconstruction (teenager) - oxycodone plan',tag:'Teen plan (45-70 kg)',kind:'paeds',prn:{name:'Oxycodone immediate release',sched:'S8',dose:'5 mg (up to 10 mg if needed)',rule:'Wait at least 4 hours between doses, no more than 6 doses in 24 hours.'}}
 };
 
 /* shown at the top of every plan */
@@ -273,6 +275,34 @@ function fullBody(p){
       '<p class="hint">'+(p.variant==='acl'?'After an ACL reconstruction the slow-release course is 1 week. Contact the rooms if you feel you still need it beyond that.':'Aim to be off the slow-release medicine by around week 5 to 6. Contact the rooms if you are still needing it.')+'</p></div>';
 }
 
+/* ----- teen ACL plan (weight-adjusted, roughly 45-70 kg): content per Ed's comments 21/07/2026 - do not change doses or safety wording without asking him. Plain paracetamol (NOT Panadol Osteo - modified-release is not for under-18s), ibuprofen lysine with water (never 'with food'), short-course pantoprazole, no laxative row. Tramadol badge S4, oxycodone S8. ----- */
+function paedsBody(p){
+  var t1='<tr><td class="timecol" rowspan="4">8 am</td><td class="med">Paracetamol<span class="dose">two 500 mg tablets (1 g) - two tablets only if above 50 kg</span></td><td class="note">Take regularly while you have pain. No more than 3 doses (3 g) in 24 hours.</td></tr>'+
+    '<tr><td class="med">Ibuprofen lysine<span class="dose">400 mg (fast-acting, e.g. Nurofen Zavance or pharmacy-brand ibuprofen lysine)</span></td><td class="note">Anti-inflammatory. The fast-acting (lysine) form costs a little more but works noticeably better - worth it. Take with a glass of water. Stop if dehydrated, vomiting, or tummy pain.</td></tr>'+
+    '<tr><td class="med">Pantoprazole<span class="dose">20 mg</span></td><td class="note">Reduces any stomach upset from the anti-inflammatory. Once a day, in the morning. Only while you are taking the anti-inflammatory - not for long-term use.</td></tr>'+
+    '<tr><td class="med">Vitamin C 1 g<span class="dose">buy over the counter</span></td><td class="note">Helps healing. Any pharmacy or supermarket brand is fine.</td></tr>'+
+    '<tr><td class="timecol" rowspan="2">2 pm</td><td class="med">Paracetamol<span class="dose">two 500 mg (1 g)</span></td><td class="note">Take regularly while you have pain.</td></tr>'+
+    '<tr><td class="med">Ibuprofen lysine 400 mg</td><td class="note">Fast-acting form, with a glass of water.</td></tr>'+
+    '<tr><td class="timecol" rowspan="2">8 pm</td><td class="med">Paracetamol<span class="dose">two 500 mg (1 g)</span></td><td class="note">Take regularly while you have pain.</td></tr>'+
+    '<tr><td class="med">Ibuprofen lysine 400 mg</td><td class="note">Fast-acting form, with a glass of water.</td></tr>'+
+    '<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">'+(p.prn.sched||'S8')+'</span> '+p.prn.name+'<span class="dose">'+p.prn.dose+'</span></td><td class="note"><b>Top-up only if pain is 7/10+ or stopping movement/sleep.</b> '+p.prn.rule+' A parent gives each dose. No driving; expect drowsiness. Drink plenty of water - strong pain medicine can cause constipation.</td></tr>';
+  var PARENTS='<div class="alert warn" style="margin-bottom:16px"><h4>Parents</h4>Keep all medicines out of reach of younger children, give doses yourself rather than leaving the packet out, and never give extra doses early.</div>';
+  return '<div class="panel">'+PARENTS+ONLY_IF_PAIN+
+    '<label class="field" for="dischdate">Surgery date (optional)</label>'+
+    '<input type="date" id="dischdate" style="max-width:240px">'+
+    '<div class="tabs" id="tabs">'+
+      '<button class="active" data-tab="t1" data-s="0" data-e="13">Days 0-14<span class="rng"></span></button>'+
+      '<button data-tab="t2" data-s="14" data-e="27">Weeks 3-4<span class="rng"></span></button>'+
+      '<button data-tab="t3" data-s="28" data-e="41">Weeks 5-6<span class="rng"></span></button>'+
+      '<button data-tab="t4" data-s="42" data-e="">Week 7+<span class="rng"></span></button>'+
+    '</div><div id="dateban"></div>'+
+    '<div class="tabpane active" id="t1"><table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>Notes</th></tr></thead><tbody>'+t1+'</tbody></table></div>'+
+    '<div class="tabpane" id="t2"><p class="note" style="margin-top:10px"><b>Weeks 3-4.</b> Most teenagers no longer need the strong (as-needed) medicine - stop it first, and return any unused tablets to a pharmacy. Continue <b>paracetamol 1 g up to three times a day</b> on days you need it (physio days especially), and <b>ibuprofen lysine 400 mg</b> only when the knee is sore or swollen. Stop the pantoprazole when you stop the anti-inflammatory.</p></div>'+
+    '<div class="tabpane" id="t3"><p class="note" style="margin-top:10px"><b>Weeks 5-6.</b> Simple pain relief only, as needed - usually just paracetamol before physio or after a big day. If you still need ibuprofen most days, or pain is getting worse rather than better, check in with the surgeon or your GP.</p></div>'+
+    '<div class="tabpane" id="t4"><p class="note" style="margin-top:10px"><b>Week 7 and beyond.</b> Usually no regular pain relief. Occasional paracetamol around physiotherapy is fine. Any new swelling, fever, or worsening pain deserves a review rather than more tablets.</p></div>'+
+    '</div>';
+}
+
 /* ===== navigation (code first, then plan) ===== */
 var op=document.getElementById('op'),toPlan=document.getElementById('toPlan'),
     codein=document.getElementById('codein'),confirm=document.getElementById('confirm'),codeerr=document.getElementById('codeerr');
@@ -291,6 +321,8 @@ document.querySelectorAll('[data-back]').forEach(function(b){b.addEventListener(
 
 function renderPlan(){
   var p=PLANS[op.value]; if(!p) return;
+  var dp=document.getElementById('dblparac');
+  if(dp)dp.textContent=(p.kind==='paeds')?'Do not take any other medicine containing paracetamol on top of your plan - many cold and flu products contain it.':'Panadol Osteo is paracetamol - do not take any other medicine containing paracetamol on top of your plan.';
   document.getElementById('planTitle').textContent='Your pain relief plan - '+p.label;
   document.getElementById('planTag').textContent=p.tag;
   var body=document.getElementById('planBody');
@@ -303,6 +335,9 @@ function renderPlan(){
   } else if(p.kind==='caesarean'){
     document.getElementById('planLede').textContent='Pain after a caesarean usually improves over the first 1-2 weeks. We control it in layers: regular medicines, with a stronger medicine only if needed.';
     body.innerHTML=caesareanBody();
+  } else if(p.kind==='paeds'){
+    document.getElementById('planLede').textContent='A weight-adjusted plan for teenagers (roughly 45-70 kg). A parent or guardian should supervise all medicines. Follow the plan your anaesthetist confirmed with you - it may differ slightly from this page.';
+    body.innerHTML=paedsBody(p); wireFull();
   } else {
     document.getElementById('planLede').textContent='Most patients recover well with a simple layered approach: regular medicines do most of the work, with a stronger top-up only if you need it.';
     body.innerHTML=simpleBody(p);
@@ -317,14 +352,14 @@ function wireFull(){
     document.querySelectorAll('.tabpane').forEach(function(x){x.classList.remove('active');});
     b.classList.add('active');document.getElementById(b.getAttribute('data-tab')).classList.add('active');setBan(b);});});
   document.getElementById('dischdate').addEventListener('change',updateDates);
-  document.getElementById('wdose').addEventListener('change',renderWean);
+  var wd=document.getElementById('wdose');if(wd)wd.addEventListener('change',renderWean);
 }
 function dischDate(){var el=document.getElementById('dischdate');if(!el||!el.value)return null;var p=el.value.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
 function addDays(d,n){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate());x.setDate(x.getDate()+n);return x;}
 function shrt(d){var dy=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return dy[d.getDay()]+' '+d.getDate()+' '+mo[d.getMonth()];}
 function rangeText(s,e){var sd=dischDate();if(!sd)return '';var a=addDays(sd,+s);if(e===''||e==null)return 'from '+shrt(a);return shrt(a)+' - '+shrt(addDays(sd,+e));}
 function setBan(b){var t=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));document.getElementById('dateban').textContent=t?('Your dates for this stage: '+t):'';}
-function updateDates(){document.querySelectorAll('#tabs button').forEach(function(b){b.querySelector('.rng').textContent=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));});var a=document.querySelector('#tabs button.active');if(a)setBan(a);if(document.getElementById('wdose').value)renderWean();}
+function updateDates(){document.querySelectorAll('#tabs button').forEach(function(b){b.querySelector('.rng').textContent=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));});var a=document.querySelector('#tabs button.active');if(a)setBan(a);var w=document.getElementById('wdose');if(w&&w.value)renderWean();}
 var WEAN={
   "50":[[1,"Take 50 mg twice a day for 1 week, then stop. You are now off tapentadol."]],
   "100_acl":[[1,"Take 100 mg twice a day for 1 week, then stop. You are now off tapentadol."]],
@@ -342,7 +377,7 @@ function renderWean(){var v=document.getElementById('wdose').value,box=document.
   box.classList.remove('hidden');}
 
 /* ===== direct access by code in the URL (?c=CODE) - the link Dr Halvey gives the patient ===== */
-var CODES={'GEN-ETO':'etoricoxib','GEN-CEL':'celecoxib','GEN-IBU':'ibuprofen','GEN-TAP-ETO':'tap_eto','GEN-TAP-CEL':'tap_cel','GEN-TAP-IBU':'tap_ibu','CAES':'caesarean','ACL-CEL':'acl_cel','ACL-ETO':'acl_eto','JOINT':'joint'};
+var CODES={'GEN-ETO':'etoricoxib','GEN-CEL':'celecoxib','GEN-IBU':'ibuprofen','GEN-TAP-ETO':'tap_eto','GEN-TAP-CEL':'tap_cel','GEN-TAP-IBU':'tap_ibu','CAES':'caesarean','ACL-CEL':'acl_cel','ACL-ETO':'acl_eto','JOINT':'joint','ACL-PAEDS-TRAM':'paeds_tram','ACL-PAEDS-OXY':'paeds_oxy'};
 (function(){var c=(new URLSearchParams(location.search).get('c')||'').toUpperCase();if(c&&CODES[c]){op.value=CODES[c];renderPlan();}})();
 </script>
 <nav class="noprint" aria-label="Your journey" style="display:flex;justify-content:flex-start;max-width:1040px;margin:0 auto;padding:0 20px 40px"><a href="../day-of-surgery.html" style="display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 20px;max-width:340px"><small style="display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;font-weight:600;color:var(--muted)">&larr; Previous step</small><b style="font-size:16px;color:var(--teal)">Day of surgery</b></a></nav>
