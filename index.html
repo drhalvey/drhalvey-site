@@ -47,7 +47,8 @@
   </nav>
 </header>
 
-<section class="hero centered photo">
+<section class="hero centered photo moving">
+  <div class="heroimg" aria-hidden="true"></div>
   <div class="wrap">
     <p class="eyebrow" style="color:#f0d9b8">Patient information</p>
     <h1>Having surgery soon?</h1>
@@ -158,7 +159,10 @@
         <h3>Dr Ed Halvey, Specialist Anaesthetist</h3>
         <p>Providing anaesthesia for patients undergoing surgery at public and private hospitals
            in Perth, with a focus on safe, comfortable care and a clear plan at every step.</p>
-        <a href="about.html">About Dr Halvey →</a>
+        <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-start">
+          <a href="about.html">About Dr Halvey →</a>
+          <a href="clinical-research.html">My research and publications →</a>
+        </div>
       </div>
       <div class="feecol">
         <p class="eyebrow" style="margin-bottom:4px">Fees</p>
@@ -173,7 +177,7 @@
   <div class="wrap">
     <div class="fgrid">
       <div>
-        <h4>Dr Ed Halvey</h4>
+        <h4 class="fscript">Dr Ed Halvey</h4>
         <p style="color:#b08a83;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia.
           Patient information and pre-operative guidance.</p>
       </div>
@@ -198,7 +202,7 @@
       <p>The information on this website is general in nature and is provided for education only. It is
         not a substitute for individual medical advice. Always follow the specific instructions given to
         you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
-      <p>© <span id="yr"></span> Dr Ed Halvey. </p>
+      <p>© <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</p>
     </div>
   </div>
 </footer>
