@@ -174,6 +174,7 @@ var RULES={
   CLONIDINE:{cls:"",   instr:"Continue as normal, including on the morning of surgery. Do not stop this suddenly - stopping can cause rebound high blood pressure."},
   STOP7:   {cls:"stop",instr:"Stop at least 7 days before surgery.", dateDays:7, dateLabel:"Last dose"},
   GLP1:    {cls:"glp", instr:"Keep taking this as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the <a href='medicines-before-surgery.html'>medicines page</a>."},
+  GLP1_ORAL:{cls:"glp",instr:"Do not take your tablet on the morning of surgery - it is taken on an empty stomach with water and food afterwards, so it is skipped while fasting. Otherwise keep taking it as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the <a href='medicines-before-surgery.html'>medicines page</a>."},
   SGLT2:   {cls:"stop",instr:"Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. Restart only when you are eating, drinking and well.", dateDays:3, dateLabel:"Last dose"},
   WARFARIN:{cls:"stop",instr:"Stop warfarin 5 days before surgery. You will usually need an INR blood test, and some people need 'bridging' injections - the rooms or your warfarin clinic will arrange this.", dateDays:5, dateLabel:"Last dose"},
   CLOPIDOGREL:{cls:"stop",instr:"Stop 7 days before surgery. <b>If you have a heart stent, do not stop without checking with the rooms first</b> - it may need to continue.", dateDays:7, dateLabel:"Last dose"},
@@ -210,11 +211,12 @@ function doacDays(sub,kidney){
    well-controlled type 1 patients. */
 var INS={
   meal:"Do not take short-acting or meal-time insulin while you are fasting - you only take this insulin with food. Keep taking your background (long-acting) insulin as advised on its own card - add it to this list to see its instruction.",
-  premix:"If you take an evening dose: reduce it by 20% the evening before surgery. If you take a morning dose: on the morning of surgery take half (50%) of it and check your blood glucose; then no more insulin while you are fasting. Do not take any dose you would not normally take.",
+  premix:"If you take an evening dose: take 80% of your usual dose the evening before surgery. On the morning of surgery: if your surgery is in the morning, do not take your morning premixed insulin while fasting - check your blood glucose and bring your insulin and monitor to hospital. If your surgery is in the afternoon (after 1 pm), have the early light breakfast the hospital allows and take half (50%) of your usual morning dose with it. Do not take any dose you would not normally take.",
   pump:"Do not stop or suspend your insulin pump. Continue your usual basal rate, and contact the rooms before surgery so the hospital can plan your pump and check your blood glucose."
 };
 /* basal + intermediate insulin: the instruction depends on when the patient normally takes it,
    so the card asks first and shows only the matching instruction (no phantom morning dose). */
+function insDose(s,it,m){return (it.dtype==='1'&&m.sub==='basal')?s.replace(/half \(50%\)/g,'80%').replace(/50%/g,'80%'):s;}
 var INS_TIMED={
   am:"Take half (50%) of your usual morning dose on the morning of surgery, at your usual time. Do not take any other insulin dose you would not normally take. Check your blood glucose.",
   pm:"Take half (50%) of your usual evening dose the evening before surgery. You do not normally take a morning dose, so take no insulin on the morning of surgery. Check your blood glucose.",
@@ -262,7 +264,7 @@ var MEDS=[
   M("empagliflozin",["Jardiance","Jardiamet","Glyxambi"],"SGLT2"),
   M("dapagliflozin",["Forxiga","Xigduo","Qtern"],"SGLT2"),
   M("ertugliflozin",["Steglatro","Segluromet","Steglujan"],"SGLT2"),
-  M("semaglutide",["Ozempic","Wegovy","Rybelsus"],"GLP1"),
+  M("semaglutide injection",["Ozempic","Wegovy"],"GLP1"),M("semaglutide tablets",["Rybelsus"],"GLP1_ORAL"),
   M("dulaglutide",["Trulicity"],"GLP1"),M("tirzepatide",["Mounjaro"],"GLP1"),
   M("exenatide",["Byetta","Bydureon"],"GLP1"),M("liraglutide",["Victoza","Saxenda"],"GLP1"),
   M("long-acting (basal) insulin",["Lantus","Optisulin","Toujeo","Tresiba","Levemir","Semglee"],"INSULIN","basal"),
@@ -460,7 +462,7 @@ function rowContent(it,i){
         '<button onclick="setBtime('+i+',\'bd\')">Twice a day</button></div>'+
         '<span class="chip" onclick="setType('+i+',null)">Type '+it.dtype+' · change</span>';}
     else{
-      var binstr=(m.sub==='basal'||m.sub==='intermediate')?(INS_TIMED[it.btime]+(m.sub==='basal'?' Do not stop it completely.':'')):INS[m.sub];
+      var binstr=(m.sub==='basal'||m.sub==='intermediate')?(insDose(INS_TIMED[it.btime],it,m)+(m.sub==='basal'?' Do not stop it completely.':'')):INS[m.sub];
       instr=binstr+(it.dtype==='1'?INS_T1_NOTE:'');cls=it.dtype==='1'?'stop':'insulin';
       extra='<span class="chip" onclick="setType('+i+',null)">Type '+it.dtype+' · change</span>'+
         ((m.sub==='basal'||m.sub==='intermediate')?'<span class="chip" onclick="setBtime('+i+',null)">Taken '+TIME_LABEL[it.btime]+' · change</span>':'');}
