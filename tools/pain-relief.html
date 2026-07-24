@@ -158,7 +158,7 @@
 
 <script>
 /* ===== shared rows ===== */
-var NSAID_NOTE='Take regularly for pain for up to 10 days after surgery. Stop as soon as your pain has settled - take it only if you need it. Do not take with other anti-inflammatory medicines. Stop if you become dehydrated.';
+function nsaidNote(n){return 'Take regularly for pain for up to '+(n==='Etoricoxib'?'8 days':'10 days')+' after surgery. Stop as soon as your pain has settled - take it only if you need it. Do not take with other anti-inflammatory medicines. Stop if you become dehydrated.';}
 var TOPUP_ROW='<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> Tapentadol immediate release<span class="dose">or an alternative your anaesthetist has prescribed</span></td>'+
   '<td class="note"><b>Top-up only if you need it</b> - if your pain is 7/10 or higher, or is stopping you moving or sleeping. Wait at least 4 hours between doses, no more than 6 doses in 24 hours, use it for the shortest time, and do not drive while taking it.</td></tr>';
 var LAX_ROW='<tr><td class="timecol">As needed</td><td class="med">Laxative<span class="dose">Coloxyl with Senna, or Movicol</span></td><td class="note">Helps prevent constipation from the stronger medicines. Drink plenty of fluids.</td></tr>';
@@ -168,13 +168,20 @@ var PLANS={
   etoricoxib:{label:'General post-operative pain relief (etoricoxib)',tag:'General plan',kind:'simple',nsaid:{name:'Etoricoxib',dose:'120 mg',times:['8 am']}},
   celecoxib:{label:'General post-operative pain relief (celecoxib)',tag:'General plan',kind:'simple',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
   ibuprofen:{label:'General post-operative pain relief (ibuprofen)',tag:'General plan',kind:'simple',nsaid:{name:'Ibuprofen',dose:'200-400 mg',times:['8 am','2 pm','8 pm']}},
-  tap_ibu:{label:'General pain relief with tapentadol SR (ibuprofen)',tag:'Tapentadol SR plan',kind:'tapsr',nsaid:{name:'Ibuprofen',dose:'200-400 mg',times:['8 am','2 pm','8 pm']}},
+  tap_ibu:{label:'General pain relief with tapentadol SR (ibuprofen)',tag:'Tapentadol SR plan',kind:'tapsr',ppi:true,nsaid:{name:'Ibuprofen lysine',dose:'400 mg (fast-acting, e.g. Nurofen Zavance)',times:['8 am','2 pm','8 pm'],note:'Anti-inflammatory. The fast-acting (lysine) form costs a little more but works noticeably better - worth it. Take with a glass of water. Do not take with other anti-inflammatory medicines. Stop if you become dehydrated.'}},
   tap_cel:{label:'General pain relief with tapentadol SR (celecoxib)',tag:'Tapentadol SR plan',kind:'tapsr',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
   tap_eto:{label:'General pain relief with tapentadol SR (etoricoxib)',tag:'Tapentadol SR plan',kind:'tapsr',nsaid:{name:'Etoricoxib',dose:'120 mg',times:['8 am']}},
   caesarean:{label:'Caesarean section',tag:'Caesarean plan',kind:'caesarean'},
   acl_cel:{label:'ACL reconstruction (celecoxib)',tag:'Slow-release plan',kind:'full',variant:'acl',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
   acl_eto:{label:'ACL reconstruction (etoricoxib)',tag:'Slow-release plan',kind:'full',variant:'acl',nsaid:{name:'Etoricoxib',dose:'120 mg once daily',times:['8 am']}},
-  joint:{label:'Hip and knee replacement',tag:'Slow-release plan',kind:'full',variant:'joint',nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  knee100:{label:'Knee replacement',tag:'Slow-release plan',kind:'full',variant:'joint',sr:{drug:'tap',dose:'100'},nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  knee50:{label:'Knee replacement',tag:'Slow-release plan',kind:'full',variant:'joint',sr:{drug:'tap',dose:'50'},nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  knee_tgn10:{label:'Knee replacement',tag:'Slow-release plan',kind:'full',variant:'joint',sr:{drug:'tgn',dose:'10/5'},nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  knee_tgn5:{label:'Knee replacement',tag:'Slow-release plan',kind:'full',variant:'joint',sr:{drug:'tgn',dose:'5/2.5'},nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  hip50:{label:'Hip replacement',tag:'Slow-release plan',kind:'full',variant:'joint',sr:{drug:'tap',dose:'50'},nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  hip_tgn10:{label:'Hip replacement',tag:'Slow-release plan',kind:'full',variant:'joint',sr:{drug:'tgn',dose:'10/5'},nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  hip_tgn5:{label:'Hip replacement',tag:'Slow-release plan',kind:'full',variant:'joint',sr:{drug:'tgn',dose:'5/2.5'},nsaid:{name:'Celecoxib',dose:'200 mg',times:['8 am','8 pm']}},
+  joint:{label:'Hip and knee replacement',tag:'Choose your plan',kind:'chooser'},
   paeds_tram:{label:'ACL reconstruction (teenager) - tramadol plan',tag:'Teen plan (45-70 kg)',kind:'paeds',prn:{name:'Tramadol',sched:'S4',dose:'50 mg (one to two capsules, i.e. 50-100 mg)',rule:'Wait at least 6 hours between doses, no more than 400 mg in 24 hours.'}},
   paeds_oxy:{label:'ACL reconstruction (teenager) - oxycodone plan',tag:'Teen plan (45-70 kg)',kind:'paeds',prn:{name:'Oxycodone immediate release',sched:'S8',dose:'5 mg (up to 10 mg if needed)',rule:'Wait at least 4 hours between doses, no more than 6 doses in 24 hours.'}}
 };
@@ -192,7 +199,8 @@ function tapsrBody(p){
   var n=p.nsaid, rows='', first=true;
   ['8 am','2 pm','8 pm'].forEach(function(t){
     rows+=row(t,'Panadol Osteo','two 665 mg tablets', first?'Good background pain reliever. Take regularly at 8 am, 2 pm and 8 pm while you have pain.':'Take regularly while you have pain.');
-    if(n.times.indexOf(t)>-1) rows+=row(t,n.name,n.dose,NSAID_NOTE);
+    if(n.times.indexOf(t)>-1) rows+=row(t,n.name,n.dose,n.note||nsaidNote(n.name));
+    if(p.ppi&&t==='8 am') rows+=row(t,'Pantoprazole','20 mg','Reduces any stomach upset from the anti-inflammatory. Once a day, in the morning. Only while you are taking the anti-inflammatory - not for long-term use.');
     if(t!=='2 pm') rows+=row(t,'<span class="pill">S8</span> Tapentadol SR','50 mg or 100 mg, as prescribed for you','<b>Take twice a day (8 am and 8 pm) for 1 week only, then stop.</b> Strong slow-release baseline pain relief. Do not drive while taking it.');
     first=false;
   });
@@ -207,7 +215,7 @@ function simpleBody(p){
   var n=p.nsaid, rows='', first=true;
   ['8 am','2 pm','8 pm'].forEach(function(t){
     rows+=row(t,'Panadol Osteo','two 665 mg tablets', first?'Good background pain reliever. Take regularly at 8 am, 2 pm and 8 pm while you have pain.':'Take regularly while you have pain.');
-    if(n.times.indexOf(t)>-1) rows+=row(t,n.name,n.dose,NSAID_NOTE);
+    if(n.times.indexOf(t)>-1) rows+=row(t,n.name,n.dose,n.note||nsaidNote(n.name));
     first=false;
   });
   rows+=TOPUP_ROW;
@@ -218,7 +226,7 @@ function simpleBody(p){
 /* ----- caesarean plan ----- */
 function caesareanBody(){
   var rows='';
-  rows+=row('8 am, 2 pm, 8 pm','Paracetamol','1 g, up to four times a day','Regular baseline pain relief. Take on schedule for the first few days.');
+  rows+=row('8 am, 12 pm, 4 pm, 8 pm','Paracetamol','1 g, four times a day','Regular baseline pain relief. Take on schedule for the first few days. No more than 4 g of paracetamol in 24 hours.');
   rows+=row('8 am &amp; 8 pm','Celecoxib','200 mg','Anti-inflammatory, if appropriate for you. Take regularly for 5 days, then only as you need it.');
   rows+='<tr class="topup-row"><td class="timecol">As needed</td><td class="med">Tramadol</td><td class="note"><b>A stronger medicine for breakthrough pain</b> - a short course for severe pain, only if the regular medicines are not enough.</td></tr>';
   rows+='<tr class="topup-row"><td class="timecol">As needed</td><td class="med">Buprenorphine</td><td class="note"><b>A stronger medicine for breakthrough pain</b> - an alternative to tramadol, only if needed. Use tramadol or buprenorphine, not both.</td></tr>';
@@ -231,27 +239,63 @@ function caesareanBody(){
       '<li><b>After 1-2 weeks:</b> most people only need paracetamol.</li></ul></div>';
 }
 
-/* ----- full (slow-release) plan: ACL or joint ----- */
+/* ----- full (slow-release) plan: ACL, knee or hip ----- */
+function srMed(p){
+  if(p.sr&&p.sr.drug==='tgn')return{tgn:true,full:'Targin (oxycodone + naloxone)',dose:p.sr.dose+' mg',topup:'Oxycodone immediate release'};
+  return{tgn:false,full:'Tapentadol SR',dose:p.sr?p.sr.dose+' mg':'',topup:'Tapentadol immediate release'};
+}
 function fullBody(p){
-  var dn = (p.variant==='joint'), n=p.nsaid;
-  var at8am = n.times.indexOf('8 am')>-1, at8pm = n.times.indexOf('8 pm')>-1;
+  var dn=(p.variant==='joint'), n=p.nsaid, s=srMed(p);
+  var longWean=p.sr?(p.sr.dose==='100'||p.sr.dose==='200'||p.sr.dose==='10/5'):false;
+  var at8am=n.times.indexOf('8 am')>-1, at8pm=n.times.indexOf('8 pm')>-1, nT=n.times.join(' &amp; ');
   var t1='';
   if(dn) t1+=row('1st night','Dexamethasone','','Anti-inflammatory, in hospital only. Very short course.');
-  var amRows = 4 + (at8am?1:0);
+  var amRows=4+(at8am?1:0);
   t1+='<tr><td class="timecol" rowspan="'+amRows+'">8 am</td><td class="med">Panadol Osteo<span class="dose">two 665 mg</span></td><td class="note">Take regularly while you have pain.</td></tr>';
-  if(at8am) t1+='<tr><td class="med">'+n.name+'<span class="dose">'+n.dose+'</span></td><td class="note">Anti-inflammatory. Stop if dehydrated.</td></tr>';
-  t1+='<tr><td class="med"><span class="pill">S8</span> Tapentadol SR</td><td class="note">Strong slow-release baseline. Take regularly while you need it.</td></tr>'+
+  if(at8am) t1+='<tr><td class="med">'+n.name+'<span class="dose">'+n.dose+'</span></td><td class="note">'+(dn?'Anti-inflammatory. Most patients take it for the first 3 to 5 days. Some are prescribed a 6-week course - after day 5 the dose drops to 100 mg, once or twice a day. Follow your discharge script. Stop if you become dehydrated.':'Anti-inflammatory. Stop if dehydrated.')+'</td></tr>';
+  t1+='<tr><td class="med"><span class="pill">S8</span> '+s.full+(s.dose?'<span class="dose">'+s.dose+' - twice a day (8 am and 8 pm)</span>':'')+'</td><td class="note">Strong slow-release baseline. Take regularly while you need it.</td></tr>'+
     '<tr><td class="med">Coloxyl + Senna / Movicol</td><td class="note">Laxatives; usually stop by ~day 10.</td></tr>'+
     '<tr><td class="med">Vitamin C 1 g</td><td class="note">Helps healing.</td></tr>'+
     '<tr><td class="timecol">2 pm</td><td class="med">Panadol Osteo (two 665 mg)</td><td class="note">Take regularly while you have pain.</td></tr>';
-  var pmRows = 2 + (at8pm?1:0) + (dn?1:0);
+  var pmRows=2+(at8pm?1:0)+(dn?1:0);
   t1+='<tr><td class="timecol" rowspan="'+pmRows+'">8 pm</td><td class="med">Panadol Osteo (two 665 mg)</td><td class="note">Take regularly while you have pain.</td></tr>';
-  if(at8pm) t1+='<tr><td class="med">'+n.name+' '+n.dose+'</td><td class="note">Anti-inflammatory.</td></tr>';
-  t1+='<tr><td class="med"><span class="pill">S8</span> Tapentadol SR</td><td class="note">Slow-release strong medicine.</td></tr>';
+  if(at8pm) t1+='<tr><td class="med">'+n.name+' '+n.dose+'</td><td class="note">'+(dn?'Anti-inflammatory - take it for the length of the course on your discharge script.':'Anti-inflammatory.')+'</td></tr>';
+  t1+='<tr><td class="med"><span class="pill">S8</span> '+s.full+(s.dose?' '+s.dose:'')+'</td><td class="note">Slow-release strong medicine.</td></tr>';
   if(dn) t1+='<tr><td class="med">Pregabalin 50 mg + Melatonin</td><td class="note">Pregabalin for about 12 days; melatonin to help sleep.</td></tr>';
-
+  var topupRow='<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> '+s.topup+'<span class="dose">or an alternative as prescribed</span></td><td class="note">Top-up only if pain is 7/10+ or stopping movement/sleep. Wait 4 hours between doses, no more than 6 doses in 24 hours, do not drive.</td></tr>';
+  var srT2=longWean
+    ? row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,s.dose,'<b>Begin to wean</b> - follow the week-by-week wean plan below.')
+    : row('-','<span class="pill">S8</span> '+s.full,'','The 1-week course is complete - you should now have stopped this medicine. Return any unused tablets to a pharmacy.');
+  var t2=row('8 am, 2 pm, 8 pm','Panadol Osteo','two 665 mg','Continue regularly while you have pain.')
+    +(dn?row(nT,n.name,'100 mg','A 3 to 5 day course has finished by now. If you were prescribed the 6-week course, continue - 100 mg once or twice a day, as on your script.'):row(nT,n.name,n.dose,'Continue the anti-inflammatory. Stop if dehydrated.'))
+    +row('8 am','Vitamin C','1 g','Continue - part of the 6-week course.')
+    +srT2
+    +(dn?row('8 pm','Pregabalin 50 mg + Melatonin','','Can usually stop around now.'):'')+(dn?topupRow:'');
+  var t3=row('8 am, 2 pm, 8 pm','Panadol Osteo','two 665 mg','Continue while you have pain.')
+    +(dn?row(nT,n.name,'100 mg','Only if you are on the 6-week course: continue to the end of week 6. Stop if you become dehydrated.'):row(nT,n.name,n.dose,'Continue while you need it. Stop if dehydrated.'))
+    +row('8 am','Vitamin C','1 g','Continue - part of the 6-week course.')
+    +(longWean?row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,'','<b>Keep weaning</b> - follow the wean plan below. Aim to be off it by around week 5 to 6.'):'')+(dn?topupRow:'');
+  var t4=row('8 am, 2 pm, 8 pm','Panadol Osteo','two 665 mg','Stop if able - use only on days you need it.')
+    +(dn?row(nT,n.name,'','If you were on the 6-week course, it is now complete - stop.'):row(nT,n.name,n.dose,'6-week course complete - stop.'))
+    +row('8 am','Vitamin C','1 g','6-week course complete - stop.')
+    +(longWean?row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,'','Aim to finish the wean. If you feel you still need it, talk to your GP or your surgeon at your follow-up.'):'');
+  function pane(id,rows){return '<div class="tabpane" id="'+id+'"><table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>Notes</th></tr></thead><tbody>'+rows+'</tbody></table></div>';}
+  var weanTitle=s.tgn?'Targin wean':'tapentadol / Palexia SR wean', weanPanel;
+  if(p.sr){
+    weanPanel='<div class="panel"><h3>Reducing your slow-release medicine ('+weanTitle+')</h3>'+
+      '<p class="note">Your plan: <b>'+s.full+' '+s.dose+' twice a day</b> from discharge.'+(longWean?' Reduce the daytime dose first and keep the night-time dose longest.':'')+' Add your discharge date above to see the actual dates.</p>'+
+      '<div class="weanbox" id="weanout"></div>'+
+      '<p class="hint">'+(longWean?'Aim to be off the slow-release medicine by around week 5 to 6. If you are still needing it, talk to your GP or your surgeon at your follow-up.':'The slow-release medicine is a short course - 1 week from discharge. If you feel you still need it beyond that, talk to your GP or your surgeon.')+'</p></div>';
+  } else {
+    weanPanel='<div class="panel"><h3>Reducing your slow-release medicine ('+weanTitle+')</h3>'+
+      '<p class="note">Choose the dose you were taking when you left hospital to see your week-by-week plan. Reduce the daytime dose first and keep the night-time dose longest.</p>'+
+      '<label class="field" for="wdose">My tapentadol dose on discharge</label>'+
+      '<select id="wdose" style="max-width:320px"><option value="">- Select your dose -</option><option value="50">50 mg twice a day</option><option value="100">100 mg twice a day</option></select>'+
+      '<div class="weanbox hidden" id="weanout"></div>'+
+      '<p class="hint">After an ACL reconstruction the slow-release course is 1 week. If you feel you still need it beyond that, talk to your GP or your surgeon.</p></div>';
+  }
   return '<div class="panel">'+ONLY_IF_PAIN+
-    '<p class="note">This plan uses a slow-release strong medicine (tapentadol SR) as a background, plus regular paracetamol and an anti-inflammatory, and an immediate-release top-up. As you recover you reduce and stop the slow-release medicine using the wean plan. Add your discharge date to see the actual dates.</p>'+
+    '<p class="note">This plan uses a slow-release strong medicine ('+(s.tgn?'Targin':'tapentadol SR')+') as a background, plus regular paracetamol and an anti-inflammatory, and an immediate-release top-up. As you recover you reduce and stop the slow-release medicine using the wean plan. Add your discharge date to see the actual dates.</p>'+
     '<label class="field" for="dischdate">When were you discharged from hospital? (optional)</label>'+
     '<input type="date" id="dischdate" style="max-width:240px">'+
     '<div class="tabs" id="tabs">'+
@@ -261,19 +305,23 @@ function fullBody(p){
       '<button data-tab="t4" data-s="42" data-e="">Week 7+<span class="rng"></span></button>'+
     '</div><div id="dateban"></div>'+
     '<div class="tabpane active" id="t1"><table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>Notes</th></tr></thead><tbody>'+t1+
-      '<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> Tapentadol immediate release<span class="dose">or an alternative as prescribed</span></td><td class="note">Top-up only if pain is 7/10+ or stopping movement/sleep. Wait 4 hours between doses, no more than 6 doses in 24 hours, do not drive.</td></tr>'+
+      topupRow+
     '</tbody></table></div>'+
-    '<div class="tabpane" id="t2"><p class="note" style="margin-top:10px">Days 15-29. Continue paracetamol, the anti-inflammatory and vitamin C. <b>Begin to wean the tapentadol</b> (see below).'+(dn?' Pregabalin and melatonin can usually stop around now.':'')+'</p></div>'+
-    '<div class="tabpane" id="t3"><p class="note" style="margin-top:10px">Days 30-44. Continue background medicines and keep weaning the tapentadol.</p></div>'+
-    '<div class="tabpane" id="t4"><p class="note" style="margin-top:10px">Days 45 onward. Paracetamol: stop if able. The anti-inflammatory and vitamin C: 6-week course complete. Tapentadol: aim to finish the wean.</p></div>'+
-    '</div>'+
-    '<div class="panel"><h3>Reducing your slow-release medicine (tapentadol / Palexia SR wean)</h3>'+
-      '<p class="note">Choose the dose you were taking when you left hospital to see your week-by-week plan. Reduce the daytime dose first and keep the night-time dose longest.</p>'+
-      '<label class="field" for="wdose">My tapentadol dose on discharge</label>'+
-      '<select id="wdose" style="max-width:320px"><option value="">- Select your dose -</option><option value="50">50 mg twice a day</option><option value="100">100 mg twice a day</option>'+(p.variant==='acl'?'':'<option value="200">200 mg twice a day</option>')+'</select>'+
-      '<div class="weanbox hidden" id="weanout"></div>'+
-      '<p class="hint">'+(p.variant==='acl'?'After an ACL reconstruction the slow-release course is 1 week. Contact the rooms if you feel you still need it beyond that.':'Aim to be off the slow-release medicine by around week 5 to 6. Contact the rooms if you are still needing it.')+'</p></div>';
+    pane('t2',t2)+pane('t3',t3)+pane('t4',t4)+
+    '</div>'+weanPanel;
 }
+
+/* ----- legacy JOINT code: chooser for the new knee / hip plans ----- */
+function chooserBody(){
+  function b(code,txt){return '<button class="btn ghost" style="text-align:left" onclick="pick(\''+code+'\')">'+txt+' <span style="color:var(--muted);font-weight:400">('+code+')</span></button>';}
+  return '<div class="panel"><p class="note" style="margin-top:0;max-width:66ch">This code now has separate plans for knee and hip replacement, matched to the slow-release medicine you went home with. Your discharge script or text message names it.</p>'+
+    '<h3>Knee replacement</h3><div style="display:grid;gap:8px;max-width:560px">'+
+    b('KNEE-100','Tapentadol SR 100 mg twice a day')+b('KNEE-50','Tapentadol SR 50 mg twice a day')+b('KNEE-TGN-10','Targin 10/5 mg twice a day')+b('KNEE-TGN-5','Targin 5/2.5 mg twice a day')+
+    '</div><h3>Hip replacement</h3><div style="display:grid;gap:8px;max-width:560px">'+
+    b('HIP-50','Tapentadol SR 50 mg twice a day')+b('HIP-TGN-10','Targin 10/5 mg twice a day')+b('HIP-TGN-5','Targin 5/2.5 mg twice a day')+
+    '</div><p class="hint" style="margin-top:14px">Not sure which is yours? Check your discharge paperwork or the text message from Dr Halvey, or ask your pharmacist - do not guess.</p></div>';
+}
+function pick(code){op.value=CODES[code];renderPlan();}
 
 /* ----- teen ACL plan (weight-adjusted, roughly 45-70 kg): content per Ed's comments 21/07/2026 - do not change doses or safety wording without asking him. Plain paracetamol (NOT Panadol Osteo - modified-release is not for under-18s), ibuprofen lysine with water (never 'with food'), short-course pantoprazole, no laxative row. Tramadol badge S4, oxycodone S8. ----- */
 function paedsBody(p){
@@ -329,6 +377,9 @@ function renderPlan(){
   if(p.kind==='full'){
     document.getElementById('planLede').textContent='Take the regular medicines on the clock (8 am, 2 pm, 8 pm). Only step up to the stronger top-up if you need it. As you recover you reduce and stop the slow-release medicine using the wean plan.';
     body.innerHTML=fullBody(p); wireFull();
+  } else if(p.kind==='chooser'){
+    document.getElementById('planLede').textContent='This code covers a few plans. Pick your operation and the slow-release medicine named on your discharge script or in your text message.';
+    body.innerHTML=chooserBody();
   } else if(p.kind==='tapsr'){
     document.getElementById('planLede').textContent='Take the regular medicines on the clock (8 am, 2 pm, 8 pm). The slow-release strong medicine (tapentadol SR) is a short course: twice a day for 1 week, then stop.';
     body.innerHTML=tapsrBody(p);
@@ -353,31 +404,40 @@ function wireFull(){
     b.classList.add('active');document.getElementById(b.getAttribute('data-tab')).classList.add('active');setBan(b);});});
   document.getElementById('dischdate').addEventListener('change',updateDates);
   var wd=document.getElementById('wdose');if(wd)wd.addEventListener('change',renderWean);
+  var p=PLANS[op.value];if(p&&p.sr)renderWean();
 }
 function dischDate(){var el=document.getElementById('dischdate');if(!el||!el.value)return null;var p=el.value.split('-');return new Date(+p[0],+p[1]-1,+p[2]);}
 function addDays(d,n){var x=new Date(d.getFullYear(),d.getMonth(),d.getDate());x.setDate(x.getDate()+n);return x;}
 function shrt(d){var dy=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return dy[d.getDay()]+' '+d.getDate()+' '+mo[d.getMonth()];}
 function rangeText(s,e){var sd=dischDate();if(!sd)return '';var a=addDays(sd,+s);if(e===''||e==null)return 'from '+shrt(a);return shrt(a)+' - '+shrt(addDays(sd,+e));}
 function setBan(b){var t=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));document.getElementById('dateban').textContent=t?('Your dates for this stage: '+t):'';}
-function updateDates(){document.querySelectorAll('#tabs button').forEach(function(b){b.querySelector('.rng').textContent=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));});var a=document.querySelector('#tabs button.active');if(a)setBan(a);var w=document.getElementById('wdose');if(w&&w.value)renderWean();}
+function updateDates(){document.querySelectorAll('#tabs button').forEach(function(b){b.querySelector('.rng').textContent=rangeText(b.getAttribute('data-s'),b.getAttribute('data-e'));});var a=document.querySelector('#tabs button.active');if(a)setBan(a);var w=document.getElementById('wdose'),pp=PLANS[op.value];if((w&&w.value)||(pp&&pp.sr))renderWean();}
 var WEAN={
   "50":[[1,"Take 50 mg twice a day for 1 week, then stop. You are now off tapentadol."]],
   "100_acl":[[1,"Take 100 mg twice a day for 1 week, then stop. You are now off tapentadol."]],
   "100":[[1,"Reduce daytime dose to 50 mg. Continue 100 mg at night."],[2,"Stop the daytime dose. Reduce the night dose to 50 mg."],[3,"Stop the night-time dose. You are now off tapentadol."]],
-  "200":[[1,"Reduce daytime dose to 100 mg. Continue 200 mg at night."],[2,"Reduce daytime dose to 50 mg. Reduce night dose to 100 mg."],[3,"Stop the daytime dose. Reduce the night dose to 50 mg."],[4,"Stop the night-time dose. You are now off tapentadol."]]
+  "200":[[1,"Reduce daytime dose to 100 mg. Continue 200 mg at night."],[2,"Reduce daytime dose to 50 mg. Reduce night dose to 100 mg."],[3,"Stop the daytime dose. Reduce the night dose to 50 mg."],[4,"Stop the night-time dose. You are now off tapentadol."]],
+  "TGN10":[[1,"Reduce your daytime dose to Targin 5/2.5 mg. Continue 10/5 mg at night."],[2,"Stop the daytime dose. Reduce the night dose to 5/2.5 mg."],[3,"Stop the night-time dose. You are now off Targin."]],
+  "TGN5":[[1,"Take Targin 5/2.5 mg twice a day for 1 week, then stop. You are now off Targin."]]
 };
 /* Wean timelines PENDING CLINICAL SIGN-OFF (Dr Halvey): joint 100/200 step-down weans start at week 3
    (day 15) to match the plan-stage tabs above; 50 mg (and 100 mg for ACL) is a 1-week course from
-   discharge per Ed's instruction. Confirm before go-live. */
+   discharge per Ed's instruction. Knee/hip split + doses per Ed 22/07/2026. Targin wean steps
+   (TGN10 week-3 start; TGN5 1-week course) and oxycodone IR as the Targin top-up were drafted to
+   mirror the tapentadol pattern - SIGNED OFF Ed 24/07/2026, with the joint week-3 wean start. */
 function weanKey(v){var p=PLANS[op.value];return (v==='100'&&p&&p.variant==='acl')?'100_acl':v;}
-function renderWean(){var v=document.getElementById('wdose').value,box=document.getElementById('weanout');if(!v){box.classList.add('hidden');return;}
-  var p=PLANS[op.value],key=weanKey(v),off=(p&&p.variant==='joint'&&(v==='100'||v==='200'))?14:0;
-  var head=off?'You continue '+v+' mg twice a day for the first 2 weeks. The wean starts at week 3 (day 15 after discharge):':'Starting at '+v+' mg twice a day on discharge:';
-  box.innerHTML='<div style="font-weight:600;margin-bottom:6px">'+head+'</div>'+WEAN[key].map(function(s){var wk=s[0],dr=rangeText(off+(wk-1)*7,off+wk*7-1);var lab='Week '+(wk+off/7)+(dr?' <span style="color:var(--muted);font-weight:400">('+dr+')</span>':'');return '<div class="weanstep"><b>'+lab+'</b><span>'+s[1]+'</span></div>';}).join('');
+function renderWean(){
+  var p=PLANS[op.value],box=document.getElementById('weanout');if(!p||!box)return;
+  var key,label;
+  if(p.sr){key=(p.sr.drug==='tgn')?(p.sr.dose==='10/5'?'TGN10':'TGN5'):p.sr.dose;label=(p.sr.drug==='tgn'?'Targin ':'')+p.sr.dose+' mg';}
+  else{var sel=document.getElementById('wdose'),v=sel?sel.value:'';if(!v){box.classList.add('hidden');return;}key=weanKey(v);label=v+' mg';}
+  var off=(p.variant==='joint'&&(key==='100'||key==='200'||key==='TGN10'))?14:0;
+  var head=off?'You continue '+label+' twice a day for the first 2 weeks. The wean starts at week 3 (day 15 after discharge):':'Starting at '+label+' twice a day on discharge:';
+  box.innerHTML='<div style="font-weight:600;margin-bottom:6px">'+head+'</div>'+WEAN[key].map(function(st){var wk=st[0],dr=rangeText(off+(wk-1)*7,off+wk*7-1);var lab='Week '+(wk+off/7)+(dr?' <span style="color:var(--muted);font-weight:400">('+dr+')</span>':'');return '<div class="weanstep"><b>'+lab+'</b><span>'+st[1]+'</span></div>';}).join('');
   box.classList.remove('hidden');}
 
 /* ===== direct access by code in the URL (?c=CODE) - the link Dr Halvey gives the patient ===== */
-var CODES={'GEN-ETO':'etoricoxib','GEN-CEL':'celecoxib','GEN-IBU':'ibuprofen','GEN-TAP-ETO':'tap_eto','GEN-TAP-CEL':'tap_cel','GEN-TAP-IBU':'tap_ibu','CAES':'caesarean','ACL-CEL':'acl_cel','ACL-ETO':'acl_eto','JOINT':'joint','ACL-PAEDS-TRAM':'paeds_tram','ACL-PAEDS-OXY':'paeds_oxy'};
+var CODES={'GEN-ETO':'etoricoxib','GEN-CEL':'celecoxib','GEN-IBU':'ibuprofen','GEN-TAP-ETO':'tap_eto','GEN-TAP-CEL':'tap_cel','GEN-TAP-IBU':'tap_ibu','CAES':'caesarean','ACL-CEL':'acl_cel','ACL-ETO':'acl_eto','KNEE-100':'knee100','KNEE-50':'knee50','KNEE-TGN-10':'knee_tgn10','KNEE-TGN-5':'knee_tgn5','HIP-50':'hip50','HIP-TGN-10':'hip_tgn10','HIP-TGN-5':'hip_tgn5','JOINT':'joint','ACL-PAEDS-TRAM':'paeds_tram','ACL-PAEDS-OXY':'paeds_oxy'};
 (function(){var c=(new URLSearchParams(location.search).get('c')||'').toUpperCase();if(c&&CODES[c]){op.value=CODES[c];renderPlan();}})();
 </script>
 <nav class="noprint" aria-label="Your journey" style="display:flex;justify-content:flex-start;max-width:1040px;margin:0 auto;padding:0 20px 40px"><a href="../day-of-surgery.html" style="display:block;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:6px;padding:14px 20px;max-width:340px"><small style="display:block;text-transform:uppercase;letter-spacing:.08em;font-size:11.5px;font-weight:600;color:var(--muted)">&larr; Previous step</small><b style="font-size:16px;color:var(--teal)">Day of surgery</b></a></nav>
