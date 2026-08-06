@@ -268,3 +268,12 @@ footer.site h4.fscript{font-family:"Caveat",cursive;font-size:30px;font-weight:7
 .hero.moving .wrap{position:relative}
 @keyframes herodrift{to{transform:scale(1.08)}}
 @media(prefers-reduced-motion:reduce){.hero.moving .heroimg{animation:none}}
+
+/* - quick-answer card in the hero search dropdown - */
+.sr-ans{display:block;padding:14px 16px 15px;background:#fbf3e6;border-bottom:1px solid #e2c9a0;text-align:left}
+.sr-ans .tag{display:block;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#8a4b16;margin-bottom:4px}
+.sr-ans .qt{display:block;font-weight:700;color:#4e1d24;margin-bottom:4px}
+.sr-ans p{margin:0 0 8px;font-size:14.5px;line-height:1.55;color:#241a18}
+.sr-ans a{font-weight:600;color:#6b2530;text-decoration:none}
+.sr-ans a:hover{color:#8a4b16;text-decoration:underline}
+.sr-more{padding:9px 16px 4px;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#8a7a6a;text-align:left}
