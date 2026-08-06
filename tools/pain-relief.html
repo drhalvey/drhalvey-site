@@ -245,14 +245,14 @@ function srMed(p){
   return{tgn:false,full:'Tapentadol SR',dose:p.sr?p.sr.dose+' mg':'',topup:'Tapentadol immediate release'};
 }
 function fullBody(p){
-  var dn=(p.variant==='joint'), n=p.nsaid, s=srMed(p);
+  var dn=(p.variant==='joint'), n=p.nsaid, s=srMed(p), isEto=(n.name==='Etoricoxib');
   var longWean=p.sr?(p.sr.dose==='100'||p.sr.dose==='200'||p.sr.dose==='10/5'):false;
   var at8am=n.times.indexOf('8 am')>-1, at8pm=n.times.indexOf('8 pm')>-1, nT=n.times.join(' &amp; ');
   var t1='';
   if(dn) t1+=row('1st night','Dexamethasone','','Anti-inflammatory, in hospital only. Very short course.');
   var amRows=4+(at8am?1:0);
   t1+='<tr><td class="timecol" rowspan="'+amRows+'">8 am</td><td class="med">Panadol Osteo<span class="dose">two 665 mg</span></td><td class="note">Take regularly while you have pain.</td></tr>';
-  if(at8am) t1+='<tr><td class="med">'+n.name+'<span class="dose">'+n.dose+'</span></td><td class="note">'+(dn?'Anti-inflammatory. Most patients take it for the first 3 to 5 days. Some are prescribed a 6-week course - after day 5 the dose drops to 100 mg, once or twice a day. Follow your discharge script. Stop if you become dehydrated.':'Anti-inflammatory. Stop if dehydrated.')+'</td></tr>';
+  if(at8am) t1+='<tr><td class="med">'+n.name+'<span class="dose">'+n.dose+'</span></td><td class="note">'+(dn?'Anti-inflammatory. Most patients take it for the first 3 to 5 days. Some are prescribed a 6-week course - after day 5 the dose drops to 100 mg, once or twice a day. Follow your discharge script. Stop if you become dehydrated.':(isEto?'Anti-inflammatory. Take it for up to 8 days, then stop. Stop earlier if your pain has settled or you become dehydrated.':'Anti-inflammatory. Stop if dehydrated.'))+'</td></tr>';
   t1+='<tr><td class="med"><span class="pill">S8</span> '+s.full+(s.dose?'<span class="dose">'+s.dose+' - twice a day (8 am and 8 pm)</span>':'')+'</td><td class="note">Strong slow-release baseline. Take regularly while you need it.</td></tr>'+
     '<tr><td class="med">Coloxyl + Senna / Movicol</td><td class="note">Laxatives; usually stop by ~day 10.</td></tr>'+
     '<tr><td class="med">Vitamin C 1 g</td><td class="note">Helps healing.</td></tr>'+
@@ -263,22 +263,24 @@ function fullBody(p){
   t1+='<tr><td class="med"><span class="pill">S8</span> '+s.full+(s.dose?' '+s.dose:'')+'</td><td class="note">Slow-release strong medicine.</td></tr>';
   if(dn) t1+='<tr><td class="med">Pregabalin 50 mg + Melatonin</td><td class="note">Pregabalin for about 12 days; melatonin to help sleep.</td></tr>';
   var topupRow='<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> '+s.topup+'<span class="dose">or an alternative as prescribed</span></td><td class="note">Top-up only if pain is 7/10+ or stopping movement/sleep. Wait 4 hours between doses, no more than 6 doses in 24 hours, do not drive.</td></tr>';
+  var topupLate='<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">S8</span> '+s.topup+'<span class="dose">or an alternative as prescribed</span></td>'+
+    '<td class="note">Still available if you need it - most people need it only occasionally by now, for example after physiotherapy or a big day. Same rules: wait at least 4 hours between doses, no more than 6 doses in 24 hours, do not drive.</td></tr>';
   var srT2=longWean
     ? row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,s.dose,'<b>Begin to wean</b> - follow the week-by-week wean plan below.')
     : row('-','<span class="pill">S8</span> '+s.full,'','The 1-week course is complete - you should now have stopped this medicine. Return any unused tablets to a pharmacy.');
   var t2=row('8 am, 2 pm, 8 pm','Panadol Osteo','two 665 mg','Continue regularly while you have pain.')
-    +(dn?row(nT,n.name,'100 mg','A 3 to 5 day course has finished by now. If you were prescribed the 6-week course, continue - 100 mg once or twice a day, as on your script.'):row(nT,n.name,n.dose,'Continue the anti-inflammatory. Stop if dehydrated.'))
+    +(dn?row(nT,n.name,'100 mg','A 3 to 5 day course has finished by now. If you were prescribed the 6-week course, continue - 100 mg once or twice a day, as on your script.'):(isEto?row('-',n.name,'','The 8-day etoricoxib course is complete - you should now have stopped it.'):row(nT,n.name,n.dose,'Continue the anti-inflammatory. Stop if dehydrated.')))
     +row('8 am','Vitamin C','1 g','Continue - part of the 6-week course.')
     +srT2
-    +(dn?row('8 pm','Pregabalin 50 mg + Melatonin','','Can usually stop around now.'):'')+(dn?topupRow:'');
+    +(dn?row('8 pm','Pregabalin 50 mg + Melatonin','','Can usually stop around now.'):'')+topupRow;
   var t3=row('8 am, 2 pm, 8 pm','Panadol Osteo','two 665 mg','Continue while you have pain.')
-    +(dn?row(nT,n.name,'100 mg','Only if you are on the 6-week course: continue to the end of week 6. Stop if you become dehydrated.'):row(nT,n.name,n.dose,'Continue while you need it. Stop if dehydrated.'))
+    +(dn?row(nT,n.name,'100 mg','Only if you are on the 6-week course: continue to the end of week 6. Stop if you become dehydrated.'):(isEto?'':row(nT,n.name,n.dose,'Continue while you need it. Stop if dehydrated.')))
     +row('8 am','Vitamin C','1 g','Continue - part of the 6-week course.')
-    +(longWean?row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,'','<b>Keep weaning</b> - follow the wean plan below. Aim to be off it by around week 5 to 6.'):'')+(dn?topupRow:'');
+    +(longWean?row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,'','<b>Keep weaning</b> - follow the wean plan below. Aim to be off it by around week 5 to 6.'):'')+topupRow;
   var t4=row('8 am, 2 pm, 8 pm','Panadol Osteo','two 665 mg','Stop if able - use only on days you need it.')
-    +(dn?row(nT,n.name,'','If you were on the 6-week course, it is now complete - stop.'):row(nT,n.name,n.dose,'6-week course complete - stop.'))
+    +(dn?row(nT,n.name,'','If you were on the 6-week course, it is now complete - stop.'):(isEto?'':row(nT,n.name,n.dose,'6-week course complete - stop.')))
     +row('8 am','Vitamin C','1 g','6-week course complete - stop.')
-    +(longWean?row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,'','Aim to finish the wean. If you feel you still need it, talk to your GP or your surgeon at your follow-up.'):'');
+    +(longWean?row('8 am &amp; 8 pm','<span class="pill">S8</span> '+s.full,'','Aim to finish the wean. If you feel you still need it, talk to your GP or your surgeon at your follow-up.'):'')+topupLate;
   function pane(id,rows){return '<div class="tabpane" id="'+id+'"><table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>Notes</th></tr></thead><tbody>'+rows+'</tbody></table></div>';}
   var weanTitle=s.tgn?'Targin wean':'tapentadol / Palexia SR wean', weanPanel;
   if(p.sr){
@@ -334,6 +336,9 @@ function paedsBody(p){
     '<tr><td class="timecol" rowspan="2">8 pm</td><td class="med">Paracetamol<span class="dose">two 500 mg (1 g)</span></td><td class="note">Take regularly while you have pain.</td></tr>'+
     '<tr><td class="med">Ibuprofen lysine 400 mg</td><td class="note">Fast-acting form, with a glass of water.</td></tr>'+
     '<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">'+(p.prn.sched||'S8')+'</span> '+p.prn.name+'<span class="dose">'+p.prn.dose+'</span></td><td class="note"><b>Top-up only if pain is 7/10+ or stopping movement/sleep.</b> '+p.prn.rule+' A parent gives each dose. No driving; expect drowsiness. Drink plenty of water - strong pain medicine can cause constipation.</td></tr>';
+  var prnLate='<table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>Notes</th></tr></thead><tbody>'+
+    '<tr class="topup-row"><td class="timecol">As needed</td><td class="med"><span class="pill">'+(p.prn.sched||'S8')+'</span> '+p.prn.name+'<span class="dose">'+p.prn.dose+'</span></td><td class="note"><b>Still available if needed</b> - most teenagers no longer need it by now, but it can be taken for severe pain (7/10+ or stopping movement/sleep). '+p.prn.rule+' A parent gives each dose. No driving; expect drowsiness. Return unused tablets to a pharmacy once they are no longer needed.</td></tr>'+
+    '</tbody></table>';
   var PARENTS='<div class="alert warn" style="margin-bottom:16px"><h4>Parents</h4>Keep all medicines out of reach of younger children, give doses yourself rather than leaving the packet out, and never give extra doses early.</div>';
   return '<div class="panel">'+PARENTS+ONLY_IF_PAIN+
     '<label class="field" for="dischdate">Surgery date (optional)</label>'+
@@ -345,9 +350,9 @@ function paedsBody(p){
       '<button data-tab="t4" data-s="42" data-e="">Week 7+<span class="rng"></span></button>'+
     '</div><div id="dateban"></div>'+
     '<div class="tabpane active" id="t1"><table class="sched"><thead><tr><th>Time</th><th>Medicine</th><th>Notes</th></tr></thead><tbody>'+t1+'</tbody></table></div>'+
-    '<div class="tabpane" id="t2"><p class="note" style="margin-top:10px"><b>Weeks 3-4.</b> Most teenagers no longer need the strong (as-needed) medicine - stop it first, and return any unused tablets to a pharmacy. Continue <b>paracetamol 1 g up to three times a day</b> on days you need it (physio days especially), and <b>ibuprofen lysine 400 mg</b> only when the knee is sore or swollen. Stop the pantoprazole when you stop the anti-inflammatory.</p></div>'+
-    '<div class="tabpane" id="t3"><p class="note" style="margin-top:10px"><b>Weeks 5-6.</b> Simple pain relief only, as needed - usually just paracetamol before physio or after a big day. If you still need ibuprofen most days, or pain is getting worse rather than better, check in with the surgeon or your GP.</p></div>'+
-    '<div class="tabpane" id="t4"><p class="note" style="margin-top:10px"><b>Week 7 and beyond.</b> Usually no regular pain relief. Occasional paracetamol around physiotherapy is fine. Any new swelling, fever, or worsening pain deserves a review rather than more tablets.</p></div>'+
+    '<div class="tabpane" id="t2"><p class="note" style="margin-top:10px"><b>Weeks 3-4.</b> Most teenagers need less pain relief by now. Continue <b>paracetamol 1 g up to three times a day</b> on days you need it (physio days especially), and <b>ibuprofen lysine 400 mg</b> only when the knee is sore or swollen. Stop the pantoprazole when you stop the anti-inflammatory.</p>'+prnLate+'</div>'+
+    '<div class="tabpane" id="t3"><p class="note" style="margin-top:10px"><b>Weeks 5-6.</b> Simple pain relief only, as needed - usually just paracetamol before physio or after a big day. If you still need ibuprofen most days, or pain is getting worse rather than better, check in with the surgeon or your GP.</p>'+prnLate+'</div>'+
+    '<div class="tabpane" id="t4"><p class="note" style="margin-top:10px"><b>Week 7 and beyond.</b> Usually no regular pain relief. Occasional paracetamol around physiotherapy is fine. Any new swelling, fever, or worsening pain deserves a review rather than more tablets.</p>'+prnLate+'</div>'+
     '</div>';
 }
 
