@@ -28,115 +28,138 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Fasting before surgery - Dr Ed Halvey","description":"General guidance on fasting (not eating or drinking) before an anaesthetic.","url":"https://drhalvey.com.au/fasting.html","inLanguage":"en-AU","reviewedBy":{"@type":"Physician","name":"Dr Ed Halvey","medicalSpecialty":"Anaesthesia"}}</script>
 </head>
 <body>
-
 <header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <span class="logo">EH</span>
-      <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
-    </a>
-    <div class="stepnav"><a class="active" href="pre-op-guidance.html">Before surgery</a><a href="day-of-surgery.html">Day of surgery</a><a href="tools/pain-relief.html">After surgery</a><a class="clin" href="clinicians.html">Clinician tools</a></div>
+  <nav class="v2nav">
+    <a class="wm" href="index.html"><img src="assets/img/wordmark-maroon.png" alt="Dr Ed Halvey"><span>Specialist Anaesthetist<br>Perth, WA</span></a>
     <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <div class="navlinks" id="nav">
-      <a class="navlink" href="medicine-timing.html">My medicines before surgery planner</a>
-      <a class="navlink" href="procedures.html">Procedures</a>
-      <a class="navlink" href="fees.html">Fees</a>
-      <a class="navlink" href="about.html">About</a>
+    <div class="links" id="nav">
+      <a href="pre-op-guidance.html" class="on">Before surgery</a>
+      <a href="day-of-surgery.html">Day of surgery</a>
+      <a href="tools/pain-relief.html">After surgery</a>
+      <a href="procedures.html">Procedures</a>
+      <a href="fees.html">Fees</a>
       <a class="cta" href="contact.html">Contact</a>
     </div>
   </nav>
 </header>
-
-<section class="block">
-  <div class="wrap guide">
-    <p class="eyebrow"><a href="pre-op-guidance.html">Pre-op guidance</a> › Fasting</p>
-    <h2 class="sec">Fasting before your surgery</h2>
-    <p class="lead">"Fasting" means not eating or drinking for a set time before your anaesthetic. It
-      matters for your safety - it lowers the risk of stomach contents entering your lungs while you
-      are under anaesthesia.</p>
-<p class="noprint" style="margin:18px 0 0"><button class="btn ghost printbtn" onclick="window.print()" style="cursor:pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3h12v6"/><rect x="6" y="14" width="12" height="8"/></svg> Print this guide</button></p>
-
-    <div class="callout warn" style="margin-top:18px">
-      <b>Your hospital will give you exact fasting times - always follow those.</b> Times can differ
-      depending on your operation, your health, and the time of your surgery. The information below is
-      a general guide only. If your hospital's instructions differ from this page, follow the hospital.
+<section class="hero2 short">
+  <img class="media" src="assets/img/hero-swan-river.jpg" alt="Swan River with Perth city in the background">
+  <div class="wash" aria-hidden="true"></div>
+  <div class="g12">
+    <div class="copy">
+      <p class="crumb"><a href="pre-op-guidance.html">Pre-op guidance</a> › Fasting</p>
+      <h1>Fasting before your surgery</h1>
+      <p class="lead2">Fasting means not eating or drinking for a set time before your anaesthetic. It matters for your safety. It lowers the risk of stomach contents entering your lungs while you are under anaesthesia.</p>
     </div>
-
-    <div class="callout info" style="margin-top:14px">
-      <b>Taking a GLP-1 medicine such as Ozempic, Wegovy or Mounjaro?</b> Your fasting is different from the
-      standard advice on this page. Please follow the
-      <a href="glp1-before-surgery.html">GLP-1 medications before surgery</a> guidance instead.
-    </div>
-
-    <h3 id="work-out-my-fasting-times">Work out my fasting times</h3>
-    <p>Enter the date and time you have been asked to arrive at hospital (your admission time) to see your personalised fasting times. This is a general
-      guide based on the standard 6-hour and 2-hour rules - your hospital's exact times still apply.</p>
-    <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:flex-end;margin:8px 0 4px">
-      <div>
-        <label for="surgdt" style="font-weight:600;font-size:14px;display:block;margin-bottom:6px">Date and time of admission to hospital</label>
-        <input type="datetime-local" id="surgdt" step="900" style="font-size:16px;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;font-family:inherit">
-      </div>
-    </div>
-    <div id="fastout" style="display:none">
-      <div class="timecard"><div class="t" id="f-food"></div><div class="d"><b>Stop eating solid food</b> (and milk or milky drinks). A light meal is fine up to this point unless told otherwise.</div></div>
-      <div class="timecard"><div class="t" id="f-fluid"></div><div class="d"><b>Stop clear fluids.</b> Up to this time you may have small amounts of clear fluids - water, clear cordial, pulp-free apple juice, or black tea/coffee (no milk).</div></div>
-    </div>
-
-    <h3 id="a-general-guide-for-adults">A general guide for adults</h3>
-    <div class="timecard"><div class="t">6 hours before</div><div class="d"><b>Stop eating solid food</b>, and stop milk or drinks that contain milk (such as a coffee with milk). A light meal is fine up to this point unless told otherwise.</div></div>
-    <div class="timecard"><div class="t">2 hours before</div><div class="d"><b>Stop clear fluids.</b> Up until 2 hours before, you may have small amounts of clear fluids - water, clear cordial, pulp-free apple juice, or black tea/coffee (no milk).</div></div>
-    <div class="timecard"><div class="t">On waking / before you leave</div><div class="d">If your hospital allows, a few sips of water to take essential medicines is usually fine - but check this with them first.</div></div>
-
-    <h3 id="what-counts-as-a-clear-fluid">What counts as a "clear fluid"?</h3>
-    <p>A clear fluid is one you can see through. <b>Yes:</b> water, clear cordial, black tea or coffee
-      (no milk), pulp-free clear apple juice. <b>No:</b> milk, milky tea or coffee, smoothies, juice
-      with pulp, alcohol.</p>
-    <p>Under modern fasting guidelines, many clear carbonated soft drinks (for example clear lemonade)
-      are counted as clear fluids. However, some hospitals still ask you to avoid fizzy drinks before
-      surgery - if your hospital's instructions differ from this, follow your hospital.</p>
-
-    <h3 id="your-usual-medicines">Your usual medicines</h3>
-    <p>Keep taking your regular medicines as normal unless you have been told otherwise. Some medicines
-      (for example certain diabetes or blood-thinning medicines) may need to be adjusted before
-      surgery. If you are unsure, ask the hospital, your surgeon, or your GP - do not stop important
-      medicines without advice.</p>
-
-    <h3 id="other-things-to-avoid">Other things to avoid</h3>
-    <ul>
-      <li>No chewing gum or lollies inside the fasting window - they count as eating.</li>
-      <li>No smoking or vaping on the day before surgery if you can avoid it.</li>
-      <li>Do not drink alcohol the night before or the day of surgery.</li>
-    </ul>
-
-    <div class="callout info">
-      <b>If you accidentally eat or drink</b> inside your fasting window, do not just turn up - tell the
-      hospital as soon as you can. Your surgery may need to be delayed for your safety.
-    </div>
-
-    <p class="printbtn noprint" style="margin-top:26px">
-      <button class="btn ghost" onclick="window.print()"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg> Print this page</button>
-    </p>
+    <div class="cap">Perth, Western Australia</div>
   </div>
 </section>
 
-<section class="noprint" style="max-width:1140px;margin:0 auto;padding:0 22px 34px"><div id="pagefb"></div></section>
-<script src="assets/feedback.js"></script>
-<footer class="site">
-  <div class="wrap">
-    <div class="fgrid">
-      <div><h4 class="fscript">Dr Ed Halvey</h4><p style="color:#9fb6b3;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p></div>
-      <div><h4>Site</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="hospitals.html">Hospitals</a><a href="procedures.html">Procedures</a><a href="pre-op-guidance.html">Pre-op guidance</a><a href="clinical-research.html">Research</a><a href="fees.html">Fees</a><a href="contact.html">Contact</a></div>
-      <div><h4>Contact</h4><a href="contact.html">Make an enquiry</a><a href="tel:0862676200">(08) 6267 6200</a><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a></div>
+<section class="guide2">
+  <div class="g12">
+    <aside class="side">
+      <div><div class="num">1</div><div class="step">Before surgery</div></div>
+      <nav class="toc" aria-label="On this page">
+        <a href="#work-out-my-fasting-times">Work out my fasting times</a>
+        <a href="#a-general-guide-for-adults">A general guide for adults</a>
+        <a href="#what-counts-as-a-clear-fluid">What counts as a clear fluid?</a>
+        <a href="#your-usual-medicines">Your usual medicines</a>
+        <a href="#other-things-to-avoid">Other things to avoid</a>
+      </nav>
+    </aside>
+    <div class="body">
+      <div class="callout warn" style="margin-top:0">
+        <b>Your hospital will give you exact fasting times. Always follow those.</b> Times can differ depending on your operation, your health, and the time of your surgery. The information below is a general guide only. If your hospital's instructions differ from this page, follow the hospital.
+      </div>
+      <div class="callout info">
+        <b>Taking a GLP-1 medicine such as Ozempic, Wegovy or Mounjaro?</b> Your fasting is different from the standard advice on this page. Please follow the <a href="glp1-before-surgery.html">GLP-1 medications before surgery</a> guidance instead.
+      </div>
+
+      <h2 id="work-out-my-fasting-times">Work out my fasting times</h2>
+      <p>Enter the date and time you have been asked to arrive at hospital (your admission time) to see your fasting times. This is a general guide based on the standard <b>6-hour</b> and <b>2-hour</b> rules. Your hospital's exact times still apply.</p>
+      <div class="fastpick">
+        <div class="f">
+          <label for="surgdate">Date you arrive at hospital</label>
+          <input type="date" id="surgdate">
+        </div>
+        <div class="f">
+          <label for="surgtime">Time you arrive</label>
+          <select id="surgtime"></select>
+        </div>
+        <p class="hint">Use the arrival time on your hospital letter, not the time of the operation.</p>
+      </div>
+      <div id="fastout" style="display:none">
+        <div class="timecard timecard2 caution"><div class="t" id="f-food"></div><div class="d"><b>Stop eating solid food</b> (and milk or milky drinks). A light meal is fine up to this point unless told otherwise.</div></div>
+        <div class="timecard timecard2"><div class="t" id="f-fluid"></div><div class="d"><b>Stop clear fluids.</b> Up to this time you may have small amounts of clear fluids: water, clear cordial, pulp-free apple juice, or black tea or coffee (no milk).</div></div>
+      </div>
+
+      <h2 id="a-general-guide-for-adults">A general guide for adults</h2>
+      <div class="timecard timecard2 caution"><div class="t">6 hours before</div><div class="d"><b>Stop eating solid food</b>, and stop milk or drinks that contain milk (such as a coffee with milk). A light meal is fine up to this point unless told otherwise.</div></div>
+      <div class="timecard timecard2"><div class="t">2 hours before</div><div class="d"><b>Stop clear fluids.</b> Up until 2 hours before, you may have small amounts of clear fluids: water, clear cordial, pulp-free apple juice, or black tea or coffee (no milk).</div></div>
+      <div class="timecard timecard2"><div class="t">On waking, before you leave</div><div class="d">If your hospital allows, a few sips of water to take essential medicines is usually fine. Check this with them first.</div></div>
+
+      <h2 id="what-counts-as-a-clear-fluid">What counts as a clear fluid?</h2>
+      <p>A clear fluid is one you can see through. <b>Yes:</b> water, clear cordial, black tea or coffee (no milk), pulp-free clear apple juice. <b>No:</b> milk, milky tea or coffee, smoothies, juice with pulp, alcohol.</p>
+      <p>Under modern fasting guidelines, many clear carbonated soft drinks (for example clear lemonade) are counted as clear fluids. However, some hospitals still ask you to avoid fizzy drinks before surgery. If your hospital's instructions differ from this, follow your hospital.</p>
+
+      <h2 id="your-usual-medicines">Your usual medicines</h2>
+      <p>Keep taking your regular medicines as normal unless you have been told otherwise. Some medicines (for example certain diabetes or blood-thinning medicines) may need to be adjusted before surgery. If you are unsure, ask the hospital, your surgeon, or your GP. Do not stop important medicines without advice.</p>
+
+      <h2 id="other-things-to-avoid">Other things to avoid</h2>
+      <ul>
+        <li>No chewing gum or lollies inside the fasting window. They count as eating.</li>
+        <li>No smoking or vaping on the day before surgery if you can avoid it.</li>
+        <li>Do not drink alcohol the night before or the day of surgery.</li>
+      </ul>
+      <div class="callout info">
+        <b>If you accidentally eat or drink</b> inside your fasting window, do not just turn up. Tell the hospital as soon as you can. Your surgery may need to be delayed for your safety.
+      </div>
+      <p class="printbtn noprint" style="margin-top:32px"><button class="btn ghost" onclick="window.print()"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg> Print this page</button></p>
     </div>
-    <div class="legal">
+  </div>
+</section>
+
+<section class="pager2">
+  <div class="g12">
+    <a class="prev" href="pre-op-guidance.html"><small>Back to</small><b>← Before surgery</b></a>
+    <a class="next" href="medicines-before-surgery.html"><small>Next guide</small><b>Medicines before surgery →</b></a>
+  </div>
+</section>
+<section class="noprint" style="max-width:1280px;margin:0 auto;padding:0 32px 40px"><div id="pagefb"></div></section>
+<script src="assets/feedback.js"></script>
+<footer class="site foot2">
+  <div class="g12">
+    <div class="brandcol">
+      <img src="assets/img/wordmark-cream.png" alt="Dr Ed Halvey">
+      <p>Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p>
+    </div>
+    <div class="col a">
+      <h4>Site</h4>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="procedures.html">Procedures</a>
+      <a href="hospitals.html">Hospitals</a>
+      <a href="pre-op-guidance.html">Pre-op guidance</a>
+      <a href="clinical-research.html">Research</a>
+      <a href="clinicians.html">Clinician tools</a>
+    </div>
+    <div class="col b">
+      <h4>Contact</h4>
+      <a href="contact.html">Make an enquiry</a>
+      <a href="tel:0862676200">(08) 6267 6200</a>
+      <a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a>
+    </div>
+    <div class="legal2">
       <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
       <p>© <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</p>
     </div>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script>
 (function(){
-  var el=document.getElementById('surgdt'); if(!el) return;
+  var de=document.getElementById('surgdate'),te=document.getElementById('surgtime'); if(!de||!te) return;
+  for(var hh=5;hh<=20;hh++){for(var q=0;q<60;q+=15){var o=document.createElement('option');var v=(hh<10?'0':'')+hh+':'+(q<10?'0':'')+q;var ap=hh<12?'am':'pm',h12=hh%12||12;o.value=v;o.textContent=h12+':'+(q<10?'0':'')+q+' '+ap;te.appendChild(o);}}
   function fmt(d){
     var dy=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'],mo=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
     var h=d.getHours(),m=d.getMinutes(),ap=h<12?'am':'pm',h12=h%12; if(h12===0)h12=12;
@@ -144,18 +167,16 @@
     return h12+':'+mm+' '+ap+' on '+dy[d.getDay()]+' '+d.getDate()+' '+mo[d.getMonth()];
   }
   function compute(){
-    if(!el.value){document.getElementById('fastout').style.display='none';return;}
-    var s=new Date(el.value);
+    if(!de.value||!te.value){document.getElementById('fastout').style.display='none';return;}
+    var s=new Date(de.value+'T'+te.value);
     document.getElementById('f-food').textContent=fmt(new Date(s.getTime()-6*3600000));
     document.getElementById('f-fluid').textContent=fmt(new Date(s.getTime()-2*3600000));
     document.getElementById('fastout').style.display='block';
   }
-  /* default to the next day at 7:00 am so the picker shows a sensible time, not the current pm time */
   function pad(n){return (n<10?'0':'')+n;}
   var d=new Date(); d.setDate(d.getDate()+1); d.setHours(7,0,0,0);
-  el.value=d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'T07:00';
-  el.addEventListener('change',compute);
-  el.addEventListener('input',compute);
+  de.value=d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate()); te.value='07:00';
+  de.addEventListener('change',compute); te.addEventListener('change',compute);
   compute();
 })();
 </script>
