@@ -49,6 +49,18 @@ After exporting a journey animation from Claude Design:
 Photos keep the JPEG original as a fallback, with WebP copies at 800, 1200 and 1600 px wide served through
 `<picture>`. `picture{display:contents}` in `style.css` keeps layout identical.
 
+## Pain relief tool governance
+
+The tool is display-only: it shows a fixed plan Ed set in advance, selected from a list. It never
+calculates, individualises or recommends doses, and nothing a patient enters changes what is shown.
+This keeps it inside the TGA carve-out for digitising paper-based clinical rules. It is access-gated
+(code and confirmation) and `noindex`.
+
+Two checks are Ed's to complete:
+
+1. Run the TGA's online "Is my software regulated?" self-assessment for the tool.
+2. Send a one-paragraph description to the medical indemnity insurer and get sign-off.
+
 ## Rules
 
 Clinical wording is only published after Ed's explicit yes. No testimonials, patient stories or outcome claims (AHPRA).
