@@ -70,7 +70,7 @@ h1,h2,h3,h4{letter-spacing:-.02em}
 
 /* - hero - */
 .hero{background:var(--teal);border-bottom:0;color:#fff}
-.hero.photo{background:linear-gradient(rgba(52,18,23,.88),rgba(52,18,23,.82)),url("img/hero-swan-river.jpg") center/cover}
+.hero.photo{background:linear-gradient(rgba(52,18,23,.88),rgba(52,18,23,.82)),url("img/hero-swan-river.jpg") center/cover;background-image:linear-gradient(rgba(52,18,23,.88),rgba(52,18,23,.82)),image-set(url("img/hero-swan-river-1600.webp") type("image/webp"),url("img/hero-swan-river.jpg") type("image/jpeg"))}
 .hero.centered .actions{justify-content:center}
 .hero .wrap{padding:72px 22px 64px}
 .hero h1{font-family:"Caveat",cursive;font-weight:700;font-size:clamp(42px,6vw,64px);line-height:1.02;letter-spacing:0;margin:0 0 14px;max-width:20ch;color:#fff}
@@ -264,7 +264,7 @@ footer.site h4.fscript{font-family:"Caveat",cursive;font-size:30px;font-weight:7
 .callout.big .kick{display:block;font-weight:800;text-transform:uppercase;letter-spacing:.07em;font-size:12.5px;margin-bottom:6px}
 /* - gentle hero photo drift (homepage) - */
 .hero.photo.moving{position:relative;overflow:hidden;background:#341217}
-.hero.moving .heroimg{position:absolute;inset:-3% 0;background:linear-gradient(rgba(52,18,23,.82),rgba(52,18,23,.74)),url("img/hero-perth-aerial.jpg") center/cover;animation:herodrift 45s ease-in-out infinite alternate;will-change:transform}
+.hero.moving .heroimg{position:absolute;inset:-3% 0;background:linear-gradient(rgba(52,18,23,.82),rgba(52,18,23,.74)),url("img/hero-perth-aerial.jpg") center/cover;background-image:linear-gradient(rgba(52,18,23,.82),rgba(52,18,23,.74)),image-set(url("img/hero-perth-aerial-1600.webp") type("image/webp"),url("img/hero-perth-aerial.jpg") type("image/jpeg"));animation:herodrift 45s ease-in-out infinite alternate;will-change:transform}
 .hero.moving .wrap{position:relative}
 @keyframes herodrift{to{transform:scale(1.08)}}
 @media(prefers-reduced-motion:reduce){.hero.moving .heroimg{animation:none}}
@@ -530,3 +530,6 @@ footer.site h4.fscript{font-family:"Caveat",cursive;font-size:30px;font-weight:7
   .checklist li::before{border-color:#000}
   a{color:#000;text-decoration:none}
 }
+
+/* Responsive WebP wrappers must not change layout: the <img> stays the grid or positioned item */
+picture{display:contents}picture>source{display:none}
