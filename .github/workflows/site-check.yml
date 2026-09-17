@@ -1,0 +1,29 @@
+name: Site check
+
+# Runs after every change to the site. It never stops the site going live.
+# If it finds a problem the commit gets a red cross and GitHub emails the repo owner.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Safety and copy rules
+        run: python3 .github/scripts/site-check.py
+      - name: Live robots.txt still allows the site and blocks /tools/
+        run: |
+          sleep 60
+          body=$(curl -fsS https://drhalvey.com.au/robots.txt)
+          echo "$body"
+          echo "$body" | grep -qx 'Disallow: /tools/'
+          ! echo "$body" | grep -qx 'Disallow: /'
