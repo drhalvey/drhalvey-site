@@ -1,93 +1,55 @@
-# drhalvey.com.au - static site (rebuild)
+# drhalvey.com.au
 
-A static, no-CMS, no-database website for Dr Ed Halvey. No patient data is ever stored on the
-web host. Built to be staged on a preview URL and cut over to the existing `drhalvey.com.au`
-domain only once approved.
+Patient information website for Dr Ed Halvey, specialist anaesthetist, Perth WA.
+Static HTML, no build step, no database, no patient data. Served by GitHub Pages from `main`;
+a commit is live in about a minute.
 
-## What's in here
+## Layout
 
-```
-drhalvey-site/
-  index.html            Home
-  about.html            About / bio / qualifications  (placeholder content - needs Ed's text)
-  services.html         Anaesthetic services          (placeholder list - needs confirming)
-  hospitals.html        SCGH (public) + Hollywood Private
-  pre-op-guidance.html  Pre-op hub - links to fasting/consent docs + the pain relief tool
-  contact.html          Enquiries via Microsoft Forms (link to be pasted by Ed)
-  tools/
-    pain-relief-acl.html  The gated, display-only pain relief tool (ACL plan loaded)
-  assets/style.css      Shared stylesheet (brand built from scratch)
-  robots.txt            Set to block ALL indexing while staging
-```
+| Path | What it is |
+| --- | --- |
+| `index.html` | Home (v2 layout, photo hero, site search) |
+| `pre-op-guidance.html`, `day-of-surgery.html`, `fasting.html`, `arrival-time.html`, `consent-and-assessment.html` | Before surgery guides |
+| `medicines-before-surgery.html`, `glp1-before-surgery.html`, `medicine-timing.html` | Medicines guides and the planner |
+| `procedures.html` + one page per procedure | Procedure guides |
+| `animations/*-journey.html` | Four "watch your journey" players (Claude Design exports, slimmed) |
+| `tools/pain-relief.html` | Code-gated pain relief plans. Display only. `noindex`, and blocked in `robots.txt` |
+| `clinicians.html` | Clinician reference behind a soft PIN (not private) |
+| `about`, `services`, `hospitals`, `fees`, `contact`, `clinical-research`, `glossary` | Practice pages |
+| `downloads/` | Patient PDFs (not linked from any page) |
+| `print/qr-card.html` | Printable QR card pointing to drhalvey.com.au |
+| `rally/`, `deuce/`, `billing-sheet/` | Privacy policy and terms pages for Ed's iOS apps |
+| `assets/` | `style.css`, fonts, images (JPEG originals plus WebP sizes), search and feedback scripts |
+| `404.html`, `sitemap.xml`, `robots.txt`, `CNAME`, `.nojekyll` | Site plumbing |
 
-Everything is plain HTML/CSS with a tiny bit of vanilla JavaScript. No build step, no dependencies.
+## Automatic check
 
-## The domain - important
+`.github/workflows/site-check.yml` runs `.github/scripts/site-check.py` after every push. It never stops
+the site going live. A problem gives the commit a red cross and GitHub emails the owner. It checks:
 
-Ed **already owns `drhalvey.com.au`** (currently a Squarespace site). **No new domain is being
-bought.** The plan:
+- `robots.txt` still allows the site and blocks `/tools/` (in the repo and on the live site)
+- the pain relief tool keeps its `noindex` tag
+- internal links, images and sitemap entries point at files that exist
+- copy rules: no em dashes, tools never called "exact", no testimonials, no "pain team reviews everyone daily"
+- warnings only: specific clinical timeframes and superlatives, for Ed to judge
 
-1. Stage this site on a preview address - either the free hosting preview URL (e.g.
-   `username.github.io/...` or `project.pages.dev`) or a subdomain like `new.drhalvey.com.au`.
-2. Ed reviews it there.
-3. When approved, point `drhalvey.com.au` at the new host - **one domain, one cutover.** The old
-   Squarespace site is replaced at that moment.
+Run it locally with `python3 .github/scripts/site-check.py`.
 
-## Hosting / deploy (free static hosting)
+## Re-exported animations
 
-Either option works; both are free and match the model used for the ghgames site.
+After exporting a journey animation from Claude Design:
 
-**GitHub Pages**
-1. Create a repo, commit the contents of `drhalvey-site/` to it.
-2. Settings → Pages → deploy from branch (root). You get a `*.github.io` preview URL.
-3. For a custom subdomain later, add a `CNAME` file + DNS record.
+1. Re-apply the head fixes: page title, `<link rel="icon" href="../favicon.svg">`, CSS hiding the Export video button.
+2. Slim it: `npm install esbuild` once, then `node .github/scripts/slim-animation.mjs animations/<name>-journey.html`.
+   This pre-compiles the scripts so the 3 MB in-browser compiler is not shipped, and removes duplicate fonts
+   (about 1.6 MB down to 0.33 MB). Words and motion are unchanged.
 
-**Cloudflare Pages**
-1. Connect the repo (or drag-and-drop the `drhalvey-site/` folder).
-2. No build command needed; output dir is the folder root. You get a `*.pages.dev` preview URL.
-3. Custom domain/subdomain is added in the Pages dashboard + DNS.
+## Images
 
-While staging, `robots.txt` blocks all search engines. At go-live, swap it to allow the public
-pages **but keep `/tools/` disallowed** - the tool also carries its own `noindex` tag as a backstop.
+Photos keep the JPEG original as a fallback, with WebP copies at 800, 1200 and 1600 px wide served through
+`<picture>`. `picture{display:contents}` in `style.css` keeps layout identical.
 
-## Contact + feedback = Microsoft Forms only
+## Rules
 
-No form on this site writes data anywhere. Enquiry/feedback is handled entirely by Microsoft Forms
-in Ed's own Microsoft tenant (Australian Privacy Principles compliant). Ed creates each form and
-pastes the link into `contact.html` (and anywhere else needed). Patients should not be asked to put
-clinical detail into these forms.
-
-## The pain relief tool - BLOCKING checks before it goes public
-
-The tool is **display-only**: it shows a fixed plan Ed set in advance, selected from a list. It never
-calculates, individualises, or recommends doses, and nothing a patient enters changes what is shown.
-This is deliberate - it keeps the tool inside the TGA carve-out for digitising paper-based clinical
-rules and out of medical-device territory. It is access-gated (code + confirmation) and `noindex`.
-
-**Before the tool is made public, these two checks are Ed's to complete (not the builder's):**
-
-1. Run the TGA's own online **"Is my software regulated?"** self-assessment for the tool.
-2. Send a one-paragraph description to the medical indemnity insurer (Avant / MDA National / MIPS)
-   and get sign-off.
-
-Until both are done, keep the tool behind the gate / off the public site.
-
-## AHPRA guardrails already applied
-
-- Only the title "Specialist Anaesthetist" is used - no "expert / leader / best" language.
-- **No testimonials or reviews anywhere** (prohibited under s133 of the National Law).
-- No guarantees of outcomes, no comparative or misleading claims.
-- All factual claims about Ed (bio, qualifications, services, hospital details) are left as marked
-  placeholders for Ed to confirm - nothing invented.
-
-## What Ed still needs to supply
-
-- [ ] Bio + qualifications text (exact wording / titles he's entitled to use) → `about.html`
-- [ ] Confirm/adjust the services list → `services.html`
-- [ ] Hospital details (addresses/parking) if wanted → `hospitals.html`
-- [ ] Rooms phone + enquiry method → `contact.html` + footers
-- [ ] Microsoft Form link(s) for enquiries/feedback → `contact.html`
-- [ ] Fasting / consent / day-of-surgery PDFs to add to the pre-op hub
-- [ ] The other operation schedules (Week 1-8 series, ibuprofen + pantoprazole variant, etc.) when
-      ready to expand the tool beyond ACL
-
+Clinical wording is only published after Ed's explicit yes. No testimonials, patient stories or outcome claims (AHPRA).
+Plain English, UK spelling, sentence case, no em dashes. Rollback: open the commit on GitHub, then Revert.
