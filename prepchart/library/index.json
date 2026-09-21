@@ -7,7 +7,7 @@
    "id": "sjog",
    "name": "St John of God Subiaco Hospital",
    "subtitle": "HR 605 front chart, HR 810 PRN and regular pages (WA Hospital Medication Chart, short stay)",
-   "file": "hospitals/sjog.prepchart",
+   "file": "sjog.prepchart",
    "author": "Dr Ed Halvey",
    "date": "2026-09-21",
    "verified": "Calibrated on paper by the author (SJOG pages and HPH front); HPH medicine pages measured from the scan: print a test page first"
@@ -16,7 +16,7 @@
    "id": "hph",
    "name": "Hollywood Private Hospital",
    "subtitle": "RHC WA 684 front chart (07/25 stock), NIMC PRN and regular pages",
-   "file": "hospitals/hph.prepchart",
+   "file": "hph.prepchart",
    "author": "Dr Ed Halvey",
    "date": "2026-09-21",
    "verified": "Calibrated on paper by the author (SJOG pages and HPH front); HPH medicine pages measured from the scan: print a test page first"
@@ -28,7 +28,7 @@
    "name": "Caesarean section (SJOG)",
    "category": "Obstetric",
    "subtitle": "5 regular, 6 PRN",
-   "file": "protocols/caesarean-section-sjog.json",
+   "file": "caesarean-section-sjog.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -37,7 +37,7 @@
    "name": "Caesarean section (SJOG) (severe pre-eclampsia)",
    "category": "Obstetric",
    "subtitle": "4 regular, 6 PRN",
-   "file": "protocols/caesarean-section-sjog-severe-pre-eclampsia.json",
+   "file": "caesarean-section-sjog-severe-pre-eclampsia.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -46,7 +46,7 @@
    "name": "ACL reconstruction",
    "category": "Orthopaedic",
    "subtitle": "4 regular, 7 PRN",
-   "file": "protocols/acl-reconstruction.json",
+   "file": "acl-reconstruction.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -55,7 +55,7 @@
    "name": "ACL reconstruction (eGFR under 60)",
    "category": "Orthopaedic",
    "subtitle": "3 regular, 7 PRN",
-   "file": "protocols/acl-reconstruction-egfr-under-60.json",
+   "file": "acl-reconstruction-egfr-under-60.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -64,7 +64,7 @@
    "name": "ACL reconstruction (on ACEi or ARB)",
    "category": "Orthopaedic",
    "subtitle": "4 regular, 7 PRN",
-   "file": "protocols/acl-reconstruction-on-acei-or-arb.json",
+   "file": "acl-reconstruction-on-acei-or-arb.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -73,7 +73,7 @@
    "name": "ACL reconstruction (over 80)",
    "category": "Orthopaedic",
    "subtitle": "4 regular, 7 PRN",
-   "file": "protocols/acl-reconstruction-over-80.json",
+   "file": "acl-reconstruction-over-80.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -82,7 +82,7 @@
    "name": "ACL reconstruction (young, under 70)",
    "category": "Orthopaedic",
    "subtitle": "4 regular, 7 PRN",
-   "file": "protocols/acl-reconstruction-young-under-70.json",
+   "file": "acl-reconstruction-young-under-70.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -91,7 +91,7 @@
    "name": "Arthroscopy (minor)",
    "category": "Orthopaedic",
    "subtitle": "2 regular, 7 PRN",
-   "file": "protocols/arthroscopy-minor.json",
+   "file": "arthroscopy-minor.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -100,7 +100,7 @@
    "name": "Arthroscopy (minor) (eGFR under 60)",
    "category": "Orthopaedic",
    "subtitle": "1 regular, 7 PRN",
-   "file": "protocols/arthroscopy-minor-egfr-under-60.json",
+   "file": "arthroscopy-minor-egfr-under-60.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -109,7 +109,7 @@
    "name": "Arthroscopy (minor) (on ACEi or ARB)",
    "category": "Orthopaedic",
    "subtitle": "2 regular, 7 PRN",
-   "file": "protocols/arthroscopy-minor-on-acei-or-arb.json",
+   "file": "arthroscopy-minor-on-acei-or-arb.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -118,7 +118,7 @@
    "name": "Arthroscopy (minor) (over 80)",
    "category": "Orthopaedic",
    "subtitle": "2 regular, 7 PRN",
-   "file": "protocols/arthroscopy-minor-over-80.json",
+   "file": "arthroscopy-minor-over-80.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -127,7 +127,7 @@
    "name": "Arthroscopy (minor) (young, under 70)",
    "category": "Orthopaedic",
    "subtitle": "2 regular, 7 PRN",
-   "file": "protocols/arthroscopy-minor-young-under-70.json",
+   "file": "arthroscopy-minor-young-under-70.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -136,7 +136,7 @@
    "name": "Total hip replacement",
    "category": "Orthopaedic",
    "subtitle": "13 regular, 7 PRN",
-   "file": "protocols/total-hip-replacement.json",
+   "file": "total-hip-replacement.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -145,7 +145,7 @@
    "name": "Total hip replacement (eGFR under 60)",
    "category": "Orthopaedic",
    "subtitle": "11 regular, 7 PRN",
-   "file": "protocols/total-hip-replacement-egfr-under-60.json",
+   "file": "total-hip-replacement-egfr-under-60.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -154,7 +154,7 @@
    "name": "Total hip replacement (on ACEi or ARB)",
    "category": "Orthopaedic",
    "subtitle": "12 regular, 7 PRN",
-   "file": "protocols/total-hip-replacement-on-acei-or-arb.json",
+   "file": "total-hip-replacement-on-acei-or-arb.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -163,7 +163,7 @@
    "name": "Total hip replacement (over 80)",
    "category": "Orthopaedic",
    "subtitle": "11 regular, 7 PRN",
-   "file": "protocols/total-hip-replacement-over-80.json",
+   "file": "total-hip-replacement-over-80.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -172,7 +172,7 @@
    "name": "Total hip replacement (young, under 70)",
    "category": "Orthopaedic",
    "subtitle": "13 regular, 7 PRN",
-   "file": "protocols/total-hip-replacement-young-under-70.json",
+   "file": "total-hip-replacement-young-under-70.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -181,7 +181,7 @@
    "name": "Total knee replacement",
    "category": "Orthopaedic",
    "subtitle": "13 regular, 7 PRN",
-   "file": "protocols/total-knee-replacement.json",
+   "file": "total-knee-replacement.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -190,7 +190,7 @@
    "name": "Total knee replacement (eGFR under 60)",
    "category": "Orthopaedic",
    "subtitle": "11 regular, 7 PRN",
-   "file": "protocols/total-knee-replacement-egfr-under-60.json",
+   "file": "total-knee-replacement-egfr-under-60.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -199,7 +199,7 @@
    "name": "Total knee replacement (on ACEi or ARB)",
    "category": "Orthopaedic",
    "subtitle": "12 regular, 7 PRN",
-   "file": "protocols/total-knee-replacement-on-acei-or-arb.json",
+   "file": "total-knee-replacement-on-acei-or-arb.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -208,7 +208,7 @@
    "name": "Total knee replacement (over 80)",
    "category": "Orthopaedic",
    "subtitle": "11 regular, 7 PRN",
-   "file": "protocols/total-knee-replacement-over-80.json",
+   "file": "total-knee-replacement-over-80.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   },
@@ -217,7 +217,7 @@
    "name": "Total knee replacement (young, under 70)",
    "category": "Orthopaedic",
    "subtitle": "13 regular, 7 PRN",
-   "file": "protocols/total-knee-replacement-young-under-70.json",
+   "file": "total-knee-replacement-young-under-70.json",
    "author": "Dr Ed Halvey, consultant anaesthetist, Perth",
    "date": "2026-09-21"
   }
