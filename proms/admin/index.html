@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>PROMs</title>
+<style>
+:root{--ink:#1d2a33;--muted:#5c6b75;--line:#d9e0e5;--acc:#0b6e6e;--bg:#f6f8f9;--good:#1d8a4a;--mid:#c98a00;--bad:#c0392b}
+*{box-sizing:border-box}body{margin:0;font:15px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+main{max-width:1000px;margin:0 auto;padding:16px}h1{font-size:22px;margin:4px 0 12px}h2{font-size:17px;margin:22px 0 8px;color:var(--acc)}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+table{width:100%;border-collapse:collapse}th,td{text-align:left;padding:7px 6px;border-bottom:1px solid var(--line);vertical-align:top}th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+tr.row{cursor:pointer}tr.row:hover{background:#f0f5f5}
+.chip{display:inline-block;min-width:44px;text-align:center;padding:3px 7px;border-radius:999px;font-size:13px;font-weight:600;background:#eef1f3;color:var(--muted)}
+.chip.good{background:#e3f4ea;color:var(--good)}.chip.mid{background:#fff3d6;color:var(--mid)}.chip.bad{background:#fbe3e0;color:var(--bad)}.chip.due{background:#e6f2f2;color:var(--acc)}.chip.sent{background:#e8ecf5;color:#3b4f7a}
+button,.btn{border:1px solid var(--line);background:#fff;border-radius:8px;padding:7px 12px;font-size:14px;cursor:pointer;color:var(--ink);text-decoration:none;display:inline-block}
+button.p,.btn.p{background:var(--acc);color:#fff;border-color:var(--acc)}
+input,select,textarea{font:inherit;padding:8px;border:1px solid var(--line);border-radius:8px;width:100%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}label{font-size:12px;color:var(--muted);display:block;margin-bottom:3px}
+.muted{color:var(--muted)}.right{text-align:right}.mono{font-family:ui-monospace,Menlo,monospace;font-size:13px;word-break:break-all}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}.kpi div{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px}.kpi b{font-size:22px;display:block}
+.spark{font-family:ui-monospace,Menlo,monospace;font-size:13px;white-space:pre}
+#detail{position:fixed;inset:0;background:rgba(0,0,0,.35);display:none;overflow:auto;padding:20px}#detail .card{max-width:760px;margin:0 auto}
+.err{color:var(--bad)}.ok{color:var(--good)}.warn{background:#fff3d6;border-color:#f0d48a}
+@media(max-width:600px){td.hide,th.hide{display:none}}
+</style></head><body><main>
+<h1>PROMs <span class="muted" style="font-weight:400;font-size:14px">pilot dashboard · end-to-end encrypted</span></h1>
+<div id="login" class="card">
+  <div class="grid"><div><label>Admin key</label><input id="key" type="password" placeholder="pk_…"></div>
+  <div><label>Private key (proms-key-v1.…)</label><input id="priv" type="password" placeholder="leave blank on first setup"></div></div>
+  <p><button class="p" id="go">Open</button> <span class="err" id="lerr"></span></p>
+</div>
+<div id="setup" class="card warn" style="display:none">
+  <h2 style="margin-top:0">First-time setup: make your key</h2>
+  <p>No public key is on the server yet. Generating a keypair here creates the private key in this browser only; the server receives just the public half. Save the private key in your password manager before you go any further. Lose it and every answer is unreadable for good.</p>
+  <p><button class="p" id="gen">Generate my key</button></p>
+  <div id="genout"></div>
+</div>
+<div id="app" style="display:none">
+<p id="keystate" class="muted"></p>
+<h2>Due to send</h2><div class="card" id="due"></div>
+<h2>Add a patient</h2><div class="card"><div class="grid">
+<div><label>Initials</label><input id="f-initials" placeholder="JS"></div>
+<div><label>Age</label><input id="f-age" type="number"></div>
+<div><label>Sex</label><select id="f-sex"><option value="">–</option><option>F</option><option>M</option></select></div>
+<div><label>Surgery date</label><input id="f-date" type="date"></div>
+<div style="grid-column:span 2"><label>Procedure</label><input id="f-proc" placeholder="Total knee replacement"></div>
+<div><label>Site</label><select id="f-site"><option>HPH</option><option>SJOG Subiaco</option><option>SCGH</option><option>SJOG Midland</option><option>Other</option></select></div>
+<div><label>Anaesthetic</label><input id="f-anaes" placeholder="Spinal + ACB"></div>
+<div><label>Mobile</label><input id="f-mobile" type="tel" placeholder="04…"></div>
+<div style="grid-column:span 2"><label>Notes</label><input id="f-notes"></div>
+<div><label>&nbsp;</label><label style="font-size:14px;color:var(--ink)"><input type="checkbox" id="f-pre" style="width:auto"> include pre-op baseline</label></div>
+</div><p><button class="p" id="add">Add and make link</button> <span id="aerr" class="err"></span></p><div id="added"></div></div>
+<h2>Patients</h2><div class="card" id="list"></div>
+<h2>Cohort</h2><div class="card" id="cohort"></div>
+<p><button id="export">Download CSV</button> <button id="logout">Forget keys on this browser</button></p>
+</div>
+<div id="detail"><div class="card" id="dcard"></div></div>
+</main>
+<script>// Shared sealing code for the PROMs pages. Ephemeral ECDH P-256 + HKDF-SHA256 + AES-256-GCM (ECIES pattern).
+// seal(pubJwk, obj) runs on the patient's phone; open(privJwk, sealed) runs only in the clinician's browser.
+const PROMS_INFO = new TextEncoder().encode("proms-v1");
+const b64e = (u8) => btoa(String.fromCharCode(...u8)).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+const b64d = (s) => Uint8Array.from(atob(s.replace(/-/g, "+").replace(/_/g, "/") + "=".repeat((4 - s.length % 4) % 4)), (c) => c.charCodeAt(0));
+async function promsAesKey(privKey, pubKey) {
+  const bits = await crypto.subtle.deriveBits({ name: "ECDH", public: pubKey }, privKey, 256);
+  const hk = await crypto.subtle.importKey("raw", bits, "HKDF", false, ["deriveKey"]);
+  return crypto.subtle.deriveKey({ name: "HKDF", hash: "SHA-256", salt: new Uint8Array(0), info: PROMS_INFO }, hk, { name: "AES-GCM", length: 256 }, false, ["encrypt", "decrypt"]);
+}
+async function promsSeal(pubJwk, obj) {
+  const pub = await crypto.subtle.importKey("jwk", { kty: "EC", crv: "P-256", x: pubJwk.x, y: pubJwk.y }, { name: "ECDH", namedCurve: "P-256" }, false, []);
+  const eph = await crypto.subtle.generateKey({ name: "ECDH", namedCurve: "P-256" }, true, ["deriveBits"]);
+  const aes = await promsAesKey(eph.privateKey, pub);
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = await crypto.subtle.encrypt({ name: "AES-GCM", iv }, aes, new TextEncoder().encode(JSON.stringify(obj)));
+  const epk = await crypto.subtle.exportKey("jwk", eph.publicKey);
+  return { v: 1, epk: { x: epk.x, y: epk.y }, iv: b64e(iv), ct: b64e(new Uint8Array(ct)) };
+}
+async function promsOpen(privJwk, sealed) {
+  const priv = await crypto.subtle.importKey("jwk", { kty: "EC", crv: "P-256", x: privJwk.x, y: privJwk.y, d: privJwk.d }, { name: "ECDH", namedCurve: "P-256" }, false, ["deriveBits"]);
+  const epk = await crypto.subtle.importKey("jwk", { kty: "EC", crv: "P-256", x: sealed.epk.x, y: sealed.epk.y }, { name: "ECDH", namedCurve: "P-256" }, false, []);
+  const aes = await promsAesKey(priv, epk);
+  const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64d(sealed.iv) }, aes, b64d(sealed.ct));
+  return JSON.parse(new TextDecoder().decode(pt));
+}
+async function promsGenerateKeypair() {
+  const kp = await crypto.subtle.generateKey({ name: "ECDH", namedCurve: "P-256" }, true, ["deriveBits"]);
+  const priv = await crypto.subtle.exportKey("jwk", kp.privateKey);
+  return { pub: { kty: "EC", crv: "P-256", x: priv.x, y: priv.y }, priv: { kty: "EC", crv: "P-256", x: priv.x, y: priv.y, d: priv.d } };
+}
+// Private key as one pasteable string for a password manager.
+const promsEncodePriv = (priv) => "proms-key-v1." + b64e(new TextEncoder().encode(JSON.stringify({ x: priv.x, y: priv.y, d: priv.d })));
+function promsDecodePriv(s) {
+  s = (s || "").trim();
+  if (!s.startsWith("proms-key-v1.")) throw new Error("not a proms key");
+  const j = JSON.parse(new TextDecoder().decode(b64d(s.slice(13))));
+  if (!j.x || !j.y || !j.d) throw new Error("bad key");
+  return { kty: "EC", crv: "P-256", x: j.x, y: j.y, d: j.d };
+}
+</script>
+<script>
+const BASE="https://bbwjroytqxynborrqylr.supabase.co/functions/v1/proms";
+let KEY=null,PRIV=null;try{KEY=localStorage.getItem("proms_key");const p=localStorage.getItem("proms_priv");if(p)PRIV=promsDecodePriv(p)}catch(e){}
+const $=id=>document.getElementById(id);const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+async function api(p,opts={}){const r=await fetch(BASE+"/api/admin/"+p,{...opts,headers:{"content-type":"application/json","x-proms-key":KEY,"x-region":"ap-southeast-2"}});if(r.status===401)throw new Error("unauthorised");return r}
+let D=null,E=[];// E = decrypted episodes
+// ---- scoring (runs here, never on the server) ----
+const SCORE={
+  qor15:a=>{let t=0;for(const k of ["a1","a2","a3","a4","a5","a6","a7","a8","a9","a10","b1","b2","b3","b4","b5"]){if(typeof a[k]!=="number")return null;t+=a[k]}return t},
+  pain:a=>typeof a.move==="number"?a.move:null,
+  ponv:a=>(a.nausea===true?1:0)+(a.vomit===true?1:0),
+  satisfaction:a=>typeof a.sat==="number"?a.sat:null,
+  block:a=>a.numb===true?1:0,
+  ppsp:a=>typeof a.average==="number"?a.average:null};
+function qorClass(s){return s>=118?"good":s>=90?"mid":"bad"}
+function fmt(d){const x=new Date(d+"T00:00:00");return x.toLocaleDateString("en-AU",{day:"2-digit",month:"short"})}
+function smsHref(ep){const link=D.public_base+"?t="+ep.token;const body=(D.sms_template||"{link}").replace("{link}",link);const n=(ep.p.mobile||"").replace(/\s+/g,"");return "sms:"+n+(/iPhone|iPad|Macintosh/.test(navigator.userAgent)?"&":"?")+"body="+encodeURIComponent(body)}
+async function decryptAll(){E=[];let bad=0;for(const e of D.episodes){let p;try{p=await promsOpen(PRIV,e.sealed)}catch(x){bad++;p={initials:"??",procedure:"(cannot decrypt)"}}
+  const rs=[];for(const r of e.responses){try{const o=await promsOpen(PRIV,r.sealed);const scores={};for(const ins in (o.answers||{}))scores[ins]=SCORE[ins]?SCORE[ins](o.answers[ins]):null;rs.push({timepoint:r.timepoint,submitted_at:r.submitted_at,answers:o.answers,scores})}catch(x){bad++;rs.push({timepoint:r.timepoint,submitted_at:r.submitted_at,answers:{},scores:{},broken:true})}}
+  E.push({...e,p,rs})}
+  return bad}
+function render(bad){
+  const tps=D.timepoints,today=D.today;
+  $("keystate").innerHTML=(bad?'<span class="err">'+bad+' record(s) could not be decrypted with this private key.</span> ':'<span class="ok">&#128274; Key check passed: '+E.length+' patient record(s) decrypted in this browser.</span> ')+'<span class="muted">The server holds only ciphertext, tokens and dates.</span>';
+  const due=[];for(const e of E)for(const i of e.invites){if(!i.completed_at&&!i.sent_at&&i.due_on<=today)due.push({e,i})}
+  due.sort((a,b)=>a.i.due_on<b.i.due_on?-1:1);
+  $("due").innerHTML=due.length?'<table><tr><th>Due</th><th>Patient</th><th class="hide">Procedure</th><th>Point</th><th class="right">Send</th></tr>'+due.map(({e,i})=>'<tr><td>'+fmt(i.due_on)+(i.due_on<today?' <span class="muted">('+Math.round((Date.parse(today)-Date.parse(i.due_on))/864e5)+' d ago)</span>':'')+'</td><td><b>'+esc(e.p.initials)+'</b> '+esc(e.p.age||"")+esc(e.p.sex||"")+'</td><td class="hide">'+esc(e.p.procedure)+'</td><td>'+esc(tps.find(t=>t.id===i.timepoint).short)+'</td><td class="right">'+(e.p.mobile?'<a class="btn p" href="'+smsHref(e)+'">Text</a> ':'<span class="muted">no mobile</span> ')+'<button data-sent="'+i.id+'">Mark sent</button></td></tr>').join("")+'</table><p class="muted">Text opens your Messages app with the invite filled in; nothing is sent until you press send there. Mark sent afterwards so it drops off this list.</p>':'<p class="muted">Nothing due today.</p>';
+  $("list").innerHTML=E.length?'<table><tr><th>Date</th><th>Patient</th><th class="hide">Procedure</th>'+tps.filter(t=>t.id!=="pre").map(t=>'<th>'+t.short+'</th>').join("")+'</tr>'+E.map(e=>{
+    const cells=tps.filter(t=>t.id!=="pre").map(t=>{const inv=e.invites.find(i=>i.timepoint===t.id);if(!inv)return'<td></td>';const r=e.rs.find(x=>x.timepoint===t.id);
+      if(inv.completed_at&&r){if(r.broken)return'<td><span class="chip bad">?</span></td>';const s=r.scores;
+        if(s.qor15!=null)return'<td><span class="chip '+qorClass(s.qor15)+'" title="QoR-15">'+s.qor15+'</span>'+(s.pain!=null?' <span class="chip" title="pain on movement">P'+s.pain+'</span>':'')+'</td>';
+        if(s.ppsp!=null)return'<td><span class="chip '+(s.ppsp===0?"good":s.ppsp<=3?"mid":"bad")+'" title="average pain">P'+s.ppsp+'</span></td>';
+        return'<td>'+(s.pain!=null?'<span class="chip '+(s.pain<=3?"good":s.pain<=6?"mid":"bad")+'">P'+s.pain+'</span>':'<span class="chip good">done</span>')+(s.block===1?' <span class="chip bad">numb</span>':'')+'</td>'}
+      if(inv.sent_at)return'<td><span class="chip sent">sent</span></td>';if(inv.due_on<=today)return'<td><span class="chip due">due</span></td>';return'<td><span class="chip">'+fmt(inv.due_on)+'</span></td>'}).join("");
+    return'<tr class="row" data-id="'+e.id+'"><td>'+fmt(e.surgery_date)+'</td><td><b>'+esc(e.p.initials)+'</b> '+esc(e.p.age||"")+esc(e.p.sex||"")+'</td><td class="hide">'+esc(e.p.procedure)+'<div class="muted">'+esc(e.p.anaesthetic||"")+'</div></td>'+cells+'</tr>'}).join("")+'</table><p class="muted">QoR-15: green 118 or more (good recovery), amber 90 to 117, red under 90. P = pain on movement 0 to 10. Tap a row for detail.</p>':'<p class="muted">No patients yet.</p>';
+  document.querySelectorAll("[data-sent]").forEach(b=>b.onclick=async()=>{await api("invite/sent",{method:"POST",body:JSON.stringify({id:b.dataset.sent})});load()});
+  document.querySelectorAll("tr.row").forEach(r=>r.onclick=()=>detail(r.dataset.id));
+  cohort();
+}
+function cohort(){const rows=[];for(const e of E)for(const r of e.rs)for(const ins in r.scores)rows.push({tp:r.timepoint,ins,score:r.scores[ins],a:r.answers[ins]||{}});
+  const g=(tp,ins)=>rows.filter(r=>r.tp===tp&&r.ins===ins&&r.score!=null);const mean=rs=>rs.length?rs.reduce((a,r)=>a+r.score,0)/rs.length:null;const pct=(rs,f)=>rs.length?Math.round(100*rs.filter(f).length/rs.length)+"%":"–";const m=(rs,f)=>rs.length?f(rs):"–";
+  const nInv=E.reduce((a,e)=>a+e.invites.length,0),nDone=E.reduce((a,e)=>a+e.invites.filter(i=>i.completed_at).length,0);
+  const d1q=g("d1","qor15"),d3q=g("d3","qor15");
+  $("cohort").innerHTML='<div class="kpi"><div><b>'+E.length+'</b>patients</div><div><b>'+nDone+'/'+nInv+'</b>questionnaires done</div>'+
+  '<div><b>'+m(d1q,r=>mean(r).toFixed(0))+'</b>QoR-15 day 1 (n='+d1q.length+')</div><div><b>'+m(d3q,r=>mean(r).toFixed(0))+'</b>QoR-15 day 3 (n='+d3q.length+')</div>'+
+  '<div><b>'+pct(d1q,r=>r.score>=118)+'</b>good recovery day 1</div><div><b>'+pct(g("d1","ponv"),r=>r.score>0)+'</b>PONV day 1</div>'+
+  '<div><b>'+m(g("d1","pain"),r=>mean(r).toFixed(1))+'</b>pain on movement day 1</div><div><b>'+pct(g("w6","block"),r=>r.a.numb===true)+'</b>numbness at 6 wk</div>'+
+  '<div><b>'+pct(g("m3","ppsp"),r=>r.a.present===true)+'</b>pain at 3 months</div><div><b>'+m(g("d1","satisfaction"),r=>mean(r).toFixed(1))+'</b>satisfaction /10</div></div>'}
+function detail(id){const e=E.find(x=>x.id===id);const link=D.public_base+"?t="+e.token;const p=e.p;
+  let h='<p class="right"><button id="dclose">Close</button></p><h2 style="margin-top:0">'+esc(p.initials)+' '+esc(p.age||"")+esc(p.sex||"")+' · '+esc(p.procedure)+'</h2><p class="muted">'+fmt(e.surgery_date)+' · '+esc(p.site||"")+'</p>';
+  h+='<p>Link: <span class="mono">'+esc(link)+'</span> <button id="copy">Copy</button></p>';
+  h+='<div class="grid"><div><label>Mobile</label><input id="d-mobile" value="'+esc(p.mobile||"")+'"></div><div><label>Anaesthetic</label><input id="d-anaes" value="'+esc(p.anaesthetic||"")+'"></div><div style="grid-column:span 2"><label>Notes</label><input id="d-notes" value="'+esc(p.notes||"")+'"></div></div><p><button id="dsave">Save</button> <button id="darch" style="float:right;color:var(--bad)">Archive patient</button></p>';
+  h+='<table><tr><th>Point</th><th>Due</th><th>Status</th><th>Answers</th></tr>';
+  for(const inv of e.invites){const tp=D.timepoints.find(t=>t.id===inv.timepoint);const r=e.rs.find(x=>x.timepoint===inv.timepoint);
+    h+='<tr><td>'+esc(tp.short)+'</td><td>'+fmt(inv.due_on)+'</td><td>'+(inv.completed_at?'<span class="chip good">done '+new Date(inv.completed_at).toLocaleDateString("en-AU",{day:"2-digit",month:"short"})+'</span>':inv.sent_at?'<span class="chip sent">sent</span> <button data-unsent="'+inv.id+'">undo</button>':'<span class="chip">waiting</span>')+'</td><td>'+(r?Object.keys(r.answers).map(insId=>{const ins=D.instruments[insId];const s=r.scores[insId];return'<div><b>'+esc(ins.title)+'</b>'+(s!=null?': <span class="chip '+(insId==="qor15"?qorClass(s):"")+'">'+s+(ins.range?' / '+ins.range[1]:'')+'</span>':'')+'<div class="muted" style="font-size:13px">'+ins.items.map(it=>{const v=r.answers[insId][it.id];return esc(it.text)+': <b>'+(v===true?"yes":v===false?"no":esc(v))+'</b>'}).join(" · ")+'</div></div>'}).join(""):(r&&r.broken?'<span class="err">cannot decrypt</span>':''))+'</td></tr>'}
+  h+='</table>';
+  const q=e.rs.filter(r=>r.scores.qor15!=null).map(r=>D.timepoints.find(t=>t.id===r.timepoint).short+" "+r.scores.qor15);if(q.length>1)h+='<p class="spark">QoR-15 trend: '+esc(q.join("  →  "))+'</p>';
+  $("dcard").innerHTML=h;$("detail").style.display="block";
+  $("dclose").onclick=()=>{$("detail").style.display="none"};$("copy").onclick=()=>navigator.clipboard.writeText(link);
+  $("dsave").onclick=async()=>{const np={...p,mobile:$("d-mobile").value,anaesthetic:$("d-anaes").value,notes:$("d-notes").value};const sealed=await promsSeal(D.pubkey,np);await api("episode/update",{method:"POST",body:JSON.stringify({id,sealed})});$("detail").style.display="none";load()};
+  $("darch").onclick=async()=>{if(!confirm("Archive this patient? Their responses are kept but hidden."))return;await api("episode/archive",{method:"POST",body:JSON.stringify({id})});$("detail").style.display="none";load()};
+  document.querySelectorAll("[data-unsent]").forEach(b=>b.onclick=async()=>{await api("invite/unsent",{method:"POST",body:JSON.stringify({id:b.dataset.unsent})});await load();detail(id)});
+}
+async function load(){
+  try{D=await (await api("episodes")).json()}catch(e){$("lerr").textContent=e.message==="unauthorised"?"Admin key not accepted.":"Could not load: "+e.message;$("login").style.display="block";$("app").style.display="none";return}
+  $("login").style.display="none";
+  if(!D.pubkey){$("setup").style.display="block";$("app").style.display="none";return}
+  if(!PRIV){$("login").style.display="block";$("lerr").textContent="Private key needed to read the records.";return}
+  if(PRIV.x!==D.pubkey.x||PRIV.y!==D.pubkey.y){$("login").style.display="block";$("lerr").textContent="This private key does not match the public key on the server.";return}
+  $("setup").style.display="none";$("app").style.display="block";
+  const bad=await decryptAll();render(bad);
+}
+$("go").onclick=()=>{KEY=$("key").value.trim()||KEY;const pv=$("priv").value.trim();$("lerr").textContent="";
+  try{if(pv){PRIV=promsDecodePriv(pv);localStorage.setItem("proms_priv",pv)}localStorage.setItem("proms_key",KEY)}catch(e){$("lerr").textContent="Private key not recognised.";return}
+  load()};
+["key","priv"].forEach(i=>$(i).addEventListener("keydown",e=>{if(e.key==="Enter")$("go").click()}));
+$("logout").onclick=()=>{try{localStorage.removeItem("proms_key");localStorage.removeItem("proms_priv")}catch(e){}location.reload()};
+$("gen").onclick=async()=>{const kp=await promsGenerateKeypair();const enc=promsEncodePriv(kp.priv);
+  const r=await api("pubkey",{method:"POST",body:JSON.stringify({jwk:kp.pub})});const j=await r.json();if(!j.ok){$("genout").innerHTML='<p class="err">'+esc(j.error)+'</p>';return}
+  PRIV=kp.priv;try{localStorage.setItem("proms_priv",enc)}catch(e){}
+  $("genout").innerHTML='<p><b>Your private key. Copy it into your password manager now.</b></p><p class="mono" id="pk">'+esc(enc)+'</p><p><button id="cpk">Copy</button> <button class="p" id="saved">I have saved it, continue</button></p>';
+  $("cpk").onclick=()=>navigator.clipboard.writeText(enc);$("saved").onclick=()=>load()};
+$("add").onclick=async()=>{$("aerr").textContent="";const p={initials:$("f-initials").value.trim().toUpperCase(),age:$("f-age").value?Number($("f-age").value):null,sex:$("f-sex").value,procedure:$("f-proc").value.trim(),site:$("f-site").value,anaesthetic:$("f-anaes").value.trim(),mobile:$("f-mobile").value.trim(),notes:$("f-notes").value.trim()};
+  if(!p.initials||!p.procedure||!$("f-date").value){$("aerr").textContent="Initials, procedure and surgery date are needed.";return}
+  const sealed=await promsSeal(D.pubkey,p);
+  const r=await api("episodes",{method:"POST",body:JSON.stringify({surgery_date:$("f-date").value,sealed,include_pre:$("f-pre").checked})});const j=await r.json();if(!j.ok){$("aerr").textContent=j.error;return}
+  const link=D.public_base+"?t="+j.token;$("added").innerHTML='<p>Added <b>'+esc(p.initials)+'</b>. Link: <span class="mono">'+esc(link)+'</span></p>';["f-initials","f-age","f-proc","f-anaes","f-mobile","f-notes"].forEach(i=>$(i).value="");load()};
+$("export").onclick=()=>{const q=v=>'"'+String(v??"").replace(/"/g,'""')+'"';const rows=["initials,age,sex,procedure,site,anaesthetic,surgery_date,timepoint,instrument,score,answers,submitted_at"];
+  for(const e of E)for(const r of e.rs)for(const ins in r.answers)rows.push([e.p.initials,e.p.age,e.p.sex,e.p.procedure,e.p.site,e.p.anaesthetic,e.surgery_date,r.timepoint,ins,r.scores[ins],JSON.stringify(r.answers[ins]),r.submitted_at].map(q).join(","));
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([rows.join("\n")],{type:"text/csv"}));a.download="proms-export.csv";a.click()};
+if(KEY)load();
+</script></body></html>
