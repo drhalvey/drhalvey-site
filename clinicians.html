@@ -9,6 +9,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/leaflet.css">
+<link rel="preload" href="assets/fonts/source-serif-4-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
 <style>
   .tool{max-width:880px}
   .gate{max-width:420px;margin:8vh auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:30px}
@@ -62,7 +64,23 @@
 <meta property="og:image" content="https://drhalvey.com.au/assets/img/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="lf">
+<a class="lf-skip" href="#main">Skip to content</a>
+<div class="lf-rule"></div>
+<div class="lf-headwrap"><header class="lf-wrap lf-head">
+<a class="lf-brand" href="index.html"><img src="assets/img/wordmark-maroon.png" alt="Dr Ed Halvey" width="168" height="53"><span>Specialist anaesthetist, Perth</span></a>
+<button class="lf-menu" type="button" aria-expanded="false" aria-controls="lfnav">Menu</button>
+<nav class="lf-nav" id="lfnav" aria-label="Main">
+<a href="pre-op-guidance.html">Before surgery</a>
+<a href="day-of-surgery.html">On the day</a>
+<a href="tools/pain-relief.html">After surgery</a>
+<a href="procedures.html">Operations</a>
+<a href="fees.html">Fees</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header></div>
+<div class="lf-headline"></div>
+
 
 <!-- soft PIN gate -->
 <div id="gate" class="gate">
@@ -74,15 +92,22 @@
 </div>
 
 <div id="app" style="display:none">
-<header class="topbar"><nav class="nav"><a class="brand" href="index.html"><span class="logo">EH</span>
-  <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Clinician tools (private)</span></span></a></nav></header>
-
-<section class="block"><div class="wrap tool">
-  <h2 class="sec">Clinician decision tools</h2>
-  <p class="lead">Private decision support. Everything runs in your browser and <b>nothing is saved</b> -
-    no patient data is stored on this site.</p>
-
-  <div class="tabs">
+<section class="lf-hero">
+<img src="assets/img/hero-perth-aerial.jpg" srcset="assets/img/hero-perth-aerial-800.webp 800w, assets/img/hero-perth-aerial-1200.webp 1200w, assets/img/hero-perth-aerial-1600.webp 1600w" sizes="100vw" alt="" fetchpriority="high" style="object-position:center 40%">
+<div class="lf-shade"></div>
+<div class="lf-wrap">
+<h1>Clinician decision tools</h1>
+<p class="lf-lead">Private decision support. Everything runs in your browser and <b>nothing is saved</b> - no patient data is stored on this site.</p>
+<div class="lf-search noprint" role="search">
+<label for="siteq">Search the guides</label>
+<div class="lf-sbox"><input type="search" id="siteq" autocomplete="off" placeholder="For example: when do I stop eating?"><button type="button" onclick="var e=document.getElementById('siteq');e.focus();e.dispatchEvent(new Event('input'));">Search</button>
+<div class="searchres" id="searchres"></div></div>
+</div>
+</div>
+<div class="lf-cap">Perth, Western Australia</div>
+</section>
+<div class="lf-wrap lf-body" id="main"><div class="lf-main lf-wide">
+<div class="tabs">
     <button class="active" data-pane="nsaid">NSAID / Coxib prescribing</button>
     <button data-pane="vte">Aspirin vs rivaroxaban (arthroplasty)</button>
     <button data-pane="ref">Medicine stop-timing</button>
@@ -211,7 +236,8 @@
     <a href="https://doi.org/10.1016/j.bjae.2023.08.001" target="_blank" rel="noopener">BJA Education 2023;23(11):440-447</a>.
     Haslam N, Halvey E, Scott C. Perioperative care of patients undergoing total hip arthroplasty.
     <a href="https://doi.org/10.1016/j.bjae.2024.03.002" target="_blank" rel="noopener">BJA Education 2024;24(6)</a>.</p>
-</div></section>
+</div></div>
+
 </div>
 
 <script>
@@ -335,5 +361,22 @@ orr.addEventListener('input',function(){var t=0;orr.querySelectorAll('input').fo
 
 buildPath();
 </script>
+<footer class="lf-foot">
+<div class="lf-wrap">
+<div class="lf-fgrid">
+<div><img src="assets/img/wordmark-cream.png" alt="Dr Ed Halvey" width="150" height="47">
+<p>Specialist anaesthetist, Perth, Western Australia. Rooms managed by Metropolitan Anaesthesia.</p></div>
+<div><div class="h">Contact the rooms</div><a href="tel:0862676200">(08) 6267 6200</a><br><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a><br><a href="contact.html">Make an enquiry</a></div>
+<div><div class="h">This site</div><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="hospitals.html">Hospitals</a><br><a href="clinical-research.html">Research</a><br><a href="glossary.html">Glossary</a></div>
+</div>
+<p class="lf-legal">The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits.</p>
+<div class="lf-fine"><span>&copy; <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</span><a href="clinicians.html">Clinicians</a></div>
+</div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="assets/search-index.js"></script>
+<script src="assets/answers.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/leaflet.js"></script>
 </body>
 </html>

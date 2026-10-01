@@ -8,6 +8,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/leaflet.css">
+<link rel="preload" href="assets/fonts/source-serif-4-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y67N59R0N"></script>
 <script>
@@ -27,35 +29,41 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Clinical research - Dr Ed Halvey","description":"Anaesthesia, pain medicine and neuroscience publications by Dr Ed Halvey.","url":"https://drhalvey.com.au/clinical-research.html","inLanguage":"en-AU","reviewedBy":{"@type":"Physician","name":"Dr Ed Halvey","medicalSpecialty":"Anaesthesia"}}</script>
 </head>
-<body>
+<body class="lf">
+<a class="lf-skip" href="#main">Skip to content</a>
+<div class="lf-rule"></div>
+<div class="lf-headwrap"><header class="lf-wrap lf-head">
+<a class="lf-brand" href="index.html"><img src="assets/img/wordmark-maroon.png" alt="Dr Ed Halvey" width="168" height="53"><span>Specialist anaesthetist, Perth</span></a>
+<button class="lf-menu" type="button" aria-expanded="false" aria-controls="lfnav">Menu</button>
+<nav class="lf-nav" id="lfnav" aria-label="Main">
+<a href="pre-op-guidance.html">Before surgery</a>
+<a href="day-of-surgery.html">On the day</a>
+<a href="tools/pain-relief.html">After surgery</a>
+<a href="procedures.html">Operations</a>
+<a href="fees.html">Fees</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header></div>
+<div class="lf-headline"></div>
 
-<header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <span class="logo">EH</span>
-      <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
-    </a>
-    <div class="stepnav"><a href="pre-op-guidance.html">Before surgery</a><a href="day-of-surgery.html">Day of surgery</a><a href="tools/pain-relief.html">After surgery</a><a class="clin" href="clinicians.html">Clinician tools</a></div>
-    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <div class="navlinks" id="nav">
-      <a class="navlink" href="medicine-timing.html">My medicines before surgery planner</a>
-      <a class="navlink" href="procedures.html">Procedures</a>
-      <a class="navlink" href="fees.html">Fees</a>
-      <a class="navlink active" href="about.html">About</a>
-      <a class="cta" href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
 
-<section class="block">
-  <div class="wrap guide">
-    <p class="eyebrow">Clinical research</p>
-    <h2 class="sec">Research and publications</h2>
-    <p class="lead">Dr Halvey has published peer-reviewed work in anaesthesia, pain medicine and
-      neuroscience. A full profile is available on
-      <a href="https://www.researchgate.net/profile/Edward-Halvey" target="_blank" rel="noopener">ResearchGate</a>.</p>
-
-    <h3 id="anaesthesia-and-pain-medicine-publications">Anaesthesia and pain medicine publications</h3>
+<section class="lf-hero">
+<img src="assets/img/hero-perth-aerial.jpg" srcset="assets/img/hero-perth-aerial-800.webp 800w, assets/img/hero-perth-aerial-1200.webp 1200w, assets/img/hero-perth-aerial-1600.webp 1600w" sizes="100vw" alt="" fetchpriority="high" style="object-position:center 40%">
+<div class="lf-shade"></div>
+<div class="lf-wrap">
+<p class="lf-crumb">Clinical research</p>
+<h1>Research and publications</h1>
+<p class="lf-lead">Dr Halvey has published peer-reviewed work in anaesthesia, pain medicine and neuroscience. A full profile is available on <a href="https://www.researchgate.net/profile/Edward-Halvey" target="_blank" rel="noopener">ResearchGate</a>.</p>
+<div class="lf-search noprint" role="search">
+<label for="siteq">Search the guides</label>
+<div class="lf-sbox"><input type="search" id="siteq" autocomplete="off" placeholder="For example: when do I stop eating?"><button type="button" onclick="var e=document.getElementById('siteq');e.focus();e.dispatchEvent(new Event('input'));">Search</button>
+<div class="searchres" id="searchres"></div></div>
+</div>
+</div>
+<div class="lf-cap">Perth, Western Australia</div>
+</section>
+<div class="lf-wrap lf-body" id="main"><div class="lf-main lf-wide">
+<h3 id="anaesthesia-and-pain-medicine-publications">Anaesthesia and pain medicine publications</h3>
     <ul>
       <li>Haslam N, Halvey E, Scott C. Perioperative care of patients undergoing total hip arthroplasty. <i>BJA Education</i>. 2024; 24(6). <a href="https://doi.org/10.1016/j.bjae.2024.03.002" target="_blank" rel="noopener">doi:10.1016/j.bjae.2024.03.002</a></li>
       <li>Halvey EJ, Haslam N, Mariano ER. Non-steroidal anti-inflammatory drugs in the perioperative period. <i>BJA Education</i>. 2023; 23(11): 440-447. <a href="https://doi.org/10.1016/j.bjae.2023.08.001" target="_blank" rel="noopener">doi:10.1016/j.bjae.2023.08.001</a></li>
@@ -89,22 +97,25 @@
         <figcaption style="font-size:13px;color:var(--muted);margin-top:6px">Coxib prescribing algorithm (click to enlarge)</figcaption>
       </figure>
     </div>
-  </div>
-</section>
+</div></div>
 
-<footer class="site">
-  <div class="wrap">
-    <div class="fgrid">
-      <div><h4 class="fscript">Dr Ed Halvey</h4><p style="color:#9fb6b3;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p></div>
-      <div><h4>Site</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="hospitals.html">Hospitals</a><a href="procedures.html">Procedures</a><a href="pre-op-guidance.html">Pre-op guidance</a><a href="clinical-research.html">Research</a><a href="contact.html">Contact</a></div>
-      <div><h4>Contact</h4><a href="contact.html">Make an enquiry</a><a href="tel:0862676200">(08) 6267 6200</a><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a></div>
-    </div>
-    <div class="legal">
-      <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
-      <p>© <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</p>
-    </div>
-  </div>
+
+<footer class="lf-foot">
+<div class="lf-wrap">
+<div class="lf-fgrid">
+<div><img src="assets/img/wordmark-cream.png" alt="Dr Ed Halvey" width="150" height="47">
+<p>Specialist anaesthetist, Perth, Western Australia. Rooms managed by Metropolitan Anaesthesia.</p></div>
+<div><div class="h">Contact the rooms</div><a href="tel:0862676200">(08) 6267 6200</a><br><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a><br><a href="contact.html">Make an enquiry</a></div>
+<div><div class="h">This site</div><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="hospitals.html">Hospitals</a><br><a href="clinical-research.html">Research</a><br><a href="glossary.html">Glossary</a></div>
+</div>
+<p class="lf-legal">The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits.</p>
+<div class="lf-fine"><span>&copy; <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</span><a href="clinicians.html">Clinicians</a></div>
+</div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="assets/search-index.js"></script>
+<script src="assets/answers.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/leaflet.js"></script>
 </body>
 </html>

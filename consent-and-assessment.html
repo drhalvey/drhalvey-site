@@ -8,6 +8,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/leaflet.css">
+<link rel="preload" href="assets/fonts/source-serif-4-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y67N59R0N"></script>
 <script>
@@ -27,34 +29,44 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Your anaesthetic assessment & consent - Dr Ed Halvey","description":"What to expect at your anaesthetic assessment, and how consent for anaesthesia works.","url":"https://drhalvey.com.au/consent-and-assessment.html","inLanguage":"en-AU","reviewedBy":{"@type":"Physician","name":"Dr Ed Halvey","medicalSpecialty":"Anaesthesia"}}</script>
 </head>
-<body>
+<body class="lf">
+<a class="lf-skip" href="#main">Skip to content</a>
+<div class="lf-rule"></div>
+<div class="lf-headwrap"><header class="lf-wrap lf-head">
+<a class="lf-brand" href="index.html"><img src="assets/img/wordmark-maroon.png" alt="Dr Ed Halvey" width="168" height="53"><span>Specialist anaesthetist, Perth</span></a>
+<button class="lf-menu" type="button" aria-expanded="false" aria-controls="lfnav">Menu</button>
+<nav class="lf-nav" id="lfnav" aria-label="Main">
+<a href="pre-op-guidance.html" aria-current="page">Before surgery</a>
+<a href="day-of-surgery.html">On the day</a>
+<a href="tools/pain-relief.html">After surgery</a>
+<a href="procedures.html">Operations</a>
+<a href="fees.html">Fees</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header></div>
+<div class="lf-headline"></div>
 
-<header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <span class="logo">EH</span>
-      <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
-    </a>
-    <div class="stepnav"><a class="active" href="pre-op-guidance.html">Before surgery</a><a href="day-of-surgery.html">Day of surgery</a><a href="tools/pain-relief.html">After surgery</a><a class="clin" href="clinicians.html">Clinician tools</a></div>
-    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <div class="navlinks" id="nav">
-      <a class="navlink" href="medicine-timing.html">My medicines before surgery planner</a>
-      <a class="navlink" href="procedures.html">Procedures</a>
-      <a class="navlink" href="fees.html">Fees</a>
-      <a class="navlink" href="about.html">About</a>
-      <a class="cta" href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
 
-<section class="block">
-  <div class="wrap guide">
-    <p class="eyebrow"><a href="pre-op-guidance.html">Pre-op guidance</a> › Assessment &amp; consent</p>
-    <h2 class="sec">Your anaesthetic assessment and consent</h2>
-    <p class="lead">Before your operation you will meet your anaesthetist. This is a chance to check you
-      are well prepared, answer your questions, and agree on the anaesthetic plan together.</p>
-
-    <h3 id="before-the-day-getting-ready">Before the day - getting ready</h3>
+<section class="lf-hero">
+<img src="assets/img/journey-before.jpg" srcset="assets/img/journey-before-800.webp 800w" sizes="100vw" alt="" fetchpriority="high" style="object-position:center 68%">
+<div class="lf-shade"></div>
+<div class="lf-wrap">
+<p class="lf-crumb"><a href="pre-op-guidance.html">Pre-op guidance</a><span aria-hidden="true" style="padding:0 8px">/</span>Assessment &amp; consent</p>
+<h1>Your anaesthetic assessment and consent</h1>
+<p class="lf-lead">Before your operation you will meet your anaesthetist. This is a chance to check you are well prepared, answer your questions, and agree on the anaesthetic plan together.</p>
+<div class="lf-search noprint" role="search">
+<label for="siteq">Search the guides</label>
+<div class="lf-sbox"><input type="search" id="siteq" autocomplete="off" placeholder="For example: when do I stop eating?"><button type="button" onclick="var e=document.getElementById('siteq');e.focus();e.dispatchEvent(new Event('input'));">Search</button>
+<div class="searchres" id="searchres"></div></div>
+</div>
+</div>
+<div class="lf-cap">Perth, Western Australia</div>
+</section>
+<div class="lf-wrap lf-body" id="main"><div class="lf-grid">
+<aside class="lf-aside"><div class="lf-stick"><div class="lf-toch">On this page</div><nav class="lf-toc" data-auto aria-label="On this page"></nav>
+<button type="button" class="lf-print">Print this page</button></div></aside>
+<div class="lf-main">
+<h2 id="before-the-day-getting-ready">Before the day - getting ready</h2>
     <p>Depending on your operation and your health, you may be asked to complete a health questionnaire,
       have some tests (such as blood tests or an ECG), or attend a pre-admission clinic. It helps to
       have ready:</p>
@@ -65,14 +77,14 @@
       <li>Your major medical conditions and any specialists you see</li>
     </ul>
 
-    <h3 id="meeting-your-anaesthetist">Meeting your anaesthetist</h3>
+    <h2 id="meeting-your-anaesthetist">Meeting your anaesthetist</h2>
     <p>On the day, your anaesthetist will review your health, examine you if needed (often your heart,
       lungs and airway), and talk through the plan for keeping you safe and comfortable. They will
       explain the type of anaesthesia suited to your operation - for example a general anaesthetic
       (fully asleep), a regional or spinal anaesthetic (numbing part of the body), sedation, or a
       combination - and how your pain will be managed afterwards.</p>
 
-    <h3 id="risks-and-questions">Risks and questions</h3>
+    <h2 id="risks-and-questions">Risks and questions</h2>
     <p>Every anaesthetic carries some risks. Most people have a smooth anaesthetic, and serious
       problems are uncommon, but your anaesthetist will discuss the risks that are relevant to you and
       your operation. There are no silly questions - it is completely reasonable to ask about anything
@@ -85,29 +97,32 @@
       <li>How might I feel when I wake up, and how long will recovery take?</li>
     </ul>
 
-    <h3 id="consent">Consent to your anaesthetic</h3>
+    <h2 id="consent">Consent to your anaesthetic</h2>
     <p>Consent means agreeing to go ahead with your anaesthetic once you understand what it involves. It
       is a conversation, not just a signature. The aim is for you to make a decision that is right for
       you, with the information and time you need.</p>
     <p>As part of consent, your anaesthetist will usually explain:</p>
-    <ul>
-      <li><b>What is planned</b> - the type of anaesthetic (general, spinal or epidural, sedation, nerve
-        block, or a combination) and why it suits you and your operation.</li>
-      <li><b>What it involves</b> - what will happen as you go off to sleep or are numbed, what you might
-        feel, and what to expect as you wake up.</li>
-      <li><b>The benefits</b> - good pain control, comfort, and safety during your surgery.</li>
-      <li><b>The common side effects</b> - such as nausea, drowsiness, a sore throat or shivering, which
-        are usually short-lived and treatable.</li>
-      <li><b>The risks relevant to you</b> - more serious risks are uncommon and rare, and your
-        anaesthetist will focus on the ones that matter for your health and your operation.</li>
-      <li><b>The alternatives</b> - where there is a reasonable choice (for example a spinal versus a
-        general anaesthetic), so you can weigh them up.</li>
-    </ul>
+    <table class="lf-stack">
+    <thead><tr><th style="width:34%">Topic</th><th>What it covers</th></tr></thead>
+    <tbody>
+    <tr><td><b>What is planned</b></td><td>the type of anaesthetic (general, spinal or epidural, sedation, nerve
+        block, or a combination) and why it suits you and your operation.</td></tr>
+    <tr><td><b>What it involves</b></td><td>what will happen as you go off to sleep or are numbed, what you might
+        feel, and what to expect as you wake up.</td></tr>
+    <tr><td><b>The benefits</b></td><td>good pain control, comfort, and safety during your surgery.</td></tr>
+    <tr><td><b>The common side effects</b></td><td>such as nausea, drowsiness, a sore throat or shivering, which
+        are usually short-lived and treatable.</td></tr>
+    <tr><td><b>The risks relevant to you</b></td><td>more serious risks are uncommon and rare, and your
+        anaesthetist will focus on the ones that matter for your health and your operation.</td></tr>
+    <tr><td><b>The alternatives</b></td><td>where there is a reasonable choice (for example a spinal versus a
+        general anaesthetic), so you can weigh them up.</td></tr>
+    </tbody>
+    </table>
     <p>You can ask as many questions as you like, ask for more information at any time, and you can change
       your mind - including on the day. Nothing will be done without your agreement. If you would prefer a
       family member or interpreter to be involved in the conversation, that can be arranged.</p>
 
-    <h3 id="putting-the-risks-in-perspective">Putting the risks in perspective</h3>
+    <h2 id="putting-the-risks-in-perspective">Putting the risks in perspective</h2>
     <p>It is natural to feel anxious about an anaesthetic. It can help to compare the risks to everyday
       risks we accept without much thought. For a fit and healthy person, the risk of dying as a direct
       result of an anaesthetic is very low - in the order of 1 in 60,000.</p>
@@ -118,20 +133,23 @@
       own risk depends on your health and your operation, which your anaesthetist will talk through with you.
     </div>
 
-    <h3 id="how-likely-is-a-problem">How likely is a problem? A scale of risk</h3>
+    <h2 id="how-likely-is-a-problem">How likely is a problem? A scale of risk</h2>
     <p>Words like "rare" can mean different things to different people, so it helps to put numbers to them.
       The scale below is a rough guide to how often something happens.</p>
-    <ul>
-      <li><b>Very common</b> - 1 in 10 (like one person on a busy bus).</li>
-      <li><b>Common</b> - 1 in 100 (like one person in a large lecture theatre).</li>
-      <li><b>Uncommon</b> - 1 in 1,000 (like one person in a small concert crowd).</li>
-      <li><b>Rare</b> - 1 in 10,000 (like one person in a full sports stadium).</li>
-      <li><b>Very rare</b> - 1 in 100,000 or less (like one person in a large city suburb).</li>
-    </ul>
+    <table class="lf-stack">
+    <thead><tr><th style="width:34%">Word</th><th>How often</th></tr></thead>
+    <tbody>
+    <tr><td><b>Very common</b></td><td>1 in 10 (like one person on a busy bus).</td></tr>
+    <tr><td><b>Common</b></td><td>1 in 100 (like one person in a large lecture theatre).</td></tr>
+    <tr><td><b>Uncommon</b></td><td>1 in 1,000 (like one person in a small concert crowd).</td></tr>
+    <tr><td><b>Rare</b></td><td>1 in 10,000 (like one person in a full sports stadium).</td></tr>
+    <tr><td><b>Very rare</b></td><td>1 in 100,000 or less (like one person in a large city suburb).</td></tr>
+    </tbody>
+    </table>
     <p>Your own risk depends on your health, your age and your operation. Your anaesthetist will focus on
       the risks that actually matter for you.</p>
 
-    <h3 id="side-effects-and-risks-of-a-general-anaesthetic">Side effects and risks of a general anaesthetic</h3>
+    <h2 id="side-effects-and-risks-of-a-general-anaesthetic">Side effects and risks of a general anaesthetic</h2>
     <p><b>Very common and common</b> (most settle quickly and are easily treated):</p>
     <ul>
       <li>Feeling sick or vomiting, and shivering or feeling cold.</li>
@@ -156,7 +174,7 @@
     <p>Some risks are higher if you smoke, are overweight, or have heart, lung, kidney or other health
       problems. Stopping smoking and being as active as you can beforehand both help.</p>
 
-    <h3 id="nerve-blocks-regional-anaesthesia">Nerve blocks (regional anaesthesia)</h3>
+    <h2 id="nerve-blocks-regional-anaesthesia">Nerve blocks (regional anaesthesia)</h2>
     <p>Dr Halvey uses nerve blocks frequently. A nerve block is an injection of local anaesthetic placed
       near the nerves that supply the part of your body being operated on - often using an ultrasound machine
       to guide the needle accurately. It can be used for shoulder, arm, hand, hip, knee, leg, chest and
@@ -173,18 +191,21 @@
       protect it from knocks, heat and pressure, and have your tablets ready for when the block wears off so
       there is no gap in your pain relief.</p>
     <p><b>Risks of nerve blocks:</b></p>
-    <ul>
-      <li><b>Common:</b> temporary numbness, heaviness or weakness; some bruising or soreness at the
-        injection site.</li>
-      <li><b>Uncommon:</b> the block not working fully, so you need extra pain relief or a different technique.</li>
-      <li><b>Rare:</b> temporary nerve irritation, with tingling or numbness that lasts days to a few weeks
-        and then settles; infection or bleeding at the injection site.</li>
-      <li><b>Very rare:</b> longer-lasting or permanent nerve damage (in the order of 1 in 2,000 to 1 in
+    <table class="lf-stack">
+    <thead><tr><th style="width:34%">How often</th><th>Risk</th></tr></thead>
+    <tbody>
+    <tr><td><b>Common</b></td><td>temporary numbness, heaviness or weakness; some bruising or soreness at the
+        injection site.</td></tr>
+    <tr><td><b>Uncommon</b></td><td>the block not working fully, so you need extra pain relief or a different technique.</td></tr>
+    <tr><td><b>Rare</b></td><td>temporary nerve irritation, with tingling or numbness that lasts days to a few weeks
+        and then settles; infection or bleeding at the injection site.</td></tr>
+    <tr><td><b>Very rare</b></td><td>longer-lasting or permanent nerve damage (in the order of 1 in 2,000 to 1 in
         5,000, and often related to the surgery itself rather than the block); local anaesthetic affecting
         the heart or brain if too much reaches the bloodstream, which the team is trained to manage. Blocks
         near the chest or neck can occasionally affect nearby structures and breathing - your anaesthetist
-        will explain if this applies to your block.</li>
-    </ul>
+        will explain if this applies to your block.</td></tr>
+    </tbody>
+    </table>
     <p>Your anaesthetist will talk you through whether a nerve block is right for you and your operation.</p>
 
     <div class="callout info">
@@ -195,24 +216,28 @@
     <p class="printbtn noprint" style="margin-top:26px">
       <button class="btn ghost" onclick="window.print()"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 9V3a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v6"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg> Print this page</button>
     </p>
-  </div>
-</section>
+</div>
+</div></div>
 
-<section class="noprint" style="max-width:1140px;margin:0 auto;padding:0 22px 34px"><div id="pagefb"></div></section>
+
+<section class="noprint lf-wrap" style="padding-bottom:40px"><div id="pagefb"></div></section>
 <script src="assets/feedback.js"></script>
-<footer class="site">
-  <div class="wrap">
-    <div class="fgrid">
-      <div><h4 class="fscript">Dr Ed Halvey</h4><p style="color:#9fb6b3;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p></div>
-      <div><h4>Site</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="hospitals.html">Hospitals</a><a href="procedures.html">Procedures</a><a href="pre-op-guidance.html">Pre-op guidance</a><a href="clinical-research.html">Research</a><a href="fees.html">Fees</a><a href="contact.html">Contact</a></div>
-      <div><h4>Contact</h4><a href="contact.html">Make an enquiry</a><a href="tel:0862676200">(08) 6267 6200</a><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a></div>
-    </div>
-    <div class="legal">
-      <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
-      <p>© <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</p>
-    </div>
-  </div>
+<footer class="lf-foot">
+<div class="lf-wrap">
+<div class="lf-fgrid">
+<div><img src="assets/img/wordmark-cream.png" alt="Dr Ed Halvey" width="150" height="47">
+<p>Specialist anaesthetist, Perth, Western Australia. Rooms managed by Metropolitan Anaesthesia.</p></div>
+<div><div class="h">Contact the rooms</div><a href="tel:0862676200">(08) 6267 6200</a><br><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a><br><a href="contact.html">Make an enquiry</a></div>
+<div><div class="h">This site</div><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="hospitals.html">Hospitals</a><br><a href="clinical-research.html">Research</a><br><a href="glossary.html">Glossary</a></div>
+</div>
+<p class="lf-legal">The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits.</p>
+<div class="lf-fine"><span>&copy; <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</span><a href="clinicians.html">Clinicians</a></div>
+</div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="assets/search-index.js"></script>
+<script src="assets/answers.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/leaflet.js"></script>
 </body>
 </html>

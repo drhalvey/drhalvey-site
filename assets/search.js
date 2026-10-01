@@ -35,6 +35,49 @@
     return best&&best.e;
   }
   function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;');}
+
+  /* AI layer (added 01/10/2026). The AI only PICKS entries from this site's own search index; every word shown
+     to the patient is the site's own text. If the AI is slow, capped or offline, the normal results stay. */
+  var RELAY='https://bbwjroytqxynborrqylr.supabase.co/functions/v1/ai-relay';
+  var TOKEN='ai_89af858d725a4f6b86a4624f487eb26b6a90fe7a0d0e410e815f7f490872396e';
+  var SYS="You rank pages on Dr Ed Halvey's patient information website (anaesthesia, Perth, Western Australia). "+
+    "You get a numbered list of pages and page sections, then a patient's search. Reply with ONLY a JSON array of up to 5 numbers: "+
+    "the entries that best answer the search, best first. Prefer a specific section over a whole page. Understand everyday words, "+
+    "misspellings and brand names (for example 'put to sleep' means general anaesthetic, 'blood thinners' means anticoagulants, "+
+    "'Ozempic' or 'Mounjaro' means GLP-1 medicines, 'nil by mouth' means fasting). Reply [] if nothing in the list is relevant. "+
+    "Never answer the question and never write anything except the array.";
+  var CAT=IDX.map(function(e,i){return i+'|'+e.t+(e.s?' ('+e.s+')':'');}).join('\n');
+  var aiCache={}, aiTimer=null, aiSeq=0, memId=null;
+  function installId(){
+    try{var k='ai.iid',v=localStorage.getItem(k);if(!v){v=(window.crypto&&crypto.randomUUID)?crypto.randomUUID():('x'+Math.random().toString(36).slice(2)+Date.now());localStorage.setItem(k,v);}return v;}
+    catch(e){ if(!memId) memId='m'+Math.random().toString(36).slice(2)+Date.now(); return memId; }
+  }
+  function wantsAI(q){ return q.length>=6 && q.split(/\s+/).filter(Boolean).length>=2; }
+  function aiPick(q){
+    var key=q.toLowerCase();
+    if(aiCache.hasOwnProperty(key)) return Promise.resolve(aiCache[key]);
+    if(!window.fetch) return Promise.resolve(null);
+    var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},9000);
+    return fetch(RELAY,{method:'POST',signal:ctl?ctl.signal:undefined,
+      headers:{'content-type':'application/json','x-app-token':TOKEN,'x-install-id':installId()},
+      body:JSON.stringify({max_tokens:120,temperature:0,messages:[{role:'system',content:SYS},{role:'user',content:'Entries:\n'+CAT+'\n\nSearch: '+q}]})})
+    .then(function(r){return r.ok?r.json():null;})
+    .then(function(d){
+      if(!d) return null;
+      var t=(d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content)||'';
+      var m=t.match(/\[[\d,\s]*\]/); if(!m) return null;
+      var seen={}, ids=JSON.parse(m[0]).filter(function(i){ if(!IDX[i]||seen[IDX[i].u]) return false; seen[IDX[i].u]=1; return true; }).slice(0,5);
+      aiCache[key]=ids; return ids;
+    }).catch(function(){return null;});
+  }
+  function item(e){return '<a class="sr-item" href="'+e.u+'"><span class="sr-t">'+esc(e.t)+'</span>'+(e.s?'<span class="sr-p">'+esc(e.s)+'</span>':'')+'</a>';}
+  (function note(){
+    var box=out.parentNode; if(!box||!box.parentNode||box.parentNode.querySelector('.sr-note')) return;
+    var n=document.createElement('p'); n.className='sr-note';
+    n.textContent="Searches are sent to Google's AI to find the best page. Please don't type names, dates of birth or other personal details.";
+    n.style.cssText='margin:8px 0 0;font-size:13px;line-height:1.4;opacity:.85;color:inherit';
+    box.parentNode.insertBefore(n, box.nextSibling);
+  })();
   function render(){
     var q=input.value.trim();
     if(q.length<2){out.style.display='none';out.innerHTML='';return;}
@@ -48,6 +91,25 @@
     if(!html) html='<a class="sr-item" href="contact.html"><span class="sr-t">No match found</span><span class="sr-p">Try another word, or contact the rooms.</span></a>';
     out.innerHTML=html; out.style.display='block';
     out._ansUrl=ans?ans.u:(r.length&&r[0].s>=70?r[0].e.u:null);
+    clearTimeout(aiTimer); var seq=++aiSeq;
+    if(!wantsAI(q)) return;
+    var cached=aiCache[q.toLowerCase()];
+    var paint=function(ids){
+      if(seq!==aiSeq) return;
+      var pend=out.querySelector('.sr-ai-wait'); if(pend) pend.parentNode.removeChild(pend);
+      if(!ids||!ids.length) return;
+      var shown={}; ids.forEach(function(i){shown[IDX[i].u]=1;});
+      var rest=r.filter(function(x){return !shown[x.e.u];}).slice(0,4);
+      var h='';
+      if(ans) h+='<div class="sr-ans"><span class="tag">Quick answer</span><span class="qt">'+esc(ans.t)+'</span><p>'+esc(ans.a)+'</p><a href="'+ans.u+'">'+esc(ans.x)+' &rarr;</a></div>';
+      h+='<div class="sr-more">Best matches <span style="font-weight:400;text-transform:none;letter-spacing:0">(picked by AI from this site)</span></div>'+ids.map(function(i){return item(IDX[i]);}).join('');
+      if(rest.length) h+='<div class="sr-more">Other results</div>'+rest.map(function(x){return item(x.e);}).join('');
+      out.innerHTML=h; out.style.display='block';
+      out._ansUrl=ans?ans.u:IDX[ids[0]].u;
+    };
+    if(cached!==undefined){ paint(cached); return; }
+    if(!out.querySelector('.sr-ai-wait')) out.insertAdjacentHTML('afterbegin','<div class="sr-more sr-ai-wait">Finding the best pages&hellip;</div>');
+    aiTimer=setTimeout(function(){ aiPick(q).then(paint); },650);
   }
   input.addEventListener('input',render);
   input.addEventListener('keydown',function(ev){ if(ev.key==='Enter'&&out._ansUrl&&out.style.display==='block'){ev.preventDefault();window.location.href=out._ansUrl;} });

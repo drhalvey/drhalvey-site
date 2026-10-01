@@ -8,6 +8,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/leaflet.css">
+<link rel="preload" href="assets/fonts/source-serif-4-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y67N59R0N"></script>
 <script>
@@ -27,44 +29,53 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Anaesthesia for hip replacement - Dr Ed Halvey","description":"Anaesthetic, pain relief and recovery for total hip replacement, including a week-by-week pain medication plan.","url":"https://drhalvey.com.au/hip-replacement.html","inLanguage":"en-AU","reviewedBy":{"@type":"Physician","name":"Dr Ed Halvey","medicalSpecialty":"Anaesthesia"}}</script>
 </head>
-<body>
-
-<header class="topbar">
-  <nav class="nav">
-    <a class="brand" href="index.html">
-      <span class="logo">EH</span>
-      <span><span class="bname">Dr Ed Halvey</span><br><span class="brole">Specialist Anaesthetist · Perth, WA</span></span>
-    </a>
-    <div class="stepnav"><a href="pre-op-guidance.html">Before surgery</a><a href="day-of-surgery.html">Day of surgery</a><a href="tools/pain-relief.html">After surgery</a><a class="clin" href="clinicians.html">Clinician tools</a></div>
-    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <div class="navlinks" id="nav">
-      <a class="navlink" href="medicine-timing.html">My medicines before surgery planner</a>
-      <a class="navlink active" href="procedures.html">Procedures</a>
-      <a class="navlink" href="fees.html">Fees</a>
-      <a class="navlink" href="about.html">About</a>
-      <a class="cta" href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<section class="block">
-  <div class="wrap guide">
-    <p class="eyebrow"><a href="procedures.html">Procedures</a> › Hip replacement</p>
-    <h2 class="sec">Anaesthesia for hip replacement</h2>
-    <p class="lead">This page covers what to expect before, during and after a total hip replacement: your
-      anaesthetic plan, pain relief, a week-by-week pain medication timeline, and the common risks. Your
-      own plan is agreed with you before surgery.</p>
-<div class="animembed noprint" style="margin:24px 0 30px"><h3 style="margin:0 0 4px">Watch: your hip replacement journey</h3><p style="font-size:14.5px;color:#5b4d49;margin:0 0 12px">A calm walk-through of the day of your hip replacement. Press play to start.</p><iframe src="animations/hip-replacement-journey.html" title="Watch: your hip replacement journey" loading="lazy" style="width:100%;aspect-ratio:16/9;border:1px solid #e7dcd2;border-radius:6px;background:#0a0a0a;display:block"></iframe></div>
+<body class="lf">
+<a class="lf-skip" href="#main">Skip to content</a>
+<div class="lf-rule"></div>
+<div class="lf-headwrap"><header class="lf-wrap lf-head">
+<a class="lf-brand" href="index.html"><img src="assets/img/wordmark-maroon.png" alt="Dr Ed Halvey" width="168" height="53"><span>Specialist anaesthetist, Perth</span></a>
+<button class="lf-menu" type="button" aria-expanded="false" aria-controls="lfnav">Menu</button>
+<nav class="lf-nav" id="lfnav" aria-label="Main">
+<a href="pre-op-guidance.html">Before surgery</a>
+<a href="day-of-surgery.html">On the day</a>
+<a href="tools/pain-relief.html">After surgery</a>
+<a href="procedures.html" aria-current="page">Operations</a>
+<a href="fees.html">Fees</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header></div>
+<div class="lf-headline"></div>
 
 
-    <h3 id="before-surgery">Before surgery</h3>
-    <p><b>Fasting</b></p>
-    <ul>
-      <li>No food for 6 hours before your hospital admission time.</li>
-      <li>You may drink clear fluids (water, black tea/coffee without milk, clear apple juice) until 2 hours
-        before.</li>
-    </ul>
-    <p><b>Carbohydrate drinks before surgery</b></p>
+<section class="lf-hero">
+<img src="assets/img/journey-before.jpg" srcset="assets/img/journey-before-800.webp 800w" sizes="100vw" alt="" fetchpriority="high" style="object-position:center 68%">
+<div class="lf-shade"></div>
+<div class="lf-wrap">
+<p class="lf-crumb"><a href="procedures.html">Procedures</a><span aria-hidden="true" style="padding:0 8px">/</span>Hip replacement</p>
+<h1>Anaesthesia for hip replacement</h1>
+<p class="lf-lead">This page covers what to expect before, during and after a total hip replacement: your anaesthetic plan, pain relief, a week-by-week pain medication timeline, and the common risks. Your own plan is agreed with you before surgery.</p>
+<div class="lf-search noprint" role="search">
+<label for="siteq">Search the guides</label>
+<div class="lf-sbox"><input type="search" id="siteq" autocomplete="off" placeholder="For example: when do I stop eating?"><button type="button" onclick="var e=document.getElementById('siteq');e.focus();e.dispatchEvent(new Event('input'));">Search</button>
+<div class="searchres" id="searchres"></div></div>
+</div>
+</div>
+<div class="lf-cap">Perth, Western Australia</div>
+</section>
+<div class="lf-wrap lf-body" id="main"><div class="lf-grid">
+<aside class="lf-aside"><div class="lf-stick"><div class="lf-toch">On this page</div><nav class="lf-toc" data-auto aria-label="On this page"></nav>
+<button type="button" class="lf-print">Print this page</button></div></aside>
+<div class="lf-main">
+<h2 id="watch">Watch your journey</h2>
+<div class="lf-video"><video src="assets/video/hip-replacement.mp4" poster="assets/video/hip-replacement-poster.jpg" controls autoplay muted playsinline preload="metadata" aria-label="Your hip replacement: what happens on the day, step by step"></video></div>
+<p class="lf-small">Starts by itself, with no sound. Drag the bar under the video to move back or forward.</p>
+
+
+
+    <h2 id="before-surgery">Before surgery</h2>
+    <p>Fasting and medicines work the same way as for any operation. Open each one to work it out here, without leaving the page.</p>
+    <div class="lf-prep"></div>
+    <h3>Carbohydrate drinks before surgery</h3>
     <p>If you have been given carbohydrate drinks (e.g. DEX), you can take them up to 2 hours before
       anaesthesia. Some patients are given carbohydrate drinks (for example DEX drinks) by their surgeon's
       rooms to take before surgery. These are safe to take when used as instructed.</p>
@@ -76,61 +87,26 @@
       <li>If you have diabetes or were given different instructions, follow those instead.</li>
       <li>If unsure, follow the fasting instructions above or contact the anaesthetic rooms.</li>
     </ul>
-    <p>More information: see our <a href="fasting.html">fasting guidance</a>.</p>
-    <p><b>Medications</b></p>
-    <ul>
-      <li>Most regular medications can be taken as usual.</li>
-      <li>Patients with diabetes or on blood thinners may need changes - these will be discussed
-        individually.</li>
-    </ul>
-    <p><b>Blood thinners</b></p>
-    <ul>
-      <li>Except for aspirin, all blood thinners (Warfarin, Eliquis, Xarelto, Pradaxa, Plavix) need to be
-        stopped before surgery - usually 3-7 days depending on the drug.</li>
-      <li>Fish oil and turmeric should also be stopped.</li>
-    </ul>
-    <p><b>Diabetes medicines</b></p>
-    <ul>
-      <li>Do not take diabetes tablets on the day of surgery.</li>
-      <li>Some medicines (Jardiance, Forxiga, Xigduo, etc.) need to be stopped 3 days before.</li>
-      <li>Insulin doses will need to be adjusted.</li>
-    </ul>
-    <p>Please see our <a href="medicines-before-surgery.html">medicines before surgery</a> page for more
-      information, and the <a href="medicine-timing.html">medicine timing tool</a> for when to take or stop
-      individual medicines.</p>
-    <p><b>Pre-operative consultation</b></p>
+    <h3>Pre-operative consultation</h3>
     <p>You may be contacted by the pre-op nursing team or a peri-operative physician. I may also contact you
       before surgery to discuss your plan and answer questions.</p>
 
-    <h3 id="i-take-ozempic-wegovy-mounjaro-trulicity-or-simila">I take Ozempic, Wegovy, Mounjaro, Trulicity or similar medications - what should I do?</h3>
-    <p>If you are taking Ozempic, Wegovy, Mounjaro, Trulicity or similar medications before surgery, you
-      will need to follow special fasting rules.</p>
-    <ul>
-      <li>24-6 hours before admission: clear fluids only.</li>
-      <li>6-2 hours before: water only (max 200 ml per hr).</li>
-      <li>2 hours before: nothing by mouth.</li>
-    </ul>
-    <p>Clear fluids include water, black tea/coffee (no milk), clear apple juice, electrolyte drinks, or
-      clear broth. Avoid milk, smoothies, protein shakes, creamy soups, or juices with pulp. If you did not
-      follow these instructions, please tell me - your surgery may be delayed or modified. Some conditions
-      (e.g. gastroparesis, Parkinson's, bowel problems) may also slow stomach emptying, even with correct
-      fasting. Please let me know.</p>
-    <p>For full guidance, see our <a href="medicines-before-surgery.html">medicines before surgery</a>
-      page.</p>
-
-    <h3 id="anaesthetic-plan">Anaesthetic plan</h3>
+    <h2 id="anaesthetic-plan">Anaesthetic plan</h2>
     <p>Your anaesthetic will usually be a combination of a general anaesthetic and local anaesthetic to
       provide both safety and comfort. This often includes:</p>
-    <ol>
-      <li><b>Spinal injection</b> - a single injection in the lower back to numb your legs.</li>
-      <li><b>General anaesthetic (or deep sedation)</b> - you'll be fully asleep or very deeply sedated
-        during surgery.</li>
-      <li><b>Local anaesthetic infiltration</b> - your surgeon will inject local anaesthetic around the
-        operation site to help reduce pain.</li>
-    </ol>
+    <table class="lf-stack">
+    <thead><tr><th style="width:34%">Part</th><th>What it involves</th></tr></thead>
+    <tbody>
+    <tr><td><b>Spinal injection</b></td><td>A single injection in the lower back to numb your legs.</td></tr>
+    <tr><td><b>General anaesthetic (or deep sedation)</b></td><td>You'll be fully asleep or very deeply sedated
+        during surgery.</td></tr>
+    <tr><td><b>Local anaesthetic infiltration</b></td><td>Your surgeon will inject local anaesthetic around the
+        operation site to help reduce pain.</td></tr>
+    </tbody>
+    </table>
     <p>This approach ensures effective pain relief after surgery, supported by pain tablets as needed.</p>
 
-    <h3 id="after-surgery">After surgery</h3>
+    <h2 id="after-surgery">After surgery</h2>
     <p>Your comfort will be reviewed daily by the Acute Pain Service team, who can adjust your medications
       if needed. Common medications may include:</p>
     <ul>
@@ -142,15 +118,7 @@
         "top-ups".</li>
     </ul>
 
-    <h3 id="pain-medications">Pain medications</h3>
-    <p>You will usually go home with:</p>
-    <ul>
-      <li>Paracetamol (about 100 tablets).</li>
-      <li>Celecoxib (about 42 tablets).</li>
-      <li>Tapentadol SR (about 56 tablets) or Targin.</li>
-      <li>Tapentadol IR (about 40 tablets for breakthrough pain).</li>
-      <li>Oxycodone (20 tablets for breakthrough pain).</li>
-    </ul>
+    <h2 id="pain-medications">Pain medications</h2>
     <p>It is recommended you book in with your GP at about 4 weeks after discharge so that you can receive
       further scripts as required. Ideally you should not require any SR (sustained/slow release) pain
       killers after 6 weeks and almost certainly beyond 3 months.</p>
@@ -161,32 +129,16 @@
       surgery, though this does gradually improve. Below is a typical pain plan; you can also explore it
       with the <a href="tools/pain-relief.html">pain relief tool</a>.</p>
 
-    <h3 id="pain-medication-timeline">Pain medication timeline</h3>
-    <p><b>Week 1-2</b></p>
-    <ul>
-      <li>Regular Paracetamol and Celecoxib.</li>
-      <li>Tapentadol (or Targin) sustained release (SR) twice daily.</li>
-      <li>Tapentadol (or oxycodone) immediate release (IR) as needed for extra pain, especially after
-        physiotherapy.</li>
-    </ul>
-    <p><b>Week 3-4</b></p>
-    <ul>
-      <li>Gradual reduction in Tapentadol (or Targin) sustained release (SR).</li>
-      <li>Continue Paracetamol and Celecoxib.</li>
-      <li>Use Tapentadol (or oxycodone) immediate release (IR) only if required.</li>
-    </ul>
-    <p><b>Week 5-6</b></p>
-    <ul>
-      <li>Aim to reduce Tapentadol (or Targin) sustained release (SR) to night-time only, then stop.</li>
-      <li>Use Tapentadol (or oxycodone) immediate release (IR) occasionally if needed.</li>
-      <li>Goal is to stop all strong opioid pain medicines by week 6.</li>
-      <li>If pain is ongoing, consult your GP or surgeon.</li>
-    </ul>
-    <p><b>Week 7 and beyond</b></p>
-    <ul>
-      <li>Opioids should be stopped as soon as your pain allows, ideally within 6 weeks and always by 3
-        months, to avoid long-term problems such as dependence or chronic pain.</li>
-    </ul>
+    <h2 id="pain-medication-timeline">Pain medication timeline</h2>
+    <table class="lf-wk" data-from="0,14,28,42">
+    <thead><tr><th>Time after surgery</th><th>What usually happens</th></tr></thead>
+    <tbody>
+    <tr><td>Weeks 1 and 2</td><td>Regular Paracetamol and Celecoxib. Tapentadol (or Targin) sustained release (SR) twice daily. Tapentadol (or oxycodone) immediate release (IR) as needed for extra pain, especially after physiotherapy.</td></tr>
+    <tr><td>Weeks 3 and 4</td><td>Gradual reduction in Tapentadol (or Targin) sustained release (SR). Continue Paracetamol and Celecoxib. Use Tapentadol (or oxycodone) immediate release (IR) only if required.</td></tr>
+    <tr><td>Weeks 5 and 6</td><td>Aim to reduce Tapentadol (or Targin) sustained release (SR) to night-time only, then stop. Use Tapentadol (or oxycodone) immediate release (IR) occasionally if needed. Goal is to stop all strong opioid pain medicines by week 6. If pain is ongoing, consult your GP or surgeon.</td></tr>
+    <tr><td>Week 7 onwards</td><td>Opioids should be stopped as soon as your pain allows, ideally within 6 weeks and always by 3 months, to avoid long-term problems such as dependence or chronic pain.</td></tr>
+    </tbody>
+    </table>
     <div class="callout info">
       You can work through this week-by-week schedule with the
       <a href="tools/pain-relief.html">pain relief tool</a>, or see the
@@ -194,7 +146,7 @@
       given to you by your team.
     </div>
 
-    <h3 id="celecoxib-after-joint-replacement">Celecoxib after joint replacement</h3>
+    <h2 id="celecoxib-after-joint-replacement">Celecoxib after joint replacement</h2>
     <p>Using celecoxib (Celebrex) for a few weeks after your hip or knee replacement is a common part of
       pain management. In appropriately selected patients, it has been shown to be safe with a very low risk
       of serious side effects.</p>
@@ -217,7 +169,7 @@
         wound-related).</li>
     </ul>
 
-    <h3 id="waterworks-passing-urine">Waterworks (passing urine)</h3>
+    <h2 id="waterworks-passing-urine">Waterworks (passing urine)</h2>
     <ul>
       <li>After surgery, numbness may make it difficult to feel when your bladder is full.</li>
       <li>This usually returns to normal within hours.</li>
@@ -226,7 +178,7 @@
         temporarily.</li>
     </ul>
 
-    <h3 id="sleep">Sleep</h3>
+    <h2 id="sleep">Sleep</h2>
     <p>Sleep disturbance is common after hip replacement and may last for weeks. Adequate night-time pain
       relief is important, and problems may involve difficulty falling asleep or staying asleep. Options
       that may help include:</p>
@@ -246,7 +198,7 @@
       causes of disturbed sleep, such as poorly controlled pain and autonomic overactivity, rather than
       just circadian timing.</p>
 
-    <h3 id="anaesthetic-risks">Anaesthetic risks</h3>
+    <h2 id="anaesthetic-risks">Anaesthetic risks</h2>
     <p>Anaesthesia is very safe, but like any medical procedure, risks can occur.</p>
     <ul>
       <li><b>Common (5-25%):</b> Nausea, sore throat, dizziness, urinary difficulty, sleep disturbance.</li>
@@ -262,25 +214,29 @@
       Questions before your surgery? <a href="contact.html">Contact the rooms</a> on (08) 6267 6200. In an
       emergency call 000.
     </div>
-  </div>
-</section>
+</div>
+</div></div>
 
 
-<section class="noprint" style="max-width:1140px;margin:0 auto;padding:0 22px 34px"><div id="pagefb"></div></section>
+
+<section class="noprint lf-wrap" style="padding-bottom:40px"><div id="pagefb"></div></section>
 <script src="assets/feedback.js"></script>
-<footer class="site">
-  <div class="wrap">
-    <div class="fgrid">
-      <div><h4 class="fscript">Dr Ed Halvey</h4><p style="color:#9fb6b3;font-size:14px;max-width:34ch">Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p></div>
-      <div><h4>Site</h4><a href="about.html">About</a><a href="services.html">Services</a><a href="procedures.html">Procedures</a><a href="pre-op-guidance.html">Pre-op guidance</a><a href="clinical-research.html">Research</a><a href="fees.html">Fees</a><a href="contact.html">Contact</a></div>
-      <div><h4>Contact</h4><a href="contact.html">Make an enquiry</a><a href="tel:0862676200">(08) 6267 6200</a><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a></div>
-    </div>
-    <div class="legal">
-      <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
-      <p>© <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</p>
-    </div>
-  </div>
+<footer class="lf-foot">
+<div class="lf-wrap">
+<div class="lf-fgrid">
+<div><img src="assets/img/wordmark-cream.png" alt="Dr Ed Halvey" width="150" height="47">
+<p>Specialist anaesthetist, Perth, Western Australia. Rooms managed by Metropolitan Anaesthesia.</p></div>
+<div><div class="h">Contact the rooms</div><a href="tel:0862676200">(08) 6267 6200</a><br><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a><br><a href="contact.html">Make an enquiry</a></div>
+<div><div class="h">This site</div><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="hospitals.html">Hospitals</a><br><a href="clinical-research.html">Research</a><br><a href="glossary.html">Glossary</a></div>
+</div>
+<p class="lf-legal">The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits.</p>
+<div class="lf-fine"><span>&copy; <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</span><a href="clinicians.html">Clinicians</a></div>
+</div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="assets/search-index.js"></script>
+<script src="assets/answers.js"></script>
+<script src="assets/search.js"></script>
+<script src="assets/leaflet.js"></script>
 </body>
 </html>

@@ -8,6 +8,8 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="assets/leaflet.css">
+<link rel="preload" href="assets/fonts/source-serif-4-latin-opsz.woff2" as="font" type="font/woff2" crossorigin>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Y67N59R0N"></script>
 <script>
@@ -27,123 +29,86 @@
 <meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"MedicalWebPage","name":"Preparing for surgery - Dr Ed Halvey","description":"Pre-operative guidance from Dr Ed Halvey: fasting, preparation, and recovery pain relief plans.","url":"https://drhalvey.com.au/pre-op-guidance.html","inLanguage":"en-AU","reviewedBy":{"@type":"Physician","name":"Dr Ed Halvey","medicalSpecialty":"Anaesthesia"}}</script>
 </head>
-<body>
-<header class="topbar">
-  <nav class="v2nav">
-    <a class="wm" href="index.html"><img src="assets/img/wordmark-maroon.png" alt="Dr Ed Halvey"><span>Specialist Anaesthetist<br>Perth, WA</span></a>
-    <button class="navtoggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
-    <div class="links" id="nav">
-      <a href="pre-op-guidance.html" class="on">Before surgery</a>
-      <a href="day-of-surgery.html">Day of surgery</a>
-      <a href="tools/pain-relief.html">After surgery</a>
-      <a href="procedures.html">Procedures</a>
-      <a href="fees.html">Fees</a>
-      <a class="cta" href="contact.html">Contact</a>
-    </div>
-  </nav>
-</header>
-
-<section class="hero2 short">
-  <picture><source type="image/webp" srcset="assets/img/journey-before-800.webp 800w" sizes="100vw"><img fetchpriority="high" class="media" src="assets/img/journey-before.jpg" alt="Person resting on a bench under a tree by the Swan River"></picture>
-  <div class="wash" aria-hidden="true"></div>
-  <div class="g12">
-    <div class="copy">
-      <p class="eyebrow2">Step 1 of 3</p>
-      <h1>Before surgery</h1>
-      <p class="lead2">Clear, practical guidance for the days before your procedure. Always follow the specific instructions Dr Halvey, your surgeon, or the hospital give you. These may differ from the general information here.</p>
-      <div class="ask">
-        <div class="sitesearch">
-          <span class="mag"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:-0.125em"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
-          <input type="text" id="siteq" autocomplete="off" placeholder="Search for a topic, e.g. sleep, fasting, nausea">
-          <div class="searchres" id="searchres"></div>
-        </div>
-      </div>
-    </div>
-    <div class="cap">Perth, Western Australia</div>
-  </div>
+<body class="lf">
+<a class="lf-skip" href="#main">Skip to content</a>
+<div class="lf-rule"></div>
+<div class="lf-headwrap"><header class="lf-wrap lf-head">
+<a class="lf-brand" href="index.html"><img src="assets/img/wordmark-maroon.png" alt="Dr Ed Halvey" width="168" height="53"><span>Specialist anaesthetist, Perth</span></a>
+<button class="lf-menu" type="button" aria-expanded="false" aria-controls="lfnav">Menu</button>
+<nav class="lf-nav" id="lfnav" aria-label="Main">
+<a href="pre-op-guidance.html" aria-current="page">Before surgery</a>
+<a href="day-of-surgery.html">On the day</a>
+<a href="tools/pain-relief.html">After surgery</a>
+<a href="procedures.html">Operations</a>
+<a href="fees.html">Fees</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header></div>
+<div class="lf-headline"></div>
+<section class="lf-hero">
+<img src="assets/img/journey-before.jpg" srcset="assets/img/journey-before-800.webp 800w" sizes="100vw" alt="" fetchpriority="high" style="object-position:center 68%">
+<div class="lf-shade"></div>
+<div class="lf-wrap">
+<p class="lf-crumb"><a href="index.html">Home</a><span aria-hidden="true" style="padding:0 8px">/</span>Before surgery</p>
+<h1>Before surgery</h1>
+<p class="lf-lead">Clear, practical guidance for the days before your procedure. Always follow the specific instructions Dr Halvey, your surgeon, or the hospital give you. These may differ from the general information here.</p>
+<div class="lf-search noprint" role="search">
+<label for="siteq">Search the guides</label>
+<div class="lf-sbox"><input type="search" id="siteq" autocomplete="off" placeholder="For example: when do I stop eating?"><button type="button" onclick="var e=document.getElementById('siteq');e.focus();e.dispatchEvent(new Event('input'));">Search</button>
+<div class="searchres" id="searchres"></div></div>
+</div>
+</div>
+<div class="lf-cap">Perth, Western Australia</div>
 </section>
 
-<section class="hub2">
-  <div class="g12">
-    <div class="ttl">
-      <p class="eyebrow2">Pre-op guidance</p>
-      <h2 class="h-display">Eight short guides</h2>
-    </div>
-    <p class="lead2 intro">Start with fasting and medicines. They are the two things patients most often ring about.</p>
-  </div>
-  <div class="g12" style="padding-bottom:96px">
-    <div class="hubgrid">
-      <div class="linklist">
-        <a href="fasting.html"><span>Fasting before surgery<small>When to stop eating and drinking before your operation.</small></span><span class="arr">→</span></a>
-        <a href="medicines-before-surgery.html"><span>Medicines before surgery<small>How your usual medicines, blood thinners, diabetes medicines and insulin may need adjusting.</small></span><span class="arr">→</span></a>
-        <a href="glp1-before-surgery.html"><span>GLP-1 medications<small>Ozempic, Wegovy, Mounjaro and similar: a special fasting plan to follow before surgery.</small></span><span class="arr">→</span></a>
-        <a href="medicine-timing.html"><span>Medicine timing planner<small>Enter your surgery date and medicines for a printable guide to your last doses.</small></span><span class="arr">→</span></a>
-      </div>
-      <div class="linklist">
-        <a href="consent-and-assessment.html"><span>Assessment and consent<small>What to expect when you meet your anaesthetist, and how consent works.</small></span><span class="arr">→</span></a>
-        <a href="day-of-surgery.html"><span>On the day<small>What to bring, what to wear, and how to prepare for the day of surgery.</small></span><span class="arr">→</span></a>
-        <a href="arrival-time.html"><span>What time to arrive<small>When to come to hospital and what happens when you get there.</small></span><span class="arr">→</span></a>
-        <a href="glossary.html"><span>Glossary of terms<small>Plain-language explanations of common anaesthetic and surgical words.</small></span><span class="arr">→</span></a>
-      </div>
-    </div>
-  </div>
+<main id="main">
+<section class="lf-wrap lf-sec" style="padding-top:64px">
+<h2 class="lf-h2">Eight short guides</h2>
+<p style="margin:0 0 32px;color:var(--lf-muted);max-width:40em">Start with fasting and medicines. They are the two things patients most often ring about.</p>
+<div class="lf-two" style="gap:0 56px">
+<div>
+<a class="lf-gl" href="fasting.html"><b>Fasting before surgery</b><span>When to stop eating and drinking before your operation.</span></a>
+<a class="lf-gl" href="medicines-before-surgery.html"><b>Medicines before surgery</b><span>How your usual medicines, blood thinners, diabetes medicines and insulin may need adjusting.</span></a>
+<a class="lf-gl" href="glp1-before-surgery.html"><b>GLP-1 medications</b><span>Ozempic, Wegovy, Mounjaro and similar: a special fasting plan to follow before surgery.</span></a>
+<a class="lf-gl" href="medicine-timing.html"><b>Medicine timing planner</b><span>Enter your surgery date and medicines for a printable guide to your last doses.</span></a>
+</div>
+<div>
+<a class="lf-gl" href="consent-and-assessment.html"><b>Assessment and consent</b><span>What to expect when you meet your anaesthetist, and how consent works.</span></a>
+<a class="lf-gl" href="day-of-surgery.html"><b>On the day</b><span>What to bring, what to wear, and how to prepare for the day of surgery.</span></a>
+<a class="lf-gl" href="arrival-time.html"><b>What time to arrive</b><span>When to come to hospital and what happens when you get there.</span></a>
+<a class="lf-gl" href="glossary.html"><b>Glossary of terms</b><span>Plain-language explanations of common anaesthetic and surgical words.</span></a>
+</div>
+</div>
 </section>
-
-<section class="about2" id="recovery">
-  <div class="g12">
-    <div class="who">
-      <p class="eyebrow2">Recovery</p>
-      <h2>Your pain relief plan</h2>
-      <p class="lead2">If Dr Halvey has given you a pain relief plan for your operation, you can view it online. Each plan is set in advance for a specific operation. The tool simply shows you the plan, it does not work anything out for you.</p>
-      <div class="row"><a class="btn primary" href="tools/pain-relief.html">Open my pain relief plan</a></div>
-    </div>
-    <div class="fees">
-      <p class="eyebrow2">Please note</p>
-      <p class="big">This is for patients Dr Halvey has given a plan to.</p>
-      <p class="lead2" style="font-size:16px">The plans include strong pain medicines that are not suitable for everyone. You will need the access code provided with your plan, and you should only follow the plan your anaesthetist has confirmed is yours.</p>
-    </div>
-  </div>
-</section>
-
-<section class="pager2">
-  <div class="g12">
-    <a class="prev" href="index.html"><small>Home</small><b>Back to the start</b></a>
-    <a class="next" href="day-of-surgery.html"><small>Next step</small><b>Day of surgery →</b></a>
-  </div>
-</section>
-<section class="noprint" style="max-width:1280px;margin:0 auto;padding:0 32px 40px"><div id="pagefb"></div></section>
+<section class="lf-band2" id="recovery"><div class="lf-wrap lf-sec" style="padding-top:72px;padding-bottom:72px">
+<div class="lf-two" style="gap:56px;align-items:start">
+<div><h2 class="lf-h2">Your pain relief plan</h2>
+<p style="color:var(--lf-ink2)">If Dr Halvey has given you a pain relief plan for your operation, you can view it online. Each plan is set in advance for a specific operation. The tool simply shows you the plan, it does not work anything out for you.</p>
+<a class="lf-btn" href="tools/pain-relief.html">Open my pain relief plan</a></div>
+<div class="lf-box" style="margin:0"><b style="display:block;font-size:18px;margin-bottom:6px">This is for patients Dr Halvey has given a plan to.</b>
+<p style="margin:0;font-size:16px">The plans include strong pain medicines that are not suitable for everyone. You will need the access code provided with your plan, and you should only follow the plan your anaesthetist has confirmed is yours.</p></div>
+</div>
+</div></section>
+<div class="lf-wrap"><nav class="lf-pn" aria-label="Previous and next" style="margin:48px 0 48px"><a href="index.html"><span>Home</span><strong>Back to the start</strong></a><a href="day-of-surgery.html"><span>Next step</span><strong>Day of surgery</strong></a></nav></div>
+</main>
+<section class="noprint lf-wrap" style="padding-bottom:40px"><div id="pagefb"></div></section>
 <script src="assets/feedback.js"></script>
-<footer class="site foot2">
-  <div class="g12">
-    <div class="brandcol">
-      <img src="assets/img/wordmark-cream.png" alt="Dr Ed Halvey">
-      <p>Specialist Anaesthetist, Perth, Western Australia. Patient information and pre-operative guidance.</p>
-    </div>
-    <div class="col a">
-      <h4>Site</h4>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="procedures.html">Procedures</a>
-      <a href="hospitals.html">Hospitals</a>
-      <a href="pre-op-guidance.html">Pre-op guidance</a>
-      <a href="clinical-research.html">Research</a>
-      <a href="clinicians.html">Clinician tools</a>
-    </div>
-    <div class="col b">
-      <h4>Contact</h4>
-      <a href="contact.html">Make an enquiry</a>
-      <a href="tel:0862676200">(08) 6267 6200</a>
-      <a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a>
-    </div>
-    <div class="legal2">
-      <p>The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits; no personally identifying information is collected by us.</p>
-      <p>© <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</p>
-    </div>
-  </div>
+<footer class="lf-foot">
+<div class="lf-wrap">
+<div class="lf-fgrid">
+<div><img src="assets/img/wordmark-cream.png" alt="Dr Ed Halvey" width="150" height="47">
+<p>Specialist anaesthetist, Perth, Western Australia. Rooms managed by Metropolitan Anaesthesia.</p></div>
+<div><div class="h">Contact the rooms</div><a href="tel:0862676200">(08) 6267 6200</a><br><a href="mailto:rooms@metroanaes.com.au">rooms@metroanaes.com.au</a><br><a href="contact.html">Make an enquiry</a></div>
+<div><div class="h">This site</div><a href="about.html">About</a><br><a href="services.html">Services</a><br><a href="hospitals.html">Hospitals</a><br><a href="clinical-research.html">Research</a><br><a href="glossary.html">Glossary</a></div>
+</div>
+<p class="lf-legal">The information on this website is general in nature and is provided for education only. It is not a substitute for individual medical advice. Always follow the specific instructions given to you by Dr Halvey, your surgeon, or the hospital. In an emergency call 000. This site uses Google Analytics to count visits.</p>
+<div class="lf-fine"><span>&copy; <span id="yr"></span> Dr Ed Halvey. All rights reserved. The content of this site, including its tools and pain relief plans, may not be copied or reproduced without permission.</span><a href="clinicians.html">Clinicians</a></div>
+</div>
 </footer>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 <script src="assets/search-index.js"></script>
 <script src="assets/answers.js"></script>
 <script src="assets/search.js"></script>
+<script src="assets/leaflet.js"></script>
 </body>
 </html>
