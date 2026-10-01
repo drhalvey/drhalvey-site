@@ -271,12 +271,25 @@
     }).catch(function(){return null;});
   }
 
+  /* questions the guides could not answer: kept for 90 days without numbers, emails or the page visitor's details,
+     so Dr Halvey can see what the site is missing. Insert-only; nobody can read the list from the browser. */
+  var MISS_URL='https://bbwjroytqxynborrqylr.supabase.co/rest/v1/site_search_misses', MISS_KEY='sb_publishable_dus7fMPGahp6zXlVV3v3Uw_V8UMXlP2', missSent={};
+  function logMiss(kind,q){
+    try{
+      var clean=q.split(/\s+/).filter(function(w){return !/[0-9@]/.test(w);}).join(' ').replace(/[<>]/g,'').trim().slice(0,200);
+      if(clean.length<4||clean.split(' ').length<2||missSent[clean.toLowerCase()]) return;
+      missSent[clean.toLowerCase()]=1;
+      fetch(MISS_URL,{method:'POST',keepalive:true,headers:{'content-type':'application/json','apikey':MISS_KEY,'Prefer':'return=minimal'},
+        body:JSON.stringify({kind:kind,q:clean,page:(location.pathname.split('/').pop()||'index.html').slice(0,80)})}).catch(function(){});
+    }catch(e){}
+  }
+
   /* ---------- panel ---------- */
   var box=input.closest?input.closest('.lf-sbox')||input.parentNode:input.parentNode;
   (function note(){
     var wrap=box.parentNode; if(!wrap||wrap.querySelector('.sr-note')) return;
     var n=document.createElement('p'); n.className='sr-note';
-    n.textContent="Questions are sent to Google's AI to find the answer in these guides. Please don't type names, dates of birth or other personal details.";
+    n.textContent="Questions are sent to Google's AI to find the answer in these guides. Questions the guides cannot answer are kept for 90 days, without numbers or contact details, to improve the site. Please don't type names, dates of birth or other personal details.";
     wrap.insertBefore(n, box.nextSibling);
   })();
   out.classList.add('sr-panel'); out.setAttribute('role','region'); out.setAttribute('aria-label','Search results');
@@ -367,6 +380,7 @@
     var qs=elAns.querySelector('.sr-qs'); if(!qs) return;
     if(!got||!got.length){
       qs.innerHTML='';
+      if(got) logMiss('no_answer',q);
       if(!elAns.querySelector('.sr-tool')){ clearAnswer(); paintList(q,lastIds,''); if(got) elHead.innerHTML='<span>The guides do not answer this directly. These pages are the closest. If you are unsure, <a href="contact.html">contact the rooms</a>.</span>'; }
       return;
     }
@@ -384,7 +398,7 @@
     paintList(q,base,'');
     if(!base.length){                     /* nothing found by the instant search: let the AI look through the whole catalogue */
       paintList(q,[], 'wait'); elHead.innerHTML='<span class="sr-ai sr-busy">Looking through every guide&hellip;</span>';
-      aiPick(q).then(function(ids){ if(seq!==aiSeq||input.value.trim()!==q) return; paintList(q,ids||[],ids&&ids.length?'ai':''); if(ids&&ids.length&&isQuestion(q)) runQuotes(q,ids,seq); });
+      aiPick(q).then(function(ids){ if(seq!==aiSeq||input.value.trim()!==q) return; if(ids&&!ids.length) logMiss('no_results',q); paintList(q,ids||[],ids&&ids.length?'ai':''); if(ids&&ids.length&&isQuestion(q)) runQuotes(q,ids,seq); });
       return;
     }
     if(wantQ) runQuotes(q,base,seq);
