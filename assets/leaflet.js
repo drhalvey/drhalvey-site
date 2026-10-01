@@ -102,20 +102,22 @@
   }
 
   /* fasting bands calculator */
-  function fastingHTML() {
-    var d = nid('fd'), t = nid('ft');
-    var opts = ''; for (var m = 5 * 60; m <= 20 * 60 + 45; m += 15) { var hh = Math.floor(m / 60), mm = m % 60; opts += '<option value="' + pad(hh) + ':' + pad(mm) + '"' + (hh === 7 && mm === 0 ? ' selected' : '') + '>' + (hh % 12 || 12) + ':' + pad(mm) + (hh < 12 ? ' am' : ' pm') + '</option>'; }
+  function fastingHTML(pre) {
+    var d = nid('fd'), t = nid('ft'); pre = pre || {};
+    var sel = pre.time === undefined ? '07:00' : pre.time;   /* null means: make the patient choose */
+    var opts = sel ? '' : '<option value="" selected>Choose your arrival time</option>';
+    for (var m = 5 * 60; m <= 20 * 60 + 45; m += 15) { var hh = Math.floor(m / 60), mm = m % 60, v = pad(hh) + ':' + pad(mm); opts += '<option value="' + v + '"' + (v === sel ? ' selected' : '') + '>' + (hh % 12 || 12) + ':' + pad(mm) + (hh < 12 ? ' am' : ' pm') + '</option>'; }
     return '<div class="lf-two"><div class="lf-field"><label for="' + d + '">Date you arrive at hospital</label><input type="date" id="' + d + '" data-f="date"></div>' +
       '<div class="lf-field"><label for="' + t + '">Time you arrive</label><select id="' + t + '" data-f="time">' + opts + '</select></div></div>' +
       '<p class="lf-small" style="margin:8px 0 0">Use the arrival time on your hospital letter, not the time of the operation.</p>' +
       '<div class="lf-bands" aria-live="polite" data-f="out"></div>' +
       '<p class="lf-small" style="margin:14px 0 0">A clear fluid is one you can see through. This is a general guide using the standard 6-hour and 2-hour rules; your hospital\'s times come first.</p>';
   }
-  function wireFasting(root) {
+  function wireFasting(root, pre) {
     var di = $('[data-f="date"]', root), ti = $('[data-f="time"]', root), out = $('[data-f="out"]', root);
-    var tm = new Date(today.getTime() + DAY); di.value = iso(tm);
+    var tm = new Date(today.getTime() + DAY); di.value = (pre && parseIso(pre.date)) ? pre.date : iso(tm);
     function draw() {
-      var d = parseIso(di.value); if (!d) { out.innerHTML = ''; return; }
+      var d = parseIso(di.value); if (!d || !ti.value) { out.innerHTML = ''; return; }
       var tp = ti.value.split(':'); var arrive = new Date(d.getFullYear(), d.getMonth(), d.getDate(), +tp[0], +tp[1]);
       var food = new Date(arrive.getTime() - 6 * 3600000), fluid = new Date(arrive.getTime() - 2 * 3600000);
       function band(cls, when, day, head, sub, ok) {
@@ -161,9 +163,9 @@
       '<div style="margin-top:14px" aria-live="polite" data-m="out"><p class="lf-small">Start typing a medicine name or brand.</p></div>' +
       '<p class="lf-small" style="margin:10px 0 0">A general guide. Always follow the times your hospital gives you. <a href="medicine-timing.html">Full medicine planner and printable list</a></p>';
   }
-  function wireMeds(root) {
+  function wireMeds(root, pre) {
     var qi = $('[data-m="q"]', root), di = $('[data-m="date"]', root), out = $('[data-m="out"]', root);
-    di.value = opDate; opListeners.push(function (v) { if (di.value !== v) di.value = v; draw(); });
+    di.value = (pre && parseIso(pre.date)) ? pre.date : opDate; if (pre && pre.q) qi.value = pre.q; opListeners.push(function (v) { if (di.value !== v) di.value = v; draw(); });
     function draw() {
       var ql = qi.value.trim().toLowerCase();
       if (ql.length < 2) { out.innerHTML = '<p class="lf-small">Start typing a medicine name or brand.</p>'; return; }
@@ -181,6 +183,7 @@
       });
     }
     qi.addEventListener('input', draw); di.addEventListener('change', function () { setOpDate(di.value); });
+    if (pre && pre.q) draw();
   }
 
   var GLP1 = '<p style="margin:0 0 12px">If you take Ozempic, Wegovy, Mounjaro, Trulicity or a similar medicine, you need special fasting rules.</p>' +
@@ -200,8 +203,15 @@
   });
   $$('.lf-fasting').forEach(function (el) { el.innerHTML = '<div data-tool="fasting">' + fastingHTML() + '</div>'; });
   $$('.lf-medsmini').forEach(function (el) { el.innerHTML = '<div data-tool="meds">' + medsHTML() + '</div>'; });
-  $$('[data-tool="fasting"]').forEach(wireFasting);
-  $$('[data-tool="meds"]').forEach(wireMeds);
+  $$('[data-tool="fasting"]').forEach(function (el) { wireFasting(el); });
+  $$('[data-tool="meds"]').forEach(function (el) { wireMeds(el); });
+  /* the site search opens these tools inside its answer card, filled in from the patient's question */
+  window.DRH_TOOLS = {
+    fasting: function (el, pre) { el.innerHTML = '<div data-tool="fasting">' + fastingHTML(pre) + '</div>'; wireFasting(el.firstChild, pre); },
+    meds: function (el, pre) { el.innerHTML = '<div data-tool="meds">' + medsHTML() + '</div>'; wireMeds(el.firstChild, pre); },
+    glp1: function (el) { el.innerHTML = GLP1; },
+    findMeds: function (cb) { loadMeds(cb); }
+  };
   wireAcc(document);
 
   /* dated week-by-week plan: <table class="lf-wk" data-from="0,14,28,42"> */

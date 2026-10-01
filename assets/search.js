@@ -11,7 +11,11 @@
   var STOP={i:1,im:1,me:1,my:1,a:1,an:1,the:1,is:1,are:1,am:1,do:1,does:1,did:1,to:1,of:1,in:1,on:1,at:1,it:1,be:1,and:1,or:1,
     for:1,can:1,you:1,your:1,how:1,what:1,when:1,why:1,which:1,will:1,would:1,should:1,could:1,have:1,has:1,
     get:1,go:1,there:1,this:1,that:1,with:1,about:1,need:1,much:1,many:1,any:1,if:1,so:1,dr:1,doctor:1,please:1,
-    surgery:1,operation:1,op:1,procedure:1,hospital:1};
+    surgery:1,operation:1,op:1,procedure:1,hospital:1,having:1,had:1,tomorrow:1,today:1,tonight:1,morning:1,afternoon:1,evening:1,night:1,
+    am:1,pm:1,oclock:1,monday:1,tuesday:1,wednesday:1,thursday:1,friday:1,saturday:1,sunday:1,mon:1,tue:1,wed:1,thu:1,fri:1,sat:1,sun:1,
+    jan:1,feb:1,mar:1,apr:1,jun:1,jul:1,aug:1,sep:1,sept:1,oct:1,nov:1,dec:1,january:1,february:1,march:1,april:1,june:1,july:1,august:1,
+    september:1,october:1,november:1,december:1,booked:1,going:1,told:1,been:1,asked:1,was:1,were:1,just:1,still:1,ok:1,okay:1,allowed:1,
+    supposed:1,next:1,happens:1,happen:1,happening:1,feel:1,feels:1,feeling:1,like:1,mean:1,means:1,know:1,want:1,worried:1,worry:1,normal:1,expect:1,week:1,day:1,at:1,by:1,from:1,up:1,until:1,till:1,im:1,ive:1,dont:1,not:1,but:1,also:1,then:1,than:1};
   /* everyday words to the words the site uses */
   var SYN={
     ozempic:'glp-1 glp1 semaglutide',wegovy:'glp-1 glp1',mounjaro:'glp-1 glp1 tirzepatide',trulicity:'glp-1 glp1',saxenda:'glp-1 glp1',
@@ -34,7 +38,7 @@
     cost:'fees',price:'fees',fee:'fees',pay:'fees',gap:'fees gap',bill:'fees',insurance:'fees health fund',fund:'fees health fund',
     awake:'sedation awake spinal',asleep:'general anaesthetic',sleep:'sleep',unconscious:'general anaesthetic',
     ga:'general anaesthetic',numb:'nerve block numb',block:'nerve block',catheter:'catheter',
-    drive:'driving drive',driving:'drive',alcohol:'alcohol',arrive:'arrival time',arrival:'arrival time',time:'time',
+    drive:'driving drive',driving:'drive',alcohol:'alcohol',arrive:'arrival time',arrival:'arrival time',
     painkillers:'pain relief',pain:'pain relief',endone:'oxycodone',oxy:'oxycodone',celebrex:'celecoxib',
     knee:'knee',tkr:'knee replacement',hip:'hip',thr:'hip replacement',acl:'acl',scope:'arthroscopy',hernia:'hernia',bowel:'bowel',
     port:'infusaport',portacath:'infusaport',stitch:'cerclage',piles:'haemorrhoidectomy',hemorrhoids:'haemorrhoidectomy',
@@ -62,9 +66,9 @@
     return (best&&bd<=(tk.length>=8?2:1))?best:tk;
   }
   function terms(q){
-    var raw=words(q.replace(/c[\s-]section/ig,'csection').replace(/fish oil/ig,'fishoil')), out=[];
+    var raw=words(q.replace(/\b(get|be|arrive|come) (to|at|in(to)?) (the )?hospital\b/ig,'arrival').replace(/c[\s-]section/ig,'csection').replace(/fish oil/ig,'fishoil')), out=[];
     raw.forEach(function(tk){
-      if(STOP[tk]||tk.length<2) return;
+      if(STOP[tk]||tk.length<2||/^\d+(am|pm|st|nd|rd|th)?$/.test(tk)) return;
       tk=fixSpelling(tk);
       var g={main:tk,alts:[]};
       if(SYN[tk]) g.alts=words(SYN[tk]).filter(function(a){return a!==tk;});
@@ -147,27 +151,150 @@
     }).catch(function(){return null;});
   }
 
+
+  /* ---------- direct answers (01/10/2026) ----------
+     The answer card is built from two things only: the site's own tools (fasting times, medicine
+     planner, GLP-1 table) filled in from the question, and sentences quoted word for word from the
+     pages, chosen by the AI. The AI never writes text that reaches the patient. */
+  var DAYN=['sun','mon','tue','wed','thu','fri','sat'], MON=['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+  function p2(n){return (n<10?'0':'')+n;}
+  function isoD(d){return d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate());}
+  function niceD(d){return ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][d.getDay()]+' '+d.getDate()+' '+['January','February','March','April','May','June','July','August','September','October','November','December'][d.getMonth()];}
+  function niceT(t){var h=+t.split(':')[0],m=t.split(':')[1];return (h%12||12)+':'+m+(h<12?' am':' pm');}
+  function parseWhen(q){
+    var s=' '+q.toLowerCase().replace(/[,?!]/g,' ')+' ', now=new Date(); now.setHours(0,0,0,0);
+    var d=null, m;
+    if(/\bday after tomorrow\b/.test(s)) d=new Date(now.getTime()+2*864e5);
+    else if(/\b(tomorrow|tmrw|tmw|tomoz|tomorow|tommorow|tommorrow)\b/.test(s)) d=new Date(now.getTime()+864e5);
+    else if(/\b(today|tonight|this morning|this afternoon)\b/.test(s)) d=new Date(now);
+    if(!d && (m=s.match(/\b(\d{1,2})(?:st|nd|rd|th)?(?: of)? (jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\b/))) d=new Date(now.getFullYear(),MON.indexOf(m[2]),+m[1]);
+    if(!d && (m=s.match(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]* (\d{1,2})(?:st|nd|rd|th)?\b/))) d=new Date(now.getFullYear(),MON.indexOf(m[1]),+m[2]);
+    if(!d && (m=s.match(/\b(\d{1,2})\/(\d{1,2})(?:\/(\d{2,4}))?\b/))) d=new Date(m[3]?(+m[3]<100?2000+ +m[3]:+m[3]):now.getFullYear(),+m[2]-1,+m[1]);
+    if(!d && (m=s.match(/\b(sun|mon|tue|tues|wed|thu|thur|thurs|fri|sat)(?:day|nesday|rsday|urday)?\b/))){ var w=DAYN.indexOf(m[1].slice(0,3)); var add=(w-now.getDay()+7)%7; d=new Date(now.getTime()+add*864e5); }
+    if(d && !isNaN(d) && d<now && (now-d)>30*864e5) d.setFullYear(d.getFullYear()+1);
+    if(d && (isNaN(d)||d<now)) d=null;
+    var t=null;
+    if((m=s.match(/\b(\d{1,2})(?:[:.](\d{2}))?\s*(am|pm|a\.m\.|p\.m\.)/))){ var h=+m[1]%12+(/^p/.test(m[3])?12:0); t=p2(h)+':'+(m[2]||'00'); }
+    else if((m=s.match(/\b([01]?\d|2[0-3])[:.]([0-5]\d)\b/))) t=p2(+m[1])+':'+m[2];
+    else if(/\b(noon|midday|12 noon)\b/.test(s)) t='12:00';
+    else if((m=s.match(/\bat (\d{1,2})\b(?! (?:days?|weeks?|hours?))/))){ var hh=+m[1]; if(hh>=1&&hh<=12){ hh=hh<7?hh+12:hh; t=p2(hh)+':00'; } }
+    var arrive=/\b(arriv\w*|admission|admitted|admit|check(?:ing)? in|get to (?:the )?hospital|be at (?:the )?hospital|come in|told to come|booked in for)\b/.test(s);
+    return {date:d?isoD(d):null, dateObj:d, time:t, arrival:!!(t&&arrive)};
+  }
+  function roundTime(t){ var a=t.split(':'), mins=+a[0]*60+ +a[1]; mins=Math.round(mins/15)*15; if(mins<300||mins>20*60+45) return null; return p2(Math.floor(mins/60))+':'+p2(mins%60); }
+  var RX_FAST=/\b(eat|eating|ate|food|fast|fasting|starv\w*|hungry|thirsty|drink|drinking|water|coffee|tea|milk|juice|breakfast|lunch|dinner|supper|meal|snack|nil by mouth|nbm|chew|gum|lolly|lollies|lollie)\b/;
+  var RX_GLP=/\b(ozempic|wegovy|mounjaro|trulicity|saxenda|rybelsus|semaglutide|tirzepatide|dulaglutide|liraglutide|glp ?-?1|weight loss injection)\b/;
+  var RX_MEDS=/\b(tablets?|medicines?|medications?|pills?|meds|injections?|inhalers?|puffers?)\b/;
+  var medWords=null;
+  function prepMeds(){ if(medWords||!window.DRH_TOOLS) return; medWords={}; window.DRH_TOOLS.findMeds(function(md){ (md.meds||[]).forEach(function(x){ [x[0]].concat(x[1]).forEach(function(n){ n=String(n).toLowerCase(); if(n.length>=4) medWords[n]=1; }); }); }); }
+  function findMedWord(q){
+    if(!medWords) return null; var ws=q.toLowerCase().replace(/[^a-z0-9 -]/g,' ').split(/\s+/);
+    for(var i=0;i<ws.length;i++){ if(ws[i].length>=4&&medWords[ws[i]]) return ws[i]; }
+    for(i=0;i<ws.length-1;i++){ var two=ws[i]+' '+ws[i+1]; if(medWords[two]) return two; }
+    return null;
+  }
+  function intents(q){
+    var s=q.toLowerCase(), out={};
+    if(RX_GLP.test(s)) out.glp1=1;
+    var mw=findMedWord(q); if(mw&&!out.glp1) out.meds=mw; else if(!out.glp1&&RX_MEDS.test(s)&&!RX_FAST.test(s)) out.meds='';
+    if(RX_FAST.test(s)&&!out.glp1) out.fasting=1;
+    return out;
+  }
+
+  /* section text from the pages, split into sentences, for the AI to quote from */
+  var pageCache={};
+  function getPage(p){
+    if(!pageCache[p]) pageCache[p]=fetch(p).then(function(r){return r.ok?r.text():'';}).then(function(h){ return new DOMParser().parseFromString(h,'text/html'); }).catch(function(){return null;});
+    return pageCache[p];
+  }
+  function splitSent(t){
+    t=t.replace(/\s+/g,' ').trim(); if(!t) return [];
+    var parts=t.match(/[^.!?]+(?:[.!?]+["'’”)]*|$)/g)||[t], out=[], buf='';
+    parts.forEach(function(x){ buf+=x; if(buf.trim().length>=20){ out.push(buf.trim()); buf=''; } });
+    if(buf.trim()) out.push(buf.trim());
+    return out;
+  }
+  function sectionSentences(doc,e){
+    var main=doc.querySelector('.lf-main')||doc.querySelector('main')||doc.body; if(!main) return [];
+    var id=e.u.split('#')[1], start=id?doc.getElementById(id):null, lvl=start?+start.tagName.charAt(1):2, h2seen=0;
+    var lead=!id&&doc.querySelector('.lf-lead'), out=[];
+    if(lead) splitSent(lead.textContent).forEach(function(x){out.push(x);});
+    var tw=doc.createTreeWalker(main,NodeFilter.SHOW_ELEMENT,null,false), n, on=!start;
+    while((n=tw.nextNode())){
+      if(n===start){on=true;continue;}
+      if(!on) continue;
+      var tg=n.tagName;
+      if(/^H[1-6]$/.test(tg)){ var l=+tg.charAt(1); if(start&&l<=lvl) break; if(!start&&tg==='H2'&&++h2seen>1) break; continue; }
+      if(n.closest('script,style,noscript,form,.lf-prep,.lf-fasting,.lf-medsmini,nav,.lf-aside,.lf-video')) continue;
+      var txt='';
+      if(tg==='TR'){ txt=Array.prototype.map.call(n.children,function(c){return c.textContent.replace(/\s+/g,' ').trim();}).filter(Boolean).join(': '); if(txt&&!/[.!?]$/.test(txt)) txt+='.'; }
+      else if(/^(P|LI|DD|DT|BLOCKQUOTE)$/.test(tg) && !n.querySelector('p,li,tr') && !n.closest('tr')) txt=n.textContent;
+      if(txt&&tg==='TR'){ txt=txt.replace(/\s+/g,' ').trim(); if(txt.length>12) out.push(txt.length>450?txt.slice(0,txt.lastIndexOf(' ',440))+'…':txt); }   /* a table row stays whole, so a rule never loses the medicine it belongs to */
+      else if(txt) splitSent(txt).forEach(function(x){ if(x.length>12) out.push(x); });
+      if(out.length>=14) break;
+    }
+    return out;
+  }
+  var QSYS="You find answers on Dr Ed Halvey's patient information website (anaesthesia, Perth, Western Australia). "+
+    "You are given numbered sentences copied from the website, then a patient's question. Choose up to 3 sentence numbers that, read together, most directly answer the question, best first. "+
+    "Prefer sentences that state the actual rule, time or instruction over introductions or general statements. Do not choose sentences about a different medicine, operation or situation from the one asked about (for example caesarean or labour sentences for a general question). If the question is general, prefer sentences from general pages. "+
+    "Reply with ONLY a JSON array of numbers, for example [4,9]. Reply [] if no sentence answers the question. Never write anything else.";
+  var quoteCache={};
+  function aiQuote(q,cands){
+    var key=q.toLowerCase().replace(/\s+/g,' ').trim();
+    if(quoteCache.hasOwnProperty(key)) return Promise.resolve(quoteCache[key]);
+    var pages={}; cands.forEach(function(i){pages[IDX[i].p]=1;});
+    return Promise.all(Object.keys(pages).map(function(p){return getPage(p).then(function(d){return [p,d];});})).then(function(docs){
+      var dm={}; docs.forEach(function(x){dm[x[0]]=x[1];});
+      var list=[], seen={}, len=0;
+      cands.forEach(function(i){
+        var d=dm[IDX[i].p]; if(!d) return;
+        var ss=sectionSentences(d,IDX[i]);
+        ss.forEach(function(t,k){ if(seen[t]||len>9000) return; seen[t]=1;
+          /* a sentence that leans on the one before it ("They can usually be treated.") carries that one with it */
+          if(k>0&&/^(they|this|these|it|that|those|both|either|its)\b/i.test(t)) t=ss[k-1]+' '+t;
+          len+=t.length; list.push({t:t,i:i}); });
+      });
+      if(!list.length) return [];
+      var body=list.map(function(x,n){return n+'| ['+IDX[x.i].t+'] '+x.t;}).join('\n');
+      var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},11000);
+      return fetch(RELAY,{method:'POST',signal:ctl?ctl.signal:undefined,
+        headers:{'content-type':'application/json','x-app-token':TOKEN,'x-install-id':installId()},
+        body:JSON.stringify({max_tokens:80,temperature:0,messages:[{role:'system',content:QSYS},{role:'user',content:'Sentences:\n'+body+'\n\nPatient question: '+q}]})})
+      .then(function(r){return r.ok?r.json():null;})
+      .then(function(d){
+        if(!d) return null;
+        var t=(d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content)||'', m=t.match(/\[[\d,\s]*\]/); if(!m) return null;
+        var got=[], s2={}; JSON.parse(m[0]).forEach(function(n){ if(list[n]&&!s2[n]&&got.length<3){s2[n]=1;got.push(list[n]);} });
+        quoteCache[key]=got; return got;
+      });
+    }).catch(function(){return null;});
+  }
+
   /* ---------- panel ---------- */
   var box=input.closest?input.closest('.lf-sbox')||input.parentNode:input.parentNode;
   (function note(){
     var wrap=box.parentNode; if(!wrap||wrap.querySelector('.sr-note')) return;
     var n=document.createElement('p'); n.className='sr-note';
-    n.textContent="Questions are sent to Google's AI to find the best page. Please don't type names, dates of birth or other personal details.";
+    n.textContent="Questions are sent to Google's AI to find the answer in these guides. Please don't type names, dates of birth or other personal details.";
     wrap.insertBefore(n, box.nextSibling);
   })();
-  out.classList.add('sr-panel'); out.setAttribute('role','listbox');
+  out.classList.add('sr-panel'); out.setAttribute('role','region'); out.setAttribute('aria-label','Search results');
+  out.innerHTML='<div class="sr-answer" hidden></div><div class="sr-head"></div><div class="sr-list" role="listbox"></div>'+
+    '<div class="sr-foot">General information only, not personal medical advice. Follow the times your hospital gives you.</div>';
   document.body.appendChild(out);            /* lives outside the banner so nothing clips it */
-  input.setAttribute('aria-controls','searchres'); input.setAttribute('aria-autocomplete','list');
+  var elHead=out.querySelector('.sr-head'), elAns=out.querySelector('.sr-answer'), elList=out.querySelector('.sr-list');
+  input.setAttribute('aria-controls','searchres');
 
   function place(){
     var r=box.getBoundingClientRect(), vw=document.documentElement.clientWidth, vh=window.innerHeight;
-    var phone=vw<700, left=phone?12:r.left, width=phone?vw-24:Math.min(Math.max(r.width,640),vw-left-24);
+    var phone=vw<700, left=phone?12:r.left, width=phone?vw-24:Math.min(Math.max(r.width,680),vw-left-24);
     out.style.left=(left+window.pageXOffset)+'px'; out.style.top=(r.bottom+window.pageYOffset+8)+'px'; out.style.width=width+'px';
-    out.style.maxHeight=Math.max(300,vh-r.bottom-24)+'px';
+    out.style.maxHeight=Math.max(320,vh-r.bottom-24)+'px';
   }
   function ensureRoom(){
     var r=box.getBoundingClientRect(), vh=window.innerHeight;
-    if(vh-r.bottom<Math.min(460,vh*0.6)){ window.scrollBy({top:r.top-80,behavior:'smooth'}); setTimeout(place,350); }
+    if(vh-r.bottom<Math.min(520,vh*0.65)){ window.scrollBy({top:r.top-80,behavior:'smooth'}); setTimeout(place,350); }
   }
   function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
   function mark(text,q){
@@ -177,7 +304,7 @@
     if(!ws.length) return h;
     return h.replace(new RegExp('\\b('+ws.join('|')+')[a-z]*','gi'),'<mark>$&</mark>');
   }
-  function crumb(e){ var p=(e.s||'').split(' › '); return e.s ? esc(p.join(' › ')) : 'Full guide'; }
+  function crumb(e){ return e.s ? esc(e.s) : 'Full guide'; }
   function row(i,q,n){
     var e=IDX[i];
     return '<a class="sr-row" role="option" id="sr-o'+n+'" href="'+esc(e.u)+'">'+
@@ -185,66 +312,126 @@
       '<span class="sr-title">'+mark(e.t,q)+'</span>'+
       (e.d?'<span class="sr-snip">'+mark(e.d,q)+'</span>':'')+'</a>';
   }
-  var cur=-1, lastQ='', lastIds=[], viaAI=false;
-  function paint(q,ids,state){
+  var cur=-1, lastIds=[], ansKey='';
+  function show(){ out.style.display='block'; input.setAttribute('aria-expanded','true'); place(); }
+  function paintList(q,ids,state){
     lastIds=ids; cur=-1;
-    var head;
-    if(!ids.length && state!=='wait') head='<div class="sr-head"><span>No pages found for &ldquo;'+esc(q)+'&rdquo;</span></div>'+
-      '<div class="sr-empty">Try a different word, for example the name of your operation or medicine. Or <a href="procedures.html">browse every guide</a>, or <a href="contact.html">contact the rooms</a>.</div>';
-    else head='<div class="sr-head"><span>'+(ids.length?ids.length+' '+(ids.length===1?'page':'pages')+' for &ldquo;'+esc(q)+'&rdquo;':'Searching&hellip;')+'</span>'+
-      (state==='wait'?'<span class="sr-ai sr-busy">Asking AI for the best match&hellip;</span>':state==='ai'?'<span class="sr-ai">Best match first, picked with AI help</span>':
-       (isQuestion(q)?'':'<span class="sr-hint">Press Enter for AI help</span>'))+'</div>';
-    out.innerHTML=head+(ids.length?'<div class="sr-list">'+ids.map(function(i,n){return row(i,q,n);}).join('')+'</div>':'')+
-      '<div class="sr-foot">General information only, not personal medical advice. Follow the times your hospital gives you.</div>';
-    out.style.display='block'; input.setAttribute('aria-expanded','true'); place();
+    if(!ids.length && state!=='wait'){
+      elHead.innerHTML='<span>No pages found for &ldquo;'+esc(q)+'&rdquo;</span>';
+      elList.innerHTML='<div class="sr-empty">Try a different word, for example the name of your operation or medicine. Or <a href="procedures.html">browse every guide</a>, or <a href="contact.html">contact the rooms</a>.</div>';
+    } else {
+      elHead.innerHTML='<span>'+(ids.length?(elAns.hidden?'':'More from the guides: ')+ids.length+' '+(ids.length===1?'page':'pages')+' for &ldquo;'+esc(q)+'&rdquo;':'Searching&hellip;')+'</span>'+
+        (state==='ai'?'<span class="sr-ai">Best match first, picked with AI help</span>':(isQuestion(q)||!elAns.hidden?'':'<span class="sr-hint">Press Enter to ask it as a question</span>'));
+      elList.innerHTML=ids.map(function(i,n){return row(i,q,n);}).join('');
+    }
+    show();
   }
-  function close(){ out.style.display='none'; input.setAttribute('aria-expanded','false'); cur=-1; }
-  function runAI(q,base){
+  function clearAnswer(){ elAns.hidden=true; elAns.innerHTML=''; ansKey=''; }
+  function buildAnswer(q,base){
+    prepMeds();
+    var it=intents(q), w=parseWhen(q), key=JSON.stringify([it,w.date,w.time,w.arrival]);
+    var tools=[];
+    if(it.glp1) tools.push('glp1'); if(it.meds!==undefined) tools.push('meds'); if(it.fasting) tools.push('fasting');
+    var wantQuotes=isQuestion(q)&&base.length>0;
+    if(!tools.length&&!wantQuotes){ clearAnswer(); return null; }
+    var qsHtml='<div class="sr-qs" aria-live="polite">'+(wantQuotes?'<p class="sr-wait"><span class="sr-busy"></span>Finding the answer in the guides&hellip;</p>':'')+'</div>';
+    var h='<div class="sr-ans-in">';
+    tools.forEach(function(t){
+      if(t==='fasting'){
+        var op=w.time&&!w.arrival;
+        h+='<div class="sr-tool'+(op?' sr-op':'')+'"><h3 class="sr-th">Your fasting times</h3>'+
+          (op?'<blockquote class="sr-q sr-q-key">Use the arrival time on your hospital letter, not the time of the operation.<cite><a href="fasting.html#work-out-my-fasting-times">Fasting before your surgery</a></cite></blockquote>'+
+              '<p class="sr-say">You gave '+niceT(w.time)+' as the time of your operation. Choose the time you have been asked to arrive at hospital.</p>':'')+
+          '<div data-sr-tool="fasting"></div></div>';
+      } else if(t==='meds'){
+        h+='<div class="sr-tool"><h3 class="sr-th">Your medicines</h3><div data-sr-tool="meds"></div></div>';
+      } else if(t==='glp1'){
+        h+='<div class="sr-tool"><h3 class="sr-th">GLP-1 medicines and fasting</h3><div data-sr-tool="glp1"></div></div>';
+      }
+    });
+    h+=qsHtml+'</div>';
+    if(key===ansKey&&!elAns.hidden){ return wantQuotes; }   /* same question shape: keep what the patient has already chosen */
+    ansKey=key; elAns.innerHTML=h; elAns.hidden=false;
+    var T=window.DRH_TOOLS;
+    if(T){
+      var f=elAns.querySelector('[data-sr-tool="fasting"]'); if(f) T.fasting(f,{date:w.date, time:(w.time&&w.arrival)?roundTime(w.time):null});
+      var m=elAns.querySelector('[data-sr-tool="meds"]'); if(m) T.meds(m,{q:it.meds||'',date:w.date});
+      var g=elAns.querySelector('[data-sr-tool="glp1"]'); if(g) T.glp1(g);
+    } else {
+      Array.prototype.forEach.call(elAns.querySelectorAll('[data-sr-tool]'),function(x){ x.innerHTML='<p><a href="fasting.html">Open the fasting guide</a></p>'; });
+    }
+    if(w.date&&tools.length) elAns.querySelector('.sr-th').insertAdjacentHTML('afterend','<p class="sr-date">For '+niceD(w.dateObj)+', from your question. You can change it below.</p>');
+    return wantQuotes;
+  }
+  function paintQuotes(q,got){
+    var qs=elAns.querySelector('.sr-qs'); if(!qs) return;
+    if(!got||!got.length){
+      qs.innerHTML='';
+      if(!elAns.querySelector('.sr-tool')){ clearAnswer(); paintList(q,lastIds,''); if(got) elHead.innerHTML='<span>The guides do not answer this directly. These pages are the closest. If you are unsure, <a href="contact.html">contact the rooms</a>.</span>'; }
+      return;
+    }
+    var bySrc=[], idx={};
+    got.forEach(function(x){ if(idx[x.i]===undefined){idx[x.i]=bySrc.length;bySrc.push({i:x.i,t:[]});} bySrc[idx[x.i]].t.push(x.t); });
+    qs.innerHTML='<p class="sr-lab">From the guides</p>'+bySrc.map(function(b){
+      var e=IDX[b.i];
+      return '<blockquote class="sr-q">'+b.t.map(function(x){return '<p>'+esc(x)+'</p>';}).join('')+'<cite><a href="'+esc(e.u)+'">'+esc(e.s?e.s.split(' › ')[0]+' › '+e.t:e.t)+'</a></cite></blockquote>';
+    }).join('');
+    place();
+  }
+  function runAnswer(q,base){
     var seq=++aiSeq;
-    var cached=aiCache[q.toLowerCase().replace(/\s+/g,' ').trim()];
-    if(cached===undefined) paint(q,base,'wait');
-    aiPick(q).then(function(ids){
+    var wantQ=buildAnswer(q,base);
+    paintList(q,base,'');
+    if(!base.length){                     /* nothing found by the instant search: let the AI look through the whole catalogue */
+      paintList(q,[], 'wait'); elHead.innerHTML='<span class="sr-ai sr-busy">Looking through every guide&hellip;</span>';
+      aiPick(q).then(function(ids){ if(seq!==aiSeq||input.value.trim()!==q) return; paintList(q,ids||[],ids&&ids.length?'ai':''); if(ids&&ids.length&&isQuestion(q)) runQuotes(q,ids,seq); });
+      return;
+    }
+    if(wantQ) runQuotes(q,base,seq);
+  }
+  function runQuotes(q,base,seq){
+    if(elAns.hidden) buildAnswer(q,base);
+    aiQuote(q,base.slice(0,6)).then(function(got){
       if(seq!==aiSeq||input.value.trim()!==q) return;
-      if(!ids||!ids.length){ paint(q,base,''); return; }
-      /* blend the two orders, so a page both agree on rises and an odd AI pick cannot jump the queue alone */
-      var pts={};
-      base.forEach(function(i,r){ pts[i]=(pts[i]||0)+(10-r); });
-      ids.forEach(function(i,r){ pts[i]=(pts[i]||0)+(r===0?12:9-r*1.5); });
-      var merged=Object.keys(pts).map(Number).sort(function(a,b){return pts[b]-pts[a];}).slice(0,10);
-      viaAI=true; paint(q,merged,'ai');
+      paintQuotes(q,got);
+      if(got&&got.length){              /* the sections the answer came from go to the top of the list */
+        var top=[]; got.forEach(function(x){ if(top.indexOf(x.i)<0) top.push(x.i); });
+        paintList(q,top.concat(base.filter(function(i){return top.indexOf(i)<0;})),'ai');
+      }
     });
   }
+  function close(){ out.style.display='none'; input.setAttribute('aria-expanded','false'); cur=-1; }
   function update(force){
     var q=input.value.trim();
     clearTimeout(aiTimer); aiSeq++;
-    if(q.length<2){ close(); lastQ=''; return; }
-    var base=search(q); lastQ=q; viaAI=false;
-    paint(q,base,'');
-    if(force) runAI(q,base);
-    else if(isQuestion(q)) aiTimer=setTimeout(function(){ if(input.value.trim()===q) runAI(q,base); },900);
+    if(q.length<2){ close(); clearAnswer(); return; }
+    var base=search(q);
+    if(!isQuestion(q)&&!force) clearAnswer();
+    paintList(q,base,'');
+    if(force) runAnswer(q,base);
+    else if(isQuestion(q)) aiTimer=setTimeout(function(){ if(input.value.trim()===q) runAnswer(q,base); },900);
   }
   function move(d){
-    var rows=out.querySelectorAll('.sr-row'); if(!rows.length) return;
+    var rows=elList.querySelectorAll('.sr-row'); if(!rows.length) return;
     if(cur>=0&&rows[cur]) rows[cur].classList.remove('on');
     cur=(cur+d+rows.length)%rows.length; rows[cur].classList.add('on'); rows[cur].scrollIntoView({block:'nearest'});
     input.setAttribute('aria-activedescendant',rows[cur].id);
   }
   input.addEventListener('input',function(){ update(false); });
-  input.addEventListener('focus',function(){ ensureRoom(); if(input.value.trim().length>=2) update(false); });
+  input.addEventListener('focus',function(){ prepMeds(); ensureRoom(); if(input.value.trim().length>=2) update(false); });
   input.addEventListener('keydown',function(ev){
     if(ev.key==='ArrowDown'){ev.preventDefault();move(1);}
     else if(ev.key==='ArrowUp'){ev.preventDefault();move(-1);}
     else if(ev.key==='Escape'){close();}
     else if(ev.key==='Enter'){
       ev.preventDefault();
-      var rows=out.querySelectorAll('.sr-row');
+      var rows=elList.querySelectorAll('.sr-row');
       if(cur>=0&&rows[cur]){ window.location.href=rows[cur].getAttribute('href'); return; }
-      if(out.style.display==='block'&&viaAI&&rows[0]){ window.location.href=rows[0].getAttribute('href'); return; }
-      ensureRoom(); update(true);
+      ensureRoom(); update(true); input.blur&&window.innerWidth<700&&input.blur();
     }
   });
   var btn=box.querySelector('button');
-  if(btn){ btn.removeAttribute('onclick'); btn.onclick=null; btn.addEventListener('click',function(ev){ev.preventDefault();input.focus();ensureRoom();update(true);}); }
+  if(btn){ btn.removeAttribute('onclick'); btn.onclick=null; btn.addEventListener('click',function(ev){ev.preventDefault();ensureRoom();update(true);}); }
   window.addEventListener('resize',function(){ if(out.style.display==='block') place(); });
   window.addEventListener('scroll',function(){ if(out.style.display==='block') place(); },{passive:true});
   document.addEventListener('click',function(ev){ if(ev.target!==input && !out.contains(ev.target) && !(btn&&btn.contains(ev.target))) close(); });
