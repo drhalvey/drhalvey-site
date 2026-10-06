@@ -100,9 +100,9 @@
     /* quick-answer bank: its keywords only nudge its page up; its text is not shown */
     var qa=qaMatch(q); if(qa) res.forEach(function(r){ if(IDX[r.i].u===qa.u||IDX[r.i].u.split('#')[0]===qa.u.split('#')[0]) r.s*=1.25; });
     res.sort(function(a,b){return b.s-a.s;});
-    /* no more than three from one page */
-    var per={}, out=[];
-    for(var k=0;k<res.length&&out.length<10;k++){var p=IDX[res[k].i].p; per[p]=(per[p]||0)+1; if(per[p]<=3) out.push(res[k].i);}
+    /* no more than three from one page, at most six in all, and nothing far weaker than the best match (07/10/2026) */
+    var per={}, out=[], floor=res.length?res[0].s*0.3:0;
+    for(var k=0;k<res.length&&out.length<6;k++){ if(res[k].s<floor) break; var p=IDX[res[k].i].p; per[p]=(per[p]||0)+1; if(per[p]<=3) out.push(res[k].i);}
     return out;
   }
   function qaMatch(q){
@@ -197,7 +197,7 @@
     var s=q.toLowerCase(), out={};
     if(RX_GLP.test(s)) out.glp1=1;
     var mw=findMedWord(q); if(mw&&!out.glp1) out.meds=mw; else if(!out.glp1&&RX_MEDS.test(s)&&!RX_FAST.test(s)) out.meds='';
-    if(RX_FAST.test(s)&&!out.glp1) out.fasting=1;
+    if((RX_FAST.test(s)||itemWords(q).length)&&!out.glp1) out.fasting=1;
     return out;
   }
 
@@ -257,7 +257,7 @@
       });
       if(!list.length) return [];
       var body=list.map(function(x,n){return n+'| ['+IDX[x.i].t+'] '+x.t;}).join('\n');
-      var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},11000);
+      var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},10000);
       return fetch(RELAY,{method:'POST',signal:ctl?ctl.signal:undefined,
         headers:{'content-type':'application/json','x-app-token':TOKEN,'x-install-id':installId()},
         body:JSON.stringify({max_tokens:80,temperature:0,messages:[{role:'system',content:QSYS},{role:'user',content:'Sentences:\n'+body+'\n\nPatient question: '+q}]})})
@@ -268,6 +268,57 @@
         var got=[], s2={}; JSON.parse(m[0]).forEach(function(n){ if(list[n]&&!s2[n]&&got.length<3){s2[n]=1;got.push(list[n]);} });
         quoteCache[key]=got; return got;
       });
+    }).catch(function(){return null;});
+  }
+
+  /* ---------- food and drink answers without AI (07/10/2026) ----------
+     "Can I have fruit / coffee / gum before surgery?" is answered by quoting the sentences on
+     fasting.html that name that item. No AI call, so it is instant and always the page's own words.
+     If the page does not name the item, the AI quote search runs as before. */
+  var ITEM_SYN={fruits:'fruit',banana:'fruit',bananas:'fruit',apple:'fruit',apples:'fruit',orange:'fruit',oranges:'fruit',grapes:'fruit',
+    berries:'fruit',strawberries:'fruit',mango:'fruit',pear:'fruit',pears:'fruit',kiwi:'fruit',watermelon:'fruit',melon:'fruit',
+    toast:'food',cereal:'food',biscuit:'food',biscuits:'food',sandwich:'food',meal:'food',snack:'food',breakfast:'food',lunch:'food',dinner:'food',supper:'food',
+    yogurt:'yoghurt',lolly:'lollies',lollie:'lollies',candy:'lollies',sweets:'lollies',chocolate:'lollies',mint:'mints',chewing:'gum',
+    coke:'carbonated soft drinks',lemonade:'lemonade carbonated',sprite:'lemonade carbonated',fizzy:'carbonated soft drinks',soda:'carbonated soft drinks',
+    latte:'milk',cappuccino:'milk',flatwhite:'milk',smoothie:'smoothies',beer:'alcohol',wine:'alcohol',
+    applejuice:'apple juice',orangejuice:'juice pulp',oj:'juice pulp'};
+  var ITEM_WORDS={fruit:1,food:1,milk:1,water:1,coffee:1,tea:1,juice:1,cordial:1,lemonade:1,gum:1,lollies:1,alcohol:1,yoghurt:1,mints:1,smoothies:1,soup:1,jelly:1,honey:1,sugar:1,pulp:1};
+  var FOOD_SECTIONS=['what-counts-as-food','a-general-guide-for-adults','what-counts-as-a-clear-fluid','other-things-to-avoid'];
+  function itemWords(q){
+    var s=q.toLowerCase().replace(/apple juice/g,'applejuice').replace(/orange juice/g,'orangejuice').replace(/flat white/g,'flatwhite').replace(/chewing gum/g,'gum').replace(/soft drinks?/g,'carbonated');
+    var out=[];
+    s.replace(/[^a-z ]/g,' ').split(/\s+/).forEach(function(w){
+      if(ITEM_SYN[w]) ITEM_SYN[w].split(' ').forEach(function(x){ if(out.indexOf(x)<0) out.push(x); });
+      else if(ITEM_WORDS[w]&&out.indexOf(w)<0) out.push(w);
+    });
+    return out;
+  }
+  function fastingIdx(id){
+    var best=-1; for(var i=0;i<IDX.length;i++){ if(IDX[i].u==='fasting.html#'+id) return i; if(best<0&&IDX[i].p==='fasting.html') best=i; } return best;
+  }
+  function itemAnswer(q){
+    var items=itemWords(q); if(!items.length||!window.fetch) return Promise.resolve(null);
+    return getPage('fasting.html').then(function(doc){
+      if(!doc) return null;
+      var pool=[];
+      FOOD_SECTIONS.forEach(function(id){
+        var h=doc.getElementById(id); if(!h) return;
+        for(var n=h.nextElementSibling;n&&!/^H[12]$/.test(n.tagName);n=n.nextElementSibling){
+          var parts=[];
+          if(n.classList.contains('timecard')){ var t=n.querySelector('.t'),d=n.querySelector('.d'); if(t&&d) parts=[t.textContent.trim()+': '+d.textContent.replace(/\s+/g,' ').trim()]; }
+          else if(n.tagName==='P') parts=splitSent(n.textContent);
+          else if(n.tagName==='UL'||n.tagName==='OL') parts=Array.prototype.map.call(n.querySelectorAll('li'),function(li){return li.textContent.replace(/\s+/g,' ').trim();});
+          parts.forEach(function(t){ pool.push({t:t,id:id}); });
+        }
+      });
+      var scored=pool.map(function(x,k){
+        var low=' '+x.t.toLowerCase().replace(/[^a-z ]/g,' ')+' ', s=0;
+        items.forEach(function(w){ if(low.indexOf(' '+w+' ')>-1||low.indexOf(' '+w+'s ')>-1) s+=(w==='food'||w==='water'?1:2); });
+        return {s:s,k:k,x:x};
+      }).filter(function(o){return o.s>0;});
+      if(!scored.length) return null;
+      scored.sort(function(a,b){return b.s-a.s||a.k-b.k;});
+      return scored.slice(0,2).sort(function(a,b){return a.k-b.k;}).map(function(o){ return {t:o.x.t,i:fastingIdx(o.x.id)}; }).filter(function(o){return o.i>=0;});
     }).catch(function(){return null;});
   }
 
@@ -332,24 +383,28 @@
     var it=intents(q), w=parseWhen(q), key=JSON.stringify([it,w.date,w.time,w.arrival]);
     var tools=[];
     if(it.glp1) tools.push('glp1'); if(it.meds!==undefined) tools.push('meds'); if(it.fasting) tools.push('fasting');
-    var wantQuotes=isQuestion(q)&&base.length>0;
+    var wantQuotes=(isQuestion(q)&&base.length>0)||(!!it.fasting&&itemWords(q).length>0);
     if(!tools.length&&!wantQuotes){ clearAnswer(); return null; }
     var qsHtml='<div class="sr-qs" aria-live="polite">'+(wantQuotes?'<p class="sr-wait"><span class="sr-busy"></span>Finding the answer in the guides&hellip;</p>':'')+'</div>';
-    var h='<div class="sr-ans-in">';
+    /* the patient's own date or time makes the tool the answer: show it first and open.
+       Otherwise the quoted answer comes first and the tool waits, folded, underneath (07/10/2026). */
+    var timed=!!(w.date||w.time);
+    var h='<div class="sr-ans-in">'+(timed?'':qsHtml);
     tools.forEach(function(t){
       if(t==='fasting'){
         var op=w.time&&!w.arrival;
-        h+='<div class="sr-tool'+(op?' sr-op':'')+'"><h3 class="sr-th">Your fasting times</h3>'+
-          (op?'<blockquote class="sr-q sr-q-key">Use the arrival time on your hospital letter, not the time of the operation.<cite><a href="fasting.html#work-out-my-fasting-times">Fasting before your surgery</a></cite></blockquote>'+
+        var inner=(op?'<blockquote class="sr-q sr-q-key">Use the arrival time on your hospital letter, not the time of the operation.<cite><a href="fasting.html#work-out-my-fasting-times">Fasting before your surgery</a></cite></blockquote>'+
               '<p class="sr-say">You gave '+niceT(w.time)+' as the time of your operation. Choose the time you have been asked to arrive at hospital.</p>':'')+
-          '<div data-sr-tool="fasting"></div></div>';
+          '<div data-sr-tool="fasting"></div>';
+        h+=timed?'<div class="sr-tool'+(op?' sr-op':'')+'"><h3 class="sr-th">Your fasting times</h3>'+inner+'</div>'
+          :'<details class="sr-tool sr-fold"><summary class="sr-th">Work out your own fasting times</summary>'+inner+'</details>';
       } else if(t==='meds'){
         h+='<div class="sr-tool"><h3 class="sr-th">Your medicines</h3><div data-sr-tool="meds"></div></div>';
       } else if(t==='glp1'){
         h+='<div class="sr-tool"><h3 class="sr-th">GLP-1 medicines and fasting</h3><div data-sr-tool="glp1"></div></div>';
       }
     });
-    h+=qsHtml+'</div>';
+    h+=(timed?qsHtml:'')+'</div>';
     if(key===ansKey&&!elAns.hidden){ return wantQuotes; }   /* same question shape: keep what the patient has already chosen */
     ansKey=key; elAns.innerHTML=h; elAns.hidden=false;
     var T=window.DRH_TOOLS;
@@ -366,8 +421,11 @@
   function paintQuotes(q,got){
     var qs=elAns.querySelector('.sr-qs'); if(!qs) return;
     if(!got||!got.length){
-      qs.innerHTML='';
-      if(!elAns.querySelector('.sr-tool')){ clearAnswer(); paintList(q,lastIds,''); if(got) elHead.innerHTML='<span>The guides do not answer this directly. These pages are the closest. If you are unsure, <a href="contact.html">contact the rooms</a>.</span>'; }
+      /* got is null when the AI was slow or offline, [] when the guides do not answer it. Say which, never leave a spinner (07/10/2026). */
+      var msg=got?'The guides do not answer this directly. The pages below are the closest. If you are unsure, <a href="contact.html">contact the rooms</a>.'
+                 :'The answer could not be found just now. The pages below are the closest matches. If you are unsure, <a href="contact.html">contact the rooms</a>.';
+      if(!elAns.querySelector('.sr-tool')){ clearAnswer(); paintList(q,lastIds,''); elHead.innerHTML='<span>'+msg+'</span>'; }
+      else qs.innerHTML='<p class="sr-wait">'+msg+'</p>';
       return;
     }
     var bySrc=[], idx={};
@@ -391,12 +449,17 @@
   }
   function runQuotes(q,base,seq){
     if(elAns.hidden) buildAnswer(q,base);
-    aiQuote(q,base.slice(0,6)).then(function(got){
+    var slow=setTimeout(function(){
+      if(seq!==aiSeq) return; var wt=elAns.querySelector('.sr-qs .sr-wait'); if(wt&&wt.querySelector('.sr-busy')) wt.innerHTML='<span class="sr-busy"></span>Still looking. This can take up to 10 seconds&hellip;';
+    },4000);
+    var viaAI=false;
+    itemAnswer(q).then(function(got){ if(got&&got.length) return got; viaAI=true; return base.length?aiQuote(q,base.slice(0,6)):[]; }).then(function(got){
+      clearTimeout(slow);
       if(seq!==aiSeq||input.value.trim()!==q) return;
       paintQuotes(q,got);
       if(got&&got.length){              /* the sections the answer came from go to the top of the list */
         var top=[]; got.forEach(function(x){ if(top.indexOf(x.i)<0) top.push(x.i); });
-        paintList(q,top.concat(base.filter(function(i){return top.indexOf(i)<0;})),'ai');
+        paintList(q,top.concat(base.filter(function(i){return top.indexOf(i)<0;})),viaAI?'ai':'');
       }
     });
   }

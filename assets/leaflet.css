@@ -324,3 +324,11 @@ body.lf .lf-main .btn.primary,body.lf .lf-main .btn{border-radius:3px}
 .sr-panel .sr-tool + .sr-qs:not(:empty){margin-top:20px;padding-top:18px;border-top:1px solid #eee3d6}
 .sr-panel .sr-q p{margin:0 0 8px}.sr-panel .sr-q p:last-of-type{margin-bottom:0}
 .sr-panel .sr-head a{color:var(--lf-maroon)}
+/* search: fasting tool folded under the quoted answer (07/10/2026) */
+.sr-panel .sr-fold > summary{cursor:pointer;list-style:none;font-size:20px;margin:0;padding:2px 0}
+.sr-panel .sr-fold > summary::-webkit-details-marker{display:none}
+.sr-panel .sr-fold > summary::after{content:"+";float:right;font-family:'Public Sans',system-ui,sans-serif;font-weight:600;color:var(--lf-maroon)}
+.sr-panel .sr-fold[open] > summary::after{content:"\2212"}
+.sr-panel .sr-fold[open] > summary{margin-bottom:12px}
+.sr-panel .sr-fold > summary:focus-visible{outline:3px solid var(--lf-sand);outline-offset:3px}
+.sr-panel .sr-qs:not(:empty) + .sr-fold{margin-top:20px;padding-top:16px;border-top:1px solid #eee3d6}
