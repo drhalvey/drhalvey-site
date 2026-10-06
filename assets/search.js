@@ -45,7 +45,7 @@
     consent:'consent',risks:'risks side effects',risk:'risks',side:'side effects',effects:'side effects',
     anesthetic:'anaesthetic',anesthesia:'anaesthesia',anaesthesia:'anaesthetic',spinal:'spinal',epidural:'epidural',
     halvey:'about qualifications',ed:'about',who:'about',work:'practises hospitals',practise:'practises hospitals',hospitals:'hospitals practises',where:'practises hospitals',
-    bring:'bring checklist',wear:'wear',shower:'shower',fishoil:'fish oil',supplements:'supplements herbal',herbal:'supplements'
+    diuretic:'diuretics',diuretics:'diuretics',lasix:'diuretics frusemide',frusemide:'diuretics',bring:'bring checklist',wear:'wear',shower:'shower',fishoil:'fish oil',supplements:'supplements herbal',herbal:'supplements'
   };
   function lev(a,b){var m=a.length,n=b.length;if(!m)return n;if(!n)return m;var p=[],c,i,j;for(j=0;j<=n;j++)p[j]=j;
     for(i=1;i<=m;i++){c=[i];for(j=1;j<=n;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c;}return p[n];}
@@ -66,7 +66,7 @@
     return (best&&bd<=(tk.length>=8?2:1))?best:tk;
   }
   function terms(q){
-    var raw=words(q.replace(/\b(get|be|arrive|come) (to|at|in(to)?) (the )?hospital\b/ig,'arrival').replace(/c[\s-]section/ig,'csection').replace(/fish oil/ig,'fishoil')), out=[];
+    var raw=words(q.replace(/\b(water|fluid) (tablets?|pills?)\b/ig,'diuretics').replace(/\b(get|be|arrive|come) (to|at|in(to)?) (the )?hospital\b/ig,'arrival').replace(/c[\s-]section/ig,'csection').replace(/fish oil/ig,'fishoil')), out=[];
     raw.forEach(function(tk){
       if(STOP[tk]||tk.length<2||/^\d+(am|pm|st|nd|rd|th)?$/.test(tk)) return;
       tk=fixSpelling(tk);
@@ -137,7 +137,7 @@
     var key=q.toLowerCase().replace(/\s+/g,' ').trim();
     if(aiCache.hasOwnProperty(key)) return Promise.resolve(aiCache[key]);
     if(!window.fetch) return Promise.resolve(null);
-    var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},10000);
+    var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},15000);
     return fetch(RELAY,{method:'POST',signal:ctl?ctl.signal:undefined,
       headers:{'content-type':'application/json','x-app-token':TOKEN,'x-install-id':installId()},
       body:JSON.stringify({max_tokens:160,temperature:0,messages:[{role:'system',content:SYS},{role:'user',content:'Catalogue:\n'+CAT+'\n\nPatient search: '+q}]})})
@@ -173,12 +173,15 @@
     if(!d && (m=s.match(/\b(sun|mon|tue|tues|wed|thu|thur|thurs|fri|sat)(?:day|nesday|rsday|urday)?\b/))){ var w=DAYN.indexOf(m[1].slice(0,3)); var add=(w-now.getDay()+7)%7; d=new Date(now.getTime()+add*864e5); }
     if(d && !isNaN(d) && d<now && (now-d)>30*864e5) d.setFullYear(d.getFullYear()+1);
     if(d && (isNaN(d)||d<now)) d=null;
-    var t=null;
+    var t=null, RXA=/\b(arriv\w*|admission|admitted|admit|check(?:ing)? in|get to (?:the )?hospital|be at (?:the )?hospital|come in|told to come|booked in for|operation|surgery|op|procedure|theatre|scheduled|booked)\b/, ai=s.search(RXA);
+    if(ai>-1){ var after=s.slice(ai); if(/\b\d{1,2}(?:[:.]\d{2})?\s*(am|pm|a\.m\.|p\.m\.)/.test(after)) s=after+' '+s; }   /* "toast at 5am if I arrive at 11am": 11am is the arrival */
     if((m=s.match(/\b(\d{1,2})(?:[:.](\d{2}))?\s*(am|pm|a\.m\.|p\.m\.)/))){ var h=+m[1]%12+(/^p/.test(m[3])?12:0); t=p2(h)+':'+(m[2]||'00'); }
     else if((m=s.match(/\b([01]?\d|2[0-3])[:.]([0-5]\d)\b/))) t=p2(+m[1])+':'+m[2];
     else if(/\b(noon|midday|12 noon)\b/.test(s)) t='12:00';
     else if((m=s.match(/\bat (\d{1,2})\b(?! (?:days?|weeks?|hours?))/))){ var hh=+m[1]; if(hh>=1&&hh<=12){ hh=hh<7?hh+12:hh; t=p2(hh)+':00'; } }
     var arrive=/\b(arriv\w*|admission|admitted|admit|check(?:ing)? in|get to (?:the )?hospital|be at (?:the )?hospital|come in|told to come|booked in for)\b/.test(s);
+    var opnamed=/\b(operation|surgery|op|procedure|theatre|scheduled|booked)\b[^.]{0,25}\b(at|for)\s+\d|\b\d{1,2}(?:[:.]\d{2})?\s*(am|pm)\s+(operation|surgery|op|procedure|start)\b/.test(s);
+    if(t&&!arrive&&!opnamed) t=null;            /* "coffee at 6am" is when they want the coffee, not the operation */
     return {date:d?isoD(d):null, dateObj:d, time:t, arrival:!!(t&&arrive)};
   }
   function roundTime(t){ var a=t.split(':'), mins=+a[0]*60+ +a[1]; mins=Math.round(mins/15)*15; if(mins<300||mins>20*60+45) return null; return p2(Math.floor(mins/60))+':'+p2(mins%60); }
@@ -193,11 +196,18 @@
     for(i=0;i<ws.length-1;i++){ var two=ws[i]+' '+ws[i+1]; if(medWords[two]) return two; }
     return null;
   }
+  /* questions the adult before-surgery rules must not answer (07/10/2026 break tests):
+     after the operation, about a child, or a word that only looks like food or drink */
+  var RX_AFTER=/\b(after|since|following|post)\s+(my |the |your |a |her |his )?(surgery|operation|op|procedure|anaesthetic|anesthetic|general|spinal|epidural|block|knee|hip|caesarean|c-?section|section|replacement|scope|colonoscopy|discharge|going home|i go home|i get home)\b|\b(post[- ]?op|recovery|recovering|recover|when i get home|after i go home|going home)\b/;
+  var RX_CHILD=/\b(my |our |a |the )?(child|children|kid|kids|son|daughter|toddler|infant|newborn|teenager|teen|boy|girl)\b|\bbaby'?s\b|\b(give|feed|breastfeed|bottle|my) (my |the )?baby\b.*\b(eat|drink|have|milk|formula|feed|operation|surgery|anaesthetic|fast)/;
+  var RX_NOTFOOD=/\b(water ?birth|waters? (broke|broken|breaking|break|went)|water (tablets?|pills?|retention)|fluid (tablets?|pills?|retention))\b/;
+  function ctx(q){ var s=q.toLowerCase(); return {after:RX_AFTER.test(s), child:RX_CHILD.test(s)&&!/\b(my|our)?\s*(caesarean|c-?section|labour|pregnan\w*|epidural)\b/.test(s), notfood:RX_NOTFOOD.test(s)}; }
   function intents(q){
-    var s=q.toLowerCase(), out={};
+    var s=q.toLowerCase(), out={}, c=ctx(q);
     if(RX_GLP.test(s)) out.glp1=1;
-    var mw=findMedWord(q); if(mw&&!out.glp1) out.meds=mw; else if(!out.glp1&&RX_MEDS.test(s)&&!RX_FAST.test(s)) out.meds='';
-    if((RX_FAST.test(s)||itemWords(q).length)&&!out.glp1) out.fasting=1;
+    var mw=findMedWord(q); if(mw&&!out.glp1) out.meds=mw; else if(!out.glp1&&/\b(water|fluid) (tablets?|pills?)\b/.test(s)) out.meds=''; else if(!out.glp1&&RX_MEDS.test(s)&&!RX_FAST.test(s)) out.meds='';
+    if((RX_FAST.test(s)||itemWords(q).length)&&!out.glp1&&!c.after&&!c.child&&!c.notfood) out.fasting=1;
+    if(c.child) out.child=1;
     return out;
   }
 
@@ -227,6 +237,8 @@
       if(/^H[1-6]$/.test(tg)){ var l=+tg.charAt(1); if(start&&l<=lvl) break; if(!start&&tg==='H2'&&++h2seen>1) break; continue; }
       if(n.closest('script,style,noscript,form,.lf-prep,.lf-fasting,.lf-medsmini,nav,.lf-aside,.lf-video')) continue;
       var txt='';
+      if(n.classList&&n.classList.contains('timecard')){ var tt=n.querySelector('.t'),td=n.querySelector('.d'); if(tt&&td){ out.push(tt.textContent.trim()+': '+td.textContent.replace(/\s+/g,' ').trim()); if(out.length>=14) break; } continue; }
+      if(n.closest('.timecard')) continue;
       if(tg==='TR'){ txt=Array.prototype.map.call(n.children,function(c){return c.textContent.replace(/\s+/g,' ').trim();}).filter(Boolean).join(': '); if(txt&&!/[.!?]$/.test(txt)) txt+='.'; }
       else if(/^(P|LI|DD|DT|BLOCKQUOTE)$/.test(tg) && !n.querySelector('p,li,tr') && !n.closest('tr')) txt=n.textContent;
       if(txt&&tg==='TR'){ txt=txt.replace(/\s+/g,' ').trim(); if(txt.length>12) out.push(txt.length>450?txt.slice(0,txt.lastIndexOf(' ',440))+'…':txt); }   /* a table row stays whole, so a rule never loses the medicine it belongs to */
@@ -247,17 +259,20 @@
     return Promise.all(Object.keys(pages).map(function(p){return getPage(p).then(function(d){return [p,d];});})).then(function(docs){
       var dm={}; docs.forEach(function(x){dm[x[0]]=x[1];});
       var list=[], seen={}, len=0;
+      var glp=RX_GLP.test(q.toLowerCase()), cx=ctx(q);
       cands.forEach(function(i){
         var d=dm[IDX[i].p]; if(!d) return;
+        if(!glp&&/glp1/.test(IDX[i].p)) return;   /* GLP-1 fasting rules differ: never quote them to someone not on one */
+        if((glp||cx.after)&&/^(fasting|arrival-time)\.html$/.test(IDX[i].p)) return;   /* nor the standard rules to someone who is, or to an after-surgery question */
         var ss=sectionSentences(d,IDX[i]);
         ss.forEach(function(t,k){ if(seen[t]||len>9000) return; seen[t]=1;
           /* a sentence that leans on the one before it ("They can usually be treated.") carries that one with it */
-          if(k>0&&/^(they|this|these|it|that|those|both|either|its)\b/i.test(t)) t=ss[k-1]+' '+t;
+          if(k>0&&/^(they|this|these|it|that|those|both|either|its)\b/i.test(t)){ t=ss[k-1]+' '+t; list=list.filter(function(x){return x.t!==ss[k-1];}); }
           len+=t.length; list.push({t:t,i:i}); });
       });
       if(!list.length) return [];
       var body=list.map(function(x,n){return n+'| ['+IDX[x.i].t+'] '+x.t;}).join('\n');
-      var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},10000);
+      var ctl=window.AbortController?new AbortController():null; if(ctl) setTimeout(function(){ctl.abort();},15000);
       return fetch(RELAY,{method:'POST',signal:ctl?ctl.signal:undefined,
         headers:{'content-type':'application/json','x-app-token':TOKEN,'x-install-id':installId()},
         body:JSON.stringify({max_tokens:80,temperature:0,messages:[{role:'system',content:QSYS},{role:'user',content:'Sentences:\n'+body+'\n\nPatient question: '+q}]})})
@@ -265,7 +280,7 @@
       .then(function(d){
         if(!d) return null;
         var t=(d.choices&&d.choices[0]&&d.choices[0].message&&d.choices[0].message.content)||'', m=t.match(/\[[\d,\s]*\]/); if(!m) return null;
-        var got=[], s2={}; JSON.parse(m[0]).forEach(function(n){ if(list[n]&&!s2[n]&&got.length<3){s2[n]=1;got.push(list[n]);} });
+        var got=[], s2={}; JSON.parse(m[0]).forEach(function(n){ var x=list[n]; if(x&&!s2[n]&&got.length<3&&!got.some(function(g){return g.t.indexOf(x.t)>-1||x.t.indexOf(g.t)>-1;})){s2[n]=1;got.push(x);} });
         quoteCache[key]=got; return got;
       });
     }).catch(function(){return null;});
@@ -275,21 +290,50 @@
      "Can I have fruit / coffee / gum before surgery?" is answered by quoting the sentences on
      fasting.html that name that item. No AI call, so it is instant and always the page's own words.
      If the page does not name the item, the AI quote search runs as before. */
-  var ITEM_SYN={fruits:'fruit',banana:'fruit',bananas:'fruit',apple:'fruit',apples:'fruit',orange:'fruit',oranges:'fruit',grapes:'fruit',
-    berries:'fruit',strawberries:'fruit',mango:'fruit',pear:'fruit',pears:'fruit',kiwi:'fruit',watermelon:'fruit',melon:'fruit',
-    toast:'food',cereal:'food',biscuit:'food',biscuits:'food',sandwich:'food',meal:'food',snack:'food',breakfast:'food',lunch:'food',dinner:'food',supper:'food',
+  var ITEM_SYN={froot:'fruit',frute:'fruit',friut:'fruit',fruite:'fruit',froots:'fruit',coffe:'coffee',cofee:'coffee',watter:'water',toast:'food',cereal:'food',biscuit:'food',biscuits:'food',sandwich:'food',meal:'food',snack:'food',breakfast:'food',lunch:'food',dinner:'food',supper:'food',
     yogurt:'yoghurt',lolly:'lollies',lollie:'lollies',candy:'lollies',sweets:'lollies',chocolate:'lollies',mint:'mints',chewing:'gum',
-    coke:'carbonated soft drinks',lemonade:'lemonade carbonated',sprite:'lemonade carbonated',fizzy:'carbonated soft drinks',soda:'carbonated soft drinks',
+    coke:'carbonated',cola:'carbonated',pepsi:'carbonated',fizzy:'carbonated',soda:'carbonated',
     latte:'milk',cappuccino:'milk',flatwhite:'milk',smoothie:'smoothies',beer:'alcohol',wine:'alcohol',
-    applejuice:'apple juice',orangejuice:'juice pulp',oj:'juice pulp'};
-  var ITEM_WORDS={fruit:1,food:1,milk:1,water:1,coffee:1,tea:1,juice:1,cordial:1,lemonade:1,gum:1,lollies:1,alcohol:1,yoghurt:1,mints:1,smoothies:1,soup:1,jelly:1,honey:1,sugar:1,pulp:1};
+    oj:'pulp'};
+  var ITEM_WORDS={fruit:1,food:1,milk:1,water:1,coffee:1,tea:1,juice:1,cordial:1,lemonade:1,gum:1,lollies:1,alcohol:1,yoghurt:1,mints:1,smoothies:1,pulp:1};
   var FOOD_SECTIONS=['what-counts-as-food','a-general-guide-for-adults','what-counts-as-a-clear-fluid','other-things-to-avoid'];
+  /* two-word drinks decide the meaning before single words do: "fruit tea" is tea, "fruit juice" is juice,
+     "coffee with milk" is milk. A compound the page does not cover returns nothing, so the AI or the list answers. */
+  var ITEM_PAIRS=[
+    [/\b(honey|sugar|sweetener|syrup|lemon) (in|with)\b|\b(with|and) (honey|sugar|sweetener)\b|\b(coconut water|coconut milk|vitamin water|bone broth|protein (shake|drink)|meal replacement|sports? drinks?|energy drinks?|electrolyte\w*|ice ?blocks?|ice chips?|icy ?poles?)\b/,null],
+    [/\b(clear |pulp[- ]free )?apple juice\b/,'applejuice'],
+    [/\b(orange|pineapple|grapefruit|tomato|fruit|fresh|mango|carrot|green|vegetable|veggie|cloudy|pulpy|apple and \w+) (juice|juices)\b/,'pulpjuice'],
+    [/\b(fruit|herbal|green|peppermint|chamomile|camomile|ginger|lemon|black|iced) teas?\b/,'blacktea'],
+    [/\b(black|long black|espresso|short black) coffees?\b|\bespresso\b|\blong black\b/,'blackcoffee'],
+    [/\b(tea|coffee|cuppa)s? (with|and) (milk|cream)\b|\bmilky (tea|coffee)\b|\b(white|flat white) (tea|coffee)\b|\b(latte|cappuccino|flat ?white|chai|hot chocolate|milkshake|milk ?shake)s?\b/,'milkdrink'],
+    [/\b(\w+ )?(smoothie|smoothies)\b/,'smoothie'],
+    [/\b(chocolate|strawberry|banana|soy|soya|almond|oat|rice|plant) milk\b/,'milkdrink'],
+    [/\b(chewing gum|bubble ?gum|nicotine gum)\b/,'gum'],
+    [/\b(soft drinks?|fizzy drinks?|sparkling water|soda water|mineral water|lemonade|sprite|ginger ale|tonic water)\b/,'fizzy'],
+    [/\bnil by mouth\b|\bnbm\b|\bwhen (do|does) (my |the )?fast(ing)? (start|begin)\b/,'nbm'],
+    [/\b(stop|stopping|last|finish) (eating|food|meal|breakfast|dinner|solids?)\b|\beat(ing)? after midnight\b|\b(eat|eating|food|dinner|meal) (the )?(night|evening) before\b|\bhow long\b[^.]{0,30}\b(eat|eating|food|fast|fasting)\b|\bwhen (do|should|can) i (stop eating|eat)\b/,'stopfood'],
+    [/\b(stop|stopping|last) (drinking|drinks?|fluids?|water)\b|\bhow long\b[^.]{0,30}\b(drink|drinking|fluids?)\b|\bwhen (do|should|can) i (stop drinking|drink)\b/,'stopdrink'],
+    [/\b(accidentally|by accident|by mistake|forgot (and|to)|already (ate|had|eaten|drank|drunk)|i ate|i have eaten|i've eaten|i had (a|some)\b)/,'accident']
+  ];
+  var PAIR_ITEMS={applejuice:['apple juice'],pulpjuice:['pulp'],blacktea:['black','tea'],blackcoffee:['black','coffee'],milkdrink:['milk'],smoothie:['smoothies'],gum:['gum'],fizzy:['carbonated'],accident:['accidentally'],stopfood:['stop eating'],stopdrink:['stop clear fluids'],nbm:['stop eating','stop clear fluids']};
+  var FRUIT_RX=/^(fruits?|bananas?|apples?|oranges?|grapes?|berries|\w+berr(y|ies)|mangos?|mangoes|pears?|kiwis?|kiwifruit|watermelons?|melons?|rockmelon|pineapples?|peach(es)?|plums?|cherr(y|ies)|mandarins?|grapefruits?|nectarines?|apricots?|lychees?|papayas?|pawpaws?|figs?|dates|raisins|sultanas|prunes)$/;
+  var ITEM_FUZZ=['fruit','coffee','water','juice','milk','yoghurt','lollies','alcohol','cordial','lemonade'];
   function itemWords(q){
-    var s=q.toLowerCase().replace(/apple juice/g,'applejuice').replace(/orange juice/g,'orangejuice').replace(/flat white/g,'flatwhite').replace(/chewing gum/g,'gum').replace(/soft drinks?/g,'carbonated');
-    var out=[];
-    s.replace(/[^a-z ]/g,' ').split(/\s+/).forEach(function(w){
-      if(ITEM_SYN[w]) ITEM_SYN[w].split(' ').forEach(function(x){ if(out.indexOf(x)<0) out.push(x); });
-      else if(ITEM_WORDS[w]&&out.indexOf(w)<0) out.push(w);
+    var s=' '+q.toLowerCase().replace(/[^a-z' ]/g,' ').replace(/\s+/g,' ')+' ', out=[];
+    function add(x){ if(out.indexOf(x)<0) out.push(x); }
+    for(var k=0;k<ITEM_PAIRS.length;k++){
+      if(ITEM_PAIRS[k][0].test(s)){
+        if(ITEM_PAIRS[k][1]===null) return [];
+        PAIR_ITEMS[ITEM_PAIRS[k][1]].forEach(add);
+        s=s.replace(ITEM_PAIRS[k][0],' ');
+      }
+    }
+    s.split(' ').forEach(function(w){
+      if(!w||STOP[w]) return;
+      if(FRUIT_RX.test(w)){ add('fruit'); return; }
+      if(ITEM_SYN[w]){ ITEM_SYN[w].split(' ').forEach(add); return; }
+      if(ITEM_WORDS[w]){ add(w); return; }
+      if(w.length>=4) for(var i=0;i<ITEM_FUZZ.length;i++){ if(w[0]===ITEM_FUZZ[i][0]&&lev(w,ITEM_FUZZ[i])<=1){ add(ITEM_FUZZ[i]); return; } }
     });
     return out;
   }
@@ -297,7 +341,8 @@
     var best=-1; for(var i=0;i<IDX.length;i++){ if(IDX[i].u==='fasting.html#'+id) return i; if(best<0&&IDX[i].p==='fasting.html') best=i; } return best;
   }
   function itemAnswer(q){
-    var items=itemWords(q); if(!items.length||!window.fetch) return Promise.resolve(null);
+    var it=intents(q), items=itemWords(q);
+    if(!items.length||!it.fasting||!window.fetch) return Promise.resolve(null);
     return getPage('fasting.html').then(function(doc){
       if(!doc) return null;
       var pool=[];
@@ -307,18 +352,35 @@
           var parts=[];
           if(n.classList.contains('timecard')){ var t=n.querySelector('.t'),d=n.querySelector('.d'); if(t&&d) parts=[t.textContent.trim()+': '+d.textContent.replace(/\s+/g,' ').trim()]; }
           else if(n.tagName==='P') parts=splitSent(n.textContent);
+          else if(n.classList.contains('callout')) parts=[n.textContent.replace(/\s+/g,' ').trim()];
           else if(n.tagName==='UL'||n.tagName==='OL') parts=Array.prototype.map.call(n.querySelectorAll('li'),function(li){return li.textContent.replace(/\s+/g,' ').trim();});
           parts.forEach(function(t){ pool.push({t:t,id:id}); });
         }
       });
       var scored=pool.map(function(x,k){
-        var low=' '+x.t.toLowerCase().replace(/[^a-z ]/g,' ')+' ', s=0;
-        items.forEach(function(w){ if(low.indexOf(' '+w+' ')>-1||low.indexOf(' '+w+'s ')>-1) s+=(w==='food'||w==='water'?1:2); });
+        var low=' '+x.t.toLowerCase().replace(/[^a-z ]/g,' ').replace(/\s+/g,' ')+' ', s=0;
+        items.forEach(function(w){ low=low.replace(new RegExp(' (no|without|not) '+w+' ','g'),' ').replace(new RegExp(' '+w+' free ','g'),' '); });
+        items.forEach(function(w){ if(w.indexOf(' ')>0){ if(low.indexOf(' '+w+' ')>-1) s+=4; return; }
+          if(low.indexOf(' '+w+' ')>-1||low.indexOf(' '+w+'s ')>-1||(w==='accidentally'&&/ accidentally /.test(low))) s+=(w==='food'||w==='water'?1:(w==='accidentally'?6:2)); });
         return {s:s,k:k,x:x};
       }).filter(function(o){return o.s>0;});
       if(!scored.length) return null;
       scored.sort(function(a,b){return b.s-a.s||a.k-b.k;});
       return scored.slice(0,2).sort(function(a,b){return a.k-b.k;}).map(function(o){ return {t:o.x.t,i:fastingIdx(o.x.id)}; }).filter(function(o){return o.i>=0;});
+    }).catch(function(){return null;});
+  }
+
+  /* children: the guides are written for adults, so a child's question gets the site's own two sentences
+     saying so, never the adult fasting rules (07/10/2026) */
+  function pageIdx(p){ for(var i=0;i<IDX.length;i++){ if(IDX[i].u===p) return i; } for(i=0;i<IDX.length;i++){ if(IDX[i].p===p) return i; } return -1; }
+  function childAnswer(){
+    return Promise.all([getPage('services.html'),getPage('fasting.html')]).then(function(d){
+      var out=[];
+      var sv=d[0]&&Array.prototype.map.call(d[0].querySelectorAll('p'),function(x){return x.textContent.replace(/\s+/g,' ').trim();}).filter(function(t){return /care for adults undergoing surgery/.test(t);})[0];
+      if(sv) out.push({t:splitSent(sv).filter(function(t){return /adults/.test(t);})[0],i:pageIdx('services.html')});
+      var fc=d[1]&&d[1].querySelector('.callout.warn b');
+      if(fc) out.push({t:fc.textContent.replace(/\s+/g,' ').trim(),i:pageIdx('fasting.html')});
+      return out.filter(function(x){return x.t&&x.i>=0;});
     }).catch(function(){return null;});
   }
 
@@ -383,7 +445,7 @@
     var it=intents(q), w=parseWhen(q), key=JSON.stringify([it,w.date,w.time,w.arrival]);
     var tools=[];
     if(it.glp1) tools.push('glp1'); if(it.meds!==undefined) tools.push('meds'); if(it.fasting) tools.push('fasting');
-    var wantQuotes=(isQuestion(q)&&base.length>0)||(!!it.fasting&&itemWords(q).length>0);
+    var wantQuotes=(isQuestion(q)&&base.length>0)||(!!it.fasting&&itemWords(q).length>0)||!!it.child;
     if(!tools.length&&!wantQuotes){ clearAnswer(); return null; }
     var qsHtml='<div class="sr-qs" aria-live="polite">'+(wantQuotes?'<p class="sr-wait"><span class="sr-busy"></span>Finding the answer in the guides&hellip;</p>':'')+'</div>';
     /* the patient's own date or time makes the tool the answer: show it first and open.
@@ -425,7 +487,7 @@
       var msg=got?'The guides do not answer this directly. The pages below are the closest. If you are unsure, <a href="contact.html">contact the rooms</a>.'
                  :'The answer could not be found just now. The pages below are the closest matches. If you are unsure, <a href="contact.html">contact the rooms</a>.';
       if(!elAns.querySelector('.sr-tool')){ clearAnswer(); paintList(q,lastIds,''); elHead.innerHTML='<span>'+msg+'</span>'; }
-      else qs.innerHTML='<p class="sr-wait">'+msg+'</p>';
+      else qs.innerHTML=elAns.querySelector('[data-sr-tool="fasting"]')?'':'<p class="sr-wait">'+msg+'</p>';
       return;
     }
     var bySrc=[], idx={};
@@ -450,10 +512,10 @@
   function runQuotes(q,base,seq){
     if(elAns.hidden) buildAnswer(q,base);
     var slow=setTimeout(function(){
-      if(seq!==aiSeq) return; var wt=elAns.querySelector('.sr-qs .sr-wait'); if(wt&&wt.querySelector('.sr-busy')) wt.innerHTML='<span class="sr-busy"></span>Still looking. This can take up to 10 seconds&hellip;';
+      if(seq!==aiSeq) return; var wt=elAns.querySelector('.sr-qs .sr-wait'); if(wt&&wt.querySelector('.sr-busy')) wt.innerHTML='<span class="sr-busy"></span>Still looking. This can take up to 15 seconds&hellip;';
     },4000);
     var viaAI=false;
-    itemAnswer(q).then(function(got){ if(got&&got.length) return got; viaAI=true; return base.length?aiQuote(q,base.slice(0,6)):[]; }).then(function(got){
+    (intents(q).child?childAnswer():itemAnswer(q)).then(function(got){ if(got&&got.length) return got; viaAI=true; return base.length?aiQuote(q,base.slice(0,6)):[]; }).then(function(got){
       clearTimeout(slow);
       if(seq!==aiSeq||input.value.trim()!==q) return;
       paintQuotes(q,got);
