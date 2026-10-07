@@ -127,6 +127,8 @@ for p in html_files():
             err(rel, f'"exact" used about the site or a tool (describe tools as a general guide): "...{" ".join(ctx.split())}..."')
     for rx, label, fn in ((TIMEFRAME, 'specific clinical timeframe', warn), (SUPERLATIVE, 'superlative or outcome claim (AHPRA)', warn),
                           (TESTIMONIAL, 'testimonial wording (AHPRA)', err), (PAIN_TEAM_DAILY, 'says the pain team reviews everyone daily', err)):
+        if rx is TIMEFRAME and str(rel).startswith('teaching/'):
+            continue  # clinician teaching pages keep counselling timeframes (Ed, 07/10/2026)
         for m in rx.finditer(text):
             ctx = text[max(0, m.start() - 60):m.end() + 60]
             fn(rel, f'{label}: "...{" ".join(ctx.split())}..."')
