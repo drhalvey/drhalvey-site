@@ -100,6 +100,7 @@ EXACT_OK = [
     r'follow (the|those) exact', r'exact (fasting )?times your hospital', r'your hospital will give you exact',
     r'exact arrival', r"hospital's exact", r'exactly as prescribed', r'exact combination', r'exact thresholds',
     r'exact timing instructions given',
+    r'follow [^.]{0,120}instructions[^.]{0,80}exactly', r'instructions from your [^.]{0,60}exactly',
 ]
 NUM = r'(\d+|one|two|three|four|five|six|seven|eight|nine|ten|fifteen|twenty|thirty|sixty)'
 TIMEFRAME = re.compile(r'\b(?:(?:within|in about|about|around|by about|after about|usually)\s+' + NUM + r'|' + NUM + r'\s+to\s+' + NUM + r')\s+(minutes?|hours?|days?|weeks?)\b(?!\s+(before|of your|after your last|prior))', re.I)
