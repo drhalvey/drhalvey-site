@@ -7,6 +7,7 @@
 <title>Page not found - Dr Ed Halvey</title>
 <base href="https://drhalvey.com.au/">
 <link rel="stylesheet" href="/assets/style.css">
+<link rel="stylesheet" href="/assets/leaflet.css">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Google tag (gtag.js) -->
@@ -40,7 +41,8 @@
 <div class="lf-wrap">
 <p class="lf-crumb">Page not found</p>
 <h1>That page is not here</h1>
-<p class="lf-lead">The link may be old, or the page may have moved. Try a search: everything on the site is indexed.</p>
+<p class="lf-lead">The link may be old, or the page may have moved. The site has been rebuilt, so most old links now have a new home.</p>
+<div id="nf-guess" class="lf-lead" hidden aria-live="polite"></div>
 <div class="lf-search noprint" role="search">
 <label for="siteq">Search the guides</label>
 <div class="lf-sbox"><input type="search" id="siteq" autocomplete="off" placeholder="For example: when do I stop eating?"><button type="button" onclick="var e=document.getElementById('siteq');e.focus();e.dispatchEvent(new Event('input'));">Search</button>
@@ -51,6 +53,7 @@
 </section>
 
 <main id="main" class="lf-wrap lf-sec" style="padding-top:56px">
+<div id="nf-matches" hidden style="margin-bottom:48px"></div>
 <h2 class="lf-h2">Or head straight to</h2>
 <div style="max-width:760px">
 <a class="lf-gl" href="/pre-op-guidance.html"><b>Before surgery</b><span>Fasting, medicines and preparation.</span></a>
@@ -75,5 +78,6 @@
 <script src="/assets/answers.js"></script>
 <script src="/assets/search.js"></script>
 <script src="/assets/leaflet.js"></script>
+<script src="/assets/not-found.js"></script>
 </body>
 </html>
