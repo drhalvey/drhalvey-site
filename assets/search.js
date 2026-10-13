@@ -389,7 +389,7 @@
   (function note(){
     var wrap=box.parentNode; if(!wrap||wrap.querySelector('.sr-note')) return;
     var n=document.createElement('p'); n.className='sr-note';
-    n.textContent="Questions are sent to Google's AI to find the answer in these guides. Please don't type names, dates of birth or other personal details.";
+    n.textContent="Questions are sent to an AI service (Anthropic's Claude, with Google's Gemini as a backup) to find the answer in these guides. Please don't type names, dates of birth or other personal details.";
     wrap.insertBefore(n, box.nextSibling);
   })();
   out.classList.add('sr-panel'); out.setAttribute('role','region'); out.setAttribute('aria-label','Search results');
