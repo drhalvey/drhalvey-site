@@ -19,8 +19,15 @@ a commit is live in about a minute.
 | `downloads/` | Patient PDFs (not linked from any page) |
 | `print/qr-card.html` | Printable QR card pointing to drhalvey.com.au |
 | `rally/`, `deuce/`, `billing-sheet/` | Privacy policy and terms pages for Ed's iOS apps |
+| `ortho/` | Orthopaedic Anaesthesia: Surgery First, a clinician reference for Ed. Unlinked, `noindex` on every page, `Disallow: /ortho/` in robots.txt, never in the sitemap and never in the patient search index. Source in `ortho/src/` (Markdown with YAML front matter), built with `python3 ortho/build.py`; the committed HTML is the output. `ortho/data/local.enc.json` is Ed's private layer, AES-GCM encrypted at build time from a folder outside the repo; the plaintext is never committed |
 | `assets/` | `style.css`, fonts, images (JPEG originals plus WebP sizes), search and feedback scripts |
 | `404.html`, `sitemap.xml`, `robots.txt`, `CNAME`, `.nojekyll` | Site plumbing |
+
+## Rebuilding the patient search index
+
+`assets/search-index.js` is built from the patient pages. Any rebuild must skip `ortho/` (and the other
+clinician or app folders): the site search quotes single sentences to patients, and the textbook is written
+for an anaesthetist. The automatic check fails the commit if an `ortho/` page appears in the index.
 
 ## Automatic check
 

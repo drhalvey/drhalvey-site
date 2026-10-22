@@ -108,7 +108,8 @@ SUPERLATIVE = re.compile(r"\b(the best (anaesthetist|care|outcomes?|results?)|le
 TESTIMONIAL = re.compile(r'\b(testimonials?|patient stories|what our patients say|five[- ]star|5[- ]star)\b', re.I)
 PAIN_TEAM_DAILY = re.compile(r'pain (team|service)[^.]{0,60}\b(every day|daily|each day)\b', re.I)
 
-INTERNAL = ('clinicians.html', 'tools/pain-relief.html')  # clinician reference and approved plans, not general copy  # clinician reference, not patient copy
+INTERNAL = ('clinicians.html', 'tools/pain-relief.html')
+CLINICIAN_DIRS = ('teaching/', 'ortho/')  # clinician pages: timeframes, predictions and the word exact are allowed  # clinician reference and approved plans, not general copy  # clinician reference, not patient copy
 
 for p in html_files():
     rel = p.relative_to(ROOT)
@@ -119,7 +120,7 @@ for p in html_files():
     for m in re.finditer('—', text):
         ctx = text[max(0, m.start() - 40):m.end() + 40].replace('\n', ' ')
         err(rel, f'em dash in visible text: "...{ctx.strip()}..."')
-    if str(rel) in INTERNAL:
+    if str(rel) in INTERNAL or str(rel).startswith(CLINICIAN_DIRS):
         continue
     for m in re.finditer(r'\bexact(ly)?\b', text, re.I):
         ctx = text[max(0, m.start() - 60):m.end() + 60].replace('\n', ' ')
@@ -127,11 +128,21 @@ for p in html_files():
             err(rel, f'"exact" used about the site or a tool (describe tools as a general guide): "...{" ".join(ctx.split())}..."')
     for rx, label, fn in ((TIMEFRAME, 'specific clinical timeframe', warn), (SUPERLATIVE, 'superlative or outcome claim (AHPRA)', warn),
                           (TESTIMONIAL, 'testimonial wording (AHPRA)', err), (PAIN_TEAM_DAILY, 'says the pain team reviews everyone daily', err)):
-        if rx is TIMEFRAME and str(rel).startswith('teaching/'):
-            continue  # clinician teaching pages keep counselling timeframes (Ed, 07/10/2026)
+        if rx is TIMEFRAME and str(rel).startswith(CLINICIAN_DIRS):
+            continue  # clinician pages keep timeframes (Ed, 07/10/2026; ortho textbook 22/10/2026)
         for m in rx.finditer(text):
             ctx = text[max(0, m.start() - 60):m.end() + 60]
             fn(rel, f'{label}: "...{" ".join(ctx.split())}..."')
+
+# ---------- ortho textbook stays out of the patient search and the sitemap ----------
+si = ROOT / 'assets' / 'search-index.js'
+if si.exists() and re.search(r'"[pu]":\s*"ortho/', si.read_text(errors='replace')):
+    err('assets/search-index.js', 'the patient site search index contains ortho/ textbook pages; rebuild it with ortho/ excluded')
+for p in (ROOT / 'ortho').rglob('*.html') if (ROOT / 'ortho').exists() else []:
+    if not re.search(r'<meta[^>]+name=["\']robots["\'][^>]+noindex', p.read_text(errors='replace'), re.I):
+        err(p.relative_to(ROOT), 'ortho textbook page is missing its noindex meta tag')
+if 'Disallow: /ortho/' not in lines:
+    err('robots.txt', 'must contain "Disallow: /ortho/" so the clinician textbook is never indexed')
 
 # ---------- sitemap ----------
 sm = ROOT / 'sitemap.xml'

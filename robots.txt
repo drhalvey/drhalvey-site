@@ -2,5 +2,6 @@
 # The pain relief tool must never be indexed - keep /tools/ disallowed permanently.
 User-agent: *
 Disallow: /tools/
+Disallow: /ortho/
 
 Sitemap: https://drhalvey.com.au/sitemap.xml

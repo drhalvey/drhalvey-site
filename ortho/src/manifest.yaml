@@ -1,0 +1,84 @@
+title: "Orthopaedic Anaesthesia: Surgery First"
+subtitle: "What the surgeon is doing, why, and what it means for you"
+author: "Dr Ed Halvey, FRCA FANZCA"
+# Part C: the procedure atlas. Order here is the order in the index. One source file per id in src/cards/<id>.md.
+cards:
+  - {number: 1,  id: anatomic-tsa,                        group: "Upper limb",  region: "Shoulder",        title: "Anatomic total shoulder arthroplasty"}
+  - {number: 2,  id: reverse-tsa,                         group: "Upper limb",  region: "Shoulder",        title: "Reverse total shoulder arthroplasty"}
+  - {number: 3,  id: rotator-cuff-repair,                 group: "Upper limb",  region: "Shoulder",        title: "Arthroscopic rotator cuff repair"}
+  - {number: 4,  id: subacromial-decompression-acj,       group: "Upper limb",  region: "Shoulder",        title: "Subacromial decompression and ACJ excision"}
+  - {number: 5,  id: shoulder-stabilisation,              group: "Upper limb",  region: "Shoulder",        title: "Shoulder stabilisation: Bankart, remplissage, Latarjet"}
+  - {number: 6,  id: slap-repair-biceps-tenodesis,        group: "Upper limb",  region: "Shoulder",        title: "SLAP repair and biceps tenodesis"}
+  - {number: 7,  id: frozen-shoulder,                     group: "Upper limb",  region: "Shoulder",        title: "Frozen shoulder: MUA, hydrodilatation, capsular release"}
+  - {number: 8,  id: acj-reconstruction-clavicle,         group: "Upper limb",  region: "Shoulder",        title: "ACJ reconstruction and clavicle fixation"}
+  - {number: 9,  id: proximal-humerus-fracture,           group: "Upper limb",  region: "Shoulder",        title: "Proximal humerus fracture: ORIF versus reverse TSA"}
+  - {number: 10, id: shoulder-arthroscopy-debridement,    group: "Upper limb",  region: "Shoulder",        title: "Diagnostic shoulder arthroscopy, debridement and calcific tendinitis"}
+  - {number: 11, id: total-elbow-radial-head,             group: "Upper limb",  region: "Elbow",           title: "Total elbow arthroplasty and radial head replacement"}
+  - {number: 12, id: elbow-arthroscopy-release,           group: "Upper limb",  region: "Elbow",           title: "Elbow arthroscopy, release and tennis elbow surgery"}
+  - {number: 13, id: distal-biceps-ulnar-nerve,           group: "Upper limb",  region: "Elbow",           title: "Distal biceps repair; ulnar nerve decompression and transposition"}
+  - {number: 14, id: elbow-fracture-fixation,             group: "Upper limb",  region: "Elbow",           title: "Elbow fractures: olecranon, distal humerus, radial head"}
+  - {number: 15, id: distal-radius-orif,                  group: "Upper limb",  region: "Wrist and hand",  title: "Distal radius ORIF"}
+  - {number: 16, id: carpal-tunnel-minor-hand,            group: "Upper limb",  region: "Wrist and hand",  title: "Carpal tunnel, trigger finger, de Quervain's and ganglion"}
+  - {number: 17, id: dupuytrens-fasciectomy,              group: "Upper limb",  region: "Wrist and hand",  title: "Dupuytren's fasciectomy"}
+  - {number: 18, id: wrist-arthroscopy-scaphoid,          group: "Upper limb",  region: "Wrist and hand",  title: "Wrist arthroscopy, TFCC and scaphoid surgery"}
+  - {number: 19, id: trapeziectomy-wrist-fusion,          group: "Upper limb",  region: "Wrist and hand",  title: "Trapeziectomy and CMC arthroplasty; wrist fusion and arthroplasty"}
+  - {number: 20, id: hand-trauma,                         group: "Upper limb",  region: "Wrist and hand",  title: "Hand trauma: metacarpal and phalangeal fixation, tendon and nerve repair"}
+  - {number: 21, id: tha-posterior,                       group: "Hip and knee", region: "Hip",            title: "Primary total hip arthroplasty: posterior approach"}
+  - {number: 22, id: tha-anterior-lateral,                group: "Hip and knee", region: "Hip",            title: "Primary total hip arthroplasty: anterior and lateral approaches"}
+  - {number: 23, id: hip-resurfacing,                     group: "Hip and knee", region: "Hip",            title: "Hip resurfacing"}
+  - {number: 24, id: revision-tha,                        group: "Hip and knee", region: "Hip",            title: "Revision total hip arthroplasty"}
+  - {number: 25, id: hip-arthroscopy,                     group: "Hip and knee", region: "Hip",            title: "Hip arthroscopy: FAI and labral repair"}
+  - {number: 26, id: periacetabular-osteotomy,            group: "Hip and knee", region: "Hip",            title: "Periacetabular osteotomy"}
+  - {number: 27, id: primary-tka,                         group: "Hip and knee", region: "Knee",           title: "Primary total knee arthroplasty"}
+  - {number: 28, id: unicompartmental-knee,               group: "Hip and knee", region: "Knee",           title: "Unicompartmental knee arthroplasty"}
+  - {number: 29, id: revision-tka,                        group: "Hip and knee", region: "Knee",           title: "Revision total knee arthroplasty"}
+  - {number: 30, id: patellofemoral-mpfl-tto,             group: "Hip and knee", region: "Knee",           title: "Patellofemoral surgery: PFJ arthroplasty, MPFL reconstruction, tibial tubercle osteotomy"}
+  - {number: 31, id: knee-arthroscopy,                    group: "Hip and knee", region: "Knee",           title: "Knee arthroscopy: meniscectomy, meniscal repair, chondral procedures"}
+  - {number: 32, id: acl-reconstruction,                  group: "Hip and knee", region: "Knee",           title: "ACL reconstruction"}
+  - {number: 33, id: multiligament-knee,                  group: "Hip and knee", region: "Knee",           title: "Multiligament knee reconstruction"}
+  - {number: 34, id: hto-dfo,                             group: "Hip and knee", region: "Knee",           title: "High tibial and distal femoral osteotomy"}
+  - {number: 35, id: knee-mua-arthrolysis,                group: "Hip and knee", region: "Knee",           title: "Knee manipulation under anaesthesia and arthroscopic arthrolysis"}
+  - {number: 36, id: quads-patellar-tendon-repair,        group: "Hip and knee", region: "Knee",           title: "Quadriceps and patellar tendon repair"}
+  - {number: 37, id: periprosthetic-joint-infection,      group: "Hip and knee", region: "Knee",           title: "Periprosthetic joint infection: DAIR, one- and two-stage revision, spacers"}
+  - {number: 38, id: periprosthetic-fracture,             group: "Hip and knee", region: "Hip",            title: "Periprosthetic fractures of the hip and knee"}
+  - {number: 39, id: neck-of-femur,                       group: "Trauma",       region: "Trauma",         title: "Neck of femur fracture: hemiarthroplasty, THA, DHS and nail"}
+  - {number: 40, id: femoral-shaft-nailing,               group: "Trauma",       region: "Trauma",         title: "Femoral shaft nailing"}
+  - {number: 41, id: tibial-nailing-plateau,              group: "Trauma",       region: "Trauma",         title: "Tibial shaft nailing and tibial plateau fixation"}
+  - {number: 42, id: ankle-pilon-fixation,                group: "Trauma",       region: "Trauma",         title: "Ankle and pilon fracture fixation"}
+  - {number: 43, id: pelvic-acetabular-fixation,          group: "Trauma",       region: "Trauma",         title: "Pelvic and acetabular fracture fixation"}
+  - {number: 44, id: humeral-shaft-fixation,              group: "Trauma",       region: "Trauma",         title: "Humeral shaft fixation"}
+  - {number: 45, id: open-fractures-damage-control,       group: "Trauma",       region: "Trauma",         title: "Open fractures, external fixation and damage control orthopaedics"}
+  - {number: 46, id: compartment-syndrome-fasciotomy,     group: "Trauma",       region: "Trauma",         title: "Compartment syndrome and fasciotomy"}
+  - {number: 47, id: amputation,                          group: "Trauma",       region: "Trauma",         title: "Lower limb amputation"}
+  - {number: 48, id: osteomyelitis-septic-arthritis,      group: "Trauma",       region: "Trauma",         title: "Osteomyelitis debridement and septic arthritis washout"}
+  - {number: 49, id: removal-of-metalwork,                group: "Trauma",       region: "Trauma",         title: "Removal of metalwork"}
+  - {number: 50, id: polytrauma-sequencing,               group: "Trauma",       region: "Trauma",         title: "Polytrauma: sequencing, the second hit and when to operate"}
+  - {number: 51, id: lumbar-microdiscectomy-decompression, group: "Spine",       region: "Spine",          title: "Lumbar microdiscectomy and decompression"}
+  - {number: 52, id: posterior-lumbar-fusion,             group: "Spine",        region: "Spine",          title: "Posterior lumbar fusion: PLIF, TLIF and posterolateral"}
+  - {number: 53, id: anterior-lateral-lumbar-fusion,      group: "Spine",        region: "Spine",          title: "Anterior and lateral lumbar fusion: ALIF and LLIF"}
+  - {number: 54, id: acdf-cervical-disc-arthroplasty,     group: "Spine",        region: "Spine",          title: "ACDF and cervical disc arthroplasty"}
+  - {number: 55, id: posterior-cervical-fusion,           group: "Spine",        region: "Spine",          title: "Posterior cervical decompression and fusion"}
+  - {number: 56, id: adult-deformity-scoliosis,           group: "Spine",        region: "Spine",          title: "Adult deformity and scoliosis correction"}
+  - {number: 57, id: spinal-fracture-fixation,            group: "Spine",        region: "Spine",          title: "Thoracolumbar and cervical fracture fixation"}
+  - {number: 58, id: spinal-metastasis-vertebroplasty,    group: "Spine",        region: "Spine",          title: "Spinal metastasis decompression; vertebroplasty and kyphoplasty"}
+  - {number: 59, id: scs-intrathecal-pump,                group: "Spine",        region: "Spine",          title: "Spinal cord stimulator and intrathecal pump implantation"}
+  - {number: 60, id: si-joint-fusion-coccygectomy,        group: "Spine",        region: "Spine",          title: "Sacroiliac joint fusion and coccygectomy"}
+# Part A: principles. One source file per id in src/chapters/<id>.md.
+chapters_a:
+  - {id: a01-tourniquet,                 title: "The tourniquet"}
+  - {id: a02-cement-bcis,                title: "Bone cement and bone cement implantation syndrome"}
+  - {id: a03-fat-embolism,               title: "Fat embolism"}
+  - {id: a04-blood-management-txa,       title: "Blood management and tranexamic acid"}
+  - {id: a05-vte,                        title: "Venous thromboembolism prophylaxis"}
+  - {id: a06-positioning,                title: "Positioning: beach chair, lateral, prone and the traction table"}
+  - {id: a07-block-menu,                 title: "The block menu: regional anaesthesia keyed to the operation"}
+  - {id: a08-neuraxial-vs-ga,            title: "Neuraxial versus general anaesthesia for arthroplasty"}
+  - {id: a09-eras-day-case,              title: "Enhanced recovery and day-case arthroplasty"}
+  - {id: a10-the-orthopaedic-patient,    title: "The orthopaedic patient: frailty, hip fracture pathways, rheumatoid and ankylosing spondylitis, obesity"}
+  - {id: a11-nerve-injury-compartment,   title: "Nerve injury and compartment syndrome under regional anaesthesia"}
+  - {id: a12-opioid-tolerant,            title: "Opioid-tolerant and chronic pain patients"}
+  - {id: a13-antibiotics-infection,      title: "Antibiotic prophylaxis and periprosthetic infection"}
+  - {id: a14-spine-essentials,           title: "Spine essentials: neuromonitoring, prone physiology, blood loss and vision loss"}
+# Part B: the pain model. src/chapters/b01-why-operations-hurt.md.
+chapters_b:
+  - {id: b01-why-operations-hurt,        title: "Why operations hurt: a first-principles pain model"}
