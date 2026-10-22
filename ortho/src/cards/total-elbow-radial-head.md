@@ -1,0 +1,161 @@
+---
+id: total-elbow-radial-head
+title: "Total elbow arthroplasty and radial head replacement"
+subtitle: "Linked cemented total elbow for rheumatoid, post-traumatic and fracture indications; metallic radial head replacement for the unreconstructable radial head"
+aka: ["TEA", "total elbow replacement", "elbow replacement", "linked elbow", "semiconstrained elbow", "Coonrad-Morrey", "radial head arthroplasty", "radial head prosthesis", "radial head replacement", "rheumatoid elbow", "distal humerus fracture arthroplasty"]
+pain:
+  score: 3
+  trajectory: [2, 5, 4, 3, 2]
+  mechanism: bone
+  mechanism_text: "Distal humeral and proximal ulnar bone cuts, canal reaming and cement in both bones; the triceps reflected or split and repaired to the olecranon; the ulnar nerve mobilised and often transposed, which adds a neuropathic edge; a long tourniquet. Radial head replacement is a shorter version of the same mechanisms with a lateral ligament repair added"
+  rebound_risk: moderate
+block:
+  primary: "Infraclavicular or supraclavicular brachial plexus block, single shot, with intravenous dexamethasone, under general anaesthesia"
+  family: brachial-plexus-distal
+  catheter: selective
+  catheter_text: "Single shot plus multimodal is the defensible default for a primary total elbow and for a radial head replacement; a catheter earns its place for revision, opioid-tolerant or chronic pain patients and for the rheumatoid patient who cannot take an NSAID, provided the surgeon has agreed that the ulnar nerve check will wait until the block recedes"
+  alternatives: ["Axillary block with a separate musculocutaneous and intercostobrachial component (less reliable at the posterior elbow)", "General anaesthesia with surgeon infiltration and no block when the surgeon insists on an immediate ulnar nerve examination", "Continuous infraclavicular or retroclavicular catheter for the selected patient"]
+  neuraxial: no
+position: supine
+position_text: "Supine with the arm across the chest on a padded bolster is the usual position for a total elbow; lateral decubitus with the arm over a padded post is the alternative some surgeons prefer. Radial head replacement is supine on an arm table"
+tourniquet: yes
+tourniquet_text: "Sterile tourniquet high on the arm for a total elbow, often approaching 120 min; many surgeons release it before triceps repair and closure. A radial head replacement sits inside a single inflation"
+cement: yes
+cement_text: "Both components of a linked total elbow are cemented, usually with antibiotic-loaded cement, into small canals pressurised with a gun; the humeral canal is the only step with bone cement implantation syndrome potential, and it is small. Radial head stems are press-fit, intentionally loose, or cemented depending on the design"
+blood_loss: "200-400 mL for a total elbow, mostly after tourniquet release and into the drain; transfusion uncommon but the rheumatoid patient starts anaemic. Radial head replacement under 100 mL"
+duration: "120-180 min skin to skin for a primary total elbow, longer for fracture or revision; 60-120 min for a radial head replacement, longer as part of a terrible triad repair"
+los: "1-3 nights for a total elbow; day case or one night for a radial head replacement"
+day_case: selected
+drugs:
+  antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg); antibiotic-loaded cement is the surgeon's second measure for a joint with a 2-8% infection rate"
+  txa: "Tranexamic acid 1 g IV before incision; the elbow-specific evidence is thin and the practice is borrowed from the hip and shoulder"
+  vte: "Mechanical prophylaxis; chemoprophylaxis only for the patient's own risk factors, since upper limb arthroplasty carries a low baseline risk"
+  antiemetic: "Dexamethasone 8 mg IV at induction and ondansetron 4 mg IV before emergence"
+patient_line: "The arm will be numb and heavy into the night; the elbow is sore for the first two or three days and then settles, the little finger side of the hand may tingle for a few weeks because the nerve was moved, and the replaced elbow is for daily living, not for lifting."
+trap: "Document ulnar nerve function before the block and agree with the surgeon beforehand whether the nerve will be examined before or after the block recedes: the nerve is mobilised in every total elbow, a dense block hides a neuropraxia until the next day, and a surgeon who expected to test it in recovery will not thank you for a perfect block"
+sources:
+  - title: "Sanchez-Sotelo J. Total elbow arthroplasty. Open Orthop J 2011;5:115-123"
+    url: "https://doi.org/10.2174/1874325001105010115"
+    note: "Mayo review: triceps-reflecting Bryan-Morrey approach preferred, triceps-sparing where possible; routine subcutaneous ulnar nerve transposition by most surgeons; both components cemented with antibiotic-loaded cement; severe ulnar neuropathy about 5%, infection 2-4%, aseptic loosening 5-10%, triceps insufficiency 3%"
+  - title: "Prkic A, Welsink C, The B, van den Bekerom MPJ, Eygendaal D. Why does total elbow arthroplasty fail today? A systematic review of recent literature. Arch Orthop Trauma Surg 2017;137:761-769"
+    url: "https://doi.org/10.1007/s00402-017-2687-x"
+    note: "70 studies, 9,308 primary elbows, 13.5% revised: aseptic loosening 38% of revisions, deep infection 19%, periprosthetic fracture 12%; loosening less common with linked implants; revision more common after rheumatoid arthritis than after trauma"
+  - title: "McKee MD, Veillette CJ, Hall JA, et al. A multicenter, prospective, randomized, controlled trial of open reduction-internal fixation versus total elbow arthroplasty for displaced intra-articular distal humeral fractures in elderly patients. J Shoulder Elbow Surg 2009;18:3-12"
+    url: "https://pubmed.ncbi.nlm.nih.gov/18823799/"
+    note: "42 patients over 65 randomised; five of 21 allocated to fixation were converted to arthroplasty on the table for comminution; operative time 108 versus 140 min; DASH better after arthroplasty at six weeks (43 versus 77) and six months (31 versus 47); reoperation 12% versus 27%, not significant"
+  - title: "Dachs R, Chivers D, Du Plessis JP, Vrettos B, Roche S. The ulnar nerve in total elbow arthroplasty: outcomes after in-situ release. Orthopaedic Proceedings 2014;96-B(Supp 19):22"
+    url: "https://boneandjoint.org.uk/Article/10.1302/1358-992X.96BSUPP_19.SAOA2014-022"
+    note: "83 consecutive primary total elbows: in-situ release in 78, transposition in four for abnormal tracking; ulnar symptoms in 7.7% after in-situ release, four early-resolving neuropraxias and two (2.6%) needing later transposition; systematic reviews quoted at 3-11%"
+  - title: "Orthobullets. Elbow total arthroplasty"
+    url: "https://www.orthobullets.com/shoulder-and-elbow/3089/elbow-total-arthroplasty"
+    note: "Indications, linked versus unlinked designs, supine or lateral positioning, lifelong lifting restriction of 2-5 kg; infection 8%, periprosthetic fracture 5-30%, survivorship free of revision 92.4% at ten years for rheumatoid arthritis with a 14% complication rate"
+  - title: "Heijink A, Kodde IF, Mulder PGH, et al. Radial head arthroplasty: a systematic review. JBJS Rev 2016;4(10):e3"
+    url: "https://doi.org/10.2106/JBJS.RVW.15.00095"
+    note: "30 studies, 727 patients, mean follow-up 45 months: 21% cemented, 32% press-fit, 32% intentionally loose, 15% expandable stems; revision 8% (2.06 per 100 person-years); complications in 23%; no design better than another except that silicone implants are insufficient"
+  - title: "Wegmann K, Hackl M, Leschinger T, Müller LP, et al. Overlengthening of the radial column in radial head replacement: a review of the literature and presentation of a classification system. Arch Orthop Trauma Surg 2021;141:1525-1539"
+    url: "https://doi.org/10.1007/s00402-020-03619-9"
+    note: "Overlengthening (overstuffing) in up to about 20% of implanted radial heads in series and the cause of 13-23% of revisions; capitellar erosion and stiffness are its consequences"
+  - title: "Dhir S, Brown B, Mack P, Bureau Y, Yu J, Ross D. Infraclavicular and supraclavicular approaches to brachial plexus for ambulatory elbow surgery: a randomized controlled observer-blinded trial. J Clin Anesth 2018;48:67-72"
+    url: "https://doi.org/10.1016/j.jclinane.2018.05.005"
+    note: "150 ambulatory elbow operations with ropivacaine: supplementation 4.2% versus 4.1%, conversion to general anaesthesia 4.2% versus 5.5%, sensory onset 20 versus 19 min; paraesthesia during the block 8.3% infraclavicular versus 23.2% supraclavicular; both equally effective for the elbow"
+  - title: "Megaw K, Johnston DF. Continuous infraclavicular brachial plexus block using retroclavicular approach for total elbow replacement. J Clin Anesth 2020;60:111-112"
+    url: "https://doi.org/10.1016/j.jclinane.2019.05.004"
+    note: "Technique report of a retroclavicular catheter for total elbow replacement with good analgesia and satisfaction; a description, not a trial"
+  - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
+    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age; absence of intravenous dexamethasone OR 1.78"
+---
+
+## What the surgeon is doing and why
+
+The elbow is a hinge that has to be stable through a 140 degree arc while the forearm rotates on it, and it is held together by a deep, congruent bony articulation and two collateral ligaments rather than by muscle. Rheumatoid arthritis destroys that in a particular order: synovitis thins the cartilage, erodes the trochlea and the olecranon, stretches the collaterals, and leaves a painful, unstable, often flail joint in a patient with weak muscles, thin skin, long-term steroids and a suppressed immune system. Post-traumatic arthritis and the comminuted distal humeral fracture in an osteoporotic patient over 65 reach the same end point by another route: the articular surface is worn or in pieces that will not hold a screw, and the choice is between a fixation that may fail and a replacement that works on day 1. In the one randomised trial, five of 21 patients allocated to fixation were converted to a replacement on the table because the fragments were too small, the replacement was half an hour quicker (108 versus 140 min), and function was better at six weeks and six months.
+
+The modern total elbow is a linked, semiconstrained hinge: a cemented humeral stem with an anterior flange, a cemented ulnar stem, and a pin-and-bushing coupling that allows a few degrees of varus-valgus play so the cement interfaces share the load. Linking the halves means the collateral ligaments do not matter, which is the point: the surgeon can release them, excise the radial head, and reconstruct a flail joint that will not dislocate. The cost of a hinge is that every load on the hand becomes a torque on two cement mantles in small canals, which is why aseptic loosening leads the failure list (38% of revisions in the pooled 9,308 elbows, less often with linked than unlinked designs) and why the patient is told, for life, not to lift more than 2-5 kg. Unlinked designs keep the ligaments and need them; some surgeons use them for the rheumatoid elbow with good bone, accepting more instability for less loosening.
+
+The surgeon's aims, in order:
+
+1. Reach the back of the joint through a posterior midline incision, find the ulnar nerve behind the medial epicondyle, and decide whether it will be transposed anteriorly or released in situ.
+2. Get the triceps out of the way without losing it: reflected off the olecranon as a continuous sleeve (Bryan-Morrey), split in the midline, or left attached with the joint entered on either side of it. Whatever is done here is undone at the end, and the repair is the tendon-tension element of the operation.
+3. Release the capsule and collaterals, excise the radial head, cut the distal humerus to accept the stem and flange, and ream two small curved canals.
+4. Cement both stems with antibiotic-loaded cement, graft behind the anterior flange, and link the hinge.
+5. Repair the triceps through bone tunnels, settle the ulnar nerve, close thin skin over a prominent joint, and splint in extension so the posterior wound is not folded.
+
+Radial head replacement is a smaller operation sharing the joint. A metallic head goes in when the native head is in too many pieces to fix and the elbow needs it for stability: a terrible triad (dislocation with radial head and coronoid fractures), an Essex-Lopresti injury where the interosseous membrane is torn and the forearm will shorten without a radial column, or a medial collateral injury where the head is the secondary valgus stabiliser. The surgeon enters laterally between anconeus and extensor carpi ulnaris, removes the fragments, sizes the implant to the native head (too long, and the capitellum erodes and the elbow stiffens: overlengthening causes 13-23% of revisions), seats a press-fit, loose-fit or cemented stem, and usually repairs the lateral collateral complex to the epicondyle.
+
+The pain logic follows from the tissues. The dominant mechanism is bone: cuts and canal preparation in two bones, with cement, which hurts hard for two or three days and settles because nothing is loaded through a replaced elbow in the first week. Behind it sit three contributors. The triceps repair (or the lateral ligament repair in a radial head case) is a tendon under tension, protected but loaded by every push up from a chair. The ulnar nerve has been dissected over 10 cm and often moved, so some patients wake with ring and little finger dysaesthesia that is neuropathic in character and lasts weeks. And the tourniquet has been up for most of two hours. Compared with [distal humerus fixation](elbow-fracture-fixation.html) there is less subperiosteal stripping and no two-column plating, so the early curve is kinder; compared with a [reverse shoulder](reverse-tsa.html), nothing is lengthened or re-tensioned.
+
+## Steps
+
+### 1. The patient before the block: rheumatoid, elderly, or both
+**Why:** The surgeon needs an elbow that can be operated on for two hours and a patient who can protect it for six weeks. Most elective total elbows are rheumatoid; most fracture total elbows are frail women over 70.
+**Anaesthesia:** The rheumatoid patient brings the atlantoaxial question (a documented stable neck before a two-hour case with the head turned), temporomandibular and cricoarytenoid involvement that make the airway harder than it looks, long-term steroids needing a supplement, methotrexate and a biologic managed according to the unit's practice, anaemia of chronic disease, and skin that tears under tape. The fracture patient brings the hip-fracture problems in a different joint: dehydration, delirium risk, and a reason for the fall. Examine and document ulnar nerve sensation and intrinsic power before any block or sedation, because this nerve is handled in every total elbow and the block will hide it for 12-24 h. Agree the nerve-check plan with the surgeon now, not in recovery.
+
+### 2. Block, airway and position
+**Why:** A posterior approach needs the arm across the chest on a bolster with the patient supine, or over a padded post with the patient lateral. Supine is quicker to set up and keeps the airway in front of you; lateral gives a more stable field.
+**Anaesthesia:** An infraclavicular or supraclavicular block with intravenous dexamethasone 8 mg, placed before induction. The two approaches performed identically for elbow surgery in the 150-patient randomised trial (supplementation 4.2% against 4.1%, conversion to general anaesthesia 4.2% against 5.5%), and infraclavicular produced fewer paraesthesiae on placement (8.3% against 23.2%), a reasonable tie-breaker in a patient with rheumatoid neuropathy. The high tourniquet site is covered by depth of anaesthesia rather than by the block. A tracheal tube is the author's default for a two-hour case with the surgeon leaning on the chest; a supraglottic airway is reasonable for a short radial head case. Pad the contralateral ulnar nerve with more care than usual: a bilateral ulnar neuropathy after an elbow replacement is an argument nobody wins. In lateral, the dependent plexus, eye and peroneal nerve need the usual attention.
+
+### 3. Sterile tourniquet, antibiotic and tranexamic acid
+**Why:** The field is the whole elbow and proximal forearm, so the tourniquet goes high and sterile. Infection is the second commonest reason for revision (19%) and the skin over the olecranon is thin, so antibiotic-loaded cement and a prophylactic antibiotic are both used.
+**Anaesthesia:** Cefazolin 2 g IV finished before inflation, 3 g over 120 kg; tranexamic acid 1 g IV at the same time, on evidence borrowed from the hip and shoulder. Say the inflation time aloud at 90 and 120 min; a total elbow routinely reaches the limit most units set, and the usual answer is release before the triceps repair. Tourniquet pain under general anaesthesia is a slow rise in pressure and heart rate from about 45 min that ignores opioid and answers deflation.
+
+### 4. Posterior incision and the ulnar nerve
+**Why:** A posterior incision curved around the olecranon gives access to both sides. The ulnar nerve is released from the arcade of Struthers through the cubital tunnel into flexor carpi ulnaris, then either moved into an anterior subcutaneous pocket (most surgeons' routine in the Mayo review) or released in situ and left (the practice in the 83-elbow series, with persistent symptoms in 2.6%). Either way it is dissected free along its whole course at the elbow and retracted for the rest of the case.
+**Anaesthesia:** Nothing to do; the step is the surgeon's quietest ten minutes. Severe ulnar neuropathy is quoted at around 5% in the Mayo review and 3-11% across systematic reviews; most is traction and devascularisation from this step and the retractors that follow, and most resolves. This is the injury your pre-operative documentation and your block agreement were for.
+
+### 5. Triceps: reflect, split or spare
+**Why:** The Bryan-Morrey approach peels the triceps off the olecranon in continuity with the forearm fascia and reflects the sleeve laterally; a midline split goes through it; a triceps-on approach works around it and is favoured for fractures, where the condyles can be removed without touching the insertion. Reflecting and splitting give the best exposure and need a repair; sparing protects extension strength and makes the ulna harder to prepare.
+**Anaesthesia:** The choice decides a third of the pain course and all of the rehabilitation. A reflected triceps repaired through drill holes will not be allowed to extend against resistance for six weeks and is loaded by every push on a chair arm; triceps insufficiency (about 3%) is that repair failing. A triceps-on elbow can extend from day 1. Ask which was done before writing the discharge analgesia, because the repaired-triceps patient has more movement-evoked pain in week 2 than the mechanism tag suggests.
+
+### 6. Releases, radial head excision and the distal humeral cut
+**Why:** The surgeon releases the capsule and both collaterals (a linked design does not need them), dislocates the joint, excises the radial head, and cuts the distal humerus to accept the stem and flange. In a fracture the condyles come out as fragments and the cut is half made.
+**Anaesthesia:** Full capsular release and dislocation is the point of maximum nociception before the bone work; an incomplete block declares itself now. A thin rheumatoid cortex or an osteoporotic humerus can fracture during dislocation or stem preparation, and the surgeon's reaction tells you the case has lengthened by 30 min and a cerclage.
+
+### 7. Canal preparation in two small bones
+**Why:** The humeral canal is reamed and broached from the cut surface; the ulnar canal is entered at the coronoid base or olecranon tip and reamed along its curve. Both are small and curved, and the ulna is easy to perforate.
+**Anaesthesia:** Reaming and broaching are the bone mechanism being created. Marrow vents from two canals, but the volumes are small and neither is pressurised yet, so the disturbance is a fraction of a femur's. Warm the patient: a long case, an exsanguinated limb and an open joint lose heat steadily, and cement behaves better in a normothermic patient.
+
+### 8. Cementing both stems and linking the hinge
+**Why:** Antibiotic-loaded cement is injected into both canals with a gun, the stems pushed home with a wedge of bone graft trapped behind the anterior flange so it integrates and resists the loads that would loosen the stem, and the halves linked. The surgeon checks the arc of motion without the triceps.
+**Anaesthesia:** The only cement step of the upper limb that deserves the name, and a modest one: two small canals, hand pressurised. Treat it as the hip card does in miniature: pressure supported before the cement goes in, oxygen up, and the frail fracture patient watched for the fall in end-tidal carbon dioxide and pressure that marks a cement reaction, because that patient is the one most likely to produce it. The cure time is a fixed interval in which the surgeon does nothing to the patient; use it to plan the deflation.
+
+### 9. Triceps repair, nerve placement, closure and the extension splint
+**Why:** The triceps is sutured back to the olecranon through bone tunnels with the arm slightly flexed so the repair sits without tension. The ulnar nerve is checked for kinking at its new entry or along its native course, the tourniquet released, bleeding dealt with, a drain placed by many surgeons, and thin posterior skin closed in layers. An anterior splint holds the elbow in extension so the wound is not folded.
+**Anaesthesia:** Release here brings a reperfusion dip in pressure, a rise in end-tidal carbon dioxide and a bleeding field the surgeon must now control; after a full-length inflation the washout is noticeable and the pressure takes minutes to recover. The repair wants a still patient and a held arm, not neuromuscular block. Give the antiemetic. The splint goes on before the patient lightens: an awake patient with a dense block and a repaired triceps will otherwise bend the elbow with the other hand.
+
+### 10. Recovery, the first night and the nerve
+**Why:** The surgeon wants the wound dry and flat, the elbow extended for a few days, no resisted extension for six weeks if the triceps was reflected, and to know that the ulnar nerve works.
+**Anaesthesia:** The hand is examined when the block recedes, at the time agreed in step 1. The oral regimen starts in recovery: paracetamol, an NSAID or COX-2 inhibitor if renal function and the rheumatoid drug list allow it, and an oral opioid for the first three nights. In the 972-patient ambulatory cohort half of block patients had rebound pain, with bone surgery (OR 1.82) and no intravenous dexamethasone (OR 1.78) raising the odds; this is bone surgery. A numb little finger and a rising elbow at 2 am is the block wearing off; a tense, swollen posterior wound is bleeding into a closed space over a nerve and needs the surgeon. Length of stay is one to three nights, longer for slow rheumatoid skin.
+
+### 11. Radial head replacement: the lateral approach and the ligament
+**Why:** Usually a trauma patient. Through the Kocher interval the surgeon removes the head fragments, checks the coronoid and ligaments, sizes the implant against the removed head, reams the neck and seats the stem. If the lateral collateral complex has come off the epicondyle (it usually has in a dislocation) it is repaired with anchors or tunnels, and in a terrible triad the coronoid is fixed first through the same wound.
+**Anaesthesia:** Supine on an arm table with a standard tourniquet, 60-120 min, the same block with dexamethasone. The posterior interosseous nerve runs through supinator a few centimetres distal to the head and is protected by pronating the forearm; a wrist drop afterwards is retraction or an over-long reamer, and another reason to document before the block. The ligament repair is the tendon-tension element and the reason the elbow is splinted and the forearm kept pronated. Sizing is the surgical trap: an over-long head (up to about 20% of implants) erodes the capitellum, stiffens the elbow over months and causes 13-23% of revisions.
+
+### 12. The radial head patient and discharge
+**Why:** Early protected motion in a hinged brace, because a stiff elbow after a terrible triad is the usual bad outcome, with the ligament repair protected from varus stress.
+**Anaesthesia:** Most isolated radial head replacements go home the same day with a working block, oral analgesia started and a written night plan; a terrible triad with coronoid fixation and a ligament repair stays one night. The pain course behaves like a 2 after the first night, because the bone work is small and the early motion is passive.
+
+## Pain plan
+
+The dominant mechanism is bone with cement, which argues for a single-shot block with dexamethasone to carry the first night and an oral regimen for the next three days; the two secondary mechanisms (a repaired triceps or ligament, and a handled nerve) argue for a regimen that expects movement-evoked pain in week 2 and a neuropathic flavour in the hand. There is no procedure-specific guideline for the elbow; the nearest PROSPECT evidence is for the shoulder, and this plan is author's judgement built on the mechanism and on the general ambulatory block data.
+
+The defensible default is an infraclavicular or supraclavicular block with 20-25 mL of ropivacaine 0.5% (equivalent for elbow surgery in the randomised comparison; infraclavicular gave fewer paraesthesiae), intravenous dexamethasone 8 mg at induction, paracetamol and an NSAID or COX-2 inhibitor started before the block recedes, and oral opioid for the first three nights. The NSAID decision is harder than usual: rheumatoid patients are often on methotrexate, have renal function that will not tolerate a week of NSAID, and may already be on a COX-2 inhibitor. When the NSAID is off the table the opioid requirement rises and the catheter argument strengthens.
+
+The catheter question has two parts. On pain grounds a primary total elbow sits where the [anatomic shoulder](anatomic-tsa.html) sits: a single shot with dexamethasone and a reliable oral regimen is enough for most, and a continuous infraclavicular or retroclavicular catheter (described for total elbow replacement as a technique with good analgesia, without a trial behind it) earns its place for a revision, an opioid-tolerant or chronic pain patient, or the rheumatoid patient who cannot take an NSAID. On nerve grounds a catheter means no ulnar nerve examination for two days, and that is the surgeon's call as much as yours; most accept it if the nerve was seen intact and released without tension, some do not. The author's practice is a single shot for a primary total elbow and for every radial head replacement, and a catheter only after a conversation with the surgeon about the nerve.
+
+Escalation: pain above 7 after the block has gone, with a soft wound, a warm hand and the splint on, is treated with the charted opioid and a check that the regular doses were given. Pain out of proportion in a tense posterior wound is a haematoma over the ulnar nerve and is surgical. Ring and little finger numbness that was absent when the block wore off, or that worsens over days, is a nerve under pressure in its new bed and also surgical. Burning dysaesthesia present from the start and stable is traction neuritis and settles over weeks; a gabapentinoid for it is author's judgement, not evidence.
+
+## Pitfalls and variants
+
+- Triceps-reflecting versus triceps-on. The reflected sleeve gives the best exposure and the most movement-evoked pain in weeks 1-2, with a repair that fails in about 3%; triceps-on is favoured for fractures and leaves an elbow that extends from day 1. Ask which was done.
+- Unlinked designs. Kept by some surgeons for the rheumatoid elbow with good bone and intact collaterals: less loosening, more instability, and the surgeon will want the arm still while the ligaments are balanced.
+- Fracture total elbow. The frail patient over 70 with a comminuted distal humerus, often converted on the table from a planned fixation. Expect the position and tourniquet of the [elbow fracture card](elbow-fracture-fixation.html), a cement step in the frailest patient of the week, and the hip-fracture medical problems.
+- Rheumatoid airway, neck and drugs. Atlantoaxial instability, a stiff temporomandibular joint and cricoarytenoid arthritis, so an airway plan that does not involve extension; a steroid supplement; methotrexate continued in most units and biologics paused by most rheumatologists.
+- Infection and periprosthetic fracture. Infection 2-4% in the Mayo review, up to 8% in some series, 19% of revisions; fracture in 5-30% of primary elbows over their life, usually the thin humeral shaft above the stem, and the revision is a long case with a strut graft.
+- Ulnar nerve. Transposed by most, released in situ by some; symptoms in 3-11%, mostly transient. Document before the block, agree when the nerve will be examined, treat a worsening deficit as surgical.
+- Radial head overstuffing. Sized against the removed head, and 2 mm too long is enough to erode the capitellum; the stiffness presents months later as a revision.
+- Essex-Lopresti. The head must be replaced, not excised, and the wrist may be stabilised under the same anaesthetic, which lengthens the case and moves the tourniquet.
+- Posterior interosseous nerve. At risk in the lateral approach; a wrist drop in recovery needs the block excluded (document before) and then the surgeon.
+
+## Key sources
+
+An uncommon operation with a complication literature far larger than its analgesia literature. The failure data come from the 9,308-elbow systematic review and the Mayo narrative review; the ulnar nerve figures from the same review and an 83-patient series that argues against routine transposition; the fracture indication from the single randomised trial of fixation against replacement in the elderly. The block recommendation rests on a randomised comparison of infraclavicular and supraclavicular approaches for ambulatory elbow surgery and on the general rebound-pain cohort; the catheter advice is author's judgement, and the only catheter description for total elbow replacement is a technique report. Radial head figures come from the 727-patient systematic review and the overlengthening review. The pain score is calibrated against the elbow fracture anchor in the Part B scale, since procedure-specific pain data do not exist.
