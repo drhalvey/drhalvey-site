@@ -1,0 +1,151 @@
+---
+id: subacromial-decompression-acj
+title: "Subacromial decompression and ACJ excision"
+subtitle: "Arthroscopic subacromial decompression, acromioplasty and distal clavicle excision without cuff repair"
+aka: ["SAD", "ASD", "ASAD", "acromioplasty", "subacromial impingement", "impingement syndrome", "distal clavicle excision", "DCE", "Mumford procedure", "ACJ excision", "ACJ arthritis", "bursectomy", "coracoacromial ligament release"]
+pain:
+  score: 2
+  trajectory: [1, 4, 3, 2, 1]
+  mechanism: bone
+  mechanism_text: "A burred acromial undersurface and, if the clavicle is excised, a raw distal clavicle end: two small cancellous bone surfaces under the deltoid that hurt like a minor osteotomy for two or three days; the bursectomy and portals add surface pain; nothing is repaired, tensioned or loaded"
+  rebound_risk: moderate
+block:
+  primary: "Interscalene or superior trunk block, single shot, with intravenous dexamethasone, chosen for the anaesthetic and the first night as much as for the pain"
+  family: interscalene
+  catheter: "no"
+  catheter_text: "No mechanism to justify one: no repair, no tension, no loaded tissue, and the pain is largely over by day 3"
+  alternatives: ["Suprascapular nerve block (anterior approach) with or without axillary nerve block, phrenic sparing and near-equivalent after the recovery room", "General anaesthesia with surgeon-delivered subacromial local anaesthetic infiltration and an oral regimen, which is adequate for an isolated decompression in a patient who declines a block", "Liposomal bupivacaine interscalene where available, of no proven benefit over plain bupivacaine with dexamethasone here"]
+  neuraxial: no
+position: beach-chair
+position_text: "Beach chair in most Australian practice; lateral decubitus with arm traction in some hands, which changes airway access and plexus traction but not the pain"
+tourniquet: no
+tourniquet_text: ""
+cement: no
+cement_text: ""
+blood_loss: "Minimal; the fluid in the drapes is irrigation and the haemoglobin does not move"
+duration: "30-60 min skin to skin; the distal clavicle adds 15-20 min, a biceps tenotomy adds five"
+los: "Day case"
+day_case: yes
+drugs:
+  antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg) if any anchor or implant is placed; for a pure decompression with no implant surgeons vary, and the author gives it because Cutibacterium acnes is the shoulder organism and the cost of omission is a septic joint"
+  txa: "Not needed for blood loss; some surgeons ask for TXA 1 g IV for arthroscopic visibility, which is a reasonable request"
+  vte: "Mechanical only; the operation is short, the patient walks out, and chemoprophylaxis is for the patient's own risk factors"
+  antiemetic: "Dexamethasone 8 mg IV at induction (also the block adjunct) and ondansetron 4 mg IV before emergence"
+patient_line: "The arm will be numb and heavy for the rest of the day; the shoulder is sore for two or three days, mostly at night, and most people are on simple painkillers only by the end of the first week."
+trap: "This is the operation the CSAW trial could not separate from placebo arthroscopy: the block, the dexamethasone and the written night plan are the only things on the table that reliably change what the patient feels, so do not under-treat a short case because it is a short case, and do not over-treat it with a catheter it cannot use"
+sources:
+  - title: "Beard DJ, Rees JL, Cook JA, et al. Arthroscopic subacromial decompression for subacromial shoulder pain (CSAW): a multicentre, pragmatic, parallel group, placebo-controlled, three-group, randomised surgical trial. Lancet 2018;391:329-338"
+    url: "https://doi.org/10.1016/S0140-6736(17)32457-1"
+    note: "313 patients with intact cuffs after failed non-operative care: Oxford Shoulder Score at 6 months 32.7 after decompression versus 34.2 after arthroscopy only (difference -1.3, not significant); both surgical groups 3-4 points better than no treatment, below the threshold of clinical importance; six frozen shoulders"
+  - title: "Karjalainen TV, Jain NB, Page CM, et al. Subacromial decompression surgery for rotator cuff disease. Cochrane Database Syst Rev 2019;1:CD005619"
+    url: "https://doi.org/10.1002/14651858.CD005619.pub3"
+    note: "Eight trials, 1,062 participants with impingement and no full-thickness tear; two placebo-controlled trials (506 participants) found no clinically important benefit of decompression over arthroscopy alone"
+  - title: "Toma O, Persoons B, Pogatzki-Zahn E, Van de Velde M, Joshi GP. PROSPECT guideline for rotator cuff repair surgery. Anaesthesia 2019;74:1320-1331"
+    url: "https://doi.org/10.1111/anae.14796"
+    note: "The nearest procedure-specific guideline: interscalene block first choice, IV dexamethasone preferred over perineural, paracetamol plus NSAID, suprascapular block as an alternative, controlled hypotension not recommended"
+  - title: "Hussain N, Goldar G, Ragina N, Banfield L, Laffey JG, Abdallah FW. Suprascapular and interscalene nerve block for shoulder surgery: a systematic review and meta-analysis. Anesthesiology 2017;127:998-1013"
+    url: "https://doi.org/10.1097/ALN.0000000000001894"
+    note: "16 trials, 1,152 patients: no difference in 24 h morphine consumption; interscalene better in the recovery room by 1.5 cm on a 10 cm scale and not thereafter; suprascapular block had fewer block-related and respiratory complications"
+  - title: "White L, Reardon D, Davis K, Velli G, Bright M. Anterior suprascapular nerve block versus interscalene brachial plexus block for arthroscopic shoulder surgery: a systematic review and meta-analysis of randomized controlled trials. J Anesth 2022;36:17-25"
+    url: "https://doi.org/10.1007/s00540-021-03000-z"
+    note: "Six trials, 709 patients: interscalene pain scores lower by 0.4 in recovery only, no difference in opioid use or in pain at 6-24 h; anterior suprascapular block had far less Horner's syndrome, hoarseness and respiratory impairment"
+  - title: "Kang R, Jeong JS, Chin KJ, et al. Superior trunk block provides noninferior analgesia compared with interscalene brachial plexus block in arthroscopic shoulder surgery. Anesthesiology 2019;131:1316-1326"
+    url: "https://doi.org/10.1097/ALN.0000000000002919"
+    note: "80 arthroscopic shoulder patients, 15 mL ropivacaine 0.5%: pain at 24 h 1.4 vs 1.2; complete hemidiaphragmatic paresis 5% vs 73%"
+  - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
+    note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age, and absence of IV dexamethasone OR 1.78"
+  - title: "Uppal V, Barry G, Ke JXC, et al. Reducing rebound pain severity after arthroscopic shoulder surgery under general anesthesia and interscalene block: a two-centre randomized controlled trial of pre-emptive opioid treatment compared with placebo. Can J Anaesth 2024;71:773-783"
+    url: "https://doi.org/10.1007/s12630-023-02594-0"
+    note: "73 arthroscopic shoulder patients: hydromorphone 2 mg at six hours did not reduce worst pain in 24 h (6.5 vs 5.9); mean time to worst pain 14.6 h and to first rescue analgesia 11.3 h after the block"
+  - title: "Gerbershagen HJ, Aduckathil S, van Wijck AJ, Peelen LM, Kalkman CJ, Meissner W. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
+    url: "https://doi.org/10.1097/ALN.0b013e31828866b3"
+    note: "50,523 patients; 22 of the 40 most painful procedures were orthopaedic or trauma operations on the extremities, with regional anaesthesia used in only 15.5% of those; minor procedures produced unexpectedly high day 1 pain"
+  - title: "Leon JV, Hermans D, Venkatesha V, Duckworth DG. Patient outcomes following arthroscopic distal clavicle excision: a prospective case series. JSES Int 2023;7:2400-2405"
+    url: "https://doi.org/10.1016/j.jseint.2023.07.014"
+    note: "59 isolated arthroscopic distal clavicle excisions: VAS from 8.2 before surgery to 3.4 at six months; return to work at a mean of 1.7 months"
+  - title: "Cullen DJ. Why worry about blood pressure during surgery in the beach chair position? APSF Newsletter 2020"
+    url: "https://www.apsf.org/article/why-worry-about-blood-pressure-during-surgery-in-the-beach-chair-position/"
+    note: "Hydrostatic correction of about 2 mmHg per inch between cuff and external auditory meatus; strokes reported after shoulder surgery in beach chair with cuff systolics in the 80s-90s; no deliberate hypotension"
+---
+
+## What the surgeon is doing and why
+
+Subacromial pain with an intact cuff was explained for forty years by impingement: a hooked or spurred acromion and a thickened coracoacromial ligament rubbing the supraspinatus tendon on elevation, so remove the roof and the tendon stops being abraded. The operation built on that idea is a bursectomy, release of the coracoacromial ligament and a burring of the anterior-inferior acromion to a flat surface. The mechanical story has not survived well. The CSAW trial randomised 313 patients with at least three months of subacromial pain, an intact cuff and a failed course of physiotherapy and injection to decompression, to arthroscopy with bursal inspection and no bone or ligament work, or to no treatment, and at six months the Oxford Shoulder Score was 32.7 after decompression and 34.2 after placebo arthroscopy; both surgical groups scored three to four points better than no treatment, below the threshold the trial defined as clinically important. The Cochrane review pooling both placebo-controlled trials reached the same conclusion. The operation is still done, in smaller numbers, for the patient who has exhausted everything else, for a large spur in a shoulder with a partial-thickness tear, and as a component of other arthroscopic procedures, where it adds a raw bone surface (see [rotator cuff repair](rotator-cuff-repair.html)).
+
+Distal clavicle excision is a different operation with a better mechanical rationale. The acromioclavicular joint is a small, incongruent, heavily loaded joint that wears, develops osteolysis in weightlifters, and hurts on cross-body adduction. Resecting the lateral 5-10 mm of the clavicle takes the two bone ends out of contact while leaving the coracoclavicular and the superior and posterior acromioclavicular ligaments intact, so the joint stays stable and stops hurting. Done arthroscopically, from the subacromial space or directly through the joint, it is an extension of the same portals; a prospective series of 59 isolated excisions saw pain fall from 8.2 to 3.4 by six months. Resecting too much destabilises the clavicle and produces a pain that does not go away, which is why the surgeon measures with the burr.
+
+What actually happens to tissue, in order:
+
+1. Arthroscopy of the glenohumeral joint through a posterior portal, to look for the things that would change the operation: a partial or full cuff tear, labral pathology, a biceps lesion, cartilage loss. Many surgeons tenotomise a frayed long head of biceps on the way through.
+2. The scope goes into the subacromial space. The bursa, thick and vascular in these shoulders, is resected with a shaver and radiofrequency ablation until the acromion, the coracoacromial ligament and the cuff surface can be seen.
+3. The coracoacromial ligament is released off the acromion or ablated. This is the step that bleeds, because the acromial branch of the thoracoacromial artery runs with it.
+4. The anterior-inferior acromion is burred flat from front to back to remove the hook or spur, typically 5-8 mm of bone. Raw cancellous bone, bleeding into the field, is the pain generator of the operation.
+5. If the clavicle is going, the acromioclavicular joint is opened from below, the inferior capsule resected, and the distal clavicle burred back by measured increments with the superior capsule and ligaments left alone.
+6. Portals closed with a stitch or a strip, local anaesthetic into the subacromial space by many surgeons, a sling for comfort only.
+
+The pain logic: bone, small and short. Two raw cancellous surfaces under the deltoid behave like a small osteotomy, peaking on the first night and the first day and falling fast, because nothing is loaded through them. There is no repair, no tendon under tension, no lengthened muscle, no capsule tightened. The bursectomy and the irrigation add the surface pain of any shoulder arthroscopy, and a shoulder that was held in abduction or traction for 45 minutes aches. Patients are allowed to move from day 0, which is why the fall is quick. The honest caveat is the Gerbershagen cohort's finding that "minor" procedures produce unexpectedly severe first-day pain, and that 22 of the 40 most painful operations in 50,000 patients were orthopaedic extremity procedures in which regional anaesthesia had been used in only 15%. A decompression under general anaesthesia alone, sent home with paracetamol, is on the wrong side of that curve. The score is 2 because, with a block and a written regimen, the patient copes without a catheter and is on simple analgesia by day 3; the day 1 figure of 4 is the rebound, not the operation.
+
+## Steps
+
+### 1. Pre-operative check, block and the anaesthetic decision
+**Why:** The surgeon's list is fast and the operation is one of the few in this book whose benefit over a placebo is unproven, so the patient in front of you has usually had a long conversation and a lot of physiotherapy already, and will often have an arthroscopy that finds more than the booking said.
+**Anaesthesia:** The decision is whether the block is the anaesthetic or the analgesic. A single-shot interscalene or superior trunk block with intravenous dexamethasone 8 mg covers the operation, the recovery room and the evening, and it is the author's default because the alternative (general anaesthesia with surgeon infiltration) is the combination that produces the Gerbershagen day 1 curve. The block can be the sole anaesthetic with sedation in a slim, calm patient and a surgeon who works quickly, which spares the airway in beach chair; general anaesthesia on top is the commoner arrangement because a 45-minute case in beach chair with a camera cable over the face is a poor place to manage a patient who becomes restless. If the patient's chest cannot take a hemidiaphragm, a superior trunk block matches interscalene at 24 h with complete phrenic paresis in 5% rather than 73%, and an anterior suprascapular block is a further step down with no meaningful difference after the recovery room in two meta-analyses. Airway: a second-generation supraglottic device is reasonable for a short case in a slim patient; a tube for the obese patient, the long list and the surgeon who may convert to a cuff repair. Awake baseline pressure before any drug.
+
+### 2. Beach chair, head fixation and pressure
+**Why:** Beach chair gives the surgeon a vertical humerus and a free arm for the assistant to abduct and rotate while they work in the subacromial space; some surgeons use lateral decubitus with 5-7 kg of traction to open the space.
+**Anaesthesia:** The same physiology as every beach chair card: the cuff overstates brain perfusion by about 1 mmHg per 1.25 cm between cuff and ear, pressure falls as the chair goes up and the block adds a sympathetic effect, and the strokes reported after shoulder surgery happened at cuff systolics in the 80s and 90s. The short case is the dangerous one, because the vasopressor infusion that would be started for a two-hour replacement gets skipped for a 40-minute decompression and the pressure is chased with boluses instead. Start it anyway. Head neutral and strapped, eyes taped and padded, checked again after the arm is positioned.
+
+### 3. Portals, pump pressure and the request for hypotension
+**Why:** Visibility in the subacromial space is the balance between pump pressure (40-60 mmHg) and the patient's systolic pressure; the bursa and the acromial branch of the thoracoacromial artery bleed into the field and the surgeon's levers are the pump, adrenaline in the irrigation and asking you to lower the pressure.
+**Anaesthesia:** The request for a systolic of 90 is the central conflict of this operation and it comes at the bursectomy. The answer is the same as for a cuff repair and PROSPECT says so: no deliberate hypotension in beach chair. A patient with a working block and an adequate depth of anaesthesia will not be hypertensive, adrenaline in the bag (1 mL of 1:1000 per 3 L is a common recipe) and a higher pump pressure are the surgeon's tools, and a sudden rise in pressure and heart rate shortly after a new bag goes up is the adrenaline, not light anaesthesia. Warm the patient or the irrigation; 10 L of room-temperature saline through a 40-minute case is enough to drop the core temperature in a small patient.
+
+### 4. Diagnostic arthroscopy and the biceps
+**Why:** The surgeon inspects the glenohumeral joint for the pathology that would change the operation. A partial-thickness cuff tear may be debrided or, if deep, repaired; a full-thickness tear turns this into a cuff repair; a frayed biceps is tenotomised.
+**Anaesthesia:** The one moment of this case that changes your plan. A tenotomy adds five minutes and nothing to the pain. A conversion to cuff repair adds an hour, anchors, a decorticated footprint and a tendon under tension, and moves the patient to the rotator cuff repair card: a longer case, a tube rather than a laryngeal mask if the airway allows a swap, and a night plan written for a 5 rather than a 2. Ask what was found; the surgeon will tell the assistant before they tell you.
+
+### 5. Bursectomy and coracoacromial ligament release
+**Why:** The inflamed bursa obscures everything and is resected with shaver and radiofrequency; the coracoacromial ligament is released from the acromion so that the undersurface can be burred and the arch is no longer rubbing the cuff.
+**Anaesthesia:** The bleeding step, and the step where the fluid starts to go into the deltoid. In a short case the extravasation is modest; it still makes the shoulder tense and swollen for a few hours and the patient should be told that the swelling is fluid, not bleeding. Watch the pump pressure creep; a surgeon who has raised it to 80 mmHg to see through blood is a surgeon who will shortly ask about the blood pressure.
+
+### 6. Acromioplasty
+**Why:** The anterior-inferior acromion is burred flat, removing the hook and the spur, until the surgeon is satisfied with a flat undersurface; some use a cutting-block technique with the burr from the lateral portal, some work freehand from the posterior portal. The amount of bone is small (5-8 mm), but it is cancellous, raw and bleeding at the end.
+**Anaesthesia:** This is the pain generator being created, and it is the reason a decompression counts as bone surgery for rebound pain purposes, with the higher odds that carries (OR 1.82 in the ambulatory cohort). Nothing to do but note the time and expect the low-pressure request.
+
+### 7. Distal clavicle excision
+**Why:** If the acromioclavicular joint is arthritic or the clavicle has osteolysis, the joint is entered from below through the subacromial space (or directly through a superior portal), the inferior capsule and the meniscus are removed, and the distal clavicle is burred back 5-10 mm in measured passes with the superior and posterior capsule and the coracoclavicular ligaments left intact. Too much resection destabilises the clavicle and produces a new pain that does not settle.
+**Anaesthesia:** A second raw bone surface, superior and medial to the first, under the trapezius and deltoid origins. It roughly doubles the bone contribution and the night pain in the author's experience, which is why a decompression with excision sits at the top of this card's range and an isolated decompression at the bottom. The clavicle end bleeds from its medullary bone; the surgeon's view goes and the pump goes up again. The dermatome matters: the acromioclavicular joint and the skin over it are supplied by the supraclavicular nerves from C3 and C4, which an interscalene block covers by spread and a superior trunk or suprascapular block often does not; if you have placed one of those, expect the patient to describe pain on top of the shoulder when the subacromial pain is gone, and consider a few millilitres of local anaesthetic under the skin over the joint or a superficial cervical plexus block (see [ACJ reconstruction and clavicle fixation](acj-reconstruction-clavicle.html)).
+
+### 8. Closure, local anaesthetic and sling
+**Why:** Portals are closed, many surgeons instil 10-20 mL of local anaesthetic into the subacromial space, and a sling goes on for comfort only; there is nothing to protect and the patient is encouraged to move from the first day.
+**Anaesthesia:** The subacromial local anaesthetic is a supplement, not a substitute; PROSPECT recommends against continuous subacromial infusions and the single instillation has a small, short effect. Give the antiemetic. Put the sling on before the patient lightens so that the blocked arm is not swung off the table. Emergence is quick; the wound is three portals.
+
+### 9. Recovery, the written plan and discharge
+**Why:** The surgeon wants the patient home the same day, moving the shoulder through a comfortable range from day 1 and back to physiotherapy within the week, because the operation does nothing without the exercise programme that follows it.
+**Anaesthesia:** The block lasts 12-24 hours with dexamethasone and the worst pain arrives on average 14-15 hours after it, which is the middle of the first night; the first rescue dose was needed at a mean of 11 hours in the one trial that timed it. Regular paracetamol and an NSAID start in recovery, not when the arm tingles, and the patient leaves with an oral opioid for two or three nights and a written plan that says what to take at bedtime and what to take when the fingers wake up. Pre-emptive opioid given at six hours did not reduce the worst pain in the one randomised trial that tried it, so the plan is a regular regimen and a rescue, not a prophylactic dose. A dense block is not a reason to delay discharge: sling, someone at home, the first doses already in, and a phone number. Day-case failure on this list is nausea or a block that was not placed, not pain.
+
+## Pain plan
+
+The mechanism is two small raw bone surfaces that hurt for two or three days and are not loaded, so the plan is a single-shot block that covers the operation and the first night, a regular oral regimen that starts before the block recedes, and no catheter. There is no procedure-specific PROSPECT guideline; the rotator cuff repair guideline is the nearest and its skeleton (interscalene block first choice, intravenous dexamethasone preferred over perineural, paracetamol and an NSAID or COX-2 inhibitor, suprascapular block as the phrenic-sparing alternative, no subacromial infusion, no controlled hypotension) applies with the catheter recommendation removed.
+
+The defensible default is an interscalene block with 15-20 mL of ropivacaine 0.5%, or a superior trunk block with the same volume in the patient who cannot afford a hemidiaphragm, with intravenous dexamethasone 8 mg. The suprascapular block, anterior approach, with or without an axillary nerve block, is the next step down: in 16 trials it matched interscalene for 24 h opioid use and lost only in the recovery room, by 1.5 cm on a 10 cm scale, with fewer respiratory and block-related complications, and a second meta-analysis of six trials found the same. For an isolated decompression, where the mechanism is small and short, that trade is often worth making; the recovery room difference is covered by a dose of intravenous opioid. General anaesthesia with surgeon infiltration alone is the author's floor, acceptable only when the patient declines a block and understands that the first night will be worse.
+
+The catheter decision is no, for any patient, because there is no mechanism for one: nothing is repaired, nothing is under tension, nothing is loaded, and by the time an infusion would be doing its work the pain has gone. The opioid-tolerant or chronic pain patient having this operation is the exception that proves it: their course is worse for patient reasons, and the answer is a pre-agreed oral plan with their usual opioid continued, not a catheter in a day-case patient.
+
+Rebound is the planning target because this is an ambulatory bone operation in a population that skews young and active, which is three of the four risk factors in the 972-patient cohort (bone surgery OR 1.82, younger age, female sex OR 1.52), and the fourth (no intravenous dexamethasone, OR 1.78) is the one you control. The curve on this card has the rebound on day 1 and the fall by day 3. Escalation: pain above 7 after the block has gone, with the hand warm and moving and the sling comfortable, is treated with the charted oral opioid and a check that the regular doses were given; a tense, hugely swollen shoulder in the first hours is irrigation fluid and settles; new severe pain with fever days later is a septic joint until proven otherwise, and C. acnes grows slowly. A frozen shoulder after decompression is a recognised outcome (two per arm in CSAW) and presents weeks later as stiffness, not to you.
+
+## Pitfalls and variants
+
+- The operation that is not a decompression. The booking says decompression; the arthroscopy finds a full-thickness tear and the surgeon repairs it. The pain plan, the airway and the length of the case all change, and the time to find out is before the block, by asking the surgeon what they will do if they find a tear.
+- Isolated decompression versus decompression with distal clavicle excision. The second bone surface roughly doubles the night pain and brings in the C3-C4 territory over the top of the shoulder that a superior trunk or suprascapular block will not cover; an interscalene block usually does by spread, and a superficial cervical plexus block is the honest supplement if you have chosen a phrenic-sparing technique.
+- Open distal clavicle excision. Still done by some surgeons and for revision: a 3-4 cm incision over the joint, deltotrapezial fascia divided and repaired, more muscle pain and a sling worn for comfort for longer. Same block, same day case.
+- Block as sole anaesthetic. Works for a short decompression in a cooperative patient with a surgeon who does not convert, and spares the airway in beach chair. The C3-C4 skin on top of the shoulder and the posterior portal in the axillary nerve territory are the gaps; surgeon infiltration of the portals closes them.
+- Lateral decubitus. Airway from the side, face in a cradle, dependent arm and peroneal nerve padded, and 5-7 kg of traction on the plexus for the duration. Hypotension matters less, head position more.
+- The request for hypotension. In a 40-minute case it is tempting to say yes. The strokes happened at systolics in the 80s and 90s in beach chair and the case being short does not change the hydrostatics.
+- Chronic pain, opioid tolerance and the patient who has had several injections and years of symptoms. The CSAW population is this population, and their pain after a procedure of unproven benefit can be out of proportion to the tissue. Pre-agree the plan, continue the usual opioid, and do not read the first night as a complication.
+- Diabetes. Dexamethasone 8 mg raises the glucose for a day; it is still worth giving for the block, and the discharge advice should say so.
+- Phrenic palsy. Near-universal after interscalene block; for the COPD or obese patient use a superior trunk or suprascapular block, which costs almost nothing in this operation.
+
+## Key sources
+
+The evidence that matters most on this card is surgical, not anaesthetic: CSAW and the Cochrane review that followed it show no clinically important benefit of decompression over placebo arthroscopy for the classic indication, which changes who is on the list and why. The analgesic evidence is extrapolated from the PROSPECT rotator cuff repair guideline and from mixed arthroscopic shoulder populations in which decompression is a minority; the two meta-analyses comparing suprascapular and interscalene blocks and the superior trunk trial are the basis for offering a phrenic-sparing block here more readily than on the arthroplasty cards. The pain score and trajectory are the author's calibration against the Part B scale, not a measured cohort, and the claim that distal clavicle excision roughly doubles the night pain is author's judgement.

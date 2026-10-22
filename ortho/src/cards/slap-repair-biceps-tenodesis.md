@@ -1,0 +1,148 @@
+---
+id: slap-repair-biceps-tenodesis
+title: "SLAP repair and biceps tenodesis"
+subtitle: "Superior labral repair; long head of biceps tenotomy, arthroscopic suprapectoral tenodesis and open subpectoral tenodesis"
+aka: ["SLAP tear", "SLAP lesion", "superior labrum", "type II SLAP", "biceps tenotomy", "biceps tenodesis", "LHB", "long head of biceps", "subpectoral tenodesis", "suprapectoral tenodesis", "Popeye", "biceps tendinopathy", "biceps instability"]
+pain:
+  score: 2
+  trajectory: [1, 4, 3, 2, 1]
+  mechanism: tendon-tension
+  mechanism_text: "A tenodesis fixes the biceps tendon into a drill hole in the humerus under a set tension and the muscle pulls on it with every elbow flexion; a SLAP repair re-anchors the superior labrum and biceps root onto decorticated glenoid under tension. Both are small versions of the cuff repair mechanism: low peak, but a tendon that is loaded by movement for weeks. A tenotomy has no mechanism beyond the arthroscopy"
+  rebound_risk: moderate
+block:
+  primary: "Interscalene or superior trunk block, single shot, with intravenous dexamethasone"
+  family: interscalene
+  catheter: "no"
+  catheter_text: "No mechanism large enough to justify one; the peak is low, the patient is at home, and the tendon pain that persists is managed by the sling and the oral regimen, not an infusion"
+  alternatives: ["Suprascapular plus axillary nerve blocks for the arthroscopic procedures (phrenic sparing, inferior in the recovery room only)", "For the open subpectoral tenodesis, interscalene is the better choice because the incision and the drill hole sit in axillary, musculocutaneous and medial brachial cutaneous territory, with surgeon infiltration of the wound", "General anaesthesia with surgeon infiltration for an isolated tenotomy"]
+  neuraxial: no
+position: beach-chair
+position_text: "Beach chair for most; lateral decubitus with arm traction for SLAP repair in some hands because traction opens the superior joint; the open subpectoral tenodesis needs the arm abducted and externally rotated on a support"
+tourniquet: no
+tourniquet_text: ""
+cement: no
+cement_text: ""
+blood_loss: "Minimal for the arthroscopic procedures; the open subpectoral tenodesis bleeds from the drill hole and the pectoralis edge, under 100 mL"
+duration: "Isolated tenotomy 20-30 min; arthroscopic tenodesis or SLAP repair 45-75 min; open subpectoral tenodesis 45-60 min as a stand-alone, 20 min added to an arthroscopy"
+los: "Day case"
+day_case: yes
+drugs:
+  antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg): anchors and interference screws are implants and Cutibacterium acnes is the shoulder organism; for a pure tenotomy with no implant surgeons vary"
+  txa: "Not needed; TXA 1 g IV is a reasonable request for arthroscopic visibility"
+  vte: "Mechanical only; day case, mobile from the first day"
+  antiemetic: "Dexamethasone 8 mg IV at induction (also the block adjunct) and ondansetron 4 mg IV before emergence"
+patient_line: "The arm is numb and heavy until the small hours; after that the shoulder aches for a few days and the front of the upper arm stays sore for a week or two where the tendon has been fixed, which is the tendon healing and not a problem."
+trap: "The tenodesis looks like a small operation and is: the trap is the patient, not the procedure. SLAP and biceps surgery is done for pain rather than instability, the population carries more chronic pain, more pre-operative opioid use and more disappointment than the Bankart population, and the first night after a single-shot block in a day case is where it shows"
+sources:
+  - title: "Hartland AW, Islam R, Teoh KH, Rashid MS. Clinical effectiveness of tenotomy versus tenodesis for long head of biceps pathology: a systematic review and meta-analysis. BMJ Open 2022;12:e061954"
+    url: "https://doi.org/10.1136/bmjopen-2022-061954"
+    note: "11 randomised trials, 860 patients: no difference in patient-reported function or pain; tenodesis reduced Popeye deformity (OR 0.29); tenotomy was 15 minutes shorter"
+  - title: "Zhang C, Yang G, Li T, et al. Biceps tenodesis better improves the shoulder function compared with tenotomy for long head of the biceps tendon lesions: a meta-analysis of randomised controlled trials. J Clin Med 2023;12:1754"
+    url: "https://doi.org/10.3390/jcm12051754"
+    note: "10 randomised trials, 787 patients: small Constant score advantage for tenodesis; tenotomy had more Popeye deformity (OR 3.34) and cramping pain (OR 3.36); no difference in pain, ASES, strength or external rotation"
+  - title: "Belk JW, Kraeutler MJ, Houck DA, Chrisman AN, Scillia AJ, McCarty EC. Biceps tenodesis versus tenotomy: a systematic review and meta-analysis of level I randomized controlled trials. J Shoulder Elbow Surg 2021;30:951-960"
+    url: "https://doi.org/10.1016/j.jse.2020.11.012"
+    note: "Five level I trials, 468 patients, mean age 60: cosmetic deformity 6.8% after tenodesis versus 23.3% after tenotomy; no difference in pain or function"
+  - title: "Hurley ET, Baker R, Danilkowicz RM, et al. Similar outcomes between biceps tenodesis and SLAP repair for SLAP tears in younger patients: a meta-analysis. J ISAKOS 2024;9:79-83"
+    url: "https://doi.org/10.1016/j.jisako.2023.09.007"
+    note: "Five cohort studies of type II SLAP tears under 40: return to play 78.5% after tenodesis versus 67.7% after repair, not significant; no difference in ASES, pain or reoperation (2.9% vs 10.8%)"
+  - title: "Recker AJ, Waters TL, Bullock G, et al. Biceps tenodesis has greater expected value than repair for isolated type II SLAP tears: a meta-analysis and expected-value decision analysis. Arthroscopy 2022;38:2887-2896"
+    url: "https://doi.org/10.1016/j.arthro.2022.05.005"
+    note: "23 studies, 908 patients: probability of a good outcome 87.8% after tenodesis versus 62.9% after SLAP repair; reinjury 1.5% versus 6.4%"
+  - title: "Lee TY, Touhey DC, Perugini JM, et al. Outcomes following arthroscopic suprapectoral and open subpectoral biceps tenodesis at short- to midterm follow-up: a systematic review. Am J Sports Med 2026;54:2341-2353"
+    url: "https://doi.org/10.1177/03635465261426560"
+    note: "43 studies, 11,113 tenodeses, mean age 54: complications 5.6% overall; stiffness commoner after arthroscopic suprapectoral (2.5% vs 1.4%), wound infection (1.1% vs 0.5%) and nerve complications (1.1% vs 0.2%) commoner after open subpectoral"
+  - title: "Toma O, Persoons B, Pogatzki-Zahn E, Van de Velde M, Joshi GP. PROSPECT guideline for rotator cuff repair surgery. Anaesthesia 2019;74:1320-1331"
+    url: "https://doi.org/10.1111/anae.14796"
+    note: "The nearest procedure-specific guideline: interscalene block first choice, IV dexamethasone preferred over perineural, paracetamol plus NSAID, suprascapular block as an alternative, controlled hypotension not recommended"
+  - title: "Hussain N, Goldar G, Ragina N, Banfield L, Laffey JG, Abdallah FW. Suprascapular and interscalene nerve block for shoulder surgery: a systematic review and meta-analysis. Anesthesiology 2017;127:998-1013"
+    url: "https://doi.org/10.1097/ALN.0000000000001894"
+    note: "16 trials, 1,152 patients: no difference in 24 h morphine; interscalene better in the recovery room only; suprascapular block had fewer block-related and respiratory complications"
+  - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
+    note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age, and absence of IV dexamethasone OR 1.78"
+  - title: "Uppal V, Barry G, Ke JXC, et al. Reducing rebound pain severity after arthroscopic shoulder surgery under general anesthesia and interscalene block: a two-centre randomized controlled trial of pre-emptive opioid treatment compared with placebo. Can J Anaesth 2024;71:773-783"
+    url: "https://doi.org/10.1007/s12630-023-02594-0"
+    note: "73 arthroscopic shoulder patients: hydromorphone 2 mg at six hours did not reduce worst pain in 24 h; worst pain at a mean of 14.6 h and first rescue at 11.3 h after the block"
+  - title: "Cullen DJ. Why worry about blood pressure during surgery in the beach chair position? APSF Newsletter 2020"
+    url: "https://www.apsf.org/article/why-worry-about-blood-pressure-during-surgery-in-the-beach-chair-position/"
+    note: "Hydrostatic correction of about 2 mmHg per inch between cuff and external auditory meatus; strokes reported after shoulder surgery in beach chair with cuff systolics in the 80s-90s; no deliberate hypotension"
+---
+
+## What the surgeon is doing and why
+
+The long head of biceps is a tendon that runs from the supraglenoid tubercle and the superior labrum, over the top of the humeral head inside the joint, and out through the bicipital groove under the transverse ligament. It is a pain generator out of proportion to its function. Inside the joint it frays, inflames and becomes unstable in the groove when the subscapularis or the biceps pulley is damaged; at its root it can peel the superior labrum off the glenoid (the SLAP lesion, superior labrum anterior to posterior), classically in the throwing athlete whose late-cocking position winds the biceps root up and pulls the labrum back, and commonly in the middle-aged patient as a degenerative finding of uncertain significance. Nothing in the arm needs the long head: the short head and brachialis flex the elbow, and a tenotomised long head loses a few per cent of supination strength and nothing measurable in daily life. The surgeon's choice is therefore not whether to sacrifice the tendon but what to do with the stump.
+
+Three operations, in ascending order of tissue:
+
+1. Tenotomy. The tendon is cut at its root with a radiofrequency device through the arthroscope. It retracts down the groove and scars where it stops. Five minutes; no implant; no protection needed. The costs are a Popeye deformity (the belly of the muscle drops; 23% in the pooled level I trials against 7% after tenodesis) and cramping pain in the biceps in the first months (three times the odds). Across 11 randomised trials and 860 patients, function and pain at follow-up were the same as tenodesis.
+2. Arthroscopic suprapectoral tenodesis. The tendon is cut at its root, pulled out of the joint, and fixed into a drill hole at the top of the bicipital groove or just below it with an interference screw or anchor, at a length that keeps the muscle at its native tension. The diseased intra-articular portion is removed; the groove portion stays. The surgeon adds 20-30 minutes and an implant, and the patient keeps the contour of the arm. Stiffness afterwards is a little commoner than with the open technique.
+3. Open subpectoral tenodesis. A 3 cm incision in the axillary fold at the inferior border of pectoralis major, the tendon retrieved from below, the groove segment excised with it (which is the argument for the technique: the groove is where the tendon is most diseased), and the tendon fixed into a drill hole in the humeral shaft under the pectoralis tendon with a screw or button. The wound sits over the musculocutaneous nerve as it enters coracobrachialis, with the axillary and brachial vessels medial and the radial nerve a drill length posterior; nerve complications were 1.1% in the pooled open series against 0.2% arthroscopic, and the open wound carries a small infection rate. It is a stand-alone operation for the young patient with isolated biceps pathology and the preferred technique of many surgeons for the SLAP tear in a patient over 30, where the pooled data show a higher chance of a good outcome from tenodesis (88%) than from repair (63%) and the same return to sport in the under-40 cohorts.
+
+The SLAP repair itself is reserved by most surgeons for the young overhead athlete with an acute type II lesion: the superior labrum and biceps root are mobilised, the superior glenoid is decorticated, one or two anchors are placed at the biceps root and the labrum is sutured back down under tension. The cost is stiffness, a long rehabilitation and a reoperation rate of around 10% in the pooled cohorts, which is why the indications have narrowed.
+
+The pain logic. A tenotomy has no mechanism beyond the arthroscopy: portals, irrigation, a bursal or joint inspection, and perhaps a biceps cramp in the second week when the muscle settles into its new length. A tenodesis is a small tendon-tension operation: a tendon fixed into a drill hole under set tension and pulled on by every elbow flexion for the six weeks it takes to heal to bone. The peak is low, because the drill hole is small and nothing else is cut, but the anterior arm stays sore for a week or two and lifting a kettle hurts. The open subpectoral adds a wound through the axillary fold and a drill hole in cortical shaft bone, which is the bone component and the reason it sits at the top of this card's range. The SLAP repair is capsule and labrum under tension on decorticated glenoid with the arm immobilised in a sling; it hurts sharply on movement for a few days and the stiffness afterwards is a surgical rather than an analgesic problem. All of it is a 2 with a block: the day 1 figure of 4 is the rebound, and the tail is tendon, not bone, which is why it falls to 1 by a week rather than lingering.
+
+## Steps
+
+### 1. Pre-operative assessment, the patient and the block
+**Why:** Biceps and SLAP surgery is done for pain, usually after injections and physiotherapy have failed, in a population that includes manual workers, throwing athletes and patients with years of anterior shoulder pain and a scan that may or may not explain it. The surgeon's plan is usually "arthroscopy, tenodesis or tenotomy depending on findings, and whatever else is there", so the operation that arrives is not always the one booked.
+**Anaesthesia:** The patient matters more than the procedure. Pre-operative opioid use, a long pain history, and a diagnosis that is "a SLAP tear" on a scan in a 45-year-old all predict a worse first night than the tissue justifies, and these are commoner here than on the instability list. Ask, and write the night plan accordingly. The block: a single-shot interscalene or superior trunk block with intravenous dexamethasone 8 mg covers the arthroscopy and the first evening; for the open subpectoral tenodesis the interscalene is preferred because the wound and drill hole sit in territory (axillary, musculocutaneous, medial brachial cutaneous) that a suprascapular block does not reach. Airway: a supraglottic device is reasonable for a short arthroscopic case in a slim patient; a tube for the open procedure with the arm abducted away from you and for any case likely to find a cuff tear. Awake baseline pressure before any drug.
+
+### 2. Beach chair or lateral, and the arm position for the open tenodesis
+**Why:** Beach chair for most; lateral decubitus with traction opens the superior joint for SLAP work. For the subpectoral incision the arm is abducted and externally rotated on a support to bring the axillary fold forward and lift the pectoralis edge.
+**Anaesthesia:** The usual beach chair arithmetic (about 1 mmHg per 1.25 cm between cuff and ear; strokes at cuff systolics in the 80s and 90s; vasopressor infusion started early, no deliberate hypotension). The abducted, externally rotated arm for the open tenodesis is held for 30-45 minutes and puts the plexus on stretch; check the position before the drapes go on and keep the abduction under 90 degrees.
+
+### 3. Antibiotic and diagnostic arthroscopy
+**Why:** The joint is inspected: the biceps root and labrum, the tendon pulled into the joint with a probe to see the groove portion, the pulley, the subscapularis, the cuff and the cartilage. The findings decide tenotomy versus tenodesis and whether a SLAP repair is warranted, and often reveal the cuff tear that is the real pain generator.
+**Anaesthesia:** Cefazolin 2 g IV finished before the knife, 3 g over 120 kg. The one moment that changes your plan is here: a full-thickness cuff tear turns this into a [rotator cuff repair](rotator-cuff-repair.html) with its own card and a different night, and the surgeon will tell the assistant before they tell you. Ask.
+
+### 4. Tenotomy or intra-articular release of the tendon
+**Why:** The tendon is cut at its root with radiofrequency, flush with the labrum, so that it retracts down the groove. If a tenodesis is planned, the tendon is first tagged with a suture or held with a clamp through an anterior portal so it cannot retract, then released.
+**Anaesthesia:** Nothing to do. A released tendon in a tenotomy patient means the operation is over bar the portals; a tagged tendon means 20-45 minutes more.
+
+### 5. Arthroscopic suprapectoral tenodesis
+**Why:** The tendon is brought out through an anterior portal, the diseased intra-articular part excised, the groove opened or the subacromial space used to reach the top of the groove, a drill hole made in the humerus and the tendon fixed with an interference screw or anchor at a length that sets the muscle tension. The surgeon judges the tension with the elbow at a set angle; too tight limits elbow extension, too loose gives a Popeye.
+**Anaesthesia:** A drill hole in metaphyseal bone and a tendon under set tension: the two mechanisms of this card created in a few minutes. The arm is held still in the position the surgeon sets, and the elbow angle matters, so the assistant will hold it. This is bone surgery for rebound purposes, in a small way.
+
+### 6. Open subpectoral tenodesis
+**Why:** A 3 cm incision along the inferior border of pectoralis major in the axillary fold, the pectoralis tendon retracted upwards, the tendon found in the groove under it and delivered into the wound, the groove segment excised, and a unicortical drill hole made in the shaft at the inferior pectoralis border for a screw or a button. The musculocutaneous nerve lies medial as it enters coracobrachialis and the axillary and brachial vessels are medial again; the surgeon keeps retractors lateral and avoids drilling through the far cortex. The pectoralis tendon is not cut.
+**Anaesthesia:** A wound in the axillary fold and a drill hole in cortical shaft bone. The incision bleeds from the pectoralis edge and the hole from the medullary canal, under 100 mL. Arm abduction is held throughout. Retraction medially is traction on the musculocutaneous nerve and the vessels; the surgeon will want the arm relaxed, which the block provides. Surgeons infiltrate the wound with local anaesthetic at the end, which is worth encouraging because the medial arm skin is intercostobrachial territory that the block does not cover.
+
+### 7. SLAP repair
+**Why:** For the young athlete with an unstable biceps root: the labrum is mobilised off the superior glenoid, the bone is decorticated, one or two anchors are placed posterior to the biceps root (anterior anchors stiffen the shoulder), sutures pass through the labrum and the complex is tied down. The arm goes into a sling for four to six weeks with no active biceps use.
+**Anaesthesia:** Capsule and small bone, under tension, immobilised. The peak is a point higher than a tenodesis on day 1 and the stiffness afterwards is the surgeon's problem rather than yours. Traction in the lateral position for this step is sustained and the plexus is already blocked, so position checks are the only safeguard.
+
+### 8. Closure, sling and emergence
+**Why:** Portals closed with a stitch or a strip, the subpectoral wound in layers with a subcuticular suture, and a sling: for comfort only after a tenotomy, for four to six weeks after a tenodesis (no lifting, no resisted elbow flexion) and after a SLAP repair.
+**Anaesthesia:** Give the antiemetic. The sling on before the patient lightens, because the first thing a patient with a dead arm does is flex the elbow against the weight of the forearm, which is the one movement the tenodesis should not see. Emergence is quick. Document hand and forearm sensation and elbow flexion as far as the block allows after an open subpectoral tenodesis, and write down what could not be tested, because a musculocutaneous neurapraxia from the retractor is the recognised complication and the block hides it until tomorrow.
+
+### 9. Recovery, discharge and the first fortnight
+**Why:** Day case. The surgeon wants the elbow and wrist moving, the shoulder resting, and no biceps load for six weeks after a tenodesis.
+**Anaesthesia:** The block lasts 12-24 hours with dexamethasone and the worst pain arrives on average 14-15 hours after it, in the middle of the first night; first rescue was needed at a mean of 11 hours in the one trial that timed it. Regular paracetamol and an NSAID start in recovery, the oral opioid is dispensed for two nights with a written plan, and the patient is told that the anterior arm will stay sore for a week or two after a tenodesis and that a cramp in the biceps in the second week after a tenotomy is the muscle settling at its new length, not a tear. Pre-emptive opioid at six hours did not reduce the worst pain in the one randomised trial; a regular regimen started on time and a rescue dose at the first tingle is the plan. A dense block is not a reason to keep the patient.
+
+## Pain plan
+
+The mechanism is a small tendon-tension operation with a drill hole, in a day-case patient, so the plan is a single-shot block that covers the operation and the evening, a regular oral regimen that starts before the block recedes, two nights of oral opioid, and no catheter. There is no procedure-specific PROSPECT guideline; the rotator cuff repair guideline is the nearest and its skeleton (interscalene first, intravenous dexamethasone preferred over perineural, paracetamol and NSAID, suprascapular block as the phrenic-sparing alternative, no controlled hypotension) applies with the catheter recommendation removed.
+
+The defensible default is an interscalene block with 15-20 mL of ropivacaine 0.5% or a superior trunk block with the same volume, with intravenous dexamethasone 8 mg. For the arthroscopic procedures the suprascapular plus axillary combination is adequate: in 16 trials it matched interscalene for 24 h opioid use and lost only in the recovery room, which a dose of intravenous opioid covers. For the open subpectoral tenodesis the author's practice is interscalene, because the incision and the drill hole sit in axillary and musculocutaneous territory with the medial arm skin in intercostobrachial territory, and the surgeon's wound infiltration closes the last gap. General anaesthesia with surgeon infiltration alone is acceptable for an isolated tenotomy, which has no mechanism to block.
+
+The catheter is no for all three operations. The tendon pain that persists for a fortnight after a tenodesis is low-grade, movement-related and protected by the sling, which is exactly the kind of pain an infusion does not help and an oral regimen does. The patient who would seem to justify one (the opioid-tolerant, the chronic pain patient, the one with three previous shoulder operations) is better served by a pre-agreed oral plan with the usual opioid continued and the pain service told, than by a catheter in a day case.
+
+Rebound is the planning target because this is an ambulatory operation with a drill hole in a population that skews towards two of the four risk factors in the 972-patient cohort (bone surgery OR 1.82, younger age), with the absence of intravenous dexamethasone (OR 1.78) the one you control. Escalation: pain above 7 after the block has gone, with the hand warm and moving and the sling comfortable, is treated with the charted opioid and a check that the regular doses were taken; a swollen tense shoulder in the first hours is irrigation fluid; a swollen, bruised upper arm after a subpectoral tenodesis is a haematoma from the drill hole and settles unless it is expanding; numbness of the lateral forearm or weak elbow flexion after the block has receded is the musculocutaneous nerve and is documented and reported the same day; a biceps that is suddenly lower in the arm a week after a tenodesis is a failed fixation, which is the surgeon's conversation.
+
+## Pitfalls and variants
+
+- The operation that arrives is not the one booked. A biceps procedure is often "arthroscopy plus whatever is found", and the finding that matters is a full-thickness cuff tear, which changes the card. Ask before the block what the surgeon will do if they find one.
+- Tenotomy versus tenodesis. The randomised evidence shows the same pain and function with more Popeye deformity and cramping after tenotomy and 15 minutes more operating time for tenodesis. Surgeons vary by patient age, occupation and preference; the anaesthetic is the same except that a tenotomy needs no sling and no protection.
+- Arthroscopic suprapectoral versus open subpectoral. The open technique excises the groove segment, has slightly less stiffness, and carries a small wound infection and nerve complication rate that the arthroscopic technique does not; its wound and drill hole are the reason the interscalene is preferred over a suprascapular block for it.
+- Tenodesis as part of a cuff repair or decompression. The commonest setting in which a biceps is tenodesed is as a step in another operation; the pain plan belongs to the larger procedure and the tenodesis adds a sore anterior arm for a fortnight.
+- The SLAP repair in a patient over 35. Most surgeons now tenodese rather than repair in this group on the pooled outcome data; a surgeon who still repairs is committing the patient to a long stiff recovery and a 10% reoperation rate, and the analgesic plan is the same as the tenodesis with a point more on day 1.
+- Chronic pain, pre-operative opioid use and the uncertain diagnosis. This is the population in which "SLAP tear" on a scan is being treated in a 45-year-old with years of pain, and the first night can be out of proportion to the tissue. The pre-operative conversation about what the pain will be, and that a sore anterior arm for two weeks is the tendon healing, is analgesia.
+- Bilateral or repeated surgery. Patients who have had one shoulder done know what their rebound was like; ask, and plan the second night around the first.
+- Phrenic palsy. Near-universal after interscalene block; for the obese or COPD patient a superior trunk or suprascapular block costs nothing in this operation.
+- Beach chair hypotension in a short case. The temptation is to skip the vasopressor infusion for a 40-minute case; the strokes happened in short cases too.
+
+## Key sources
+
+The evidence on this card is surgical and good on the choice of operation: 11 randomised trials show tenotomy and tenodesis give the same pain and function, with cosmetic deformity and cramping the only consistent differences, and the pooled cohorts favour tenodesis over SLAP repair for all but the young overhead athlete. There is no analgesic evidence specific to biceps or SLAP surgery; the block recommendations are extrapolated from the PROSPECT rotator cuff repair guideline and the suprascapular versus interscalene meta-analyses in mixed arthroscopic populations, and the rebound data come from a general ambulatory block cohort and a mixed arthroscopic shoulder trial. The pain score, the trajectory, the claim that a tenodesed arm stays sore for a fortnight and the preference for interscalene over suprascapular block for the open subpectoral technique are the author's judgement from the mechanism and the anatomy, not measured outcomes.
