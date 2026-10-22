@@ -1,0 +1,6 @@
+# Cross-card consistency notes for the audit pass
+
+- Reverse vs anatomic pain: reverse-tsa.md cites Jones CA et al, JSES 2025;34:454-461 (retrospective, 278 anatomic vs 412 reverse): anatomic patients more often still on opioids at two weeks (62% vs 46%) and VAS at six weeks 2.8 vs 2.2. This contradicts the framing in anatomic-tsa.md ("compare the reverse, where ... the pain is deeper and lasts longer") and in b01 (retension ache for weeks). Reconcile: the subscapularis repair in the anatomic is a tendon under tension and the anatomic population is younger; the model's own ordering (tendon-tension beats retension) predicts the Jones result. Edit anatomic-tsa.md, reverse-tsa.md trajectory (agent gave reverse [2,5,5,4,3] vs anatomic [2,5,4,3,2]) and b01 wording.
+- Check every card's Barry 2021 DOI: shoulder agent used https://doi.org/10.1016/j.bja.2020.10.035; pilots used the Pure page URL. Standardise to the DOI if it resolves.
+- Rhyner 2024 DOI from the shoulder agent: 10.1136/rapm-2023-104681, pages 313-319. Pilots use the rapm URL; standardise.
+- Kang 2019 title: the agent's title "Superior trunk block provides noninferior analgesia compared with interscalene brachial plexus block in arthroscopic shoulder surgery" vs pilots' "... and preserves diaphragm function compared with interscalene block". Verify the real title and standardise.
