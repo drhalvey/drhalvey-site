@@ -61,6 +61,7 @@
     [["spinal"], "spinal-anaesthetic.html", "Spinal anaesthetic"],
     [["nerve","block"], "nerve-blocks.html", "Nerve blocks"],
     [["breastfe"], "breastfeeding-after-anaesthetic.html", "Breastfeeding after an anaesthetic"],
+    [["contracep","sugammadex","bridion","pill"], "contraception-and-anaesthetic.html", "Contraception and your anaesthetic"],
     [["glp","ozempic","mounjaro","wegovy","semaglutide","tirzepatide"], "glp1-before-surgery.html", "GLP-1 medicines before surgery"],
     [["fasting","fast","nil","eat","drink"], "fasting.html", "Fasting before surgery"],
     [["medicine","medication","tablet","blood-thinner"], "medicines-before-surgery.html", "Medicines before surgery"],
