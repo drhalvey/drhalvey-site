@@ -280,6 +280,10 @@ def field(label, value, cls=''):
 
 
 def render_card(card, prev_card, next_card):
+    return page(f'{card["fm"]["title"]} | {MANIFEST["title"]}', card_body(card, prev_card, next_card), 2, body_class='ob-card-page')
+
+
+def card_body(card, prev_card=None, next_card=None, book=False):
     fm, s = card['fm'], card['sections']
     pain, block, drugs = fm['pain'], fm['block'], fm['drugs']
     m = card['manifest']
@@ -344,10 +348,16 @@ def render_card(card, prev_card, next_card):
     nav += f'<a href="{prev_card["fm"]["id"]}.html">&larr; {esc(prev_card["fm"]["title"])}</a>' if prev_card else '<span></span>'
     nav += f'<a href="{next_card["fm"]["id"]}.html">{esc(next_card["fm"]["title"])} &rarr;</a>' if next_card else '<span></span>'
     nav += '</nav>'
+    if book:
+        nav = ''
+        summary = summary.replace(' id="ob-local"', '')
+        crumb = f'<p class="ob-crumb">{esc(m.get("group", ""))} &rsaquo; {esc(m.get("region", ""))}</p>'
+    else:
+        crumb = f'<p class="ob-crumb"><a href="../index.html">Atlas</a> &rsaquo; {esc(m.get("group", ""))} &rsaquo; {esc(m.get("region", ""))}</p>'
 
     body = f'''
-<p class="ob-crumb"><a href="../index.html">Atlas</a> &rsaquo; {esc(m.get('group', ''))} &rsaquo; {esc(m.get('region', ''))}</p>
-<h1 class="ob-title"><span class="ob-num">{m.get('number', '')}</span> {esc(fm['title'])}</h1>
+{crumb}
+<h1 class="ob-title" id="{esc(fm['id'])}"><span class="ob-num">{m.get('number', '')}</span> {esc(fm['title'])}</h1>
 {('<p class="ob-subtitle">' + esc(fm['subtitle']) + '</p>') if fm.get('subtitle') else ''}
 {summary}
 <div class="ob-toolbar"><button type="button" class="ob-expand" data-expand>Expand all</button><button type="button" class="ob-expand" data-collapse>Collapse all</button><button type="button" class="ob-expand" onclick="window.print()">Print</button></div>
@@ -355,13 +365,20 @@ def render_card(card, prev_card, next_card):
 {details('Steps: what happens and what it means for you', '<ol class="ob-steps">' + steps_html + '</ol>', True)}
 {details('Pain plan', md(s.get('Pain plan', '')))}
 {details('Pitfalls and variants', md(s.get('Pitfalls and variants', '')))}
-{details('Key sources', md(s.get('Key sources', '')) + '<ol class="ob-sources">' + sources_html + '</ol>')}
+{details('Key sources', md(s.get('Key sources', '')) + '<ol class="ob-sources">' + sources_html + '</ol>', book)}
 {nav}
 '''
-    return page(f'{fm["title"]} | {MANIFEST["title"]}', body, 2, body_class='ob-card-page')
+    if book:
+        body = body.replace('<details class="ob-section"', '<details class="ob-section" open').replace('<details class="ob-section" open open', '<details class="ob-section" open')
+        body = re.sub(r'<div class="ob-toolbar">.*?</div>\n', '', body, flags=re.S)
+    return body
 
 
 def render_chapter(ch, part, prev_ch, next_ch):
+    return page(f'{ch["fm"]["title"]} | {MANIFEST["title"]}', chapter_body(ch, part, prev_ch, next_ch), 2)
+
+
+def chapter_body(ch, part, prev_ch=None, next_ch=None, book=False):
     fm = ch['fm']
     nav = '<nav class="ob-prevnext" aria-label="Previous and next">'
     nav += f'<a href="{prev_ch["fm"]["id"]}.html">&larr; {esc(prev_ch["fm"]["title"])}</a>' if prev_ch else '<span></span>'
@@ -371,15 +388,39 @@ def render_chapter(ch, part, prev_ch, next_ch):
         f'<li><a href="{esc(src["url"])}" rel="noopener">{esc(src["title"])}</a>'
         + (f'<br><span class="ob-muted">{esc(src["note"])}</span>' if src.get('note') else '') + '</li>'
         for src in (fm.get('sources') or []))
+    if book:
+        nav = ''
+        crumb = f'<p class="ob-crumb">Part {part}</p>'
+    else:
+        crumb = f'<p class="ob-crumb"><a href="../index.html">Atlas</a> &rsaquo; Part {part}</p>'
     body = f'''
-<p class="ob-crumb"><a href="../index.html">Atlas</a> &rsaquo; Part {part}</p>
-<h1 class="ob-title">{esc(fm['title'])}</h1>
+{crumb}
+<h1 class="ob-title" id="{esc(fm['id'])}">{esc(fm['title'])}</h1>
 <section class="ob-summary ob-summary-chapter" aria-label="Summary box"><p>{esc(fm['summary'])}</p></section>
 <article class="ob-prose">{md(ch['body'])}</article>
 {('<section class="ob-section-body"><h2>Key sources</h2><ol class="ob-sources">' + sources + '</ol></section>') if sources else ''}
 {nav}
 '''
-    return page(f'{fm["title"]} | {MANIFEST["title"]}', body, 2)
+    return body
+
+
+def render_book(cards, chapters_a, chapters_b):
+    """The whole book on one page, every section open, for reading end to end or printing to PDF."""
+    toc = '<nav class="ob-toc" aria-label="Contents"><h2>Contents</h2>'
+    toc += '<h3>Part A. Principles</h3><ol>' + ''.join(f'<li><a href="#{esc(ch["fm"]["id"])}">{esc(ch["fm"]["title"])}</a></li>' for ch in chapters_a) + '</ol>'
+    toc += '<h3>Part B. Why operations hurt</h3><ol>' + ''.join(f'<li><a href="#{esc(ch["fm"]["id"])}">{esc(ch["fm"]["title"])}</a></li>' for ch in chapters_b) + '</ol>'
+    toc += '<h3>Part C. The procedure atlas</h3><ol>' + ''.join(f'<li value="{c["manifest"].get("number", 0)}"><a href="#{esc(c["fm"]["id"])}">{esc(c["fm"]["title"])}</a></li>' for c in cards) + '</ol></nav>'
+    parts = [f'<h1 class="ob-title">{esc(MANIFEST["title"])}</h1><p class="ob-subtitle">{esc(MANIFEST["subtitle"])}. {esc(MANIFEST["author"])}.</p>', toc]
+    parts.append('<h1 class="ob-part-title">Part A. Principles</h1>')
+    parts += [f'<section class="ob-book-item">{chapter_body(ch, "A", book=True)}</section>' for ch in chapters_a]
+    parts.append('<h1 class="ob-part-title">Part B. Why operations hurt</h1>')
+    parts += [f'<section class="ob-book-item">{chapter_body(ch, "B", book=True)}</section>' for ch in chapters_b]
+    parts.append('<h1 class="ob-part-title">Part C. The procedure atlas</h1>')
+    parts += [f'<section class="ob-book-item">{card_body(c, book=True)}</section>' for c in cards]
+    # links written for the per-card pages point at sibling files; on the book page they become anchors
+    html_body = '\n'.join(parts)
+    html_body = re.sub(r'href="(?:\.\./[abc]/)?([a-z0-9-]+)\.html"', r'href="#\1"', html_body)
+    return page(f'Whole book | {MANIFEST["title"]}', html_body, 1, body_class='ob-book-page')
 
 
 def render_index(cards, chapters_a, chapters_b):
@@ -433,6 +474,7 @@ def render_index(cards, chapters_a, chapters_b):
     body = f'''
 <h1 class="ob-title">{esc(MANIFEST['title'])}</h1>
 <p class="ob-subtitle">{esc(MANIFEST['subtitle'])}. {len(cards)} of {len(MANIFEST['cards'])} procedure cards written.</p>
+<p class="ob-muted"><a href="book.html">Whole book on one page</a> (for reading end to end, or printing to PDF).</p>
 <section class="ob-search" aria-label="Search the atlas">
   <label class="ob-search-label" for="ob-q">Find an operation</label>
   <input id="ob-q" type="search" placeholder="e.g. reverse shoulder, Latarjet, nail, beach chair, catheter" autocomplete="off">
@@ -537,6 +579,7 @@ def build(local_dir=None):
         for i, ch in enumerate(chs):
             (HERE / part.lower() / f'{ch["fm"]["id"]}.html').write_text(render_chapter(ch, part, chs[i - 1] if i else None, chs[i + 1] if i + 1 < len(chs) else None), encoding='utf-8')
     (HERE / 'index.html').write_text(render_index(cards, chapters_a, chapters_b), encoding='utf-8')
+    (HERE / 'book.html').write_text(render_book(cards, chapters_a, chapters_b), encoding='utf-8')
     if local_dir:
         encrypt_local(local_dir)
     print(f'built {len(cards)} cards, {len(chapters_a)} Part A chapters, {len(chapters_b)} Part B chapters')

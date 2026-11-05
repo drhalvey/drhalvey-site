@@ -175,3 +175,17 @@ details.ob-section>summary h2{margin:0;font-size:1.3rem}
   .ob-step{break-inside:avoid}
   a{color:#000;text-decoration:none}
 }
+
+/* whole-book page */
+.ob-book-page .ob-main{max-width:1040px}
+.ob-toc{background:var(--ob-card);border:1px solid var(--ob-line);border-radius:var(--ob-radius);padding:1rem 1.2rem;margin:0 0 2rem;columns:2;column-gap:2rem}
+.ob-toc h2,.ob-toc h3{column-span:all}
+.ob-toc h3{margin-top:.8rem;font-size:1rem}
+.ob-toc ol{margin:0 0 .5rem;font-size:.92rem}
+.ob-toc li{break-inside:avoid}
+@media (max-width:720px){.ob-toc{columns:1}}
+.ob-part-title{font-size:2rem;margin:3rem 0 1rem;padding-top:1rem;border-top:3px solid var(--ob-maroon);break-before:page}
+.ob-book-item{margin:0 0 3rem;padding-bottom:2rem;border-bottom:1px dashed var(--ob-line2);break-before:page}
+.ob-book-item details.ob-section>summary{pointer-events:none}
+.ob-book-item details.ob-section>summary::before{display:none}
+@media print{.ob-toc{columns:2}.ob-book-item{border-bottom:0}}
