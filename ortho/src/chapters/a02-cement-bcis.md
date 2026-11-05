@@ -1,0 +1,188 @@
+---
+id: a02-cement-bcis
+title: "Bone cement and bone cement implantation syndrome"
+summary: "Bone cement implantation syndrome is an embolic event with a mediator tail: pressurising cement into a long bone forces marrow fat, air and debris into the femoral veins, the right heart receives it over a minute or two, and the pulmonary circulation answers with vasoconstriction, right ventricular dilatation and a fall in left-sided filling. Hypoxia, hypotension and loss of consciousness around cementation define it, and the Donaldson grading (1: SpO2 below 94% or systolic fall of 20-40%; 2: SpO2 below 88% or systolic fall over 40% or unexpected loss of consciousness; 3: collapse needing CPR) is what the cohorts are built on. Something scoreable happens in about a quarter of cemented arthroplasties and in a third of cemented hemiarthroplasties for hip fracture, severe grades carry a three- to sixteen-fold rise in early death, and the patients at risk are the old, the ASA III-IV, the renal and the pulmonary hypertensive, having a cemented stem for a fracture. The defence is a bundle, not a drug: canal lavage, a dry vented canal, a cement gun with vacuum-mixed cement and restrained pressurisation on the surgical side; a named moment, a normovolaemic patient, a vasopressor already running, oxygen up and the ventilator watched on the anaesthetic side. Cement still wins for hip fracture: the randomised and registry evidence shows a day-one mortality excess that is repaid within a week by fewer periprosthetic fractures and better function."
+sources:
+  - title: "Donaldson AJ, Thomson HE, Harper NJ, Kenny NW. Bone cement implantation syndrome. Br J Anaesth 2009;102:12-22"
+    url: "https://doi.org/10.1093/bja/aen328"
+    note: "Review that defines BCIS (hypoxia, hypotension, arrhythmia, raised pulmonary vascular resistance, cardiac arrest around cementation) and proposes the three-grade severity classification used by the later cohorts; reviews the embolic and mediator mechanisms, risk factors and risk reduction"
+  - title: "Olsen F, Kotyra M, Houltz E, Ricksten SE. Bone cement implantation syndrome in cemented hemiarthroplasty for femoral neck fracture: incidence, risk factors, and effect on outcome. Br J Anaesth 2014;113:800-806"
+    url: "https://doi.org/10.1093/bja/aeu226"
+    note: "1,016 cemented hemiarthroplasties: BCIS grade 1 in 21%, grade 2 in 5.1%, grade 3 in 1.7%; early mortality 5.2% (grade 0), 9.3% (grade 1), 35% (grade 2) and 88% (grade 3); predictors of severe BCIS were ASA III-IV, COPD and treatment with diuretics or warfarin; severe BCIS carried a 16-fold rise in mortality"
+  - title: "Rassir R, Schuiling M, Sierevelt IN, van der Hoeven CWP, Nolte PA. What are the frequency, related mortality, and factors associated with bone cement implantation syndrome in arthroplasty surgery? Clin Orthop Relat Res 2021;479:755-763"
+    url: "https://doi.org/10.1097/CORR.0000000000001541"
+    note: "3,294 cemented arthroplasties: BCIS in 26% overall, 31% of hip hemiarthroplasties, 28% of TKAs, 24% of THAs, 23% of revisions, 20% of unicompartmental knees and 16% of shoulder arthroplasties; severe BCIS carried a hazard ratio of 3.46 for death within 30 days; independent risk factors were age over 75 (OR 1.57), ASA III-IV (OR 1.58) and renal impairment (OR 3.32); recommends lavage, venting and restrained pressurisation and weighs BCIS risk against periprosthetic fracture risk with uncemented stems"
+  - title: "Rutter PD, Panesar SS, Darzi A, Donaldson LJ. What is the risk of death or severe harm due to bone cement implantation syndrome among patients undergoing hip hemiarthroplasty for fractured neck of femur? A patient safety surveillance study. BMJ Open 2014;4:e004853"
+    url: "https://doi.org/10.1136/bmjopen-2014-004853"
+    note: "62 reports of death or severe harm from cement in hemiarthroplasty to the NHS National Reporting and Learning System 2005-2012, one per 2,900 hemiarthroplasties: 41 deaths, 14 cardiac arrests, 7 peri-arrests; 89% of deteriorations during or within minutes of cement insertion; 80% of deaths on the table; three quarters of deaths after the 2009 national alert"
+  - title: "Griffiths R, White SM, Moppett IK, et al. Safety guideline: reducing the risk from cemented hemiarthroplasty for hip fracture 2015. Association of Anaesthetists of Great Britain and Ireland, British Orthopaedic Association, British Geriatric Society. Anaesthesia 2015;70:623-626"
+    url: "https://doi.org/10.1111/anae.13036"
+    note: "Concise joint guideline for the preparation and conduct of anaesthesia and surgery for cemented hemiarthroplasty: identify the at-risk patient, surgical canal preparation and cementing technique, anaesthetic readiness, communication at the moment of cementation"
+  - title: "Christie J, Burnett R, Potts HR, Pell AC. Echocardiography of transatrial embolism during cemented and uncemented hemiarthroplasty of the hip. J Bone Joint Surg Br 1994;76:409-412"
+    url: "https://pubmed.ncbi.nlm.nih.gov/8175843/"
+    note: "Transoesophageal echocardiography in 20 femoral neck fracture patients randomised to cemented or uncemented hemiarthroplasty: cemented arthroplasty produced greater and more prolonged embolic cascades, some emboli over 3 cm long, with pulmonary hypertension, desaturation, and fat and marrow in right atrial aspirates"
+  - title: "Pitto RP, Koessler M, Kuehle JW. Comparison of fixation of the femoral component without cement and fixation with use of a bone-vacuum cementing technique for the prevention of fat embolism during total hip arthroplasty. J Bone Joint Surg Am 1999;81:831-843"
+    url: "https://doi.org/10.2106/00004623-199906000-00010"
+    note: "60 THAs randomised three ways: severe embolic cascades on TOE in 85% with conventional cementing, 0% uncemented and 5% with a bone-vacuum (canal suction) cementing technique; arterial saturation fell from 99.5% to 92.9% and pulmonary shunt rose 24% with conventional cementing only"
+  - title: "Pitto RP, Blunk J, Kossler M. Transesophageal echocardiography and clinical features of fat embolism during cemented total hip arthroplasty. A randomized study in patients with a femoral neck fracture. Arch Orthop Trauma Surg 2000;120:53-58"
+    url: "https://doi.org/10.1007/pl00021216"
+    note: "40 femoral neck fracture patients: massive emboli in 95% with contemporary cementing and 5% with the bone-vacuum technique; emboli began with cement injection and continued through stem insertion; saturation and end-tidal CO2 fell during the shower and calculated shunt rose 36.5%; pre-existing disease magnified the clinical effect"
+  - title: "Pitto RP, Hamer H, Fabiani R, Radespiel-Troeger M, Koessler M. Prophylaxis against fat and bone-marrow embolism during total hip arthroplasty reduces the incidence of postoperative deep-vein thrombosis: a controlled, randomized clinical trial. J Bone Joint Surg Am 2002;84:39-48"
+    url: "https://doi.org/10.2106/00004623-200201000-00007"
+    note: "130 THAs: embolic cascades in 91% with standard cementing and 15% with canal suction at -800 mbar; day-4 DVT 18% versus 3%, implicating embolised marrow thromboplastin in early thrombosis"
+  - title: "Fernandez MA, Achten J, Parsons N, et al. Cemented or uncemented hemiarthroplasty for intracapsular hip fracture (WHiTE 5). N Engl J Med 2022;386:521-530"
+    url: "https://doi.org/10.1056/NEJMoa2108337"
+    note: "1,225 patients aged 60 or over randomised: EQ-5D at 4 months 0.371 cemented versus 0.315 uncemented (adjusted difference 0.055); 12-month mortality 23.9% versus 27.8% (OR 0.80, 95% CI 0.62-1.05); periprosthetic fracture 0.5% versus 2.1% (OR 4.37)"
+  - title: "Costain DJ, Whitehouse SL, Pratt NL, Graves SE, Ryan P, Crawford RW. Perioperative mortality after hemiarthroplasty related to fixation method. Acta Orthop 2011;82:275-281"
+    url: "https://doi.org/10.3109/17453674.2011.584208"
+    note: "About 25,000 hemiarthroplasties in the Australian Orthopaedic Association National Joint Replacement Registry: cemented monoblock stems carried 1.7 times the day-1 mortality of uncemented monoblock stems, reversed by one week, one month and one year; no difference for modular stems at any time point"
+  - title: "Talsnes O, Vinje T, Gjertsen JE, et al. Perioperative mortality in hip fracture patients treated with cemented and uncemented hemiprosthesis: a register study of 11,210 patients. Int Orthop 2013;37:1135-1140"
+    url: "https://doi.org/10.1007/s00264-013-1851-3"
+    note: "Norwegian Hip Fracture Register: first-day mortality relative risk 2.9 with cement, number needed to harm 116 overall and 33 in patients worse than ASA 3; the excess tracked comorbidity"
+---
+
+## What the cement is and what it does to the canal
+
+Polymethylmethacrylate bone cement is two parts mixed in theatre: a powder of pre-polymerised PMMA beads with a radio-opacifier (barium sulphate or zirconium dioxide), an initiator and often an antibiotic, and a liquid of methylmethacrylate monomer with an accelerator and a stabiliser. Mixing starts an exothermic free-radical polymerisation. The dough passes through a working phase of a few minutes in which it can be injected and pressurised, then sets over 8-15 min with a peak temperature at the bone interface that can exceed 70 degrees in a thick mantle. It is a grout, not a glue: it holds the implant by interdigitating with cancellous bone, which is why the surgeon wants a clean, dry, open trabecular bed and why pressure is applied to drive the dough into it.
+
+That pressure is the problem. The femoral canal is a closed tube once the cement restrictor is in. Injecting cement retrograde, pressurising it with a seal over the calcar and then driving a stem into the column of dough raises intramedullary pressure to several hundred millimetres of mercury. Marrow fat, air, bone debris, cement particles and whatever lies in the canal are forced into the metaphyseal and diaphyseal venous sinusoids and from there into the femoral vein. Transoesophageal echocardiography shows the result in real time: in 20 hip fracture patients randomised to cemented or uncemented hemiarthroplasty, cemented stems produced greater and more prolonged cascades of echogenic material crossing the right atrium, some emboli over 3 cm long, with pulmonary hypertension, desaturation, and fat and marrow in blood aspirated from the right atrium. In 60 elective hip replacements randomised three ways, a severe embolic cascade was seen in 85% of conventionally cemented stems, in none of the uncemented stems and in 5% of stems cemented with suction applied to the canal; arterial saturation fell from 99.5% to 92.9% and the calculated shunt rose by about a quarter in the conventionally cemented group only. The emboli begin as the cement is injected and continue through stem insertion, with a second shower when the hip is reduced and the femoral vein, kinked during the exposure, straightens and empties.
+
+## The syndrome: embolic load, mediator release, right heart failure
+
+Bone cement implantation syndrome is the clinical name for what the right heart and the lungs do with that load. The methylmethacrylate monomer was blamed for decades, and monomer does dilate vessels in vitro, but the plasma concentrations measured in patients are well below those that produce haemodynamic change, and the uncemented stem that embolises little produces little syndrome. The embolic theory fits the timing, the echocardiography and the dose-response with pressurisation.
+
+```
+ cement pressurised / stem driven in
+            |
+   intramedullary pressure rises
+            |
+   fat, marrow, air, debris into femoral veins
+            |
+   right atrium (seen on TOE within 30-60 s)
+            |
+   pulmonary vascular bed: mechanical obstruction
+          + mediator release (thromboxane, complement,
+            histamine, endothelin) + marrow thromboplastin
+            |
+   pulmonary vasoconstriction, PVR and PAP rise
+            |
+   RV dilates, septum shifts, LV filling falls
+            |
+   hypotension, V/Q mismatch and shunt (hypoxia),
+   fall in end-tidal CO2, arrhythmia, loss of consciousness,
+   PEA arrest in the extreme case
+```
+
+Two things turn an embolic shower into a syndrome. The first is quantity, set by the surgical technique and the canal: a fracture canal with its haematoma and loose marrow, a long stem, a wide pressurised mantle and a dry unvented column all raise the dose. The second is the pulmonary circulation's response, which is both mechanical and chemical. Fat and marrow do not simply plug vessels; they activate complement, platelets and the clotting cascade and release vasoconstrictors, so the rise in pulmonary vascular resistance is out of proportion to the obstructed cross-section. Marrow thromboplastin also starts clot: in 130 cemented hip replacements, canal suction during cementing cut the embolic cascade from 91% to 15% of cases and day-4 deep vein thrombosis from 18% to 3%, which places part of the thrombotic burden of arthroplasty at the moment of cementation.
+
+The right ventricle is the organ that fails. A thin-walled chamber used to an afterload of 20 mmHg is asked to push against double or treble that within a minute; it dilates, its wall tension rises, its coronary perfusion (which depends on the systemic pressure it is now helping to lower) falls, and the shifted septum takes the left ventricle's filling with it. The patient who dies of BCIS dies of acute right heart failure with an empty left heart. That is the physiological logic behind every rule in this chapter: minimise the load, keep the right heart full and the systemic pressure up, and avoid the two things (hypovolaemia and a sympathectomy from an unsupported spinal) that leave it unable to cope.
+
+The syndrome is also what the hypoxic patient in the anaesthetic room an hour after the stem went in may have in milder form. The grading below counts the intraoperative event; a persistent oxygen requirement and confusion on the ward after a cemented hemiarthroplasty belong to the same process.
+
+## The severity grading and what the cohorts show
+
+The published grading, proposed in the 2009 review and used by every cohort since, is:
+
+- Grade 1: moderate hypoxia (SpO2 below 94%) or hypotension (fall in systolic pressure of 20-40%).
+- Grade 2: severe hypoxia (SpO2 below 88%) or hypotension (fall in systolic pressure over 40%) or unexpected loss of consciousness.
+- Grade 3: cardiovascular collapse requiring cardiopulmonary resuscitation.
+
+Two cohorts give the numbers. In 1,016 cemented hemiarthroplasties for femoral neck fracture, grade 1 occurred in 21%, grade 2 in 5.1% and grade 3 in 1.7%; early mortality was 5.2% with no BCIS, 9.3% with grade 1, 35% with grade 2 and 88% with grade 3, and severe BCIS carried a 16-fold rise in mortality. Independent predictors of a severe event were ASA III-IV, chronic obstructive pulmonary disease and treatment with diuretics or warfarin: a frail cardiopulmonary patient, possibly dry, possibly bleeding. In 3,294 cemented arthroplasties of every kind, something scoreable happened in 26%: 31% of hip hemiarthroplasties, 28% of knee replacements, 24% of hip replacements, 23% of revisions, 20% of unicompartmental knees and 16% of shoulder arthroplasties. Severe BCIS carried a hazard ratio of 3.46 for death within 30 days, and the independent risk factors were age over 75 (odds ratio 1.57), ASA III or IV (1.58) and renal impairment (3.32).
+
+The fracture population is where it kills. The English and Welsh incident reporting system recorded 62 deaths or severe harms from cement in hemiarthroplasty between 2005 and 2012, one for every 2,900 hemiarthroplasties: 41 deaths, 14 cardiac arrests and seven peri-arrests, 89% of them during or within minutes of cement insertion, and 80% of the deaths on the table. Three quarters of the deaths came after a 2009 national alert, which is what produced the 2015 joint guideline. A reporting-system denominator undercounts, so the true rate of catastrophe is higher than one in 2,900, and the registry day-one mortality data below say the same.
+
+Knee replacement sits in the same cohort at 28%. The cuts open cancellous bone on both sides of the joint, cement is pressurised into both, and in a tourniquet knee the load is held in the limb and delivered at deflation on top of the metabolic washout in [the tourniquet chapter](a01-tourniquet.html). It is usually mild and usually mistaken for deflation hypotension; in the patient with pulmonary hypertension it is neither.
+
+## Risk factors, in order of weight
+
+The risk factors sort into those that increase the embolic dose and those that reduce the patient's ability to absorb it.
+
+Dose:
+
+- A fracture, because the canal contains haematoma and disrupted marrow and the surgery is urgent and often done by a less experienced team at an inconvenient hour.
+- A cemented hemiarthroplasty rather than a total hip, partly because of the patient it is done in and partly because hemiarthroplasty stems were historically long, monoblock and pressurised into an unprepared canal.
+- A long stem, a wide canal, osteoporotic bone with open trabeculae, a pathological fracture or a canal full of tumour.
+- Heavy pressurisation, no venting, no lavage, cement injected into a wet bloody canal.
+- A previously uninstrumented canal; a revision canal that has already been reamed and lined by cement embolises less.
+
+Reserve:
+
+- Pulmonary hypertension of any cause, a dilated or impaired right ventricle, severe tricuspid regurgitation.
+- Severe aortic stenosis and any fixed-output state: the fall in left-sided filling cannot be met by a rise in stroke volume.
+- Age over 75, ASA III-IV, renal impairment, COPD, diuretic therapy, anticoagulation, and the hypovolaemia that a fracture patient brings to theatre after a day on a trolley with a litre of blood in the thigh.
+- A patent foramen ovale, which turns a pulmonary load into a paradoxical cerebral or coronary one. In the elderly it is present in about a quarter and almost never known about.
+- A spinal anaesthetic with an unopposed sympathectomy at the moment of cementation: not a contraindication, but a reason to have the pressure supported before the cement goes in rather than after.
+
+The patient at the top of this list, an 85-year-old ASA IV with COPD, pulmonary hypertension, chronic kidney disease and a displaced intracapsular fracture, is the patient the guideline was written for.
+
+## The prevention bundle
+
+The UK joint guideline sets out a bundle rather than a single measure, and the logic is to cut the dose with surgical technique and to prepare the patient and the team for the dose that remains. The components are:
+
+Before the case:
+
+1. Identify the at-risk patient (the list above) and say so at the team brief. The surgeon decides on cemented or uncemented fixation with that information; in the extreme-risk patient the discussion is whether an uncemented stem or a different operation is safer, with the periprosthetic fracture cost in mind.
+2. Resuscitate: fracture patients arrive hypovolaemic and often with a haemoglobin that has not yet fallen to reflect the blood in the thigh. Fluid before the spinal, not after the cement.
+3. Decide on monitoring. An arterial line for the ASA III-IV patient, placed before induction, costs ten minutes and shows the fall in pressure at the moment it happens rather than when the cuff next cycles. A central line is rarely needed; a vasopressor infusion can run through a good peripheral cannula for the duration of the event.
+
+Surgical technique, which is where most of the dose reduction lives:
+
+4. Thorough pulsed lavage of the canal and suction until it is dry, which removes the marrow and fat that would otherwise be injected into the veins.
+5. A distal cement restrictor and a vent or suction catheter in the canal during cement insertion, so that the pressure has somewhere to go other than the venous sinusoids. The bone-vacuum technique that abolished the embolic cascade in the randomised series used suction at -800 mbar through cannulae placed along the linea aspera.
+6. Vacuum-mixed cement delivered retrograde with a cement gun, which gives a uniform mantle with fewer voids at lower pressure than finger-packing.
+7. Restrained pressurisation and a steady, not forceful, stem insertion. The Dutch cohort's authors ask for avoidance of excessive pressurisation in the high-risk patient; the surgeon can trade a few per cent of interdigitation for a smaller embolic load and will do so if asked.
+8. A spoken warning before the cement goes in. The guideline formalises what good teams do anyway: the surgeon says "cementing now", the anaesthetist acknowledges it, and the next five minutes belong to the patient.
+
+Anaesthetic readiness at the moment of cementation:
+
+9. The patient normovolaemic, with the systolic pressure at or near baseline, not drifting down under a spinal. If the pressure is already 20% below baseline when the cement goes in, the first grade of BCIS has been reached before the embolus arrives.
+10. A vasopressor drawn up and, in the at-risk patient, already running: metaraminol or noradrenaline for the sympathectomised spinal, with adrenaline drawn up for the right ventricle that fails.
+11. Inspired oxygen increased before the cement goes in and the pulse oximeter watched; under general anaesthesia, the capnograph is the earliest monitor, because a fall in end-tidal CO2 with unchanged ventilation means the pulmonary blood flow has fallen before the pressure does.
+12. The anaesthetist at the head of the patient, not writing the chart.
+
+The guideline's authors are explicit that the bundle rests on previously published advice and observational data rather than on a trial of the bundle itself. The surgical measures have randomised echocardiographic evidence behind them, the anaesthetic measures are physiology, and the whole package is cheap.
+
+## Cemented versus uncemented for hip fracture
+
+The temptation after reading the cohorts is to abandon cement in the frail patient. The evidence does not support that as a general policy, and the reason is that the harm from cement is concentrated into the first day and the benefit is spread over the following year.
+
+The Australian registry analysed about 25,000 hemiarthroplasties: cemented monoblock stems carried 1.7 times the day-one mortality of uncemented monoblock stems, and the relationship had reversed by one week and stayed reversed at one month and one year. The Norwegian register, 11,210 fractures, found a first-day relative risk of 2.9 with cement, a number needed to harm of 116 overall and 33 in patients worse than ASA 3, with the excess tracking comorbidity exactly as the BCIS cohorts predict. Then the WHiTE 5 trial randomised 1,225 patients aged 60 and over to cemented or modern uncemented hemiarthroplasty. Quality of life at four months was better with cement (EQ-5D 0.371 against 0.315, an adjusted difference of 0.055, at the lower edge of what patients notice), mortality at 12 months was 23.9% with cement and 27.8% without (odds ratio 0.80, confidence interval crossing one), and periprosthetic fracture occurred in 0.5% of cemented and 2.1% of uncemented hips (odds ratio 4.37). The uncemented stem in osteoporotic bone splits the femur, loosens and subsides, and the reoperation for a periprosthetic fracture in an 85-year-old is a bigger insult than the cement was.
+
+The honest synthesis is this. Cement kills a small number of the frailest patients on the table, on day one, by the mechanism in this chapter. Uncemented fixation in the same population trades that for more fractures, worse function and no survival advantage by a week. The system-level answer is cement for hemiarthroplasty, with the bundle applied to every case and hardest to the patient at the top of the risk list. The individual-level answer, for the patient with severe pulmonary hypertension, a failing right ventricle or critical aortic stenosis, is a conversation between surgeon and anaesthetist before the list, in which an uncemented stem, a shorter stem, or in the moribund patient no operation, are all on the table. The [neck of femur card](../c/neck-of-femur.html) carries the operation-level detail and [the orthopaedic patient chapter](a10-the-orthopaedic-patient.html) the frailty context.
+
+## When it happens
+
+The event declares itself within a minute or two of cement insertion or stem impaction, and under general anaesthesia the sequence is usually a fall in end-tidal CO2, then a fall in saturation, then a fall in blood pressure, then an arrhythmia. Under a spinal the patient becomes restless, dyspnoeic, confused or unconscious, and the pressure falls. The differential at that moment is short: BCIS, pulmonary thromboembolism from the fracture, anaphylaxis to the antibiotic or the cement, myocardial infarction, and a spinal that has climbed or a patient who was already empty. Timing to the cement, the absence of bronchospasm and rash, and a surgeon who has just pressurised a canal settle it.
+
+The management is the treatment of acute right heart failure with a self-limiting cause:
+
+1. Say it out loud. The surgeon stops pressurising, does not reduce the hip until told, and holds the stem where it is if it is half in.
+2. 100% oxygen. Under general anaesthesia, confirm the airway and ventilation and read the capnograph as a cardiac output monitor. Under a spinal, oxygen by mask and prepare to intubate if consciousness is lost or saturation does not recover.
+3. Fluid: a 250-500 mL bolus to fill the right ventricle, then reassess rather than flood it; an over-distended right ventricle shifts the septum further and makes things worse.
+4. Vasopressor to restore systemic pressure, which is the right ventricle's coronary perfusion pressure: metaraminol or noradrenaline first, adrenaline in 10-50 mcg increments if the pressure does not respond or the heart rate falls, and an adrenaline infusion if it is needed twice. Adrenaline is the right drug for the failing right ventricle because it adds contractility to the vasoconstriction; a pure alpha agonist supports the pressure but not the pump.
+5. Cardiopulmonary resuscitation at once if the pulse is lost. The rhythm is usually pulseless electrical activity; chest compressions move blood through a transiently obstructed pulmonary bed, and the cohort survivors of grade 3 events are those resuscitated immediately.
+6. Echocardiography if it is in the room: a dilated, poorly contracting right ventricle with a small left ventricle confirms the diagnosis, and a transoesophageal probe shows the embolic material itself.
+7. Do not reach for a pulmonary vasodilator in theatre. Inhaled nitric oxide or milrinone belongs in intensive care for the patient whose pulmonary pressure stays up; in the first ten minutes the problem is systemic pressure and right ventricular perfusion.
+8. Once stable, finish the operation with the least additional insult: the surgeon reduces the hip slowly, closes, and the patient goes to a high-dependency bed with oxygen, an arterial line and a low threshold for troponin, echocardiography and a CT pulmonary angiogram if the hypoxia persists past the first hour.
+
+The event is usually over in 20-30 min as the pulmonary bed clears and the mediators are metabolised. Grade 1 needs nothing beyond the vasopressor already running; grade 2 needs the full sequence; grade 3 needs everything and a frank conversation with the family afterwards, because the mortality is high however well it is managed.
+
+## Edge cases and variants
+
+- Bilateral or two-stem cases: a revision with a long cemented stem, a periprosthetic fracture with a cemented revision stem, or a tumour prosthesis. The dose is larger, the canal is often open to the diaphyseal venous plexus, and the measures above apply with an arterial line as routine. Stage the two sides of a bilateral case if the first side produced an event.
+- The cemented revision knee and the cemented tumour endoprosthesis: a long intramedullary stem cemented into a reamed canal behaves like a hip stem, and in the knee the tourniquet holds the load until deflation.
+- Vertebroplasty and kyphoplasty: cement injected under pressure into a vertebral body escapes into the paravertebral and epidural veins and reaches the lungs; small cement emboli are common on CT and usually silent, but a large injection at several levels in a patient with a bad right ventricle is the same syndrome. The [vertebroplasty card](../c/spinal-metastasis-vertebroplasty.html) covers it.
+- Antibiotic-loaded cement is not the cause of BCIS, but anaphylaxis to an antibiotic given at induction can present in the same minutes; bronchospasm, flushing or rash separate the two.
+- Nitrous oxide expands the gas component of the embolus; avoid it during cementation in the at-risk patient.
+- The shoulder: cemented humeral stems embolise too (16% in the Dutch cohort), in the beach chair position where cerebral perfusion is already marginal ([positioning chapter](a06-positioning.html)); an event here is usually mild, but a fall in pressure in a sitting patient needs treating at once.
+- Known patent foramen ovale: a cerebral embolus is the risk; the case for an uncemented stem and for avoiding the Valsalva-like rise in right atrial pressure at impaction is stronger than usual.
+
+## The rule set
+
+1. Name the at-risk patient at the brief: fracture, cemented stem, age over 75, ASA III-IV, renal impairment, COPD, pulmonary hypertension, a bad right ventricle, aortic stenosis, diuretics, anticoagulation.
+2. Fill the patient before the spinal; do not let the pressure drift down before the cement.
+3. Arterial line for the ASA III-IV patient; vasopressor running, adrenaline drawn up, oxygen up, capnograph watched.
+4. Ask for the surgical bundle: lavage to a dry canal, restrictor and vent, vacuum-mixed cement by gun, restrained pressurisation, a spoken "cementing now".
+5. Stand at the head for the five minutes after the warning; grade what happens and write it down.
+6. Treat an event as acute right heart failure: oxygen, measured fluid, vasopressor then adrenaline, early CPR, surgeon paused.
+7. Keep cement for hip fracture as the default; reserve the uncemented discussion for the patient with severe pulmonary hypertension or right ventricular failure, and have it before the list, not in the canal.
