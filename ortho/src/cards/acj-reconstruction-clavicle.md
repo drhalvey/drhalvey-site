@@ -14,7 +14,7 @@ block:
   family: interscalene
   catheter: rarely
   catheter_text: "Periosteal and fracture pain that settles over three days does not justify a catheter, and no single catheter covers both the C3-C4 skin and the C5-C6 bone; the exception is the nonunion revision with bone graft or the patient with chronic pain, where an interscalene catheter plus a single-shot cervical plexus block is the author's compromise"
-  alternatives: ["Clavipectoral fascial plane block plus superficial cervical plexus block, which is motor and phrenic sparing and in two small randomised trials gave longer analgesia than interscalene plus cervical plexus for midshaft fixation", "Selective C3-C5 root block (fast, phrenic sparing in one trial, operator dependent)", "General anaesthesia with surgeon infiltration along the plate, which is the historical default and leaves the first night uncovered"]
+  alternatives: ["Clavipectoral fascial plane block plus superficial cervical plexus block, which is motor and phrenic sparing and in one small randomised trial gave longer analgesia than interscalene plus cervical plexus for midshaft fixation, while another found the reverse", "Selective C3-C5 root block (fast, phrenic sparing in one trial, operator dependent)", "General anaesthesia with surgeon infiltration along the plate, which is the historical default and leaves the first night uncovered"]
   neuraxial: no
 position: beach-chair
 position_text: "Beach chair at 30-45 degrees with the head turned slightly away for the clavicle, or supine with a bump under the scapula; the neck and the block site are in the surgeon's field and the tube is taped to the opposite side"
@@ -140,7 +140,7 @@ Rebound is moderate: bone surgery in a young population, but a plate rather than
 - Nonunion and the chronic dislocation. Scar, a plate to remove, bone graft from the iliac crest or a hamstring harvest, and a second painful site in a different block territory that needs its own plan; the one setting where a catheter is reasonable.
 - Intramedullary fixation. Less stripping, a smaller scar and less pain than a plate, with the same territory to block.
 - The subclavian vessels and the lung. A drill depth below the inferior cortex. A sudden bleed from the depths or a rising airway pressure during drilling is the surgeon's catastrophe presenting to you; the chest radiograph in recovery after difficult drilling is not optional.
-- Adolescents. Most displaced midshaft fractures in adolescents are treated without surgery on the pooled data; the ones that reach theatre are the open, the shortened and the athlete's, and the combined block works under general anaesthesia as it does in an adult.
+- Adolescents. Most displaced midshaft fractures in adolescents are treated without surgery; the ones that reach theatre are the open, the shortened and the athlete's, and the combined block works under general anaesthesia as it does in an adult.
 - Plate removal. Common, elective, short, and under-blocked because it looks minor; the cervical plexus block alone with surgeon infiltration is usually enough.
 
 ## Key sources

@@ -19,7 +19,7 @@ block:
 position: supine
 position_text: "Supine with a bump under the ipsilateral buttock to internally rotate the leg for the lateral malleolus; the bump removed or the leg externally rotated for the medial side; prone or lateral for a direct posterior malleolar approach, which changes the airway plan; the pilon often needs an anteromedial or anterolateral approach with the leg on a radiolucent platform"
 tourniquet: yes
-tourniquet_text: "Thigh tourniquet at 250-300 mmHg for most malleolar fixations, 45-90 min; a pilon fixation runs longer and the tourniquet is often released before the articular reduction is checked; the swollen or vascular leg may get none"
+tourniquet_text: "Thigh tourniquet set from the limb occlusion pressure (Part A, the tourniquet) for most malleolar fixations, 45-90 min; a pilon fixation runs longer and the tourniquet is often released before the articular reduction is checked; the swollen or vascular leg may get none"
 cement: no
 cement_text: ""
 blood_loss: "Under 200 mL for malleolar ORIF; 200-400 mL for a pilon, mostly after tourniquet release"
@@ -108,7 +108,7 @@ The pain logic is bone and periosteum under a thin skin, and the block question 
 
 ### 8. Recovery, discharge and the first night
 **Why:** The fixation is stable from the moment the screws are in; the surgeon wants elevation, the splint untouched and a clinic review at two weeks.
-**Anaesthesia:** The first paracetamol and NSAID dose goes in before discharge. The patient goes home with a numb, insensate foot, crutches, a written night plan and someone at home; the discharge criteria are the same as for any day case, and a working block is not a reason to keep the bed. The rebound comes 12-24 h after the block with dexamethasone and 8-12 h without, usually at night, rises over an hour to its peak, lasts about 3 h and responds to the opioid that the patient should already have taken; the trial data make the dexamethasone and the plan the two interventions that decide whether the patient telephones. Day 1-2 is the peak; by day 3 the regular regimen is enough and the opioid is stopped.
+**Anaesthesia:** The first paracetamol and NSAID dose goes in before discharge. The patient goes home with a numb, insensate foot, crutches, a written night plan and someone at home; the discharge criteria are the same as for any day case, and a working block is not a reason to keep the bed. The rebound comes at about 26 h after the block with intravenous dexamethasone and 17 h without, in the one trial that timed it, usually at night, rises over an hour to its peak, lasts about 3 h and responds to the opioid that the patient should already have taken; the trial data make the dexamethasone and the plan the two interventions that decide whether the patient telephones. Day 1-2 is the peak; by day 3 the regular regimen is enough and the opioid is stopped.
 
 ### 9. The pilon on day 0: spanning fixator and fibular plate
 **Why:** Two pins in the tibial shaft and one or two in the calcaneus or the talus, connected by bars across the ankle, pull the fracture out to length by ligamentotaxis; many surgeons plate the fibula at the same sitting through the lateral skin, which is usually the least injured side, to set the length. A CT follows.

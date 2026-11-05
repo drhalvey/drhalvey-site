@@ -5,7 +5,7 @@ subtitle: "For cuff tear arthropathy, massive irreparable cuff tears, fracture a
 aka: ["rTSA", "RSA", "reverse shoulder replacement", "reverse geometry shoulder", "cuff tear arthropathy", "cuff arthropathy", "pseudoparalysis", "Grammont", "revision shoulder arthroplasty", "conversion to reverse"]
 pain:
   score: 4
-  trajectory: [2, 5, 4, 3, 2]
+  trajectory: [2, 5, 4, 4, 2]
   mechanism: retension
   mechanism_text: "The arm is deliberately lengthened by 2-3 cm to tension the deltoid, which then carries the whole load of elevation and is stretched with every movement; underneath that is bone (humeral osteotomy, glenoid reaming, baseplate screws, canal preparation) and the stretch on the axillary nerve and plexus that lengthening produces"
   rebound_risk: high

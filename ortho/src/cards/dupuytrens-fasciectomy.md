@@ -6,7 +6,7 @@ aka: ["Dupuytren's contracture", "Dupuytren's disease", "palmar fasciectomy", "l
 pain:
   score: 2
   trajectory: [1, 4, 3, 3, 2]
-  mechanism: surface
+  mechanism: muscle
   mechanism_text: "A long zigzag palmar and digital incision with wide skin flaps raised off diseased fascia, the cord excised from around the neurovascular bundles, and a finger that has been bent for years straightened and then held straight; a wound-healing and stiffness problem more than a nociceptive one, with a capsular release at the PIP joint and a skin graft donor site in the bigger operations"
   rebound_risk: moderate
 block:
@@ -19,7 +19,7 @@ block:
 position: supine-arm-table
 position_text: "Supine with the arm on a hand table, palm up, the hand held flat by a lead hand or an assistant, the surgeon under loupes; the finger will be straightened against resistance during the case"
 tourniquet: yes
-tourniquet_text: "Upper arm tourniquet for most surgeons, 60-120 min for a single ray and routinely approaching the limit for multiple rays or a dermofasciectomy; released before closure to find the bleeding points in a palm that cannot tolerate a haematoma. None under WALANT"
+tourniquet_text: "Upper arm tourniquet for most surgeons, 45-90 min for a single ray and routinely approaching the limit for multiple rays or a dermofasciectomy; released before closure to find the bleeding points in a palm that cannot tolerate a haematoma. None under WALANT"
 cement: no
 cement_text: ""
 blood_loss: "Negligible under tourniquet; the haematoma after release is the complication, not the loss"
@@ -66,7 +66,7 @@ Dupuytren's disease is a fibromatosis of the palmar fascia. Myofibroblasts in th
 
 The surgeon's choices, in rising order of what they do to the hand:
 
-1. Needle fasciotomy: a hypodermic needle passed through the skin to divide the cord at several levels, under local anaesthetic, in a clinic room. Quick, cheap, and the contracture recurs earliest, with the highest recurrence of the three in prospective data over three to four years.
+1. Needle fasciotomy: a hypodermic needle passed through the skin to divide the cord at several levels, under local anaesthetic, in a clinic room. Quick, cheap, and the contracture recurs earlier than after fasciectomy, at about the same rate as after collagenase in the randomised comparison.
 2. Collagenase injection into the cord, with the finger manipulated straight a day or more later. The DISC trial of 672 patients found it did not meet non-inferiority against limited fasciectomy at one year, with more minor complications (skin tears, haematoma, oedema) but fewer moderate or severe ones (2% against 5%), and weak evidence of more recurrence; in the pooled randomised trials recurrence was about equal to needle fasciotomy and well above fasciectomy.
 3. Limited (selective) fasciectomy, the standard operation: a zigzag Bruner incision along the palm and into the finger, skin flaps raised off the cord, the diseased fascia excised from its proximal end to the finger with the neurovascular bundles identified and followed throughout, and the finger straightened. The joints are then assessed: a metacarpophalangeal joint straightens once the cord is gone, a proximal interphalangeal joint that has been flexed for years has a contracted volar plate and collateral ligaments and may need a capsular release, which the surgeon does cautiously because it adds swelling and stiffness. The skin, which has shortened with the cord, is closed with Z-plasties or left open in part (the McCash open palm) to heal by secondary intention. Recurrence is lowest with fasciectomy (about 16% in prospective series with long follow-up) and the hand therapy and night splinting afterwards are what hold the correction.
 4. Dermofasciectomy: the diseased skin is excised with the fascia and replaced with a full-thickness skin graft from the forearm or groin, for recurrent disease or aggressive diathesis, on the principle that the disease does not recur under a graft. A longer case, a donor site, a graft that must be immobilised, and the top of this card's range.

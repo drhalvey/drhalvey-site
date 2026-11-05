@@ -39,7 +39,7 @@ sources:
     note: "473 consecutive elbow arthroscopies: serious complications in 0.8% (four deep infections); minor in 11%, including 12 transient nerve palsies in 10 patients (five ulnar, four superficial radial, one posterior interosseous, one medial antebrachial cutaneous, one anterior interosseous), 33 prolonged portal drainage or superficial infections; rheumatoid arthritis (p less than 0.001) and contracture (p less than 0.05) predicted nerve palsy; no permanent nerve injury, haematoma or compartment syndrome"
   - title: "Ahmed AF, D'Hooghe P, Alkhelaifi K, Zikria B. Complications of elbow arthroscopy: a meta-analysis. ISAKOS Congress 2021 abstract"
     url: "https://isakos.com/GlobalLink/Abstract/3811"
-    note: "95 studies, 14,213 patients: total complication rate 8%; nerve injury the commonest at 1.95%, mostly transient (ulnar 1.95%, radial 0.73%, lateral antebrachial cutaneous 0.26%, posterior interosseous and median 0.17% each); superficial infection 1.89%, deep 0.36%"
+    note: "95 studies, 14,213 patients: total complication rate 8%; nerve injury the commonest at 1.95%, mostly transient and mostly ulnar; superficial infection 1.89%, deep 0.36%"
   - title: "Wheeless' Textbook of Orthopaedics. Elbow arthroscopy"
     url: "https://www.wheelessonline.com/joints/elbow/elbow-arthroscopy/"
     note: "Portal anatomy: proximal anteromedial portal about 4 mm from the ulnar nerve and 7-20 mm from the median nerve with the elbow flexed; proximal anterolateral portal a mean 13.7 mm from the radial nerve; extension brings the radial nerve 3-7 mm closer to the joint; distension moves the neurovascular structures away from the portals; prone positioning with a sandbag under the arm"

@@ -11,7 +11,7 @@ pain:
   rebound_risk: moderate
 block:
   primary: "General anaesthesia with multimodal analgesia; a single-shot block placed through clean tissue away from the infected field where the site allows (adductor canal for a knee washout, popliteal sciatic and saphenous for a tibial debridement), never through cellulitis or an abscess; spinal anaesthesia for the lower limb in the well host with chronic infection and no bacteraemia"
-  family: none
+  family: sciatic-popliteal
   catheter: "no"
   catheter_text: "No catheter: a perineural catheter near an infected field, in a bacteraemic patient, in a limb that may need serial examination and a second washout within 48 h, has nothing to offer that a single shot and the oral regimen do not, and the mechanism does not demand it"
   alternatives: ["Spinal anaesthesia for the well host having a lower limb debridement, with the tourniquet time in mind", "Surgeon infiltration of the wound edges and portals with long-acting local anaesthetic", "Low-dose ketamine infusion for the chronic osteomyelitis patient on long-term opioids"]
@@ -136,7 +136,7 @@ Rebound is moderate because the mechanism is small: when the block recedes the p
 - The hip in the adult. A deep joint, a lateral position and an open or arthroscopic washout in a patient who is usually old and septic; the native hip that fails washout becomes a resection arthroplasty, and the arthroplasty that follows months later is in a scarred hip.
 - The injecting drug user. Unusual organisms, a sternoclavicular or sacroiliac joint, endocarditis until an echocardiogram says otherwise, difficult venous access and an opioid tolerance that the ward will under-treat; central access and the pain service on day 1.
 - The rheumatoid patient. The highest risk group in the national data, on immunosuppression and often steroids, with a joint already destroyed, a cervical spine for the airway, and a presentation that mimics a flare and is diagnosed late.
-- Crystal arthropathy. The septic joint that turns out to be gout is washed out anyway, because the aspirate takes 48 h to say which it was.
+- Crystal arthropathy. The septic joint that turns out to be gout is often washed out anyway, because crystals on same-day microscopy do not exclude infection and the culture takes 48 h.
 - The patient who needs an amputation. A diffuse infection in a host who cannot tolerate reconstruction, an infected non-union after years of frames, a diabetic foot that has reached the ankle; the conversation belongs to the surgeon and the patient, and the anaesthetic is on the amputation card.
 
 ## Key sources

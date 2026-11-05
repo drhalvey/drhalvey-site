@@ -5,7 +5,7 @@ subtitle: "Stemmed, stemless, hemiarthroplasty and humeral head resurfacing"
 aka: ["TSA", "aTSA", "total shoulder replacement", "shoulder replacement", "hemiarthroplasty", "stemless shoulder", "humeral head resurfacing", "glenohumeral arthritis"]
 pain:
   score: 4
-  trajectory: [2, 5, 4, 3, 2]
+  trajectory: [2, 5, 4, 4, 2]
   mechanism: bone
   mechanism_text: "Humeral head osteotomy and glenoid reaming over a subscapularis takedown and repair, which is a tendon under tension even in a sling; cuff and capsule left at native length, and the pre-operative pain generator (bone on bone) is removed"
   rebound_risk: moderate
@@ -31,12 +31,15 @@ drugs:
   txa: "Tranexamic acid 1 g IV before incision"
   vte: "Mechanical prophylaxis; chemoprophylaxis only for patients with their own risk factors, since the baseline risk is well below lower-limb arthroplasty"
   antiemetic: "Dexamethasone 8 mg IV at induction and ondansetron 4 mg IV before emergence"
-patient_line: "You will wake with a numb, heavy arm that lasts into the night; the shoulder hurts most on the first two days, then settles quickly, and most people are off strong painkillers within a few days."
+patient_line: "You will wake with a numb, heavy arm that lasts into the night; the shoulder hurts most on the first two days, then settles quickly, and most people are off strong painkillers within a week or two."
 trap: "Blood pressure at the head, not the arm: in beach chair the cuff overstates brain perfusion pressure by about 1 mmHg for every 1.25 cm between cuff and ear, and deliberate hypotension for a dry field is the mechanism behind the reported strokes"
 sources:
   - title: "Lopez R, Schiffman C, Singh J, et al. Early postoperative pain is similar after arthroscopic rotator cuff repair vs. short-stay shoulder arthroplasty: a prospective study. J Shoulder Elbow Surg 2025;34:1199-1207"
     url: "https://doi.org/10.1016/j.jse.2024.08.031"
     note: "102 patients, all with liposomal bupivacaine interscalene block: peak mean VAS on day 2, 5.1 for arthroplasty and 4.4 for cuff repair, no difference over 14 days; cuff repair used more opioid at day 7-8"
+  - title: "Aibinder WR, Bicknell RT, Bartsch S, Scheibel M, Athwal GS. Subscapularis management in stemless total shoulder arthroplasty: tenotomy versus peel versus lesser tuberosity osteotomy. J Shoulder Elbow Surg 2019;28:1942-1947"
+    url: "https://doi.org/10.1016/j.jse.2019.02.022"
+    note: "188 stemless anatomic replacements (68 tenotomy, 65 peel, 55 osteotomy): no difference in pain, ASES score, instability or clinical subscapularis failure at two years; external rotation better after peel than tenotomy"
   - title: "Jones CA, Chambers S, Renshaw AD, et al. Patients undergoing reverse total shoulder arthroplasty have less pain and require fewer opioid pain medications compared to anatomic total shoulder arthroplasty in the early postoperative period: a retrospective review. J Shoulder Elbow Surg 2025;34:454-461"
     url: "https://doi.org/10.1016/j.jse.2024.04.024"
     note: "278 anatomic and 412 reverse: anatomic patients more often still on opioids at two weeks (62% vs 46%), more refills, VAS at six weeks 2.8 vs 2.2; the anatomic recovery is not the easier one"
@@ -54,7 +57,7 @@ sources:
     note: "972 ambulatory patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age, and absence of IV dexamethasone OR 1.78"
   - title: "Kirsch JM, Bedi A, Horner N, et al. Tranexamic acid in shoulder arthroplasty: a systematic review and meta-analysis. JBJS Rev 2017;5(9)"
     url: "https://doi.org/10.2106/JBJS.RVW.17.00021"
-    note: "5 studies, 629 patients: haemoglobin drop reduced by 0.64 g/dL, drain output by 117 mL; transfusion RR 0.45 but not significant"
+    note: "5 studies, 629 patients: haemoglobin drop reduced by 6.4 g/L, drain output by 117 mL; transfusion RR 0.45 but not significant"
   - title: "Ahmed AF, Hantouly A, Toubasi A, et al. The safety of outpatient total shoulder arthroplasty: a systematic review and meta-analysis. Int Orthop 2021;45:697-710"
     url: "https://doi.org/10.1007/s00264-021-04940-7"
     note: "199,662 arthroplasties, 3.8% outpatient: no difference in 30- or 90-day readmission or revision; outpatient cohorts were younger and healthier"
@@ -69,7 +72,7 @@ Glenohumeral osteoarthritis is a joint that has worn through its cartilage with 
 
 The surgeon has four aims, in order:
 
-1. Get in. The only clean way into the front of the joint is through the subscapularis, so the tendon is taken down (tenotomy, a "peel" off the lesser tuberosity, or a lesser tuberosity osteotomy) and repaired at the end. The three methods heal about as well as each other over two years; the choice is the surgeon's habit.
+1. Get in. The only clean way into the front of the joint is through the subscapularis, so the tendon is taken down (tenotomy, a "peel" off the lesser tuberosity, or a lesser tuberosity osteotomy) and repaired at the end. In a multicentre series of 188 stemless replacements the three methods gave the same pain, function and failure rate at two years, with slightly better external rotation after a peel; the choice is the surgeon's habit.
 2. Take the head off at the anatomical neck, in the patient's own retroversion, and measure it. The replacement head is sized to what was removed so that the cuff and capsule end up at their original length. This is the sentence that explains the pain profile: nothing is stretched, lengthened or re-tensioned.
 3. Ream the glenoid flat and correct its version, then implant a polyethylene glenoid, usually cemented, sometimes with a posterior augment if the wear is severe. This is the step with the worst exposure and the hardest retraction.
 4. Seat the humeral component (stemless on the cut surface of the metaphysis, or a short or standard stem down the canal, press-fit in good bone), reduce, check that the head translates about half its width in each direction and that the subscapularis will reach, then repair the subscapularis and close.
@@ -92,7 +95,7 @@ One honest correction to the folk wisdom that an anatomic replacement is the lea
 
 ### 3. Skin preparation, antibiotic and tranexamic acid
 **Why:** Cutibacterium acnes lives in the dermal sebaceous glands of the shoulder, is not reliably cleared by chlorhexidine, and is the organism behind the slow, culture-negative-looking infections that ruin shoulder arthroplasties. Surgeons prepare the skin with benzoyl peroxide for days beforehand and are fastidious about not touching the dermal edge.
-**Anaesthesia:** Cefazolin 2 g IV finished before the knife, 3 g over 120 kg. Tranexamic acid 1 g IV at the same time: in the pooled trials it cuts the haemoglobin fall by 0.64 g/dL and drain output by about 117 mL, and makes transfusion rare. Nothing else is needed for C. acnes from your side; it is a surgical skin measure.
+**Anaesthesia:** Cefazolin 2 g IV finished before the knife, 3 g over 120 kg. Tranexamic acid 1 g IV at the same time: in the pooled trials it cuts the haemoglobin fall by 6.4 g/L and drain output by about 117 mL, and makes transfusion rare. Nothing else is needed for C. acnes from your side; it is a surgical skin measure.
 
 ### 4. Deltopectoral approach
 **Why:** The interval between deltoid and pectoralis major, marked by the cephalic vein, is an internervous plane (axillary nerve laterally, medial and lateral pectoral nerves medially) and gives a direct route to the front of the joint without cutting muscle. The conjoint tendon (short head of biceps and coracobrachialis) is retracted medially with the musculocutaneous nerve a finger's breadth behind it.
@@ -128,7 +131,7 @@ One honest correction to the folk wisdom that an anatomic replacement is the lea
 
 ## Pain plan
 
-The mechanism is bone over one repaired tendon, with a peak on day 1-2 that matches a cuff repair and a tail that is shorter, so the plan is a single-shot block that covers the operation and the first night, with the oral regimen carrying the patient from day 1 and an opioid available for the first week rather than the first two days. The defensible default is an interscalene block with 15-20 mL of ropivacaine 0.5% (or a superior trunk block with the same volume when the patient cannot afford a hemidiaphragm, which gives the same analgesia at 24 h with complete phrenic paresis in 5% rather than 73%), intravenous dexamethasone 8 mg at induction, regular paracetamol and an NSAID or COX-2 inhibitor started before the block recedes, and oral opioid as rescue for the first two or three days. PROSPECT's rotator cuff repair guideline is the nearest procedure-specific evidence and it recommends exactly this skeleton, with intravenous dexamethasone preferred over perineural.
+The mechanism is bone over one repaired tendon, with a peak on day 1-2 that matches a cuff repair and a tail that is shorter, so the plan is a single-shot block that covers the operation and the first night, with the oral regimen carrying the patient from day 1 and an opioid charted for the first week, since the direct comparison shows the anatomic patient is the one still taking it at two weeks. The defensible default is an interscalene block with 15-20 mL of ropivacaine 0.5% (or a superior trunk block with the same volume when the patient cannot afford a hemidiaphragm, which gives the same analgesia at 24 h with complete phrenic paresis in 5% rather than 73%), intravenous dexamethasone 8 mg at induction, regular paracetamol and an NSAID or COX-2 inhibitor started before the block recedes, and oral opioid as rescue, needed by most patients for two or three days and by a minority into the second week. PROSPECT's rotator cuff repair guideline is the nearest procedure-specific evidence and it recommends exactly this skeleton, with intravenous dexamethasone preferred over perineural.
 
 The catheter question is the one the trigger case asked, and the honest answer is that for an anatomic replacement a catheter is a reasonable choice rather than a necessary one. In the one randomised comparison that added a continuous ropivacaine infusion to day 2 on top of dexamethasone and full multimodal analgesia, in a mixed arthroplasty and cuff repair population, morphine use at 24 h was 10 mg with the infusion and 14 mg without, not different, pain scores were the same, and four of the catheters fell out. The catheter earns its place when the patient, rather than the operation, predicts a bad course: an opioid-tolerant or chronic pain patient, a revision or a previous arthroplasty, someone who has had a catastrophic night after a previous single-shot block, or a unit that cannot deliver a reliable oral regimen at 2 am. Rebound pain is the thing to plan against: in 972 ambulatory block patients it occurred in half, and the odds were higher with bone surgery (OR 1.82), younger age and female sex, and lower when intravenous dexamethasone was given (its absence carried an OR of 1.78). Everything on this card that involves bone qualifies.
 

@@ -53,7 +53,7 @@ sources:
     url: "https://doi.org/10.1097/EJA.0000000000001691"
     note: "The nearest guideline for the arthroplasty on this card: adductor canal block plus local infiltration, IV dexamethasone, paracetamol and NSAID, no femoral block on quadriceps grounds"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://pubmed.ncbi.nlm.nih.gov/35219449/"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients: rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age; absence of IV dexamethasone OR 1.78. The tubercle osteotomy patient has all three risk factors"
 ---
 

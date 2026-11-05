@@ -5,13 +5,19 @@ summary: "Post-operative pain is predictable from four things: which tissue was 
 sources:
   - title: "Gerbershagen HJ, Aduckathil S, van Wijck AJM, Peelen LM, Kalkman CJ, Meissner W. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
     url: "https://doi.org/10.1097/ALN.0b013e31828866b3"
-    note: "50,523 patients, 105 German hospitals, ranked by median worst pain on day 1: open calcaneal reduction first, spinal fusion and scoliosis surgery at ranks 2, 3 and 6, foot arthrodesis 7, metacarpophalangeal arthrodesis 8, hand resection arthroplasty 11, open knee ligament reconstruction 15; 22 of the 40 most painful groups were orthopaedic or trauma extremity procedures; appendicectomy, cholecystectomy, haemorrhoidectomy and tonsillectomy ranked among the top 25"
+    note: "50,523 patients, 105 German hospitals, ranked by median worst pain on day 1: open calcaneal reduction first, spinal fusion and scoliosis surgery at ranks 2, 3 and 6, foot arthrodesis 7, metacarpophalangeal arthrodesis 8, hand resection arthroplasty 11, open knee ligament reconstruction 15; 22 of the 40 most painful groups were orthopaedic or trauma extremity procedures; appendicectomy, cholecystectomy, haemorrhoidectomy and tonsillectomy ranked among the top 25; laparoscopic appendicectomy patients reported pain similar to knee replacement and sternotomy patients, and about 72% of patients in the high-pain laparoscopic groups received no opioid"
   - title: "Lopez R, Schiffman C, Singh J, et al. Early postoperative pain is similar after arthroscopic rotator cuff repair vs. short-stay shoulder arthroplasty: a prospective study. J Shoulder Elbow Surg 2025;34:1199-1207"
     url: "https://doi.org/10.1016/j.jse.2024.08.031"
     note: "Peak mean VAS on day 2 of 4.4 after cuff repair and 5.1 after arthroplasty, no difference over 14 days, more opioid after cuff repair at days 7 and 8"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
     url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "Rebound pain (NRS 3 or less rising to 7 or more within 24 h of the block) in 49.6% of 972 patients; bone surgery OR 1.82, female OR 1.52, younger age, absence of IV dexamethasone OR 1.78"
+  - title: "Rhyner P, Cachemaille M, Goetti P, et al. Single-bolus injection of local anesthetic, with or without continuous infusion, for interscalene brachial plexus block in the setting of multimodal analgesia: a randomized controlled unblinded trial. Reg Anesth Pain Med 2024;49:313-319"
+    url: "https://doi.org/10.1136/rapm-2023-104681"
+    note: "60 shoulder arthroplasty and cuff repair patients with dexamethasone and multimodal analgesia: a continuous ropivacaine infusion to day 2 did not change morphine use or pain scores at any point to 48 h"
+  - title: "Jones CA, Chambers S, Renshaw AD, et al. Patients undergoing reverse total shoulder arthroplasty have less pain and require fewer opioid pain medications compared to anatomic total shoulder arthroplasty in the early postoperative period: a retrospective review. J Shoulder Elbow Surg 2025;34:454-461"
+    url: "https://doi.org/10.1016/j.jse.2024.04.024"
+    note: "278 anatomic and 412 reverse: anatomic patients more often still on opioids at two weeks (62% vs 46%) and with higher pain at six weeks (2.8 vs 2.2)"
   - title: "Joshi GP, Van de Velde M, Kehlet H. Development of evidence-based recommendations for procedure-specific pain management: PROSPECT methodology. Anaesthesia 2019;74:1298-1304"
     url: "https://doi.org/10.1111/anae.14776"
     note: "Why pain management has to be procedure-specific and how the PROSPECT working group builds its recommendations"
@@ -63,7 +69,7 @@ Nociceptors are not evenly distributed. Periosteum is dense with them; cancellou
 | surface | arthroscopic portals and irrigation only | minimal; swelling more than pain | hours |
 | visceral | a retroperitoneal or anterior approach to the spine or pelvis | abdominal wall and visceral, ileus, referred pain | days |
 
-Two of these tags do most of the work in the atlas. Bone explains why an [anatomic shoulder replacement](../c/anatomic-tsa.html), a [distal radius plate](../c/distal-radius-orif.html) and a [primary hip](../c/tha-posterior.html) hurt hard for two days and then stop. Tendon-tension explains why a [rotator cuff repair](../c/rotator-cuff-repair.html), a [distal biceps repair](../c/distal-biceps-ulnar-nerve.html) and an [MPFL reconstruction](../c/patellofemoral-mpfl-tto.html) hurt for two weeks, at night, every time the patient moves.
+Two of these tags do most of the work in the atlas. Bone explains why an [anatomic shoulder replacement](../c/anatomic-tsa.html), a [distal radius plate](../c/distal-radius-orif.html) and a [primary hip](../c/tha-posterior.html) hurt hard for two days and then stop. Tendon-tension explains why a [rotator cuff repair](../c/rotator-cuff-repair.html), a [quadriceps tendon repair](../c/quads-patellar-tendon-repair.html) and a [multiligament knee reconstruction](../c/multiligament-knee.html) hurt for two weeks, at night, every time the patient moves.
 
 ## Tension: what was left pulled tight
 
@@ -91,7 +97,7 @@ pain
  5 |    A   :  A      :      B        A = bone (THA, distal radius, hemiarthroplasty):
  4 |   . .  :    .    :          B        peaks as the block recedes, falls fast
  3 |  .   . :      A  :              B
- 2 | .      .        .A . . . . . . A   B = tendon under tension (cuff repair, MPFL):
+ 2 | .      .        .A . . . . . . A   B = tendon under tension (cuff repair, quads):
  1 |.        .                            same peak, then a plateau for a week or two
  0 +---------+--------+--------+--------+
    D0        D1       D2       D3       D7

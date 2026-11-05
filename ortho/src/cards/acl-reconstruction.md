@@ -39,7 +39,7 @@ sources:
     note: "Ten randomised trials: for ACL reconstruction an adductor canal block gave no analgesic benefit over control and was no different from a femoral nerve block on any outcome; for minor arthroscopy it gave a modest early benefit. The authors call for trials in the setting of local infiltration and harvest-site analgesia"
   - title: "Abdallah FW, Whelan DB, Chan VW, et al. Adductor canal block provides noninferior analgesia and superior quadriceps strength compared with femoral nerve block in anterior cruciate ligament reconstruction. Anesthesiology 2016;124:1053-1064"
     url: "https://doi.org/10.1097/ALN.0000000000001045"
-    note: "100 outpatients randomised to 20 mL ropivacaine 0.5% by either route: adductor canal block non-inferior for 24 h morphine consumption and pain scores, and quadriceps maximal voluntary contraction at 45 min of 26.6 against 10.6 pound-force"
+    note: "100 outpatients randomised to 20 mL ropivacaine 0.5% by either route: adductor canal block non-inferior for 24 h morphine consumption and pain scores, and quadriceps maximal voluntary contraction at 45 min of 118 N against 47 N"
   - title: "Edwards MD, Bethea JP, Hunnicutt JL, Slone HS, Woolf SK. Effect of adductor canal block versus femoral nerve block on quadriceps strength, function, and postoperative pain after anterior cruciate ligament reconstruction: a systematic review of level 1 studies. Am J Sports Med 2020;48:2305-2313"
     url: "https://doi.org/10.1177/0363546519883589"
     note: "Eight randomised trials, 655 patients: adductor canal block preserved quadriceps function for the first 12-24 h in three trials and was equivalent in three, with the same opioid consumption and pain scores, and no difference in isokinetic strength at six months"
