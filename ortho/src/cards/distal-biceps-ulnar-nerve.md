@@ -53,7 +53,7 @@ sources:
     url: "https://www.qxmd.com/r/18929194"
     note: "Ten studies, 449 simple decompressions, 342 subcutaneous and 115 submuscular transpositions: odds of improvement with decompression versus transposition 0.75 (95% CI 0.54-1.04), not significant"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age; absence of intravenous dexamethasone OR 1.78"
 ---
 

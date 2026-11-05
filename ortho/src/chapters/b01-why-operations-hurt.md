@@ -10,7 +10,7 @@ sources:
     url: "https://doi.org/10.1016/j.jse.2024.08.031"
     note: "Peak mean VAS on day 2 of 4.4 after cuff repair and 5.1 after arthroplasty, no difference over 14 days, more opioid after cuff repair at days 7 and 8"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "Rebound pain (NRS 3 or less rising to 7 or more within 24 h of the block) in 49.6% of 972 patients; bone surgery OR 1.82, female OR 1.52, younger age, absence of IV dexamethasone OR 1.78"
   - title: "Joshi GP, Van de Velde M, Kehlet H. Development of evidence-based recommendations for procedure-specific pain management: PROSPECT methodology. Anaesthesia 2019;74:1298-1304"
     url: "https://doi.org/10.1111/anae.14776"
@@ -67,7 +67,7 @@ Two of these tags do most of the work in the atlas. Bone explains why an [anatom
 
 ## Tension: what was left pulled tight
 
-The surgeon's second decision is what the tissues are left doing. A replaced humeral head sized to the one that was removed leaves the cuff and capsule at their original length: nothing pulls, so after the bone settles there is nothing left to hurt. A reverse shoulder deliberately lengthens the arm and tensions the deltoid so that it can lift the arm without a cuff; the deltoid and the capsule spend weeks creeping to the new length and the patient feels every centimetre. A knee replacement is balanced by releasing tight ligaments and choosing insert thickness until the gaps match; the collateral ligaments and the posterior capsule are then held at a new tension through every flexion exercise. An osteotomy that corrects an alignment deformity leaves the soft tissues on the lengthened side stretched. A repaired tendon is the extreme case: by design it is pulled back to bone under enough tension to hold, and the tension is then tested by every movement until it heals.
+The surgeon's second decision is what the tissues are left doing. A replaced humeral head sized to the one that was removed leaves the cuff and capsule at their original length: nothing pulls except the repaired subscapularis, so after the bone settles there is little left to hurt. That exception matters: in the one direct comparison the anatomic replacement, with its subscapularis repair and younger patients, needed opioids for longer than the reverse, which the folklore calls the more painful of the two. A reverse shoulder deliberately lengthens the arm and tensions the deltoid so that it can lift the arm without a cuff; the deltoid and the capsule spend weeks creeping to the new length and the patient feels every centimetre. A knee replacement is balanced by releasing tight ligaments and choosing insert thickness until the gaps match; the collateral ligaments and the posterior capsule are then held at a new tension through every flexion exercise. An osteotomy that corrects an alignment deformity leaves the soft tissues on the lengthened side stretched. A repaired tendon is the extreme case: by design it is pulled back to bone under enough tension to hold, and the tension is then tested by every movement until it heals.
 
 This is the single most useful question to ask a surgeon who says an operation is painless or painful: what have you left under tension? The answer predicts the shape of the curve better than anything else they can tell you.
 
@@ -88,7 +88,7 @@ pain
  8 |
  7 |          B.......B
  6 |        . :       :  B
- 5 |    A   :  A      :      B        A = bone (anatomic TSA, THA, distal radius):
+ 5 |    A   :  A      :      B        A = bone (THA, distal radius, hemiarthroplasty):
  4 |   . .  :    .    :          B        peaks as the block recedes, falls fast
  3 |  .   . :      A  :              B
  2 | .      .        .A . . . . . . A   B = tendon under tension (cuff repair, MPFL):
@@ -127,8 +127,8 @@ Each card carries a score from 1 to 5. It describes the pain the operation produ
 | --- | --- | --- | --- |
 | 1 | Minimal | Simple analgesia. Day case. A block, if used, is for the anaesthetic, not for pain. | carpal tunnel release, knee arthroscopy and meniscectomy, minor removal of metalwork |
 | 2 | Mild to moderate | Regular paracetamol and NSAID with a few opioid doses on day 0-1; a single-shot block helps; a catheter is not needed. | subacromial decompression, distal radius ORIF, hip arthroscopy, primary THA with spinal and infiltration, lumbar microdiscectomy |
-| 3 | Moderate | A block or neuraxial technique is expected; opioids for two days; worst pain on day 1-2, then a quick fall because the mechanism is bone. | anatomic TSA, ACL reconstruction, hip hemiarthroplasty, ankle ORIF, ACDF, elbow fracture fixation |
-| 4 | Severe | A catheter or a robust multimodal plan; opioids to day 3; rebound after a single-shot block is a real problem; movement-evoked pain limits physiotherapy. | primary TKA, reverse TSA, Latarjet, high tibial osteotomy, posterior lumbar fusion |
+| 3 | Moderate | A block or neuraxial technique is expected; opioids for two days; worst pain on day 1-2, then a quick fall because the mechanism is bone. | ACL reconstruction, hip hemiarthroplasty, ankle ORIF, ACDF, elbow fracture fixation |
+| 4 | Severe | A catheter or a robust multimodal plan; opioids to day 3; rebound after a single-shot block is a real problem; movement-evoked pain limits physiotherapy. | primary TKA, anatomic and reverse TSA, Latarjet, high tibial osteotomy, posterior lumbar fusion |
 | 5 | Severe and prolonged | The catheter has its strongest claim; pain persists beyond 72 h and is re-provoked by movement for weeks; the mechanism is tissue under tension or a bone that keeps being loaded. The early peak need not be higher than a 3 or a 4. | rotator cuff repair, multiligament knee reconstruction, periacetabular osteotomy, scoliosis correction, amputation |
 
 ## From mechanism to plan
@@ -162,7 +162,7 @@ Two cautions. The evidence for continuous techniques is weaker than the mechanis
 
 ## Why the book is organised this way
 
-PROSPECT, the procedure-specific pain management collaboration, exists because generic guidelines fail: the same drug list applied to every operation treats a cholecystectomy and a cuff repair alike, and the Gerbershagen data show what that costs. Their method is to review the evidence operation by operation and recommend an analgesic skeleton that fits the mechanism; the rotator cuff repair guideline is the worked example that the shoulder cards lean on. This book takes the same step one further back: the mechanism itself is written down for every card, so that when there is no PROSPECT guideline, which is most of orthopaedics, the plan can still be derived rather than guessed. Where a guideline exists, the card cites it. Where it does not, the card says which tags apply and what that implies, and marks the catheter call as author's judgement. That is the limit of what the model can honestly claim: it predicts the shape of the curve from first principles, and it tells you where to look when the evidence is thin.
+PROSPECT, the procedure-specific pain management collaboration, exists because generic guidelines fail: the same drug list applied to every operation treats a cholecystectomy and a cuff repair alike, and the Gerbershagen data show what that costs. Their method is to review the evidence operation by operation and recommend an analgesic skeleton that fits the mechanism; the rotator cuff repair guideline is the worked example that the shoulder cards lean on. This book takes the same step one further back: the mechanism itself is written down for every card, so that when there is no PROSPECT guideline, which is most of orthopaedics, the plan can still be derived rather than guessed. Where a guideline exists, the card cites it. Where it does not, the card says which tags apply and what that implies, and marks the catheter call as author's judgement. That is the limit of what the model can plainly claim: it predicts the shape of the curve from first principles, and it tells you where to look when the evidence is thin.
 
 ## Using it at seven in the morning
 

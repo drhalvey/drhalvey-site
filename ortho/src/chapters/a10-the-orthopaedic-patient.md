@@ -59,7 +59,7 @@ sources:
     url: "https://doi.org/10.1038/s41598-024-63353-9"
     note: "ASA 3 and 4, female sex and general anaesthesia raised same-day discharge failure; body mass index was not an independent predictor in the pooled data"
   - title: "McQueen MM, Gaston P, Court-Brown CM. Acute compartment syndrome: who is at risk? J Bone Joint Surg Br 2000;82:200-203"
-    url: "https://doi.org/10.1302/0301-620X.82B2.9799"
+    url: "https://doi.org/10.1302/0301-620x.82b2.0820200"
     note: "164 cases: 69% had a fracture, half of those tibial shaft; most were men under 35; one in ten had a bleeding disorder or was anticoagulated"
 ---
 

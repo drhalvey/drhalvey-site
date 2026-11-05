@@ -41,7 +41,7 @@ sources:
     url: "https://doi.org/10.1097/ALN.0b013e3181e90914"
     note: "102 opioid-dependent patients having major lumbar surgery: ketamine 0.5 mg/kg at induction then 10 microg/kg/min to closure reduced morphine-equivalent consumption at 48 h and at 6 weeks and lowered pain at 6 weeks, with no excess side effects"
   - title: "Wang J, Sun H, Sun WT, Sun HP, Tian T, Sun J. Efficacy and safety of intrathecal morphine for pain control after spinal surgery: a systematic review and meta-analysis. Eur Rev Med Pharmacol Sci 2021;25:2674-2684"
-    url: "https://doi.org/10.26355/eurrev_202103_25431"
+    url: "https://pubmed.ncbi.nlm.nih.gov/33829454/"
     note: "12 trials: intrathecal morphine lowered pain scores from 2 to 24 h and analgesic consumption, with more pruritus and no significant excess of respiratory depression, nausea or urinary retention; the optimal dose was not established"
   - title: "Yavin D, Dhaliwal P, Whittaker T, et al. Intrathecal morphine following lumbar fusion: a randomized, placebo-controlled trial. Can J Neurol Sci 2016;43(S2):S11 (abstract)"
     url: "https://doi.org/10.1017/cjn.2016.67"

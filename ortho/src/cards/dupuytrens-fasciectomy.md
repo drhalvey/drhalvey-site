@@ -56,7 +56,7 @@ sources:
     url: "https://doi.org/10.1186/1471-2377-10-20"
     note: "Dutch multidisciplinary guideline: adequate peri-operative analgesia, limitation of operating time, limited use of tourniquet and regional anaesthetic techniques are recommended for secondary prevention of complex regional pain syndrome; vitamin C after wrist fracture"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age; absence of intravenous dexamethasone OR 1.78"
 ---
 

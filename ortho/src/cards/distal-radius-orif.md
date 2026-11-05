@@ -47,7 +47,7 @@ sources:
     url: "https://busqueda.bvsalud.org/portal/resource/es/mdl-39258804"
     note: "50 volar plate patients with supraclavicular ropivacaine blocks, dexamethasone 4 mg perineural (27) or intravenous (23): the perineural route gave a shorter block in this trial, with no demonstrated difference in pain scores or opioid consumption at 24 h"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients, rebound pain (NRS 3 or less rising to 7 or more within 24 h) in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age; absence of intravenous dexamethasone OR 1.78"
   - title: "Costa ML, Achten J, Plant C, et al. UK DRAFFT: a randomised controlled trial of percutaneous fixation with Kirschner wires versus volar locking-plate fixation in the treatment of adult patients with a dorsally displaced fracture of the distal radius. Health Technol Assess 2015;19(17):1-124"
     url: "https://myorthoevidence.com/AceReport/Report/7621"

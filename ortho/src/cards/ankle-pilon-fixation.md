@@ -41,7 +41,7 @@ sources:
     url: "https://doi.org/10.2147/JPR.S399660"
     note: "130 bimalleolar and trimalleolar ORIFs with popliteal and adductor canal ropivacaine blocks: rebound pain 44% with saline versus 15% with intravenous dexamethasone; block about 8 h longer, first analgesic request 26 h versus 17 h; rebound lasted about 3 h in both groups"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients, rebound pain in 49.6%: bone surgery OR 1.82, female OR 1.52, younger age, and absence of IV dexamethasone OR 1.78"
   - title: "Gerbershagen HJ, Aduckathil S, van Wijck AJM, Peelen LM, Kalkman CJ, Meissner W. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
     url: "https://doi.org/10.1097/ALN.0b013e31828866b3"

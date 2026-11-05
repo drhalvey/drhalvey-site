@@ -56,7 +56,7 @@ sources:
     url: "https://esraeurope.org/wp-content/uploads/2023/10/1-37089-Dont-Always-Blame-the-Block.pdf"
     note: "Permanent neurological symptoms after peripheral nerve block about 1 in 5,000, against about 1 in 1,000 after general anaesthesia in the SNAP-1 cohort; surgery type, tourniquet time, diabetes and positioning are the dominant risk factors for perioperative nerve injury"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age; absence of intravenous dexamethasone OR 1.78"
 ---
 

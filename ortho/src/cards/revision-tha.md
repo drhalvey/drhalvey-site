@@ -37,7 +37,7 @@ sources:
   - title: "Sershon RA, Fillingham YA, Malkani AL, et al. Independent risk factors for transfusion in contemporary revision total hip arthroplasty. J Arthroplasty 2021;36(8)"
     url: "https://doi.org/10.1016/j.arth.2021.03.032"
     note: "175 revisions at six centres, all on tranexamic acid: 16.6% transfused; each 1 g/dL lower pre-operative haemoglobin raised transfusion odds by 79%, each 0.1 higher INR by 158%, each extra hour of surgery by 74%; revision type did not predict transfusion"
-  - title: "Intravenous tranexamic acid reduces blood transfusions in revision total hip arthroplasty: a meta-analysis. J Comp Eff Res 2019:917-928"
+  - title: "Xin X, et al. Intravenous tranexamic acid reduces blood transfusions in revision total hip arthroplasty: a meta-analysis. J Comp Eff Res 2019;8:917-928"
     url: "https://doi.org/10.2217/cer-2019-0030"
     note: "8 studies, 3,533 TXA and 11,007 control patients, mostly non-randomised: transfusion OR 0.23, about one unit fewer transfused, haemoglobin fall reduced by over 1 g/dL, no difference in thromboembolic events (OR 0.85)"
   - title: "Ilfeld BM, Mariano ER, Madison SJ, et al. Continuous femoral versus posterior lumbar plexus nerve blocks for analgesia after hip arthroplasty: a randomized, controlled study. Anesth Analg 2011;113:897-903"

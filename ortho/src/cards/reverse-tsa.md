@@ -5,7 +5,7 @@ subtitle: "For cuff tear arthropathy, massive irreparable cuff tears, fracture a
 aka: ["rTSA", "RSA", "reverse shoulder replacement", "reverse geometry shoulder", "cuff tear arthropathy", "cuff arthropathy", "pseudoparalysis", "Grammont", "revision shoulder arthroplasty", "conversion to reverse"]
 pain:
   score: 4
-  trajectory: [2, 5, 5, 4, 3]
+  trajectory: [2, 5, 4, 3, 2]
   mechanism: retension
   mechanism_text: "The arm is deliberately lengthened by 2-3 cm to tension the deltoid, which then carries the whole load of elevation and is stretched with every movement; underneath that is bone (humeral osteotomy, glenoid reaming, baseplate screws, canal preparation) and the stretch on the axillary nerve and plexus that lengthening produces"
   rebound_risk: high
@@ -13,7 +13,7 @@ block:
   primary: "Interscalene brachial plexus block, single shot, with intravenous dexamethasone"
   family: interscalene
   catheter: selective
-  catheter_text: "The threshold for a catheter is lower than for an anatomic replacement because the deltoid is loaded from day 1; a continuous technique is the defensible choice for revision, conversion of a failed arthroplasty, fracture, opioid-tolerant or chronic pain patients, and the patient who has had a bad night after a single-shot block before. Single shot with dexamethasone and a written night plan is the default for primary cuff arthropathy in a counselled patient"
+  catheter_text: "The threshold for a catheter is the same as for an anatomic replacement, since the one direct comparison found the reverse recovery no harder; a continuous technique is the defensible choice for revision, conversion of a failed arthroplasty, fracture, opioid-tolerant or chronic pain patients, and the patient who has had a bad night after a single-shot block before. Single shot with dexamethasone and a written night plan is the default for primary cuff arthropathy in a counselled patient"
   alternatives: ["Superior trunk block (phrenic sparing, equivalent analgesia at 24 h)", "Suprascapular plus axillary nerve blocks (phrenic sparing, weaker, and the axillary component matters more here than in any other shoulder operation)", "Surgeon-delivered periarticular infiltration as a supplement"]
   neuraxial: no
 position: beach-chair

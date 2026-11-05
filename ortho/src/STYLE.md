@@ -70,8 +70,8 @@ recommended plan on the card is in place, not pain with no analgesia.
 | --- | --- | --- | --- |
 | 1 | Minimal | Simple analgesia only. Day case. Any block is for the anaesthetic, not for pain. | carpal tunnel release, knee arthroscopy (meniscectomy), minor removal of metalwork |
 | 2 | Mild to moderate | Regular paracetamol and NSAID; a few opioid doses on day 0-1; a single-shot block helps but the patient copes without a catheter. | subacromial decompression, distal radius ORIF, hip arthroscopy, primary THA with spinal and infiltration, lumbar microdiscectomy |
-| 3 | Moderate | A block or neuraxial technique is expected; opioids needed day 0-2; worst pain day 1-2, then a quick fall because the mechanism is bone. | anatomic TSA, ACL reconstruction, hip hemiarthroplasty, ankle ORIF, ACDF, elbow fracture fixation |
-| 4 | Severe | Catheter or a robust multimodal plan; opioids day 0-3; rebound pain when a single-shot block wears off is a real problem; movement-evoked pain limits physiotherapy. | primary TKA, reverse TSA, Latarjet, high tibial osteotomy, posterior lumbar fusion |
+| 3 | Moderate | A block or neuraxial technique is expected; opioids needed day 0-2; worst pain day 1-2, then a quick fall because the mechanism is bone. | ACL reconstruction, hip hemiarthroplasty, ankle ORIF, ACDF, elbow fracture fixation |
+| 4 | Severe | Catheter or a robust multimodal plan; opioids day 0-3; rebound pain when a single-shot block wears off is a real problem; movement-evoked pain limits physiotherapy. | primary TKA, anatomic and reverse TSA, Latarjet, high tibial osteotomy, posterior lumbar fusion |
 | 5 | Severe and prolonged | Catheter has the strongest claim; pain persists beyond 72 h and is re-provoked by movement for weeks; the dominant mechanism is tissue under tension or a bone that keeps being loaded. The early peak need not be higher than a 3 or 4; the shape of the curve afterwards is what earns the 5. | rotator cuff repair, multiligament knee reconstruction, periacetabular osteotomy, scoliosis correction, amputation |
 
 `pain.trajectory` is a list of five whole numbers: the expected worst pain (0-10 numeric rating)
@@ -127,7 +127,7 @@ title: "Anatomic total shoulder arthroplasty"
 subtitle: "Stemmed, stemless, hemiarthroplasty and humeral head resurfacing"
 aka: ["TSA", "aTSA", "total shoulder replacement", "hemiarthroplasty", "stemless"]
 pain:
-  score: 3
+  score: 4
   trajectory: [2, 5, 4, 3, 2]
   mechanism: bone
   mechanism_text: "Humeral head osteotomy and glenoid reaming; subscapularis repair; cuff and capsule left at native tension"

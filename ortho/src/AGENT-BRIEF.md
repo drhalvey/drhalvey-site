@@ -33,6 +33,15 @@ counts as "seen" for the source rule; a half-remembered citation does not. Never
 an effect size. If a number cannot be verified, write the claim without the number or drop it. Keep to about six
 searches and three fetches per card; the aim is a sound card, not a systematic review.
 
+Cheapest and most reliable route to a citation: the PubMed MCP tools (load them with ToolSearch
+`select:mcp__PubMed__search_articles,mcp__PubMed__get_article_metadata,mcp__PubMed__lookup_article_by_citation`).
+`search_articles` with a focused query returns titles, authors, journal, year, PMID and DOI; `get_article_metadata`
+returns the abstract. A PubMed hit with its abstract counts as "seen". Use these before any web fetch, and cite the
+DOI as `https://doi.org/<doi>`. Standard citations already used in the book, reuse them verbatim:
+- Barry GS, et al. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871. https://doi.org/10.1016/j.bja.2020.10.035
+- Rhyner P, et al. Single-bolus injection of local anesthetic, with or without continuous infusion, for interscalene brachial plexus block in the setting of multimodal analgesia: a randomized controlled unblinded trial. Reg Anesth Pain Med 2024;49:313-319. https://doi.org/10.1136/rapm-2023-104681
+- Gerbershagen HJ, et al. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944. https://doi.org/10.1097/ALN.0b013e31828866b3
+
 ## Writing
 
 Write each card straight into `ortho/src/cards/<id>.md`. Then run
@@ -40,7 +49,7 @@ Write each card straight into `ortho/src/cards/<id>.md`. Then run
 and fix every reported problem until it prints `ok`. Do not edit any other file, do not run the full build,
 do not run git, and do not create files outside `ortho/src/cards/`.
 
-Calibrate pain scores against the STYLE.md table and the two exemplars (anatomic TSA is a 3, rotator cuff repair
+Calibrate pain scores against the STYLE.md table and the two exemplars (anatomic TSA is a 4 with the same early peak as a cuff repair, rotator cuff repair
 is a 5 because of duration and movement-evoked pain rather than peak intensity). The trajectory is worst pain
 0-10 on day 0 (evening, block working), 1, 2, 3 and 7 with the card's recommended plan in place. Make the block
 and catheter recommendation follow from the stated mechanism, and say when it is author's judgement rather than

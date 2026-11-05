@@ -46,7 +46,7 @@ sources:
   - title: "Vella-Baldacchino M, Webb J, Selvarajah B, et al. Should we recommend patellofemoral arthroplasties to patients? A systematic review. Bone Jt Open 2023;4:948-956"
     url: "https://doi.org/10.1302/2633-1462.412.BJO-2023-0100.R1"
     note: "Four RCTs and five cohorts of patellofemoral versus total knee arthroplasty for isolated patellofemoral arthritis: no difference in function scores, better flexion after PFA, fewer complications (RR 0.57, not significant), stay 3.3 vs 4.4 days in cohorts, revision not different at 5 and 10 years but with wide intervals"
-  - title: "Double-bundle MPFL reconstruction without patellar implants: a technical note. J Orthop Surg Res 2020;15"
+  - title: "Raoulis V, Zibis A, Fyllos A, Malahias MA, et al. Reconstruction of the medial patellofemoral ligament using two blind transverse semi-patella tunnels and an implant-free technique for patellar fixation: a technical note. J Orthop Surg Res 2020;15"
     url: "https://doi.org/10.1186/s13018-020-02161-z"
     note: "Gracilis autograft folded double, femoral tunnel at the Schottle point fixed with an interference screw at 20-30 degrees of flexion, two blind patellar tunnels, graft tensioned so the patella displaces 30-40% of its width laterally; over-tensioning overconstrains the patella; brace locked in extension for a week then to 90 degrees by week 4; patellar fracture through complete transverse tunnels and infrapatellar saphenous branch injury at harvest listed as complications"
   - title: "Lavand'homme PM, Kehlet H, Rawal N, Joshi GP; PROSPECT Working Group. Pain management after total knee arthroplasty. Eur J Anaesthesiol 2022;39:743-757"

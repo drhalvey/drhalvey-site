@@ -56,7 +56,7 @@ sources:
     url: "https://doi.org/10.2174/1874325001206010129"
     note: "30 elbows released percutaneously as day cases under 5 mL lidocaine 1% and 5 mL bupivacaine 0.5% with adrenaline, no tourniquet: 87% complete pain relief, return to work at a mean of three weeks, one haematoma, no infection or stiffness"
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
-    url: "https://latam-cl.demo.elsevierpure.com/en/publications/factors-associated-with-rebound-pain-after-peripheral-nerve-block"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, female OR 1.52, younger age; absence of intravenous dexamethasone OR 1.78"
 ---
 
