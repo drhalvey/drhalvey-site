@@ -52,8 +52,8 @@ sources:
   - title: "Cullen DJ. Why worry about blood pressure during surgery in the beach chair position? APSF Newsletter 2020"
     url: "https://www.apsf.org/article/why-worry-about-blood-pressure-during-surgery-in-the-beach-chair-position/"
     note: "Cuff pressure overstates brain perfusion by about 2 mmHg per inch of height; strokes reported after shoulder surgery with cuff systolics in the 80s-90s; deliberate hypotension should not be used"
-  - title: "Does concomitant acromioplasty facilitate arthroscopic repair of full-thickness rotator cuff tears? A meta-analysis with trial sequential analysis of randomized controlled trials"
-    url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4899382/"
+  - title: "Song L, Miao L, Zhang P, et al. Does concomitant acromioplasty facilitate arthroscopic repair of full-thickness rotator cuff tears? A meta-analysis with trial sequential analysis of randomized controlled trials. SpringerPlus 2016;5:685"
+    url: "https://doi.org/10.1186/s40064-016-2311-5"
     note: "Randomised trials of repair with and without acromioplasty show no difference in re-tear or function; acromioplasty remains common and adds a raw bone surface"
 ---
 
@@ -116,7 +116,7 @@ The pain logic is the mirror image of an [anatomic shoulder replacement](anatomi
 
 ### 11. Recovery and the first night
 **Why:** The repair is protected by the sling and nothing else; the surgeon wants pendular movements only, cryotherapy and sleep.
-**Anaesthesia:** The first paracetamol and NSAID dose goes in before the patient leaves recovery. The block lasts 12 to 24 hours with dexamethasone, longer with liposomal bupivacaine, and when it recedes the pain rises over an hour or two to its day 1 and 2 level; half of ambulatory block patients after bone surgery describe exactly this. The written night plan (what to take at bedtime, what to take when the fingers start to tingle, when the opioid is for) is the single intervention that decides whether this patient telephones at 3 am. Night pain persists for one to two weeks because the patient cannot lie on either side without loading the shoulder; sleeping propped up and the sling worn in bed are surgical advice worth repeating. Day case is the norm for small and medium tears with a single-shot block; a catheter patient can also go home if the unit runs ambulatory infusions, or stays a night if it does not.
+**Anaesthesia:** The first paracetamol and NSAID dose goes in before the patient leaves recovery. The block lasts 12 to 24 hours with dexamethasone, longer with liposomal bupivacaine, and when it recedes the pain rises over an hour or two to its day 1 and 2 level; half of ambulatory block patients describe exactly this, more often after bone surgery. The written night plan (what to take at bedtime, what to take when the fingers start to tingle, when the opioid is for) is the single intervention that decides whether this patient telephones at 3 am. Night pain persists for one to two weeks because the patient cannot lie on either side without loading the shoulder; sleeping propped up and the sling worn in bed are surgical advice worth repeating. Day case is the norm for small and medium tears with a single-shot block; a catheter patient can also go home if the unit runs ambulatory infusions, or stays a night if it does not.
 
 ## Pain plan
 

@@ -25,7 +25,7 @@ cement_text: ""
 blood_loss: "200-500 mL for a laminoplasty or a two- or three-level fusion; 500-1000 mL for a long construct, an occipitocervical fusion or a revision, from the muscle and the epidural venous plexus"
 duration: "120-180 min for a laminoplasty or a short fusion; 180-300 min for a long construct or occipitocervical fixation; a single-level foraminotomy 60-90 min"
 los: "2-4 nights; a posterior foraminotomy one night or a selected day case"
-day_case: "no"
+day_case: selected
 drugs:
   antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg), repeated at 4 h; a long case with implants in a wound that sits in a sweaty crease and has the highest infection rate of the elective spine"
   txa: "Tranexamic acid 1 g IV before incision, repeated at 3 h or infused, for any fusion; not needed for a foraminotomy"

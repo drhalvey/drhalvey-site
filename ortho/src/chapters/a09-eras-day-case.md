@@ -6,8 +6,8 @@ summary: >
   in bed: anaemia corrected, fasting shortened, a spinal dosed for the operation rather than the tradition,
   a motor-sparing block and infiltration, dexamethasone, tranexamic acid, no drain, no catheter, and a
   physiotherapist at the bedside on the afternoon of surgery. Same-day discharge is the same pathway with
-  the patient, the home and the discharge criteria selected in advance; in pooled data it carries no excess
-  readmission or complication, but the cohorts were chosen to succeed. The failures are predictable
+  the patient, the home and the discharge criteria selected in advance; the pooled reviews agree on no excess
+  readmission and disagree on complications, and the cohorts were chosen to succeed. The failures are predictable
   (orthostatic intolerance, pain when a short block recedes, nausea, urinary retention) and each has a
   specific prevention.
 sources:
@@ -95,7 +95,7 @@ Patient education is low-evidence and strongly recommended, which is the right g
 
 ## The anaesthetic skeleton
 
-The ERAS consensus accepts general and neuraxial anaesthesia equally, on moderate evidence, and the reasoning is in [the neuraxial chapter](a08-neuraxial-vs-ga.html). The pathway's practical preference is a spinal, because it removes intraoperative opioid, lowers blood loss, and in the same-day discharge meta-analysis was protective against failure while general anaesthesia increased it (OR 0.58 for success). The spinal has to be dosed for recovery: a 15 mg bupivacaine spinal at 14:00 is a patient who stands at 20:00 and voids at midnight, which is a one-night stay. The options are low-dose bupivacaine (7.5-10 mg), mepivacaine where it is available (motor recovery 210 versus 229 minutes and urinary retention 36% versus 57% against isobaric bupivacaine 10 mg in a randomised knee trial), or chloroprocaine for the shortest cases. Spinal opioid is not recommended for routine use in the ERAS consensus, because it delays what the pathway is trying to bring forward.
+The ERAS consensus accepts general and neuraxial anaesthesia equally, on moderate evidence, and the reasoning is in [the neuraxial chapter](a08-neuraxial-vs-ga.html). The pathway's practical preference is a spinal, because it removes intraoperative opioid, lowers blood loss, and in the same-day discharge meta-analysis was protective against failure while general anaesthesia increased it (OR 0.58 for failure). The spinal has to be dosed for recovery: a 15 mg bupivacaine spinal at 14:00 is a patient who stands at 20:00 and voids at midnight, which is a one-night stay. The options are low-dose bupivacaine (7.5-10 mg), mepivacaine where it is available (motor recovery 210 versus 229 minutes and urinary retention 36% versus 57% against isobaric bupivacaine 10 mg in a randomised knee trial), or chloroprocaine for the shortest cases. Spinal opioid is not recommended for routine use in the ERAS consensus, because it delays what the pathway is trying to bring forward.
 
 The analgesic skeleton is the same for hip and knee and is now well defined by PROSPECT: paracetamol and an NSAID or COX-2 inhibitor started before or during surgery and continued regularly, a single intravenous dose of dexamethasone, a motor-sparing regional technique, and opioid only as rescue. For the knee that technique is a single-shot adductor canal block plus surgeon periarticular infiltration; the ERAS consensus grades local infiltration analgesia for the knee as high evidence and says nerve blocks have not shown superiority over it and are not an essential component, which is a statement about femoral blocks and quadriceps weakness rather than about the adductor canal. For the hip it is a supra-inguinal fascia iliaca block or a PENG block, with infiltration as the fallback when a block cannot be done; the ERAS consensus does not recommend infiltration for the hip, PROSPECT allows it when a block is impossible, and the difference between the two reflects how little the hip needs beyond a spinal and a good oral regimen. Gabapentinoids are not recommended by either body; they sedate, they add to orthostatic intolerance, and in the same-day discharge data gabapentin is a risk factor for failure.
 
@@ -145,7 +145,7 @@ Nausea is less common than it was because the spinal removes the volatile agent 
 
 Urinary retention is prevented as above; the patient who cannot void by the evening with a scan under 800 mL goes home with instructions and a phone number, and the one over 800 mL is catheterised and stays. Neither is a disaster.
 
-The failures that matter are the ones the pathway cannot see: the bleed at home that becomes a transfusion, the wound that dehisces, the pulmonary embolus in a patient whose prophylaxis depended on an injection they did not give themselves. The post-discharge complication rate in the NSQIP outpatient data (6.3% versus 1.1% for matched inpatients, mostly transfusion) is the figure that keeps the programme honest. It is why the haemoglobin is fixed beforehand, why tranexamic acid is not optional, and why the first phone call is the next morning.
+The failures that matter are the ones the pathway cannot see: the bleed at home that becomes a transfusion, the wound that dehisces, the pulmonary embolus in a patient whose prophylaxis depended on an injection they did not give themselves. The post-discharge complication rate in the NSQIP outpatient data (higher than for matched inpatients, mostly transfusion) is the figure that keeps the programme honest. It is why the haemoglobin is fixed beforehand, why tranexamic acid is not optional, and why the first phone call is the next morning.
 
 ## Edge cases
 

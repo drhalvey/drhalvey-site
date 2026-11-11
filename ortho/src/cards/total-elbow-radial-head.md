@@ -21,7 +21,7 @@ position_text: "Supine with the arm across the chest on a padded bolster is the 
 tourniquet: yes
 tourniquet_text: "Sterile tourniquet high on the arm for a total elbow, often approaching 120 min; many surgeons release it before triceps repair and closure. A radial head replacement sits inside a single inflation"
 cement: yes
-cement_text: "Both components of a linked total elbow are cemented, usually with antibiotic-loaded cement, into small canals pressurised with a gun; the humeral canal is the only step with bone cement implantation syndrome potential, and it is small. Radial head stems are press-fit, intentionally loose, or cemented depending on the design"
+cement_text: "Both components of a linked total elbow are cemented, usually with antibiotic-loaded cement, into small canals, hand pressurised; the humeral canal is the only step with bone cement implantation syndrome potential, and it is small. Radial head stems are press-fit, intentionally loose, or cemented depending on the design"
 blood_loss: "200-400 mL for a total elbow, mostly after tourniquet release and into the drain; transfusion uncommon but the rheumatoid patient starts anaemic. Radial head replacement under 100 mL"
 duration: "120-180 min skin to skin for a primary total elbow, longer for fracture or revision; 60-120 min for a radial head replacement, longer as part of a terrible triad repair"
 los: "1-3 nights for a total elbow; day case or one night for a radial head replacement"

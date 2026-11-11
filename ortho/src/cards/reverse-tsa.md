@@ -8,7 +8,7 @@ pain:
   trajectory: [2, 5, 4, 4, 2]
   mechanism: retension
   mechanism_text: "The arm is deliberately lengthened by 2-3 cm to tension the deltoid, which then carries the whole load of elevation and is stretched with every movement; underneath that is bone (humeral osteotomy, glenoid reaming, baseplate screws, canal preparation) and the stretch on the axillary nerve and plexus that lengthening produces"
-  rebound_risk: high
+  rebound_risk: moderate
 block:
   primary: "Interscalene brachial plexus block, single shot, with intravenous dexamethasone"
   family: interscalene
@@ -137,13 +137,13 @@ One correction to folklore. The reverse is widely called the more painful arthro
 
 ## Pain plan
 
-The mechanism is a lengthened arm with a tensioned deltoid loaded from day 1, over bone work that hurts for 48 hours and nerves that have been stretched; the population is older and less rebound-prone than the anatomic one. The plan is built for the mechanism and relaxed for the patient: the anatomic card's skeleton with a lower threshold for a continuous technique.
+The mechanism is a lengthened arm with a tensioned deltoid loaded from day 1, over bone work that hurts for 48 hours and nerves that have been stretched; the population is older and less rebound-prone than the anatomic one. The plan is built for the mechanism and relaxed for the patient: the anatomic card's skeleton with the same threshold for a continuous technique.
 
 The defensible default is an interscalene block with 15-20 mL of ropivacaine 0.5% (or a superior trunk block with the same volume when the patient cannot afford a hemidiaphragm; it matches interscalene at 24 h with complete phrenic paresis in 5% rather than 73%), intravenous dexamethasone 8 mg at induction, regular paracetamol and an NSAID or COX-2 inhibitor where renal function allows (often it does not, which is one reason the oral regimen is weaker here than on the anatomic card), and oral opioid for the first three days. PROSPECT has no arthroplasty guideline; the rotator cuff repair guideline is the nearest and recommends this skeleton with intravenous dexamethasone preferred over perineural.
 
 The catheter. The one randomised comparison in shoulder arthroplasty found that a continuous interscalene infusion lowered day 1 pain and opioid use against a single shot but did not shorten the stay, produced more adverse events and lost 10% of its catheters early; the trial that added an infusion on top of dexamethasone and full multimodal analgesia, in a mixed arthroplasty and cuff repair population, found no difference at all. The author's reconciliation is the same as on the other shoulder cards: the catheter's advantage shows when the single shot is bare and shrinks when it is prolonged with dexamethasone and backed by a regimen that is given. What differs here is who sits in the group the catheter helps. Conversion of a failed arthroplasty, revision of a reverse, the fracture reverse, the opioid-tolerant or chronic pain patient, the younger patient with a massive tear, and anyone whose previous shoulder operation produced a catastrophic night: for these the catheter is the defensible choice, because the deltoid will be loaded on day 1 whether or not the pain is controlled. A catheter needs fixation that survives a sling; the common failure is the catheter in the bed.
 
-Rebound pain: half of ambulatory block patients after bone surgery describe it, with younger age, female sex and the absence of intravenous dexamethasone raising the odds. Escalation: pain above 7 after the block has receded with the sling on and the hand warm and moving is treated with the opioid already charted and a check that the regular doses were given; pain out of proportion with a tense, swelling deltopectoral wound is a haematoma for the surgeon; new sharp pain over the acromion in the first weeks with loss of elevation is a stress fracture and goes back to the surgeon.
+Rebound pain: half of ambulatory block patients describe it, more often after bone surgery, with younger age, female sex and the absence of intravenous dexamethasone raising the odds. Escalation: pain above 7 after the block has receded with the sling on and the hand warm and moving is treated with the opioid already charted and a check that the regular doses were given; pain out of proportion with a tense, swelling deltopectoral wound is a haematoma for the surgeon; new sharp pain over the acromion in the first weeks with loss of elevation is a stress fracture and goes back to the surgeon.
 
 ## Pitfalls and variants
 

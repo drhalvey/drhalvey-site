@@ -22,7 +22,7 @@ tourniquet: sometimes
 tourniquet_text: "Used by many for the exposure and cement removal and then let down, because inflation times run past two hours; some surgeons operate without one and accept the blood loss"
 cement: yes
 cement_text: "Hybrid fixation is the norm: cemented joint-surface components and metaphyseal regions, press-fit or cemented diaphyseal stems; cement removal from the old bed is a major part of the case and the new cement load is large"
-blood_loss: "1,000-2,000 mL measured plus hidden loss; transfusion in a quarter to a half of patients without tranexamic acid and a blood management protocol, around 5% with one"
+blood_loss: "1,000-2,000 mL measured plus hidden loss; transfusion in up to half of patients or more without tranexamic acid and a blood management protocol, around 5% with one"
 duration: "120-240 min skin to skin; the exposure, cement removal and a hinge each add time, and the second stage of a two-stage infection revision is the longest"
 los: "3-7 nights"
 day_case: no
