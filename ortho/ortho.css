@@ -189,3 +189,8 @@ details.ob-section>summary h2{margin:0;font-size:1.3rem}
 .ob-book-item details.ob-section>summary{pointer-events:none}
 .ob-book-item details.ob-section>summary::before{display:none}
 @media print{.ob-toc{columns:2}.ob-book-item{border-bottom:0}}
+
+/* figures */
+.ob-figure{margin:1rem 0 1.2rem;padding:.8rem;background:#fff;border:1px solid var(--ob-line);border-radius:var(--ob-radius);text-align:center}
+.ob-figure img{max-width:100%;height:auto}
+.ob-figure figcaption{font-size:.88rem;color:#5b4d49;margin-top:.5rem;text-align:left}

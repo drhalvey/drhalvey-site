@@ -260,6 +260,28 @@ def page(title, body, depth, extra_head='', body_class=''):
 '''
 
 
+
+def load_figures():
+    f = HERE / 'img' / 'figures.yaml'
+    if not f.exists():
+        return {}
+    out = {}
+    for fig in (yaml.safe_load(f.read_text()) or []):
+        if not (HERE / 'img' / fig['file']).exists():
+            problem(f, f'figure file missing: {fig["file"]}')
+            continue
+        for tid in fig.get('targets', []):
+            out.setdefault(tid, []).append(fig)
+    return out
+
+
+FIGURES = {}
+
+
+def figures_html(tid, book=False):
+    rel = 'img/' if book else '../img/'
+    return ''.join(f'<figure class="ob-figure"><img src="{rel}{esc(f["file"])}" alt="{esc(f.get("alt", f["caption"]))}" loading="lazy"><figcaption>{esc(f["caption"])}</figcaption></figure>' for f in FIGURES.get(tid, []))
+
 def sparkline(tr):
     """Five bars for day 0, 1, 2, 3, 7 expected worst pain."""
     labels = ['D0', 'D1', 'D2', 'D3', 'D7']
@@ -361,7 +383,7 @@ def card_body(card, prev_card=None, next_card=None, book=False):
 {('<p class="ob-subtitle">' + esc(fm['subtitle']) + '</p>') if fm.get('subtitle') else ''}
 {summary}
 <div class="ob-toolbar"><button type="button" class="ob-expand" data-expand>Expand all</button><button type="button" class="ob-expand" data-collapse>Collapse all</button><button type="button" class="ob-expand" onclick="window.print()">Print</button></div>
-{details('What the surgeon is doing and why', md(s.get('What the surgeon is doing and why', '')), True)}
+{details('What the surgeon is doing and why', figures_html(fm['id'], book) + md(s.get('What the surgeon is doing and why', '')), True)}
 {details('Steps: what happens and what it means for you', '<ol class="ob-steps">' + steps_html + '</ol>', True)}
 {details('Pain plan', md(s.get('Pain plan', '')))}
 {details('Pitfalls and variants', md(s.get('Pitfalls and variants', '')))}
@@ -397,7 +419,7 @@ def chapter_body(ch, part, prev_ch=None, next_ch=None, book=False):
 {crumb}
 <h1 class="ob-title" id="{esc(fm['id'])}">{esc(fm['title'])}</h1>
 <section class="ob-summary ob-summary-chapter" aria-label="Summary box"><p>{esc(fm['summary'])}</p></section>
-<article class="ob-prose">{md(ch['body'])}</article>
+<article class="ob-prose">{figures_html(fm['id'], book)}{md(ch['body'])}</article>
 {('<section class="ob-section-body"><h2>Key sources</h2><ol class="ob-sources">' + sources + '</ol></section>') if sources else ''}
 {nav}
 '''
@@ -567,6 +589,7 @@ def build(local_dir=None):
         chapters[ch['fm']['id']] = ch
     chapters_a = [chapters[c['id']] for c in MANIFEST['chapters_a'] if c['id'] in chapters]
     chapters_b = [chapters[c['id']] for c in MANIFEST['chapters_b'] if c['id'] in chapters]
+    FIGURES.update(load_figures())
     if problems:
         print('\n'.join(problems))
         print(f'\n{len(problems)} problem(s); not building')
