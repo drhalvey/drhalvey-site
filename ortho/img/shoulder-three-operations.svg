@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 784" width="900" height="784" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="784" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">Three shoulder operations: what is cut and what is left under tension</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">The surgeon decides the tissue and the tension. The tension, not the size of the operation, sets the shape of the pain curve.</text>
+<rect x="20.0" y="78.0" width="280.0" height="694.0" rx="10" fill="#ffffff" stroke="#8a7b74" stroke-width="1.2" />
+<rect x="20.0" y="78.0" width="280.0" height="30.0" rx="10" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<rect x="20.0" y="96.0" width="280.0" height="12.0" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="160.0" y="99.0" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Anatomic total shoulder</text>
+<rect x="100.0" y="140.0" width="112.0" height="15.0" rx="7" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="156.0" y="134.0" font-size="13" fill="#8a7b74" text-anchor="middle">acromion</text>
+<rect x="56.0" y="192.0" width="22.0" height="80.0" rx="5" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="67.0" y="290.0" font-size="13" fill="#8a7b74" text-anchor="middle">glenoid</text>
+<rect x="112.0" y="252.0" width="44.0" height="100.0" rx="8" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<rect x="78.0" y="202.0" width="9.0" height="60.0" rx="3" fill="#ffffff" stroke="#8a7b74" stroke-width="1.5" />
+<circle cx="128.0" cy="232.0" r="38" fill="#d5cfcb" stroke="#4e1d24" stroke-width="1.8"/>
+<rect x="36.0" y="222.0" width="118.0" height="20.0" rx="6" fill="#d9a6a0" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.9" />
+<line x1="129.0" y1="226.0" x2="135.0" y2="238.0" stroke="#4e1d24" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="135.0" y1="226.0" x2="129.0" y2="238.0" stroke="#4e1d24" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="136.0" y1="226.0" x2="142.0" y2="238.0" stroke="#4e1d24" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="142.0" y1="226.0" x2="136.0" y2="238.0" stroke="#4e1d24" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="143.0" y1="226.0" x2="149.0" y2="238.0" stroke="#4e1d24" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="149.0" y1="226.0" x2="143.0" y2="238.0" stroke="#4e1d24" stroke-width="1.6" stroke-linecap="round"/>
+<line x1="94.0" y1="216.0" x2="52.0" y2="216.0" stroke="#d98b3c" stroke-width="2" stroke-linecap="round" marker-end="url(#a-sand)"/>
+<line x1="108.0" y1="216.0" x2="150.0" y2="216.0" stroke="#d98b3c" stroke-width="2" stroke-linecap="round" marker-end="url(#a-sand)"/>
+<line x1="156.0" y1="232.0" x2="184.0" y2="232.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="188.0" y="228.0" font-size="13" fill="#241a18">subscapularis</text>
+<text x="188.0" y="245.2" font-size="13" fill="#241a18">taken down and</text>
+<text x="188.0" y="262.4" font-size="13" fill="#241a18">repaired</text>
+<line x1="152.0" y1="202.0" x2="184.0" y2="180.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="188.0" y="178.0" font-size="13" fill="#241a18">metal head,</text>
+<text x="188.0" y="195.2" font-size="13" fill="#241a18">native size</text>
+<line x1="82.0" y1="200.0" x2="74.0" y2="186.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="34.0" y="180.0" font-size="13" fill="#241a18">poly liner</text>
+<rect x="310.0" y="78.0" width="280.0" height="694.0" rx="10" fill="#ffffff" stroke="#8a7b74" stroke-width="1.2" />
+<rect x="310.0" y="78.0" width="280.0" height="30.0" rx="10" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<rect x="310.0" y="96.0" width="280.0" height="12.0" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="450.0" y="99.0" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Reverse total shoulder</text>
+<rect x="390.0" y="140.0" width="112.0" height="15.0" rx="7" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="446.0" y="134.0" font-size="13" fill="#8a7b74" text-anchor="middle">acromion</text>
+<rect x="346.0" y="192.0" width="22.0" height="80.0" rx="5" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="357.0" y="290.0" font-size="13" fill="#8a7b74" text-anchor="middle">glenoid</text>
+<rect x="408.0" y="262.0" width="44.0" height="96.0" rx="8" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<circle cx="386.0" cy="232.0" r="24" fill="#d5cfcb" stroke="#4e1d24" stroke-width="1.8"/>
+<rect x="388.0" y="247.0" width="54" height="16" rx="6" fill="#d5cfcb" stroke="#4e1d24" stroke-width="1.8" transform="rotate(-45 415.0 255.0)"/>
+<path d="M474,155 L500,155 Q510,250 456,326 L452,306 Q482,240 474,155 Z" fill="#d9a6a0" stroke="#4e1d24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" fill-opacity="0.9" />
+<line x1="520.0" y1="180.0" x2="520.0" y2="290.0" stroke="#d98b3c" stroke-width="2" stroke-linecap="round" marker-end="url(#a-sand)" marker-start="url(#s-sand)"/>
+<text x="528.0" y="224.0" font-size="13" fill="#241a18">deltoid</text>
+<text x="528.0" y="241.0" font-size="13" fill="#241a18">stretched</text>
+<line x1="394.0" y1="290.0" x2="394.0" y2="346.0" stroke="#d98b3c" stroke-width="2.2" stroke-linecap="round" marker-end="url(#a-sand)"/>
+<text x="328.0" y="312.0" font-size="13" fill="#241a18">arm 2-3</text>
+<text x="328.0" y="328.0" font-size="13" fill="#241a18">cm longer</text>
+<line x1="368.0" y1="216.0" x2="354.0" y2="180.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="326.0" y="174.0" font-size="13" fill="#241a18">glenosphere</text>
+<rect x="600.0" y="78.0" width="280.0" height="694.0" rx="10" fill="#ffffff" stroke="#8a7b74" stroke-width="1.2" />
+<rect x="600.0" y="78.0" width="280.0" height="30.0" rx="10" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<rect x="600.0" y="96.0" width="280.0" height="12.0" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="740.0" y="99.0" font-size="15" fill="#ffffff" text-anchor="middle" font-weight="bold">Arthroscopic cuff repair</text>
+<rect x="680.0" y="140.0" width="112.0" height="15.0" rx="7" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="736.0" y="134.0" font-size="13" fill="#8a7b74" text-anchor="middle">acromion</text>
+<rect x="636.0" y="192.0" width="22.0" height="80.0" rx="5" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="647.0" y="290.0" font-size="13" fill="#8a7b74" text-anchor="middle">glenoid</text>
+<rect x="692.0" y="252.0" width="44.0" height="100.0" rx="8" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<circle cx="708.0" cy="232.0" r="38" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5"/>
+<path d="M618,170 Q700,162 748,206 L738,222 Q700,186 618,190 Z" fill="#d9a6a0" stroke="#4e1d24" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round" fill-opacity="0.9" />
+<circle cx="740.0" cy="222.0" r="5.5" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.5"/>
+<line x1="644.0" y1="204.0" x2="692.0" y2="204.0" stroke="#d98b3c" stroke-width="2" stroke-linecap="round" marker-end="url(#a-sand)"/>
+<line x1="750.0" y1="200.0" x2="772.0" y2="184.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="776.0" y="182.0" font-size="13" fill="#241a18">tendon pulled</text>
+<text x="776.0" y="199.2" font-size="13" fill="#241a18">laterally to its</text>
+<text x="776.0" y="216.4" font-size="13" fill="#241a18">footprint</text>
+<line x1="746.0" y1="224.0" x2="772.0" y2="252.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="776.0" y="252.0" font-size="13" fill="#241a18">anchor in</text>
+<text x="776.0" y="269.2" font-size="13" fill="#241a18">decorticated</text>
+<text x="776.0" y="286.4" font-size="13" fill="#241a18">bone</text>
+<text x="34.0" y="380.0" font-size="13" fill="#d98b3c" font-weight="bold">WHAT IS CUT</text>
+<text x="34.0" y="399.0" font-size="13" fill="#241a18">Subscapularis taken down; humeral head</text>
+<text x="34.0" y="416.2" font-size="13" fill="#241a18">osteotomy; glenoid reamed.</text>
+<text x="324.0" y="380.0" font-size="13" fill="#d98b3c" font-weight="bold">WHAT IS CUT</text>
+<text x="324.0" y="399.0" font-size="13" fill="#241a18">Humeral head osteotomy; glenoid</text>
+<text x="324.0" y="416.2" font-size="13" fill="#241a18">reamed; baseplate screwed to the</text>
+<text x="324.0" y="433.4" font-size="13" fill="#241a18">scapula; canal prepared.</text>
+<text x="614.0" y="380.0" font-size="13" fill="#d98b3c" font-weight="bold">WHAT IS CUT</text>
+<text x="614.0" y="399.0" font-size="13" fill="#241a18">Bursa stripped, acromion shaved,</text>
+<text x="614.0" y="416.2" font-size="13" fill="#241a18">footprint decorticated, anchors drilled.</text>
+<text x="614.0" y="433.4" font-size="13" fill="#241a18">Portals only at the skin.</text>
+<text x="34.0" y="458.6" font-size="13" fill="#d98b3c" font-weight="bold">LEFT UNDER TENSION</text>
+<text x="34.0" y="477.6" font-size="13" fill="#241a18">Only the subscapularis repair. Cuff and</text>
+<text x="34.0" y="494.8" font-size="13" fill="#241a18">capsule stay at their native length.</text>
+<text x="324.0" y="458.6" font-size="13" fill="#d98b3c" font-weight="bold">LEFT UNDER TENSION</text>
+<text x="324.0" y="477.6" font-size="13" fill="#241a18">Arm lengthened so the deltoid lifts</text>
+<text x="324.0" y="494.8" font-size="13" fill="#241a18">without a cuff. Deltoid, capsule, axillary</text>
+<text x="324.0" y="512.0" font-size="13" fill="#241a18">nerve and plexus are stretched.</text>
+<text x="614.0" y="458.6" font-size="13" fill="#d98b3c" font-weight="bold">LEFT UNDER TENSION</text>
+<text x="614.0" y="477.6" font-size="13" fill="#241a18">A retracted tendon held on bone and</text>
+<text x="614.0" y="494.8" font-size="13" fill="#241a18">loaded by every movement for weeks.</text>
+<text x="34.0" y="537.2" font-size="13" fill="#d98b3c" font-weight="bold">PAIN MECHANISM AND SCORE</text>
+<rect x="34.0" y="547.2" width="48.0" height="23.0" rx="11.5" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="43.0" y="564.2" font-size="13" fill="#ffffff" font-weight="bold">bone</text>
+<text x="286.0" y="564.2" font-size="14" fill="#4e1d24" text-anchor="end" font-weight="bold">score 4 of 5</text>
+<line x1="34.0" y1="655.2" x2="286.0" y2="655.2" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<rect x="50.0" y="633.2" width="26.0" height="22.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="63.0" y="628.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">2</text>
+<text x="63.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D0</text>
+<rect x="100.0" y="600.2" width="26.0" height="55.0" rx="2" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.2" />
+<text x="113.0" y="595.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">5</text>
+<text x="113.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D1</text>
+<rect x="150.0" y="611.2" width="26.0" height="44.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="163.0" y="606.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">4</text>
+<text x="163.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D2</text>
+<rect x="200.0" y="611.2" width="26.0" height="44.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="213.0" y="606.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">4</text>
+<text x="213.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D3</text>
+<rect x="250.0" y="633.2" width="26.0" height="22.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="263.0" y="628.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">2</text>
+<text x="263.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D7</text>
+<text x="34.0" y="697.2" font-size="13" fill="#d98b3c" font-weight="bold">PLAN</text>
+<text x="34.0" y="716.2" font-size="13" fill="#241a18">Interscalene single shot with IV</text>
+<text x="34.0" y="733.4" font-size="13" fill="#241a18">dexamethasone. Catheter selective. Hurts</text>
+<text x="34.0" y="750.6" font-size="13" fill="#241a18">hard on days 1-2, then settles.</text>
+<text x="324.0" y="537.2" font-size="13" fill="#d98b3c" font-weight="bold">PAIN MECHANISM AND SCORE</text>
+<rect x="324.0" y="547.2" width="78.9" height="23.0" rx="11.5" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="333.0" y="564.2" font-size="13" fill="#ffffff" font-weight="bold">retension</text>
+<text x="576.0" y="564.2" font-size="14" fill="#4e1d24" text-anchor="end" font-weight="bold">score 4 of 5</text>
+<line x1="324.0" y1="655.2" x2="576.0" y2="655.2" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<rect x="340.0" y="633.2" width="26.0" height="22.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="353.0" y="628.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">2</text>
+<text x="353.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D0</text>
+<rect x="390.0" y="600.2" width="26.0" height="55.0" rx="2" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.2" />
+<text x="403.0" y="595.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">5</text>
+<text x="403.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D1</text>
+<rect x="440.0" y="611.2" width="26.0" height="44.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="453.0" y="606.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">4</text>
+<text x="453.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D2</text>
+<rect x="490.0" y="611.2" width="26.0" height="44.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="503.0" y="606.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">4</text>
+<text x="503.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D3</text>
+<rect x="540.0" y="633.2" width="26.0" height="22.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="553.0" y="628.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">2</text>
+<text x="553.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D7</text>
+<text x="324.0" y="697.2" font-size="13" fill="#d98b3c" font-weight="bold">PLAN</text>
+<text x="324.0" y="716.2" font-size="13" fill="#241a18">Same block and catheter threshold. Deep</text>
+<text x="324.0" y="733.4" font-size="13" fill="#241a18">ache for weeks as tissues creep. Record</text>
+<text x="324.0" y="750.6" font-size="13" fill="#241a18">deltoid function before the block.</text>
+<text x="614.0" y="537.2" font-size="13" fill="#d98b3c" font-weight="bold">PAIN MECHANISM AND SCORE</text>
+<rect x="614.0" y="547.2" width="109.8" height="23.0" rx="11.5" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="623.0" y="564.2" font-size="13" fill="#ffffff" font-weight="bold">tendon-tension</text>
+<text x="866.0" y="564.2" font-size="14" fill="#4e1d24" text-anchor="end" font-weight="bold">score 5 of 5</text>
+<line x1="614.0" y1="655.2" x2="866.0" y2="655.2" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<rect x="630.0" y="633.2" width="26.0" height="22.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="643.0" y="628.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">2</text>
+<text x="643.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D0</text>
+<rect x="680.0" y="600.2" width="26.0" height="55.0" rx="2" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.2" />
+<text x="693.0" y="595.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">5</text>
+<text x="693.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D1</text>
+<rect x="730.0" y="600.2" width="26.0" height="55.0" rx="2" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.2" />
+<text x="743.0" y="595.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">5</text>
+<text x="743.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D2</text>
+<rect x="780.0" y="611.2" width="26.0" height="44.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="793.0" y="606.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">4</text>
+<text x="793.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D3</text>
+<rect x="830.0" y="622.2" width="26.0" height="33.0" rx="2" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.2" />
+<text x="843.0" y="617.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">3</text>
+<text x="843.0" y="671.2" font-size="13" fill="#8a7b74" text-anchor="middle">D7</text>
+<text x="614.0" y="697.2" font-size="13" fill="#d98b3c" font-weight="bold">PLAN</text>
+<text x="614.0" y="716.2" font-size="13" fill="#241a18">Interscalene with IV dexamethasone;</text>
+<text x="614.0" y="733.4" font-size="13" fill="#241a18">catheter has its strongest claim. Rebound</text>
+<text x="614.0" y="750.6" font-size="13" fill="#241a18">risk high: write the night plan.</text>
+</svg>

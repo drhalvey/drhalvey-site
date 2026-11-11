@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 993" width="900" height="993" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="993" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">Elbow to hand: how far each block reaches</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">A plexus block gives a numb, paralysed arm that tolerates an upper arm tourniquet. Distal blocks and local infiltration keep the elbow and</text>
+<text x="24.0" y="75.2" font-size="13" fill="#8a7b74">shoulder working.</text>
+<rect x="216.0" y="122.0" width="78.0" height="44.0" rx="12" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="255.0" y="114.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">shoulder</text>
+<rect x="298.0" y="122.0" width="156.0" height="44.0" rx="12" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="376.0" y="114.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">upper arm</text>
+<rect x="458.0" y="122.0" width="66.0" height="44.0" rx="12" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="491.0" y="114.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">elbow</text>
+<rect x="528.0" y="122.0" width="166.0" height="44.0" rx="12" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="611.0" y="114.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">forearm</text>
+<rect x="698.0" y="122.0" width="56.0" height="44.0" rx="12" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="726.0" y="114.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">wrist</text>
+<rect x="758.0" y="122.0" width="106.0" height="44.0" rx="12" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="811.0" y="114.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">hand</text>
+<rect x="336.0" y="117.0" width="70.0" height="54.0" rx="5" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.8" fill-opacity="0.85" />
+<text x="371.0" y="149.0" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">cuff</text>
+<rect x="298.0" y="172.0" width="156.0" height="12.0" rx="3" fill="#f0d5d5" stroke="#b02e2e" stroke-width="1.2" />
+<text x="24.0" y="142.0" font-size="14" fill="#4e1d24" font-weight="bold">The limb</text>
+<text x="24.0" y="182.0" font-size="13" fill="#b02e2e">medial arm skin: T2</text>
+<line x1="160.0" y1="178.0" x2="294.0" y2="178.0" stroke="#b02e2e" stroke-width="1.2" stroke-linecap="round" marker-end="url(#a-danger)"/>
+<text x="24.0" y="222.0" font-size="13" fill="#4e1d24" font-weight="bold">Supraclavicular</text>
+<rect x="300.0" y="206.0" width="566.0" height="24.0" rx="4" fill="#9bbf8a" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.5" />
+<text x="214.0" y="250.0" font-size="13" fill="#241a18">Covers nearly all of the arm. Phrenic block in a substantial minority.</text>
+<rect x="336.0" y="206.0" width="70.0" height="24.0" rx="2" fill="#ffffff" stroke="#b02e2e" stroke-width="1.5" stroke-dasharray="4 3" />
+<text x="371.0" y="223.0" font-size="13" fill="#b02e2e" text-anchor="middle">T2 gap</text>
+<line x1="24.0" y1="269.2" x2="876.0" y2="269.2" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="24.0" y="297.2" font-size="13" fill="#4e1d24" font-weight="bold">Infraclavicular</text>
+<rect x="400.0" y="281.2" width="466.0" height="24.0" rx="4" fill="#9bbf8a" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.5" />
+<text x="214.0" y="325.2" font-size="13" fill="#241a18">Mid-humerus to hand. Catheter site of choice: the pectoral muscles hold it, away from the field.</text>
+<line x1="24.0" y1="344.4" x2="876.0" y2="344.4" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="24.0" y="372.4" font-size="13" fill="#4e1d24" font-weight="bold">Axillary</text>
+<rect x="456.0" y="356.4" width="410.0" height="24.0" rx="4" fill="#9bbf8a" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.5" />
+<text x="214.0" y="400.4" font-size="13" fill="#241a18">Elbow to hand. Needs a separate musculocutaneous injection for the lateral forearm, where the retractor</text>
+<text x="214.0" y="417.6" font-size="13" fill="#241a18">sits.</text>
+<line x1="24.0" y1="436.8" x2="876.0" y2="436.8" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="24.0" y="464.8" font-size="13" fill="#4e1d24" font-weight="bold">Forearm blocks (median,</text>
+<text x="24.0" y="482.0" font-size="13" fill="#4e1d24" font-weight="bold">ulnar, radial)</text>
+<rect x="700.0" y="448.8" width="166.0" height="24.0" rx="4" fill="#9bbf8a" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.5" />
+<text x="214.0" y="464.8" font-size="13" fill="#241a18">Long-acting, with a short-acting plexus block for the surgery: 12 h of hand</text>
+<text x="214.0" y="482.0" font-size="13" fill="#241a18">analgesia, shoulder and elbow working by home time. Forearm cuff tolerated</text>
+<text x="214.0" y="499.2" font-size="13" fill="#241a18">about 20 min on distal blocks alone.</text>
+<line x1="24.0" y1="518.4" x2="876.0" y2="518.4" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="24.0" y="546.4" font-size="13" fill="#4e1d24" font-weight="bold">Wide-awake local with</text>
+<text x="24.0" y="563.6" font-size="13" fill="#4e1d24" font-weight="bold">adrenaline</text>
+<rect x="780.0" y="530.4" width="86.0" height="24.0" rx="4" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.85" />
+<text x="214.0" y="546.4" font-size="13" fill="#241a18">Surgeon infiltrates lidocaine with adrenaline (ceiling 7 mg/kg) about 25 min ahead. No</text>
+<text x="214.0" y="563.6" font-size="13" fill="#241a18">tourniquet, no sedation: the patient moves the repaired tendon on request.</text>
+<line x1="24.0" y1="582.8" x2="876.0" y2="582.8" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<rect x="24.0" y="596.8" width="852.0" height="74.6" rx="6" fill="#f0d5d5" stroke="#b02e2e" stroke-width="1.5" />
+<text x="33.0" y="618.8" font-size="13" fill="#b02e2e" font-weight="bold">The gap under the tourniquet</text>
+<text x="33.0" y="639.0" font-size="13" fill="#241a18">No plexus block covers the medial arm skin under the cuff (intercostobrachial, T2): supplement it or sedate through it. Upper arm</text>
+<text x="33.0" y="656.2" font-size="13" fill="#241a18">tourniquet pain at 45-60 min is ischaemic and only partly this nerve, so plan sedation or a forearm cuff for a long awake case.</text>
+<rect x="24.0" y="687.4" width="852.0" height="31.2" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="31.0" y="706.4" font-size="13" fill="#ffffff" font-weight="bold">Operation</text>
+<text x="281.0" y="706.4" font-size="13" fill="#ffffff" font-weight="bold">Defensible default</text>
+<text x="571.0" y="706.4" font-size="13" fill="#ffffff" font-weight="bold">Reason</text>
+<text x="31.0" y="737.6" font-size="13" fill="#4e1d24" font-weight="bold">Distal radius ORIF, wrist fusion,</text>
+<text x="31.0" y="754.8" font-size="13" fill="#4e1d24" font-weight="bold">scaphoid</text>
+<text x="281.0" y="737.6" font-size="13" fill="#241a18">Axillary, infraclavicular or supraclavicular,</text>
+<text x="281.0" y="754.8" font-size="13" fill="#241a18">long-acting</text>
+<text x="571.0" y="737.6" font-size="13" fill="#241a18">Bone surgery with an upper arm tourniquet;</text>
+<text x="571.0" y="754.8" font-size="13" fill="#241a18">rebound pain is the trap.</text>
+<line x1="24.0" y1="767.0" x2="876.0" y2="767.0" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="786.0" font-size="13" fill="#4e1d24" font-weight="bold">Carpal tunnel, trigger finger</text>
+<text x="281.0" y="786.0" font-size="13" fill="#241a18">Surgeon's local infiltration</text>
+<text x="571.0" y="786.0" font-size="13" fill="#241a18">Pain score 1; a plexus block is a worse</text>
+<text x="571.0" y="803.2" font-size="13" fill="#241a18">experience than the operation.</text>
+<line x1="24.0" y1="815.4" x2="876.0" y2="815.4" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="834.4" font-size="13" fill="#4e1d24" font-weight="bold">Dupuytren's, trapeziectomy</text>
+<text x="281.0" y="834.4" font-size="13" fill="#241a18">Plexus block, or short-acting plexus plus</text>
+<text x="281.0" y="851.6" font-size="13" fill="#241a18">long-acting forearm blocks</text>
+<text x="571.0" y="834.4" font-size="13" fill="#241a18">Anaesthesia from the first, analgesia from the</text>
+<text x="571.0" y="851.6" font-size="13" fill="#241a18">second, without a flail arm overnight.</text>
+<line x1="24.0" y1="863.8" x2="876.0" y2="863.8" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="882.8" font-size="13" fill="#4e1d24" font-weight="bold">Tendon repair with active</text>
+<text x="31.0" y="900.0" font-size="13" fill="#4e1d24" font-weight="bold">movement tested</text>
+<text x="281.0" y="882.8" font-size="13" fill="#241a18">Wide-awake local with adrenaline, no</text>
+<text x="281.0" y="900.0" font-size="13" fill="#241a18">tourniquet</text>
+<text x="571.0" y="882.8" font-size="13" fill="#241a18">A plexus block paralyses the muscles that move</text>
+<text x="571.0" y="900.0" font-size="13" fill="#241a18">the tendon.</text>
+<line x1="24.0" y1="912.2" x2="876.0" y2="912.2" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="931.2" font-size="13" fill="#4e1d24" font-weight="bold">Elbow surgery</text>
+<text x="281.0" y="931.2" font-size="13" fill="#241a18">Block at the plexus; infraclavicular for a</text>
+<text x="281.0" y="948.4" font-size="13" fill="#241a18">catheter</text>
+<text x="571.0" y="931.2" font-size="13" fill="#241a18">All four terminal nerves cross the joint. Agree</text>
+<text x="571.0" y="948.4" font-size="13" fill="#241a18">when the surgeon examines the nerve at risk</text>
+<text x="571.0" y="965.6" font-size="13" fill="#241a18">before the block is loaded.</text>
+<line x1="24.0" y1="977.8" x2="876.0" y2="977.8" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 742" width="900" height="742" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="742" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">Beach chair: the brain is above the cuff</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">Blood pressure falls by 0.77 mmHg for every centimetre an organ sits above the point of measurement. Manage the pressure at the brain,</text>
+<text x="24.0" y="75.2" font-size="13" fill="#8a7b74">not at the arm.</text>
+<rect x="232" y="196" width="16" height="224" rx="5" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" transform="rotate(-25 200 410)"/>
+<rect x="170.0" y="432.0" width="190.0" height="16.0" rx="5" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="322.0" y="400.0" width="40.0" height="196.0" rx="16" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.8" />
+<rect x="186.0" y="388.0" width="176.0" height="44.0" rx="20" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.8" />
+<rect x="168" y="212" width="64" height="210" rx="24" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.8" transform="rotate(-25 200 410)"/>
+<circle cx="101.0" cy="196.0" r="30" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.8"/>
+<circle cx="106.0" cy="196.0" r="4" fill="#4e1d24" stroke="#4e1d24" stroke-width="1"/>
+<path d="M150,300 c-9,-14 -26,-2 0,16 c26,-18 9,-30 0,-16 Z" fill="#b02e2e" stroke="#b02e2e" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<rect x="172.0" y="262.0" width="26.0" height="110.0" rx="12" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.8" />
+<rect x="168.0" y="288.0" width="34.0" height="30.0" rx="4" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.8" />
+<rect x="318.0" y="506.0" width="48.0" height="30.0" rx="4" fill="#ffffff" stroke="#d98b3c" stroke-width="2" stroke-dasharray="5 3" />
+<line x1="60.0" y1="196.0" x2="452.0" y2="196.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="140.0" y1="303.0" x2="452.0" y2="303.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="140.0" y1="521.0" x2="452.0" y2="521.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<line x1="410.0" y1="200.0" x2="410.0" y2="299.0" stroke="#4e1d24" stroke-width="1.8" stroke-linecap="round" marker-end="url(#a-maroon)" marker-start="url(#s-maroon)"/>
+<text x="404.0" y="246.0" font-size="13" fill="#4e1d24" text-anchor="end" font-weight="bold">20-30 cm</text>
+<text x="404.0" y="263.0" font-size="13" fill="#4e1d24" text-anchor="end">x 0.77 mmHg/cm</text>
+<line x1="410.0" y1="307.0" x2="410.0" y2="517.0" stroke="#4e1d24" stroke-width="1.8" stroke-linecap="round" marker-end="url(#a-maroon)" marker-start="url(#s-maroon)"/>
+<text x="418.0" y="478.0" font-size="13" fill="#4e1d24" font-weight="bold">60-80</text>
+<text x="418.0" y="494.0" font-size="13" fill="#4e1d24" font-weight="bold">cm</text>
+<text x="24.0" y="146.0" font-size="13" fill="#241a18">external auditory meatus</text>
+<line x1="100.0" y1="152.0" x2="105.0" y2="188.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="214.0" y="284.0" font-size="13" fill="#241a18">arm cuff</text>
+<text x="250.0" y="562.0" font-size="13" fill="#241a18" text-anchor="end">calf cuff</text>
+<line x1="254.0" y1="558.0" x2="314.0" y2="530.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="140.0" y="346.0" font-size="13" fill="#8a7b74" text-anchor="end">heart</text>
+<line x1="144.0" y1="340.0" x2="150.0" y2="318.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<rect x="462.0" y="120.0" width="414.0" height="109.0" rx="6" fill="#f0d5d5" stroke="#b02e2e" stroke-width="1.5" />
+<text x="471.0" y="142.0" font-size="13" fill="#b02e2e" font-weight="bold">At the meatus: what the brain sees</text>
+<text x="471.0" y="162.2" font-size="13" fill="#241a18">Brain MAP = displayed arm MAP minus 15 to 23 mmHg. A</text>
+<text x="471.0" y="179.4" font-size="13" fill="#241a18">displayed mean of 65 is a perfusion pressure in the mid-40s: at</text>
+<text x="471.0" y="196.6" font-size="13" fill="#241a18">or below the lower limit of autoregulation, and well below it for</text>
+<text x="471.0" y="213.8" font-size="13" fill="#241a18">the chronic hypertensive.</text>
+<rect x="462.0" y="252.0" width="414.0" height="109.0" rx="6" fill="#f7e6d2" stroke="#d98b3c" stroke-width="1.5" />
+<text x="471.0" y="274.0" font-size="13" fill="#4e1d24" font-weight="bold">At heart level: the displayed number</text>
+<text x="471.0" y="294.2" font-size="13" fill="#241a18">Cuff on the non-operative upper arm. Aim for a displayed mean of</text>
+<text x="471.0" y="311.4" font-size="13" fill="#241a18">about 80 or more, which is 60-65 at the meatus, and keep the</text>
+<text x="471.0" y="328.6" font-size="13" fill="#241a18">corrected pressure within about 20% of resting baseline. Higher</text>
+<text x="471.0" y="345.8" font-size="13" fill="#241a18">for hypertension, carotid disease or previous stroke.</text>
+<rect x="462.0" y="373.0" width="414.0" height="74.6" rx="6" fill="#faf6ef" stroke="#4e1d24" stroke-width="1.5" />
+<text x="471.0" y="395.0" font-size="13" fill="#4e1d24" font-weight="bold">Arterial line</text>
+<text x="471.0" y="415.2" font-size="13" fill="#241a18">Level the transducer at the meatus and the displayed number is</text>
+<text x="471.0" y="432.4" font-size="13" fill="#241a18">the brain's number.</text>
+<rect x="462.0" y="486.0" width="414.0" height="91.8" rx="6" fill="#f0d5d5" stroke="#b02e2e" stroke-width="1.5" />
+<text x="471.0" y="508.0" font-size="13" fill="#b02e2e" font-weight="bold">Calf cuff: the error runs the wrong way</text>
+<text x="471.0" y="528.2" font-size="13" fill="#241a18">Reads 45-60 mmHg higher than the heart. A calf reading of 90</text>
+<text x="471.0" y="545.4" font-size="13" fill="#241a18">may be a brain pressure of 30. If it is the only site, subtract the</text>
+<text x="471.0" y="562.6" font-size="13" fill="#241a18">full height from calf to meatus.</text>
+<rect x="24.0" y="630.0" width="852.0" height="98.0" rx="6" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<text x="38.0" y="652.0" font-size="14" fill="#4e1d24" font-weight="bold">What to do with it</text>
+<circle cx="44.0" cy="668.0" r="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="54.0" y="672.0" font-size="13" fill="#241a18">Refuse deliberate hypotension. A wet field is managed with pump pressure and adrenaline in the irrigation.</text>
+<circle cx="44.0" cy="687.2" r="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="54.0" y="691.2" font-size="13" fill="#241a18">Start a phenylephrine or metaraminol infusion before sitting up; raise the back in stages.</text>
+<circle cx="44.0" cy="706.4" r="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="54.0" y="710.4" font-size="13" fill="#241a18">Keep end-tidal CO2 normal or slightly high. Expect a hypotensive bradycardic event 30-60 min after sitting up.</text>
+</svg>

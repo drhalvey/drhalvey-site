@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1012" width="900" height="1012" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="1012" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">The tourniquet clock: inflation to deflation</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">Pressure drives the injury under the cuff; time drives the injury beyond it. Deflation is the most predictable physiological event in</text>
+<text x="24.0" y="75.2" font-size="13" fill="#8a7b74">orthopaedic anaesthesia.</text>
+<text x="24.0" y="108.4" font-size="15" fill="#4e1d24" font-weight="bold">A. While the cuff is up (minutes of inflation)</text>
+<rect x="24.0" y="122.4" width="250.0" height="91.8" rx="6" fill="#f7e6d2" stroke="#d98b3c" stroke-width="1.5" />
+<text x="33.0" y="144.4" font-size="13" fill="#4e1d24" font-weight="bold">Before inflation</text>
+<text x="33.0" y="164.6" font-size="13" fill="#241a18">Antibiotic complete. Limb occlusion</text>
+<text x="33.0" y="181.8" font-size="13" fill="#241a18">pressure measured; set it plus 40, 60</text>
+<text x="33.0" y="199.0" font-size="13" fill="#241a18">or 80 mmHg.</text>
+<rect x="60.0" y="242.2" width="528.0" height="122.0" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.18" />
+<rect x="588.0" y="242.2" width="264.0" height="122.0" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<line x1="852.0" y1="228.2" x2="852.0" y2="372.2" stroke="#b02e2e" stroke-width="2.5" stroke-linecap="round"/>
+<line x1="588.0" y1="228.2" x2="588.0" y2="372.2" stroke="#4e1d24" stroke-width="2" stroke-linecap="round" stroke-dasharray="6 4"/>
+<line x1="60.0" y1="364.2" x2="866.0" y2="364.2" stroke="#241a18" stroke-width="1.8" stroke-linecap="round"/>
+<line x1="60.0" y1="364.2" x2="60.0" y2="371.2" stroke="#241a18" stroke-width="1.5" stroke-linecap="round"/>
+<text x="60.0" y="388.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">0</text>
+<line x1="192.0" y1="364.2" x2="192.0" y2="371.2" stroke="#241a18" stroke-width="1.5" stroke-linecap="round"/>
+<text x="192.0" y="388.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">30</text>
+<line x1="324.0" y1="364.2" x2="324.0" y2="371.2" stroke="#241a18" stroke-width="1.5" stroke-linecap="round"/>
+<text x="324.0" y="388.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">60</text>
+<line x1="456.0" y1="364.2" x2="456.0" y2="371.2" stroke="#241a18" stroke-width="1.5" stroke-linecap="round"/>
+<text x="456.0" y="388.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">90</text>
+<line x1="588.0" y1="364.2" x2="588.0" y2="371.2" stroke="#241a18" stroke-width="1.5" stroke-linecap="round"/>
+<text x="588.0" y="388.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">120</text>
+<line x1="720.0" y1="364.2" x2="720.0" y2="371.2" stroke="#241a18" stroke-width="1.5" stroke-linecap="round"/>
+<text x="720.0" y="388.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">150</text>
+<line x1="852.0" y1="364.2" x2="852.0" y2="371.2" stroke="#241a18" stroke-width="1.5" stroke-linecap="round"/>
+<text x="852.0" y="388.2" font-size="13" fill="#241a18" text-anchor="middle" font-weight="bold">180</text>
+<text x="855.0" y="406.2" font-size="13" fill="#8a7b74" text-anchor="middle">min</text>
+<rect x="192.0" y="252.2" width="396.0" height="26.0" rx="4" fill="#d98b3c" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.85" />
+<text x="200.0" y="270.2" font-size="13" fill="#241a18">Tourniquet pain from 30-45 min: only deflation relieves it</text>
+<rect x="192.0" y="286.2" width="396.0" height="26.0" rx="4" fill="#ffffff" stroke="#4e1d24" stroke-width="1.5" />
+<text x="200.0" y="304.2" font-size="13" fill="#241a18">Under general anaesthesia: pressure and rate up 20-30%</text>
+<line x1="192.0" y1="320.2" x2="192.0" y2="364.2" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="3 3"/>
+<text x="198.0" y="336.2" font-size="13" fill="#8a7b74">about 30 min: nerve conduction fails beyond the cuff</text>
+<path d="M324.0,362.2 l-8,-14 l16,0 Z" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M456.00000000000006,362.2 l-8,-14 l16,0 Z" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" stroke-linejoin="round" stroke-linecap="round" />
+<text x="390.0" y="408.2" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">call the time at 60 and 90</text>
+<text x="588.0" y="222.2" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">cuff down at or before 120</text>
+<text x="846.0" y="222.2" font-size="13" fill="#b02e2e" text-anchor="end" font-weight="bold">ceiling: 180 total</text>
+<text x="596.0" y="262.2" font-size="13" fill="#241a18">Beyond 2 h nerve injury odds rise 2.8</text>
+<text x="596.0" y="279.4" font-size="13" fill="#241a18">times for every extra 30 min.</text>
+<rect x="24.0" y="424.2" width="852.0" height="74.6" rx="6" fill="#faf6ef" stroke="#4e1d24" stroke-width="1.5" />
+<text x="33.0" y="446.2" font-size="13" fill="#4e1d24" font-weight="bold">If the surgeon needs longer than 120 min</text>
+<text x="33.0" y="466.4" font-size="13" fill="#241a18">Deflate for 10-15 min with the limb level, then re-inflate. The total time still counts, and a second inflation of 60 min is about the most that</text>
+<text x="33.0" y="483.6" font-size="13" fill="#241a18">is defensible. Under a spinal, plan the block for the cuff and not the incision.</text>
+<text x="24.0" y="528.8" font-size="15" fill="#4e1d24" font-weight="bold">B. After the cuff comes down (time since deflation)</text>
+<rect x="350.0" y="542.8" width="526.0" height="28.0" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<rect x="24.0" y="542.8" width="326.0" height="28.0" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="32.0" y="561.8" font-size="13" fill="#ffffff" font-weight="bold">What arrives</text>
+<text x="387.6" y="561.8" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">0-30 s</text>
+<text x="462.7" y="561.8" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">1 min</text>
+<text x="537.9" y="561.8" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">2-4 min</text>
+<text x="613.0" y="561.8" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">10 min</text>
+<text x="688.1" y="561.8" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">15 min</text>
+<text x="763.3" y="561.8" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">30 min</text>
+<text x="838.4" y="561.8" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">60 min</text>
+<text x="32.0" y="589.8" font-size="13" fill="#241a18">Embolic shower to the right heart; pulmonary</text>
+<text x="32.0" y="607.0" font-size="13" fill="#241a18">artery pressure up 25-40%</text>
+<rect x="353.0" y="587.0" width="69.1" height="18.0" rx="4" fill="#b02e2e" stroke="#b02e2e" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="621.2" x2="876.0" y2="621.2" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="32.0" y="640.2" font-size="13" fill="#241a18">Mean pressure and central venous pressure fall</text>
+<text x="32.0" y="657.4" font-size="13" fill="#241a18">as the limb refills</text>
+<rect x="353.0" y="637.4" width="369.7" height="18.0" rx="4" fill="#b02e2e" stroke="#b02e2e" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="671.6" x2="876.0" y2="671.6" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="32.0" y="690.6" font-size="13" fill="#241a18">End-tidal CO2 peaks at 1 min; baseline by 10 min</text>
+<rect x="428.1" y="679.2" width="219.4" height="18.0" rx="4" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="704.8" x2="876.0" y2="704.8" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="32.0" y="723.8" font-size="13" fill="#241a18">Acidosis worst; lactate up about 2 mmol/L;</text>
+<text x="32.0" y="741.0" font-size="13" fill="#241a18">potassium up about 0.3 mmol/L</text>
+<rect x="503.3" y="721.0" width="294.6" height="18.0" rx="4" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="755.2" x2="876.0" y2="755.2" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="32.0" y="774.2" font-size="13" fill="#241a18">Cerebral blood flow velocity up about 50%</text>
+<rect x="503.3" y="762.8" width="69.1" height="18.0" rx="4" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="788.4" x2="876.0" y2="788.4" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="32.0" y="807.4" font-size="13" fill="#241a18">Core temperature dips</text>
+<rect x="578.4" y="796.0" width="219.4" height="18.0" rx="4" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="821.6" x2="876.0" y2="821.6" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="32.0" y="840.6" font-size="13" fill="#241a18">Transient hypocoagulable state: the wound bleeds</text>
+<rect x="353.0" y="829.2" width="444.9" height="18.0" rx="4" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="854.8" x2="876.0" y2="854.8" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="32.0" y="873.8" font-size="13" fill="#241a18">Drug held in the limb returns to plasma</text>
+<rect x="728.7" y="862.4" width="144.3" height="18.0" rx="4" fill="#8a7b74" stroke="#8a7b74" stroke-width="1" fill-opacity="0.85" />
+<line x1="24.0" y1="888.0" x2="876.0" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="350.0" y1="570.8" x2="350.0" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="425.1" y1="570.8" x2="425.1" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="500.3" y1="570.8" x2="500.3" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="575.4" y1="570.8" x2="575.4" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="650.6" y1="570.8" x2="650.6" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="725.7" y1="570.8" x2="725.7" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="800.9" y1="570.8" x2="800.9" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<line x1="876.0" y1="570.8" x2="876.0" y2="888.0" stroke="#e3dcd6" stroke-width="1" stroke-linecap="round"/>
+<text x="24.0" y="908.0" font-size="13" fill="#8a7b74">Bars span from onset to resolution; the columns are not to scale.</text>
+<rect x="24.0" y="922.0" width="852.0" height="74.6" rx="6" fill="#f7e6d2" stroke="#d98b3c" stroke-width="1.5" />
+<text x="33.0" y="944.0" font-size="13" fill="#4e1d24" font-weight="bold">Before the cuff comes down</text>
+<text x="33.0" y="964.2" font-size="13" fill="#241a18">Normovolaemic, vasopressor drawn up (running in the frail or cardiac patient), warmer on. Raise minute ventilation by about half for five</text>
+<text x="33.0" y="981.4" font-size="13" fill="#241a18">minutes. One limb at a time in bilateral cases, 10-15 min apart. Then stay at the bedside for the 15 min of hypotension.</text>
+</svg>

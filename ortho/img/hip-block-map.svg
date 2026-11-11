@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 942" width="900" height="942" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="942" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">Hip blocks: capsule, skin and the motor price</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">The anterior capsule carries most of the nociceptors. The patient has to walk the same day, so weakness is the cost that decides.</text>
+<path d="M110,104 A62,62 0 0 0 110,228 Z" fill="#f7e6d2" stroke="#4e1d24" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" />
+<path d="M110,104 A62,62 0 0 1 110,228 Z" fill="#ffffff" stroke="#4e1d24" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" />
+<circle cx="110.0" cy="166.0" r="30" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5"/>
+<text x="66.0" y="96.0" font-size="13" fill="#8a7b74" text-anchor="middle">front</text>
+<text x="154.0" y="96.0" font-size="13" fill="#8a7b74" text-anchor="middle">back</text>
+<text x="110.0" y="171.0" font-size="13" fill="#8a7b74" text-anchor="middle">head</text>
+<path d="M60,244 Q110,262 186,238" fill="none" stroke="#d9a6a0" stroke-width="7" stroke-linejoin="round" stroke-linecap="round" />
+<text x="124.0" y="274.0" font-size="13" fill="#8a7b74" text-anchor="middle">skin of the incision</text>
+<rect x="220.0" y="114.0" width="210.0" height="94.8" rx="6" fill="#faf6ef" stroke="#d98b3c" stroke-width="1.8" />
+<text x="229.0" y="136.0" font-size="13" fill="#4e1d24" font-weight="bold">Anterior capsule</text>
+<text x="229.0" y="156.2" font-size="13" fill="#241a18">Articular branches of the</text>
+<text x="229.0" y="173.4" font-size="13" fill="#241a18">femoral, obturator and</text>
+<text x="229.0" y="190.6" font-size="13" fill="#241a18">accessory obturator nerves.</text>
+<rect x="220.0" y="114.0" width="6.0" height="94.8" rx="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" />
+<rect x="442.0" y="114.0" width="210.0" height="94.8" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.8" />
+<text x="451.0" y="136.0" font-size="13" fill="#4e1d24" font-weight="bold">Posterior capsule</text>
+<text x="451.0" y="156.2" font-size="13" fill="#241a18">Sciatic nerve, nerve to</text>
+<text x="451.0" y="173.4" font-size="13" fill="#241a18">quadratus femoris and</text>
+<text x="451.0" y="190.6" font-size="13" fill="#241a18">superior gluteal nerve.</text>
+<rect x="442.0" y="114.0" width="6.0" height="94.8" rx="3" fill="#8a7b74" stroke="#8a7b74" stroke-width="1" />
+<rect x="664.0" y="114.0" width="210.0" height="94.8" rx="6" fill="#faf6ef" stroke="#d9a6a0" stroke-width="1.8" />
+<text x="673.0" y="136.0" font-size="13" fill="#4e1d24" font-weight="bold">Skin, lateral and posterior</text>
+<text x="673.0" y="153.2" font-size="13" fill="#4e1d24" font-weight="bold">approaches</text>
+<text x="673.0" y="173.4" font-size="13" fill="#241a18">Lateral femoral cutaneous,</text>
+<text x="673.0" y="190.6" font-size="13" fill="#241a18">subcostal and cluneal nerves.</text>
+<rect x="664.0" y="114.0" width="6.0" height="94.8" rx="3" fill="#d9a6a0" stroke="#d9a6a0" stroke-width="1" />
+<rect x="24.0" y="294.0" width="852.0" height="48.4" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="31.0" y="313.0" font-size="13" fill="#ffffff" font-weight="bold">Block</text>
+<text x="149.0" y="313.0" font-size="13" fill="#ffffff" font-weight="bold">Anterior capsule</text>
+<text x="287.0" y="313.0" font-size="13" fill="#ffffff" font-weight="bold">Posterior</text>
+<text x="287.0" y="330.2" font-size="13" fill="#ffffff" font-weight="bold">capsule</text>
+<text x="409.0" y="313.0" font-size="13" fill="#ffffff" font-weight="bold">Skin of the</text>
+<text x="409.0" y="330.2" font-size="13" fill="#ffffff" font-weight="bold">incision</text>
+<text x="541.0" y="313.0" font-size="13" fill="#ffffff" font-weight="bold">Motor cost</text>
+<text x="691.0" y="313.0" font-size="13" fill="#ffffff" font-weight="bold">Place in the plan</text>
+<text x="31.0" y="361.4" font-size="13" fill="#4e1d24" font-weight="bold">Spinal</text>
+<rect x="142.0" y="342.4" width="138.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="149.0" y="361.4" font-size="13" fill="#241a18">Everything, for 2-4</text>
+<text x="149.0" y="378.6" font-size="13" fill="#241a18">h.</text>
+<rect x="280.0" y="342.4" width="122.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="287.0" y="361.4" font-size="13" fill="#241a18">Everything, for</text>
+<text x="287.0" y="378.6" font-size="13" fill="#241a18">2-4 h.</text>
+<rect x="402.0" y="342.4" width="132.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="409.0" y="361.4" font-size="13" fill="#241a18">Everything, for 2-4</text>
+<text x="409.0" y="378.6" font-size="13" fill="#241a18">h.</text>
+<rect x="534.0" y="342.4" width="150.0" height="65.6" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="541.0" y="361.4" font-size="13" fill="#241a18">Both legs until it</text>
+<text x="541.0" y="378.6" font-size="13" fill="#241a18">recedes.</text>
+<text x="691.0" y="361.4" font-size="13" fill="#241a18">The anaesthetic. No</text>
+<text x="691.0" y="378.6" font-size="13" fill="#241a18">analgesia after it wears off</text>
+<text x="691.0" y="395.8" font-size="13" fill="#241a18">unless an opioid is added.</text>
+<line x1="24.0" y1="408.0" x2="876.0" y2="408.0" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="427.0" font-size="13" fill="#4e1d24" font-weight="bold">Surgeon</text>
+<text x="31.0" y="444.2" font-size="13" fill="#4e1d24" font-weight="bold">infiltration</text>
+<rect x="142.0" y="408.0" width="138.0" height="65.6" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="149.0" y="427.0" font-size="13" fill="#241a18">Periarticular,</text>
+<text x="149.0" y="444.2" font-size="13" fill="#241a18">where the surgeon</text>
+<text x="149.0" y="461.4" font-size="13" fill="#241a18">injects.</text>
+<rect x="280.0" y="408.0" width="122.0" height="65.6" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="287.0" y="427.0" font-size="13" fill="#241a18">Periarticular,</text>
+<text x="287.0" y="444.2" font-size="13" fill="#241a18">where the</text>
+<text x="287.0" y="461.4" font-size="13" fill="#241a18">surgeon injects.</text>
+<rect x="402.0" y="408.0" width="132.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="409.0" y="427.0" font-size="13" fill="#241a18">Wound infiltrated at</text>
+<text x="409.0" y="444.2" font-size="13" fill="#241a18">closure.</text>
+<rect x="534.0" y="408.0" width="150.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="541.0" y="427.0" font-size="13" fill="#241a18">None.</text>
+<text x="691.0" y="427.0" font-size="13" fill="#241a18">With the spinal, the</text>
+<text x="691.0" y="444.2" font-size="13" fill="#241a18">defensible default for</text>
+<text x="691.0" y="461.4" font-size="13" fill="#241a18">primary THA.</text>
+<line x1="24.0" y1="473.6" x2="876.0" y2="473.6" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="492.6" font-size="13" fill="#4e1d24" font-weight="bold">PENG</text>
+<rect x="142.0" y="473.6" width="138.0" height="82.8" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="149.0" y="492.6" font-size="13" fill="#241a18">Covered: the</text>
+<text x="149.0" y="509.8" font-size="13" fill="#241a18">articular branches.</text>
+<rect x="280.0" y="473.6" width="122.0" height="82.8" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="287.0" y="492.6" font-size="13" fill="#241a18">Missed.</text>
+<rect x="402.0" y="473.6" width="132.0" height="82.8" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="409.0" y="492.6" font-size="13" fill="#241a18">Missed.</text>
+<rect x="534.0" y="473.6" width="150.0" height="82.8" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="541.0" y="492.6" font-size="13" fill="#241a18">Motor-sparing in</text>
+<text x="541.0" y="509.8" font-size="13" fill="#241a18">principle; femoral</text>
+<text x="541.0" y="527.0" font-size="13" fill="#241a18">spread with larger</text>
+<text x="541.0" y="544.2" font-size="13" fill="#241a18">volumes.</text>
+<text x="691.0" y="492.6" font-size="13" fill="#241a18">THA when infiltration is not</text>
+<text x="691.0" y="509.8" font-size="13" fill="#241a18">on offer or pain is expected</text>
+<text x="691.0" y="527.0" font-size="13" fill="#241a18">to be high. Hip fracture on</text>
+<text x="691.0" y="544.2" font-size="13" fill="#241a18">arrival.</text>
+<line x1="24.0" y1="556.4" x2="876.0" y2="556.4" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="575.4" font-size="13" fill="#4e1d24" font-weight="bold">Fascia iliaca</text>
+<text x="31.0" y="592.6" font-size="13" fill="#4e1d24" font-weight="bold">(suprainguinal)</text>
+<rect x="142.0" y="556.4" width="138.0" height="65.6" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="149.0" y="575.4" font-size="13" fill="#241a18">Femoral covered;</text>
+<text x="149.0" y="592.6" font-size="13" fill="#241a18">obturator variable.</text>
+<rect x="280.0" y="556.4" width="122.0" height="65.6" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="287.0" y="575.4" font-size="13" fill="#241a18">Missed.</text>
+<rect x="402.0" y="556.4" width="132.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="409.0" y="575.4" font-size="13" fill="#241a18">Lateral femoral</text>
+<text x="409.0" y="592.6" font-size="13" fill="#241a18">cutaneous covered.</text>
+<rect x="534.0" y="556.4" width="150.0" height="65.6" rx="0" fill="#f0d5d5" stroke="none" stroke-width="0" />
+<text x="541.0" y="575.4" font-size="13" fill="#241a18">Quadriceps</text>
+<text x="541.0" y="592.6" font-size="13" fill="#241a18">weakness.</text>
+<text x="691.0" y="575.4" font-size="13" fill="#241a18">As for PENG in THA, single</text>
+<text x="691.0" y="592.6" font-size="13" fill="#241a18">shot of about 40 mL. Hip</text>
+<text x="691.0" y="609.8" font-size="13" fill="#241a18">fracture on arrival.</text>
+<line x1="24.0" y1="622.0" x2="876.0" y2="622.0" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="641.0" font-size="13" fill="#4e1d24" font-weight="bold">Femoral</text>
+<rect x="142.0" y="622.0" width="138.0" height="82.8" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="149.0" y="641.0" font-size="13" fill="#241a18">In part: obturator</text>
+<text x="149.0" y="658.2" font-size="13" fill="#241a18">missed.</text>
+<rect x="280.0" y="622.0" width="122.0" height="82.8" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="287.0" y="641.0" font-size="13" fill="#241a18">Missed.</text>
+<rect x="402.0" y="622.0" width="132.0" height="82.8" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="409.0" y="641.0" font-size="13" fill="#241a18">Anterior thigh only;</text>
+<text x="409.0" y="658.2" font-size="13" fill="#241a18">lateral skin</text>
+<text x="409.0" y="675.4" font-size="13" fill="#241a18">missed.</text>
+<rect x="534.0" y="622.0" width="150.0" height="82.8" rx="0" fill="#f0d5d5" stroke="none" stroke-width="0" />
+<text x="541.0" y="641.0" font-size="13" fill="#241a18">Quadriceps</text>
+<text x="541.0" y="658.2" font-size="13" fill="#241a18">weakness, falls.</text>
+<text x="691.0" y="641.0" font-size="13" fill="#241a18">Hip fracture in the</text>
+<text x="691.0" y="658.2" font-size="13" fill="#241a18">emergency department.</text>
+<text x="691.0" y="675.4" font-size="13" fill="#241a18">PROSPECT recommends</text>
+<text x="691.0" y="692.6" font-size="13" fill="#241a18">against it for THA.</text>
+<line x1="24.0" y1="704.8" x2="876.0" y2="704.8" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="723.8" font-size="13" fill="#4e1d24" font-weight="bold">Lateral femoral</text>
+<text x="31.0" y="741.0" font-size="13" fill="#4e1d24" font-weight="bold">cutaneous</text>
+<rect x="142.0" y="704.8" width="138.0" height="65.6" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="149.0" y="723.8" font-size="13" fill="#241a18">Not covered.</text>
+<rect x="280.0" y="704.8" width="122.0" height="65.6" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="287.0" y="723.8" font-size="13" fill="#241a18">Not covered.</text>
+<rect x="402.0" y="704.8" width="132.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="409.0" y="723.8" font-size="13" fill="#241a18">Lateral thigh skin</text>
+<text x="409.0" y="741.0" font-size="13" fill="#241a18">only.</text>
+<rect x="534.0" y="704.8" width="150.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="541.0" y="723.8" font-size="13" fill="#241a18">None.</text>
+<text x="691.0" y="723.8" font-size="13" fill="#241a18">No analgesic role;</text>
+<text x="691.0" y="741.0" font-size="13" fill="#241a18">PROSPECT lists it as not</text>
+<text x="691.0" y="758.2" font-size="13" fill="#241a18">recommended.</text>
+<line x1="24.0" y1="770.4" x2="876.0" y2="770.4" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<rect x="24.0" y="784.4" width="18.0" height="14.0" rx="2" fill="#9bbf8a" stroke="#8a7b74" stroke-width="1" fill-opacity="0.5" />
+<text x="48.0" y="796.4" font-size="13" fill="#241a18">covered, or no motor cost</text>
+<rect x="227.8" y="784.4" width="18.0" height="14.0" rx="2" fill="#f7e6d2" stroke="#8a7b74" stroke-width="1" />
+<text x="251.8" y="796.4" font-size="13" fill="#241a18">partial, variable or temporary</text>
+<rect x="457.4" y="784.4" width="18.0" height="14.0" rx="2" fill="#ffffff" stroke="#8a7b74" stroke-width="1" />
+<text x="481.4" y="796.4" font-size="13" fill="#241a18">missed</text>
+<rect x="546.5" y="784.4" width="18.0" height="14.0" rx="2" fill="#f0d5d5" stroke="#8a7b74" stroke-width="1" />
+<text x="570.5" y="796.4" font-size="13" fill="#241a18">weakness to plan around</text>
+<rect x="24.0" y="814.4" width="421.0" height="112.0" rx="6" fill="#faf6ef" stroke="#d98b3c" stroke-width="1.8" />
+<text x="33.0" y="836.4" font-size="13" fill="#4e1d24" font-weight="bold">Primary THA: bone, score 2</text>
+<text x="33.0" y="856.6" font-size="13" fill="#241a18">Spinal, surgeon infiltration and no motor-blocking block.</text>
+<text x="33.0" y="873.8" font-size="13" fill="#241a18">PROSPECT recommends against femoral block, lumbar plexus</text>
+<text x="33.0" y="891.0" font-size="13" fill="#241a18">block and epidural: weakness, falls and hypotension outweigh the</text>
+<text x="33.0" y="908.2" font-size="13" fill="#241a18">analgesia.</text>
+<rect x="24.0" y="814.4" width="6.0" height="112.0" rx="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" />
+<rect x="455.0" y="814.4" width="421.0" height="112.0" rx="6" fill="#faf6ef" stroke="#d98b3c" stroke-width="1.8" />
+<text x="464.0" y="836.4" font-size="13" fill="#4e1d24" font-weight="bold">Hip fracture: block on arrival</text>
+<text x="464.0" y="856.6" font-size="13" fill="#241a18">Fascia iliaca or femoral block in the emergency department,</text>
+<text x="464.0" y="873.8" font-size="13" fill="#241a18">repeated before positioning for the spinal if more than 6 h have</text>
+<text x="464.0" y="891.0" font-size="13" fill="#241a18">passed. Quadriceps weakness matters less before fixation.</text>
+<rect x="455.0" y="814.4" width="6.0" height="112.0" rx="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" />
+</svg>

@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 901" width="900" height="901" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="901" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">Shoulder blocks: what each covers, misses and costs</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">The joint is C5-6 whatever the skin says. Choose the block by the lungs the patient can spare.</text>
+<rect x="24.0" y="84.0" width="205.5" height="163.6" rx="6" fill="#faf6ef" stroke="#4e1d24" stroke-width="1.8" />
+<text x="33.0" y="106.0" font-size="13" fill="#4e1d24" font-weight="bold">Joint, cuff, bursa, capsule:</text>
+<text x="33.0" y="123.2" font-size="13" fill="#4e1d24" font-weight="bold">C5-6</text>
+<text x="33.0" y="143.4" font-size="13" fill="#241a18">Suprascapular nerve</text>
+<text x="33.0" y="160.6" font-size="13" fill="#241a18">(posterior and superior, about</text>
+<text x="33.0" y="177.8" font-size="13" fill="#241a18">two thirds) and axillary nerve</text>
+<text x="33.0" y="195.0" font-size="13" fill="#241a18">(anterior and inferior); lateral</text>
+<text x="33.0" y="212.2" font-size="13" fill="#241a18">pectoral and subscapular</text>
+<text x="33.0" y="229.4" font-size="13" fill="#241a18">nerves to the anterior capsule.</text>
+<rect x="24.0" y="84.0" width="6.0" height="163.6" rx="3" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<rect x="239.5" y="84.0" width="205.5" height="163.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.8" />
+<text x="248.5" y="106.0" font-size="13" fill="#4e1d24" font-weight="bold">Skin over the top of the</text>
+<text x="248.5" y="123.2" font-size="13" fill="#4e1d24" font-weight="bold">shoulder: C3-4</text>
+<text x="248.5" y="143.4" font-size="13" fill="#241a18">Supraclavicular nerves from</text>
+<text x="248.5" y="160.6" font-size="13" fill="#241a18">the cervical plexus. Matters</text>
+<text x="248.5" y="177.8" font-size="13" fill="#241a18">for clavicle surgery and</text>
+<text x="248.5" y="195.0" font-size="13" fill="#241a18">superior incisions.</text>
+<rect x="239.5" y="84.0" width="6.0" height="163.6" rx="3" fill="#8a7b74" stroke="#8a7b74" stroke-width="1" />
+<rect x="455.0" y="84.0" width="205.5" height="163.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.8" />
+<text x="464.0" y="106.0" font-size="13" fill="#4e1d24" font-weight="bold">Axilla and medial arm: T2</text>
+<text x="464.0" y="126.2" font-size="13" fill="#241a18">Outside the brachial plexus</text>
+<text x="464.0" y="143.4" font-size="13" fill="#241a18">altogether. The posterior</text>
+<text x="464.0" y="160.6" font-size="13" fill="#241a18">portal lies in this unblocked</text>
+<text x="464.0" y="177.8" font-size="13" fill="#241a18">territory.</text>
+<rect x="455.0" y="84.0" width="6.0" height="163.6" rx="3" fill="#8a7b74" stroke="#8a7b74" stroke-width="1" />
+<rect x="670.5" y="84.0" width="205.5" height="163.6" rx="6" fill="#faf6ef" stroke="#b02e2e" stroke-width="1.8" />
+<text x="679.5" y="106.0" font-size="13" fill="#4e1d24" font-weight="bold">Phrenic nerve: the price</text>
+<text x="679.5" y="126.2" font-size="13" fill="#241a18">Lies on the anterior scalene a</text>
+<text x="679.5" y="143.4" font-size="13" fill="#241a18">few millimetres from the C5</text>
+<text x="679.5" y="160.6" font-size="13" fill="#241a18">root. Paresis costs about 25%</text>
+<text x="679.5" y="177.8" font-size="13" fill="#241a18">of vital capacity.</text>
+<rect x="670.5" y="84.0" width="6.0" height="163.6" rx="3" fill="#b02e2e" stroke="#b02e2e" stroke-width="1" />
+<rect x="24.0" y="263.6" width="852.0" height="48.4" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="31.0" y="282.6" font-size="13" fill="#ffffff" font-weight="bold">Block</text>
+<text x="149.0" y="282.6" font-size="13" fill="#ffffff" font-weight="bold">Joint (C5-6)</text>
+<text x="299.0" y="282.6" font-size="13" fill="#ffffff" font-weight="bold">Cape skin (C3-4)</text>
+<text x="439.0" y="282.6" font-size="13" fill="#ffffff" font-weight="bold">Posterior portal</text>
+<text x="439.0" y="299.8" font-size="13" fill="#ffffff" font-weight="bold">and axilla (T2)</text>
+<text x="569.0" y="282.6" font-size="13" fill="#ffffff" font-weight="bold">Phrenic paresis</text>
+<text x="719.0" y="282.6" font-size="13" fill="#ffffff" font-weight="bold">Use it for</text>
+<text x="31.0" y="331.0" font-size="13" fill="#4e1d24" font-weight="bold">Interscalene</text>
+<rect x="142.0" y="312.0" width="150.0" height="100.0" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="149.0" y="331.0" font-size="13" fill="#241a18">Whole joint.</text>
+<rect x="292.0" y="312.0" width="140.0" height="100.0" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="299.0" y="331.0" font-size="13" fill="#241a18">Covered by spread</text>
+<text x="299.0" y="348.2" font-size="13" fill="#241a18">to C4.</text>
+<rect x="432.0" y="312.0" width="130.0" height="100.0" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="439.0" y="331.0" font-size="13" fill="#241a18">Missed. Also</text>
+<text x="439.0" y="348.2" font-size="13" fill="#241a18">misses the ulnar</text>
+<text x="439.0" y="365.4" font-size="13" fill="#241a18">side of the hand.</text>
+<rect x="562.0" y="312.0" width="150.0" height="100.0" rx="0" fill="#f0d5d5" stroke="none" stroke-width="0" />
+<text x="569.0" y="331.0" font-size="13" fill="#241a18">98%, complete in 73%.</text>
+<text x="569.0" y="348.2" font-size="13" fill="#241a18">Never below about</text>
+<text x="569.0" y="365.4" font-size="13" fill="#241a18">20% whatever the</text>
+<text x="569.0" y="382.6" font-size="13" fill="#241a18">technique. Horner,</text>
+<text x="569.0" y="399.8" font-size="13" fill="#241a18">hoarseness.</text>
+<text x="719.0" y="331.0" font-size="13" fill="#241a18">Arthroplasty, reverse</text>
+<text x="719.0" y="348.2" font-size="13" fill="#241a18">arthroplasty, cuff repair</text>
+<text x="719.0" y="365.4" font-size="13" fill="#241a18">and open stabilisation</text>
+<text x="719.0" y="382.6" font-size="13" fill="#241a18">with normal lungs.</text>
+<line x1="24.0" y1="412.0" x2="876.0" y2="412.0" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="431.0" font-size="13" fill="#4e1d24" font-weight="bold">Superior trunk</text>
+<rect x="142.0" y="412.0" width="150.0" height="100.0" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="149.0" y="431.0" font-size="13" fill="#241a18">As interscalene:</text>
+<text x="149.0" y="448.2" font-size="13" fill="#241a18">non-inferior analgesia</text>
+<text x="149.0" y="465.4" font-size="13" fill="#241a18">at 24 h.</text>
+<rect x="292.0" y="412.0" width="140.0" height="100.0" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="299.0" y="431.0" font-size="13" fill="#241a18">Missed. Add a</text>
+<text x="299.0" y="448.2" font-size="13" fill="#241a18">superficial cervical</text>
+<text x="299.0" y="465.4" font-size="13" fill="#241a18">plexus block for</text>
+<text x="299.0" y="482.6" font-size="13" fill="#241a18">clavicle and</text>
+<text x="299.0" y="499.8" font-size="13" fill="#241a18">superior incisions.</text>
+<rect x="432.0" y="412.0" width="130.0" height="100.0" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="439.0" y="431.0" font-size="13" fill="#241a18">Missed.</text>
+<rect x="562.0" y="412.0" width="150.0" height="100.0" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="569.0" y="431.0" font-size="13" fill="#241a18">76%, but complete in</text>
+<text x="569.0" y="448.2" font-size="13" fill="#241a18">only 5%.</text>
+<text x="719.0" y="431.0" font-size="13" fill="#241a18">Moderate respiratory</text>
+<text x="719.0" y="448.2" font-size="13" fill="#241a18">disease or obesity.</text>
+<line x1="24.0" y1="512.0" x2="876.0" y2="512.0" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="531.0" font-size="13" fill="#4e1d24" font-weight="bold">Suprascapular</text>
+<text x="31.0" y="548.2" font-size="13" fill="#4e1d24" font-weight="bold">plus axillary</text>
+<rect x="142.0" y="512.0" width="150.0" height="134.4" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="149.0" y="531.0" font-size="13" fill="#241a18">Most of the joint.</text>
+<text x="149.0" y="548.2" font-size="13" fill="#241a18">Anterior capsule</text>
+<text x="149.0" y="565.4" font-size="13" fill="#241a18">missed. Not a surgical</text>
+<text x="149.0" y="582.6" font-size="13" fill="#241a18">block.</text>
+<rect x="292.0" y="512.0" width="140.0" height="134.4" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="299.0" y="531.0" font-size="13" fill="#241a18">Missed.</text>
+<rect x="432.0" y="512.0" width="130.0" height="134.4" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="439.0" y="531.0" font-size="13" fill="#241a18">Missed.</text>
+<rect x="562.0" y="512.0" width="150.0" height="134.4" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="569.0" y="531.0" font-size="13" fill="#241a18">None. Two injections.</text>
+<text x="719.0" y="531.0" font-size="13" fill="#241a18">Under general</text>
+<text x="719.0" y="548.2" font-size="13" fill="#241a18">anaesthesia when a 25%</text>
+<text x="719.0" y="565.4" font-size="13" fill="#241a18">fall in vital capacity</text>
+<text x="719.0" y="582.6" font-size="13" fill="#241a18">cannot be afforded:</text>
+<text x="719.0" y="599.8" font-size="13" fill="#241a18">severe COPD,</text>
+<text x="719.0" y="617.0" font-size="13" fill="#241a18">contralateral phrenic</text>
+<text x="719.0" y="634.2" font-size="13" fill="#241a18">palsy, pneumonectomy.</text>
+<line x1="24.0" y1="646.4" x2="876.0" y2="646.4" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="665.4" font-size="13" fill="#4e1d24" font-weight="bold">Supraclavicular</text>
+<text x="31.0" y="682.6" font-size="13" fill="#4e1d24" font-weight="bold">or</text>
+<text x="31.0" y="699.8" font-size="13" fill="#4e1d24" font-weight="bold">infraclavicular</text>
+<text x="31.0" y="717.0" font-size="13" fill="#4e1d24" font-weight="bold">plus</text>
+<text x="31.0" y="734.2" font-size="13" fill="#4e1d24" font-weight="bold">suprascapular</text>
+<rect x="142.0" y="646.4" width="150.0" height="100.0" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="149.0" y="665.4" font-size="13" fill="#241a18">Joint by a different</text>
+<text x="149.0" y="682.6" font-size="13" fill="#241a18">route.</text>
+<rect x="292.0" y="646.4" width="140.0" height="100.0" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="299.0" y="665.4" font-size="13" fill="#241a18">Variable.</text>
+<rect x="432.0" y="646.4" width="130.0" height="100.0" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="439.0" y="665.4" font-size="13" fill="#241a18">Variable.</text>
+<rect x="562.0" y="646.4" width="150.0" height="100.0" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="569.0" y="665.4" font-size="13" fill="#241a18">Lower risk.</text>
+<text x="719.0" y="665.4" font-size="13" fill="#241a18">An option with less</text>
+<text x="719.0" y="682.6" font-size="13" fill="#241a18">evidence behind it.</text>
+<line x1="24.0" y1="746.4" x2="876.0" y2="746.4" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<rect x="24.0" y="760.4" width="18.0" height="14.0" rx="2" fill="#9bbf8a" stroke="#8a7b74" stroke-width="1" fill-opacity="0.5" />
+<text x="48.0" y="772.4" font-size="13" fill="#241a18">covered, or no cost</text>
+<rect x="187.8" y="760.4" width="18.0" height="14.0" rx="2" fill="#f7e6d2" stroke="#8a7b74" stroke-width="1" />
+<text x="211.8" y="772.4" font-size="13" fill="#241a18">partial or variable</text>
+<rect x="345.3" y="760.4" width="18.0" height="14.0" rx="2" fill="#ffffff" stroke="#8a7b74" stroke-width="1" />
+<text x="369.3" y="772.4" font-size="13" fill="#241a18">missed</text>
+<rect x="434.5" y="760.4" width="18.0" height="14.0" rx="2" fill="#f0d5d5" stroke="#8a7b74" stroke-width="1" />
+<text x="458.5" y="772.4" font-size="13" fill="#241a18">the cost to plan around</text>
+<rect x="24.0" y="790.4" width="277.3" height="94.8" rx="6" fill="#faf6ef" stroke="#d98b3c" stroke-width="1.8" />
+<text x="33.0" y="812.4" font-size="13" fill="#4e1d24" font-weight="bold">Clavicle and ACJ</text>
+<text x="33.0" y="832.6" font-size="13" fill="#241a18">Need C3-4 as well as C5-6: interscalene,</text>
+<text x="33.0" y="849.8" font-size="13" fill="#241a18">or superior trunk plus superficial cervical</text>
+<text x="33.0" y="867.0" font-size="13" fill="#241a18">plexus.</text>
+<rect x="24.0" y="790.4" width="6.0" height="94.8" rx="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" />
+<rect x="311.3" y="790.4" width="277.3" height="94.8" rx="6" fill="#faf6ef" stroke="#d98b3c" stroke-width="1.8" />
+<text x="320.3" y="812.4" font-size="13" fill="#4e1d24" font-weight="bold">Smaller operations</text>
+<text x="320.3" y="832.6" font-size="13" fill="#241a18">Subacromial decompression, diagnostic</text>
+<text x="320.3" y="849.8" font-size="13" fill="#241a18">arthroscopy, capsular release: a single</text>
+<text x="320.3" y="867.0" font-size="13" fill="#241a18">shot or a suprascapular block is enough.</text>
+<rect x="311.3" y="790.4" width="6.0" height="94.8" rx="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" />
+<rect x="598.7" y="790.4" width="277.3" height="94.8" rx="6" fill="#faf6ef" stroke="#d98b3c" stroke-width="1.8" />
+<text x="607.7" y="812.4" font-size="13" fill="#4e1d24" font-weight="bold">Fracture or dislocation</text>
+<text x="607.7" y="832.6" font-size="13" fill="#241a18">Test and record axillary nerve function</text>
+<text x="607.7" y="849.8" font-size="13" fill="#241a18">before any block.</text>
+<rect x="598.7" y="790.4" width="6.0" height="94.8" rx="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" />
+</svg>

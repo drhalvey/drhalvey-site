@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 947" width="900" height="947" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="947" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">Prone on a frame: the checklist from head to toe</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">Supports belong on the chest and the iliac crests so the abdomen hangs free. General anaesthesia removes every warning the patient would</text>
+<text x="24.0" y="75.2" font-size="13" fill="#8a7b74">have given.</text>
+<rect x="228.0" y="244.4" width="620.0" height="14.0" rx="4" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="70.0" y="202.4" width="92.0" height="20.0" rx="6" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="108.0" y="222.4" width="14.0" height="68.0" rx="2" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="44.0" y="282.4" width="176.0" height="10.0" rx="3" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="240.0" y="200.4" width="96.0" height="44.0" rx="8" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="452.0" y="200.4" width="84.0" height="44.0" rx="8" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="606.0" y="214.4" width="60.0" height="30.0" rx="8" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<rect x="742.0" y="204.4" width="70.0" height="40.0" rx="8" fill="#d5cfcb" stroke="#8a7b74" stroke-width="1.5" />
+<circle cx="116.0" cy="172.4" r="30" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5"/>
+<rect x="136.0" y="158.4" width="60.0" height="26.0" rx="10" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5" />
+<rect x="176.0" y="136.4" width="392.0" height="64.0" rx="30" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5" />
+<ellipse cx="392" cy="200.4" rx="52" ry="26" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5"/>
+<rect x="548.0" y="150.4" width="124.0" height="50.0" rx="24" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5" />
+<rect x="652.0" y="160.4" width="160.0" height="44.0" rx="20" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5" />
+<rect x="800.0" y="172.4" width="22.0" height="58.0" rx="10" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5" />
+<rect x="178.0" y="168.4" width="28.0" height="108.0" rx="13" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5" />
+<rect x="64.0" y="250.4" width="142.0" height="28.0" rx="13" fill="#f3e9d8" stroke="#4e1d24" stroke-width="4.5" />
+<circle cx="116.0" cy="172.4" r="30" fill="#f3e9d8" stroke="none" stroke-width="0"/>
+<rect x="136.0" y="158.4" width="60.0" height="26.0" rx="10" fill="#f3e9d8" stroke="none" stroke-width="0" />
+<rect x="176.0" y="136.4" width="392.0" height="64.0" rx="30" fill="#f3e9d8" stroke="none" stroke-width="0" />
+<ellipse cx="392" cy="200.4" rx="52" ry="26" fill="#f3e9d8" stroke="none" stroke-width="0"/>
+<rect x="548.0" y="150.4" width="124.0" height="50.0" rx="24" fill="#f3e9d8" stroke="none" stroke-width="0" />
+<rect x="652.0" y="160.4" width="160.0" height="44.0" rx="20" fill="#f3e9d8" stroke="none" stroke-width="0" />
+<rect x="800.0" y="172.4" width="22.0" height="58.0" rx="10" fill="#f3e9d8" stroke="none" stroke-width="0" />
+<rect x="178.0" y="168.4" width="28.0" height="108.0" rx="13" fill="#f3e9d8" stroke="none" stroke-width="0" />
+<rect x="64.0" y="250.4" width="142.0" height="28.0" rx="13" fill="#f3e9d8" stroke="none" stroke-width="0" />
+<path d="M96,194.4 Q78,216.4 44,220.4" fill="none" stroke="#8a7b74" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" />
+<line x1="392.0" y1="232.4" x2="392.0" y2="268.4" stroke="#d98b3c" stroke-width="2.5" stroke-linecap="round" marker-end="url(#a-sand)"/>
+<line x1="60.0" y1="122.4" x2="330.0" y2="122.4" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round" stroke-dasharray="5 4"/>
+<circle cx="94.0" cy="176.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="94.0" y="181.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">1</text>
+<circle cx="30.0" cy="220.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="30.0" y="225.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">2</text>
+<circle cx="192.0" cy="220.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="192.0" y="225.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">3</text>
+<circle cx="288.0" cy="222.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="288.0" y="227.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">4</text>
+<circle cx="392.0" cy="282.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="392.0" y="287.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">5</text>
+<circle cx="494.0" cy="222.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="494.0" y="227.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">6</text>
+<circle cx="636.0" cy="228.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="636.0" y="233.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text>
+<circle cx="344.0" cy="122.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="344.0" y="127.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">8</text>
+<circle cx="830.0" cy="242.4" r="12" fill="#4e1d24" stroke="#ffffff" stroke-width="2"/>
+<text x="830.0" y="247.4" font-size="13" fill="#ffffff" text-anchor="middle" font-weight="bold">7</text>
+<text x="364.0" y="126.4" font-size="13" fill="#8a7b74">head neutral, level with or above the heart</text>
+<text x="410.0" y="286.4" font-size="13" fill="#d98b3c" font-weight="bold">abdomen hangs free</text>
+<rect x="24.0" y="316.4" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="33.0" y="338.4" font-size="13" fill="#4e1d24" font-weight="bold">1 Eyes and face</text>
+<text x="33.0" y="358.6" font-size="13" fill="#241a18">Nothing on the globe at any point: direct pressure causes central</text>
+<text x="33.0" y="375.8" font-size="13" fill="#241a18">retinal artery occlusion. Look or palpate at intervals and after any</text>
+<text x="33.0" y="393.0" font-size="13" fill="#241a18">table movement, and record each check.</text>
+<rect x="455.0" y="316.4" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="464.0" y="338.4" font-size="13" fill="#4e1d24" font-weight="bold">2 Airway</text>
+<text x="464.0" y="358.6" font-size="13" fill="#241a18">Tube fixed for a position in which re-intubation is nearly</text>
+<text x="464.0" y="375.8" font-size="13" fill="#241a18">impossible: tape that survives saliva, depth noted, soft bite block.</text>
+<text x="464.0" y="393.0" font-size="13" fill="#241a18">A trolley waits outside for emergency supination.</text>
+<rect x="24.0" y="420.0" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="33.0" y="442.0" font-size="13" fill="#4e1d24" font-weight="bold">3 Arms and brachial plexus</text>
+<text x="33.0" y="462.2" font-size="13" fill="#241a18">Abduction under 90 degrees, elbows lower than shoulders,</text>
+<text x="33.0" y="479.4" font-size="13" fill="#241a18">forearms pronated on padding, nothing in the ulnar groove or</text>
+<text x="33.0" y="496.6" font-size="13" fill="#241a18">axilla, head not turned. Check the radial pulses.</text>
+<rect x="455.0" y="420.0" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="464.0" y="442.0" font-size="13" fill="#4e1d24" font-weight="bold">4 Chest support</text>
+<text x="464.0" y="462.2" font-size="13" fill="#241a18">Breasts medial and free of the support. Fill before turning and</text>
+<text x="464.0" y="479.4" font-size="13" fill="#241a18">have the vasopressor running: cardiac output can fall by a fifth</text>
+<text x="464.0" y="496.6" font-size="13" fill="#241a18">while the pressure looks acceptable.</text>
+<rect x="24.0" y="523.6" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="33.0" y="545.6" font-size="13" fill="#4e1d24" font-weight="bold">5 Abdomen free</text>
+<text x="33.0" y="565.8" font-size="13" fill="#241a18">Low caval pressure means empty epidural veins and a dry field.</text>
+<text x="33.0" y="583.0" font-size="13" fill="#241a18">Airway pressure much higher than supine means the abdomen is</text>
+<text x="33.0" y="600.2" font-size="13" fill="#241a18">not free or the tube has moved.</text>
+<rect x="455.0" y="523.6" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="464.0" y="545.6" font-size="13" fill="#4e1d24" font-weight="bold">6 Iliac crests</text>
+<text x="464.0" y="565.8" font-size="13" fill="#241a18">Genitalia free. Protect the lateral femoral cutaneous nerve from</text>
+<text x="464.0" y="583.0" font-size="13" fill="#241a18">the bolster: meralgia paraesthetica is the commonest nerve</text>
+<text x="464.0" y="600.2" font-size="13" fill="#241a18">complaint after prone spinal surgery.</text>
+<rect x="24.0" y="627.2" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="33.0" y="649.2" font-size="13" fill="#4e1d24" font-weight="bold">7 Knees and feet</text>
+<text x="33.0" y="669.4" font-size="13" fill="#241a18">Knees padded and slightly flexed; feet on a bolster or off the end of</text>
+<text x="33.0" y="686.6" font-size="13" fill="#241a18">the table so the toes hang free.</text>
+<rect x="455.0" y="627.2" width="421.0" height="95.6" rx="6" fill="#faf6ef" stroke="#8a7b74" stroke-width="1.2" />
+<text x="464.0" y="649.2" font-size="13" fill="#4e1d24" font-weight="bold">8 Head height and vision</text>
+<text x="464.0" y="669.4" font-size="13" fill="#241a18">Long, bloody prone cases risk ischaemic optic neuropathy: head</text>
+<text x="464.0" y="686.6" font-size="13" fill="#241a18">not below the heart, no deliberate hypotension, colloid with</text>
+<text x="464.0" y="703.8" font-size="13" fill="#241a18">crystalloid, and tell the patient beforehand.</text>
+<rect x="24.0" y="738.8" width="852.0" height="192.4" rx="6" fill="#f7e6d2" stroke="#d98b3c" stroke-width="1.8" />
+<text x="38.0" y="763.8" font-size="14" fill="#4e1d24" font-weight="bold">When evoked potentials are monitored: the anaesthetic that permits it</text>
+<circle cx="42.0" cy="784.8" r="3.5" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="54.0" y="788.8" font-size="13" fill="#241a18">Propofol and remifentanil infusions guided by processed EEG.</text>
+<text x="54.0" y="806.0" font-size="13" fill="#241a18">No nitrous oxide; volatile none, or under 0.5 MAC and constant.</text>
+<circle cx="466.0" cy="784.8" r="3.5" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="478.0" y="788.8" font-size="13" fill="#241a18">One intubating dose of relaxant and no more; baselines once</text>
+<text x="478.0" y="806.0" font-size="13" fill="#241a18">the train-of-four has returned.</text>
+<circle cx="42.0" cy="827.2" r="3.5" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="54.0" y="831.2" font-size="13" fill="#241a18">Soft bite blocks between the molars on both sides before the</text>
+<text x="54.0" y="848.4" font-size="13" fill="#241a18">first stimulus.</text>
+<circle cx="466.0" cy="827.2" r="3.5" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="478.0" y="831.2" font-size="13" fill="#241a18">Steady state: announce every bolus, rate change or new drug</text>
+<text x="478.0" y="848.4" font-size="13" fill="#241a18">before giving it.</text>
+<circle cx="42.0" cy="869.6" r="3.5" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="54.0" y="873.6" font-size="13" fill="#241a18">Keep mean pressure, temperature, haemoglobin and CO2</text>
+<text x="54.0" y="890.8" font-size="13" fill="#241a18">where they were at baseline.</text>
+<circle cx="466.0" cy="869.6" r="3.5" fill="#d98b3c" stroke="#d98b3c" stroke-width="1"/>
+<text x="478.0" y="873.6" font-size="13" fill="#241a18">Signal change: raise mean pressure above 80-90 mmHg at</text>
+<text x="478.0" y="890.8" font-size="13" fill="#241a18">once. An isolated upper limb change is a positioning alarm</text>
+<text x="478.0" y="908.0" font-size="13" fill="#241a18">first.</text>
+</svg>

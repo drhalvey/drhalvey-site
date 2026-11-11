@@ -13,3 +13,10 @@ All 60 cards, Part B and all 14 Part A chapters are written, pass the build chec
 - Local layer: 60 files in the session workspace (/home/claude/ortho-local, not in the repo), encrypted into
   ortho/data/local.enc.json. Surgeon preferences beyond Duff and Collopy are "not recorded".
 - To go live: fast-forward `main` to `ortho-textbook` and verify robots.txt, noindex and the search index.
+
+## 12 November 2026
+- Live on main at /ortho/. A12-A14 reviewed and guideline figures checked against originals; corrections applied.
+- 14 schematic figures in ortho/img (figures.yaml maps them to cards and chapters).
+- Still not verified against a primary source: ASRA anticoagulation guideline tables (4th and 5th editions,
+  checked against secondary summaries only), ASRA LAST checklist numbers, ASA peripheral neuropathy advisory,
+  Fillingham 2018 TXA conclusions, Australian Therapeutic Guidelines, the AOA/Arthroplasty Society VTE guideline.

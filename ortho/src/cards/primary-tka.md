@@ -29,7 +29,7 @@ day_case: selected
 drugs:
   antibiotic: "Cefazolin 2 g IV within 60 min of incision, 3 g over 120 kg, and before tourniquet inflation if one is used"
   txa: "Tranexamic acid 1 g IV before incision; many surgeons add a second dose at closure or a topical dose into the joint"
-  vte: "Chemoprophylaxis is routine (aspirin or LMWH by unit protocol) plus mechanical prophylaxis and early mobilisation; the adductor canal block does not change the timing rules; the spinal sets the first LMWH dose no sooner than 4 h after the puncture"
+  vte: "Chemoprophylaxis is routine (aspirin or LMWH by unit protocol) plus mechanical prophylaxis and early mobilisation; the adductor canal block does not change the timing rules; the spinal sets the first prophylactic LMWH dose no sooner than 12 h after the needle"
   antiemetic: "Dexamethasone 8-10 mg IV at induction (PROSPECT recommends at least 10 mg) and ondansetron 4 mg IV; intrathecal opioid raises the need"
 patient_line: "The knee will be numb for the first evening and then hurts a lot for two or three days, especially when the physiotherapist bends it; that bending is the treatment, the regular tablets are what make it possible, and the strong painkillers are for the nights."
 trap: "The block wears off at 2 am on the first night, the adductor canal block never covered the back of the knee, and the physiotherapist arrives at 8 am: the oral regimen, the posterior cover (infiltration or IPACK) and the night plan all have to be in place before the spinal recedes"

@@ -71,7 +71,7 @@ The alternative is worse for the joint. In Australian surveillance data from 22,
 The working rules:
 
 1. A history of a non-severe reaction to a penicillin, of any type, or an unverifiable childhood label: give cefazolin.
-2. A history of immediate severe reaction to a penicillin (anaphylaxis, angioedema): cefazolin is still the better drug on the numbers and is permitted by current allergy-informed guidelines; give it with the patient monitored, intravenous access secure and adrenaline to hand, which describes induction of anaesthesia. Where local policy or the patient declines, use vancomycin, and add gram-negative cover if the operation warrants it.
+2. A history of immediate severe reaction to a penicillin (anaphylaxis, angioedema): cefazolin is still the better drug on the numbers and is the author's reading of the cross-reactivity data; give it with the patient monitored, intravenous access secure and adrenaline to hand, which describes induction of anaesthesia. Where local policy forbids it or the patient declines, use vancomycin, and add gram-negative cover if the operation warrants it.
 3. A history of a severe delayed cutaneous reaction to any beta-lactam (Stevens-Johnson syndrome, toxic epidermal necrolysis, drug reaction with eosinophilia): avoid all beta-lactams.
 4. A history of reaction to cefazolin itself: avoid cefazolin; other beta-lactams are usually tolerated, on specialist advice.
 5. The elective patient with a penicillin label seen weeks ahead: refer for delabelling. It changes every future anaesthetic.
@@ -84,7 +84,7 @@ Vancomycin is indicated for patients known to be colonised or previously infecte
 
 It should not be added routinely. The ASAP trial randomised arthroplasty patients without known MRSA colonisation across Australian centres to vancomycin or placebo on top of cefazolin. Surgical site infection occurred in 4.5% with vancomycin and 3.5% with placebo. In knee replacement the vancomycin group did worse (5.7% against 3.7%, relative risk 1.52), in hip replacement there was no difference, and hypersensitivity reactions doubled.
 
-The practical problem is the infusion. The dose is 15 mg/kg of actual body weight, typically 1-1.5 g, given no faster than 10 mg/min, because rapid infusion releases histamine: flushing, hypotension, and occasionally cardiovascular collapse at exactly the moment of induction. A 1.5 g dose therefore takes 90 minutes or more. The guideline window is to begin within 120 minutes before incision, and the infusion should be complete, or nearly so, before incision and before a tourniquet is inflated. That means vancomycin is charted in advance and started on the ward or in the holding bay; a vancomycin infusion started in the anaesthetic room is finishing as the wound is being closed.
+The practical problem is the infusion. The dose is 15 mg/kg of actual body weight, typically 1-1.5 g, given no faster than 10 mg/min, because rapid infusion releases histamine: flushing, hypotension, and occasionally cardiovascular collapse at exactly the moment of induction. At that rate 1 g takes 100 minutes and 1.5 g takes 150 minutes, so a 1.5 g dose cannot finish inside the 120-minute window: it is started first, and the tourniquet, not the incision, is the hard deadline. The guideline window is to begin within 120 minutes before incision, and the infusion should be complete, or nearly so, before incision and before a tourniquet is inflated. That means vancomycin is charted in advance and started on the ward or in the holding bay; a vancomycin infusion started in the anaesthetic room is finishing as the wound is being closed.
 
 ## The tourniquet rule
 
@@ -141,7 +141,7 @@ The EAST guideline gives the content:
 
 | Fracture | Antibiotic | Duration |
 | --- | --- | --- |
-| Gustilo type I and II | Gram-positive cover (cefazolin 2 g IV) as soon as possible | Stop 24 hours after wound closure |
+| Gustilo type I and II | Gram-positive cover (cefazolin 2 g IV) as soon as possible | Stop 24 hours after wound closure (1998 EAST guideline, carried forward) |
 | Type III | Add gram-negative cover | 72 hours from injury, or no more than 24 hours after soft-tissue coverage, whichever is shorter |
 | Farm, soil or faecal contamination | Add high-dose penicillin for clostridia | As above |
 

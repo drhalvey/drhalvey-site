@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 836" width="900" height="836" font-family="Helvetica, Arial, sans-serif" role="img">
+<rect x="0" y="0" width="900" height="836" fill="#ffffff"/>
+<defs><marker id="a-maroon" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#4e1d24"/></marker><marker id="s-maroon" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#4e1d24"/></marker><marker id="a-sand" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#d98b3c"/></marker><marker id="s-sand" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#d98b3c"/></marker><marker id="a-grey" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#8a7b74"/></marker><marker id="s-grey" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#8a7b74"/></marker><marker id="a-danger" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#b02e2e"/></marker><marker id="s-danger" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#b02e2e"/></marker><marker id="a-ink" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0.8 L9,5 L0,9.2 Z" fill="#241a18"/></marker><marker id="s-ink" viewBox="0 0 10 10" refX="1.5" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M10,0.8 L1,5 L10,9.2 Z" fill="#241a18"/></marker></defs>
+<text x="24.0" y="36.0" font-size="20" fill="#4e1d24" font-weight="bold">Knee blocks: front, back and the motor price</text>
+<text x="24.0" y="58.0" font-size="13" fill="#8a7b74">The incision is anterior, but the posterior capsule hurts too. The quadriceps question is the centre of the knee menu.</text>
+<rect x="40.0" y="92.0" width="96.0" height="150.0" rx="30" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<circle cx="88.0" cy="164.0" r="20" fill="#ffffff" stroke="#4e1d24" stroke-width="1.5"/>
+<rect x="116.0" y="140.0" width="14.0" height="54.0" rx="5" fill="#f7e6d2" stroke="#d98b3c" stroke-width="1.2" />
+<text x="88.0" y="262.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">front of knee</text>
+<line x1="88.0" y1="152.0" x2="170.0" y2="118.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="176.0" y="110.0" font-size="13" fill="#241a18">Front: saphenous nerve and the nerves</text>
+<text x="176.0" y="127.2" font-size="13" fill="#241a18">to the vasti, all in or near the adductor</text>
+<text x="176.0" y="144.4" font-size="13" fill="#241a18">canal, with the anterior obturator.</text>
+<line x1="132.0" y1="188.0" x2="170.0" y2="208.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="176.0" y="202.0" font-size="13" fill="#241a18">Lateral side: genicular branches of the</text>
+<text x="176.0" y="219.2" font-size="13" fill="#241a18">common peroneal nerve.</text>
+<rect x="470.0" y="92.0" width="96.0" height="150.0" rx="30" fill="#f3e9d8" stroke="#4e1d24" stroke-width="1.5" />
+<rect x="492.0" y="142.0" width="52.0" height="50.0" rx="14" fill="#d9a6a0" stroke="#4e1d24" stroke-width="1.5" fill-opacity="0.8" />
+<text x="518.0" y="262.0" font-size="13" fill="#4e1d24" text-anchor="middle" font-weight="bold">back of knee</text>
+<line x1="548.0" y1="166.0" x2="598.0" y2="136.0" stroke="#8a7b74" stroke-width="1.2" stroke-linecap="round"/>
+<text x="604.0" y="128.0" font-size="13" fill="#241a18">Back (posterior capsule): tibial nerve and</text>
+<text x="604.0" y="145.2" font-size="13" fill="#241a18">posterior obturator, through the popliteal</text>
+<text x="604.0" y="162.4" font-size="13" fill="#241a18">plexus. No anterior block reaches it.</text>
+<rect x="24.0" y="288.0" width="852.0" height="31.2" rx="0" fill="#4e1d24" stroke="#4e1d24" stroke-width="1" />
+<text x="31.0" y="307.0" font-size="13" fill="#ffffff" font-weight="bold">Block</text>
+<text x="151.0" y="307.0" font-size="13" fill="#ffffff" font-weight="bold">Front of knee</text>
+<text x="316.0" y="307.0" font-size="13" fill="#ffffff" font-weight="bold">Back of knee</text>
+<text x="481.0" y="307.0" font-size="13" fill="#ffffff" font-weight="bold">Motor cost</text>
+<text x="661.0" y="307.0" font-size="13" fill="#ffffff" font-weight="bold">Place in the plan</text>
+<text x="31.0" y="338.2" font-size="13" fill="#4e1d24" font-weight="bold">Adductor canal</text>
+<rect x="144.0" y="319.2" width="165.0" height="82.8" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="151.0" y="338.2" font-size="13" fill="#241a18">Covered.</text>
+<rect x="309.0" y="319.2" width="165.0" height="82.8" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="316.0" y="338.2" font-size="13" fill="#241a18">Missed.</text>
+<rect x="474.0" y="319.2" width="180.0" height="82.8" rx="0" fill="#f7e6d2" stroke="none" stroke-width="0" />
+<text x="481.0" y="338.2" font-size="13" fill="#241a18">Quadriceps largely kept:</text>
+<text x="481.0" y="355.4" font-size="13" fill="#241a18">52% of baseline with a</text>
+<text x="481.0" y="372.6" font-size="13" fill="#241a18">catheter, against 18% with</text>
+<text x="481.0" y="389.8" font-size="13" fill="#241a18">femoral.</text>
+<text x="661.0" y="338.2" font-size="13" fill="#241a18">Default for primary TKA, single</text>
+<text x="661.0" y="355.4" font-size="13" fill="#241a18">shot. ACL reconstruction, where</text>
+<text x="661.0" y="372.6" font-size="13" fill="#241a18">the hamstring harvest site is not</text>
+<text x="661.0" y="389.8" font-size="13" fill="#241a18">covered.</text>
+<line x1="24.0" y1="402.0" x2="876.0" y2="402.0" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="421.0" font-size="13" fill="#4e1d24" font-weight="bold">Surgeon</text>
+<text x="31.0" y="438.2" font-size="13" fill="#4e1d24" font-weight="bold">infiltration</text>
+<rect x="144.0" y="402.0" width="165.0" height="82.8" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="151.0" y="421.0" font-size="13" fill="#241a18">Covered: capsular</text>
+<text x="151.0" y="438.2" font-size="13" fill="#241a18">edges, collaterals,</text>
+<text x="151.0" y="455.4" font-size="13" fill="#241a18">quadriceps, periosteum,</text>
+<text x="151.0" y="472.6" font-size="13" fill="#241a18">skin.</text>
+<rect x="309.0" y="402.0" width="165.0" height="82.8" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="316.0" y="421.0" font-size="13" fill="#241a18">Covered: posterior</text>
+<text x="316.0" y="438.2" font-size="13" fill="#241a18">capsule injected under</text>
+<text x="316.0" y="455.4" font-size="13" fill="#241a18">direct vision before the</text>
+<text x="316.0" y="472.6" font-size="13" fill="#241a18">final components.</text>
+<rect x="474.0" y="402.0" width="180.0" height="82.8" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="481.0" y="421.0" font-size="13" fill="#241a18">None.</text>
+<text x="661.0" y="421.0" font-size="13" fill="#241a18">Half of the TKA plan and the only</text>
+<text x="661.0" y="438.2" font-size="13" fill="#241a18">cover for the lateral side. Shares</text>
+<text x="661.0" y="455.4" font-size="13" fill="#241a18">the local anaesthetic budget with</text>
+<text x="661.0" y="472.6" font-size="13" fill="#241a18">the block.</text>
+<line x1="24.0" y1="484.8" x2="876.0" y2="484.8" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="503.8" font-size="13" fill="#4e1d24" font-weight="bold">IPACK</text>
+<rect x="144.0" y="484.8" width="165.0" height="65.6" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="151.0" y="503.8" font-size="13" fill="#241a18">Not covered.</text>
+<rect x="309.0" y="484.8" width="165.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="316.0" y="503.8" font-size="13" fill="#241a18">Covered: between the</text>
+<text x="316.0" y="521.0" font-size="13" fill="#241a18">popliteal artery and the</text>
+<text x="316.0" y="538.2" font-size="13" fill="#241a18">capsule.</text>
+<rect x="474.0" y="484.8" width="180.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="481.0" y="503.8" font-size="13" fill="#241a18">Motor-sparing alternative</text>
+<text x="481.0" y="521.0" font-size="13" fill="#241a18">to a sciatic block.</text>
+<text x="661.0" y="503.8" font-size="13" fill="#241a18">Add when the surgeon does not</text>
+<text x="661.0" y="521.0" font-size="13" fill="#241a18">infiltrate, before the patient leaves</text>
+<text x="661.0" y="538.2" font-size="13" fill="#241a18">theatre.</text>
+<line x1="24.0" y1="550.4" x2="876.0" y2="550.4" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="569.4" font-size="13" fill="#4e1d24" font-weight="bold">Femoral</text>
+<rect x="144.0" y="550.4" width="165.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="151.0" y="569.4" font-size="13" fill="#241a18">Covered, excellent.</text>
+<rect x="309.0" y="550.4" width="165.0" height="65.6" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="316.0" y="569.4" font-size="13" fill="#241a18">Missed.</text>
+<rect x="474.0" y="550.4" width="180.0" height="65.6" rx="0" fill="#f0d5d5" stroke="none" stroke-width="0" />
+<text x="481.0" y="569.4" font-size="13" fill="#241a18">Quadriceps at 18% of</text>
+<text x="481.0" y="586.6" font-size="13" fill="#241a18">baseline. The knee</text>
+<text x="481.0" y="603.8" font-size="13" fill="#241a18">buckles: falls.</text>
+<text x="661.0" y="569.4" font-size="13" fill="#241a18">Not recommended by PROSPECT</text>
+<text x="661.0" y="586.6" font-size="13" fill="#241a18">for TKA. Avoided in ACL</text>
+<text x="661.0" y="603.8" font-size="13" fill="#241a18">reconstruction.</text>
+<line x1="24.0" y1="616.0" x2="876.0" y2="616.0" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<text x="31.0" y="635.0" font-size="13" fill="#4e1d24" font-weight="bold">Sciatic</text>
+<rect x="144.0" y="616.0" width="165.0" height="65.6" rx="0" fill="#ffffff" stroke="none" stroke-width="0" />
+<text x="151.0" y="635.0" font-size="13" fill="#241a18">Not covered.</text>
+<rect x="309.0" y="616.0" width="165.0" height="65.6" rx="0" fill="#9bbf8a" stroke="none" stroke-width="0" fill-opacity="0.5" />
+<text x="316.0" y="635.0" font-size="13" fill="#241a18">Covered: the best</text>
+<text x="316.0" y="652.2" font-size="13" fill="#241a18">posterior analgesia.</text>
+<rect x="474.0" y="616.0" width="180.0" height="65.6" rx="0" fill="#f0d5d5" stroke="none" stroke-width="0" />
+<text x="481.0" y="635.0" font-size="13" fill="#241a18">Foot drop: delays walking</text>
+<text x="481.0" y="652.2" font-size="13" fill="#241a18">and hides a common</text>
+<text x="481.0" y="669.4" font-size="13" fill="#241a18">peroneal palsy.</text>
+<text x="661.0" y="635.0" font-size="13" fill="#241a18">Reserve for revision and severe</text>
+<text x="661.0" y="652.2" font-size="13" fill="#241a18">posterior pain after surgery.</text>
+<line x1="24.0" y1="681.6" x2="876.0" y2="681.6" stroke="#8a7b74" stroke-width="1" stroke-linecap="round"/>
+<rect x="24.0" y="695.6" width="18.0" height="14.0" rx="2" fill="#9bbf8a" stroke="#8a7b74" stroke-width="1" fill-opacity="0.5" />
+<text x="48.0" y="707.6" font-size="13" fill="#241a18">covered, or no motor cost</text>
+<rect x="227.8" y="695.6" width="18.0" height="14.0" rx="2" fill="#f7e6d2" stroke="#8a7b74" stroke-width="1" />
+<text x="251.8" y="707.6" font-size="13" fill="#241a18">partial</text>
+<rect x="313.6" y="695.6" width="18.0" height="14.0" rx="2" fill="#ffffff" stroke="#8a7b74" stroke-width="1" />
+<text x="337.6" y="707.6" font-size="13" fill="#241a18">missed</text>
+<rect x="402.8" y="695.6" width="18.0" height="14.0" rx="2" fill="#f0d5d5" stroke="#8a7b74" stroke-width="1" />
+<text x="426.8" y="707.6" font-size="13" fill="#241a18">motor cost to plan around</text>
+<rect x="24.0" y="725.6" width="421.0" height="94.8" rx="6" fill="#faf6ef" stroke="#d98b3c" stroke-width="1.8" />
+<text x="33.0" y="747.6" font-size="13" fill="#4e1d24" font-weight="bold">Defensible default for primary TKA</text>
+<text x="33.0" y="767.8" font-size="13" fill="#241a18">Spinal, single-shot adductor canal block, surgeon infiltration and</text>
+<text x="33.0" y="785.0" font-size="13" fill="#241a18">IV dexamethasone. Posterior cover in place before the spinal</text>
+<text x="33.0" y="802.2" font-size="13" fill="#241a18">recedes.</text>
+<rect x="24.0" y="725.6" width="6.0" height="94.8" rx="3" fill="#d98b3c" stroke="#d98b3c" stroke-width="1" />
+<rect x="455.0" y="725.6" width="421.0" height="94.8" rx="6" fill="#faf6ef" stroke="#b02e2e" stroke-width="1.8" />
+<text x="464.0" y="747.6" font-size="13" fill="#4e1d24" font-weight="bold">The shared budget</text>
+<text x="464.0" y="767.8" font-size="13" fill="#241a18">Ropivacaine 300 mg infiltrated plus 100 mg in the block exceeds 3</text>
+<text x="464.0" y="785.0" font-size="13" fill="#241a18">mg/kg in any patient under 130 kg. Agree the total before the first</text>
+<text x="464.0" y="802.2" font-size="13" fill="#241a18">syringe.</text>
+<rect x="455.0" y="725.6" width="6.0" height="94.8" rx="3" fill="#b02e2e" stroke="#b02e2e" stroke-width="1" />
+</svg>
