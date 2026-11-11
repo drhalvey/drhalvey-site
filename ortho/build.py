@@ -245,6 +245,7 @@ def page(title, body, depth, extra_head='', body_class=''):
     <a href="{rel}ortho/index.html">Atlas</a>
     <a href="{rel}ortho/index.html#part-a">Principles</a>
     <a href="{rel}ortho/b/b01-why-operations-hurt.html">Pain model</a>
+    <a href="{rel}ortho/judge.html">Judge my practice</a>
     <button type="button" class="ob-unlock" id="ob-unlock" hidden>My practice</button>
   </nav>
 </header>
@@ -445,6 +446,46 @@ def render_book(cards, chapters_a, chapters_b):
     return page(f'Whole book | {MANIFEST["title"]}', html_body, 1, body_class='ob-book-page')
 
 
+def render_judge(cards):
+    opts = ''.join(f'<option value="{esc(c["fm"]["id"])}">{c["manifest"].get("number", "")}. {esc(c["fm"]["title"])}</option>' for c in cards)
+    def sel(i, label, options):
+        return f'<label for="{i}">{label}</label><select id="{i}">' + ''.join(f'<option>{esc(o)}</option>' for o in options) + '</select>'
+    def txt(i, label, ph, rows=2):
+        return f'<label for="{i}">{label}</label><textarea id="{i}" rows="{rows}" placeholder="{esc(ph)}"></textarea>'
+    body = f"""
+<h1 class="ob-title">Judge my practice</h1>
+<p class="ob-subtitle">Enter the operation and the anaesthetic you gave or plan to give. The AI reads this book's card for that operation and gives its opinion.</p>
+<section class="ob-summary ob-judge-note"><p><strong>No patient names, dates of birth or record numbers.</strong> What you type is sent to the AI relay to produce the opinion. The opinion is an AI's reading of your plan against this book, not a guideline and not peer review. Check any dose it suggests yourself.</p></section>
+<form id="jf" class="ob-judge">
+  <fieldset><legend>Case</legend>
+    <label for="j-op">Operation</label><select id="j-op"><option value="">Choose an operation</option>{opts}</select>
+    <div class="ob-judge-row">
+      <div><label for="j-age">Age</label><input id="j-age" type="number" min="1" max="110" inputmode="numeric"></div>
+      <div><label for="j-wt">Weight (kg)</label><input id="j-wt" type="number" min="10" max="300" inputmode="numeric"></div>
+      <div>{sel('j-asa', 'ASA', ['', '1', '2', '3', '4'])}</div>
+    </div>
+    {txt('j-hx', 'Relevant history', 'e.g. OSA on CPAP, eGFR 40, apixaban stopped 3 days, opioid tolerant on 40 mg oxycodone daily')}
+    {txt('j-var', 'Surgical details', 'e.g. cemented, tourniquet 70 min, posterior approach, day case')}
+  </fieldset>
+  <fieldset><legend>Anaesthetic</legend>
+    <div class="ob-judge-row">
+      <div>{sel('j-tech', 'Technique', ['', 'Spinal', 'Spinal with sedation', 'General anaesthetic', 'Spinal and general', 'Block with sedation', 'Block alone', 'Epidural', 'Combined spinal epidural'])}</div>
+      <div>{sel('j-airway', 'Airway', ['', 'Not applicable', 'Supraglottic airway', 'Tracheal tube', 'Face mask or nasal oxygen'])}</div>
+    </div>
+    {txt('j-neuraxial', 'Neuraxial drugs and doses', 'e.g. bupivacaine 0.5% heavy 2.4 mL, fentanyl 15 micrograms, no intrathecal morphine')}
+    {txt('j-block', 'Blocks: which, drug, concentration, volume, catheter or single shot', 'e.g. adductor canal single shot ropivacaine 0.5% 20 mL; surgeon infiltration ropivacaine 0.2% 150 mL')}
+    {txt('j-drugs', 'Other drugs with doses', 'e.g. TXA 1 g at induction, cefazolin 2 g, dexamethasone 8 mg, parecoxib 40 mg, ketamine 20 mg, hydromorphone 0.4 mg, ondansetron 4 mg, metaraminol infusion', 3)}
+    {txt('j-post', 'Post-operative plan', 'e.g. paracetamol 1 g qid, celecoxib 200 mg bd, tapentadol SR 50 mg bd, oxycodone 5 mg PRN, enoxaparin 40 mg from next morning', 3)}
+  </fieldset>
+  <button type="submit" class="ob-judge-go" id="j-go">Judge it</button>
+  <button type="button" class="ob-expand" id="j-clear">Clear</button>
+  <p class="ob-muted" id="j-status" role="status"></p>
+</form>
+<section id="j-out" class="ob-judge-out" hidden></section>
+"""
+    return page(f'Judge my practice | {MANIFEST["title"]}', body, 1, extra_head='<script src="data/atlas.js"></script><script src="judge.js" defer></script>', body_class='ob-judge-page')
+
+
 def render_index(cards, chapters_a, chapters_b):
     atlas = []
     for c in cards:
@@ -603,6 +644,7 @@ def build(local_dir=None):
             (HERE / part.lower() / f'{ch["fm"]["id"]}.html').write_text(render_chapter(ch, part, chs[i - 1] if i else None, chs[i + 1] if i + 1 < len(chs) else None), encoding='utf-8')
     (HERE / 'index.html').write_text(render_index(cards, chapters_a, chapters_b), encoding='utf-8')
     (HERE / 'book.html').write_text(render_book(cards, chapters_a, chapters_b), encoding='utf-8')
+    (HERE / 'judge.html').write_text(render_judge(cards), encoding='utf-8')
     if local_dir:
         encrypt_local(local_dir)
     print(f'built {len(cards)} cards, {len(chapters_a)} Part A chapters, {len(chapters_b)} Part B chapters')

@@ -201,3 +201,19 @@ details.ob-section>summary h2{margin:0;font-size:1.3rem}
 .ob-answer blockquote{margin:0 0 .6rem;font-family:var(--ob-serif);font-size:1.02rem}
 .ob-answer blockquote:last-child{margin-bottom:0}
 .ob-answer footer{font-family:var(--ob-sans);font-size:.82rem;margin-top:.15rem}
+
+/* judge my practice */
+.ob-judge fieldset{border:1px solid var(--ob-line);border-radius:var(--ob-radius);background:var(--ob-card);padding:.8rem 1rem 1rem;margin:0 0 1rem}
+.ob-judge legend{font-family:var(--ob-serif);font-weight:600;font-size:1.15rem;padding:0 .4rem;color:var(--ob-maroon)}
+.ob-judge label{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--ob-muted);font-weight:700;margin:.7rem 0 .2rem}
+.ob-judge input,.ob-judge select,.ob-judge textarea{width:100%;font:inherit;padding:.5rem .6rem;border:1px solid var(--ob-line2);border-radius:6px;background:var(--ob-paper);color:var(--ob-ink)}
+.ob-judge textarea{resize:vertical;line-height:1.4}
+.ob-judge-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:0 .8rem}
+.ob-judge-go{font:inherit;font-weight:700;background:var(--ob-maroon);color:var(--ob-paper);border:0;border-radius:6px;padding:.65rem 1.4rem;cursor:pointer;margin-right:.5rem}
+.ob-judge-go:disabled{opacity:.55;cursor:wait}
+.ob-judge-note p{margin:0;font-size:.95rem}
+.ob-judge-out{background:var(--ob-card);border:1.5px solid var(--ob-maroon);border-radius:var(--ob-radius);padding:1rem 1.2rem;margin-top:1rem}
+.ob-judge-out h2{font-size:1.05rem;margin:1rem 0 .3rem;color:var(--ob-maroon)}
+.ob-judge-out h2:first-of-type{margin-top:.4rem}
+.ob-judge-out h2:first-of-type+p{font-family:var(--ob-serif);font-size:1.2rem}
+.ob-judge-case{font-size:.85rem;color:var(--ob-muted);margin:0}

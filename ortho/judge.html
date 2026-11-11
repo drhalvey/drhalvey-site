@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Judge my practice | Orthopaedic Anaesthesia: Surgery First</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../assets/fonts.css">
+<link rel="stylesheet" href="../ortho/ortho.css">
+<script src="data/atlas.js"></script><script src="judge.js" defer></script>
+</head>
+<body class="ob-judge-page">
+<header class="ob-head">
+  <a class="ob-brand" href="../ortho/index.html"><span class="ob-brand-title">Orthopaedic Anaesthesia: Surgery First</span><span class="ob-brand-sub">What the surgeon is doing, why, and what it means for you</span></a>
+  <nav class="ob-nav" aria-label="Book">
+    <a href="../ortho/index.html">Atlas</a>
+    <a href="../ortho/index.html#part-a">Principles</a>
+    <a href="../ortho/b/b01-why-operations-hurt.html">Pain model</a>
+    <a href="../ortho/judge.html">Judge my practice</a>
+    <button type="button" class="ob-unlock" id="ob-unlock" hidden>My practice</button>
+  </nav>
+</header>
+<main class="ob-main" id="main">
+
+<h1 class="ob-title">Judge my practice</h1>
+<p class="ob-subtitle">Enter the operation and the anaesthetic you gave or plan to give. The AI reads this book's card for that operation and gives its opinion.</p>
+<section class="ob-summary ob-judge-note"><p><strong>No patient names, dates of birth or record numbers.</strong> What you type is sent to the AI relay to produce the opinion. The opinion is an AI's reading of your plan against this book, not a guideline and not peer review. Check any dose it suggests yourself.</p></section>
+<form id="jf" class="ob-judge">
+  <fieldset><legend>Case</legend>
+    <label for="j-op">Operation</label><select id="j-op"><option value="">Choose an operation</option><option value="anatomic-tsa">1. Anatomic total shoulder arthroplasty</option><option value="reverse-tsa">2. Reverse total shoulder arthroplasty</option><option value="rotator-cuff-repair">3. Arthroscopic rotator cuff repair</option><option value="subacromial-decompression-acj">4. Subacromial decompression and ACJ excision</option><option value="shoulder-stabilisation">5. Shoulder stabilisation: Bankart, remplissage, Latarjet</option><option value="slap-repair-biceps-tenodesis">6. SLAP repair and biceps tenodesis</option><option value="frozen-shoulder">7. Frozen shoulder: MUA, hydrodilatation, capsular release</option><option value="acj-reconstruction-clavicle">8. ACJ reconstruction and clavicle fixation</option><option value="proximal-humerus-fracture">9. Proximal humerus fracture: ORIF versus reverse TSA</option><option value="shoulder-arthroscopy-debridement">10. Diagnostic shoulder arthroscopy, debridement and calcific tendinitis</option><option value="total-elbow-radial-head">11. Total elbow arthroplasty and radial head replacement</option><option value="elbow-arthroscopy-release">12. Elbow arthroscopy, release and tennis elbow surgery</option><option value="distal-biceps-ulnar-nerve">13. Distal biceps repair; ulnar nerve decompression and transposition</option><option value="elbow-fracture-fixation">14. Elbow fractures: olecranon, distal humerus, radial head</option><option value="distal-radius-orif">15. Distal radius ORIF</option><option value="carpal-tunnel-minor-hand">16. Carpal tunnel, trigger finger, de Quervain&#x27;s and ganglion</option><option value="dupuytrens-fasciectomy">17. Dupuytren&#x27;s fasciectomy</option><option value="wrist-arthroscopy-scaphoid">18. Wrist arthroscopy, TFCC and scaphoid surgery</option><option value="trapeziectomy-wrist-fusion">19. Trapeziectomy and CMC arthroplasty; wrist fusion and arthroplasty</option><option value="hand-trauma">20. Hand trauma: metacarpal and phalangeal fixation, tendon and nerve repair</option><option value="tha-posterior">21. Primary total hip arthroplasty: posterior approach</option><option value="tha-anterior-lateral">22. Primary total hip arthroplasty: anterior and lateral approaches</option><option value="hip-resurfacing">23. Hip resurfacing</option><option value="revision-tha">24. Revision total hip arthroplasty</option><option value="hip-arthroscopy">25. Hip arthroscopy: FAI and labral repair</option><option value="periacetabular-osteotomy">26. Periacetabular osteotomy</option><option value="primary-tka">27. Primary total knee arthroplasty</option><option value="unicompartmental-knee">28. Unicompartmental knee arthroplasty</option><option value="revision-tka">29. Revision total knee arthroplasty</option><option value="patellofemoral-mpfl-tto">30. Patellofemoral surgery: PFJ arthroplasty, MPFL reconstruction, tibial tubercle osteotomy</option><option value="knee-arthroscopy">31. Knee arthroscopy: meniscectomy, meniscal repair, chondral procedures</option><option value="acl-reconstruction">32. ACL reconstruction</option><option value="multiligament-knee">33. Multiligament knee reconstruction</option><option value="hto-dfo">34. High tibial and distal femoral osteotomy</option><option value="knee-mua-arthrolysis">35. Knee manipulation under anaesthesia and arthroscopic arthrolysis</option><option value="quads-patellar-tendon-repair">36. Quadriceps and patellar tendon repair</option><option value="periprosthetic-joint-infection">37. Periprosthetic joint infection: DAIR, one- and two-stage revision, spacers</option><option value="periprosthetic-fracture">38. Periprosthetic fractures of the hip and knee</option><option value="neck-of-femur">39. Neck of femur fracture: hemiarthroplasty, THA, DHS and nail</option><option value="femoral-shaft-nailing">40. Femoral shaft nailing</option><option value="tibial-nailing-plateau">41. Tibial shaft nailing and tibial plateau fixation</option><option value="ankle-pilon-fixation">42. Ankle and pilon fracture fixation</option><option value="pelvic-acetabular-fixation">43. Pelvic and acetabular fracture fixation</option><option value="humeral-shaft-fixation">44. Humeral shaft fixation</option><option value="open-fractures-damage-control">45. Open fractures, external fixation and damage control orthopaedics</option><option value="compartment-syndrome-fasciotomy">46. Compartment syndrome and fasciotomy</option><option value="amputation">47. Lower limb amputation</option><option value="osteomyelitis-septic-arthritis">48. Osteomyelitis debridement and septic arthritis washout</option><option value="removal-of-metalwork">49. Removal of metalwork</option><option value="polytrauma-sequencing">50. Polytrauma: sequencing, the second hit and when to operate</option><option value="lumbar-microdiscectomy-decompression">51. Lumbar microdiscectomy and decompression</option><option value="posterior-lumbar-fusion">52. Posterior lumbar fusion: PLIF, TLIF and posterolateral</option><option value="anterior-lateral-lumbar-fusion">53. Anterior and lateral lumbar fusion: ALIF and LLIF</option><option value="acdf-cervical-disc-arthroplasty">54. ACDF and cervical disc arthroplasty</option><option value="posterior-cervical-fusion">55. Posterior cervical decompression and fusion</option><option value="adult-deformity-scoliosis">56. Adult deformity and scoliosis correction</option><option value="spinal-fracture-fixation">57. Thoracolumbar and cervical fracture fixation</option><option value="spinal-metastasis-vertebroplasty">58. Spinal metastasis decompression; vertebroplasty and kyphoplasty</option><option value="scs-intrathecal-pump">59. Spinal cord stimulator and intrathecal pump implantation</option><option value="si-joint-fusion-coccygectomy">60. Sacroiliac joint fusion and coccygectomy</option></select>
+    <div class="ob-judge-row">
+      <div><label for="j-age">Age</label><input id="j-age" type="number" min="1" max="110" inputmode="numeric"></div>
+      <div><label for="j-wt">Weight (kg)</label><input id="j-wt" type="number" min="10" max="300" inputmode="numeric"></div>
+      <div><label for="j-asa">ASA</label><select id="j-asa"><option></option><option>1</option><option>2</option><option>3</option><option>4</option></select></div>
+    </div>
+    <label for="j-hx">Relevant history</label><textarea id="j-hx" rows="2" placeholder="e.g. OSA on CPAP, eGFR 40, apixaban stopped 3 days, opioid tolerant on 40 mg oxycodone daily"></textarea>
+    <label for="j-var">Surgical details</label><textarea id="j-var" rows="2" placeholder="e.g. cemented, tourniquet 70 min, posterior approach, day case"></textarea>
+  </fieldset>
+  <fieldset><legend>Anaesthetic</legend>
+    <div class="ob-judge-row">
+      <div><label for="j-tech">Technique</label><select id="j-tech"><option></option><option>Spinal</option><option>Spinal with sedation</option><option>General anaesthetic</option><option>Spinal and general</option><option>Block with sedation</option><option>Block alone</option><option>Epidural</option><option>Combined spinal epidural</option></select></div>
+      <div><label for="j-airway">Airway</label><select id="j-airway"><option></option><option>Not applicable</option><option>Supraglottic airway</option><option>Tracheal tube</option><option>Face mask or nasal oxygen</option></select></div>
+    </div>
+    <label for="j-neuraxial">Neuraxial drugs and doses</label><textarea id="j-neuraxial" rows="2" placeholder="e.g. bupivacaine 0.5% heavy 2.4 mL, fentanyl 15 micrograms, no intrathecal morphine"></textarea>
+    <label for="j-block">Blocks: which, drug, concentration, volume, catheter or single shot</label><textarea id="j-block" rows="2" placeholder="e.g. adductor canal single shot ropivacaine 0.5% 20 mL; surgeon infiltration ropivacaine 0.2% 150 mL"></textarea>
+    <label for="j-drugs">Other drugs with doses</label><textarea id="j-drugs" rows="3" placeholder="e.g. TXA 1 g at induction, cefazolin 2 g, dexamethasone 8 mg, parecoxib 40 mg, ketamine 20 mg, hydromorphone 0.4 mg, ondansetron 4 mg, metaraminol infusion"></textarea>
+    <label for="j-post">Post-operative plan</label><textarea id="j-post" rows="3" placeholder="e.g. paracetamol 1 g qid, celecoxib 200 mg bd, tapentadol SR 50 mg bd, oxycodone 5 mg PRN, enoxaparin 40 mg from next morning"></textarea>
+  </fieldset>
+  <button type="submit" class="ob-judge-go" id="j-go">Judge it</button>
+  <button type="button" class="ob-expand" id="j-clear">Clear</button>
+  <p class="ob-muted" id="j-status" role="status"></p>
+</form>
+<section id="j-out" class="ob-judge-out" hidden></section>
+
+</main>
+<footer class="ob-foot">
+  <p>Dr Ed Halvey, FRCA FANZCA. A clinician reference, not patient information. Not linked from the public site and not indexed.</p>
+</footer>
+<script src="../ortho/ortho.js"></script>
+</body>
+</html>
