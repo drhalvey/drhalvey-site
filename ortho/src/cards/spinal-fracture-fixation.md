@@ -1,0 +1,173 @@
+---
+id: spinal-fracture-fixation
+title: "Thoracolumbar and cervical fracture fixation"
+subtitle: "Percutaneous and open pedicle screw fixation of thoracolumbar burst and flexion-distraction fractures, anterior and posterior cervical fixation, halo application, and the patient with an acute spinal cord injury"
+aka: ["burst fracture", "thoracolumbar fracture", "percutaneous pedicle screws", "MIS fixation", "posterior stabilisation", "Chance fracture", "fracture-dislocation", "cervical fracture", "facet dislocation", "odontoid fracture", "halo", "halo vest", "spinal cord injury", "SCI", "neurogenic shock", "spinal shock", "autonomic dysreflexia", "ankylosing spondylitis fracture", "central cord syndrome"]
+pain:
+  score: 4
+  trajectory: [4, 6, 5, 4, 3]
+  mechanism: muscle
+  mechanism_text: "Open posterior fixation strips the paraspinal muscles from four to six vertebrae around a fractured, bleeding segment and adds a laminectomy when the canal is decompressed; the fracture pain itself (bone) falls once the segment is rigid. Percutaneous fixation swaps the stripping for eight to twelve stab incisions through muscle and behaves as a 3. Below a complete cord injury the wound is silent and the pain is at-level neuropathic and in the shoulders and neck"
+  rebound_risk: moderate
+block:
+  primary: "No neuraxial technique in an injured canal: general anaesthesia with opioid, low-dose ketamine infusion and paracetamol, surgeon's infiltration of the wound or of every percutaneous stab incision with long-acting local anaesthetic, and an NSAID once bleeding and renal function allow"
+  family: local-infiltration
+  catheter: rarely
+  catheter_text: "No catheter by default: an epidural in a fractured canal with a possible dural tear and an evolving neurological examination is the wrong device; erector spinae plane catheters above and below the construct are an option for the opioid-tolerant patient or the patient with rib fractures as well, without procedure-specific evidence"
+  alternatives: ["Bilateral erector spinae plane blocks one level above the fixation, placed after positioning or by the surgeon under vision, as an adjunct", "Superficial cervical plexus block for an anterior cervical approach", "Opioid patient-controlled analgesia with ketamine infusion and no regional component"]
+  neuraxial: no
+position: prone
+position_text: "Prone on an open radiolucent frame after a log roll or a table-to-table turn that keeps the spine in line, the head in a foam support, a three-point clamp or traction tongs for cervical work; supine with the head in neutral or gentle traction for anterior cervical fixation; sitting or supine for a halo"
+tourniquet: no
+tourniquet_text: ""
+cement: sometimes
+cement_text: "Cement-augmented screws or a kyphoplasty of the fractured body in osteoporotic bone; small volumes under fluoroscopy, with venous and canal leak as the risk"
+blood_loss: "Percutaneous thoracolumbar fixation 50-200 mL; open posterior fixation 400-1,000 mL and more with a laminectomy, a fracture-dislocation or an ankylosed spine, whose fractures bleed like long bones; anterior cervical fixation under 200 mL; posterior cervical 200-500 mL"
+duration: "Percutaneous fixation 60-120 min; open posterior thoracolumbar fixation with decompression 150-240 min; anterior cervical discectomy or corpectomy and plate 90-150 min; posterior cervical fixation 120-240 min; halo application 30-45 min"
+los: "3-5 nights for an isolated fracture without neurological injury; weeks, starting in intensive care and ending in a spinal injuries unit, for a cord injury"
+day_case: no
+drugs:
+  antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg), repeated at 4 h"
+  txa: "Tranexamic acid 1 g IV before incision for open posterior fixation; within 3 h of injury on the trauma indication for the bleeding polytrauma patient"
+  vte: "Mechanical prophylaxis from admission; low molecular weight heparin as soon as surgical haemostasis allows, usually within 24-72 h, because acute cord injury carries one of the highest thrombosis risks in the hospital; the timing after decompression is the surgeon's and is written down"
+  antiemetic: "Ondansetron 4 mg IV; dexamethasone 8 mg IV is reasonable where high-dose methylprednisolone is not being given"
+patient_line: "The screws and rods hold the broken part of the spine still so it can heal and so you can sit and stand without a brace doing all the work; the back is sore for a few days where the muscles were moved, and most people are up with the physiotherapist the day after."
+trap: "In a cord injury the blood pressure is the only neuroprotective treatment you have, and the patient cannot defend it: no sympathetic response to induction, to blood loss or to the turn prone, an unopposed vagus at laryngoscopy, and a guideline floor of 75-80 mmHg mean that starts at the first set of observations, not in intensive care"
+sources:
+  - title: "Fehlings MG, Vaccaro A, Wilson JR, et al. Early versus delayed decompression for traumatic cervical spinal cord injury: results of the Surgical Timing in Acute Spinal Cord Injury Study (STASCIS). PLoS One 2012;7:e32037"
+    url: "https://doi.org/10.1371/journal.pone.0032037"
+    note: "Prospective cohort, 313 cervical cord injuries: decompression before 24 h (mean 14 h) against later (mean 48 h); improvement of two or more impairment grades at six months in 19.8% against 8.8% (adjusted OR 2.83); complications 24.2% against 30.5%, not different"
+  - title: "Badhiwala JH, Wilson JR, Witiw CD, et al. The influence of timing of surgical decompression for acute spinal cord injury: a pooled analysis of individual patient data. Lancet Neurol 2021;20:117-126"
+    url: "https://doi.org/10.1016/S1474-4422(20)30406-3"
+    note: "1,548 patients from four prospective datasets: decompression within 24 h gave 4.0 more motor points at one year (23.7 against 19.7) and better impairment grades (common OR 1.48); recovery fell steeply with delay over the first 24-36 h and then plateaued"
+  - title: "Kwon BK, Tetreault LA, Martin AR, et al. A clinical practice guideline for the management of patients with acute spinal cord injury: recommendations on hemodynamic management. Global Spine J 2024;14(3 suppl):187S-211S"
+    url: "https://doi.org/10.1177/21925682231202348"
+    note: "Updates the 2013 recommendation of 85-90 mmHg for seven days: mean arterial pressure augmented to a lower limit of at least 75-80 mmHg and not actively beyond 90-95 mmHg, for 3-7 days; very low quality evidence, weak recommendations; no recommendation on choice of vasopressor or on cord perfusion pressure targets"
+  - title: "Hawryluk G, Whetstone W, Saigal R, et al. Mean arterial blood pressure correlates with neurological recovery after human spinal cord injury: analysis of high frequency physiologic data. J Neurotrauma 2015;32:1958-1967"
+    url: "https://doi.org/10.1089/neu.2014.3778"
+    note: "100 patients, almost a million minute-by-minute arterial readings: higher mean pressure in the first 2-3 days and, more strongly, less time below 85 mmHg correlated with neurological recovery; correlation, not proof of cause"
+  - title: "Guly HR, Bouamra O, Lecky FE. The incidence of neurogenic shock in patients with isolated spinal cord injury in the emergency department. Resuscitation 2008;76:57-62"
+    url: "https://doi.org/10.1016/j.resuscitation.2007.06.008"
+    note: "490 isolated cord injuries: systolic pressure under 100 mmHg with heart rate under 80 on arrival in 19.3% of cervical, 7% of thoracic and 3% of lumbar injuries; the picture may develop after arrival"
+  - title: "Wiles MD, Iliff HA, Brooks K, et al. Airway management in patients with suspected or confirmed cervical spine injury: guidelines from the Difficult Airway Society, Association of Anaesthetists and partner societies. Anaesthesia 2024;79:856-868"
+    url: "https://doi.org/10.1111/anae.16290"
+    note: "Systematic review of 67 articles and a Delphi process: 23 recommendations on pre-oxygenation, mask ventilation, supraglottic devices, tracheal intubation and adjuncts, cricoid force, front-of-neck access, awake intubation and immobilisation; evidence modest, only two strong recommendations"
+  - title: "Crosby ET. Airway management in adults after cervical spine trauma. Anesthesiology 2006;104:1293-1318"
+    url: "https://doi.org/10.1097/00000542-200606000-00026"
+    note: "Cervical injury in 2% of blunt trauma; secondary neurological injury in 2-10% of cervical injuries and apparently inevitable in a subgroup; every airway manoeuvre moves the spine and immobilisation limits it modestly; no outcome data favour one intubation technique"
+  - title: "Gronert GA, Theye RA. Pathophysiology of hyperkalemia induced by succinylcholine. Anesthesiology 1975;43:89-99"
+    url: "https://doi.org/10.1097/00000542-197507000-00018"
+    note: "The potassium-releasing response begins about 5-15 days after injury and lasts 2-3 months after burns or trauma and perhaps 3-6 months after upper motor neurone lesions"
+  - title: "Martyn JA, Richtsfeld M. Succinylcholine-induced hyperkalemia in acquired pathologic states: etiologic factors and molecular mechanisms. Anesthesiology 2006;104:158-169"
+    url: "https://doi.org/10.1097/00000542-200601000-00022"
+    note: "Denervation and immobilisation up-regulate acetylcholine receptors across the whole muscle membrane, including immature and alpha-7 isoforms; depolarisation of all of them at once is the potassium efflux"
+  - title: "Bellabarba C, Fisher C, Chapman JR, Dettori JR, Norvell DC. Does early fracture fixation of thoracolumbar spine fractures decrease morbidity or mortality. Spine 2010;35(9 suppl):S138-S145"
+    url: "https://doi.org/10.1097/BRS.0b013e3181d830c1"
+    note: "Systematic review of nine studies: stabilisation of thoracic fractures within 72 h reduced ventilator days, intensive care and hospital stay and respiratory morbidity; for lumbar fractures only hospital stay; too little evidence on mortality"
+  - title: "Phan K, Rao PJ, Mobbs RJ. Percutaneous versus open pedicle screw fixation for treatment of thoracolumbar fractures: systematic review and meta-analysis of comparative studies. Clin Neurol Neurosurg 2015;135:85-92"
+    url: "https://doi.org/10.1016/j.clineuro.2015.05.016"
+    note: "12 comparative studies, 279 percutaneous against 340 open: percutaneous fixation was 19 min shorter, with less blood loss, 5.7 fewer days in hospital, fewer infections (RR 0.36) and lower pain scores; no difference in screw malposition or radiographic correction"
+  - title: "Westerveld LA, Verlaan JJ, Oner FC. Spinal fractures in patients with ankylosing spinal disorders: a systematic review of the literature on treatment, neurological status and complications. Eur Spine J 2009;18:145-156"
+    url: "https://doi.org/10.1007/s00586-008-0764-0"
+    note: "93 articles, 345 patients with ankylosing spondylitis and 55 with diffuse idiopathic skeletal hyperostosis: mostly cervical fractures after low-energy falls, often diagnosed late; neurological deficit on admission in 67.2% and 40.0%, frequent secondary deterioration, complications in 51.1% and 32.7%, three-month mortality 17.7% and 20.0%"
+  - title: "Fehlings MG, Wilson JR, Tetreault LA, et al. A clinical practice guideline for the management of patients with acute spinal cord injury: recommendations on the use of methylprednisolone sodium succinate. Global Spine J 2017;7(3 suppl):203S-211S"
+    url: "https://doi.org/10.1177/2192568217703085"
+    note: "Weak recommendations: a 24 h high-dose infusion may be offered as an option within 8 h of injury; not after 8 h; not a 48 h infusion; pooled data show a modest motor gain when started within 8 h and no overall difference"
+  - title: "Vallier HA, Wang X, Moore TA, Wilber JH, Como JJ. Timing of orthopaedic surgery in multiple trauma patients: development of a protocol for early appropriate care. J Orthop Trauma 2013;27:543-551"
+    url: "https://doi.org/10.1097/BOT.0b013e31829efda1"
+    note: "1,443 adults including 102 with operated spinal fractures: chest injury and residual acidosis predicted pulmonary complications; definitive fixation within 24-48 h in resuscitated patients was associated with an uncomplicated course"
+  - title: "Waelkens P, Alsabbagh E, Sauter A, Joshi GP, Beloeil H, on behalf of the PROSPECT Working Group of ESRA. Pain management after complex spine surgery: a systematic review and procedure-specific postoperative pain management recommendations. Eur J Anaesthesiol 2021;38:985-994"
+    url: "https://doi.org/10.1097/EJA.0000000000001448"
+    note: "Complex spine surgery (instrumented thoracolumbar surgery, laminectomy at three or more levels, scoliosis): paracetamol (grade D), NSAID or COX-2 inhibitor (grade A), intra-operative low-dose ketamine infusion (grade A), opioids as rescue only, and a surgeon-placed epidural catheter at the end of surgery with low-concentration local anaesthetic (grade B); gabapentinoids and methadone not recommended for adverse effects; intrathecal opioids, erector spinae and interfascial plane blocks, lidocaine, dexmedetomidine, magnesium and wound infusion not recommended for lack of procedure-specific evidence"
+---
+
+## What the surgeon is doing and why
+
+The spine does two jobs: it carries load and it protects the cord and roots. A fracture can fail either. The surgeon reads the scan for three things: whether the column can still bear load without deforming (a burst fracture has lost its anterior and middle support and will fold into kyphosis; a flexion-distraction injury has torn the posterior ligaments and will hinge open), whether bone or disc is sitting in the canal, and what the neurology is. The answers sort patients into those who can be braced, those who need the spine held, and those who need the canal emptied as well as the spine held.
+
+Holding the spine means pedicle screws and rods. For the thoracolumbar junction, where most burst fractures occur, screws go into the vertebrae above and below the fracture (often two above and two below, sometimes into the fractured body as well) and the rods act as an internal splint. This can be done two ways. Percutaneous fixation places each screw through its own 2 cm stab incision over a guidewire under fluoroscopy or navigation and tunnels the rods beneath the fascia; distraction on the screws pulls the posterior longitudinal ligament taut and can push retropulsed bone forward out of the canal (ligamentotaxis). No muscle is stripped and nothing is fused, so the screws may be removed in a year. Open fixation is the midline subperiosteal exposure of the [fusion card](posterior-lumbar-fusion.html), chosen when the canal has to be decompressed directly by laminectomy, a dural tear repaired, a dislocation reduced under vision, or a fusion laid down. In the pooled comparative studies percutaneous fixation was 19 min shorter, bled less, infected less often (relative risk 0.36), hurt less and shortened the stay by 5.7 days, with the same screw accuracy and the same correction.
+
+The cervical spine is fixed from the front, the back, or both. Anteriorly, through the approach on the [ACDF card](acdf-cervical-disc-arthroplasty.html), a disc or a burst vertebral body is removed, the cord decompressed, and a graft or cage and plate inserted. Posteriorly, lateral mass or pedicle screws and rods span the injury, as on the [posterior cervical card](posterior-cervical-fusion.html). A facet dislocation is reduced first, awake in traction or open. The halo, four pins into the outer table of the skull joined to a vest, is an external fixator for the neck: definitive for some upper cervical fractures, temporary for others.
+
+Timing has moved earlier. For the cord, the prospective STASCIS cohort of 313 cervical injuries found a two-grade neurological improvement in 19.8% of those decompressed within 24 h against 8.8% later, and the pooled individual data of 1,548 patients showed recovery falling steeply with every hour of delay across the first 24-36 h. Neither is randomised. For the column, stabilising a thoracic fracture within 72 h shortened ventilation and intensive care stay in a systematic review, because a patient with an unstable spine is nursed flat and gets pneumonia; in the polytrauma patient the spine is one of the four fractures the early appropriate care protocol wants fixed as soon as resuscitation is complete (see the [polytrauma card](polytrauma-sequencing.html)).
+
+The cord injury is the other half of this card. Above T6 the injury cuts the sympathetic outflow to the heart and the splanchnic bed, leaving vasodilatation and an unopposed vagus: neurogenic shock, a warm, hypotensive, bradycardic patient. It is less common at presentation than taught (19% of isolated cervical cord injuries on arrival in a 490-patient registry, 7% of thoracic) and may develop over the following hours. The injured cord has lost autoregulation, so its perfusion follows the mean arterial pressure, and pressure support is the one intervention believed to limit secondary injury; the 2024 guideline suggests a floor of 75-80 mmHg and no active augmentation beyond 90-95 mmHg for three to seven days, on evidence it grades as very low.
+
+The pain logic. For open fixation the mechanism is muscle, as for any posterior instrumented operation, with a shorter construct and a patient who was in severe fracture pain beforehand and is partly relieved by a rigid segment: a 4. Percutaneous fixation is a 3. The cord-injured patient is a special case: nothing is felt below a complete lesion, but pain at the level of injury, in the neck and shoulders, and neuropathic pain in the zone of partial preservation are common and early.
+
+## Steps
+
+### 1. Reading the injury before meeting the patient
+**Why:** The surgeon has classified the fracture, graded the neurology on the ASIA scale, and chosen the approach and the urgency: within 24 h for a cord injury with compression, within 72 h for an unstable thoracic fracture, the next list for a neurologically intact burst fracture.
+**Anaesthesia:** Establish the level and completeness of any cord injury, because it predicts everything: above C5 the diaphragm is threatened, above T1 the cardiac accelerator fibres are lost, above T6 the splanchnic bed. Record vital capacity and whether the patient can cough. Ask what else is injured: a thoracolumbar fracture from a fall keeps company with calcaneal fractures, a second spinal fracture at another level, and abdominal injuries; a flexion-distraction (seat belt) fracture carries a bowel or mesenteric injury until the scan says otherwise. Note the time of injury for the suxamethonium rule in step 3.
+
+### 2. Hypotension: bleeding until proven otherwise, then the pressure target
+**Why:** The surgeon needs a perfused cord before, during and after the decompression, and needs to know the patient is not bleeding from somewhere else.
+**Anaesthesia:** A hypotensive trauma patient with a cord injury is bleeding until the chest, abdomen, pelvis and long bones are cleared; the cord injury removes the tachycardia and the abdominal signs that would have told you. Only then is the hypotension neurogenic. Treat it with volume to normovolaemia and then a vasopressor with some chronotropy (noradrenaline is the usual choice; the guideline declines to name one), an arterial line placed before induction, and a mean pressure held within the guideline range of 75-80 mmHg as the floor and 90-95 mmHg as the point beyond which you do not push. In 100 monitored patients it was the time spent below 85 mmHg in the first two to three days, more than the average, that tracked with worse recovery. Bradycardia responds to atropine or glycopyrrolate; a patient with a high cervical injury who becomes asystolic on tracheal suction has an unopposed vagus, not a cardiac problem.
+
+### 3. Airway and induction
+**Why:** The surgeon wants the spine no worse after intubation than before it, and for a cervical injury often wants a neurological examination after positioning.
+**Anaesthesia:** For the unstable cervical spine the 2024 multi-society guideline is the reference and its evidence is modest: videolaryngoscopy with manual in-line stabilisation, the front of the collar removed, and no single technique shown to be safer. The older review makes the uncomfortable point that secondary deterioration occurs in 2-10% of cervical injuries regardless of how the airway is managed. Awake intubation earns its place when the surgeon wants the patient to position themselves or be examined after the turn, in the fixed deformity of ankylosing spondylitis, or with a halo already on. Induction in a cord-injured patient needs the vasopressor running first: there is no sympathetic reserve to buffer propofol or positive pressure ventilation. Suxamethonium is safe in the first 48 h; the potassium-releasing state begins about 5-15 days after denervation and lasts for months, so the conservative rule is none from day 3 until at least six months, and rocuronium with sugammadex makes the question academic. If motor potentials are to be monitored, one intubating dose and no more.
+
+### 4. Monitoring the cord, or not
+**Why:** With an intact or incomplete cord and a reduction or decompression planned, the surgeon may ask for motor and somatosensory evoked potentials. With a complete injury there is nothing below the level to monitor.
+**Anaesthesia:** Monitoring means total intravenous anaesthesia, no relaxant after intubation and bite blocks, as on the [deformity card](adult-deformity-scoliosis.html). Obtain baselines before the turn where possible and again after it: a signal lost on turning is a malreduced spine and a reason to turn back. Temperature matters more than usual, because a patient with a high cord injury cannot vasoconstrict or shiver below the lesion and cools to the temperature of the theatre.
+
+### 5. The turn
+**Why:** The spine is unstable until the screws are in, and the turn prone is the largest movement it will undergo. Surgeons use a log roll with enough people, or a rotating table that sandwiches the patient between two frames. Lying an injured thoracolumbar spine prone on chest and pelvic supports often partly reduces a kyphotic burst fracture, which is intended.
+**Anaesthesia:** You hold the head and call the turn. Keep the collar on, or the tongs or head clamp attached, and the neck in line with the trunk. In a cord-injured patient the turn is a haemodynamic event: venous pooling with no reflex response, so give the vasopressor before rather than after, and transduce the arterial line through the turn. Check the abdomen is free, the eyes are clear and the arms are not forced above 90 degrees. The insensate skin below the lesion gets the same padding as any other, with more reason.
+
+### 6. Percutaneous screws and rods
+**Why:** Each pedicle is entered with a needle under two-plane fluoroscopy or navigation, a guidewire passed, the track tapped and a cannulated screw placed over the wire; rods are slid through the screw heads beneath the fascia and locked after distraction or lordosis is applied.
+**Anaesthesia:** A quiet step with almost no blood loss. The demands are stillness (a cough with a guidewire through the anterior cortex of a vertebral body puts it in the aorta or the bowel), radiation, and a table that the C-arm can swing around. Distraction for ligamentotaxis is the manoeuvre at which signals are checked if monitored. Ask for every stab incision to be infiltrated down to the facet with long-acting local anaesthetic before the screws go in; with 8-12 punctures it is most of the analgesia.
+
+### 7. Open fixation, decompression and the dura
+**Why:** Through a midline incision the muscles are stripped to the facets, screws placed by landmark, and, where bone in the canal is compressing neural tissue, a laminectomy is done and fragments tamped forward or removed. Lamina fractures in a burst injury may trap roots and tear the dura, which is repaired.
+**Anaesthesia:** Blood loss is from muscle, cancellous bone, fracture haematoma and epidural veins at the laminectomy, typically 400-1,000 mL; tranexamic acid 1 g IV before incision, a blood gas hourly, and cell salvage for a fracture-dislocation. Do not buy a dry field with the cord's blood pressure: the floor from step 2 applies throughout, and this is the reverse of the deliberate hypotension that an elective spine exposure tolerates. A dural tear means cerebrospinal fluid loss, a patient kept flat for a day or two afterwards, and no neuraxial drug.
+
+### 8. Cervical fixation
+**Why:** Anterior fixation removes the injured disc or vertebral body and plates the segment; posterior fixation spans it with lateral mass screws. A dislocated facet is reduced before or during the operation, and a disc fragment behind the body is the reason some surgeons obtain an MRI and go anteriorly first.
+**Anaesthesia:** The approach-specific hazards are on the [ACDF](acdf-cervical-disc-arthroplasty.html) and [posterior cervical](posterior-cervical-fusion.html) cards: retraction on the trachea, oesophagus and recurrent laryngeal nerve in front, the prone head clamp and the vertebral artery behind. What the fracture adds is traction (tongs with weights, keep them hanging free), a cord that may already be injured, and airway swelling afterwards that combines a prevertebral haematoma from the injury with the surgical retraction. A combined front-and-back operation in a cord-injured patient is a reason to plan for the tube to stay in.
+
+### 9. The halo
+**Why:** Four pins are screwed through the skin into the outer table of the skull, two above the lateral eyebrows and two behind the ears, torqued, and connected by uprights to a fitted vest. It immobilises the upper cervical spine without an operation on the neck, or holds a reduction until one.
+**Anaesthesia:** Usually done awake under local anaesthetic infiltration at the pin sites with light sedation, so the patient can report neurological change. The anaesthetic significance comes later, when the same patient needs any other operation: the neck is fixed in neutral, the bars are in front of the face, and mask ventilation and laryngoscopy are both obstructed. Plan an awake or videolaryngoscope-guided intubation, and have the vest spanner taped to the vest, because the front of the vest has to come off for chest compressions.
+
+### 10. Emergence and the examination
+**Why:** The surgeon wants a motor and sensory examination compared with the pre-operative one as soon as the patient obeys commands.
+**Anaesthesia:** Extubate the neurologically intact thoracolumbar patient at the end. For a cervical cord injury, extubation is a respiratory decision, not a surgical one: the intercostals are paralysed below the lesion, the cough is absent, vital capacity is a fraction of normal and falls further over the first days as secretions accumulate; a complete injury above C5 will need ventilation and usually a tracheostomy. Keep the pressure target through emergence, when the propofol stops and the vasopressor is easily forgotten in the transfer.
+
+### 11. The following days and weeks
+**Why:** The surgeon's work is finished and the patient's physiology keeps changing: spinal shock resolves over days to weeks and reflexes return below the lesion.
+**Anaesthesia:** Three things change for any later anaesthetic. Suxamethonium becomes dangerous from the first week and stays so for months. Autonomic dysreflexia appears once reflexes return in a patient with a lesion at or above T6: a stimulus below the level (a full bladder, a blocked catheter, a surgical incision on insensate skin) produces mass sympathetic discharge and severe hypertension with reflex bradycardia, so the paralysed patient returning for a pressure sore or a bladder procedure needs a spinal or a general anaesthetic despite feeling nothing. And venous thromboembolism, pressure injury and chest infection become the causes of death, each made less likely by having fixed the spine early enough to sit the patient up.
+
+## Pain plan
+
+The mechanism is muscle stripping around a fractured segment for open fixation and a series of muscle punctures for percutaneous fixation, in a canal that has just been injured. PROSPECT's complex spine guideline covers instrumented thoracolumbar surgery and its skeleton applies: paracetamol, an NSAID or COX-2 inhibitor (grade A), intra-operative low-dose ketamine (grade A) and opioid as rescue. Three adjustments for trauma are the author's judgement.
+
+First, nothing goes into the canal. Intrathecal morphine and a surgeon-placed epidural are both reasonable after elective fusion; after a fracture there may be a dural tear, a haematoma, an evolving deficit that everyone wants to examine hourly, and in a cervical cord injury no respiratory reserve to spend on neuraxial opioid. The regional component is local: infiltration of the wound or every stab incision, with erector spinae plane blocks as an adjunct where the unit uses them, noting that the guideline found no procedure-specific evidence for them.
+
+Second, the NSAID waits. A trauma patient with possible occult bleeding, a recent contrast load and an uncertain kidney starts it at 24-48 h rather than in theatre, and some surgeons withhold it where a fusion has been laid down.
+
+Third, treat neuropathic pain early in cord injury. Burning, electric pain at the level of the lesion in the first days responds poorly to opioid; a gabapentinoid is appropriate here on the neuropathic indication, even though the guideline advises against routine gabapentinoids for surgical pain.
+
+Catheter decision: rarely. Oral regimen shape: regular paracetamol, NSAID from day 1-2, a short course of immediate-release opioid (three to five days after percutaneous fixation, a week or more after open), ketamine continued at low dose for 24 h in the opioid-tolerant or polytrauma patient. Rebound is moderate: there is no long block to wear off, and the peak is day 1 when the patient first stands.
+
+Escalation is neurological, as after any spinal operation. New weakness, numbness or sphincter change with increasing pain is an epidural haematoma or a displaced screw and needs imaging the same hour. In a cord-injured patient, a rising level (weaker hands today than yesterday, a falling vital capacity) is ascending oedema or haematoma, and is reported as an emergency whatever the pain score.
+
+## Pitfalls and variants
+
+- The ankylosed spine. Ankylosing spondylitis and diffuse idiopathic skeletal hyperostosis turn the spine into a long bone that breaks through all three columns after a simple fall. In the systematic review 67% of ankylosing spondylitis patients had a deficit on admission, secondary deterioration was frequent, complications reached 51% and three-month mortality 18%. Position these patients in their own pre-injury kyphosis with pillows under the head: laying the neck flat on a table opens the fracture and has caused cord injury. Expect a difficult airway, long constructs, large blood loss and epidural haematoma.
+- The elderly odontoid fracture. A low-energy fall in an 85-year-old; a collar, a halo (poorly tolerated at that age) or a posterior C1-C2 fusion with the vertebral arteries beside the screws. Frailty, dysphagia and aspiration set the outcome more than the fixation.
+- Central cord syndrome. A hyperextension injury in a stenotic neck with no fracture: weak hands, better legs. Pressure targets apply; the timing of decompression is debated and trending earlier.
+- The polytrauma patient. Fixation follows resuscitation, not the clock: a prone operation on contused lungs before the lactate has cleared is a second hit. Percutaneous fixation is the damage control version, quick, nearly bloodless, and enough to sit the patient up.
+- Methylprednisolone. The 2017 guideline weakly suggests offering a 24 h high-dose infusion within 8 h of injury as an option and advises against it later; many units do not use it at all. If it is running, expect hyperglycaemia and omit dexamethasone.
+- Vertebral artery injury. Common with cervical fracture-dislocations and transverse foramen fractures and usually silent; it bears on the decision to give antithrombotic drugs and on posterior screw placement on the other side.
+- Cement augmentation. Kyphoplasty of the fractured body with percutaneous screws in osteoporotic bone; cement leak into the canal or veins is the risk, as on the [vertebroplasty card](spinal-metastasis-vertebroplasty.html).
+- Temperature. A high cord injury is poikilothermic below the lesion: warm actively from arrival and measure.
+- The intact patient with a stable burst fracture. Many are treated in a brace or with nothing; when fixed percutaneously it is a 90 min operation with a score of 3, and the cord-injury content of this card does not apply.
+- Spinal precautions in theatre. The whole spine is protected until the whole spine is cleared: a second, non-contiguous fracture is common enough that the log roll continues for the levels not being fixed.
+
+## Key sources
+
+The surgical timing evidence is prospective and pooled but not randomised, and it has been enough to change practice. The haemodynamic guideline is explicit that its evidence is very low quality; the pressure range here is that guideline's, not a proven threshold. Airway management in cervical injury has a 2024 consensus guideline built on modest evidence and an older review that says the same thing more bluntly. The suxamethonium window rests on physiology and case reports from fifty years ago and will not be retested. Percutaneous against open fixation is supported by comparative cohorts, not trials. There is no analgesic evidence specific to fracture fixation; the plan is the complex spine guideline with the neuraxial options removed, and that removal is the author's judgement.
