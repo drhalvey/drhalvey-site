@@ -97,7 +97,113 @@
       }).join('');
       atlas.hidden = hits.length > 0 || chap.length > 0;
     }
+    /* ---------- AI layer: same relay and method as the main site search ----------
+       The AI only re-orders entries from this book's own catalogue and picks sentences to quote word for word.
+       It never writes text that is shown. If it is slow, capped or offline the instant results stay as they are. */
+    var RELAY = 'https://bbwjroytqxynborrqylr.supabase.co/functions/v1/ai-relay';
+    var TOKEN = 'ai_89af858d725a4f6b86a4624f487eb26b6a90fe7a0d0e410e815f7f490872396e';
+    var ENT = A.cards.map(function (c) {
+      return { href: 'c/' + c.id + '.html', title: c.n + '. ' + c.title, card: c,
+        line: c.title + ' (' + c.aka.slice(0, 5).join(', ') + ') | ' + c.region + ' | pain ' + c.pain + ' ' + c.mechanism + ' | block ' + c.family + ', catheter ' + c.catheter + ', neuraxial ' + c.neuraxial +
+          ' | ' + c.position + ' | tourniquet ' + c.tourniquet + ' | cement ' + c.cement + ' | day case ' + c.day_case + ' | ' + c.trap.slice(0, 140) };
+    }).concat(A.chapters_a.map(function (ch) { return { href: 'a/' + ch.id + '.html', title: ch.title, ch: ch, part: 'A', line: 'CHAPTER: ' + ch.title + ' | ' + ch.summary.slice(0, 220) }; }))
+      .concat(A.chapters_b.map(function (ch) { return { href: 'b/' + ch.id + '.html', title: ch.title, ch: ch, part: 'B', line: 'CHAPTER: ' + ch.title + ' | ' + ch.summary.slice(0, 220) }; }));
+    var CAT = ENT.map(function (e, i) { return i + '|' + e.line; }).join('\n');
+    var SYS = "You are the search engine for a clinician textbook of orthopaedic anaesthesia written for a consultant anaesthetist. " +
+      "Each catalogue line is: number | operation or chapter | region | pain score 1-5 and mechanism | block, catheter, neuraxial | position | tourniquet | cement | day case | the main trap. " +
+      "The reader types a clinical question or shorthand (TKR, THR, NOF, RCR, ACL, ORIF, ISB, beach chair). Pick the entries that best answer it, best first, up to 8. " +
+      "A question about a principle (tourniquet, cement, anticoagulants, antibiotics, positioning, blocks, opioid tolerance) should include the matching chapter. " +
+      "A question that lists criteria (for example operations needing a catheter, or prone cases with major blood loss) should return every entry that meets them, up to 8. " +
+      "Reply with ONLY a JSON array of entry numbers, for example [12,40,7]. Reply [] if nothing fits. Never answer the question.";
+    var QSYS = "You choose sentences to quote from a clinician textbook of orthopaedic anaesthesia. You are given numbered sentences and a clinician's question. " +
+      "Pick up to 3 sentences that together answer the question most directly, best first. Reply with ONLY a JSON array of sentence numbers, for example [4,17]. Reply [] if none answers it. Never write an answer yourself.";
+    var aiCache = {}, quoteCache = {}, pageCache = {}, aiSeq = 0, aiTimer = null, memId = null;
+    var answer = document.createElement('div'); answer.className = 'ob-answer'; answer.hidden = true; results.parentNode.insertBefore(answer, results);
+    function installId() {
+      try { var k = 'ai.iid', v = localStorage.getItem(k); if (!v) { v = (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : ('x' + Math.random().toString(36).slice(2) + Date.now()); localStorage.setItem(k, v); } return v; }
+      catch (e) { if (!memId) { memId = 'm' + Math.random().toString(36).slice(2) + Date.now(); } return memId; }
+    }
+    function relay(sys, user, max) {
+      if (!window.fetch) { return Promise.resolve(null); }
+      var ctl = window.AbortController ? new AbortController() : null; if (ctl) { setTimeout(function () { ctl.abort(); }, 15000); }
+      return fetch(RELAY, { method: 'POST', signal: ctl ? ctl.signal : undefined,
+        headers: { 'content-type': 'application/json', 'x-app-token': TOKEN, 'x-install-id': installId() },
+        body: JSON.stringify({ max_tokens: max, temperature: 0, messages: [{ role: 'system', content: sys }, { role: 'user', content: user }] }) })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d) { return null; }
+          var txt = (d.choices && d.choices[0] && d.choices[0].message && d.choices[0].message.content) || '', m = txt.match(/\[[\d,\s]*\]/);
+          return m ? JSON.parse(m[0]) : null;
+        }).catch(function () { return null; });
+    }
+    function aiPick(qs) {
+      var key = qs.toLowerCase().replace(/\s+/g, ' ').trim();
+      if (aiCache.hasOwnProperty(key)) { return Promise.resolve(aiCache[key]); }
+      return relay(SYS, 'Catalogue:\n' + CAT + '\n\nClinician search: ' + qs, 160).then(function (ids) {
+        if (!ids) { return null; }
+        var seen = {}; ids = ids.filter(function (i) { if (!ENT[i] || seen[i]) { return false; } seen[i] = 1; return true; }).slice(0, 8);
+        aiCache[key] = ids; return ids;
+      });
+    }
+    function loadPage(href) {
+      if (!pageCache[href]) { pageCache[href] = fetch(href).then(function (r) { return r.ok ? r.text() : ''; }).then(function (h) { return new DOMParser().parseFromString(h, 'text/html'); }).catch(function () { return null; }); }
+      return pageCache[href];
+    }
+    function aiQuote(qs, ids) {
+      var key = qs.toLowerCase().replace(/\s+/g, ' ').trim();
+      if (quoteCache.hasOwnProperty(key)) { return Promise.resolve(quoteCache[key]); }
+      var toks = tokens(qs).filter(function (w) { return w.length >= 3; }), top = ids.slice(0, 3);
+      return Promise.all(top.map(function (i) { return loadPage(ENT[i].href); })).then(function (docs) {
+        var list = [], len = 0;
+        docs.forEach(function (doc, n) {
+          if (!doc) { return; }
+          var per = 0;
+          doc.querySelectorAll('.ob-field dd, .ob-section-body p, .ob-section-body li, .ob-prose p, .ob-prose li').forEach(function (el) {
+            if (el.closest('.ob-sources') || el.closest('.ob-local')) { return; }
+            (el.textContent || '').replace(/\s+/g, ' ').split(/(?<=[.;])\s+(?=[A-Z0-9])/).forEach(function (s) {
+              s = s.trim(); if (s.length < 40 || s.length > 420 || per >= 45 || len > 11000) { return; }
+              var l = s.toLowerCase(); if (!toks.some(function (w) { return l.indexOf(w) >= 0; })) { return; }
+              per++; len += s.length; list.push({ t: s, i: top[n] });
+            });
+          });
+        });
+        if (!list.length) { return []; }
+        return relay(QSYS, 'Sentences:\n' + list.map(function (x, n) { return n + '| [' + ENT[x.i].title + '] ' + x.t; }).join('\n') + '\n\nClinician question: ' + qs, 80).then(function (pick) {
+          if (!pick) { return null; }
+          var got = [], seen = {}; pick.forEach(function (n) { if (list[n] && !seen[n] && got.length < 3) { seen[n] = 1; got.push(list[n]); } });
+          quoteCache[key] = got; return got;
+        });
+      }).catch(function () { return null; });
+    }
+    function entryHtml(e) {
+      if (e.card) { var c = e.card; return '<li class="ob-result">' + painBadge(c.pain) + '<div><a class="ob-result-title" href="' + esc(e.href) + '">' + esc(e.title) + '</a><p class="ob-result-meta">' + meta(c) + '</p><p class="ob-result-meta">' + esc(c.trap) + '</p></div></li>'; }
+      return '<li class="ob-result"><span class="ob-pain" style="background:var(--ob-sunk);color:var(--ob-muted)"><span class="ob-pain-num" style="font-size:1rem">' + e.part + '</span></span><div><a class="ob-result-title" href="' + esc(e.href) + '">' + esc(e.title) + '</a><p class="ob-result-meta">' + esc(e.ch.summary) + '</p></div></li>';
+    }
+    function isQuestion(qs) { return qs.length >= 8 && tokens(qs).length >= 2; }
+    function askAi(force) {
+      var qs = q.value.trim(), seq = ++aiSeq;
+      answer.hidden = true; answer.innerHTML = '';
+      if (Object.keys(activeFilters()).length || !(force ? tokens(qs).length : isQuestion(qs))) { return; }
+      count.textContent = count.textContent.replace(/ · .*$/, '') + ' · refining';
+      aiPick(qs).then(function (ids) {
+        if (seq !== aiSeq) { return; }
+        count.textContent = count.textContent.replace(/ · .*$/, '');
+        if (!ids || !ids.length) { return; }
+        results.innerHTML = ids.map(function (i) { return entryHtml(ENT[i]); }).join('');
+        count.textContent = ids.length + ' best matches · ordered by AI from this book';
+        atlas.hidden = true;
+        return aiQuote(qs, ids).then(function (got) {
+          if (seq !== aiSeq || !got || !got.length) { return; }
+          answer.innerHTML = '<p class="ob-answer-head">From the book, quoted word for word</p>' + got.map(function (x) {
+            return '<blockquote>' + esc(x.t) + '<footer><a href="' + esc(ENT[x.i].href) + '">' + esc(ENT[x.i].title) + '</a></footer></blockquote>';
+          }).join('');
+          answer.hidden = false;
+        });
+      });
+    }
     renderAtlas();
+    q.addEventListener('input', function () { clearTimeout(aiTimer); aiSeq++; answer.hidden = true; aiTimer = setTimeout(function () { askAi(false); }, 800); });
+    q.addEventListener('keydown', function (ev) { if (ev.key === 'Enter') { ev.preventDefault(); clearTimeout(aiTimer); askAi(true); } });
     q.addEventListener('input', run);
     form.addEventListener('change', run);
     form.addEventListener('reset', function () { setTimeout(run, 0); });

@@ -499,7 +499,7 @@ def render_index(cards, chapters_a, chapters_b):
 <p class="ob-muted"><a href="book.html">Whole book on one page</a> (for reading end to end, or printing to PDF).</p>
 <section class="ob-search" aria-label="Search the atlas">
   <label class="ob-search-label" for="ob-q">Find an operation</label>
-  <input id="ob-q" type="search" placeholder="e.g. reverse shoulder, Latarjet, nail, beach chair, catheter" autocomplete="off">
+  <input id="ob-q" type="search" placeholder="Ask a question or type an operation, e.g. which block for a Latarjet, or prone cases with big blood loss" autocomplete="off">
   <details class="ob-filters"><summary>Filters</summary><form id="ob-filters">{filters}<button type="reset" class="ob-expand">Clear filters</button></form></details>
   <p class="ob-muted" id="ob-count"></p>
   <ol class="ob-results" id="ob-results"></ol>

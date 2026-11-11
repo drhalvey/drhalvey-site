@@ -194,3 +194,10 @@ details.ob-section>summary h2{margin:0;font-size:1.3rem}
 .ob-figure{margin:1rem 0 1.2rem;padding:.8rem;background:#fff;border:1px solid var(--ob-line);border-radius:var(--ob-radius);text-align:center}
 .ob-figure img{max-width:100%;height:auto}
 .ob-figure figcaption{font-size:.88rem;color:#5b4d49;margin-top:.5rem;text-align:left}
+
+/* quoted answers from the AI layer */
+.ob-answer{margin:.6rem 0 .2rem;padding:.7rem .9rem;background:var(--ob-sunk);border-left:4px solid var(--ob-sand);border-radius:6px}
+.ob-answer-head{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:var(--ob-muted);font-weight:700;margin:0 0 .4rem}
+.ob-answer blockquote{margin:0 0 .6rem;font-family:var(--ob-serif);font-size:1.02rem}
+.ob-answer blockquote:last-child{margin-bottom:0}
+.ob-answer footer{font-family:var(--ob-sans);font-size:.82rem;margin-top:.15rem}
