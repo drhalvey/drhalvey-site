@@ -4,7 +4,7 @@ title: "Polytrauma: sequencing, the second hit and when to operate"
 subtitle: "Early total care, damage control orthopaedics and early appropriate care; lactate and base deficit as the gate; trauma coagulopathy, tranexamic acid and massive transfusion; fat embolism; the order of operations; and the conversation before the surgeon starts"
 aka: ["polytrauma", "multiple trauma", "multiply injured", "damage control orthopaedics", "DCO", "early total care", "ETC", "early appropriate care", "EAC", "second hit", "borderline patient", "lethal triad", "massive transfusion", "CRASH-2", "PROPPR", "trauma coagulopathy", "fat embolism syndrome", "safe definitive surgery"]
 pain:
-  score: 4
+  score: 5
   trajectory: [5, 6, 6, 5, 4]
   mechanism: bone
   mechanism_text: "Several fractured, periosteum-stripped bones at once, usually with rib fractures that hurt with every breath and soft tissue wounds that are reopened; staged operations reset the curve every few days, so the pain is the sum of the injuries and has no single peak. The score is for the patient, not for any one operation"
@@ -38,7 +38,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/2925704/"
     note: "178 femoral fractures randomised to early or delayed stabilisation: in the multiply injured, delay brought more pulmonary complications (ARDS, fat embolism, pneumonia), longer intensive care and hospital stay; the trial that founded early total care"
   - title: "Scalea TM, Boswell SA, Scott JD, et al. External fixation as a bridge to intramedullary nailing for patients with multiple injuries and with femur fractures: damage control orthopedics. J Trauma 2000;48:613-621"
-    url: "https://www.east.org/education-resources/landmark-papers-in-trauma-and-acute-care-surgery/trauma/long-bone-fractures-extremity-compart-syndrome"
+    url: "https://pubmed.ncbi.nlm.nih.gov/10780592/"
     note: "43 patients with initial external fixation compared with 284 primary nailings: temporary external fixation was safe in multiply injured patients, the paper that named damage control orthopaedics"
   - title: "Pape HC, Grimme K, Van Griensven M, et al. Impact of intramedullary instrumentation versus damage control for femoral fractures on immunoinflammatory parameters: prospective randomized analysis by the EPOFF Study Group. J Trauma 2003;55:7-13"
     url: "https://doi.org/10.1097/01.TA.0000075787.69695.4E"
@@ -105,7 +105,7 @@ So the surgeon sorts the patient into one of four classes, and the class, not th
 
 The borderline patient is the one the argument is about and the one in whom your numbers decide: the patient with a femoral fracture and a chest injury, with bilateral contusions, with a pelvic ring injury and shock at the scene, with a lactate that fell from 6 to 3.5 mmol/L and then stopped.
 
-The pain logic is cumulative rather than procedural. The mechanism is bone, several times over, plus the chest wall. Stabilisation is itself the most effective analgesic for a long bone fracture. What is left after it is the pain of rib fractures with every breath, of wounds reopened every two or three days, and of staged definitive operations that each reset the curve. The score of 4 describes a patient whose pain is severe for a week or more and whose regional options open one at a time as coagulation, the spine and the compartments are cleared.
+The pain logic is cumulative rather than procedural. The mechanism is bone, several times over, plus the chest wall. Stabilisation is itself the most effective analgesic for a long bone fracture. What is left after it is the pain of rib fractures with every breath, of wounds reopened every two or three days, and of staged definitive operations that each reset the curve. The score of 5 describes a patient whose pain is severe for a week or more and whose regional options open one at a time as coagulation, the spine and the compartments are cleared.
 
 ## Steps
 

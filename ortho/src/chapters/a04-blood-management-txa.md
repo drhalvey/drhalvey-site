@@ -103,7 +103,7 @@ The patient is older, already anaemic and has bled before theatre. Two meta-anal
 
 ### Spine
 
-Decorticated bone and epidural veins bleed in proportion to the number of levels. In 11 randomised trials tranexamic acid reduced total blood loss by about 200 mL and the proportion transfused by a third, without a thrombosis signal. Dosing in deformity surgery is typically a loading dose followed by an infusion for the length of the operation (10-30 mg/kg then 1-10 mg/kg/h in published protocols); the higher regimens have not been shown to be better than the moderate ones and carry the seizure risk. For one- and two-level surgery a single 1 g IV dose is enough. More in [spine essentials](a14-spine-essentials.html).
+Decorticated bone and epidural veins bleed in proportion to the number of levels. In 11 randomised trials tranexamic acid reduced total blood loss by about 200 mL and the proportion transfused by a third, without a thrombosis signal. Dosing in deformity surgery is typically a loading dose followed by an infusion for the length of the operation (10-50 mg/kg then 1-10 mg/kg/h in published protocols); the higher regimens bled less in one retrospective adult comparison, have not been shown to be better in a randomised trial, and carry the seizure risk. For one- and two-level surgery a single 1 g IV dose is enough. More in [spine essentials](a14-spine-essentials.html).
 
 ## Cell salvage
 
@@ -151,7 +151,7 @@ The figures are typical measured-plus-hidden totals with tranexamic acid in use;
 | [Revision TKA](../c/revision-tka.html) | 500 mL-1.5 L after tourniquet release | TXA; crossmatch for complex cases |
 | [Neck of femur fracture](../c/neck-of-femur.html) | 300 mL (intracapsular) to more than 1 L (nailed extracapsular) | TXA; restrictive threshold; recheck day 1-2 |
 | [Femoral shaft nailing](../c/femoral-shaft-nailing.html) | 1 L or more into the thigh before theatre | Crossmatch; TXA |
-| [Pelvic and acetabular fixation](../c/pelvic-acetabular-fixation.html) | 1-3 L | Cell salvage, crossmatch, large-bore access, TXA |
+| [Pelvic and acetabular fixation](../c/pelvic-acetabular-fixation.html) | 0.5-1.5 L single acetabular approach; 2 L or more combined | Cell salvage, crossmatch, large-bore access, TXA |
 | [Periacetabular osteotomy](../c/periacetabular-osteotomy.html) | 500 mL-1.5 L | TXA, cell salvage |
 | [Posterior lumbar fusion](../c/posterior-lumbar-fusion.html) | 300-800 mL per one or two levels | TXA; position the abdomen free |
 | [Adult deformity and scoliosis](../c/adult-deformity-scoliosis.html) | 1-3 L, more with osteotomies | TXA load and infusion, cell salvage, crossmatch, viscoelastic testing |

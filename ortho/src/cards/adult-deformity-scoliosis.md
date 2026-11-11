@@ -72,7 +72,7 @@ sources:
     note: "80 cases against 315 controls: male sex OR 2.53, obesity OR 2.83, Wilson frame OR 4.30, anaesthesia duration OR 1.39 per hour, blood loss OR 1.34 per litre, and colloid as a share of non-blood fluid OR 0.67 per 5%"
   - title: "American Society of Anesthesiologists Task Force on Perioperative Visual Loss. Practice advisory for perioperative visual loss associated with spine surgery 2019. Anesthesiology 2019;130:12-30"
     url: "https://doi.org/10.1097/ALN.0000000000002503"
-    note: "The current consensus advisory on visual loss after spine surgery; abstract not available on PubMed, so cited for its existence and not for any specific recommendation"
+    note: "The current consensus advisory on visual loss after spine surgery; no specific recommendation is quoted from it on this card"
 ---
 
 ## What the surgeon is doing and why
@@ -89,7 +89,7 @@ The correction. Rods are contoured to the intended shape and the spine is brough
 
 The bone. In the adult the screws must hold in osteoporotic vertebrae, so the surgeon adds cement, more fixation points, interbody cages at the bottom of the construct, and sometimes tethers or cement at the top to prevent the junction above from failing.
 
-What this costs the patient is recorded honestly in the deformity literature. In a prospective multicentre series of 291 adults, 52% had a perioperative complication, 70% had one by two years, and 28% needed a revision. In the 272-patient Scoli-RISK-1 study of complex adult deformity, leg motor scores had fallen in 22% at discharge and were still down in 11% at six months. Adolescent idiopathic surgery is a different order of risk: in 1,121 consecutive operations, 0.8% woke with a deficit and all recovered.
+What this costs the patient is recorded plainly in the deformity literature. In a prospective multicentre series of 291 adults, 52% had a perioperative complication, 70% had one by two years, and 28% needed a revision. In the 272-patient Scoli-RISK-1 study of complex adult deformity, leg motor scores had fallen in 22% at discharge and were still down in 11% at six months. Adolescent idiopathic surgery is a different order of risk: in 1,121 consecutive operations, 0.8% woke with a deficit and all recovered.
 
 The pain logic. The dominant mechanism is muscle: the erector spinae stripped off the laminae and transverse processes on both sides over a 30-45 cm wound, denervated and ischaemic under self-retaining retractors for hours. Beneath it is bone (dozens of facetectomies, screw tracks and a decorticated bed the length of the spine) and retension, because the trunk has been made a different shape and every rib, costovertebral joint, hip flexor and hamstring is at a new length. In the 179-procedure cohort, spinal fusion and scoliosis surgery took ranks 2, 3 and 6 for worst pain on day 1, with medians of 7. It earns a 5 on this book's scale for the peak and for the tail: severe for three to four days, movement-evoked for weeks, and in the adult usually superimposed on years of opioid use.
 

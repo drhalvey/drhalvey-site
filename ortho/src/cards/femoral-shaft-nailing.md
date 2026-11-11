@@ -35,13 +35,13 @@ patient_line: "Once the nail is in, the bone is held still and most of the deep 
 trap: "Reaming is a marrow embolisation step, and the patient who cannot afford it is the one with a chest injury or a borderline physiology after resuscitation: in the randomised trial of borderline polytrauma patients, primary nailing carried 6.7 times the odds of acute lung injury compared with external fixation and nailing later, so the question to settle before the reamer is whether this patient should be nailed today at all"
 sources:
   - title: "Bone LB, Johnson KD, Weigelt J, Scheinberg R. Early versus delayed stabilization of femoral fractures: a prospective randomized study. J Bone Joint Surg Am 1989;71:336-340"
-    url: "https://www.east.org/education-resources/landmark-papers-in-trauma-and-acute-care-surgery/trauma/long-bone-fractures-extremity-compart-syndrome"
+    url: "https://pubmed.ncbi.nlm.nih.gov/2925704/"
     note: "178 patients randomised to early or delayed femoral stabilisation: in the multiply injured group, delayed fixation carried more ARDS, fat embolism and pneumonia, a longer stay and more ICU days; the trial that made early fixation the standard"
   - title: "Pape HC, Rixen D, Morley J, et al. Impact of the method of initial stabilization for femoral shaft fractures in patients with multiple injuries at risk for complications (borderline patients). Ann Surg 2007;246:491-499"
     url: "https://doi.org/10.1097/SLA.0b013e3181485750"
     note: "165 multiply injured patients randomised to primary nailing within 24 h or external fixation with later conversion: in the 44 borderline patients, primary nailing carried an adjusted odds ratio of 6.69 for acute lung injury; in stable patients primary nailing shortened ventilation"
   - title: "Scalea TM, Boswell SA, Scott JD, et al. External fixation as a bridge to intramedullary nailing for patients with multiple injuries and with femur fractures: damage control orthopedics. J Trauma 2000;48:613-621"
-    url: "https://www.east.org/education-resources/landmark-papers-in-trauma-and-acute-care-surgery/trauma/long-bone-fractures-extremity-compart-syndrome"
+    url: "https://pubmed.ncbi.nlm.nih.gov/10780592/"
     note: "43 patients with initial external fixation compared with 284 primary nailings: temporary external fixation was safe in multiply injured patients, the paper that named damage control orthopaedics"
   - title: "Lempert M, Halvachizadeh S, Ellanti P, et al. Incidence of fat embolism syndrome in femur fractures and its associated risk factors over time: a systematic review. J Clin Med 2021;10:2733"
     url: "https://doi.org/10.3390/jcm10122733"
@@ -56,7 +56,7 @@ sources:
     url: "https://pubmed.ncbi.nlm.nih.gov/14630836/"
     note: "224 patients randomised to reamed or unreamed femoral nailing: nonunion 1.7% reamed versus 7.5% unreamed, with no difference in pulmonary complications"
   - title: "Giannoudis PV, MacDonald DA, Matthews SJ, et al. Nonunion of the femoral diaphysis: the influence of reaming and non-steroidal anti-inflammatory drugs. J Bone Joint Surg Br 2000;82:655-658"
-    url: "https://www.east.org/education-resources/landmark-papers-in-trauma-and-acute-care-surgery/trauma/long-bone-fractures-extremity-compart-syndrome"
+    url: "https://pubmed.ncbi.nlm.nih.gov/10963160/"
     note: "Case-control study associating NSAID use with femoral diaphyseal nonunion and delayed healing; the paper behind many surgeons' request to withhold NSAIDs after nailing"
 ---
 

@@ -62,7 +62,7 @@ sources:
     url: "https://doi.org/10.1097/SLA.0b013e3181485750"
     note: "165 multiply injured patients randomised to primary nailing within 24 h or external fixation with later conversion: in the 44 borderline patients, primary nailing carried an adjusted odds ratio of 6.69 for acute lung injury; in stable patients primary nailing shortened ventilation"
   - title: "Scalea TM, Boswell SA, Scott JD, et al. External fixation as a bridge to intramedullary nailing for patients with multiple injuries and with femur fractures: damage control orthopedics. J Trauma 2000;48:613-621"
-    url: "https://www.east.org/education-resources/landmark-papers-in-trauma-and-acute-care-surgery/trauma/long-bone-fractures-extremity-compart-syndrome"
+    url: "https://pubmed.ncbi.nlm.nih.gov/10780592/"
     note: "43 patients with initial external fixation compared with 284 primary nailings: temporary external fixation was safe in multiply injured patients, the paper that named damage control orthopaedics"
   - title: "Weinberg DS, Narayanan AS, Moore TA, Vallier HA. Assessment of resuscitation as measured by markers of metabolic acidosis and features of injury. Bone Joint J 2017;99-B:122-127"
     url: "https://doi.org/10.1302/0301-620X.99B1.BJJ-2016-0418.R2"

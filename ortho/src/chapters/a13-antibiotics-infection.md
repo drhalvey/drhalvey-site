@@ -1,0 +1,168 @@
+---
+id: a13-antibiotics-infection
+title: "Antibiotic prophylaxis and periprosthetic infection"
+summary: "An implant lets a handful of skin bacteria establish a biofilm that no later antibiotic will clear, so prophylaxis is a race to have a bactericidal tissue level in place from incision to closure: cefazolin 2 g IV (3 g at 120 kg or more) finished within 60 minutes before the knife and before any tourniquet goes up, repeated at four hours or after 1.5 L of blood loss, and stopped within 24 hours. A penicillin allergy label should almost never displace cefazolin: its side chain is shared with no penicillin, the measured rate of dual allergy is under 1%, and the usual substitute, vancomycin, was associated with nearly three times the rate of methicillin-sensitive staphylococcal infection in Australian surveillance data and added nothing but harm when given with cefazolin in the ASAP trial. Vancomycin, when it is indicated, needs an hour or more to infuse and so has to be started before the patient reaches theatre. In established periprosthetic infection a single prophylactic dose does not spoil the cultures and should not be withheld. For open fractures the antibiotic matters most in the first hour after injury, long before the anaesthetist meets the patient, so the job at induction is to find out what was given and when."
+sources:
+  - title: "Bratzler DW, Dellinger EP, Olsen KM, et al. Clinical practice guidelines for antimicrobial prophylaxis in surgery. Am J Health Syst Pharm 2013;70:195-283"
+    url: "https://doi.org/10.2146/ajhp120568"
+    note: "Joint ASHP, IDSA, SIS and SHEA guideline: agent, weight-based dose, timing within 60 minutes before incision (120 minutes for vancomycin and fluoroquinolones), intraoperative redosing intervals and after major blood loss, and duration of no more than 24 hours"
+  - title: "Sousa-Pinto B, Blumenthal KG, Courtney L, et al. Assessment of the frequency of dual allergy to penicillins and cefazolin: a systematic review and meta-analysis. JAMA Surg 2021;156:e210021"
+    url: "https://doi.org/10.1001/jamasurg.2021.0021"
+    note: "77 studies, 6,147 patients: dual allergy to penicillin and cefazolin in 0.7% overall, 0.6% with unconfirmed and 3.0% with confirmed penicillin allergy (wide credible interval); 0.1% in patients with unconfirmed penicillin allergy given perioperative cefazolin; concludes most patients with a penicillin allergy history can safely receive cefazolin"
+  - title: "Bull AL, Worth LJ, Richards MJ. Impact of vancomycin surgical antibiotic prophylaxis on the development of methicillin-sensitive Staphylococcus aureus surgical site infections: report from Australian surveillance data (VICNISS). Ann Surg 2012;256:1089-1092"
+    url: "https://doi.org/10.1097/SLA.0b013e31825fa398"
+    note: "22,549 cardiac bypass and hip and knee arthroplasty procedures: vancomycin prophylaxis instead of a beta-lactam carried an adjusted odds ratio of 2.79 for MSSA surgical site infection and 0.44 for MRSA infection"
+  - title: "Peel TN, Astbury S, Cheng AC, et al. Trial of vancomycin and cefazolin as surgical prophylaxis in arthroplasty (ASAP). N Engl J Med 2023;389:1488-1498"
+    url: "https://doi.org/10.1056/NEJMoa2301401"
+    note: "Australian randomised trial in patients without known MRSA colonisation: adding vancomycin to cefazolin gave surgical site infection in 4.5% versus 3.5% with placebo (relative risk 1.28, not superior); in knee arthroplasty 5.7% versus 3.7% (relative risk 1.52); hip 3.0% versus 3.1%; hypersensitivity reactions 1.2% versus 0.5%"
+  - title: "Soriano A, Bori G, Garcia-Ramiro S, et al. Timing of antibiotic prophylaxis for primary total knee arthroplasty performed during ischemia. Clin Infect Dis 2008;46:1009-1014"
+    url: "https://doi.org/10.1086/529145"
+    note: "908 knee replacements randomised to cefuroxime 1.5 g 10-30 minutes before tourniquet inflation or 10 minutes before tourniquet release: deep infection 3.4% versus 1.9% at 3 months and 3.6% versus 2.6% at 12 months; dosing before release was not inferior"
+  - title: "Engesaeter LB, Lie SA, Espehaug B, et al. Antibiotic prophylaxis in total hip arthroplasty: effects of antibiotic prophylaxis systemically and in bone cement on the revision rate of 22,170 primary hip replacements followed 0-14 years in the Norwegian Arthroplasty Register. Acta Orthop Scand 2003;74:644-651"
+    url: "https://doi.org/10.1080/00016470310018135"
+    note: "Lowest revision risk with antibiotic both systemically and in the cement; systemic prophylaxis alone carried 1.8 times the revision rate for infection; four doses on the day of surgery did better than one to three, with no further gain from two or three days"
+  - title: "Matsen FA, Russ SM, Bertelsen A, Butler-Wu S, Pottinger PS. Propionibacterium can be isolated from deep cultures obtained at primary arthroplasty despite intravenous antimicrobial prophylaxis. J Shoulder Elbow Surg 2015;24:844-847"
+    url: "https://doi.org/10.1016/j.jse.2014.10.016"
+    note: "Ten men having primary shoulder arthroplasty after timely antibiotics and double skin preparation: 7 of 50 deep specimens grew the organism, in three of the ten patients, from dermis, fascia, synovium and glenoid tissue"
+  - title: "Tetreault MW, Wetters NG, Aggarwal V, et al. The Chitranjan Ranawat Award: should prophylactic antibiotics be withheld before revision surgery to obtain appropriate cultures. Clin Orthop Relat Res 2014;472:52-56"
+    url: "https://doi.org/10.1007/s11999-013-3016-5"
+    note: "65 patients with culture-positive periprosthetic infection randomised to prophylaxis before incision or after intraoperative cultures: operative cultures matched the pre-operative organism in 82% versus 81%; prophylaxis should not be withheld"
+  - title: "Lack WD, Karunakar MA, Angerame MR, et al. Type III open tibia fractures: immediate antibiotic prophylaxis minimizes infection. J Orthop Trauma 2015;29:1-6"
+    url: "https://doi.org/10.1097/BOT.0000000000000262"
+    note: "137 type III open tibial fractures: antibiotics later than 66 minutes after injury (OR 3.78) and wound coverage later than 5 days (OR 7.39) independently predicted deep infection; time to debridement did not; infection 2.8% when both were prompt and 40.5% when both were delayed"
+  - title: "Hoff WS, Bonadies JA, Cachecho R, Dorlac WC. East Practice Management Guidelines Work Group: update to practice management guidelines for prophylactic antibiotic use in open fractures. J Trauma 2011;70:751-754"
+    url: "https://doi.org/10.1097/TA.0b013e31820930e5"
+    note: "Gram-positive cover as soon as possible for all open fractures, added gram-negative cover for type III, high-dose penicillin for faecal or clostridial contamination, and limits on duration by fracture grade and soft-tissue coverage"
+---
+
+## Why an implant changes the arithmetic
+
+Every surgical wound is contaminated by the time it is closed. Skin organisms survive in hair follicles and sebaceous glands beneath any preparation, and more settle from the air and the team. In soft tissue the inoculum is small and host defences clear it. A foreign body changes the terms: bacteria that reach a metal or polyethylene surface before host cells do attach, multiply, and within days surround themselves with a biofilm in which they are metabolically slow, shielded from neutrophils and tolerant of antibiotic concentrations hundreds of times those that kill them free-floating. The number of organisms needed to establish infection falls by several orders of magnitude, and once the biofilm is mature the infection cannot be cured without removing or mechanically stripping the implant.
+
+Prophylaxis therefore has one aim: a bactericidal concentration in blood, wound fluid and bone from the moment the skin is cut until it is closed, so that organisms are killed in the hours before they can attach. Everything about dose, timing and redosing follows from that sentence. An antibiotic given after the tourniquet is up, an hour too early, or allowed to fall below the inhibitory concentration in the fourth hour of a revision, has missed part of the window.
+
+The organisms are predictable. Staphylococcus aureus and coagulase-negative staphylococci cause most infections of joint replacements and fracture implants, with streptococci, enterococci and gram-negative rods behind them, and Cutibacterium acnes in the shoulder and spine.
+
+## Cefazolin: dose, timing, redosing
+
+Cefazolin is the agent of choice in every major guideline because it is bactericidal against methicillin-sensitive staphylococci and streptococci, reaches bone and synovial fluid, and can be given as a push.
+
+| Element | Rule | Reason |
+| --- | --- | --- |
+| Dose | 2 g IV; 3 g IV at 120 kg or more | Tissue levels in obese patients fall below target with smaller doses |
+| Timing | Complete within 60 minutes before incision, in practice at induction | Peak tissue level at the incision |
+| Tourniquet | Complete before inflation, ideally 5-10 minutes before | The cuff isolates the limb from the circulation |
+| Redose | At 4 hours from the first dose; after about 1,500 mL blood loss | Two half-lives; haemorrhage and fluid replacement dilute the drug |
+| Renal failure | Redose later or not at all | Half-life is prolonged |
+| Duration | Single dose, or continued to 24 hours at most | No benefit beyond 24 hours; resistance and Clostridioides difficile beyond it |
+
+Redosing is the element most often missed, because it falls in the middle of a difficult case: the [revision hip](../c/revision-tha.html) at hour four, the [deformity correction](../c/adult-deformity-scoliosis.html) that has lost two litres, the [pelvic fixation](../c/pelvic-acetabular-fixation.html). Set a timer at the first dose. The four-hour clock starts when the pre-operative dose was given, not at incision.
+
+Duration is contested at the margins. The guideline position is no more than 24 hours. The Norwegian registry analysis of 22,170 hip replacements found the lowest revision rates when four systemic doses were given on the day of surgery and antibiotic was also in the cement, with nothing gained from continuing for two or three days; that is observational and reflects an older era, but it is why many arthroplasty surgeons give two or three postoperative doses and few give more. Drains and urinary catheters are not reasons to continue.
+
+## The penicillin allergy label
+
+About one patient in ten carries a penicillin allergy label, and nine in ten of those are not allergic when tested. The label matters in orthopaedics because of what it does to prophylaxis.
+
+Cross-reactivity between penicillins and cephalosporins is determined mainly by the R1 side chain, not the shared beta-lactam ring. Cefazolin's side chain is unlike that of any penicillin or any other cephalosporin in clinical use. The meta-analysis of 77 studies found dual allergy to penicillin and cefazolin in 0.7% of patients with a penicillin allergy history, 0.6% where the penicillin allergy was unconfirmed, and 0.1% among patients with an unconfirmed label who were given perioperative cefazolin. In those with a confirmed penicillin allergy the estimate was 3.0% with a credible interval running from near zero to 17%, which is the group in which more care is justified.
+
+The alternative is worse for the joint. In Australian surveillance data from 22,549 cardiac and arthroplasty procedures, vancomycin in place of a beta-lactam carried an adjusted odds ratio of 2.79 for surgical site infection with methicillin-sensitive Staphylococcus aureus, the commonest pathogen. Vancomycin is a slower, weaker killer of sensitive staphylococci and has no gram-negative activity; clindamycin is bacteriostatic and resistance is common.
+
+The working rules:
+
+1. A history of a non-severe reaction to a penicillin, of any type, or an unverifiable childhood label: give cefazolin.
+2. A history of immediate severe reaction to a penicillin (anaphylaxis, angioedema): cefazolin is still the better drug on the numbers and is permitted by current allergy-informed guidelines; give it with the patient monitored, intravenous access secure and adrenaline to hand, which describes induction of anaesthesia. Where local policy or the patient declines, use vancomycin, and add gram-negative cover if the operation warrants it.
+3. A history of a severe delayed cutaneous reaction to any beta-lactam (Stevens-Johnson syndrome, toxic epidermal necrolysis, drug reaction with eosinophilia): avoid all beta-lactams.
+4. A history of reaction to cefazolin itself: avoid cefazolin; other beta-lactams are usually tolerated, on specialist advice.
+5. The elective patient with a penicillin label seen weeks ahead: refer for delabelling. It changes every future anaesthetic.
+
+Cefazolin is itself among the commoner causes of perioperative anaphylaxis, in patients with and without a penicillin history. Giving it before induction, or at least separated by a few minutes from the muscle relaxant, makes the culprit easier to identify afterwards; that timing is author's preference, not a guideline requirement.
+
+## Vancomycin
+
+Vancomycin is indicated for patients known to be colonised or previously infected with MRSA, for units with a high MRSA rate where local policy dictates, and for the few who cannot have a beta-lactam. In the first two groups it is given in addition to cefazolin, because cefazolin is the better drug for the sensitive staphylococci that still cause most infections.
+
+It should not be added routinely. The ASAP trial randomised arthroplasty patients without known MRSA colonisation across Australian centres to vancomycin or placebo on top of cefazolin. Surgical site infection occurred in 4.5% with vancomycin and 3.5% with placebo. In knee replacement the vancomycin group did worse (5.7% against 3.7%, relative risk 1.52), in hip replacement there was no difference, and hypersensitivity reactions doubled.
+
+The practical problem is the infusion. The dose is 15 mg/kg of actual body weight, typically 1-1.5 g, given no faster than 10 mg/min, because rapid infusion releases histamine: flushing, hypotension, and occasionally cardiovascular collapse at exactly the moment of induction. A 1.5 g dose therefore takes 90 minutes or more. The guideline window is to begin within 120 minutes before incision, and the infusion should be complete, or nearly so, before incision and before a tourniquet is inflated. That means vancomycin is charted in advance and started on the ward or in the holding bay; a vancomycin infusion started in the anaesthetic room is finishing as the wound is being closed.
+
+## The tourniquet rule
+
+A tourniquet seals the limb. Whatever antibiotic is in the tissue at inflation is all there will be until release, and none of a dose given after inflation reaches the wound. The rule is that the full dose is in before the cuff goes up, with a few minutes for distribution: for cefazolin, push it at induction and inflation will follow by more than five minutes in the ordinary course of positioning and preparation; for vancomycin, the infusion must have been started early enough to finish.
+
+One randomised trial tested the opposite strategy. In 908 knee replacements, cefuroxime given 10 minutes before tourniquet release, so that the peak arrived with the reperfusion haematoma, was not inferior to the same dose before inflation (deep infection 1.9% against 3.4% at three months). This has not displaced the standard rule, but it supports a second dose before release when the first was mistimed or the tourniquet time is long. Regional administration of low-dose vancomycin by the intraosseous route after inflation is used in some centres and gives very high local concentrations; outcome evidence is limited. More on the cuff in [the tourniquet](a01-tourniquet.html).
+
+## Cutibacterium acnes and the shoulder
+
+Cutibacterium acnes lives in the sebaceous glands of the dermis, most densely over the shoulder, chest and back, and most densely in men. Skin preparation sterilises the surface and does not reach the glands; the incision then cuts through them. In ten men having primary shoulder arthroplasty after correctly timed antibiotics and double skin preparation, 7 of 50 deep tissue specimens, from three of the patients, grew the organism.
+
+The infection it causes is indolent. A [shoulder replacement](../c/anatomic-tsa.html) or [cuff repair](../c/rotator-cuff-repair.html) becomes painful and stiff months to years later with normal inflammatory markers, and cultures need to be held for up to 14 days to grow it. Cefazolin is active against the organism in the laboratory and remains the prophylactic agent; no systemic regimen has been shown to eliminate it from the wound. Many shoulder surgeons ask patients to apply topical benzoyl peroxide for several days beforehand to reduce the load in the skin. For the anaesthetist the points are that standard prophylaxis is given on time as for any arthroplasty, and that a [revision shoulder](../c/reverse-tsa.html) for unexplained pain or loosening is an infection case until the extended cultures say otherwise.
+
+## Periprosthetic joint infection for the anaesthetist
+
+Three operations are offered, chosen by the age of the biofilm and the state of the implant and soft tissues; the detail is on the [periprosthetic joint infection](../c/periprosthetic-joint-infection.html) card.
+
+```
+  Onset                      Biofilm      Operation
+  -------------------------  -----------  ----------------------------------------
+  Early postoperative or     immature     DAIR: debridement, antibiotics, implant
+  acute haematogenous,                    retention, exchange of modular parts
+  symptoms under 3-4 weeks
+  Chronic, good tissues,     mature       One-stage exchange
+  known sensitive organism
+  Chronic, poor tissues,     mature       Two-stage: removal, antibiotic spacer,
+  resistant or unknown                    weeks of antibiotics, reimplantation
+  organism, sinus
+```
+
+### Antibiotics or cultures first
+
+The traditional request is to withhold antibiotics until deep samples have been taken, for fear of sterilising the cultures. The randomised trial does not support it: in 65 patients with culture-positive infection, intraoperative cultures grew the pre-operative organism in 82% of those given prophylaxis before incision and 81% of those in whom it was delayed. The yield depends on the patient having been off therapeutic antibiotics for two weeks beforehand and on taking multiple samples, not on a single dose at induction.
+
+The defensible default is to give prophylaxis at induction when the organism is already known from an aspirate. When no organism has been identified and the surgeon asks to wait, have the dose drawn up and give it the moment the samples (usually five) are taken, which is within minutes of opening the joint, and before a tourniquet if at all possible. In a patient who is septic, antibiotics are not delayed for any reason. The same reasoning applies to [septic arthritis and osteomyelitis](../c/osteomyelitis-septic-arthritis.html).
+
+### The patient
+
+The acutely infected patient may be bacteraemic and septic, and DAIR is urgent because the window before the biofilm matures is short. Resuscitate, give antibiotics after blood cultures, expect vasodilatation at induction, and treat a spinal as acceptable once antibiotics have been started in a patient who is not in septic shock; untreated systemic sepsis is the usual reason to avoid neuraxial block.
+
+The chronically infected patient is depleted: anaemic from inflammation and repeated surgery, hypoalbuminaemic, often with a creatinine that has risen on weeks of vancomycin or an aminoglycoside, a long line in place, and tolerant of opioids after multiple operations (see [opioid-tolerant patients](a12-opioid-tolerant.html)). Revision for infection bleeds more than aseptic revision and cell salvage is relatively contraindicated; plan as in [blood management](a04-blood-management-txa.html). Rifampicin, used for staphylococcal biofilm, induces hepatic enzymes: it lowers the effect of oxycodone, methadone, midazolam, direct oral anticoagulants and warfarin within days of starting and the effect reverses over a fortnight after stopping.
+
+### Antibiotic-loaded cement
+
+In primary arthroplasty, commercially premixed cement contains a low dose of gentamicin or tobramycin (0.5-1 g per 40 g of powder). The registry evidence favours it: systemic prophylaxis alone was associated with 1.8 times the rate of revision for infection compared with systemic plus cement antibiotic. At that dose there is no systemic toxicity.
+
+Spacers are different. A spacer is hand-mixed with several grams of vancomycin and an aminoglycoside per packet so that it elutes high local concentrations for weeks. Enough reaches the circulation to cause acute kidney injury in a minority, particularly in patients with reduced renal reserve who are also receiving intravenous vancomycin. Record the spacer's antibiotic load, avoid other nephrotoxins (NSAIDs, hypovolaemia, contrast) in the days after, and check the creatinine. Cementation physiology still applies: see [bone cement implantation syndrome](a02-cement-bcis.html).
+
+## Open fractures
+
+In an open fracture the contamination has already happened and the antibiotic is early treatment, not prophylaxis. Time from injury is what counts. In 137 type III open tibial fractures, antibiotics given more than 66 minutes after injury carried an odds ratio of 3.78 for deep infection and wound coverage later than five days an odds ratio of 7.39, while time to surgical debridement was not associated with infection. Where both were prompt the infection rate was 2.8%; where both were delayed it was 40.5%.
+
+The EAST guideline gives the content:
+
+| Fracture | Antibiotic | Duration |
+| --- | --- | --- |
+| Gustilo type I and II | Gram-positive cover (cefazolin 2 g IV) as soon as possible | Stop 24 hours after wound closure |
+| Type III | Add gram-negative cover | 72 hours from injury, or no more than 24 hours after soft-tissue coverage, whichever is shorter |
+| Farm, soil or faecal contamination | Add high-dose penicillin for clostridia | As above |
+
+The guideline found no advantage for fluoroquinolones and noted concern about fracture healing. Local protocols vary in how gram-negative cover is delivered (an aminoglycoside, a third-generation cephalosporin or piperacillin-tazobactam).
+
+By the time the patient reaches theatre the first dose should have been given by paramedics or the emergency department. At induction establish what was given and when, redose cefazolin if four hours have passed, do not repeat a once-daily aminoglycoside, confirm tetanus cover, and remember that an aminoglycoside, hypovolaemia, contrast from the trauma scan and an NSAID are a reliable recipe for kidney injury. The surgery is on the [open fractures](../c/open-fractures-damage-control.html) card.
+
+## What else the anaesthetist controls
+
+Antibiotic timing is the largest contribution, but not the only one. Hypothermia impairs neutrophil function and wound perfusion, so warm from the anaesthetic room. Keep glucose below about 10 mmol/L in diabetic and stressed patients, remembering the transient rise after dexamethasone. Avoid unnecessary transfusion. Keep theatre door openings and personnel to a minimum once implants are open. Treat injection ports and neuraxial technique as part of the sterile field: an epidural abscess or an infected regional catheter next to a new joint is an infection the anaesthetist owns.
+
+## Edge cases
+
+The patient already on therapeutic antibiotics. If the regimen covers staphylococci and a dose was given within the redosing interval, no extra prophylaxis is needed; otherwise give cefazolin as usual. Therapeutic vancomycin by level does not need a top-up.
+
+Morbid obesity. Give 3 g at 120 kg or more and keep to the four-hour redose; the obese patient is at higher risk of infection for reasons that go beyond tissue levels (wound tension, haematoma, diabetes).
+
+Short procedures without implants. Arthroscopy, [carpal tunnel release](../c/carpal-tunnel-minor-hand.html) and simple soft-tissue surgery do not need prophylaxis unless an implant or graft is placed. [Removal of metalwork](../c/removal-of-metalwork.html) is variable; many surgeons give a dose.
+
+Known MRSA carrier for elective arthroplasty. Decolonise beforehand where the pathway exists, give vancomycin (started early) with cefazolin, and note that the guideline redosing interval for vancomycin is long enough that a second dose is rarely needed.
+
+Cement and allergy. A patient with a documented aminoglycoside allergy needs plain cement requested in advance; it is not on the shelf in every theatre.
+
+The antibiotic that was forgotten. If the incision has been made, give it immediately. If the tourniquet is up, give it immediately anyway so that it is in the blood at release, and consider asking for a brief deflation in a long case with an implant.

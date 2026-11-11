@@ -170,14 +170,14 @@ The Association of Anaesthetists guideline for lower leg trauma, written with or
 
 1. Name the risk aloud at the briefing and agree the plan with the surgeon. Record the discussion and the patient's consent.
 2. For the anaesthetic, use a general anaesthetic or a spinal that will have gone within two to three hours. Avoid long-acting intrathecal doses and avoid an epidural infusion at concentrations that give a motor block.
-3. For analgesia, use a sensory-weighted, low-concentration block: ropivacaine 0.2% or less. Leave out perineural and, on the day, consider omitting intravenous dexamethasone if its only purpose is to prolong the block; do not add dexmedetomidine or clonidine. A catheter that can be turned down or off is safer than a single shot that cannot be reversed.
+3. For analgesia, use a sensory-weighted, low-concentration block: ropivacaine 0.2% or less. Leave out perineural adjuncts, and consider omitting intravenous dexamethasone on the day if its only purpose is to prolong the block; do not add dexmedetomidine or clonidine. A catheter that can be turned down or off is safer than a single shot that cannot be reversed.
 4. Choose the territory with the compartments in mind. For a tibial plateau or shaft fracture an adductor canal block treats the anterior knee and medial leg and leaves the deep and anterior compartments reporting; a dense sciatic block does not. For forearm fractures a low-dose block with early offset is preferred to a long, dense plexus block.
 5. Start scheduled surveillance in recovery and continue for 24-48 hours: pain score at rest and on passive stretch of the toes or fingers, analgesic consumption, compartment tenseness, sensation and movement, hourly at first, on a chart with a stated escalation trigger.
 6. Treat breakthrough pain as a diagnosis, not a failure of analgesia. Nobody boluses the catheter or increases the PCA until the limb has been examined by someone who can act.
 7. Split casts and dressings to skin at the first concern, keep the limb at heart level, and keep the blood pressure normal.
 8. Use continuous compartment pressure monitoring where it is available for the patient who cannot report: the obtunded, the intubated polytrauma patient, the child, and by extension the patient whose block is denser than intended.
 
-Once a fasciotomy has been done the argument is over and the limb can be blocked as generously as the pain requires.
+Once a fasciotomy has been done and the post-release neurological examination is recorded, the masking argument is over; the fasciotomy card sets out when a block or catheter is added.
 
 ## Edge cases
 

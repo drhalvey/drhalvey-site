@@ -33,7 +33,7 @@ def crossref(doi):
     except Exception as e:  # noqa: BLE001
         out = {'ok': False, 'error': str(e)[:80]}
     cache[doi] = out
-    time.sleep(0.3)
+    time.sleep(1.0)
     return out
 
 
