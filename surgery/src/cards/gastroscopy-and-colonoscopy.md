@@ -65,7 +65,7 @@ sources:
     note: "Gastric ultrasound in 124 fasted patients: increased residual content in 56% on a weekly GLP-1 receptor agonist against 19% of controls; no association with how long the drug had been withheld"
   - title: "Yang JY, Chen L, Wright JD, Hur C. Glucagon-like peptide-1 receptor agonists are not associated with increased pulmonary aspiration during endoscopy and colonoscopy. Clin Gastroenterol Hepatol 2026"
     url: "https://doi.org/10.1016/j.cgh.2026.07.010"
-    note: "Database analysis whose headline finding is its title; seen as a record without an abstract, so no figures are quoted from it"
+    note: "Database analysis reporting no association between these drugs and pulmonary aspiration at endoscopy or colonoscopy; no figures are quoted from it here"
   - title: "ANZCA, Australian Diabetes Society, Gastroenterological Society of Australia, National Association of Clinical Obesity Services. Clinical practice recommendations: periprocedural use of GLP-1 and GLP-1/GIP receptor agonists (2025)"
     url: "https://www.anzca.edu.au/safety-and-advocacy/standards-of-practice/clinical-practice-recommendations-regarding-patients-taking-glp-1"
     note: "Continue the drug; clear fluids only for 24 hours before the standard six-hour fast; water only from six hours and nil for the final two; erythromycin as a prokinetic when the diet was not followed; applies to sedation for endoscopy"
