@@ -47,7 +47,7 @@ drugs:
 patient_line: "The stone is removed through a small hole in your back; you may wake with a tube from the kidney that is sore when you breathe deeply or move, and most of that soreness goes when the tube comes out in a day or two."
 trap: "A rigor, a temperature and a soft blood pressure in recovery after PCNL is septic shock starting, not shivering: irrigation under pressure has pushed bacteria from the stone into the renal veins, and the next two hours decide the outcome"
 sources:
-  - title: "Puia D, Gheorghinca S, Radavoi GD, Jinga V, Pricop C. Can we identify the risk factors for SIRS/sepsis after percutaneous nephrolithotomy? A meta-analysis and literature review. Exp Ther Med 2023;25:110"
+  - title: "Puia D, Gheorghinca S, Radavoi GD, Jinga V, Pricop C. Can we identify the risk factors for SIRS/sepsis after percutaneous nephrolithotomy: a meta-analysis and literature review. Exp Ther Med 2023;25:110"
     url: "https://doi.org/10.3892/etm.2023.11809"
     note: "18 studies, 7,507 patients, all given prophylaxis: SIRS or sepsis more likely with a positive pre-operative urine culture (OR 2.92), multiple tracts (OR 2.64), pyuria (OR 1.75), diabetes (OR 1.50) and longer operating time"
   - title: "Lachkar S, Boualaoui I, Ibrahimi A, El Sayegh H, Nouini Y. Supine or prone position in percutaneous nephrolithotomy: a systematic review and meta-analysis of 11,774 cases. Fr J Urol 2025;35:102882"

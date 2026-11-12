@@ -22,7 +22,7 @@ tourniquet: sometimes
 tourniquet_text: "Limb excisions are done under tourniquet by many surgeons to limit bleeding; the end point of bleeding dermis is then judged by appearance, and the blood loss arrives at deflation"
 cement: "no"
 cement_text: ""
-blood_loss: "Fast and easy to underestimate: a median of about 50 mL per percent of body surface excised in small burns, more in large, late or infected excisions; a 15% excision can lose the patient's blood volume by a fifth to a half within an hour. Blood in theatre before the knife"
+blood_loss: "Fast and easy to underestimate: a median of about 50 mL per percent of body surface excised in small burns, more in large, late or infected excisions; a 15% excision can cost a litre or more within an hour. Blood in theatre before the knife"
 duration: "1-3 hours per session; most surgeons cap a session by area excised, time or blood loss and return in 2-4 days"
 los: "Day case or one night for small burns; weeks to months for major burns, traditionally about one day per percent burned"
 day_case: selected
