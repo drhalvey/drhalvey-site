@@ -1,7 +1,7 @@
 ---
 id: clubfoot-paediatric-foot
 title: "Clubfoot and paediatric foot surgery"
-subtitle: "Percutaneous Achilles tenotomy at the end of Ponseti casting in the infant of 6-12 weeks, tibialis anterior tendon transfer for relapse at 3-6 years, posteromedial release for the resistant or syndromic foot, and the osteotomies and coalition resections of the older child"
+subtitle: "Percutaneous Achilles tenotomy at the end of Ponseti casting in the infant of 6-16 weeks, tibialis anterior tendon transfer for relapse at 3-6 years, posteromedial release for the resistant or syndromic foot, and the osteotomies and coalition resections of the older child"
 aka: ["CTEV", "congenital talipes equinovarus", "Ponseti", "Achilles tenotomy", "TA tenotomy", "tibialis anterior transfer", "TATT", "posteromedial release", "PMR", "Cincinnati incision", "vertical talus", "tarsal coalition", "calcaneal lengthening", "cavovarus foot", "change of plaster"]
 pain:
   score: 3
@@ -13,7 +13,7 @@ block:
   primary: "Open surgery: popliteal sciatic block (ropivacaine 0.2% 0.3-0.5 mL/kg, max 20 mL) plus a saphenous block (0.1-0.2 mL/kg, max 10 mL) for one foot; caudal ropivacaine 0.2% 1 mL/kg (max 20 mL) with clonidine 1 microg/kg for both feet or the child under about 10 kg. Tenotomy: local infiltration only"
   family: sciatic-popliteal
   catheter: selective
-  catheter_text: "A popliteal sciatic catheter for 48-72 h (ropivacaine 0.1-0.2% at 0.1-0.2 mL/kg/h, max 0.4 mg/kg/h) for osteotomies, triple arthrodesis and revision releases in the child over about 5 years; not for tenotomy, tendon transfer or primary release in an infant, where a single shot outlasts the worst of it"
+  catheter_text: "A popliteal sciatic catheter for 48-72 h (ropivacaine 0.1-0.2% at 0.1-0.2 mL/kg/h, max 0.3 mg/kg/h) for osteotomies, triple arthrodesis and revision releases in the child over about 5 years; not for tenotomy, tendon transfer or primary release in an infant, where a single shot outlasts the worst of it"
   alternatives: ["Caudal block as the equal alternative for unilateral surgery in infants: no difference in time to first opioid or 24 h morphine use against sciatic-based blocks in a 118-child randomised trial", "Ankle block or surgeon infiltration for forefoot and toe procedures in the older child", "Topical anaesthetic cream and 0.5-1 mL of lidocaine 1% (max 3 mg/kg) for tenotomy awake in clinic, with oral sucrose and a feed"]
   neuraxial: option
 position: supine
@@ -68,7 +68,7 @@ Pain logic by rung. Tenotomy: a stab wound and a divided tendon in a cast, score
 
 ### 1. The infant for tenotomy: awake or asleep
 **Why:** The surgeon needs a still foot for the cut and a perfectly held foot for the cast. In many centres both are achieved in clinic with topical anaesthetic, a drop of local, sucrose and a feed. General anaesthesia or light sedation is chosen for the older, stronger infant (over about three months), for bilateral feet in some hands, and by institutional habit.
-**Anaesthesia:** If the list is yours, the patient is 6-16 weeks old and 4-7 kg. Establish gestation: a term infant under 44 weeks post-menstrual age, and an ex-premature infant under 60 weeks, needs apnoea monitoring overnight after general anaesthesia, which turns a day case into an admission and is a fair argument for the awake technique. Look for the syndromic foot: stiff extended joints and absent skin creases (arthrogryposis, with a small jaw, difficult veins and a tendency to run hot under anaesthesia), a sacral dimple or known spina bifida (latex-free environment), hypotonia with a tented upper lip (congenital myotonic dystrophy: no suxamethonium, expect prolonged apnoea). Fasting is formula 6 h, breast milk 3-4 h, clear fluid 1 h; put the infant first on the list.
+**Anaesthesia:** If the list is yours, the patient is 6-16 weeks old and 4-7 kg. Establish gestation: a term infant under 44 weeks post-menstrual age, and an ex-premature infant under 60 weeks, needs apnoea monitoring overnight after general anaesthesia, which turns a day case into an admission and is a fair argument for the awake technique. Look for the syndromic foot: stiff extended joints and absent skin creases (arthrogryposis, with a small jaw, difficult veins and a tendency to run hot under anaesthesia), a sacral dimple or known spina bifida (latex-free environment), hypotonia with a tented upper lip (congenital myotonic dystrophy: no suxamethonium, expect prolonged apnoea). Fasting is formula 4 h, breast milk 3 h, clear fluid 1 h; put the infant first on the list.
 
 ### 2. Anaesthetic for tenotomy
 **Why:** Five minutes of surgery, fifteen of casting.
@@ -88,7 +88,7 @@ Pain logic by rung. Tenotomy: a stab wound and a divided tendon in a cast, score
 
 ### 6. Tourniquet and exposure
 **Why:** The limb is exsanguinated by elevation or a soft bandage and the cuff inflated. For a tendon transfer, a medial incision exposes the tibialis anterior insertion and a second dorsolateral incision the lateral cuneiform; for a release, the neurovascular bundle is found and protected first, because every later step is done around it.
-**Anaesthesia:** Use the narrowest cuff pressure that works: about 100 mmHg above systolic, 150-200 mmHg in this age group, with the time called at 60 minutes. Exsanguinating both legs of a 9 kg infant returns perhaps 10% of blood volume to the circulation, which is tolerated, and the reverse on deflation is a brief fall in pressure and a rise in end-tidal carbon dioxide. Cefazolin 30 mg/kg IV (max 2 g) is in before inflation. General tourniquet physiology is in [the tourniquet chapter](../a/a01-tourniquet.html).
+**Anaesthesia:** Use the lowest cuff pressure that works: about 100 mmHg above systolic, 150-200 mmHg in this age group, with the time called at 60 minutes. Exsanguinating both legs of a 9 kg infant returns perhaps 10% of blood volume to the circulation, which is tolerated, and the reverse on deflation is a brief fall in pressure and a rise in end-tidal carbon dioxide. Cefazolin 30 mg/kg IV (max 2 g) is in before inflation. General tourniquet physiology is in [the tourniquet chapter](../a/a01-tourniquet.html).
 
 ### 7. Lengthening, release and reduction, or the transfer
 **Why:** In a release, the tendons are Z-lengthened, the capsules opened from behind forwards until the talus can be covered by the navicular and the heel comes out of varus, and wires are driven across the talonavicular and sometimes the subtalar joint. In a transfer, the detached tendon is tunnelled to the lateral incision, pulled through a drill hole in the cuneiform with sutures that exit the sole, and tied over a padded button with the foot dorsiflexed.
@@ -112,14 +112,14 @@ Tenotomy is a score of 1: infiltration by the surgeon, paracetamol 15 mg/kg ever
 
 Tendon transfer and posteromedial release are capsule-and-tendon operations scoring 3. The block has two jobs, the intra-operative anaesthetic and the first night, and either a sciatic-plus-saphenous combination or a caudal does both: in the one randomised trial of 118 children having releases, time to first morphine was six to eight hours and 24-hour morphine use was identical whichever was used. The author's default is therefore chosen on logistics. One foot in a child over 10 kg gets the peripheral blocks, which last 8-12 hours at 0.2% and leave the other leg and the bladder alone; two feet or a small infant get a caudal with clonidine. A catheter is not needed: by the time a single shot recedes the foot is immobile in plaster and the pain is 3-4 out of 10 for a day. Rebound is moderate and shows as a sudden evening of crying around 8-10 hours after the block; the first oral opioid dose (oxycodone 0.1 mg/kg, max 5 mg, or morphine 0.2 mg/kg, max 10 mg) is best given at bedtime before that happens. Regular paracetamol and ibuprofen 10 mg/kg every 8 h (max 400 mg; from 3 months of age) run for five days.
 
-Bony reconstruction in the older child is a 4 with high rebound risk, and here a continuous sciatic technique has a real claim: a case series of 160 children reported 72 hours of good analgesia from a dilute infusion without block complications. Ropivacaine 0.1-0.2% at 0.1-0.2 mL/kg/h, to a ceiling of 0.4 mg/kg/h, for 48-72 hours, with a single-shot saphenous block for the medial incisions.
+Bony reconstruction in the older child is a 4 with high rebound risk, and here a continuous sciatic technique has a real claim: a case series of 160 children reported 72 hours of good analgesia from a dilute infusion without block complications. Ropivacaine 0.1-0.2% at 0.1-0.2 mL/kg/h, to a ceiling of 0.3 mg/kg/h, for 48-72 hours, with a single-shot saphenous block for the medial incisions.
 
 The compartment question is small but not nil: osteotomies and a tight cast on a swollen foot can produce foot compartment syndrome, and a dense sciatic block hides it. Dilute solutions, a split cast, elevation and attention to breakthrough pain or a rising opioid requirement despite a working block are the safeguards.
 
 ## Pitfalls and variants
 
 - The syndromic infant. One clubfoot in five has a cause: arthrogryposis, myelomeningocele, congenital myotonic dystrophy, amniotic bands, chromosomal syndromes. Each brings its own airway, latex or relaxant rule and should be recognised before the 5-minute list slot.
-- Post-anaesthetic apnoea. The tenotomy age (6-12 weeks) sits inside the monitoring window for many ex-premature infants. Awake tenotomy under local avoids the question.
+- Post-anaesthetic apnoea. The tenotomy age (6-16 weeks) sits inside the monitoring window for many ex-premature infants. Awake tenotomy under local avoids the question.
 - Repeat tenotomy and cast changes. Relapsed toddlers return for a second tenotomy or manipulation and casts under a 15-minute mask anaesthetic; by then they are 12-15 kg and remember.
 - Prone release. A tube, chest and pelvic rolls sized to an infant, and eyes; the caudal goes in before turning.
 - Vertical talus. The rocker-bottom foot is treated by reverse-Ponseti casting, then a talonavicular wire and Achilles tenotomy under general anaesthesia at about 3-6 months: the same anaesthetic as step 2 with a wire.

@@ -7,7 +7,7 @@ pain:
   score: 2
   trajectory: [2, 2, 1, 1, 0]
   mechanism: capsule
-  mechanism_text: "The pain of a septic joint is a capsule distended with pus under pressure, and of osteomyelitis a periosteum lifted off bone by an abscess. The operation decompresses both, so the child is usually more comfortable in recovery than in the emergency department. What the surgery adds is a small arthrotomy or portals, a drain, and drill holes in a metaphysis"
+  mechanism_text: "The pain of a septic joint is a capsule distended with pus under pressure, and of osteomyelitis a periosteum lifted off bone by an abscess. The operation decompresses both, so the child is usually more comfortable in recovery than in the emergency department. What the surgery adds is a small arthrotomy or portals, a drain, and drill holes in a metaphysis. Drainage of established osteomyelitis is a 3, with bone pain and regular opioid for two days"
   rebound_risk: low
 block:
   primary: "No block as the default: IV paracetamol 15 mg/kg (max 1 g) if not given in the last 4-6 h, fentanyl 1-2 microg/kg IV in increments, an NSAID once the child is rehydrated and renal function is known, and oral opioid as required afterwards"
@@ -45,7 +45,7 @@ sources:
     note: "GRADE-based multidisciplinary guideline for diagnosis, empirical antibiotics, the role of surgery and the transition to oral treatment in children with acute haematogenous osteomyelitis"
   - title: "van der Merwe M, Rooks K, Crawford H, Frampton CMA, Boyle MJ. The effect of antibiotic timing on culture yield in paediatric osteoarticular infection. J Child Orthop 2019;13:114-119"
     url: "https://doi.org/10.1302/1863-2548.13.180077"
-    note: "131 children: antibiotics given before surgical samples did not reduce surgical culture yield, and duration of pre-surgical treatment did not differ between culture-positive and culture-negative cases; the authors advise prompt antibiotics once blood cultures are taken"
+    note: "131 children with positive blood cultures who went to surgery: antibiotics given before surgical samples did not reduce surgical culture yield (positive in 85% of the pre-treated against 54% of the others), and duration of pre-surgical treatment did not differ between culture-positive and culture-negative cases; the authors advise prompt antibiotics once blood cultures are taken"
   - title: "El-Sayed AM. Treatment of early septic arthritis of the hip in children: comparison of results of open arthrotomy versus arthroscopic drainage. J Child Orthop 2008;2:229-237"
     url: "https://doi.org/10.1007/s11832-008-0094-0"
     note: "20 children with early septic hips, ten per group: infection eradicated in all; hospital stay 6.4 days after arthrotomy and 3.8 days after arthroscopic drainage; Staphylococcus aureus the commonest organism"
@@ -74,7 +74,7 @@ Pain logic: capsule and periosteum under pressure, relieved by the operation. Th
 
 ### 2. Resuscitation and the antibiotic argument
 **Why:** The surgeon wants an organism and has traditionally asked for antibiotics to be withheld until the joint is sampled.
-**Anaesthesia:** In the septic child that request is refused politely: blood cultures, then antibiotics, then theatre. The evidence supports this: in 131 children, antibiotics before surgical sampling did not lower culture yield, and molecular tests find Kingella whatever has been given. In the stable child, withholding until the needle is in the joint is harmless if it is a matter of minutes with the syringe drawn up. Fluid: 10-20 mL/kg of balanced crystalloid before induction for the febrile child who has not been drinking, repeated to a response; glucose checked in the under-fives. If MRSA is likely, vancomycin 15 mg/kg IV is infused over at least an hour (faster rates cause flushing and hypotension), so it is started before the child reaches you where possible.
+**Anaesthesia:** In the septic child that request is refused politely: blood cultures, then antibiotics, then theatre. The evidence supports this: in 131 children with positive blood cultures who went to surgery, antibiotics before surgical sampling did not lower culture yield, and molecular tests find Kingella whatever has been given. In the stable child, withholding until the needle is in the joint is harmless if it is a matter of minutes with the syringe drawn up. Fluid: 10-20 mL/kg of balanced crystalloid before induction for the febrile child who has not been drinking, repeated to a response; glucose checked in the under-fives. If MRSA is likely, vancomycin 15 mg/kg IV is infused over at least an hour (faster rates cause flushing and hypotension), so it is started before the child reaches you where possible.
 
 ### 3. MRI under the same anaesthetic
 **Why:** A young child cannot lie still for MRI, and the scan changes the operation: it shows whether a hip effusion comes with femoral or pelvic osteomyelitis, an obturator or psoas abscess, or pyomyositis that needs its own drainage.

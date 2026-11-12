@@ -67,7 +67,7 @@ sources:
     note: "Consensus on identifying the device, pacing dependence, magnet response and electromagnetic interference; the framework for any patient with a device coming to theatre"
   - title: "Tyagi A, Girgla T, Stone AB, Vlassakov K. Regional anesthesia for outpatient subcutaneous implantable cardioverter-defibrillator implantation: a 5-year retrospective study. J Cardiothorac Vasc Anesth 2026;40:3553-3561"
     url: "https://doi.org/10.1053/j.jvca.2026.07.046"
-    note: "Retrospective: regional anaesthesia was associated with less vasopressor use, lower postoperative opioid requirement, shorter recovery and higher odds of same-day discharge (adjusted OR 3.27) than general anaesthesia"
+    note: "Retrospective: regional anaesthesia was associated with less vasopressor use, lower postoperative opioid requirement, shorter recovery and higher odds of same-day discharge (adjusted OR 3.27) than implantation without it"
   - title: "Williams IE, Sharaf OM, Azarrafiy R, et al. Zero superior vena cava injury lead extraction with rotational system: a contemporary experience. JTCVS Open 2025;23:171-175"
     url: "https://doi.org/10.1016/j.xjon.2024.11.010"
     note: "104 extractions by cardiac surgeons in theatre under general anaesthesia with transoesophageal echo: 95% procedural success, one inferior caval laceration needing sternotomy, one tricuspid injury, no caval tears and no procedural deaths"
