@@ -65,6 +65,9 @@ sources:
   - title: "Maeßen T, Korir N, Van de Velde M, et al. Pain management after cardiac surgery via median sternotomy: a systematic review with procedure-specific postoperative pain management (PROSPECT) recommendations. Eur J Anaesthesiol 2023;40:758-768"
     url: "https://doi.org/10.1097/eja.0000000000001881"
     note: "Paracetamol and NSAIDs unless contraindicated, parasternal block or infiltration, magnesium or dexmedetomidine as adjuncts, opioid for rescue"
+  - title: "Ghoreishi M, Dawood M, Hobbs G, et al. Repeat sternotomy: no longer a risk factor in mitral valve surgical procedures. Ann Thorac Surg 2013;96:1358-1365"
+    url: "https://doi.org/10.1016/j.athoracsur.2013.05.064"
+    note: "130 repeat sternotomies for mitral surgery with routine pre-operative computed tomography: re-entry injury in 2 patients (1.5%), operative mortality 4.6%, the same as first-time surgery; earlier series reported injury in 5-10%"
   - title: "Stone GW, Lindenfeld J, Abraham WT, et al. Transcatheter mitral-valve repair in patients with heart failure. N Engl J Med 2018;379:2307-2318"
     url: "https://doi.org/10.1056/nejmoa1806640"
     note: "COAPT, 614 patients with secondary regurgitation on maximal medical therapy: heart failure hospitalisation 35.8% vs 67.9% per patient-year and two-year mortality 29.1% vs 46.1% with the clip"
@@ -124,7 +127,7 @@ Pain follows the incision. Sternotomy is a 4 by the mechanism described for [cor
 
 ### 9. Coming off bypass
 **Why:** A newly competent valve changes what the ventricle has to do.
-**Anaesthesia:** A regurgitant ventricle had a low-pressure escape route. Now every millilitre must go out through the aorta, so afterload has in effect risen and the true contractile state is revealed: an ejection fraction of 60% before surgery commonly looks like 40-45% afterwards. Have an inodilator or low-dose adrenaline ready and keep the systemic resistance modest. After stenosis the ventricle is small and under-used and the right ventricle and pulmonary vasculature are the limit: milrinone, an inhaled pulmonary vasodilator, good oxygenation and a coronary perfusion pressure that keeps the right ventricle supplied. Pace at 80-90 per minute; atrial wires are worth having even in chronic atrial fibrillation if a maze procedure has been done. A right lung that was collapsed for a long minimally invasive pump run can develop unilateral re-expansion oedema: re-expand gently, use PEEP, and expect it if the pump run was long.
+**Anaesthesia:** A regurgitant ventricle had a low-pressure escape route. Now every millilitre must go out through the aorta, so afterload has in effect risen and the true contractile state is revealed: an ejection fraction that looked normal before surgery commonly looks mildly or moderately impaired afterwards. Have an inodilator or low-dose adrenaline ready and keep the systemic resistance modest. After stenosis the ventricle is small and under-used and the right ventricle and pulmonary vasculature are the limit: milrinone, an inhaled pulmonary vasodilator, good oxygenation and a coronary perfusion pressure that keeps the right ventricle supplied. Pace at 80-90 per minute; atrial wires are worth having even in chronic atrial fibrillation if a maze procedure has been done. A right lung that was collapsed for a long minimally invasive pump run can develop unilateral re-expansion oedema: re-expand gently, use PEEP, and expect it if the pump run was long.
 
 ### 10. The post-bypass echo
 **Why:** The surgeon will go back on bypass for a correctable fault, and this is when it is found.
@@ -149,7 +152,7 @@ Escalate when pain limits coughing, and look for a neuropathic strip below the r
 - Severe pulmonary hypertension and right ventricular dysfunction: the patient who needs a pulmonary artery catheter, inhaled vasodilator set up before separation, and an intensive care bed that can run it.
 - Concomitant maze procedure and appendage closure: longer clamp time, junctional rhythm and heart block afterwards, pacing wires in both chambers.
 - Mitral annular calcification: debridement risks groove rupture and circumflex injury; the surgeon may accept a smaller valve or an unconventional technique. Blood in the room.
-- Redo mitral surgery is commonly done through the right chest to avoid the sternum; reported series with planning by computed tomography have brought re-entry injury down to about 1.5% (see [resternotomy, tamponade and mechanical circulatory support](resternotomy-tamponade-and-mechanical-circulatory-support.html)).
+- Redo mitral surgery is done either through the right chest to avoid the sternum or by repeat sternotomy, where a series with routine computed tomography planning reported re-entry injury in 1.5% against historical rates of 5-10% (see [resternotomy, tamponade and mechanical circulatory support](resternotomy-tamponade-and-mechanical-circulatory-support.html)).
 - Fast-track extubation suits the isolated repair with good ventricular function. Pulmonary hypertension, a second pump run and right lung oedema are the usual reasons it fails.
 
 ## Key sources
