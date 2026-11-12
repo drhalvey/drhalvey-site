@@ -1,0 +1,142 @@
+---
+id: metastatic-long-bone-fixation
+title: "Metastatic bone disease: prophylactic and pathological fracture fixation"
+subtitle: "Intramedullary nailing of impending and completed pathological fractures of the femur and humerus; plate and cement constructs; cemented arthroplasty for the proximal femur"
+aka: ["pathological fracture", "impending fracture", "prophylactic nailing", "prophylactic fixation", "cephalomedullary nail", "long gamma nail", "Mirels score", "bone metastases", "myeloma", "skeletal related event", "cemented hemiarthroplasty for metastasis", "humeral nail"]
+pain:
+  score: 3
+  trajectory: [3, 4, 4, 3, 2]
+  mechanism: bone
+  mechanism_text: "A reamed canal, a nail and locking screws through small incisions, in a bone that was already painful from tumour and, if fractured, from an unstable break; fixation removes the mechanical pain within days, so the patient is often more comfortable after surgery than before it, against a background opioid that long predates the operation"
+  rebound_risk: moderate
+block:
+  primary: "Single-shot fascia iliaca or femoral nerve block for the femur, placed before positioning if the bone is fractured, with spinal or general anaesthesia; the patient's baseline opioid continued throughout"
+  family: lumbar-plexus-femoral
+  catheter: rarely
+  catheter_text: "Fixation is the analgesic: once the bone is stable the pain falls quickly, and a catheter in an anticoagulated, immunosuppressed patient with a short admission seldom earns its risk; reserve it for an open resection and arthroplasty in an opioid-tolerant patient"
+  alternatives: ["Interscalene or supraclavicular block for humeral nailing or plating, after documenting radial nerve function", "Spinal anaesthesia for the lower limb once the imaging shows no spinal canal disease and the platelet count and anticoagulant timing allow", "General anaesthesia with surgeon infiltration when counts, anticoagulation or spinal metastases rule out a block or a spinal", "Low-dose ketamine for the patient on high-dose background opioid"]
+  neuraxial: option
+position: traction-table
+position_text: "Supine on a traction table for most femoral nails, with the foot in a boot and a padded perineal post; many surgeons nail an unfractured femur supine or lateral on a flat radiolucent table without traction; beach chair or supine for the humerus. Every transfer and every limb movement is done as if the other bones were also diseased, because they may be"
+tourniquet: "no"
+tourniquet_text: ""
+cement: sometimes
+cement_text: "Cement is used to fill a curetted defect around a plate or nail, and to fix the stem of a hemiarthroplasty or proximal femoral replacement when the head and neck are destroyed; a cemented stem into a canal containing tumour is the highest-risk cement step in the book"
+blood_loss: "150-400 mL for a closed nail; 500-1,500 mL for open curettage, cement and plate or an arthroplasty; renal cell, thyroid and hepatocellular metastases and myeloma bleed beyond that from the moment the lesion is opened until cement fills it"
+duration: "45-90 min for a closed prophylactic nail; 90-180 min for an open reconstruction or cemented arthroplasty"
+los: "3-7 nights; often to hospice, rehabilitation or back to the oncology ward, with radiotherapy to the whole bone two to four weeks later"
+day_case: "no"
+drugs:
+  antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg); the neutropenic or recently hospitalised patient by local protocol"
+  txa: "Tranexamic acid 1 g IV before incision for open procedures and vascular histologies; cancer raises the baseline thrombotic risk, the pooled surgical data show no excess of events, and the decision is individual in a patient with a recent thrombosis"
+  vte: "Very high risk: active cancer, immobility and lower limb surgery. Low molecular weight heparin from the first evening, extended for weeks, with a written plan for the patient already on treatment-dose anticoagulation for cancer-associated thrombosis"
+  antiemetic: "Ondansetron 4 mg IV; dexamethasone 4-8 mg IV unless the patient is already on steroid, in which case the usual dose continues and is not stopped for surgery"
+patient_line: "The rod holds the bone so that it does not break, or so that the break stops hurting; most people can put weight on the leg straight away, and the aim is to keep you walking and comfortable."
+trap: "Passing a reamer and a nail down a canal packed with tumour pushes marrow, fat and tumour into the veins of a patient whose lungs may already hold metastases, effusions or old emboli: desaturation and hypotension at the moment the nail goes in are embolic until proved otherwise, and nailing both femurs under one anaesthetic doubles the dose"
+sources:
+  - title: "Mirels H. Metastatic disease in long bones. A proposed scoring system for diagnosing impending pathologic fractures. Clin Orthop Relat Res 1989;(249):256-264"
+    url: "https://pubmed.ncbi.nlm.nih.gov/2684463/"
+    note: "78 irradiated long bone lesions scored on site, pain, lesion type and size (4-12): mean score 7 in the 51 that did not fracture within six months and 10 in the 27 that did; lesions scoring 8 or more were recommended for prophylactic fixation before radiotherapy"
+  - title: "Ristevski B, Jenkinson RJ, Stephen DJ, et al. Mortality and complications following stabilization of femoral metastatic lesions: a population-based study of regional variation and outcome. Can J Surg 2009;52:302-308"
+    url: "https://pubmed.ncbi.nlm.nih.gov/19680515/"
+    note: "624 patients in Ontario: lung (26%), breast (16%), kidney (6%) and prostate (6%) primaries; 37% fixed prophylactically; prophylactic fixation was associated with better survival at every time point after adjustment for age, sex, comorbidity and cancer type, with relatively low peri-operative risk except for concomitant bilateral procedures"
+  - title: "Christie J, Robinson CM, Pell AC, McBirnie J, Burnett R. Transcardiac echocardiography during invasive intramedullary procedures. J Bone Joint Surg Br 1995;77:450-455"
+    url: "https://doi.org/10.1302/0301-620X.77B3.7744935"
+    note: "111 intramedullary operations under transoesophageal echocardiography: embolic events in 97, pulmonary response proportional to embolic load; 24 of 25 severe responses during reaming of pathological lesions or cemented hemiarthroplasty; paradoxical embolisation in four patients, all with pathological femoral lesions, two of whom died"
+  - title: "Geraets SEW, Bos PK, van der Stok J. Preoperative embolization in surgical treatment of long bone metastasis: a systematic literature review. EFORT Open Rev 2020;5:17-25"
+    url: "https://doi.org/10.1302/2058-5241.5.190013"
+    note: "Successful embolisation (over 70% obliteration) achieved in 36-75% of cases, complications in 0-9%; three of six level III studies showed less blood loss or transfusion after embolisation of renal cell metastases and three did not; no studies supporting embolisation for thyroid, breast, lung or prostate metastases in long bones"
+  - title: "Sun S, Lang EV. Bone metastases from renal cell carcinoma: preoperative embolization. J Vasc Interv Radiol 1998;9:263-269"
+    url: "https://doi.org/10.1016/s1051-0443(98)70267-2"
+    note: "16 patients: estimated blood loss 100-1,000 mL (mean 533 mL), significantly less when more than 70% of the tumour stain was obliterated (460 against 750 mL); no difference between surgery within 24 h and at 36-120 h when particles were used"
+  - title: "Olsen F, Kotyra M, Houltz E, Ricksten SE. Bone cement implantation syndrome in cemented hemiarthroplasty for femoral neck fracture: incidence, risk factors, and effect on outcome. Br J Anaesth 2014;113:800-806"
+    url: "https://doi.org/10.1093/bja/aeu226"
+    note: "1,016 cemented hemiarthroplasties: grade 2 reactions in 5.1% and grade 3 in 1.7%, with early mortality of 35% and 88%; ASA III-IV and chronic lung disease among the predictors"
+  - title: "Donaldson AJ, Thomson HE, Harper NJ, Kenny NW. Bone cement implantation syndrome. Br J Anaesth 2009;102:12-22"
+    url: "https://doi.org/10.1093/bja/aen328"
+    note: "Review of mechanism, grading and risk reduction; pathological fracture and long-stem implants are among the recognised risk factors"
+  - title: "Taeuber I, Weibel S, Herrmann E, et al. Association of intravenous tranexamic acid with thromboembolic events and mortality: a systematic review, meta-analysis, and meta-regression. JAMA Surg 2021;156:e210884"
+    url: "https://doi.org/10.1001/jamasurg.2021.0884"
+    note: "216 randomised trials, 125,550 patients: thromboembolic events 2.1% with tranexamic acid and 2.0% with control, with no increase in patients with a history of thromboembolism"
+---
+
+## What the surgeon is doing and why
+
+Carcinomas of the breast, prostate, lung, kidney and thyroid, and myeloma, settle in the red marrow of the axial skeleton and the proximal long bones. A deposit replaces bone with tumour; when enough cortex has gone, ordinary load breaks it. A pathological fracture of the femur in a patient with cancer does not heal in the usual way, confines the patient to bed, and is very painful. The orthopaedic operation does not treat the cancer. It is palliative in the precise sense: it gives back a limb that takes weight and stops hurting, for however long the patient has, and it has to work on the first day because there may be no time for a second attempt.
+
+The surgeon is making two decisions.
+
+The first is whether to fix a bone that has not yet broken. The Mirels score adds four features (site, pain, lytic or blastic character, and the fraction of cortex destroyed) to a number from 4 to 12; in the original 78 lesions those that went on to fracture had a mean score of 10 against 7, and a score of 8 or more was proposed as the threshold for prophylactic fixation. The reason to act early is practical: an elective nail in an intact bone is a shorter, drier operation in a patient who walked into hospital. In a population study of 624 femoral stabilisations, patients fixed prophylactically survived longer at every time point after adjustment, although patients selected for elective surgery differ from those who present broken.
+
+The second is which construct will outlast the patient. The principle is to protect the whole bone, since further deposits are likely.
+
+1. A long cephalomedullary nail from the tip of the trochanter to the knee, with screws up the femoral neck, is the standard for the femoral shaft and the subtrochanteric region. It is put in closed, through three small incisions, over a guidewire after reaming. The humerus is nailed the same way from the shoulder.
+2. Where the lesion has destroyed the head and neck, or the trochanteric bone that a nail relies on, fixation will fail and the surgeon replaces instead: a cemented long-stem hemiarthroplasty or a proximal femoral replacement.
+3. For a large lytic defect in the metaphysis the surgeon may open it, curette the tumour, fill the cavity with cement and span it with a plate. This is the bloody variant.
+
+A solitary lesion with no tissue diagnosis is biopsied first, because a nail through an unrecognised primary sarcoma seeds the whole bone (see [tumour biopsy and curettage](bone-tumour-biopsy-curettage.html)).
+
+The pain logic: the surgical insult is bone, a reamed canal and small wounds, and would score 2 in a healthy femur. It earns a 3 because the starting point is a patient in pain on opioid, because open variants add a real dissection, and because movement before the nail is in is agony. Afterwards the mechanical pain falls fast. The patient who is not better by day 3 has another lesion, a fixation problem, or pain that was never mechanical.
+
+## Steps
+
+### 1. Goals, prognosis and the decision to operate
+**Why:** The operation is justified if the patient is likely to live long enough to benefit and well enough to survive it; surgeons generally want an expected survival of at least six weeks for a nail and a few months for an arthroplasty.
+**Anaesthesia:** This is a frail-patient assessment whatever the age: weight loss, anaemia, effusions, breathlessness at rest, performance status. Ask what the patient understands the operation is for, and make sure treatment limits have been discussed and recorded before, not during, an intra-operative collapse. A patient with weeks to live and a fractured femur is still usually better served by a nail than by traction, and the anaesthetic should not be the obstacle.
+
+### 2. Bloods, calcium and the cancer treatment
+**Why:** Bone destruction releases calcium; chemotherapy, radiotherapy and the marrow disease itself suppress counts; many patients are anticoagulated for thrombosis.
+**Anaesthesia:** Corrected or ionised calcium every time. Hypercalcaemia presents as thirst, polyuria, constipation and confusion that gets attributed to opioid; the patient is dehydrated, sometimes profoundly, and prone to arrhythmia and renal injury. Rehydrate with saline and have the oncology team give a bisphosphonate or denosumab before an elective fixation; a level that is high with symptoms is a reason to defer a prophylactic nail by a day or two. Check haemoglobin, platelets, neutrophils, creatinine and clotting, and find out when the last dose of anticoagulant and the last cycle of chemotherapy were given. Myeloma adds renal impairment and hyperviscosity. Steroids continue. Crossmatch for anything open or vascular.
+
+### 3. Vascular tumours and embolisation
+**Why:** Metastases from renal cell and thyroid carcinoma (and hepatocellular carcinoma, and myeloma) are hypervascular. Opening or reaming one produces bleeding that comes from the tumour bed and cannot be clamped.
+**Anaesthesia:** Ask for the histology at the brief. For a renal or thyroid deposit that will be opened, pre-operative embolisation is worth requesting, on imperfect evidence: in the systematic review, adequate devascularisation was achieved in 36-75% of attempts, and only three of six studies in renal metastases showed less bleeding. In one series blood loss averaged 460 mL when more than 70% of the tumour blush was obliterated and 750 mL when it was not. Embolised or not, treat these as bleeding operations: arterial line, two large cannulae, blood in theatre, tranexamic acid, and a surgeon who works quickly to get cement into the cavity, which is what stops it. A closed nail through a renal deposit bleeds into the thigh instead of the suction and is found on the day 1 haemoglobin.
+
+### 4. Choice of anaesthetic and block
+**Why:** The surgeon needs a still patient, relaxed enough for reduction, for an hour or two.
+**Anaesthesia:** Spinal anaesthesia with a fascia iliaca or femoral block suits many femoral nails, but only after three checks: imaging of the spine for canal disease at the puncture level, platelet count and clotting, and the timing of the last anticoagulant dose. If any fails, a general anaesthetic with a block is the plan. Place the block before moving a patient with a completed fracture. Induction doses are reduced; cachexia, hypoalbuminaemia and dehydration make the usual dose an overdose. For the humerus, document radial nerve function before a brachial plexus block, since the nerve lies on the bone that is about to be instrumented.
+
+### 5. Transfer and positioning
+**Why:** Traction and rotation through the boot reduce a fracture and align the canal for the guidewire.
+**Anaesthesia:** Ask where the other deposits are. A patient with a lesion in the opposite femur, the humerus or the cervical spine can fracture on transfer or when a limb is used as a lever, so the move is slow, with the limbs supported and the neck neutral. On the traction table the perineal post is padded and time in traction kept short; the well leg is not forced into extreme abduction when that hip may also be diseased. Skin is thin from steroids and tears with tape.
+
+### 6. Entry, guidewire and reaming
+**Why:** The canal is opened at the trochanter, a ball-tipped wire passed across the lesion, and flexible reamers enlarge the canal to 1-1.5 mm above the nail diameter.
+**Anaesthesia:** The medullary canal contains marrow, fat and, here, tumour and necrotic debris. Each pass of the reamer is a piston. Under echocardiography, embolic showers accompanied nearly all intramedullary procedures, and 24 of the 25 severe pulmonary responses in the series occurred during reaming of pathological lesions or cemented hemiarthroplasty; all four patients with paradoxical embolisation had pathological femoral lesions and two died. Before reaming starts: oxygen up, the patient normovolaemic, a vasopressor drawn up or running, and the arterial line and capnograph in view. Surgeons can reduce the load with sharp reamers passed slowly, a distal vent hole, or by not reaming at all for a small nail; practice varies and it is reasonable to ask which is planned. Mechanism and management are in [fat embolism](../a/a03-fat-embolism.html).
+
+### 7. Nail insertion and locking
+**Why:** The nail is driven over the wire and locked into the head and above the knee so that the whole femur is splinted.
+**Anaesthesia:** The nail itself is the largest piston and its insertion is the commonest moment for a fall in end-tidal carbon dioxide, saturation and pressure. Tell the surgeon; a pause is free. Persistent hypoxia after the nail is seated, in a patient with lung metastases, may need ventilation overnight, and the destination should have been arranged beforehand. If both femurs need fixing, the population data flagged concomitant bilateral procedures as the exception to an otherwise low peri-operative risk: the author's view is that the second side waits for another day unless the first passed without any physiological disturbance.
+
+### 8. Open curettage and cement, or cemented arthroplasty
+**Why:** Where bone stock is gone the surgeon removes tumour and replaces it with cement around a plate or nail, or resects the proximal femur and cements a long stem down the remaining canal.
+**Anaesthesia:** Two hazards together. Bleeding peaks when the lesion is opened and stops when the cement goes in. And a long stem cemented under pressure into a canal that contains tumour, in an ASA III-IV patient, combines every risk factor for [bone cement implantation syndrome](../a/a02-cement-bcis.html); in hip fracture cohorts severe reactions occurred in up to 7% and carried a very high early mortality. Use the full bundle: the moment named in advance, canal lavage and a vent by the surgeon, the patient filled and on a vasopressor infusion, high inspired oxygen, and the stem inserted slowly. If the patient has declared themselves unstable during reaming, say so before the cement is mixed; an uncemented or less pressurised option may be acceptable to the surgeon.
+
+### 9. Closure, recovery and the plan for the next week
+**Why:** Small wounds are closed; the patient is allowed full weight through the limb, which is the point of the operation.
+**Anaesthesia:** Check the haemoglobin in recovery and on day 1. Restart the background opioid at its usual dose and time. Agree when anticoagulation restarts, since the same patient is at high risk of both bleeding into the thigh and pulmonary embolism. Confusion after surgery has a short list here: calcium, opioid accumulation with a falling creatinine, hypoxia from embolism, and cerebral metastases.
+
+## Pain plan
+
+The mechanism is bone in a stabilised limb, so the plan is a single-shot block to cover the day of surgery, the patient's own background opioid continued without a gap, regular paracetamol, and breakthrough doses sized to that background (a rescue dose of about one sixth of the daily total, not a standard opioid-naive dose). A fascia iliaca or femoral block with 20-30 mL of ropivacaine 0.375% covers the femoral shaft and the lateral wounds well enough; an interscalene or supraclavicular block does the same for the humerus. NSAIDs are effective for bone pain and are often contraindicated by renal impairment, thrombocytopenia or anticoagulation; use them when none of those applies. Dexamethasone is given unless the patient is already on steroid.
+
+The evidence is extrapolated: there are no analgesic trials in metastatic fixation, and the block recommendation borrows from hip fracture and shaft fracture practice (see [femoral shaft nailing](femoral-shaft-nailing.html) and [neck of femur fracture](neck-of-femur.html)). A catheter is rarely worth placing. Fixation is the analgesic, the admission is short, and the patient is immunosuppressed and anticoagulated. The exception is an open resection and proximal femoral replacement in an opioid-tolerant patient, where a fascia iliaca catheter or a ketamine infusion at 0.1-0.2 mg/kg/h for 48 hours is reasonable (see [the opioid-tolerant patient](../a/a12-opioid-tolerant.html)).
+
+Expect the opioid requirement to fall below the pre-operative baseline within a week, and write the plan to reduce it, since a dose titrated to an unstable fracture is too much for a stable one and toxicity follows. Radiotherapy to the bone two to four weeks later may cause a brief pain flare.
+
+Escalation: pain in the operated limb that does not improve suggests a missed lesion or failed fixation. New pain elsewhere on mobilising is another deposit declaring itself. Back pain with any leg symptom is cord compression until imaged (see [spinal metastasis decompression](spinal-metastasis-vertebroplasty.html)).
+
+## Pitfalls and variants
+
+- Prophylactic against completed fracture. The elective nail is shorter and drier, but the embolic load is not smaller: an intact cortex gives the pressurised contents nowhere to go except the veins.
+- Lung disease. Metastases, lymphangitis, effusions, previous radiotherapy and previous emboli all reduce the reserve that absorbs an embolic shower. Drain a large effusion beforehand.
+- Myeloma. Renal impairment, hypercalcaemia, anaemia, infection risk and fragile bone everywhere, including the ribs and cervical spine.
+- The humerus. Not a weight-bearing bone, so the threshold for surgery is higher; a nail from the shoulder in beach chair or supine, with the radial nerve at risk at the distal locking screw.
+- Anticoagulation and thrombocytopenia. Decide the neuraxial question on the day with current numbers; a general anaesthetic and a superficial block is never wrong.
+- Brain metastases. Ask, and avoid a dural puncture where there is mass effect.
+- Immunotherapy and targeted agents. Checkpoint inhibitors cause adrenal, thyroid and pituitary failure that presents as unexplained hypotension; antiangiogenic drugs impair wound healing and are stopped beforehand by the oncologist.
+- The patient who is dying. A fracture in the last days of life may be better managed with a block, a catheter and a splint than with an operation; that is a decision made with the patient, the surgeon and palliative care.
+
+## Key sources
+
+The scoring system comes from 78 lesions and has never been bettered in simplicity; its specificity is poor. The survival advantage of prophylactic fixation is observational and confounded by selection. The embolic data are from a single echocardiographic series that happened to include pathological lesions, and are the best direct evidence for the trap line. Embolisation evidence is level III and split. The statements about staging bilateral nails and about analgesia are author's judgement.
