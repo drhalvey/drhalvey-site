@@ -63,6 +63,51 @@ cards:
   - {number: 58, id: spinal-metastasis-vertebroplasty,    group: "Spine",        region: "Spine",          title: "Spinal metastasis decompression; vertebroplasty and kyphoplasty"}
   - {number: 59, id: scs-intrathecal-pump,                group: "Spine",        region: "Spine",          title: "Spinal cord stimulator and intrathecal pump implantation"}
   - {number: 60, id: si-joint-fusion-coccygectomy,        group: "Spine",        region: "Spine",          title: "Sacroiliac joint fusion and coccygectomy"}
+  - {number: 61, id: hallux-valgus-forefoot, group: "Foot and ankle", region: "Foot and ankle", title: "Hallux valgus and forefoot surgery: bunion correction, first MTP fusion, lesser toes"}
+  - {number: 62, id: ankle-arthroscopy-ligament, group: "Foot and ankle", region: "Foot and ankle", title: "Ankle arthroscopy and lateral ligament reconstruction"}
+  - {number: 63, id: total-ankle-arthroplasty, group: "Foot and ankle", region: "Foot and ankle", title: "Total ankle arthroplasty"}
+  - {number: 64, id: ankle-hindfoot-fusion, group: "Foot and ankle", region: "Foot and ankle", title: "Ankle, subtalar and triple fusion"}
+  - {number: 65, id: achilles-tendon-flatfoot, group: "Foot and ankle", region: "Foot and ankle", title: "Achilles tendon repair and adult flatfoot reconstruction"}
+  - {number: 66, id: calcaneal-fracture, group: "Foot and ankle", region: "Foot and ankle", title: "Calcaneal fracture fixation"}
+  - {number: 67, id: lisfranc-midfoot-talus, group: "Foot and ankle", region: "Foot and ankle", title: "Lisfranc, midfoot, metatarsal and talus fracture fixation"}
+  - {number: 68, id: diabetic-foot-surgery, group: "Foot and ankle", region: "Foot and ankle", title: "Diabetic foot: debridement, toe and ray amputation, transmetatarsal amputation, Charcot reconstruction"}
+  - {number: 69, id: minor-foot-procedures, group: "Foot and ankle", region: "Foot and ankle", title: "Morton's neuroma, plantar fascia release and minor foot procedures"}
+  - {number: 70, id: revision-shoulder-arthroplasty, group: "Upper limb", region: "Shoulder", title: "Revision shoulder arthroplasty"}
+  - {number: 71, id: scapula-glenoid-sternoclavicular, group: "Upper limb", region: "Shoulder", title: "Scapula, glenoid and sternoclavicular joint surgery"}
+  - {number: 72, id: brachial-plexus-nerve-transfer, group: "Upper limb", region: "Shoulder", title: "Brachial plexus exploration, nerve grafts and nerve transfers"}
+  - {number: 73, id: tendon-transfers-upper-limb, group: "Upper limb", region: "Wrist and hand", title: "Upper limb tendon transfers"}
+  - {number: 74, id: carpal-instability-partial-fusion, group: "Upper limb", region: "Wrist and hand", title: "Carpal instability surgery, proximal row carpectomy and partial wrist fusion"}
+  - {number: 75, id: rheumatoid-hand-small-joint, group: "Upper limb", region: "Wrist and hand", title: "Small joint arthroplasty and fusion of the hand; rheumatoid hand surgery"}
+  - {number: 76, id: hand-infection, group: "Upper limb", region: "Wrist and hand", title: "Hand infection: flexor sheath washout, abscess and bite injuries"}
+  - {number: 77, id: forearm-shaft-orif, group: "Upper limb", region: "Elbow", title: "Forearm shaft fracture fixation"}
+  - {number: 78, id: ucl-reconstruction-elbow, group: "Upper limb", region: "Elbow", title: "Elbow ligament reconstruction"}
+  - {number: 79, id: hip-abductor-hamstring-repair, group: "Hip and knee", region: "Hip", title: "Gluteal tendon repair, trochanteric surgery and proximal hamstring repair"}
+  - {number: 80, id: proximal-femoral-osteotomy, group: "Hip and knee", region: "Hip", title: "Proximal femoral osteotomy and surgical hip dislocation"}
+  - {number: 81, id: hip-dislocation-femoral-head, group: "Trauma", region: "Trauma", title: "Hip dislocation reduction and femoral head fracture fixation"}
+  - {number: 82, id: distal-femur-fracture, group: "Trauma", region: "Trauma", title: "Distal femur fracture fixation"}
+  - {number: 83, id: patella-fracture, group: "Trauma", region: "Trauma", title: "Patella fracture fixation and patellectomy"}
+  - {number: 84, id: nonunion-bone-graft, group: "Trauma", region: "Trauma", title: "Nonunion surgery and iliac crest bone graft harvest"}
+  - {number: 85, id: rib-fixation, group: "Trauma", region: "Trauma", title: "Surgical stabilisation of rib fractures"}
+  - {number: 86, id: orthoplastic-flap-coverage, group: "Trauma", region: "Trauma", title: "Soft tissue cover for limb trauma: skin grafts, local and free flaps"}
+  - {number: 87, id: meniscal-transplant-cartilage-restoration, group: "Hip and knee", region: "Knee", title: "Meniscal transplant and staged cartilage restoration"}
+  - {number: 88, id: endoscopic-mis-spine, group: "Spine", region: "Spine", title: "Endoscopic and tubular minimally invasive spine surgery"}
+  - {number: 89, id: lumbar-disc-replacement, group: "Spine", region: "Spine", title: "Lumbar disc replacement"}
+  - {number: 90, id: anterior-thoracic-spine, group: "Spine", region: "Spine", title: "Anterior and thoracoscopic thoracic spine surgery"}
+  - {number: 91, id: spinal-infection, group: "Spine", region: "Spine", title: "Spinal infection: discitis, epidural abscess and debridement"}
+  - {number: 92, id: intradural-spinal-tumour, group: "Spine", region: "Spine", title: "Intradural spinal tumour and tethered cord surgery"}
+  - {number: 93, id: bone-tumour-biopsy-curettage, group: "Tumour", region: "Tumour", title: "Bone and soft tissue tumour biopsy, curettage and cementation"}
+  - {number: 94, id: limb-salvage-endoprosthesis, group: "Tumour", region: "Tumour", title: "Limb salvage resection and endoprosthetic reconstruction"}
+  - {number: 95, id: metastatic-long-bone-fixation, group: "Tumour", region: "Tumour", title: "Metastatic bone disease: prophylactic and pathological fracture fixation"}
+  - {number: 96, id: sacrectomy-hemipelvectomy, group: "Tumour", region: "Tumour", title: "Sacrectomy, hemipelvectomy and hindquarter amputation"}
+  - {number: 97, id: paediatric-supracondylar-forearm, group: "Paediatric", region: "Paediatric", title: "Paediatric supracondylar humerus and forearm fractures"}
+  - {number: 98, id: paediatric-femur-spica, group: "Paediatric", region: "Paediatric", title: "Paediatric femoral fractures: flexible nails, plates and hip spica"}
+  - {number: 99, id: sufe-perthes, group: "Paediatric", region: "Paediatric", title: "Slipped upper femoral epiphysis and Perthes disease surgery"}
+  - {number: 100, id: ddh-pelvic-osteotomy, group: "Paediatric", region: "Paediatric", title: "Developmental dysplasia of the hip: closed and open reduction, femoral and pelvic osteotomy"}
+  - {number: 101, id: clubfoot-paediatric-foot, group: "Paediatric", region: "Paediatric", title: "Clubfoot and paediatric foot surgery"}
+  - {number: 102, id: cerebral-palsy-multilevel, group: "Paediatric", region: "Paediatric", title: "Cerebral palsy: single-event multilevel surgery and hip reconstruction"}
+  - {number: 103, id: paediatric-bone-joint-infection, group: "Paediatric", region: "Paediatric", title: "Paediatric septic arthritis and osteomyelitis"}
+  - {number: 104, id: limb-lengthening-guided-growth, group: "Paediatric", region: "Paediatric", title: "Limb lengthening, deformity correction frames and guided growth"}
+  - {number: 105, id: neuromuscular-early-onset-scoliosis, group: "Paediatric", region: "Paediatric", title: "Neuromuscular and early onset scoliosis: growing rods and fusion"}
 # Part A: principles. One source file per id in src/chapters/<id>.md.
 chapters_a:
   - {id: a01-tourniquet,                 title: "The tourniquet"}
@@ -79,6 +124,8 @@ chapters_a:
   - {id: a12-opioid-tolerant,            title: "Opioid-tolerant and chronic pain patients"}
   - {id: a13-antibiotics-infection,      title: "Antibiotic prophylaxis and periprosthetic infection"}
   - {id: a14-spine-essentials,           title: "Spine essentials: neuromonitoring, prone physiology, blood loss and vision loss"}
+  - {id: a15-the-child,                  title: "The child having orthopaedic surgery"}
+  - {id: a16-tumour-patient,             title: "The patient with a bone tumour or metastatic bone disease"}
 # Part B: the pain model. src/chapters/b01-why-operations-hurt.md.
 chapters_b:
   - {id: b01-why-operations-hurt,        title: "Why operations hurt: a first-principles pain model"}

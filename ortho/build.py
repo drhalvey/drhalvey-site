@@ -22,8 +22,8 @@ ROOT = HERE.parent                               # repo root
 SRC = HERE / 'src'
 MANIFEST = yaml.safe_load((SRC / 'manifest.yaml').read_text())
 
-REGIONS = ['Shoulder', 'Elbow', 'Wrist and hand', 'Hip', 'Knee', 'Trauma', 'Spine']
-GROUPS = ['Upper limb', 'Hip and knee', 'Trauma', 'Spine']
+REGIONS = ['Shoulder', 'Elbow', 'Wrist and hand', 'Hip', 'Knee', 'Foot and ankle', 'Trauma', 'Spine', 'Tumour', 'Paediatric']
+GROUPS = ['Upper limb', 'Hip and knee', 'Foot and ankle', 'Trauma', 'Spine', 'Tumour', 'Paediatric']
 BLOCK_FAMILIES = ['interscalene', 'brachial-plexus-distal', 'peripheral-upper-limb', 'lumbar-plexus-femoral',
                   'adductor-canal', 'sciatic-popliteal', 'ipack-genicular', 'neuraxial', 'fascial-plane',
                   'local-infiltration', 'none']

@@ -99,8 +99,8 @@ wears off at 2 am.
 
 ## 4. Index filter vocabulary (exact strings)
 
-- `group`: `Upper limb`, `Hip and knee`, `Trauma`, `Spine` (from the manifest; do not change)
-- `region`: `Shoulder`, `Elbow`, `Wrist and hand`, `Hip`, `Knee`, `Trauma`, `Spine`
+- `group`: `Upper limb`, `Hip and knee`, `Foot and ankle`, `Trauma`, `Spine`, `Tumour`, `Paediatric` (from the manifest; do not change)
+- `region`: `Shoulder`, `Elbow`, `Wrist and hand`, `Hip`, `Knee`, `Foot and ankle`, `Trauma`, `Spine`, `Tumour`, `Paediatric`
 - `block.family`: `interscalene`, `brachial-plexus-distal` (supraclavicular, infraclavicular,
   axillary), `peripheral-upper-limb` (wrist blocks, WALANT, distal nerve blocks),
   `lumbar-plexus-femoral` (femoral, fascia iliaca, PENG, lumbar plexus), `adductor-canal`,
