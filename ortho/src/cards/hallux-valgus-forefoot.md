@@ -1,0 +1,155 @@
+---
+id: hallux-valgus-forefoot
+title: "Hallux valgus and forefoot surgery: bunion correction, first MTP fusion, lesser toes"
+subtitle: "Scarf, chevron and Akin osteotomies, minimally invasive (percutaneous) correction, Lapidus fusion, first metatarsophalangeal fusion, cheilectomy, Weil osteotomies and hammer toe correction"
+aka: ["bunion", "bunionectomy", "hallux valgus", "scarf osteotomy", "chevron osteotomy", "Akin", "MIS bunion", "MICA", "PECA", "percutaneous chevron Akin", "Lapidus", "first MTP fusion", "hallux rigidus", "cheilectomy", "Weil osteotomy", "hammer toe", "claw toe", "lesser toe correction", "forefoot reconstruction"]
+pain:
+  score: 3
+  trajectory: [1, 5, 4, 3, 2]
+  mechanism: bone
+  mechanism_text: "One to three osteotomies through the first metatarsal and proximal phalanx, shifted and screwed, under almost no soft-tissue cover, in a foot that swells when it hangs; fusion adds two denuded joint surfaces under compression. Bone and periosteum under thin skin, fully covered by the block and then abruptly not"
+  rebound_risk: high
+block:
+  primary: "Ankle block (all five nerves, long-acting agent) with intravenous dexamethasone, under sedation or a light general anaesthetic; the first-choice technique in the PROSPECT guideline"
+  family: sciatic-popliteal
+  catheter: "no"
+  catheter_text: "PROSPECT found no evidence to support a continuous popliteal block for hallux valgus surgery; a catheter is reserved for the bilateral or whole-forefoot reconstruction in an opioid-tolerant inpatient"
+  alternatives: ["Popliteal sciatic block with or without a saphenous block (lasts about 6 h longer than an ankle block, at the cost of a foot drop)", "Surgeon's local anaesthetic wound infiltration under general anaesthesia (the PROSPECT alternative)", "Spinal anaesthesia for the bilateral inpatient case"]
+  neuraxial: option
+position: supine
+position_text: "Supine, heel at the end of the table, foot free for the mini image intensifier; a bump under the ipsilateral buttock brings the foot to neutral rotation"
+tourniquet: "yes"
+tourniquet_text: "Ankle (supramalleolar) cuff for open surgery under an ankle block, which the block covers; calf or thigh cuff in some hands, which the ankle block does not cover; many minimally invasive surgeons use no tourniquet at all so that bleeding and irrigation cool the burr"
+cement: "no"
+cement_text: ""
+blood_loss: "Negligible under tourniquet; a damp dressing after release is expected"
+duration: "Isolated chevron or scarf with Akin 45-75 min; minimally invasive correction 40-70 min with heavy fluoroscopy use; first MTP fusion 60 min; Lapidus or bunion plus several lesser toes 90-120 min; bilateral adds about two thirds again"
+los: "Day case; one night for bilateral surgery or a patient alone at home"
+day_case: "yes"
+drugs:
+  antibiotic: "Cefazolin 2 g IV, complete before the cuff is inflated (3 g over 120 kg)"
+  txa: "Not needed"
+  vte: "Early mobilisation in a stiff-soled shoe; chemoprophylaxis only for the patient's own risk factors, which is the position the foot and ankle meta-analysis supports"
+  antiemetic: "Dexamethasone 8 mg IV at induction (PROSPECT recommends systemic dexamethasone for analgesia as well as nausea) and ondansetron 4 mg IV"
+patient_line: "The foot will be numb until late evening or the small hours; take the tablets at bedtime whether or not it hurts, keep the foot above the level of your hip for most of the first two days, and expect the second day to be better than the first."
+trap: "A day-case patient walks out pain-free in a stiff shoe and the ankle block fades at 2 am: this is bone surgery in a group that is mostly female and often young, the three strongest predictors of rebound pain, so the dexamethasone, the pre-emptive oral regimen and the written night plan matter more than which block was chosen"
+sources:
+  - title: "Wust M, Desai N, Joshi GP, Rawal N, Van de Velde M, Moka E, Elmers J, Albrecht E. Pain management after hallux valgus repair surgery: an updated systematic review and procedure-specific postoperative pain management (PROSPECT) recommendations. Eur J Anaesthesiol 2026;43:11-18"
+    url: "https://doi.org/10.1097/EJA.0000000000002302"
+    note: "2025 update, 17 further trials: paracetamol plus NSAID or COX-2 inhibitor, systemic dexamethasone, ankle block as first choice with wound infiltration as the alternative, and minimally invasive or percutaneous osteotomy now recommended over open osteotomy; insufficient evidence for perineural magnesium or liposomal bupivacaine; no evidence for continuous popliteal sciatic block"
+  - title: "Korwin-Kochanowska K, Potie A, El-Boghdadly K, Rawal N, Joshi G, Albrecht E. PROSPECT guideline for hallux valgus repair surgery: a systematic review and procedure-specific postoperative pain management recommendations. Reg Anesth Pain Med 2020;45:702-708"
+    url: "https://doi.org/10.1136/rapm-2020-101479"
+    note: "55 trials: hallux valgus repair causes moderate to severe pain; paracetamol, NSAID or COX-2 inhibitor, systemic steroid, ankle block and wound infiltration improve it; insufficient evidence for gabapentinoids; no sciatic block study met the inclusion criteria"
+  - title: "Schipper ON, Hunt KJ, Anderson RB, Davis WH, et al. Ankle block vs single-shot popliteal fossa block as primary anesthesia for forefoot operative procedures: prospective, randomized comparison. Foot Ankle Int 2017;38:1188-1191"
+    url: "https://doi.org/10.1177/1071100717723132"
+    note: "167 outpatient forefoot operations: conversion to general anaesthesia 13.6% with ankle block and 12.7% with popliteal block; popliteal block lasted 20.9 h against 14.5 h, with lower pain at 10 pm on day 0 (1.6 against 4.6) and at 8 am on day 1 (4.2 against 5.9); complications and satisfaction similar"
+  - title: "Lee M, Walsh J, Smith MM, Ling J, et al. Hallux valgus correction comparing percutaneous chevron/Akin (PECA) and open scarf/Akin osteotomies. Foot Ankle Int 2017;38:838-846"
+    url: "https://doi.org/10.1177/1071100717704941"
+    note: "50 patients randomised: equivalent clinical and radiographic correction at 6 months, with significantly lower pain scores after the percutaneous operation from day 1 to week 6"
+  - title: "Finsen V, Kasseth AM. Tourniquets in forefoot surgery: less pain when placed at the ankle. J Bone Joint Surg Br 1997;79:99-101"
+    url: "https://doi.org/10.1302/0301-620x.79b1.7069"
+    note: "50 hallux valgus operations under ankle block randomised to an ankle or a calf cuff at 100 mmHg above systolic pressure: equally bloodless field, significantly less cuff discomfort at the ankle at 10, 20 and 30 min, and no more numbness or paraesthesia at 6 and 10 weeks"
+  - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
+    url: "https://doi.org/10.1016/j.bja.2020.10.035"
+    note: "Rebound pain in 49.6% of 972 ambulatory block patients; bone surgery OR 1.82, female OR 1.52, younger age, no IV dexamethasone OR 1.78"
+  - title: "Calder JD, Freeman R, Domeij-Arverud E, van Dijk CN, et al. Meta-analysis and suggested guidelines for prevention of venous thromboembolism (VTE) in foot and ankle surgery. Knee Surg Sports Traumatol Arthrosc 2016;24:1409-1420"
+    url: "https://doi.org/10.1007/s00167-015-3976-y"
+    note: "22 studies: clinically apparent VTE after isolated foot and ankle surgery is uncommon and not significantly reduced by low molecular weight heparin; routine chemoprophylaxis not justified except after Achilles rupture; assess individual risk factors"
+---
+
+## What the surgeon is doing and why
+
+Hallux valgus is not a growth on the side of the foot. The first metatarsal has drifted medially (the intermetatarsal angle has opened), the great toe has drifted laterally on top of it, and the "bunion" is the uncovered medial side of the metatarsal head with an inflamed bursa over it. The sesamoids and the flexor and extensor tendons now lie lateral to the axis of the joint and pull the toe further into valgus with every step, so the deformity feeds itself. Shaving the bump does nothing to the mechanics. The surgeon has to move bone.
+
+The logic of every bunion operation is the same three moves:
+
+1. Release what holds the toe in valgus: the lateral capsule, the adductor hallucis insertion and the lateral sesamoid ligament.
+2. Move the metatarsal head laterally, back over the sesamoids, by cutting the metatarsal and translating the distal fragment. A chevron is a V-shaped cut in the head and neck for mild deformity; a scarf is a long Z-shaped cut along the shaft for moderate deformity, fixed with two small screws; a Lapidus fuses the first tarsometatarsal joint for a severe or hypermobile deformity and moves the whole ray.
+3. Straighten the toe itself with a medial closing-wedge osteotomy of the proximal phalanx (the Akin), fixed with a staple or a screw, and tighten the medial capsule.
+
+The minimally invasive version (percutaneous chevron and Akin, often abbreviated MICA or PECA) does the same bone work through 3-5 mm stab incisions with a low-speed, high-torque 2 mm burr under fluoroscopy, shifts the head a long way laterally on a wire, and holds it with two percutaneous screws. There is no medial capsulotomy and no periosteal exposure. The first MTP fusion is a different answer for a different joint: an arthritic or grossly deformed joint (hallux rigidus, rheumatoid forefoot, failed bunion surgery) is denuded to bleeding bone on both sides with cup-and-cone reamers and compressed with a plate or crossed screws. The lesser toes ride along: a Weil osteotomy slides a long metatarsal head proximally to off-load it, and a hammer toe is corrected by excising or fusing the proximal interphalangeal joint over a buried implant or a K-wire that protrudes from the tip of the toe for 4-6 weeks.
+
+What is deliberately left alone is everything proximal to the midfoot. The ankle and its motors are untouched, which is the whole argument for the block choice below.
+
+```
+ drift                       correction
+ MT1 goes medial      -->    cut MT1, slide head lateral   (bone)
+ toe goes lateral     -->    wedge out of phalanx (Akin)   (bone)
+ lateral tether       -->    lateral release               (capsule)
+ medial bump, bursa   -->    trim, plicate capsule         (capsule)
+ arthritic joint      -->    denude and compress (fusion)  (bone x2)
+```
+
+The pain logic: this is bone surgery with no muscle cover. Each osteotomy is a controlled fracture fixed rigidly, and the foot is the most dependent part of the body, so swelling adds a throbbing, positional pain that elevation relieves within minutes. PROSPECT describes the operation as causing moderate to severe pain, and the plan-in-place score here is 3: the block covers day 0 completely, the peak is on day 1 and the fall is quick because rigidly fixed cancellous osteotomies settle fast. The percutaneous operation hurts less (a randomised comparison found lower pain scores from day 1 to week 6, and the 2025 PROSPECT update now recommends it over open osteotomy on pain grounds), a fusion hurts a little more than an osteotomy, and every additional ray adds to the total.
+
+## Steps
+
+### 1. Reading the booking: which operation, how many rays, one foot or two
+**Why:** "Bunion" on a list covers a 40-minute percutaneous chevron, a scarf and Akin with three Weil osteotomies and two hammer toes, a Lapidus, and a bilateral case. The bone work, the tourniquet time and the pain all scale with the number of cuts.
+**Anaesthesia:** The procedure list decides the plan before the patient arrives. A single first-ray correction is the day-case ankle block. A whole-forefoot reconstruction approaches 2 h and outlasts comfortable sedation and an ankle cuff. Bilateral surgery doubles the local anaesthetic (the ankle block budget for two feet is 40-50 mL of ropivacaine 0.375%, which needs a weight check), leaves no good foot to hop on, and is the case for an overnight stay or a spinal.
+
+### 2. Block, sedation and the night plan
+**Why:** The surgeon needs a still, bloodless forefoot for an hour. Nothing proximal to the ankle is touched.
+**Anaesthesia:** PROSPECT's first choice is an ankle block, with surgeon's wound infiltration as the alternative, on top of paracetamol, an NSAID or COX-2 inhibitor started before or during surgery, and systemic dexamethasone. All five nerves are blocked, because the medial incision over the first metatarsal lies on the boundary between the saphenous and superficial peroneal territories and the joint itself is tibial and deep peroneal: 20-30 mL of ropivacaine 0.5% in total, most of it around the tibial nerve. Dexamethasone 8 mg IV goes in at the start. The block is the anaesthetic; propofol sedation or a supraglottic airway with a light general anaesthetic is there for the patient's comfort and the tourniquet. The night plan is written now: what to take at bedtime regardless of pain, what to take when the toes start to tingle, and what the opioid is for.
+
+### 3. Position and tourniquet
+**Why:** Supine with the heel at the end of the table so the surgeon can sit and the mini image intensifier can come in from the foot. The cuff is at the ankle, the calf or the thigh according to habit.
+**Anaesthesia:** The site of the cuff decides whether the block is enough. A supramalleolar cuff sits within the ankle block's territory if the block was placed above it or the cuff is placed after the block has spread; a calf or thigh cuff does not, and its ischaemic pain arrives at 30-45 min whatever the foot feels (see [the tourniquet](../a/a01-tourniquet.html)). In the randomised comparison under ankle block, the ankle cuff gave the same field as a calf cuff, less discomfort at every time point and no more nerve symptoms at 10 weeks. Set the pressure from the limb occlusion pressure where the machine measures it; the trial used 100 mmHg above systolic. A narrow cuff over the malleoli on thin skin needs padding, and the Esmarch bandage often used as an ankle tourniquet has an unmeasured pressure, which is a reason to prefer a pneumatic cuff. Cefazolin must be in before inflation.
+
+### 4. Medial approach, bunionectomy and lateral release
+**Why:** A medial incision over the first MTP joint, a capsulotomy, and the medial eminence is sawn off flush with the shaft. The lateral release (adductor tendon, lateral capsule, sesamoid ligament) is done through the joint or through a separate dorsal first web space incision, to let the sesamoids return under the head.
+**Anaesthesia:** The dorsal web incision is deep peroneal territory and the medial incision is saphenous and superficial peroneal; a patient under light sedation who withdraws here has an ankle block with a missing nerve, and the remedy is the surgeon's local anaesthetic into the wound rather than more propofol. The dorsomedial cutaneous nerve of the great toe crosses the medial incision and is the nerve that leaves a numb or dysaesthetic patch afterwards; it is a surgical complication that a patient may attribute to the block, so document which nerves were blocked and with what.
+
+### 5. First metatarsal osteotomy and fixation
+**Why:** Chevron or scarf: the saw makes the cut, the distal or plantar fragment is translated laterally by a third to two thirds of the shaft width, and it is held with one or two headless compression screws. The overhanging medial bone is trimmed.
+**Anaesthesia:** This is the pain generator of the card: a fracture made on purpose in a bone with no muscle around it. Nothing happens to the physiology. The saw and the screwdriver are loud and are what a sedated patient remembers, so warn them beforehand or deepen the sedation for these five minutes.
+
+### 6. Akin osteotomy and capsular plication
+**Why:** A medial closing wedge is taken from the base of the proximal phalanx and closed with a staple or screw to correct the residual valgus of the toe; the medial capsule is closed tight to hold the sesamoids reduced.
+**Anaesthesia:** A second, smaller bone cut. The capsular closure is what makes the great toe stiff and sore to move for weeks, which the patient should hear from you as expected rather than discover.
+
+### 7. The minimally invasive variant
+**Why:** Stab incisions, a 2 mm burr at low speed and high torque with saline irrigation, a chevron cut at the metatarsal neck, a large lateral shift of the head held on a wire, two percutaneous screws from the medial shaft into the head, then a percutaneous Akin. The exposure is replaced by fluoroscopy.
+**Anaesthesia:** Three things change. First, many surgeons use no tourniquet, so that blood flow and irrigation carry heat away from the burr and the skin edge does not burn; the cuff question in step 3 disappears. Second, screening time is long, and the anaesthetist at the foot of a short table is close to the beam: lead and distance. Third, pain is lower from day 1 to week 6 in the randomised comparison, which makes surgeon's infiltration or an ankle block with a shorter agent a reasonable plan and makes the long block's rebound relatively more important. The operation is not quicker during a surgeon's learning curve.
+
+### 8. First MTP fusion and Lapidus
+**Why:** For the arthritic or unsalvageable joint, cup-and-cone reamers take both surfaces to bleeding subchondral bone, the toe is set in slight dorsiflexion and valgus against a flat plate that simulates the floor, and a dorsal plate with a compression screw holds it. A Lapidus does the same to the first tarsometatarsal joint with a plate or crossed screws, sometimes with bone graft from the calcaneus or proximal tibia.
+**Anaesthesia:** Two denuded surfaces under compression hurt more than a translated osteotomy and for a day longer; foot arthrodesis ranked seventh of 179 procedures for day 1 pain in a cohort where blocks were rare, though that category is dominated by the hindfoot. A Lapidus is at the proximal limit of what an ankle block reliably covers and runs 90 min or more, so a popliteal sciatic block with a saphenous block and a general anaesthetic is the better plan. Surgeons vary on NSAIDs after a fusion; a short course is the common compromise and the decision belongs in the plan before the prescription is written.
+
+### 9. Lesser toes: Weil osteotomies, hammer toe correction, K-wires
+**Why:** A long or dislocated lesser metatarsal is shortened with an oblique sliding osteotomy at the neck and a twist-off screw. A fixed hammer toe has the proximal interphalangeal joint excised or fused, the extensor lengthened or the flexor transferred, and the toe held straight.
+**Anaesthesia:** Each toe adds 10-15 min and another bone cut. The surgeon checks toe perfusion after the tourniquet comes down, because a toe straightened after years of flexion can stretch its digital arteries and stay white; expect a pause, a warm swab, sometimes a wire removed. Do not put adrenaline-containing local anaesthetic into a toe that is already under vascular question, and tell recovery staff that a wire protruding from a toe is intended.
+
+### 10. Closure, dressing and the shoe
+**Why:** Skin closure, a bulky forefoot dressing that also splints the toe in its corrected position, tourniquet down, and a stiff-soled or heel-wedge shoe so the patient can bear weight on the heel at once.
+**Anaesthesia:** The dressing is part of the correction and stays untouched for two weeks. The reperfusion after a 60-min ankle cuff is trivial. An ankle block leaves ankle dorsiflexion and plantarflexion intact, which is why the patient can walk to the bathroom in the shoe within the hour; a popliteal block leaves a foot drop and an insensate heel for 20 h, and the patient needs crutches and a clear instruction not to trust the foot.
+
+### 11. Discharge and the first night
+**Why:** The fixation is stable enough for heel weight-bearing; the surgeon's concerns are swelling and the wound, so the instruction is elevation above hip level for most of the first fortnight.
+**Anaesthesia:** First doses of paracetamol and the NSAID are given before discharge, not prescribed for later. An ankle block with a long-acting agent lasted a mean of 14.5 h in the randomised comparison and a popliteal block 20.9 h; dexamethasone extends both. Most lists finish in the afternoon, so the arithmetic puts the offset between midnight and dawn. Rebound here is a throbbing, bursting pain in a hanging foot, peaking over an hour or two; elevation, the opioid already at the bedside and ice over the dressing treat it. By day 3 most patients need only the regular regimen.
+
+## Pain plan
+
+The mechanism is bone under thin skin in a dependent foot, and the nerve supply is entirely distal to the ankle, so the plan follows PROSPECT closely. The 2020 guideline and its 2025 update recommend paracetamol with an NSAID or COX-2 inhibitor started pre-operatively or intra-operatively and continued, systemic dexamethasone, an ankle block as first choice with local anaesthetic wound infiltration as the alternative, opioids for rescue only, and (new in the update) a minimally invasive or percutaneous osteotomy in preference to an open one. Gabapentinoids, perineural magnesium and liposomal bupivacaine lacked evidence, and no evidence supported a continuous popliteal block.
+
+Ankle block against popliteal block is a real trade and the trial data are clear about what is being traded. In 167 outpatient forefoot operations the popliteal block lasted about 6 h longer and gave lower pain scores on the first evening (1.6 against 4.6) and the next morning (4.2 against 5.9), with the same conversion rate to general anaesthesia. PROSPECT nonetheless did not include sciatic blocks, because none of the trials met its criteria. The ankle block's advantages are functional: a working ankle, a sensate heel, safe heel-walking in the shoe and no foot drop to explain. The defensible default is therefore the ankle block for the single-ray day case, and a popliteal sciatic block with a saphenous block for the Lapidus, the fusion with several lesser rays, and the surgeon who uses a calf or thigh cuff under general anaesthesia anyway. That allocation is the author's judgement, not a guideline statement. There is no place for a catheter in routine forefoot surgery.
+
+Rebound is the planning target. In the ambulatory cohort of 972 block patients it affected half, and the risk factors were bone surgery (OR 1.82), female sex (OR 1.52), younger age and the absence of intravenous dexamethasone (OR 1.78); the typical bunion patient has the first two and often the third. The answer is not a shorter block but a prepared offset: dexamethasone 8 mg IV, regular paracetamol and NSAID from before discharge, an oral opioid supplied for the first two nights with the instruction to take the bedtime dose regardless, and elevation. For a small percutaneous correction it is reasonable to choose surgeon's infiltration or a block that fades in the evening while the patient is awake to manage it.
+
+Escalation triggers: pain above 7 with the block gone, the foot elevated and the toes pink is rebound and is treated with what is already supplied. Pain with a tight, wet dressing and dusky toes is a constricting dressing and is split. A white toe is a vascular problem for the surgeon that night. Burning pain with colour and temperature change that worsens after the second week raises complex regional pain syndrome, which forefoot surgery produces more often than its size suggests.
+
+## Pitfalls and variants
+
+- Sedation with a proximal cuff. An ankle block does not cover a calf or thigh tourniquet. If the surgeon will not use an ankle cuff, plan a general anaesthetic or a spinal from the start; see [the tourniquet](../a/a01-tourniquet.html).
+- The missed nerve. The saphenous and deep peroneal nerves are the two most often left out of an ankle block and are the two that the medial and first web incisions test. The [block menu](../a/a07-block-menu.html) has the map.
+- Bilateral surgery. Local anaesthetic dose for two ankle blocks plus any surgeon's infiltration is one shared budget. A spinal with a short-acting agent and bilateral ankle blocks for analgesia is a tidy inpatient plan.
+- The rheumatoid forefoot. First MTP fusion with excision of all four lesser metatarsal heads: 2 h, a patient with an unstable cervical spine, fragile skin, steroids and immunosuppression, and feet that heal slowly. The foot is the easy part of the anaesthetic.
+- Peripheral vascular disease and diabetes. A toe correction in a foot without pulses is a different operation with a different risk; no tourniquet, no adrenaline, and see [diabetic foot surgery](diabetic-foot-surgery.html).
+- Minimally invasive surgery without a tourniquet. More ooze into the dressing, no cuff pain, a long screening time and less pain afterwards.
+- NSAIDs after fusion. Surgeons vary; when the NSAID is withheld the plan loses its most effective oral component and the opioid supply has to reflect that.
+- Persistent numbness. The dorsomedial cutaneous nerve of the hallux is at risk from the incision; a block-related neuropathy would follow the distribution of a whole nerve at the ankle. The distinction matters at the two-week review.
+- Related cards. Hindfoot and midfoot fusions are in [ankle, subtalar and triple fusion](ankle-hindfoot-fusion.html); neuroma excision and other short forefoot cases in [minor foot procedures](minor-foot-procedures.html).
+
+## Key sources
+
+This is one of the few foot operations with its own PROSPECT guideline, updated in 2025, and the plan above is that guideline with one addition. The addition is the popliteal block for larger reconstructions, which rests on a single randomised comparison in mixed forefoot surgery and on the author's judgement about function; PROSPECT neither recommends nor rejects it. The tourniquet trial is small and old but is the only randomised comparison of cuff sites under ankle block. The claim that percutaneous surgery hurts less rests on one 50-patient trial and the pooled analysis in the PROSPECT update. The Gerbershagen ranking for foot arthrodesis is cited for the fusion variants only and comes from a cohort in which regional anaesthesia was rarely used.

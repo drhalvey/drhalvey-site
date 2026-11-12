@@ -1,0 +1,133 @@
+---
+id: intradural-spinal-tumour
+title: "Intradural spinal tumour and tethered cord surgery"
+subtitle: "Laminectomy or laminoplasty with dural opening for extramedullary tumours (meningioma, schwannoma), intramedullary tumours (ependymoma, astrocytoma, haemangioblastoma) and release of a tethered cord"
+aka: ["intradural extramedullary tumour", "intramedullary tumour", "IMSCT", "spinal meningioma", "schwannoma", "ependymoma", "myelotomy", "tethered cord release", "filum section", "lipomyelomeningocele", "D-wave", "durotomy"]
+pain:
+  score: 3
+  trajectory: [3, 5, 4, 3, 2]
+  mechanism: muscle
+  mechanism_text: "Paraspinal muscle stripped for a two- to four-level laminectomy or laminoplasty, with no screws in most cases and no distraction; added to it, a dorsal myelotomy or root manipulation that leaves dysaesthesia and neuropathic pain in a proportion, and a period flat in bed that makes the back ache and stops the patient moving it off"
+  rebound_risk: low
+block:
+  primary: "Surgeon infiltration of the muscle and skin with long-acting local anaesthetic at closure, regular paracetamol, a remifentanil-based anaesthetic with a planned transition opioid before emergence, and opioid patient-controlled analgesia that can be used lying flat"
+  family: local-infiltration
+  catheter: "no"
+  catheter_text: "The dura has been opened and repaired and the neurology must be examinable every hour; nothing is left in the epidural space, and no block that could explain a new deficit is placed"
+  alternatives: ["Bilateral erector spinae plane blocks before incision for a thoracic or lumbar laminectomy, at the surgeon's agreement, accepting that they leave the motor examination intact (author's judgement, no trials in intradural surgery)", "Low-dose ketamine infusion started after baseline evoked potentials are recorded, for the opioid-tolerant patient", "A gabapentinoid started on day 1 when dysaesthetic pain declares itself after myelotomy"]
+  neuraxial: "no"
+position: prone
+position_text: "Prone on bolsters or an open frame with the abdomen free to keep epidural venous pressure low; head in a three-pin clamp for cervical and upper thoracic tumours, in a foam support otherwise; the operating microscope and the neurophysiology leads need access, and the table is kept level or slightly head-down while the dura is open"
+tourniquet: "no"
+tourniquet_text: ""
+cement: "no"
+cement_text: ""
+blood_loss: "100-400 mL, mostly epidural veins during the bony exposure; a haemangioblastoma or a vascular meningioma can bleed more, and blood in the subarachnoid space stops the operation long before it threatens the circulation"
+duration: "150-240 min for an extramedullary tumour; 240-420 min for an intramedullary resection; 120-180 min for a simple filum section"
+los: "4-7 nights for extramedullary tumours and tethered cord; one to two weeks and often rehabilitation after intramedullary surgery"
+day_case: "no"
+drugs:
+  antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg), repeated at 4 h; the subarachnoid space is open for hours"
+  txa: "Not routine; blood loss is small and the field is controlled under the microscope"
+  vte: "Mechanical prophylaxis from induction and through the period of bed rest; chemoprophylaxis is delayed, commonly 24-48 h, at the surgeon's instruction, because a haematoma under a dural repair compresses the cord"
+  antiemetic: "Two agents every time: the patient is usually on dexamethasone already (continue it; give 8 mg IV if not and the surgeon agrees), plus ondansetron 4 mg IV before emergence and droperidol 0.625 mg IV in the high-risk patient, since retching raises cerebrospinal fluid pressure against a fresh dural suture line"
+patient_line: "You will wake on your back and be kept lying flat for a day or more so the lining around the spinal cord can seal; the wound aches, the legs may feel strange or weaker at first, and we will ask you to move your feet many times in the first night."
+trap: "With the dura open under the microscope a single cough moves the cord onto the instruments, and the monitoring that protects the cord forbids the relaxant that would prevent it: depth comes from propofol and a generous remifentanil infusion, checked before the dura is opened, not after the patient has moved"
+sources:
+  - title: "Sala F, Palandri G, Basso E, et al. Motor evoked potential monitoring improves outcome after surgery for intramedullary spinal cord tumors: a historical control study. Neurosurgery 2006;58:1129-1143"
+    url: "https://doi.org/10.1227/01.NEU.0000215948.97195.58"
+    note: "50 monitored intramedullary resections against 50 matched historical controls: muscle motor evoked potential loss modified the surgery and a fall of more than 50% in D-wave amplitude was the main indication to stop; motor grade at three months or more was significantly better with monitoring (+0.28 against -0.16 on the McCormick scale), while at discharge the groups were similar because of transient deficits"
+  - title: "Schwake M, Krahwinkel S, Gallus M, et al. Does early mobilization following resection of spinal intra-dural pathology increase the risk of cerebrospinal fluid leaks: a dual-center comparative effectiveness research. Medicina (Kaunas) 2024;60:171"
+    url: "https://doi.org/10.3390/medicina60010171"
+    note: "101 matched pairs from two centres, one using three days of bed rest and one mobilising early: cerebrospinal fluid leak in 1.98% against 3.96%, not significantly different; expansion duraplasty was the independent risk factor for a leak"
+  - title: "Lee S, Cho DC, Kim KT, Lee YS, Rhim SC, Park JH. Reliability of early ambulation after intradural spine surgery: risk factors and a preventive method for cerebrospinal fluid leak related complications. J Korean Neurosurg Soc 2021;64:799-807"
+    url: "https://doi.org/10.3340/jkns.2020.0350"
+    note: "314 intradural operations: walking after one day of bed rest gave fewer leak-related complications than three or more days prone (2.5% against 13.6%) and a shorter stay, in a comparison confounded by a change of dural suture material; revision surgery was a risk factor"
+  - title: "Macdonald DB, Skinner S, Shils J, Yingling C. Intraoperative motor evoked potential monitoring: a position statement by the American Society of Neurophysiological Monitoring. Clin Neurophysiol 2013;124:2291-2316"
+    url: "https://doi.org/10.1016/j.clinph.2013.07.025"
+    note: "Intravenous anaesthesia with propofol and opioid is optimal for muscle motor evoked potentials; bite injuries are the commonest adverse event of transcranial stimulation and a soft bite block is required; disappearance of the response is a major warning criterion"
+  - title: "Sloan TB, Heyer EJ. Anesthesia for intraoperative neurophysiologic monitoring of the spinal cord. J Clin Neurophysiol 2002;19:430-443"
+    url: "https://doi.org/10.1097/00004691-200210000-00006"
+    note: "Volatile agents and high-dose intravenous agents depress cortical sensory and muscle motor responses; blood pressure, temperature, carbon dioxide and haematocrit all alter the signals; neuromuscular blockade must be managed for muscle responses"
+  - title: "Vitale MG, Skaggs DL, Pace GI, et al. Best practices in intraoperative neuromonitoring in spine deformity surgery: development of an intraoperative checklist to optimize response. Spine Deform 2014;2:333-339"
+    url: "https://doi.org/10.1016/j.jspd.2014.05.003"
+    note: "Consensus checklist for a signal change, written for deformity surgery and adopted more widely: anaesthetic, physiological, technical and surgical headings"
+---
+
+## What the surgeon is doing and why
+
+Every other spinal operation in this book stays outside the dura. This one goes through it. The tumour is either beside the cord inside the dural sac (extramedullary: a meningioma attached to the dura, or a schwannoma growing on a root) or inside the cord itself (intramedullary: an ependymoma with a plane around it, an astrocytoma without one, or a haemangioblastoma that is mostly blood vessel). A tethered cord is a third situation: a thickened filum, a lipoma or scar anchors the conus low in the canal and the cord is stretched with every flexion of the spine and, in a child, with every centimetre of growth.
+
+The approach is the same for all three. The surgeon strips the paraspinal muscle from two to four laminae, removes them (laminectomy) or lifts them as a plate to be replaced (laminoplasty), opens the dura in the midline, tacks its edges up and works under a microscope in a field a few centimetres long that is full of cerebrospinal fluid. What happens next separates the easy case from the hard one.
+
+1. Extramedullary tumours are dissected off the cord surface. A schwannoma is shelled out and its root of origin is usually sacrificed; a meningioma is removed with its dural attachment, which is cauterised or excised. The cord itself is retracted little or not at all. Most patients are neurologically the same or better the next day.
+2. Intramedullary tumours need a myelotomy. The surgeon splits the cord in the dorsal midline between the dorsal columns, spreads them, and removes tumour from the inside outwards with an ultrasonic aspirator until either it is all out or the neurophysiology says stop. The dorsal columns are stretched by this in every case, so proprioception is worse afterwards in most, and the motor tracts are a few millimetres lateral to the cavity.
+3. Tethered cord release means identifying the filum or the tethering band, proving by stimulation that it is not a functioning root, and cutting it. In a lipomatous tether the fat and the neural placode are intermixed and the surgeon debulks by stimulation mapping.
+
+The dura is then closed watertight with a fine running suture, sometimes with a patch, and the surgeon asks for a Valsalva to prove it. That closure is the operation's weak point for the next week: cerebrospinal fluid under an upright column of pressure finds any gap, and a leak through the wound means meningitis or a return to theatre.
+
+The neurophysiology is not optional in intramedullary surgery. In the one controlled comparison, 50 monitored resections against 50 matched historical controls, motor outcome at three months or later was significantly better with monitoring; outcome at discharge was similar, because monitored patients had transient deficits that the signals had correctly predicted would recover. Muscle motor evoked potentials can be lost and return. The D-wave, recorded from an electrode the surgeon lays in the epidural space below the tumour, measures the corticospinal volley directly, and a fall of more than half is the stopping rule.
+
+The pain logic: muscle is the dominant mechanism, on the scale of a multilevel laminectomy without instrumentation, which earns a 3. The second mechanism is nerve: a split dorsal column or a divided sensory root produces burning, band-like or limb dysaesthesia that opioids do not touch. The third is positional: a day or more flat on a fresh posterior wound.
+
+## Steps
+
+### 1. Assessment and steroids
+**Why:** The surgeon needs to know what function there is to lose. Many patients have been started on dexamethasone to reduce cord oedema around the tumour.
+**Anaesthesia:** Record limb power, sensory level and bladder function in your own notes; the neurophysiologist's baselines will mirror them, and absent pre-operative function means absent signals. Continue the dexamethasone on the day and check glucose. Evidence for steroid here is thin and the practice is near-universal. A cervical or cervicomedullary tumour may have already weakened the diaphragm and the cough and may produce bradycardia or apnoea with neck movement: ask about breathing at night and look at the vital capacity. For tethered cord in a patient with myelodysplasia, a latex-free theatre is standard.
+
+### 2. Induction and the monitoring anaesthetic
+**Why:** Muscle motor evoked potentials, somatosensory potentials, the D-wave and, for conus and filum work, sphincter electromyography and the bulbocavernosus reflex all have to be recordable from the start.
+**Anaesthesia:** Propofol and remifentanil by infusion, no volatile or at most a low steady fraction agreed with the neurophysiologist, and one intubating dose of a relaxant that is allowed to wear off or is reversed before baselines (see [spine essentials](../a/a14-spine-essentials.html)). The D-wave survives relaxant; muscle responses and all the sphincter recordings do not. Place a soft bite block between the molars on both sides, because transcranial stimulation clenches the jaw and tongue lacerations are the commonest injury from it. Arterial line for an intramedullary or cervical case; two good cannulae; urinary catheter; temperature probe and a warmer, since cold abolishes signals as effectively as ischaemia. Avoid boluses of anything once baselines are recorded: the neurophysiologist reads a propofol bolus as a cord event.
+
+### 3. Prone positioning
+**Why:** A free abdomen empties the epidural veins that otherwise fill the surgeon's exposure; a level, stable head keeps the cervical cord slack.
+**Anaesthesia:** Pins for cervical and high thoracic tumours need a remifentanil bolus or scalp infiltration beforehand. Check the bite block again after the turn. Record evoked potentials after positioning and before incision: a signal lost on turning is a neck or shoulder position problem and is fixed by repositioning, not by proceeding.
+
+### 4. Laminectomy or laminoplasty
+**Why:** The bone is removed widely enough to see the poles of the tumour; ultrasound through the intact dura confirms the level before it is opened.
+**Anaesthesia:** The bloodiest part of an otherwise dry operation, from epidural veins. A normal mean pressure, not a low one: the cord under a tumour is the tissue being protected and induced hypotension has no place. If the patient is going to be too light without relaxant, this bony phase is when it shows, as a rising pressure and a twitch with the diathermy, and it must be corrected now.
+
+### 5. Dural opening
+**Why:** The dura is opened in the midline and hitched; the arachnoid is opened separately and cerebrospinal fluid drains.
+**Anaesthesia:** From this moment any movement is dangerous, and the surgeon is working at magnification on a target that pulsates with the ventilator. Deepen before the dura is opened: a remifentanil rate that suppresses coughing on the tube (commonly 0.2-0.3 microg/kg/min or an equivalent target), a steady propofol level, and the ventilator set and left alone. Loss of cerebrospinal fluid over hours produces low-pressure headache afterwards and, rarely, remote intracranial bleeding; neither can be prevented from the head end.
+
+### 6. Tumour resection or untethering
+**Why:** Extramedullary tumours are rolled out; intramedullary tumours are removed from within a myelotomy; a filum is stimulated, confirmed silent and cut.
+**Anaesthesia:** Somatosensory potentials often fall at the myelotomy and this is accepted. A fall in motor potentials is the event: the surgeon stops, irrigates with warm saline and waits, and you raise the mean pressure to 85-90 mmHg, confirm haemoglobin, temperature and carbon dioxide are normal, and confirm that nothing in the anaesthetic has changed. Say aloud what you have checked. Resection restarts if the signals recover. Cervical intramedullary surgery produces bradycardia, hypertension or arrhythmia from direct cord manipulation; tell the surgeon, who pauses. For tethered cord the surgeon stimulates directly at low currents and watches the sphincter and leg channels, so even a partial relaxant block makes a live root look like a filum.
+
+### 7. Dural closure and the Valsalva
+**Why:** A running fine suture, a patch if the dura was resected with a meningioma, and sealant. The surgeon tests it under sustained airway pressure.
+**Anaesthesia:** Hold 30-40 cmH2O for 10 seconds or so on request, by hand, watching the arterial trace; repeat after each added stitch. If a lumbar drain is to be placed for a difficult closure the surgeon does it now. This is the time for the transition from remifentanil: a longer-acting opioid titrated in before the infusion stops, since the remifentanil offset otherwise leaves the patient with no analgesia at emergence.
+
+### 8. Emergence
+**Why:** The surgeon wants to see all four limbs move before the patient leaves theatre, and wants no straining on the repair.
+**Anaesthesia:** Turn supine before lightening. The aim is an awake, obeying patient without coughing: remifentanil run low to extubation, lidocaine 1 mg/kg IV, or both. Two antiemetics have been given. Keep the bed flat or at the tilt the surgeon specifies from the moment of transfer. Examine and document limb power before any further opioid is given.
+
+### 9. Bed rest and the first days
+**Why:** Lying flat lowers the hydrostatic pressure on a lumbar or thoracic dural suture line. Surgeons vary from 24 hours to several days, and after cervical surgery some prefer the head up for the same reason.
+**Anaesthesia:** The evidence that prolonged rest prevents leaks is weak: in 101 matched pairs from two centres, three days of bed rest gave a leak rate of 2% against 4% with early mobilisation, not significantly different, and expansion duraplasty was the real risk factor; in another series walking at one day gave fewer leak complications than three days prone. The duration is nonetheless the surgeon's instruction, and its costs fall to you: a patient-controlled device that can be pressed supine, antiemetics for someone eating flat, a urinary catheter, mechanical thromboprophylaxis that is on the legs and running, and chest physiotherapy. Postural headache, a boggy wound or clear fluid on the dressing is a leak.
+
+## Pain plan
+
+The mechanism is a stripped back without instrumentation, so the systemic plan of a multilevel laminectomy applies: regular paracetamol, surgeon infiltration, and opioid by patient-controlled analgesia for 24-48 hours, moving to oral once the patient is allowed up. NSAIDs are where surgeons vary: many withhold them for 24-48 hours because a haematoma under the dural repair compresses the cord, and the defensible default is to start a COX-2 inhibitor on day 1 or 2 with the surgeon's agreement. Regional techniques are limited by the need for an unambiguous hourly neurological examination. Erector spinae plane blocks do not cause motor block and are reasonable if the surgeon accepts them, on no direct evidence; intrathecal opioid placed by the surgeon before closure is used in some units and adds sedation and retention to a patient already flat in bed.
+
+Remifentanil at the rates this operation needs produces a hyperalgesic first hour if nothing replaces it. Give the transition opioid before closure finishes, and consider a ketamine infusion at 0.1-0.2 mg/kg/h in the opioid-tolerant patient, started after baselines so that its effect on signals is constant.
+
+Neuropathic pain is the specific problem. Burning or electric dysaesthesia in a band at the level of the myelotomy or in the limbs below it, appearing in the first days, reflects dorsal column and dorsal horn injury. It is treated with a gabapentinoid or a tricyclic, titrated slowly in a patient who is already unsteady, and explained early. Opioid escalation for this pain produces sedation without relief.
+
+Escalation: severe new back and leg pain with deteriorating power in the first 24 hours is a haematoma. A headache that is worse sitting and better flat is a leak or low pressure. Fever with neck stiffness after day 3 is meningitis, chemical or bacterial, and needs a lumbar puncture decision by the surgeon.
+
+## Pitfalls and variants
+
+- Cervical and cervicomedullary tumours. Post-operative respiratory failure, bulbar weakness and sleep apnoea are real; plan a monitored bed and a low threshold for delayed extubation.
+- Haemangioblastoma. Vascular, sometimes embolised first, and part of von Hippel-Lindau disease in some patients, in which a phaeochromocytoma must be excluded before any anaesthetic.
+- The patient with no recordable baselines. If motor function is already grade 2 or worse the muscle responses may be absent; the D-wave may still be present and the anaesthetic is unchanged.
+- Children with tethered cord. The same monitoring rules at smaller doses; latex precautions; previous myelomeningocele repair means a scarred field and a shunt to ask about.
+- Kyphosis after laminectomy. Younger patients and cervical or junctional levels may get laminoplasty or instrumentation, which moves the pain score towards a 4 and the plan towards the [posterior cervical fusion](posterior-cervical-fusion.html) or [posterior lumbar fusion](posterior-lumbar-fusion.html) cards.
+- Volatile requested for hypertension. Treat pressure with the opioid or a vasodilator infusion, not by adding sevoflurane halfway through a monitored resection.
+- Transient post-operative deficit. Expected after intramedullary surgery and predicted by the end-of-case signals; the surgeon's explanation to the patient should match what you tell the ward.
+
+## Key sources
+
+Monitoring in intramedullary surgery rests on one historical-control study and on consistent series since; no randomised trial exists or is likely. The bed rest evidence is two retrospective comparisons, one of them confounded, and it does not support long immobilisation. The anaesthetic requirements for evoked potentials are consensus statements. Analgesia has no procedure-specific trials: the plan is extrapolated from non-instrumented laminectomy, and the cautions about NSAIDs and blocks are surgical convention.
