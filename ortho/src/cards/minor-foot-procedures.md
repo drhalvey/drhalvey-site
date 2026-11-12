@@ -6,12 +6,12 @@ aka: ["Morton's neuroma", "interdigital neuroma", "neurectomy", "plantar fasciit
 pain:
   score: 1
   trajectory: [1, 3, 2, 2, 1]
-  mechanism: nerve
-  mechanism_text: "A short incision through skin and fascia to divide a ligament, a nerve, a band of plantar fascia or an aponeurosis, with no bone cut and nothing repaired under tension. Neurectomy leaves a cut nerve end (numbness intended, stump pain occasional); fasciotomy and recession leave a soreness on weight-bearing. The patient walks on the wound the same day, which is most of the discomfort"
+  mechanism: surface
+  mechanism_text: "A short incision through skin and fascia to divide a ligament, a nerve, a band of plantar fascia or an aponeurosis, with no bone cut and nothing repaired under tension. Neurectomy leaves a cut nerve end (numbness intended, stump pain occasional); fasciotomy and recession leave a soreness on weight-bearing. The patient walks on the wound the same day, which is most of the discomfort. Tagged surface because skin and fascia are all that most of these divide and the plan is the surface plan (a block as the anaesthetic only, simple analgesia afterwards); nerve is the secondary mechanism for neurectomy and tarsal tunnel release, and muscle for gastrocnemius recession"
   rebound_risk: low
 block:
   primary: "Selective ankle block matched to the incision (tibial for anything plantar, superficial peroneal for dorsal forefoot, both for a dorsal neurectomy) with a short- or intermediate-acting agent, awake or with light sedation; or general anaesthesia with the surgeon's infiltration"
-  family: sciatic-popliteal
+  family: ankle-block
   catheter: "no"
   catheter_text: "Nothing about a score 1 operation justifies one"
   alternatives: ["Surgeon's local infiltration under a brief general anaesthetic", "Digital or metatarsal ring block with plain local anaesthetic for nail and single-toe procedures", "Popliteal sciatic block only for the patient who needs a calf or thigh cuff and cannot have a general anaesthetic"]
@@ -45,7 +45,7 @@ sources:
     note: "Scar tenderness was more frequent after a plantar incision (16.7% against 6.2%); reoperation and overall complication rates did not differ between approaches"
   - title: "Ward L, Mercer NP, Azam MT, Hoberman A, et al. Outcomes of endoscopic treatment for plantar fasciitis: a systematic review. Foot Ankle Spec 2025;18:193-201"
     url: "https://doi.org/10.1177/19386400221129167"
-    note: "994 patients in level IV studies: mean function score improved from 55.7 to 89.6 after endoscopic release; complications in 8.9%, the commonest being recurrent pain in 4.2%"
+    note: "26 level IV studies, 978 feet: mean function score improved from 55.7 to 89.6 after endoscopic release; complications in 88 of 994 (8.9%), the commonest being recurrent pain in 4.2%"
   - title: "Finsen V, Kasseth AM. Tourniquets in forefoot surgery: less pain when placed at the ankle. J Bone Joint Surg Br 1997;79:99-101"
     url: "https://doi.org/10.1302/0301-620x.79b1.7069"
     note: "50 forefoot operations under ankle block randomised to an ankle or calf cuff at 100 mmHg above systolic: the ankle cuff gave the same bloodless field with significantly less discomfort at 10, 20 and 30 min and no more nerve symptoms at 10 weeks"
@@ -77,7 +77,7 @@ The rest are variations on small-incision soft-tissue surgery: tarsal tunnel rel
  one toe / nail         digital nerves          nail bed             digital ring block
 ```
 
-The pain logic is brief. None of these cuts bone or tensions a repair; the mechanism is a divided nerve or fascia, incisional soreness, and the fact that the wound is walked on. Simple analgesia covers it. The exceptions are known in advance: these patients have often had months or years of pain before surgery, a cut nerve occasionally forms a painful stump, and a small proportion of foot operations of any size are followed by a regional pain syndrome.
+The pain logic is brief. None of these cuts bone or tensions a repair; the mechanism is incisional soreness over a divided fascia or nerve, and the fact that the wound is walked on. Simple analgesia covers it, which is the surface plan in [why operations hurt](../b/b01-why-operations-hurt.html); the nerve mechanism matters only for the neurectomy and the tarsal tunnel release, and there it shows as the patient's existing neuropathic pain, not as a need for new anti-neuropathic drugs. The exceptions are known in advance: these patients have often had months or years of pain before surgery, a cut nerve occasionally forms a painful stump, and a small proportion of foot operations of any size are followed by a regional pain syndrome.
 
 ## Steps
 
@@ -119,7 +119,7 @@ The pain logic is brief. None of these cuts bone or tensions a repair; the mecha
 
 ### 10. Dressing, shoe and discharge
 **Why:** Skin sutures, a padded dressing, cuff down, a stiff-soled shoe, heel weight-bearing at once and sutures out at two weeks.
-**Anaesthesia:** Paracetamol and an NSAID before leaving, with instructions to continue both for three days, and at most a few doses of a weak opioid. A patient with a short-acting block regains sensation in the day unit or soon after, which is the intention: pain arrives gradually while they are awake and have taken something. Elevation for the first two days does more for a throbbing foot than any tablet.
+**Anaesthesia:** Paracetamol and an NSAID before leaving, with instructions to continue both for three days. An opioid is not part of the plan for a score 1 operation; a few doses of a weak opioid are kept for the variants that score 2 (gastrocnemius recession, accessory navicular, sesamoid) and for the patient with an established pain problem. A patient with a short-acting block regains sensation in the day unit or soon after, which is the intention: pain arrives gradually while they are awake and have taken something. Elevation for the first two days does more for a throbbing foot than any tablet.
 
 ## Pain plan
 
@@ -134,7 +134,7 @@ Escalation triggers: a white or blue toe under the dressing is a retained digita
 ## Pitfalls and variants
 
 - The forgotten toe tourniquet. Counted, announced and documented.
-- Awake with a proximal cuff. An ankle block does not cover a calf or thigh tourniquet; decide the cuff before the technique.
+- Awake with a proximal cuff. An ankle block does not anaesthetise the tissue under any cuff: an ankle cuff is tolerated for about 30 min, a calf cuff for 20-30 min, and a thigh cuff needs a general anaesthetic; decide the cuff before the technique.
 - Plantar infiltration. Painful and slow to spread in thick skin; a tibial block is the better way to numb the sole.
 - Adrenaline in digits and web spaces. Avoided, particularly with vascular disease, diabetes or Raynaud phenomenon.
 - Two operations at once. Bilateral neurectomies or a recession with a fasciotomy make a 45-min case and exceed awake cuff tolerance.

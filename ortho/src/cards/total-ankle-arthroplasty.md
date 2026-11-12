@@ -60,7 +60,7 @@ sources:
     note: "Case series and literature review: same-day discharge after ankle replacement on a standardised multimodal pathway, with no readmissions or major complications and 95% of patients recommending the pathway; all supporting studies level IV"
   - title: "Gerbershagen HJ, Aduckathil S, van Wijck AJM, Peelen LM, Kalkman CJ, Meissner W. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
     url: "https://doi.org/10.1097/ALN.0b013e31828866b3"
-    note: "50,523 patients, regional techniques rarely used: open reduction of the calcaneus first and foot arthrodesis seventh of 179 procedures for day 1 pain; 22 of the 40 most painful operations were orthopaedic or trauma procedures on the extremities"
+    note: "50,523 patients, regional techniques rarely used: open reduction of the calcaneus first and foot arthrodesis among the most painful of 179 procedures for day 1 pain; 22 of the 40 most painful operations were orthopaedic or trauma procedures on the extremities"
 ---
 
 ## What the surgeon is doing and why
@@ -77,7 +77,7 @@ That price follows from the approach. The standard operation is anterior: a 12-1
 4. Inserts trial components and tests whether the ankle reaches 10 degrees of dorsiflexion and sits level. If it does not, the gastrocnemius aponeurosis is divided through a separate medial calf incision or the Achilles tendon is lengthened percutaneously; a varus ankle gets a deltoid release, a valgus or unstable one a lateral ligament repair, and a malaligned heel a calcaneal osteotomy.
 5. Impacts a metal tibial tray and a metal talar dome, usually uncemented, with a polyethylene bearing between them that is either locked to the tibia (fixed-bearing) or free (mobile-bearing).
 
-The pain logic is bone first. Two sawn cancellous surfaces with press-fit implants hurt like any arthroplasty for two to three days and then fade, because the pre-operative pain generator has been removed. Around that sit a muscle mechanism (the calf lengthening, which patients feel as a cramp behind the leg) and the swollen anterior soft tissues. Foot arthrodesis ranked seventh of 179 procedures for day 1 pain in a cohort that rarely used blocks, and ankle replacement, which was not listed separately, involves the same bone and more dissection. The whole territory is sciatic apart from the medial side, so a popliteal catheter with a saphenous block covers it; the score with that plan in place is 4, and the worst day is the one on which the catheter comes out.
+The pain logic is bone first. Two sawn cancellous surfaces with press-fit implants hurt like any arthroplasty for two to three days and then fade, because the pre-operative pain generator has been removed. Around that sit a muscle mechanism (the calf lengthening, which patients feel as a cramp behind the leg) and the swollen anterior soft tissues. Foot arthrodesis ranked among the most painful of 179 procedures for day 1 pain in a cohort that rarely used blocks, and ankle replacement, which was not listed separately, involves the same bone and more dissection. The whole territory is sciatic apart from the medial side, so a popliteal catheter with a saphenous block covers it; the score with that plan in place is 4, and the worst day is the one on which the catheter comes out.
 
 ## Steps
 

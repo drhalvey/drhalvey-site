@@ -45,7 +45,7 @@ sources:
     note: "Consensus statement renaming adult acquired flatfoot as progressive collapsing foot deformity, a three-dimensional deformity of hindfoot valgus, forefoot abduction and midfoot varus, staged as flexible or rigid with the deformity classes that determine which procedures are combined"
   - title: "Gerbershagen HJ, Aduckathil S, van Wijck AJM, Peelen LM, Kalkman CJ, Meissner W. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
     url: "https://doi.org/10.1097/ALN.0b013e31828866b3"
-    note: "50,523 patients, regional techniques rarely used: open reduction of the calcaneus ranked first and foot arthrodesis seventh of 179 procedures for day 1 pain; 22 of the 40 most painful operations were orthopaedic or trauma procedures on the extremities"
+    note: "50,523 patients, regional techniques rarely used: open reduction of the calcaneus ranked first and foot arthrodesis among the most painful of 179 procedures for day 1 pain; 22 of the 40 most painful operations were orthopaedic or trauma procedures on the extremities"
   - title: "Ma HH, Chou TA, Tsai SW, Chen CF, et al. The efficacy and safety of continuous versus single-injection popliteal sciatic nerve block in outpatient foot and ankle surgery: a systematic review and meta-analysis. BMC Musculoskelet Disord 2019;20:441"
     url: "https://doi.org/10.1186/s12891-019-2822-7"
     note: "Five randomised trials: continuous popliteal block gave lower pain scores at 24 and 48 h than a single injection, with no infections or neuropathic symptoms and catheter leakage in 13.9%"
@@ -89,7 +89,7 @@ A rigid flatfoot gets a [triple fusion](ankle-hindfoot-fusion.html) instead.
    tendon, unloaded: 2-3      bone x 2-3 + tendon: 4
 ```
 
-The pain logic differs as much as the operations do. An Achilles repair is a tendon mechanism, but the repair is immobilised in equinus with the tendon slack and nothing loads it, so it is sore rather than severe: a 2-3 that settles in days. An insertional reconstruction adds resected bone and anchors. A flatfoot reconstruction is two or three osteotomies, a tendon transfer under tension in a bone tunnel, and three incisions on both sides of the foot and the calf; it behaves like a hindfoot fusion without the joint preparation, and foot arthrodesis ranked seventh of 179 procedures for day 1 pain in the cohort without blocks. It sets the card's score of 4.
+The pain logic differs as much as the operations do. An Achilles repair is a tendon mechanism, but the repair is immobilised in equinus with the tendon slack and nothing loads it, so it is sore rather than severe: a 2-3 that settles in days. An insertional reconstruction adds resected bone and anchors. A flatfoot reconstruction is two or three osteotomies, a tendon transfer under tension in a bone tunnel, and three incisions on both sides of the foot and the calf; it behaves like a hindfoot fusion without the joint preparation, and foot arthrodesis ranked among the most painful of 179 procedures for day 1 pain in the cohort without blocks. It sets the card's score of 4.
 
 ## Steps
 
