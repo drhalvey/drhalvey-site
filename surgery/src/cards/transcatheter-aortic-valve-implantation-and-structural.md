@@ -70,7 +70,7 @@ sources:
     note: "COAPT, 614 patients with secondary mitral regurgitation: heart failure hospitalisation 35.8% vs 67.9% per patient-year, two-year mortality 29.1% vs 46.1%, freedom from device complications 96.6% at one year"
 ---
 
-## What the operator is doing and why
+## What the surgeon is doing and why
 
 Transcatheter aortic valve implantation treats aortic stenosis without removing the valve. A tissue valve sewn inside a metal stent frame is crimped onto a catheter, passed up the aorta from the femoral artery, positioned across the diseased valve and expanded. The frame pushes the calcified native cusps aside against the wall of the root and holds itself there by radial force. There is no bypass, no arrest and no suture line; the calcium that a surgeon would cut out is what the device grips.
 
