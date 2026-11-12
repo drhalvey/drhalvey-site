@@ -82,7 +82,7 @@ Three different problems share this card because they share one piece of physics
 
 An inhaled foreign body is a disease of toddlers: a peanut, a seed, a piece of carrot or a small plastic part goes down during a laugh or a fall. Most pass the larynx and lodge in a main or lobar bronchus, more often the right in older children. A proximal object in the larynx or trachea threatens asphyxia; a distal one causes a ball-valve with air trapping, then collapse and pneumonia over days. The surgeon removes it with a rigid ventilating bronchoscope: a straight metal tube with a light, a telescope, a side arm for the breathing circuit and a channel for optical forceps. The object is grasped and, because it is usually wider than the scope's lumen, forceps, scope and object are withdrawn together through the cords.
 
-Epiglottitis is a bacterial cellulitis of the epiglottis and aryepiglottic folds. In children it was the classic airway emergency before Haemophilus influenzae type b vaccination and is now rare; a swollen, cherry-red epiglottis sits over the inlet of a small larynx and can close it within hours. In adults the same infection (supraglottitis) is commoner than it was, the airway is larger, and most patients are managed with antibiotics, steroid and observation. The surgeon's role is to examine with a nasendoscope where that is safe, to stand ready with a rigid scope and a tracheostomy set while the airway is secured, and to drain an abscess if one has formed.
+Epiglottitis is a bacterial cellulitis of the epiglottis and aryepiglottic folds. In children it was the classic airway emergency before Haemophilus influenzae type b vaccination and is now rare; a swollen, cherry-red epiglottis sits over the inlet of a small larynx and can close it within hours. In adults the same infection (supraglottitis) is now the usual presentation, the airway is larger, and most patients are managed with antibiotics, steroid and observation. The surgeon's role is to examine with a nasendoscope where that is safe, to stand ready with a rigid scope and a tracheostomy set while the airway is secured, and to drain an abscess if one has formed.
 
 The adult obstructed airway is usually a laryngeal or hypopharyngeal tumour, sometimes bilateral cord palsy, angioedema, a deep neck infection or a subglottic stenosis. The surgeon will debulk, dilate, biopsy or bypass it. The decision that matters is how the airway is first secured.
 
@@ -95,13 +95,13 @@ There is no pain logic of consequence: no incision, score 1.
 **Anaesthesia:** For a foreign body the three questions from the largest literature review are what was inhaled (organic material swells and fragments; a button battery or sharp object is urgent in itself), where it is (history of choking then wheeze and reduced air entry on one side means bronchial; stridor, voice change or cyanotic episodes mean laryngeal or tracheal) and when (hours, or days with fever and consolidation). For any stridor, the phase gives the level:
 
 ```
- Level of narrowing        Sound                 Voice      Front-of-neck rescue
- ------------------------  --------------------  ---------  ---------------------
- Supraglottic / pharynx    inspiratory, snoring  muffled    yes (below the lesion)
- Glottic                   inspiratory stridor   hoarse     yes
- Subglottic / upper        biphasic stridor      normal     only if below the
-   trachea                                                    lesion can be reached
- Lower trachea / bronchi   expiratory wheeze     normal     no: rigid bronchoscope
+ Level of narrowing       Sound                 Voice    Front-of-neck rescue
+ -----------------------  --------------------  -------  ----------------------
+ Supraglottic, pharynx    inspiratory, snoring  muffled  yes (below the lesion)
+ Glottic                  inspiratory stridor   hoarse   yes
+ Subglottic, upper        biphasic stridor      normal   only if the neck can
+   trachea                                                 be entered below it
+ Lower trachea, bronchi   expiratory wheeze     normal   no: rigid bronchoscope
 ```
 
 Stridor at rest, sitting forward, drooling, use of accessory muscles, a quiet exhausted child or a falling saturation mean the airway is critical and investigation stops. A stable patient gets a chest radiograph (expiratory film or decubitus views for air trapping) or, in adults, nasendoscopy and CT, both of which change the plan more than anything you can do at the bedside.
@@ -140,7 +140,7 @@ Stridor at rest, sitting forward, drooling, use of accessory muscles, a quiet ex
 
 ### 10. Epiglottitis in an adult
 **Why:** Most adults can be watched; the surgeon grades the swelling by nasendoscopy and repeats it.
-**Anaesthesia:** In a meta-analysis of over 10,000 adults about one in ten now needs airway intervention, but when intubation is attempted it fails in about 1 in 25, an order of magnitude above ordinary practice. Those who need a tube are the ones with stridor, drooling, inability to lie flat, rapid onset and an abscess. Options are awake tracheal intubation, sitting, with careful topicalisation and a small tube (over half the described cases were managed awake); induction in theatre with the surgeon ready, by an operator with a videolaryngoscope and a clear limit on attempts; or tracheostomy under local anaesthesia for the worst. High-flow nasal oxygen extends the time available for each. Whichever is chosen, the front of the neck is marked and the scalpel is open before starting.
+**Anaesthesia:** In a meta-analysis of over 10,000 adults about one in ten now needs airway intervention, but when intubation is attempted it fails in about 1 in 25, far above the rate in ordinary practice. Those who need a tube are the ones with stridor, drooling, inability to lie flat, rapid onset and an abscess. Options are awake tracheal intubation, sitting, with careful topicalisation and a small tube (over half the described cases were managed awake); induction in theatre with the surgeon ready, by an operator with a videolaryngoscope and a clear limit on attempts; or tracheostomy under local anaesthesia for the worst. High-flow nasal oxygen extends the time available for each. Whichever is chosen, the front of the neck is marked and the scalpel is open before starting.
 
 ### 11. The adult with an obstructing lesion
 **Why:** The surgeon knows from the clinic what the tumour or stenosis looks like and what will be done to it.

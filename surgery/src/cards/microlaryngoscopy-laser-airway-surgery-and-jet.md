@@ -96,17 +96,17 @@ The pain logic is trivial by comparison: a small mucosal wound and pressure from
 **Anaesthesia:** The four options, with what each costs.
 
 ```
- Technique                Surgeon's view    Your control     Main hazard
- -----------------------  ----------------  ---------------  ---------------------
- Microlaryngeal tube      posterior third   full; capnogram  fire if laser; view
-   (5.0-6.0 mm, cuffed)     hidden
- Tubeless, high-flow      complete          oxygenation      rising CO2; time
-   nasal oxygen, apnoea                       only             limit; soiling
- Intermittent apnoea      complete while    full between     laryngospasm; trauma
-   (tube in and out)        tube is out       apnoeas          of repeated passes
- Jet ventilation          near complete     oxygenation;     barotrauma; no
-   (supra-/subglottic,                        CO2 estimated    protection; fire
-   transtracheal)                                              via catheter
+ Technique               Surgeon's view   Your control     Main hazard
+ ----------------------  ---------------  ---------------  --------------------
+ Microlaryngeal tube     posterior third  full; capnogram  fire if laser; view
+   (5.0-6.0 mm, cuffed)    hidden
+ Tubeless, high-flow     complete         oxygenation      rising CO2; time
+   nasal oxygen, apnoea                     only             limit; soiling
+ Intermittent apnoea     complete while   full between     laryngospasm; trauma
+   (tube in and out)       tube is out      apnoeas          of repeated passes
+ Jet ventilation         near complete    oxygenation;     barotrauma; no
+   (supra-/subglottic,                      CO2 estimated    protection; fire
+   transtracheal)                                            via catheter
 ```
 
 A microlaryngeal tube is long, narrow and has a full-size cuff; it is the default for anterior lesions, for reflux and obesity, and whenever you are unsure. Tubeless apnoeic oxygenation with high-flow nasal oxygen at 50-70 L/min, the jaw held forward or the laryngoscope in place, is established practice: in the two foundational series apnoea of 14 and 22.5 minutes was sustained without desaturation below 90%, while carbon dioxide rose at 0.15-0.24 kPa/min. That rise is the clock. Obesity shortens the time available, and the airway is unprotected throughout.
