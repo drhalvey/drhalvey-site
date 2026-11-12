@@ -13,7 +13,7 @@ block:
   primary: "Femoral nerve or fascia iliaca block on arrival and repeated as a single shot for surgery, with spinal anaesthesia or general anaesthesia chosen as for a hip fracture"
   family: lumbar-plexus-femoral
   catheter: selective
-  catheter_text: "A femoral or fascia iliaca catheter for the patient waiting more than a day for theatre, the opioid-intolerant or delirious older patient, and the complex articular reconstruction; single shot for the straightforward extra-articular fracture fixed within 36 h"
+  catheter_text: "A femoral or fascia iliaca catheter for the patient waiting more than a day for theatre, the opioid-intolerant or delirious older patient, and the complex articular reconstruction; single shot for the simple extra-articular fracture fixed within 36 h"
   alternatives: ["Spinal anaesthesia as the primary anaesthetic in the frail older patient, with a block sited first to allow positioning", "General anaesthesia with a single-shot block for the long articular reconstruction or the anticoagulated patient", "Surgeon's periarticular and wound infiltration as a supplement"]
   neuraxial: option
 position: supine

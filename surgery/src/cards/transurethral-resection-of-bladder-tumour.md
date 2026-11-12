@@ -10,11 +10,11 @@ pain:
   mechanism_text: "A diathermy crater in the bladder wall down to detrusor, a catheter balloon on the trigone, and detrusor spasm; chemical cystitis for a few days if chemotherapy is instilled. No incision"
   rebound_risk: low
 block:
-  primary: "Obturator nerve block with spinal anaesthesia for lateral wall tumours, placed for immobility and not for pain; general anaesthesia with full neuromuscular block is the alternative. Analgesia is simple and systemic"
+  primary: "For lateral wall tumours, either general anaesthesia with deep neuromuscular block during the lateral wall resection or spinal anaesthesia with an obturator nerve block; both are for immobility and not for pain. Analgesia is simple and systemic"
   family: lumbar-plexus-femoral
   catheter: "no"
   catheter_text: "No indication; the obturator block is needed only while the loop is on the lateral wall"
-  alternatives: ["General anaesthesia with a tracheal tube or supraglottic airway and complete neuromuscular block during lateral wall resection", "Spinal alone for dome, posterior wall and trigone tumours", "Surgical workarounds: bipolar energy, lower current, partial bladder filling, short bursts"]
+  alternatives: ["Spinal anaesthesia with an ultrasound-guided obturator nerve block on the tumour side, where a spinal is preferred", "Spinal alone for dome, posterior wall and trigone tumours", "Surgical workarounds: bipolar energy, lower current, partial bladder filling, short bursts"]
   neuraxial: option
 position: lithotomy
 position_text: "Lithotomy; the legs must be free to be seen and, with a spinal, the thigh accessible for an obturator block"
@@ -28,7 +28,7 @@ los: "Day case or one night with a catheter"
 day_case: "yes"
 extras:
   - label: "Neuromuscular block"
-    value: "The decision of the case: under general anaesthesia a lateral wall tumour needs a train-of-four count of zero while the loop is on it; a spinal does not block the obturator nerve where the current reaches it"
+    value: "The decision of the case: under general anaesthesia a lateral wall tumour needs deep block, a train-of-four count of zero with a post-tetanic count of 1-2, while the loop is on it; a spinal does not block the obturator nerve where the current reaches it"
   - label: "Airway"
     value: "Supraglottic airway for most; tracheal tube if deep paralysis is planned in a patient with reflux or obesity"
   - label: "Irrigation"
@@ -53,7 +53,7 @@ sources:
     note: "Eight randomised trials, 635 patients: spinal plus obturator block gave less obturator reflex (0.22, 95% CI 0.13-0.36) and less perforation (0.24, 95% CI 0.11-0.53) than spinal alone"
   - title: "Wu J, Gao Y, Xiong Z, et al. Comparison of different methods of obturator nerve block in transurethral resection of bladder tumors: a systematic review and network meta-analysis. Cancer Med 2023;12:5420-5435"
     url: "https://doi.org/10.1002/cam4.5364"
-    note: "Network meta-analysis of block approaches after spinal: all reduce the reflex; ultrasound-guided proximal block ranked best for preventing perforation"
+    note: "Network meta-analysis of obturator block approaches after spinal: the nerve-stimulator-guided distal block ranked best for preventing the obturator reflex and the ultrasound-guided proximal block ranked best for preventing bladder perforation; the authors conclude in favour of the distal stimulator-guided block"
   - title: "Chou CT, Yu SW, Lin TC. Systematic review and meta-analysis of inguinal versus classic obturator nerve block. Asian J Anesthesiol 2022;60:1-10"
     url: "https://doi.org/10.6859/aja.202203_60(1).0001"
     note: "Five trials, 312 patients: the inguinal approach had a higher success rate (RR 1.15), fewer needle passes and a shorter procedure time than the classic pubic approach"
@@ -91,7 +91,7 @@ The pain logic is modest. There is no wound. The pain is a mucosal burn in a dis
 
 ### 4. Obturator nerve block (spinal cases)
 **Why:** To stop the adductor response at source for the 10-20 minutes the loop will be on the lateral wall.
-**Anaesthesia:** Place it after the spinal, with ultrasound, at the inguinal crease (anterior and posterior divisions between the adductor fascial planes) or more proximally in the plane between pectineus and obturator externus. The inguinal approach has a higher success rate and fewer needle passes than the classic pubic tubercle approach in pooled trials, and a network meta-analysis ranked the ultrasound-guided proximal approach best for preventing perforation. Confirm it: loss of adductor strength cannot be tested under a spinal, so the evidence is spread on ultrasound and, if a stimulator is used, loss of twitch. A block is not a guarantee. Ask the surgeon to test with a brief low-power touch before committing the loop.
+**Anaesthesia:** Place it after the spinal, with ultrasound, at the inguinal crease (anterior and posterior divisions between the adductor fascial planes) or more proximally in the plane between pectineus and obturator externus. The inguinal approach has a higher success rate and fewer needle passes than the classic pubic tubercle approach in pooled trials, and a network meta-analysis ranked the nerve-stimulator-guided distal block best for preventing the reflex itself and the ultrasound-guided proximal block best for preventing perforation, so no one approach wins on both and the one you do reliably is the one to use. Confirm it: loss of adductor strength cannot be tested under a spinal, so the evidence is spread on ultrasound and, if a stimulator is used, loss of twitch. A block is not a guarantee. Ask the surgeon to test with a brief low-power touch before committing the loop.
 
 ### 5. Cystoscopy and mapping
 **Why:** All tumours are counted and located, the ureteric orifices identified, and suspicious flat areas noted for biopsy. Some units use blue-light fluorescence to show flat disease.
@@ -99,11 +99,11 @@ The pain logic is modest. There is no wound. The pain is a mucosal burn in a dis
 
 ### 6. Resection of the tumour and its base
 **Why:** The tumour is shaved to the wall, then the base and a muscle sample are taken. The surgeon keeps the bladder only half full during deep cuts so the wall is thicker and further from the nerve.
-**Anaesthesia:** When the loop moves to the lateral wall, the neuromuscular block must be complete: check the train-of-four count is zero at the ulnar nerve and remember that the adductors are no more sensitive than the hand. Give the top-up before the surgeon gets there, not after the first jerk, and say aloud that the patient is paralysed. If the leg kicks, the surgeon stops; ask whether the wall is intact. Signs of perforation are a bladder that will not distend, irrigant going in and not coming back, a tense lower abdomen, rising airway pressure, and in the awake patient sudden lower abdominal pain, or shoulder-tip pain and nausea if the breach is intraperitoneal. Resection near a ureteric orifice may end with a stent.
+**Anaesthesia:** When the loop moves to the lateral wall, the neuromuscular block must be deep, and a train-of-four alone cannot show that: a count of zero at the adductor pollicis is the minimum, not the guarantee, because the loop is a strong direct stimulus to the nerve and the adductors are no more sensitive to relaxant than the hand. Use the post-tetanic count and aim for 1-2 (the definition of deep block; no trial sets the threshold for this operation). Give the top-up before the surgeon gets there, not after the first jerk, and say aloud that the patient is paralysed. If the leg kicks, the surgeon stops; ask whether the wall is intact. Signs of perforation are a bladder that will not distend, irrigant going in and not coming back, a tense lower abdomen, rising airway pressure, and in the awake patient sudden lower abdominal pain, or shoulder-tip pain and nausea if the breach is intraperitoneal. Resection near a ureteric orifice may end with a stent.
 
 ### 7. Haemostasis, chip evacuation and catheter
 **Why:** The crater is coagulated, chips are washed out and sent as separate specimens, and a catheter is left if the resection was large or deep. Small resections go home without one.
-**Anaesthesia:** Reverse the neuromuscular block fully against a quantitative monitor; a short case with a late top-up is the setting for residual paralysis in a patient with poor lungs. Paracetamol IV now; an NSAID if renal function and the surgeon's view of bleeding permit.
+**Anaesthesia:** Reverse the neuromuscular block fully against a quantitative monitor; a short case with a late top-up is the setting for residual paralysis in a patient with poor lungs. A block at a post-tetanic count is beyond neostigmine: it needs sugammadex at the deep-block dose (4 mg/kg IV) or time, so plan rocuronium and sugammadex, or accept waiting for the train-of-four to return. Paracetamol IV now; an NSAID if renal function and the surgeon's view of bleeding permit.
 
 ### 8. Recovery and intravesical chemotherapy
 **Why:** The single post-operative instillation works only if given early, so it is often run into the catheter in recovery and left for an hour before draining.
@@ -123,7 +123,7 @@ Escalation triggers are surgical. Severe lower abdominal pain after resection is
 
 ## Pitfalls and variants
 
-- The obturator jerk. Lateral wall, inferolateral and peri-orifice tumours. Complete paralysis or a confirmed block, plus the surgeon's own measures (bipolar energy, lower power, intermittent bursts, a half-full bladder). None alone is fully reliable; combine them.
+- The obturator jerk. Lateral wall, inferolateral and peri-orifice tumours. Deep paralysis measured by post-tetanic count or a confirmed block, plus the surgeon's own measures (bipolar energy, lower power, intermittent bursts, a half-full bladder). None alone is fully reliable; combine them.
 - Spinal alone for a lateral tumour. The classic error. The block is proximal to where the current hits the nerve.
 - Perforation. Extraperitoneal is commoner and is suspected from poor distension and a tense suprapubic area. Intraperitoneal gives diaphragmatic irritation and a rising abdominal girth, and with glycine irrigation a delayed absorption syndrome from the peritoneal surface, so check sodium.
 - Bleeding and the emergency variant. Large tumours and patients on antithrombotics can bleed into clot retention; the patient returning for a washout is the same hypovolaemic, anaemic, full-bladder emergency described on the prostate card. Bleeding from radiation cystitis and advanced tumour brings frail patients for repeated washouts and is the scenario most likely to need blood and an arterial line.

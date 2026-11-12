@@ -4,15 +4,15 @@ title: "Gastrectomy"
 subtitle: "Distal, subtotal and total gastrectomy with D2 lymphadenectomy and reconstruction; open, laparoscopic and robotic; emergency resection for bleeding or perforation"
 aka: ["total gastrectomy", "subtotal gastrectomy", "distal gastrectomy", "partial gastrectomy", "D2 gastrectomy", "Billroth I", "Billroth II", "Roux-en-Y reconstruction", "oesophagojejunostomy", "gastric cancer surgery", "GIST resection", "wedge gastrectomy"]
 pain:
-  score: 4
-  trajectory: [4, 6, 5, 4, 3]
+  score: 5
+  trajectory: [4, 6, 6, 5, 4]
   mechanism: abdominal-wall
-  mechanism_text: "An upper midline or bilateral subcostal incision through fascia and muscle directly below the costal margin, loaded by every breath and cough for a week; beneath it a wide retroperitoneal lymph node dissection around the coeliac axis, two or three anastomoses and drains. The laparoscopic operation reduces this to ports and a 4-6 cm extraction wound and behaves like a 3"
+  mechanism_text: "An upper midline or bilateral subcostal incision through fascia and muscle directly below the costal margin, loaded by every breath and cough for a week; beneath it a wide retroperitoneal lymph node dissection around the coeliac axis, two or three anastomoses and drains. The laparoscopic operation reduces this to ports and a 4-6 cm extraction wound and scores 3. The score of 5 is for the open operation"
   rebound_risk: moderate
 block:
   primary: "Open surgery: thoracic epidural at T7-T9, or bilateral rectus sheath or subcostal TAP catheters with intrathecal morphine where an epidural is declined or contraindicated. Laparoscopic surgery: intrathecal morphine or bilateral subcostal TAP blocks with port-site infiltration and no catheter"
   family: neuraxial
-  catheter: selective
+  catheter: routine
   catheter_text: "A continuous technique (epidural or fascial plane catheters) for every open gastrectomy; not needed after laparoscopic or robotic resection unless converted"
   alternatives: ["Bilateral rectus sheath catheters plus PCA", "Bilateral subcostal TAP catheters for a rooftop incision", "Intrathecal morphine 150-300 micrograms with PCA", "Continuous wound infusion catheter placed by the surgeon", "IV lidocaine infusion for laparoscopic surgery where no regional technique is used"]
   neuraxial: option
@@ -29,7 +29,7 @@ day_case: "no"
 drugs:
   antibiotic: "Cefazolin 2 g IV at induction, with metronidazole 500 mg IV where there is obstruction, achlorhydria or bowel is opened beyond the stomach; re-dose at 4 hours"
   txa: "Not routine; TXA 1 g IV for major haemorrhage"
-  vte: "Intermittent pneumatic compression; low molecular weight heparin timed around the epidural and extended to 28 days after cancer resection"
+  vte: "Intermittent pneumatic compression; low molecular weight heparin extended to 28 days after cancer resection. With an epidural in place, each dose and the catheter removal are separated by the minimum intervals in the current ASRA guideline or local policy"
   antiemetic: "Ondansetron 4 mg IV and dexamethasone 4-8 mg IV; a nasogastric or nasojejunal tube is surgeon dependent and not routine in enhanced recovery pathways"
 extras:
   - label: "Fasting and aspiration risk"
@@ -59,6 +59,9 @@ sources:
   - title: "Gerbershagen HJ, et al. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
     url: "https://doi.org/10.1097/ALN.0b013e31828866b3"
     note: "Major open abdominal operations with epidural analgesia often ranked below minor operations on day 1 pain: the technique, not the size of the operation, set the score"
+  - title: "Kopp SL, Vandermeulen E, McBane RD, Perlas A, Leffert L, Horlocker T. Regional anesthesia in the patient receiving antithrombotic or thrombolytic therapy: American Society of Regional Anesthesia and Pain Medicine evidence-based guidelines (fifth edition). Reg Anesth Pain Med 2026;51:1233-1261"
+    url: "https://doi.org/10.1136/rapm-2024-105766"
+    note: "The current North American guideline on timing of neuraxial and deep blocks and catheter removal around anticoagulants; cited as the reference for intervals, which are not reproduced on this card"
 ---
 
 ## What the surgeon is doing and why
@@ -75,7 +78,7 @@ The node dissection is the long, bloody and physiologically active part. The sur
 
 The approach is the variable that changes your plan most. In the KLASS-01 trial of 1,416 patients with early distal cancers, laparoscopic resection had fewer complications overall than open (13.0% against 19.9%) and fewer wound complications. Laparoscopic and robotic gastrectomy are now standard for distal resections in many units and increasingly for total gastrectomy. The open operation, through an upper midline or bilateral subcostal (rooftop) incision, remains for bulky tumours, multivisceral resection, hostile abdomens and emergencies.
 
-The pain logic: for open surgery the dominant mechanism is abdominal wall, and it is the worst version of it. The incision sits immediately below the costal margin, the upper recti and the costal attachments of the diaphragm move with each breath, and a fixed retractor has held the costal margins apart for hours. Pain is severe on coughing for five to seven days and the consequence is basal atelectasis and pneumonia. A rooftop incision cuts both recti transversely and behaves at the top of the range, closer to a 5. Under the wall is a visceral and retroperitoneal component from the coeliac dissection, felt as deep epigastric and back pain. The laparoscopic operation removes most of the wall component and leaves a moderate, short course.
+The pain logic: for open surgery the dominant mechanism is abdominal wall, and it is the worst version of it. The incision sits immediately below the costal margin, the upper recti and the costal attachments of the diaphragm move with each breath, and a fixed retractor has held the costal margins apart for hours. Pain is severe on coughing for five to seven days and the consequence is basal atelectasis and pneumonia. A rooftop incision cuts both recti transversely and is the most painful version. Open upper abdominal surgery is one of this book's anchors for a score of 5, and the open gastrectomy is scored 5 here, in line with open liver and pancreatic resection through the same incisions: the early peak is controlled by the catheter, but the pain outlasts 72 hours and is re-provoked by every cough. Under the wall is a visceral and retroperitoneal component from the coeliac dissection, felt as deep epigastric and back pain. The laparoscopic operation removes most of the wall component and leaves a moderate, short course that scores 3, with a trajectory nearer [4, 4, 3, 2, 1].
 
 ## Steps
 
@@ -125,6 +128,8 @@ The plan follows the approach, because the approach decides whether the mechanis
 
 Open gastrectomy. A high upper abdominal incision needs a continuous technique that makes coughing possible for five days. Thoracic epidural at T7-T9 is the technique with the longest record in open upper abdominal surgery and the ERAS Society gastrectomy guideline, like its sister guidelines for open abdominal surgery of that era, was written around it. There is no PROSPECT guideline for gastrectomy; the nearest procedure-specific review, for open liver resection through the same kind of incision, recommends paracetamol and an NSAID with either thoracic epidural or bilateral oblique subcostal TAP blocks, and opioid for rescue. The defensible default is therefore an epidural run dilute (ropivacaine 0.2% or bupivacaine 0.1-0.125% with fentanyl) for three to four days, with regular paracetamol. The alternative, increasingly chosen because epidurals fail in a meaningful fraction and cause hypotension that complicates fluid management, is intrathecal morphine 150-300 micrograms plus bilateral rectus sheath catheters (midline) or subcostal TAP catheters (rooftop) and a PCA. No trial in gastrectomy shows which is better; the choice is author's judgement and depends on which technique the ward can look after.
 
+Both techniques carry conditions. Intrathecal morphine, in open or laparoscopic surgery, commits the ward to watching for delayed respiratory depression: sedation score, respiratory rate and oximetry at a frequency and for a duration matched to the dose and the patient's risk (the [truncal blocks and epidural chapter](../a/a02-truncal-blocks-epidural.html) describes the risk window), a PCA with no background infusion, and no other long-acting opioid or sedative charted during that window. Use the lower end of the dose range in the elderly, the frail and the patient with sleep apnoea, and do not give it at all if the destination ward cannot provide that observation. The epidural has to coexist with a month of thromboprophylaxis: site it before any heparin, and separate each dose of low molecular weight heparin from catheter removal by the minimum intervals in the current ASRA guideline or the local policy built on it.
+
 Laparoscopic and robotic gastrectomy. The wall component is ports and a small extraction wound. Intrathecal morphine before induction, or bilateral subcostal TAP blocks at the start, with port and wound infiltration, regular paracetamol and a PCA or oral opioid for 48 hours is sufficient; an epidural adds hypotension and immobility for little gain. An IV lidocaine infusion during the case is a reasonable adjunct when no block is used.
 
 Adjuncts in both: NSAIDs are effective and are withheld by many surgeons for the first days because of concern about anastomotic healing and the kidneys; where the surgeon is comfortable and renal function is normal, a short course from day 1 or 2 reduces opioid. Low-dose ketamine for the opioid-tolerant. Gabapentinoids are not routine.
@@ -145,4 +150,4 @@ Rebound is moderate: the predictable failure is an epidural that falls out or go
 
 ## Key sources
 
-The ERAS Society gastrectomy guideline dates from 2014 and acknowledges that only eight of its 25 items had procedure-specific evidence. KLASS-01 is strong evidence that the laparoscopic approach reduces morbidity for early distal cancers, and it is the reason the analgesic plan divides by approach. There is no PROSPECT review for gastrectomy and no adequate trial comparing epidural with intrathecal morphine and fascial plane catheters in this operation; that section is extrapolated from open liver resection and is author's judgement. The haemodynamic effects of coeliac dissection, the stapler precautions and the management of outlet obstruction are standard teaching and are unsourced.
+The ERAS Society gastrectomy guideline dates from 2014 and acknowledges that only eight of its 25 items had procedure-specific evidence. KLASS-01 is strong evidence that the laparoscopic approach reduces morbidity for early distal cancers, and it is the reason the analgesic plan divides by approach. There is no PROSPECT review for gastrectomy and no adequate trial comparing epidural with intrathecal morphine and fascial plane catheters in this operation; that section is extrapolated from open liver resection and is author's judgement. The haemodynamic effects of coeliac dissection, the stapler precautions and the management of outlet obstruction are standard teaching and are unsourced. The intrathecal morphine monitoring and anticoagulant timing statements are consensus principles; the intervals are in the ASRA guideline and local policy.

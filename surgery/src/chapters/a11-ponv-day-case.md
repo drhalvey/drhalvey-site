@@ -205,7 +205,7 @@ Recovery runs in two scored stages, and a score replaces a fixed time.
 | Stage | Tool | Items | Threshold |
 | --- | --- | --- | --- |
 | Recovery room to day ward | Modified Aldrete score | Activity, breathing, circulation, consciousness, oxygen saturation; each 0-2 | 9 or more |
-| Day ward to home | Post-Anesthetic Discharge Scoring System | Vital signs, ambulation, nausea and vomiting, pain, surgical bleeding; each 0-2 | 9 or more, on two readings |
+| Day ward to home | Post-Anesthetic Discharge Scoring System | Vital signs, ambulation, nausea and vomiting, pain, surgical bleeding; each 0-2 | 9 or more |
 
 In the validation study the discharge score, reassessed every 30 minutes, agreed closely with clinical judgement. Two traditional requirements have been dropped for low-risk patients: drinking before discharge, which provokes vomiting, and passing urine. Voiding is required only when retention is likely: after spinal anaesthesia, after [anorectal](../c/haemorrhoidectomy-fissure-fistula-and-pilonidal-surgery.html), [hernia](../c/inguinal-and-femoral-hernia-repair-open.html) and urological surgery, and in men with prostatic symptoms. Reported retention rates run from 5% to 70% depending on the operation and the anaesthetic, and a bladder scan settles the question in the patient who has not voided: a large volume is drained once and the patient still goes home.
 

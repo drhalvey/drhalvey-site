@@ -59,7 +59,7 @@ Nociceptors are not evenly distributed. Periosteum is dense with them; cancellou
 | Mechanism tag | What the surgeon did | How it hurts | How long |
 | --- | --- | --- | --- |
 | bone | osteotomy, reaming, broaching, drilling for anchors, decorticating a footprint, cement interface | hard, deep, inflammatory; responds to NSAIDs; worse with the first loading | peaks day 1-2, falls fast once nothing is loaded through it |
-| tendon-tension | a tendon or ligament repaired or reattached under tension, or a graft fixed in a tunnel | sharp with every movement that loads it; night pain because the patient cannot find a position; aching between | plateau for one to two weeks, then slow decline over the healing period |
+| tendon-tension | a tendon or ligament repaired or reattached under tension (a graft fixed in bone tunnels, as in cruciate reconstruction, behaves as bone) | sharp with every movement that loads it; night pain because the patient cannot find a position; aching between | plateau for one to two weeks, then slow decline over the healing period |
 | retension | the joint re-tensioned or the limb lengthened: reverse shoulder, knee balancing, osteotomy correction, leg length change at the hip | deep ache and stiffness pain, worse with range-of-motion exercises, a feeling of the limb being "too tight" | weeks, improving as the soft tissues creep |
 | capsule | capsular release, labral repair, synovectomy, joint distension | sharp with movement in the released direction, settles once the joint is moved regularly | days |
 | muscle | a muscle split, released, lengthened or widely dissected | aching, position-dependent, worse on contraction | days to a week |

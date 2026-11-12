@@ -42,7 +42,7 @@ extras:
 drugs:
   antibiotic: "Cefazolin 2 g IV plus metronidazole 500 mg IV within 60 min of incision; redose cefazolin at four hours and with major blood loss"
   txa: "TXA 1 g IV at induction is reasonable for the open operation (author's practice); not routine for robotic"
-  vte: "Mechanical from induction, low molecular weight heparin from the first evening timed around the epidural, continued for four weeks after pelvic cancer surgery"
+  vte: "Mechanical from induction, low molecular weight heparin from the first evening timed around the epidural (catheter removal at least 12 h after a prophylactic dose, next dose at least 4 h after removal), continued for four weeks after pelvic cancer surgery"
   antiemetic: "Dexamethasone 8 mg IV at induction, ondansetron 4 mg IV before emergence, and a third agent charted; vomiting on day 2-4 is ileus, not PONV"
 patient_line: "This is a big operation with a cut down the lower belly; an epidural or similar covers the first two to three days, the bowel takes several days to wake up, and most people are in hospital for a week to ten days."
 trap: "Giving fluid to a urine output you cannot measure: once the ureters are cut there is no urine to see for hours, and a generous crystalloid habit during the pelvic dissection buys bowel oedema, ileus and cardiac complications"
@@ -84,7 +84,7 @@ The pain logic follows the incision. The open operation is a midline laparotomy:
 
 ### 2. Epidural, induction and lines
 **Why:** Everything is easier to place before a six-hour case than during it.
-**Anaesthesia:** For open surgery, a thoracic epidural at T9-T11, tested before induction. For robotic surgery, intrathecal morphine or a plan for truncal blocks at the end. Arterial line and two large cannulae in every case; a central line if noradrenaline will run for hours through doubtful peripheral veins. Start the noradrenaline at a low rate from induction: it is part of the fluid strategy, not a rescue. Tracheal tube, orogastric tube for the case only, temperature probe, calf compression.
+**Anaesthesia:** For open surgery, a thoracic epidural at T9-T11, tested before induction. For robotic surgery, intrathecal morphine or a plan for truncal blocks at the end; intrathecal morphine brings hourly sedation and respiratory rate observations for 24 hours, which the high dependency bed already provides. Arterial line and two large cannulae in every case; a central line if noradrenaline will run for hours through doubtful peripheral veins. Start the noradrenaline at a low rate from induction: it is part of the fluid strategy, not a rescue. Tracheal tube, orogastric tube for the case only, temperature probe, calf compression.
 
 ### 3. Position
 **Why:** Open: the table is broken at the pelvis with head-down tilt to lift the pelvic contents into view; women and neobladder patients are in low lithotomy for perineal access. Robotic: lithotomy and steep head-down with the robot docked.
@@ -108,7 +108,7 @@ The pain logic follows the incision. The open operation is a midline laparotomy:
 
 ### 8. Urinary reconstruction
 **Why:** The ureters are spatulated and sewn to the ileal segment over fine stents that are brought out through the conduit. The conduit is brought through the rectus muscle as a stoma, or the neobladder is constructed and sewn to the urethra over a catheter.
-**Anaesthesia:** A neobladder adds one to two hours. Urine reappears in the stoma bag or catheter at the end; a dilute crystalloid bolus now to confirm flow is reasonable if the patient has been run dry. Stent position is the surgeon's concern; an oliguric first night is yours.
+**Anaesthesia:** A neobladder adds one to two hours. Urine reappears in the stoma bag or catheter at the end; a bolus of 250-500 mL of balanced crystalloid now to confirm flow is reasonable if the patient has been run dry. Stent position is the surgeon's concern; an oliguric first night is yours.
 
 ### 9. Closure and emergence
 **Why:** Mass closure of the midline; one or two pelvic drains.
@@ -116,7 +116,7 @@ The pain logic follows the incision. The open operation is a midline laparotomy:
 
 ### 10. The first night
 **Why:** The surgeon wants a perfused anastomosis, a draining conduit and a patient sitting out the next morning.
-**Anaesthesia:** High dependency care. Hypotension with a working epidural is treated with a vasopressor through a reliable line and a check for bleeding, not with repeated crystalloid boluses. Low molecular weight heparin is timed around the epidural. Hyperchloraemic acidosis appears later in conduit and especially neobladder patients because ileum reabsorbs chloride from urine; avoid adding to it with saline.
+**Anaesthesia:** High dependency care. Hypotension with a working epidural is treated with a vasopressor through a reliable line and a check for bleeding, not with repeated crystalloid boluses. Low molecular weight heparin is timed around the epidural, and on a card that makes the epidural routine the intervals belong on the chart: a prophylactic dose is given no sooner than 4 hours after insertion or removal of the catheter, and the catheter is removed no sooner than 12 hours after the last prophylactic dose (24 hours if creatinine clearance is below 30 mL/min, which is not rare after cisplatin). The table is in [the truncal analgesia chapter](../a/a02-truncal-blocks-epidural.html) and the local guideline rules. Hyperchloraemic acidosis appears later in conduit and especially neobladder patients because ileum reabsorbs chloride from urine; avoid adding to it with saline.
 
 ### 11. Days 1-7
 **Why:** Recovery is paced by the bowel. Stents come out at one to two weeks.
@@ -128,7 +128,7 @@ For the open operation the mechanism is a midline abdominal wall wound in a pati
 
 Where an epidural is contraindicated, fails, or is not the unit's practice, the alternative is intrathecal morphine for the first day with bilateral rectus sheath or wound catheters for three days. A small randomised trial of 39 patients found no significant difference in rescue opioid between a single-shot posterior quadratus lumborum block and an epidural over two days, though on the day of surgery the block group used more (14 mg against 6.1 mg); it shows that the alternative is feasible, and it is too small to show equivalence. Truncal blocks are covered in [the truncal analgesia chapter](../a/a02-truncal-blocks-epidural.html).
 
-For the robotic operation with intracorporeal diversion, the wounds are ports and a short extraction incision. Intrathecal morphine or bilateral TAP or rectus sheath blocks with a multimodal base is the author's practice by extrapolation from robotic prostatectomy; an epidural is not needed.
+For the robotic operation with intracorporeal diversion, the wounds are ports and a short extraction incision. Intrathecal morphine or bilateral TAP or rectus sheath blocks with a multimodal base is the author's practice by extrapolation from robotic prostatectomy; an epidural is not needed. Whenever intrathecal morphine is used on this card, sedation score and respiratory rate are recorded hourly for about 24 hours under the local protocol, and no background opioid infusion or sedative is charted with it.
 
 Adjuncts: dexamethasone at induction; intravenous lidocaine where there is no epidural; NSAIDs used cautiously, since renal function is often reduced and the ureteric anastomoses are new. Rebound is moderate: the hard day is the day the epidural stops, usually day 3, so the oral regimen starts the day before. Escalation triggers: pain with distension and vomiting is ileus or obstruction; pain with fever and tachycardia after day 3 is a leak (urine or bowel) or collection; calf or chest pain is thromboembolism.
 

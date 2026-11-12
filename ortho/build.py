@@ -19,7 +19,9 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent    # repo root
 BOOK = os.environ.get('BOOK', 'ortho')            # which book folder to build: ortho (default) or surgery
-HERE = ROOT / BOOK                               # the book's folder: source in src/, output beside it
+HERE = ROOT / BOOK
+_other = 'surgery' if BOOK == 'ortho' else 'ortho'
+OTHER_LINK = (f'<a href="REL{_other}/index.html">' + ('All surgery' if BOOK == 'ortho' else 'Orthopaedics') + '</a>') if (ROOT / _other / 'index.html').exists() else ''                               # the book's folder: source in src/, output beside it
 SRC = HERE / 'src'
 MANIFEST = yaml.safe_load((SRC / 'manifest.yaml').read_text())
 
@@ -249,7 +251,7 @@ def page(title, body, depth, extra_head='', body_class=''):
     <a href="{rel}{BOOK}/index.html#part-a">Principles</a>
     <a href="{rel}{BOOK}/b/b01-why-operations-hurt.html">Pain model</a>
     <a href="{rel}{BOOK}/judge.html">Judge my practice</a>
-    <a href="{rel}{'surgery' if BOOK == 'ortho' else 'ortho'}/index.html">{'All surgery' if BOOK == 'ortho' else 'Orthopaedics'}</a>
+    {OTHER_LINK.replace('REL', rel)}
     <button type="button" class="ob-unlock" id="ob-unlock" hidden>My practice</button>
   </nav>
 </header>
