@@ -19,7 +19,7 @@ block:
 position: supine-arm-table
 position_text: "Medial reconstruction: supine, arm abducted and externally rotated on a hand table, the opposite or same-side leg prepared when a gracilis graft is planned. Lateral reconstruction: supine with the arm across the chest on a bolster, or lateral decubitus with the arm over a support, by surgeon preference"
 tourniquet: "yes"
-tourniquet_text: "Sterile or high upper arm tourniquet at 250 mmHg, 60-100 min; a thigh tourniquet in some hands for gracilis harvest"
+tourniquet_text: "Sterile or high upper arm tourniquet at limb occlusion pressure plus the tiered margin (about 200 mmHg in a normotensive arm where it cannot be measured), 60-100 min; a thigh tourniquet in some hands for gracilis harvest"
 cement: "no"
 cement_text: ""
 blood_loss: "Under 50 mL"
@@ -72,7 +72,7 @@ The pain logic: tunnels in dense metaphyseal bone, a muscle split and a harvest 
 
 ### 1. Pre-operative: the graft, the nerve and the plan for examining it
 **Why:** The surgeon has tested for palmaris longus (opposing thumb and little finger with the wrist flexed) and chosen the graft, and has recorded any ulnar nerve symptoms, which decide whether the nerve will be transposed.
-**Anaesthesia:** Record ulnar nerve function yourself: sensation over the little finger pulp, finger abduction and crossing. Many throwers have pre-existing paraesthesia, and that is the comparison for everything afterwards. Then settle the block question with the surgeon using the three workable answers from [the block menu](../a/a07-block-menu.html): block after the surgeon has examined the patient in recovery; a short-acting block before surgery and an examination that evening; or a long-acting block before surgery with the examination deferred to the next day by explicit agreement. Find out which leg, if gracilis is the graft, and keep the cannula out of the operative arm.
+**Anaesthesia:** Record ulnar nerve function yourself: sensation over the little finger pulp, finger abduction and crossing. Many throwers have pre-existing paraesthesia, and that is the comparison for everything afterwards. Then settle the block question with the surgeon using the three workable answers from [the block menu](../a/a07-block-menu.html): block after the surgeon has examined the patient in recovery; a short-acting block before surgery and an examination that evening; or a catheter placed before surgery and left unloaded until the examination is done, which is rarely worth it for a day case. A fourth answer, outside the menu and acceptable only by explicit agreement written in the notes, is a long-acting block before surgery with the examination deferred to the next day. Find out which leg, if gracilis is the graft, and keep the cannula out of the operative arm.
 
 ### 2. Induction and positioning
 **Why:** The medial approach needs the shoulder externally rotated and abducted with the elbow on the table; the lateral approach needs the arm across the chest or the patient on their side.
@@ -112,7 +112,7 @@ The pain logic: tunnels in dense metaphyseal bone, a muscle split and a harvest 
 
 ## Pain plan
 
-The mechanism is bone tunnels with a muscle split and a harvest site, in a young day-case patient: a block-responsive first night and a short course. The plan is a single plexus block timed around the nerve examination, intravenous dexamethasone 8 mg, paracetamol and an NSAID for five to seven days, and oral opioid for two or three. Surgeons vary on NSAIDs after ligament reconstruction; there is no human evidence that a week's course harms graft incorporation, and the author's practice is to give one unless asked not to.
+The mechanism is bone tunnels with a muscle split and a harvest site, in a young day-case patient: a block-responsive first night and a short course. The plan is a single plexus block timed around the nerve examination, intravenous dexamethasone 8 mg, paracetamol and an NSAID for five to seven days, and oral opioid for two or three. Surgeons vary on NSAIDs after ligament reconstruction; the author's judgement is that a week's course does not threaten graft incorporation, and the author's practice is to give one unless asked not to.
 
 The timing of the block is the only decision specific to this operation, and it is judgement, not evidence. The author's default is block in recovery after the examination: it costs 10-15 min of recovery time and a short period of opioid-covered pain, and it leaves no ambiguity. A pre-operative block is smoother and allows a lighter anaesthetic; it is the better choice for the lateral operation, where the ulnar nerve is not in the field (accepting that pooled data still record occasional ulnar events), and for the medial operation when the surgeon is content to examine the next day. A short-acting pre-operative block is the compromise when same-evening examination is wanted. The infraclavicular site covers the medial arm and forearm skin, which the medial incision needs; an axillary block needs the medial cutaneous nerves included.
 

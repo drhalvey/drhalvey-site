@@ -11,7 +11,7 @@ pain:
   rebound_risk: high
 block:
   primary: "Ankle block (all five nerves, long-acting agent) with intravenous dexamethasone, under sedation or a light general anaesthetic; the first-choice technique in the PROSPECT guideline"
-  family: sciatic-popliteal
+  family: ankle-block
   catheter: "no"
   catheter_text: "PROSPECT found no evidence to support a continuous popliteal block for hallux valgus surgery; a catheter is reserved for the bilateral or whole-forefoot reconstruction in an opioid-tolerant inpatient"
   alternatives: ["Popliteal sciatic block with or without a saphenous block (lasts about 6 h longer than an ankle block, at the cost of a foot drop)", "Surgeon's local anaesthetic wound infiltration under general anaesthesia (the PROSPECT alternative)", "Spinal anaesthesia for the bilateral inpatient case"]
@@ -19,7 +19,7 @@ block:
 position: supine
 position_text: "Supine, heel at the end of the table, foot free for the mini image intensifier; a bump under the ipsilateral buttock brings the foot to neutral rotation"
 tourniquet: "yes"
-tourniquet_text: "Ankle (supramalleolar) cuff for open surgery under an ankle block, which the block covers; calf or thigh cuff in some hands, which the ankle block does not cover; many minimally invasive surgeons use no tourniquet at all so that bleeding and irrigation cool the burr"
+tourniquet_text: "Ankle (supramalleolar) cuff for open surgery under an ankle block: the cuff sits at or just above the level of the block, so it is tolerated, not anaesthetised, and it is tolerated better than a calf cuff; calf cuff in some hands, tolerated for 20-30 min under an ankle block, or thigh cuff, which needs a general anaesthetic or a spinal; many minimally invasive surgeons use no tourniquet at all so that bleeding and irrigation cool the burr"
 cement: "no"
 cement_text: ""
 blood_loss: "Negligible under tourniquet; a damp dressing after release is expected"
@@ -31,7 +31,7 @@ drugs:
   txa: "Not needed"
   vte: "Early mobilisation in a stiff-soled shoe; chemoprophylaxis only for the patient's own risk factors, which is the position the foot and ankle meta-analysis supports"
   antiemetic: "Dexamethasone 8 mg IV at induction (PROSPECT recommends systemic dexamethasone for analgesia as well as nausea) and ondansetron 4 mg IV"
-patient_line: "The foot will be numb until late evening or the small hours; take the tablets at bedtime whether or not it hurts, keep the foot above the level of your hip for most of the first two days, and expect the second day to be better than the first."
+patient_line: "The foot will be numb until late evening or the small hours; take the tablets at bedtime whether or not it hurts, keep the foot above the level of your hip for most of the first two weeks, and expect the second day to be better than the first."
 trap: "A day-case patient walks out pain-free in a stiff shoe and the ankle block fades at 2 am: this is bone surgery in a group that is mostly female and often young, the three strongest predictors of rebound pain, so the dexamethasone, the pre-emptive oral regimen and the written night plan matter more than which block was chosen"
 sources:
   - title: "Wust M, Desai N, Joshi GP, Rawal N, Van de Velde M, Moka E, Elmers J, Albrecht E. Pain management after hallux valgus repair surgery: an updated systematic review and procedure-specific postoperative pain management (PROSPECT) recommendations. Eur J Anaesthesiol 2026;43:11-18"
@@ -55,6 +55,9 @@ sources:
   - title: "Calder JD, Freeman R, Domeij-Arverud E, van Dijk CN, et al. Meta-analysis and suggested guidelines for prevention of venous thromboembolism (VTE) in foot and ankle surgery. Knee Surg Sports Traumatol Arthrosc 2016;24:1409-1420"
     url: "https://doi.org/10.1007/s00167-015-3976-y"
     note: "22 studies: clinically apparent VTE after isolated foot and ankle surgery is uncommon and not significantly reduced by low molecular weight heparin; routine chemoprophylaxis not justified except after Achilles rupture; assess individual risk factors"
+  - title: "Gerbershagen HJ, Aduckathil S, van Wijck AJM, Peelen LM, Kalkman CJ, Meissner W. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
+    url: "https://doi.org/10.1097/ALN.0b013e31828866b3"
+    note: "50,523 patients ranked by worst pain on day 1 across 179 procedures: foot arthrodesis among the most painful groups; cited here for the fusion variants only"
 ---
 
 ## What the surgeon is doing and why
@@ -94,7 +97,7 @@ The pain logic: this is bone surgery with no muscle cover. Each osteotomy is a c
 
 ### 3. Position and tourniquet
 **Why:** Supine with the heel at the end of the table so the surgeon can sit and the mini image intensifier can come in from the foot. The cuff is at the ankle, the calf or the thigh according to habit.
-**Anaesthesia:** The site of the cuff decides whether the block is enough. A supramalleolar cuff sits within the ankle block's territory if the block was placed above it or the cuff is placed after the block has spread; a calf or thigh cuff does not, and its ischaemic pain arrives at 30-45 min whatever the foot feels (see [the tourniquet](../a/a01-tourniquet.html)). In the randomised comparison under ankle block, the ankle cuff gave the same field as a calf cuff, less discomfort at every time point and no more nerve symptoms at 10 weeks. Set the pressure from the limb occlusion pressure where the machine measures it; the trial used 100 mmHg above systolic. A narrow cuff over the malleoli on thin skin needs padding, and the Esmarch bandage often used as an ankle tourniquet has an unmeasured pressure, which is a reason to prefer a pneumatic cuff. Cefazolin must be in before inflation.
+**Anaesthesia:** The site of the cuff decides whether the block is enough. An ankle block is injected at or just above the malleoli, so the skin and deep tissue under a supramalleolar cuff lie at or proximal to the block and are not reliably anaesthetised by it: the ankle cuff is tolerated, not covered, and it is tolerated because it compresses tendon and bone with little muscle beneath it. A calf cuff compresses muscle well above the block and most patients tolerate it for 20-30 min; a thigh cuff is outside any ankle block and its ischaemic pain arrives at 30-45 min whatever the foot feels (see [the tourniquet](../a/a01-tourniquet.html)). In the randomised comparison under ankle block, the ankle cuff gave the same field as a calf cuff, less discomfort at 10, 20 and 30 min (less, not none) and no more nerve symptoms at 10 weeks. A patient who becomes restless under an ankle cuff late in a long case has cuff pain, and the remedies are deflation or a general anaesthetic, not more local anaesthetic in the foot. Set the pressure from the limb occlusion pressure where the machine measures it; the trial used 100 mmHg above systolic. A narrow cuff over the malleoli on thin skin needs padding, and the Esmarch bandage often used as an ankle tourniquet has an unmeasured pressure, which is a reason to prefer a pneumatic cuff. Cefazolin must be in before inflation.
 
 ### 4. Medial approach, bunionectomy and lateral release
 **Why:** A medial incision over the first MTP joint, a capsulotomy, and the medial eminence is sawn off flush with the shaft. The lateral release (adductor tendon, lateral capsule, sesamoid ligament) is done through the joint or through a separate dorsal first web space incision, to let the sesamoids return under the head.
@@ -114,7 +117,7 @@ The pain logic: this is bone surgery with no muscle cover. Each osteotomy is a c
 
 ### 8. First MTP fusion and Lapidus
 **Why:** For the arthritic or unsalvageable joint, cup-and-cone reamers take both surfaces to bleeding subchondral bone, the toe is set in slight dorsiflexion and valgus against a flat plate that simulates the floor, and a dorsal plate with a compression screw holds it. A Lapidus does the same to the first tarsometatarsal joint with a plate or crossed screws, sometimes with bone graft from the calcaneus or proximal tibia.
-**Anaesthesia:** Two denuded surfaces under compression hurt more than a translated osteotomy and for a day longer; foot arthrodesis ranked seventh of 179 procedures for day 1 pain in a cohort where blocks were rare, though that category is dominated by the hindfoot. A Lapidus is at the proximal limit of what an ankle block reliably covers and runs 90 min or more, so a popliteal sciatic block with a saphenous block and a general anaesthetic is the better plan. Surgeons vary on NSAIDs after a fusion; a short course is the common compromise and the decision belongs in the plan before the prescription is written.
+**Anaesthesia:** Two denuded surfaces under compression hurt more than a translated osteotomy and for a day longer; foot arthrodesis ranked among the most painful of 179 procedures for day 1 pain in a cohort where blocks were rare, though that category is dominated by the hindfoot. A Lapidus is at the proximal limit of what an ankle block reliably covers and runs 90 min or more, so a popliteal sciatic block with a saphenous block and a general anaesthetic is the better plan. Surgeons vary on NSAIDs after a fusion; a short course is the common compromise and the decision belongs in the plan before the prescription is written.
 
 ### 9. Lesser toes: Weil osteotomies, hammer toe correction, K-wires
 **Why:** A long or dislocated lesser metatarsal is shortened with an oblique sliding osteotomy at the neck and a twist-off screw. A fixed hammer toe has the proximal interphalangeal joint excised or fused, the extensor lengthened or the flexor transferred, and the toe held straight.
@@ -140,7 +143,7 @@ Escalation triggers: pain above 7 with the block gone, the foot elevated and the
 
 ## Pitfalls and variants
 
-- Sedation with a proximal cuff. An ankle block does not cover a calf or thigh tourniquet. If the surgeon will not use an ankle cuff, plan a general anaesthetic or a spinal from the start; see [the tourniquet](../a/a01-tourniquet.html).
+- Sedation with a proximal cuff. An ankle block does not anaesthetise the tissue under a calf or thigh tourniquet: most patients tolerate a calf cuff for 20-30 min and a thigh cuff for less. If the surgeon will not use an ankle cuff and the inflation will be longer than that, plan a general anaesthetic or a spinal from the start; see [the tourniquet](../a/a01-tourniquet.html).
 - The missed nerve. The saphenous and deep peroneal nerves are the two most often left out of an ankle block and are the two that the medial and first web incisions test. The [block menu](../a/a07-block-menu.html) has the map.
 - Bilateral surgery. Local anaesthetic dose for two ankle blocks plus any surgeon's infiltration is one shared budget. A spinal with a short-acting agent and bilateral ankle blocks for analgesia is a tidy inpatient plan.
 - The rheumatoid forefoot. First MTP fusion with excision of all four lesser metatarsal heads: 2 h, a patient with an unstable cervical spine, fragile skin, steroids and immunosuppression, and feet that heal slowly. The foot is the easy part of the anaesthetic.

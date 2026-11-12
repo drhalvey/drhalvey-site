@@ -10,7 +10,7 @@ pain:
   mechanism_text: "Several forearm and hand incisions, a donor muscle freed from its fascia up into the forearm, a subcutaneous tunnel made around the radial or ulnar border, and a tendon weave that is then held slack in a cast. No bone unless a joint is fused at the same sitting. The transfer is under tension only while the surgeon sets it; afterwards the splint unloads it, which is why this is not a tendon-tension operation in the way a cuff repair is"
   rebound_risk: moderate
 block:
-  primary: "Axillary or infraclavicular brachial plexus block with intravenous dexamethasone, alone with light sedation or under general anaesthesia, when the surgeon sets tension by tenodesis; WALANT with the anaesthetist monitoring when the surgeon sets tension by active movement"
+  primary: "Axillary or infraclavicular brachial plexus block with a short-acting agent (long-acting with intravenous dexamethasone only when a fusion is added), alone with light sedation or under general anaesthesia, when the surgeon sets tension by tenodesis; WALANT with the anaesthetist monitoring when the surgeon sets tension by active movement"
   family: brachial-plexus-distal
   catheter: "no"
   catheter_text: "Pain is mild to moderate and over in two or three days, the limb is in a cast, and a catheter adds a paralysed arm to a patient who is going home"
@@ -19,7 +19,7 @@ block:
 position: supine-arm-table
 position_text: "Supine, arm abducted on a hand table, surgeon and assistant seated; the forearm is turned prone and supine repeatedly, and for WALANT the patient must be able to see or at least feel and move the hand on command"
 tourniquet: sometimes
-tourniquet_text: "Upper arm tourniquet at 250 mmHg under a plexus block or general anaesthesia; none under WALANT, because an ischaemic muscle stops contracting within 20-30 min and the patient cannot tolerate the cuff unblocked"
+tourniquet_text: "Upper arm tourniquet at limb occlusion pressure plus the tiered margin (about 200 mmHg in a normotensive arm where it cannot be measured) under a plexus block or general anaesthesia; none under WALANT, because an ischaemic muscle stops contracting within 20-30 min and the patient cannot tolerate the cuff unblocked"
 cement: "no"
 cement_text: ""
 blood_loss: "Negligible under tourniquet; 20-50 mL under WALANT"
@@ -30,7 +30,7 @@ drugs:
   antibiotic: "Cefazolin 2 g IV before tourniquet inflation or incision; surgeons vary and some give none for clean soft tissue surgery"
   txa: "Not needed"
   vte: "None for day-case hand surgery"
-  antiemetic: "Dexamethasone 8 mg IV with a plexus block or general anaesthetic; nothing under WALANT"
+  antiemetic: "Dexamethasone 4-8 mg IV under general anaesthesia, and with the long-acting block when a fusion is added; nothing under WALANT"
 patient_line: "You will go home in a plaster with the hand held in a set position; it aches for a couple of days and simple painkillers taken regularly are usually enough, and if we do it awake you will be asked to move your fingers during the operation so the surgeon can set the tendon just right."
 trap: "Find out before the patient arrives how the surgeon sets tension: a dense plexus block, a tourniquet or a propofol infusion each takes away the active movement a wide-awake surgeon has planned the whole operation around"
 sources:
@@ -83,7 +83,7 @@ The pain logic: this is soft tissue surgery. The mechanism is muscle and fascia 
 
 ### 2. Anaesthesia for the conventional method
 **Why:** The surgeon wants a still, bloodless forearm for 90-150 min and a tourniquet that is tolerated throughout.
-**Anaesthesia:** Axillary or infraclavicular block with ropivacaine 0.5% 20-30 mL and dexamethasone 8 mg IV; add the intercostobrachial and medial cutaneous nerve of arm for the cuff. This is sufficient as the sole technique with light sedation, and is combined with a supraglottic airway when the patient prefers to be asleep. Record what the nerve palsy has already taken before the block, so that the deficit is not later attributed to the needle.
+**Anaesthesia:** Axillary or infraclavicular block with a short-acting agent, lidocaine 1.5% with adrenaline 20-25 mL (within 7 mg/kg), which covers two hours of surgery and tourniquet and returns a working arm by discharge. Ropivacaine 0.5% 20-30 mL with dexamethasone 8 mg IV is kept for the case with a fusion or one expected to run well past two hours, because it leaves a day-case patient with a flail arm for 12-18 hours after a soft tissue operation with a pain score of 2. Add the intercostobrachial and medial cutaneous nerve of arm for the cuff. This is sufficient as the sole technique with light sedation, and is combined with a supraglottic airway when the patient prefers to be asleep. Record what the nerve palsy has already taken before the block, so that the deficit is not later attributed to the needle.
 
 ### 3. Anaesthesia for the wide-awake method
 **Why:** The surgeon infiltrates the whole operative field with dilute lidocaine and adrenaline, waits for vasoconstriction, and operates without a tourniquet so that the muscles stay perfused and under the patient's control.

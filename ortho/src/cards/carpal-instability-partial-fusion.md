@@ -19,7 +19,7 @@ block:
 position: supine-arm-table
 position_text: "Supine, arm abducted on a hand table, forearm pronated for the dorsal approach; an arthroscopy tower with finger-trap traction first in some cases; mini image intensifier from the end of the table"
 tourniquet: "yes"
-tourniquet_text: "Upper arm tourniquet at 250 mmHg, 60-120 min"
+tourniquet_text: "Upper arm tourniquet at limb occlusion pressure plus the tiered margin (about 200 mmHg in a normotensive arm where it cannot be measured), 60-120 min"
 cement: "no"
 cement_text: ""
 blood_loss: "Negligible under tourniquet; cancellous surfaces ooze into the dressing after release"
@@ -49,6 +49,12 @@ sources:
   - title: "Barry GS, Bailey JG, Sardinha J, Brousseau P, Uppal V. Factors associated with rebound pain after peripheral nerve block for ambulatory surgery. Br J Anaesth 2021;126:862-871"
     url: "https://doi.org/10.1016/j.bja.2020.10.035"
     note: "972 ambulatory block patients, rebound pain in 49.6%; bone surgery OR 1.82, younger age, female sex and absence of IV dexamethasone OR 1.78"
+  - title: "Rodríguez Prieto M, González FJ, Sabaté S, et al. Low-concentration distal nerve blocks with 0.125% levobupivacaine versus systemic analgesia for ambulatory trapeziectomy performed under axillary block: a randomized controlled trial. Minerva Anestesiol 2018;84:1261-1269"
+    url: "https://doi.org/10.23736/S0375-9393.18.12291-7"
+    note: "50 day-case trapeziectomies under a mepivacaine axillary block: added radial and median nerve blocks at the elbow with levobupivacaine 0.125% cut moderate-to-severe pain from 92% to 33% on day 1, lasted about 10 h and caused no motor block; the trial behind the split technique, in a different operation"
+  - title: "Lee JH, Kim HJ, Kim JK, Cheon S, Shin YH. Does intravenous patient-controlled analgesia or continuous block prevent rebound pain following infraclavicular brachial plexus block after distal radius fracture fixation? A prospective randomized controlled trial. Korean J Anesthesiol 2023;76:559-566"
+    url: "https://doi.org/10.4097/kja.23076"
+    note: "66 volar plate patients: a continuous infraclavicular block lowered pain scores at 9 and 12 h compared with a single shot but did not reduce total opioid use"
 ---
 
 ## What the surgeon is doing and why
@@ -116,16 +122,16 @@ The pain logic: for a four-corner fusion the mechanism is bone, with four decort
 
 The mechanism is bone in a cast with a hard edge at the end of the block. The plan: a single-shot plexus block with intravenous dexamethasone 8 mg; paracetamol and an NSAID or COX-2 inhibitor started in recovery and continued for five to seven days; and oral opioid supplied for three days after a four-corner fusion, for one or two after a carpectomy or ligament reconstruction. Short NSAID courses are not withheld on fusion grounds in the author's practice; a surgeon who objects is usually thinking of weeks, and a COX-2 inhibitor for five days is the usual compromise.
 
-Rebound is the predictable failure. Bone surgery, younger age and omitting dexamethasone were the risk factors in the 972-patient ambulatory cohort, and this population has all the first two. Two ways to blunt it: dexamethasone and pre-emptive oral dosing as above, or the split technique (a short-acting plexus block for surgery with long-acting, low-concentration blocks of the median, radial and ulnar nerves at the elbow or forearm), which gives a comfortable hand overnight with a shoulder and elbow that work. The trial evidence for the split technique is in the [trapeziectomy](trapeziectomy-wrist-fusion.html) card and is extrapolated here.
+Rebound is the predictable failure. Bone surgery, younger age and omitting dexamethasone were the risk factors in the 972-patient ambulatory cohort, and this population has both of the first two. Two ways to blunt it: dexamethasone and pre-emptive oral dosing as above, or the split technique (a short-acting plexus block for surgery with long-acting, low-concentration blocks of the median, radial and ulnar nerves at the elbow or forearm), which gives a comfortable hand overnight with a shoulder and elbow that work. The trial evidence for the split technique is in the [trapeziectomy](trapeziectomy-wrist-fusion.html) card and is extrapolated here.
 
-No catheter as a routine: the pain is over the hump by day 3 and the randomised comparison in [distal radius fixation](distal-radius-orif.html) found no opioid saving. A continuous infraclavicular catheter is defensible for the opioid-tolerant patient or a revision fusion with iliac crest graft.
+No catheter as a routine: the pain is over the hump by day 3 and the randomised comparison in [distal radius fixation](distal-radius-orif.html) found that a catheter flattened the rebound at 9-12 hours without any opioid saving. A continuous infraclavicular catheter is defensible for the opioid-tolerant patient or a revision fusion with iliac crest graft.
 
-Escalation: steadily rising pain with tight, swollen, dusky fingers is the dressing; split it to skin before anything else. New median nerve paraesthesia after a perilunate injury or a volar approach is acute carpal tunnel syndrome and is surgical. Pain that is burning, with colour change and stiffness beyond the second week, is the early picture of complex regional pain syndrome, which the wrist produces more often than most sites; early hand therapy referral is the response.
+Escalation: steadily rising pain with tight, swollen, dusky fingers is the dressing; split it to skin before anything else. New median nerve paraesthesia after a perilunate injury or a volar approach is acute carpal tunnel syndrome and is surgical; it can only be reported once the block has receded, which is the reason for the short-acting block in that injury. Pain that is burning, with colour change and stiffness beyond the second week, is the early picture of complex regional pain syndrome, which the wrist produces more often than most sites; early hand therapy referral is the response.
 
 ## Pitfalls and variants
 
 - The intraoperative change of plan. Carpectomy becomes four-corner fusion when the capitate head is worn. Chart the discharge analgesia after the operation, not before.
-- Perilunate dislocation. An emergency or next-day case after high-energy trauma, with median nerve compression, other injuries, a full stomach and a swollen wrist; closed reduction under sedation or block first, then open repair. A block is still appropriate, with the pre-block median nerve findings written down.
+- Perilunate dislocation. An emergency or next-day case after high-energy trauma, with median nerve compression, other injuries, a full stomach and a swollen wrist; closed reduction under sedation or block first, then open repair. A block is still appropriate with the pre-block median nerve findings written down, but not the standard one: new median paraesthesia is the sign of acute carpal tunnel syndrome, and a ropivacaine block with dexamethasone hides it for 12-18 hours in a swollen, high-energy wrist. Use a short-acting agent (lidocaine or mepivacaine 1.5% with adrenaline, within 7 mg/kg, receding in three to four hours) without dexamethasone, so that the hand can report by the evening; the long-acting block is reasonable only when the carpal tunnel has been released at the same operation.
 - Staged or bilateral disease. The other wrist is often next; what worked overnight this time is the plan for the second side.
 - Wrist denervation as a stand-alone operation. Posterior and anterior interosseous neurectomy through one or two small incisions for an arthritic wrist: 30 min, pain score 1-2, often predicted by a diagnostic block that you may be asked to perform.
 - Total wrist fusion or arthroplasty as the alternative for pancarpal arthritis: see [trapeziectomy and wrist fusion](trapeziectomy-wrist-fusion.html).
