@@ -107,7 +107,7 @@ The pain logic is skin and soft tissue: a 2 on the scale. The wounds are small, 
 
 ### 3. Torsion: the clock
 **Why:** A twisted cord occludes venous then arterial flow. The testis infarcts in hours, and no test is sensitive enough to exclude torsion, so the surgeon explores on clinical suspicion.
-**Anaesthesia:** Go now. In one series duration of symptoms was the only modifiable predictor of loss: beyond about 8.5 hours most testes were not salvageable, and a quarter of those fixed atrophied later. The patient is typically an adolescent, in severe pain, nauseated or vomiting, and recently fed. Rapid sequence induction with a tracheal tube, antiemetic, and no waiting for a fasting interval. Consent often includes orchidectomy and contralateral fixation.
+**Anaesthesia:** Go now. In one series duration of symptoms was the only modifiable predictor of loss: about 8.5 hours was the best cut-off for predicting a dead testis, salvage was down to a half at 15 hours, and a quarter of the testes that were fixed atrophied later. The patient is typically an adolescent, in severe pain, nauseated or vomiting, and recently fed. Rapid sequence induction with a tracheal tube, antiemetic, and no waiting for a fasting interval. Consent often includes orchidectomy and contralateral fixation.
 
 ### 4. The block
 **Why:** To cover the incision and, for scrotal and inguinal work, to interrupt the visceral afferents in the cord before it is pulled.
@@ -115,7 +115,7 @@ The pain logic is skin and soft tissue: a 2 on the scale. The wounds are small, 
 
 ### 5. Incision and delivery of the testis
 **Why:** The scrotal layers are opened and the testis is delivered on its cord, or in the inguinal approach the canal is opened and the cord is isolated and clamped at the deep ring before the testis is pushed up from below.
-**Anaesthesia:** This is the vagal moment. A randomised trial in varicocele surgery under general anaesthesia found that a cord block placed before traction halved the fall in heart rate and the number of times surgery had to pause for symptomatic bradycardia. Without a block, be at an adequate depth and have an anticholinergic to hand; ask the surgeon to release traction first. Laryngospasm on a supraglottic airway at the moment of cord traction in a young man is the same reflex arriving through a light anaesthetic.
+**Anaesthesia:** This is the vagal moment. A randomised trial in varicocele surgery under general anaesthesia found that a cord block placed before traction gave a smaller fall in heart rate and pressure and far fewer pauses in surgery for symptomatic bradycardia. Without a block, be at an adequate depth and have an anticholinergic to hand; ask the surgeon to release traction first. Laryngospasm on a supraglottic airway at the moment of cord traction in a young man is the same reflex arriving through a light anaesthetic.
 
 ### 6. The procedure itself
 **Why:** Hydrocele: the sac is opened, the fluid drained, the redundant sac excised or plicated behind the testis. Torsion: detorsion, warm packs, assessment of colour and bleeding, then three-point fixation or orchidectomy, and fixation of the other side. Orchidectomy: the cord is divided between ligatures in two bundles. Vasectomy: the vas is delivered, a segment excised, the ends cauterised and separated by fascia.
