@@ -1,0 +1,143 @@
+title: "Anaesthesia: Surgery First"
+subtitle: "What the surgeon is doing, why, and what it means for you, across the surgical specialties"
+author: "Dr Ed Halvey, FRCA FANZCA"
+hide_no_fields: true
+groups: ["General and upper GI", "Colorectal", "Hernia and abdominal wall", "Breast and endocrine", "Vascular", "Urology", "Gynaecology", "Obstetrics", "ENT", "Maxillofacial and dental", "Ophthalmology", "Plastics and burns", "Neurosurgery", "Cardiac", "Thoracic", "Paediatric surgery", "Transplant and major oncology", "Remote and procedural"]
+regions: ["General and upper GI", "Colorectal", "Hernia and abdominal wall", "Breast and endocrine", "Vascular", "Urology", "Gynaecology", "Obstetrics", "ENT", "Maxillofacial and dental", "Ophthalmology", "Plastics and burns", "Neurosurgery", "Cardiac", "Thoracic", "Paediatric surgery", "Transplant and major oncology", "Remote and procedural"]
+cards:
+  - {number: 1, id: laparoscopic-cholecystectomy-and-bile-duct-exploration, group: "General and upper GI", region: "General and upper GI", title: "Laparoscopic cholecystectomy and bile duct exploration"}
+  - {number: 2, id: laparoscopic-and-open-appendicectomy, group: "General and upper GI", region: "General and upper GI", title: "Laparoscopic and open appendicectomy"}
+  - {number: 3, id: emergency-laparotomy, group: "General and upper GI", region: "General and upper GI", title: "Emergency laparotomy"}
+  - {number: 4, id: laparoscopic-fundoplication-and-hiatus-hernia-repair, group: "General and upper GI", region: "General and upper GI", title: "Laparoscopic fundoplication and hiatus hernia repair"}
+  - {number: 5, id: oesophagectomy, group: "General and upper GI", region: "General and upper GI", title: "Oesophagectomy"}
+  - {number: 6, id: gastrectomy, group: "General and upper GI", region: "General and upper GI", title: "Gastrectomy"}
+  - {number: 7, id: liver-resection, group: "General and upper GI", region: "General and upper GI", title: "Liver resection"}
+  - {number: 8, id: pancreaticoduodenectomy-and-distal-pancreatectomy, group: "General and upper GI", region: "General and upper GI", title: "Pancreaticoduodenectomy and distal pancreatectomy"}
+  - {number: 9, id: splenectomy-and-adrenalectomy-including-phaeochromocytoma, group: "General and upper GI", region: "General and upper GI", title: "Splenectomy and adrenalectomy including phaeochromocytoma"}
+  - {number: 10, id: bariatric-surgery-sleeve-gastrectomy-and-gastric, group: "General and upper GI", region: "General and upper GI", title: "Bariatric surgery: sleeve gastrectomy and gastric bypass"}
+  - {number: 11, id: laparoscopic-and-open-colectomy, group: "Colorectal", region: "Colorectal", title: "Laparoscopic and open colectomy"}
+  - {number: 12, id: anterior-resection-and-abdominoperineal-resection, group: "Colorectal", region: "Colorectal", title: "Anterior resection and abdominoperineal resection"}
+  - {number: 13, id: stoma-formation-and-reversal, group: "Colorectal", region: "Colorectal", title: "Stoma formation and reversal"}
+  - {number: 14, id: haemorrhoidectomy-fissure-fistula-and-pilonidal-surgery, group: "Colorectal", region: "Colorectal", title: "Haemorrhoidectomy, fissure, fistula and pilonidal surgery"}
+  - {number: 15, id: cytoreductive-surgery-with-hipec-and-pelvic, group: "Colorectal", region: "Colorectal", title: "Cytoreductive surgery with HIPEC and pelvic exenteration"}
+  - {number: 16, id: small-bowel-obstruction-and-adhesiolysis, group: "Colorectal", region: "Colorectal", title: "Small bowel obstruction and adhesiolysis"}
+  - {number: 17, id: inguinal-and-femoral-hernia-repair-open, group: "Hernia and abdominal wall", region: "Hernia and abdominal wall", title: "Inguinal and femoral hernia repair, open and laparoscopic"}
+  - {number: 18, id: umbilical-epigastric-and-incisional-hernia-repair, group: "Hernia and abdominal wall", region: "Hernia and abdominal wall", title: "Umbilical, epigastric and incisional hernia repair"}
+  - {number: 19, id: complex-abdominal-wall-reconstruction, group: "Hernia and abdominal wall", region: "Hernia and abdominal wall", title: "Complex abdominal wall reconstruction"}
+  - {number: 20, id: wide-local-excision-and-sentinel-node, group: "Breast and endocrine", region: "Breast and endocrine", title: "Wide local excision and sentinel node biopsy"}
+  - {number: 21, id: mastectomy-axillary-clearance-and-implant-reconstruction, group: "Breast and endocrine", region: "Breast and endocrine", title: "Mastectomy, axillary clearance and implant reconstruction"}
+  - {number: 22, id: free-flap-breast-reconstruction, group: "Breast and endocrine", region: "Breast and endocrine", title: "Free flap breast reconstruction (DIEP)"}
+  - {number: 23, id: thyroidectomy-and-parathyroidectomy, group: "Breast and endocrine", region: "Breast and endocrine", title: "Thyroidectomy and parathyroidectomy"}
+  - {number: 24, id: carotid-endarterectomy, group: "Vascular", region: "Vascular", title: "Carotid endarterectomy"}
+  - {number: 25, id: open-abdominal-aortic-aneurysm-repair, group: "Vascular", region: "Vascular", title: "Open abdominal aortic aneurysm repair"}
+  - {number: 26, id: endovascular-aneurysm-repair, group: "Vascular", region: "Vascular", title: "Endovascular aneurysm repair (EVAR, TEVAR and complex endografts)"}
+  - {number: 27, id: ruptured-abdominal-aortic-aneurysm, group: "Vascular", region: "Vascular", title: "Ruptured abdominal aortic aneurysm"}
+  - {number: 28, id: lower-limb-bypass-and-femoral-endarterectomy, group: "Vascular", region: "Vascular", title: "Lower limb bypass and femoral endarterectomy"}
+  - {number: 29, id: peripheral-angioplasty-and-stenting, group: "Vascular", region: "Vascular", title: "Peripheral angioplasty and stenting"}
+  - {number: 30, id: arteriovenous-fistula-formation, group: "Vascular", region: "Vascular", title: "Arteriovenous fistula formation"}
+  - {number: 31, id: varicose-vein-surgery-and-endovenous-ablation, group: "Vascular", region: "Vascular", title: "Varicose vein surgery and endovenous ablation"}
+  - {number: 32, id: embolectomy-and-fasciotomy-for-acute-limb, group: "Vascular", region: "Vascular", title: "Embolectomy and fasciotomy for acute limb ischaemia"}
+  - {number: 33, id: cystoscopy-ureteroscopy-and-stent-procedures, group: "Urology", region: "Urology", title: "Cystoscopy, ureteroscopy and stent procedures"}
+  - {number: 34, id: transurethral-resection-of-the-prostate-and, group: "Urology", region: "Urology", title: "Transurethral resection of the prostate and laser enucleation"}
+  - {number: 35, id: transurethral-resection-of-bladder-tumour, group: "Urology", region: "Urology", title: "Transurethral resection of bladder tumour"}
+  - {number: 36, id: robotic-and-open-radical-prostatectomy, group: "Urology", region: "Urology", title: "Robotic and open radical prostatectomy"}
+  - {number: 37, id: nephrectomy-and-partial-nephrectomy, group: "Urology", region: "Urology", title: "Nephrectomy and partial nephrectomy"}
+  - {number: 38, id: radical-cystectomy-and-urinary-diversion, group: "Urology", region: "Urology", title: "Radical cystectomy and urinary diversion"}
+  - {number: 39, id: percutaneous-nephrolithotomy, group: "Urology", region: "Urology", title: "Percutaneous nephrolithotomy"}
+  - {number: 40, id: scrotal-and-penile-surgery, group: "Urology", region: "Urology", title: "Scrotal and penile surgery: orchidectomy, hydrocele, vasectomy, circumcision"}
+  - {number: 41, id: renal-transplantation-and-donor-nephrectomy, group: "Urology", region: "Urology", title: "Renal transplantation and donor nephrectomy"}
+  - {number: 42, id: hysteroscopy-dilatation-and-curettage-and-minor, group: "Gynaecology", region: "Gynaecology", title: "Hysteroscopy, dilatation and curettage and minor gynaecology"}
+  - {number: 43, id: laparoscopic-gynaecology, group: "Gynaecology", region: "Gynaecology", title: "Laparoscopic gynaecology: diagnostic, sterilisation, cystectomy, ectopic pregnancy"}
+  - {number: 44, id: laparoscopic-and-robotic-hysterectomy, group: "Gynaecology", region: "Gynaecology", title: "Laparoscopic and robotic hysterectomy"}
+  - {number: 45, id: abdominal-hysterectomy-and-myomectomy, group: "Gynaecology", region: "Gynaecology", title: "Abdominal hysterectomy and myomectomy"}
+  - {number: 46, id: vaginal-hysterectomy-and-prolapse-repair, group: "Gynaecology", region: "Gynaecology", title: "Vaginal hysterectomy and prolapse repair"}
+  - {number: 47, id: gynaecological-oncology, group: "Gynaecology", region: "Gynaecology", title: "Gynaecological oncology: debulking and radical hysterectomy"}
+  - {number: 48, id: oocyte-retrieval-and-assisted-reproduction-procedures, group: "Gynaecology", region: "Gynaecology", title: "Oocyte retrieval and assisted reproduction procedures"}
+  - {number: 49, id: elective-caesarean-section, group: "Obstetrics", region: "Obstetrics", title: "Elective caesarean section"}
+  - {number: 50, id: emergency-caesarean-section-by-category, group: "Obstetrics", region: "Obstetrics", title: "Emergency caesarean section by category"}
+  - {number: 51, id: labour-epidural-analgesia-and-its-complications, group: "Obstetrics", region: "Obstetrics", title: "Labour epidural analgesia and its complications"}
+  - {number: 52, id: instrumental-delivery-manual-removal-of-placenta, group: "Obstetrics", region: "Obstetrics", title: "Instrumental delivery, manual removal of placenta and perineal repair"}
+  - {number: 53, id: major-obstetric-haemorrhage-and-placenta-accreta, group: "Obstetrics", region: "Obstetrics", title: "Major obstetric haemorrhage and placenta accreta spectrum"}
+  - {number: 54, id: pre-eclampsia-eclampsia-and-the-parturient, group: "Obstetrics", region: "Obstetrics", title: "Pre-eclampsia, eclampsia and the parturient with cardiac disease"}
+  - {number: 55, id: cervical-cerclage-and-non-obstetric-surgery, group: "Obstetrics", region: "Obstetrics", title: "Cervical cerclage and non-obstetric surgery in pregnancy"}
+  - {number: 56, id: general-anaesthesia-for-caesarean-section-and, group: "Obstetrics", region: "Obstetrics", title: "General anaesthesia for caesarean section and the failed intubation"}
+  - {number: 57, id: adult-and-paediatric-tonsillectomy-and-adenoidectomy, group: "ENT", region: "ENT", title: "Adult and paediatric tonsillectomy and adenoidectomy"}
+  - {number: 58, id: grommets-and-minor-paediatric-ent, group: "ENT", region: "ENT", title: "Grommets and minor paediatric ENT"}
+  - {number: 59, id: septoplasty-turbinate-surgery-and-functional-endoscopic, group: "ENT", region: "ENT", title: "Septoplasty, turbinate surgery and functional endoscopic sinus surgery"}
+  - {number: 60, id: middle-ear-surgery-tympanoplasty-mastoidectomy-cochlear, group: "ENT", region: "ENT", title: "Middle ear surgery: tympanoplasty, mastoidectomy, cochlear implant"}
+  - {number: 61, id: microlaryngoscopy-laser-airway-surgery-and-jet, group: "ENT", region: "ENT", title: "Microlaryngoscopy, laser airway surgery and jet ventilation"}
+  - {number: 62, id: tracheostomy, group: "ENT", region: "ENT", title: "Tracheostomy"}
+  - {number: 63, id: laryngectomy-neck-dissection-and-free-flap, group: "ENT", region: "ENT", title: "Laryngectomy, neck dissection and free flap reconstruction"}
+  - {number: 64, id: parotidectomy-and-submandibular-gland-excision, group: "ENT", region: "ENT", title: "Parotidectomy and submandibular gland excision"}
+  - {number: 65, id: airway-foreign-body-epiglottitis-and-the, group: "ENT", region: "ENT", title: "Airway foreign body, epiglottitis and the obstructed airway"}
+  - {number: 66, id: bleeding-tonsil, group: "ENT", region: "ENT", title: "Bleeding tonsil"}
+  - {number: 67, id: dental-extractions-and-wisdom-teeth, group: "Maxillofacial and dental", region: "Maxillofacial and dental", title: "Dental extractions and wisdom teeth"}
+  - {number: 68, id: orthognathic-surgery, group: "Maxillofacial and dental", region: "Maxillofacial and dental", title: "Orthognathic surgery"}
+  - {number: 69, id: facial-fracture-fixation, group: "Maxillofacial and dental", region: "Maxillofacial and dental", title: "Facial fracture fixation"}
+  - {number: 70, id: dental-and-neck-abscess, group: "Maxillofacial and dental", region: "Maxillofacial and dental", title: "Dental and neck abscess: Ludwig angina"}
+  - {number: 71, id: cataract-surgery, group: "Ophthalmology", region: "Ophthalmology", title: "Cataract surgery"}
+  - {number: 72, id: vitreoretinal-surgery, group: "Ophthalmology", region: "Ophthalmology", title: "Vitreoretinal surgery"}
+  - {number: 73, id: strabismus-surgery, group: "Ophthalmology", region: "Ophthalmology", title: "Strabismus surgery"}
+  - {number: 74, id: glaucoma-corneal-graft-and-oculoplastic-surgery, group: "Ophthalmology", region: "Ophthalmology", title: "Glaucoma, corneal graft and oculoplastic surgery"}
+  - {number: 75, id: penetrating-eye-injury, group: "Ophthalmology", region: "Ophthalmology", title: "Penetrating eye injury"}
+  - {number: 76, id: skin-lesion-excision-skin-graft-and, group: "Plastics and burns", region: "Plastics and burns", title: "Skin lesion excision, skin graft and local flaps"}
+  - {number: 77, id: breast-reduction-augmentation-and-abdominoplasty, group: "Plastics and burns", region: "Plastics and burns", title: "Breast reduction, augmentation and abdominoplasty"}
+  - {number: 78, id: liposuction-and-body-contouring, group: "Plastics and burns", region: "Plastics and burns", title: "Liposuction and body contouring"}
+  - {number: 79, id: burns-debridement-and-grafting, group: "Plastics and burns", region: "Plastics and burns", title: "Burns: debridement and grafting"}
+  - {number: 80, id: cleft-lip-and-palate-repair, group: "Plastics and burns", region: "Plastics and burns", title: "Cleft lip and palate repair"}
+  - {number: 81, id: craniotomy-for-supratentorial-tumour, group: "Neurosurgery", region: "Neurosurgery", title: "Craniotomy for supratentorial tumour"}
+  - {number: 82, id: awake-craniotomy, group: "Neurosurgery", region: "Neurosurgery", title: "Awake craniotomy"}
+  - {number: 83, id: posterior-fossa-surgery, group: "Neurosurgery", region: "Neurosurgery", title: "Posterior fossa surgery"}
+  - {number: 84, id: aneurysm-clipping-and-endovascular-coiling, group: "Neurosurgery", region: "Neurosurgery", title: "Aneurysm clipping and endovascular coiling"}
+  - {number: 85, id: traumatic-brain-injury, group: "Neurosurgery", region: "Neurosurgery", title: "Traumatic brain injury: haematoma evacuation and decompressive craniectomy"}
+  - {number: 86, id: burr-hole-drainage-of-chronic-subdural, group: "Neurosurgery", region: "Neurosurgery", title: "Burr hole drainage of chronic subdural haematoma"}
+  - {number: 87, id: transsphenoidal-pituitary-surgery, group: "Neurosurgery", region: "Neurosurgery", title: "Transsphenoidal pituitary surgery"}
+  - {number: 88, id: ventriculoperitoneal-shunt-and-external-ventricular-drain, group: "Neurosurgery", region: "Neurosurgery", title: "Ventriculoperitoneal shunt and external ventricular drain"}
+  - {number: 89, id: deep-brain-stimulation-and-epilepsy-surgery, group: "Neurosurgery", region: "Neurosurgery", title: "Deep brain stimulation and epilepsy surgery"}
+  - {number: 90, id: endovascular-thrombectomy-for-stroke, group: "Neurosurgery", region: "Neurosurgery", title: "Endovascular thrombectomy for stroke"}
+  - {number: 91, id: coronary-artery-bypass-grafting-on-and, group: "Cardiac", region: "Cardiac", title: "Coronary artery bypass grafting, on and off pump"}
+  - {number: 92, id: aortic-valve-replacement, group: "Cardiac", region: "Cardiac", title: "Aortic valve replacement"}
+  - {number: 93, id: mitral-valve-repair-and-replacement, group: "Cardiac", region: "Cardiac", title: "Mitral valve repair and replacement"}
+  - {number: 94, id: surgery-of-the-thoracic-aorta-and, group: "Cardiac", region: "Cardiac", title: "Surgery of the thoracic aorta and aortic dissection"}
+  - {number: 95, id: transcatheter-aortic-valve-implantation-and-structural, group: "Cardiac", region: "Cardiac", title: "Transcatheter aortic valve implantation and structural heart procedures"}
+  - {number: 96, id: pacemaker-defibrillator-and-lead-extraction, group: "Cardiac", region: "Cardiac", title: "Pacemaker, defibrillator and lead extraction"}
+  - {number: 97, id: electrophysiology-ablation-and-cardioversion, group: "Cardiac", region: "Cardiac", title: "Electrophysiology ablation and cardioversion"}
+  - {number: 98, id: resternotomy-tamponade-and-mechanical-circulatory-support, group: "Cardiac", region: "Cardiac", title: "Resternotomy, tamponade and mechanical circulatory support"}
+  - {number: 99, id: video-assisted-and-open-lobectomy-and, group: "Thoracic", region: "Thoracic", title: "Video-assisted and open lobectomy and wedge resection"}
+  - {number: 100, id: pneumonectomy, group: "Thoracic", region: "Thoracic", title: "Pneumonectomy"}
+  - {number: 101, id: mediastinoscopy-and-anterior-mediastinal-mass, group: "Thoracic", region: "Thoracic", title: "Mediastinoscopy and anterior mediastinal mass"}
+  - {number: 102, id: pleural-surgery-decortication-pleurodesis-and-pneumothorax, group: "Thoracic", region: "Thoracic", title: "Pleural surgery: decortication, pleurodesis and pneumothorax"}
+  - {number: 103, id: rigid-bronchoscopy-stents-and-tracheal-resection, group: "Thoracic", region: "Thoracic", title: "Rigid bronchoscopy, stents and tracheal resection"}
+  - {number: 104, id: thymectomy-and-myasthenia-gravis, group: "Thoracic", region: "Thoracic", title: "Thymectomy and myasthenia gravis"}
+  - {number: 105, id: pectus-repair, group: "Thoracic", region: "Thoracic", title: "Pectus repair"}
+  - {number: 106, id: pyloromyotomy, group: "Paediatric surgery", region: "Paediatric surgery", title: "Pyloromyotomy"}
+  - {number: 107, id: neonatal-emergencies, group: "Paediatric surgery", region: "Paediatric surgery", title: "Neonatal emergencies: tracheo-oesophageal fistula, diaphragmatic hernia, gastroschisis, necrotising enterocolitis"}
+  - {number: 108, id: paediatric-inguinal-hernia-orchidopexy-and-circumcision, group: "Paediatric surgery", region: "Paediatric surgery", title: "Paediatric inguinal hernia, orchidopexy and circumcision"}
+  - {number: 109, id: paediatric-appendicectomy-and-intussusception, group: "Paediatric surgery", region: "Paediatric surgery", title: "Paediatric appendicectomy and intussusception"}
+  - {number: 110, id: paediatric-laparoscopic-and-thoracoscopic-surgery, group: "Paediatric surgery", region: "Paediatric surgery", title: "Paediatric laparoscopic and thoracoscopic surgery"}
+  - {number: 111, id: liver-transplantation, group: "Transplant and major oncology", region: "Transplant and major oncology", title: "Liver transplantation"}
+  - {number: 112, id: organ-donation-donation-after-brain-death, group: "Transplant and major oncology", region: "Transplant and major oncology", title: "Organ donation: donation after brain death and circulatory death"}
+  - {number: 113, id: gastroscopy-and-colonoscopy, group: "Remote and procedural", region: "Remote and procedural", title: "Gastroscopy and colonoscopy"}
+  - {number: 114, id: ercp-and-advanced-endoscopy, group: "Remote and procedural", region: "Remote and procedural", title: "ERCP and advanced endoscopy"}
+  - {number: 115, id: bronchoscopy-ebus-and-interventional-pulmonology, group: "Remote and procedural", region: "Remote and procedural", title: "Bronchoscopy, EBUS and interventional pulmonology"}
+  - {number: 116, id: electroconvulsive-therapy, group: "Remote and procedural", region: "Remote and procedural", title: "Electroconvulsive therapy"}
+  - {number: 117, id: interventional-radiology, group: "Remote and procedural", region: "Remote and procedural", title: "Interventional radiology: embolisation, TIPS, ablation, vascular access"}
+  - {number: 118, id: anaesthesia-for-mri-and-ct, group: "Remote and procedural", region: "Remote and procedural", title: "Anaesthesia for MRI and CT"}
+  - {number: 119, id: radiotherapy-and-brachytherapy, group: "Remote and procedural", region: "Remote and procedural", title: "Radiotherapy and brachytherapy"}
+chapters_a:
+  - {id: a01-laparoscopy-pneumoperitoneum, title: "Laparoscopy, robotics and the pneumoperitoneum"}
+  - {id: a02-truncal-blocks-epidural, title: "Analgesia for the trunk: epidural, spinal morphine, paravertebral and fascial plane blocks"}
+  - {id: a03-one-lung-ventilation, title: "One-lung ventilation and thoracic essentials"}
+  - {id: a04-shared-difficult-airway, title: "The shared and difficult airway"}
+  - {id: a05-major-haemorrhage, title: "Major haemorrhage, cell salvage and coagulation"}
+  - {id: a06-eras-abdominal, title: "Enhanced recovery for abdominal surgery: fluids, haemodynamics and the high-risk laparotomy"}
+  - {id: a07-cardiopulmonary-bypass, title: "Cardiopulmonary bypass and cardiac essentials"}
+  - {id: a08-neuroanaesthesia-essentials, title: "Neuroanaesthesia essentials: intracranial pressure, cerebral perfusion and neuromonitoring"}
+  - {id: a09-obstetric-essentials, title: "Obstetric essentials: physiology, aortocaval compression, neuraxial dosing and the airway"}
+  - {id: a10-vascular-patient, title: "The vascular patient: cardiac risk, antiplatelets and anticoagulation, renal protection"}
+  - {id: a11-ponv-day-case, title: "Nausea, vomiting and day-case anaesthesia"}
+  - {id: a12-remote-site-sedation, title: "Remote site anaesthesia and procedural sedation"}
+  - {id: a13-the-child, title: "The child: doses, fluids, airway and the neonate"}
+  - {id: a14-positioning, title: "Positioning for non-orthopaedic surgery: lithotomy, steep Trendelenburg, sitting, park bench"}
+chapters_b:
+  - {id: b01-why-operations-hurt, title: "Why operations hurt: a first-principles pain model"}

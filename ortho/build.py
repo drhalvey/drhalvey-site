@@ -17,37 +17,40 @@ from pathlib import Path
 import markdown
 import yaml
 
-HERE = Path(__file__).resolve().parent          # ortho/
-ROOT = HERE.parent                               # repo root
+ROOT = Path(__file__).resolve().parent.parent    # repo root
+BOOK = os.environ.get('BOOK', 'ortho')            # which book folder to build: ortho (default) or surgery
+HERE = ROOT / BOOK                               # the book's folder: source in src/, output beside it
 SRC = HERE / 'src'
 MANIFEST = yaml.safe_load((SRC / 'manifest.yaml').read_text())
 
 REGIONS = ['Shoulder', 'Elbow', 'Wrist and hand', 'Hip', 'Knee', 'Foot and ankle', 'Trauma', 'Spine', 'Tumour', 'Paediatric']
 GROUPS = ['Upper limb', 'Hip and knee', 'Foot and ankle', 'Trauma', 'Spine', 'Tumour', 'Paediatric']
+REGIONS = MANIFEST.get('regions', REGIONS)
+GROUPS = MANIFEST.get('groups', GROUPS)
 BLOCK_FAMILIES = ['interscalene', 'brachial-plexus-distal', 'peripheral-upper-limb', 'lumbar-plexus-femoral',
                   'adductor-canal', 'sciatic-popliteal', 'ipack-genicular', 'neuraxial', 'fascial-plane',
-                  'local-infiltration', 'none']
+                  'local-infiltration', 'paravertebral', 'head-neck', 'pudendal-penile-caudal', 'topical-regional-eye', 'none']
 CATHETER = ['routine', 'selective', 'rarely', 'no']
 YES_OPTION_NO = ['yes', 'option', 'no']
-POSITIONS = ['beach-chair', 'lateral', 'supine', 'supine-arm-table', 'prone', 'traction-table', 'supine-bump', 'lithotomy']
+POSITIONS = ['beach-chair', 'lateral', 'supine', 'supine-arm-table', 'prone', 'traction-table', 'supine-bump', 'lithotomy', 'trendelenburg', 'reverse-trendelenburg', 'sitting', 'park-bench', 'lloyd-davies']
 YES_NO_SOMETIMES = ['yes', 'no', 'sometimes']
 DAY_CASE = ['yes', 'selected', 'no']
-MECHANISMS = ['bone', 'tendon-tension', 'retension', 'capsule', 'muscle', 'periosteum', 'nerve', 'tourniquet', 'surface', 'visceral']
+MECHANISMS = ['bone', 'tendon-tension', 'retension', 'capsule', 'muscle', 'periosteum', 'nerve', 'tourniquet', 'surface', 'visceral', 'abdominal-wall', 'laparoscopic', 'chest-wall', 'mucosal', 'skin-soft-tissue', 'sternotomy', 'craniotomy']
 REBOUND = ['low', 'moderate', 'high']
 
 BLOCK_FAMILY_LABEL = {
     'interscalene': 'Interscalene / superior trunk', 'brachial-plexus-distal': 'Supraclavicular, infraclavicular, axillary',
     'peripheral-upper-limb': 'Distal upper limb or WALANT', 'lumbar-plexus-femoral': 'Femoral, fascia iliaca, PENG, lumbar plexus',
     'adductor-canal': 'Adductor canal', 'sciatic-popliteal': 'Sciatic / popliteal', 'ipack-genicular': 'IPACK / genicular',
-    'neuraxial': 'Neuraxial', 'fascial-plane': 'Fascial plane (ESP, QL, TAP)', 'local-infiltration': 'Local infiltration only', 'none': 'No block',
+    'neuraxial': 'Neuraxial', 'fascial-plane': 'Fascial plane (ESP, QL, TAP)', 'local-infiltration': 'Local infiltration only', 'paravertebral': 'Paravertebral / intercostal', 'head-neck': 'Head and neck blocks', 'pudendal-penile-caudal': 'Pudendal, penile, caudal', 'topical-regional-eye': 'Eye blocks and topical', 'none': 'No block',
 }
 POSITION_LABEL = {
     'beach-chair': 'Beach chair', 'lateral': 'Lateral', 'supine': 'Supine', 'supine-arm-table': 'Supine, arm table',
-    'prone': 'Prone', 'traction-table': 'Traction table', 'supine-bump': 'Supine with bump', 'lithotomy': 'Lithotomy',
+    'prone': 'Prone', 'traction-table': 'Traction table', 'supine-bump': 'Supine with bump', 'lithotomy': 'Lithotomy', 'trendelenburg': 'Trendelenburg', 'reverse-trendelenburg': 'Reverse Trendelenburg', 'sitting': 'Sitting', 'park-bench': 'Park bench', 'lloyd-davies': 'Lloyd-Davies',
 }
 MECHANISM_LABEL = {
     'bone': 'Bone', 'tendon-tension': 'Tendon under tension', 'retension': 'Joint re-tensioned', 'capsule': 'Capsule',
-    'muscle': 'Muscle', 'periosteum': 'Periosteum', 'nerve': 'Nerve', 'tourniquet': 'Tourniquet', 'surface': 'Arthroscopic surface', 'visceral': 'Visceral',
+    'muscle': 'Muscle', 'periosteum': 'Periosteum', 'nerve': 'Nerve', 'tourniquet': 'Tourniquet', 'surface': 'Arthroscopic surface', 'visceral': 'Visceral', 'abdominal-wall': 'Abdominal wall incision', 'laparoscopic': 'Laparoscopic (ports and gas)', 'chest-wall': 'Chest wall and intercostal nerve', 'mucosal': 'Mucosal raw surface', 'skin-soft-tissue': 'Skin and soft tissue', 'sternotomy': 'Sternotomy', 'craniotomy': 'Craniotomy',
 }
 PAIN_LABEL = {1: 'Minimal', 2: 'Mild to moderate', 3: 'Moderate', 4: 'Severe', 5: 'Severe and prolonged'}
 
@@ -240,12 +243,13 @@ def page(title, body, depth, extra_head='', body_class=''):
 </head>
 <body class="{body_class}">
 <header class="ob-head">
-  <a class="ob-brand" href="{rel}ortho/index.html"><span class="ob-brand-title">{esc(MANIFEST['title'])}</span><span class="ob-brand-sub">{esc(MANIFEST['subtitle'])}</span></a>
+  <a class="ob-brand" href="{rel}{BOOK}/index.html"><span class="ob-brand-title">{esc(MANIFEST['title'])}</span><span class="ob-brand-sub">{esc(MANIFEST['subtitle'])}</span></a>
   <nav class="ob-nav" aria-label="Book">
-    <a href="{rel}ortho/index.html">Atlas</a>
-    <a href="{rel}ortho/index.html#part-a">Principles</a>
-    <a href="{rel}ortho/b/b01-why-operations-hurt.html">Pain model</a>
-    <a href="{rel}ortho/judge.html">Judge my practice</a>
+    <a href="{rel}{BOOK}/index.html">Atlas</a>
+    <a href="{rel}{BOOK}/index.html#part-a">Principles</a>
+    <a href="{rel}{BOOK}/b/b01-why-operations-hurt.html">Pain model</a>
+    <a href="{rel}{BOOK}/judge.html">Judge my practice</a>
+    <a href="{rel}{'surgery' if BOOK == 'ortho' else 'ortho'}/index.html">{'All surgery' if BOOK == 'ortho' else 'Orthopaedics'}</a>
     <button type="button" class="ob-unlock" id="ob-unlock" hidden>My practice</button>
   </nav>
 </header>
@@ -338,8 +342,9 @@ def card_body(card, prev_card=None, next_card=None, book=False):
   <dl class="ob-fields">
     {field('Block', block_html, 'ob-field-wide')}
     {field('Position', esc(fm['position_text']) if fm.get('position_text') else esc(POSITION_LABEL[fm['position']]))}
-    {field('Tourniquet', yn_text(tourniquet, fm.get('tourniquet_text')))}
-    {field('Cement', yn_text(cement, fm.get('cement_text')))}
+    {'' if (MANIFEST.get('hide_no_fields') and tourniquet == 'no') else field('Tourniquet', yn_text(tourniquet, fm.get('tourniquet_text')))}
+    {'' if (MANIFEST.get('hide_no_fields') and cement == 'no') else field('Cement', yn_text(cement, fm.get('cement_text')))}
+    {''.join(field(e['label'], esc(e['value'])) for e in (fm.get('extras') or []))}
     {field('Blood loss', esc(fm['blood_loss']))}
     {field('Duration', esc(fm['duration']))}
     {field('Length of stay', esc(fm['los']) + f'. Day case: {esc(day_case)}')}

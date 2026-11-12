@@ -109,7 +109,7 @@ TESTIMONIAL = re.compile(r'\b(testimonials?|patient stories|what our patients sa
 PAIN_TEAM_DAILY = re.compile(r'pain (team|service)[^.]{0,60}\b(every day|daily|each day)\b', re.I)
 
 INTERNAL = ('clinicians.html', 'tools/pain-relief.html')
-CLINICIAN_DIRS = ('teaching/', 'ortho/')  # clinician pages: timeframes, predictions and the word exact are allowed  # clinician reference and approved plans, not general copy  # clinician reference, not patient copy
+CLINICIAN_DIRS = ('teaching/', 'ortho/', 'surgery/')  # clinician pages: timeframes, predictions and the word exact are allowed  # clinician reference and approved plans, not general copy  # clinician reference, not patient copy
 
 for p in html_files():
     rel = p.relative_to(ROOT)
