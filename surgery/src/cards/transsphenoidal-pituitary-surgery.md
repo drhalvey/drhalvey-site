@@ -53,7 +53,7 @@ sources:
   - title: "Nemergut EC, Zuo Z, Jane JA, Laws ER. Predictors of diabetes insipidus after transsphenoidal surgery: a review of 881 patients. J Neurosurg 2005;103:448-454"
     url: "https://doi.org/10.3171/jns.2005.103.3.0448"
     note: "Immediate post-operative diabetes insipidus in 18.3%, desmopressin needed in 12.4%, persistent in 2%; an intraoperative cerebrospinal fluid leak raised transient diabetes insipidus to 33.3% and persistent to 4.4%; craniopharyngioma and Rathke cleft cyst also higher risk"
-  - title: "Schmitt H, Buchfelder M, Radespiel-Troger M, Fahlbusch R. Difficult intubation in acromegalic patients: incidence and predictability. Anesthesiology 2000;93:110-114"
+  - title: "Schmitt H, Buchfelder M, Radespiel-Tröger M, Fahlbusch R. Difficult intubation in acromegalic patients: incidence and predictability. Anesthesiology 2000;93:110-114"
     url: "https://doi.org/10.1097/00000542-200007000-00020"
     note: "128 acromegalic patients: grade III laryngoscopy in 26%, difficult intubation in 10%; Mallampati 3-4 predicted difficulty but missed a significant number"
   - title: "Fleseriu M, Hashim IA, Karavitaki N, et al. Hormonal replacement in hypopituitarism in adults: an Endocrine Society clinical practice guideline. J Clin Endocrinol Metab 2016;101:3888-3921"
