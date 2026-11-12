@@ -124,11 +124,11 @@ The choice of relaxant is the traditional argument. Suxamethonium raises intraoc
 
 ### 7. Exploration and the oculocardiac reflex
 **Why:** To find the end of a scleral wound the surgeon hooks and retracts rectus muscles, and may detach one temporarily.
-**Anaesthesia:** Traction on a muscle triggers the oculocardiac reflex as it does in squint surgery: bradycardia or a pause within seconds. Ask the surgeon to release, check depth and carbon dioxide, and give glycopyrronium 0.2-0.4 mg or atropine 0.6 mg IV (atropine 20 micrograms/kg in children) if it recurs. Details are on the [strabismus surgery](strabismus-surgery.html) card.
+**Anaesthesia:** Traction on a muscle triggers the oculocardiac reflex as it does in squint surgery: bradycardia or a pause within seconds. Have the surgeon release the traction, check depth and carbon dioxide, and give glycopyrronium 0.2-0.4 mg or atropine 0.6 mg IV (atropine 20 micrograms/kg in children) if it recurs. Details are on the [strabismus surgery](strabismus-surgery.html) card.
 
 ### 8. Closure of the globe
 **Why:** Sutures restore a watertight shell; the anterior chamber is reformed with fluid or air, and intravitreal antibiotics are given.
-**Anaesthesia:** Ask to be told when the eye is closed. From that moment the eye has a wall again and a normal pressure, and the constraints ease, though the repair is a row of fine sutures in bruised tissue. If lens removal, foreign body extraction or vitrectomy follows in the same sitting, the case becomes a [vitreoretinal surgery](vitreoretinal-surgery.html) case, with the gas precautions on that card. Ask the surgeon to place sub-Tenon or subconjunctival long-acting local anaesthetic now for postoperative analgesia. Give paracetamol and, if the surgeon accepts it, an NSAID.
+**Anaesthesia:** Ask to be told when the eye is closed. From that moment the eye has a wall again and a normal pressure, and the constraints ease, though the repair is a row of fine sutures in bruised tissue. If lens removal, foreign body extraction or vitrectomy follows in the same sitting, the case becomes a [vitreoretinal surgery](vitreoretinal-surgery.html) case, with the gas precautions on that card. Have the surgeon place sub-Tenon or subconjunctival long-acting local anaesthetic now for postoperative analgesia. Give paracetamol and, if the surgeon accepts it, an NSAID.
 
 ### 9. Emergence
 **Why:** The surgeon wants no coughing, retching or rubbing.

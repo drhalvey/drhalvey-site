@@ -113,7 +113,7 @@ The surgeon's requirements are a completely still eye during work on the retinal
 
 ### 7. Scleral buckle
 **Why:** The conjunctiva is opened for 360 degrees, each rectus muscle is hooked and slung, and the band is passed under the muscles and sutured to the sclera; subretinal fluid may be drained through a needle puncture.
-**Anaesthesia:** The oculocardiac reflex belongs to this step: traction on a rectus muscle produces sinus bradycardia, junctional rhythm or a pause within seconds. Ask the surgeon to release, confirm depth and carbon dioxide, and give glycopyrronium 0.2-0.4 mg or atropine 0.6 mg IV if it recurs. The reflex is less frequent with an orbital block, anticholinergic and deeper inhaled anaesthesia, and more frequent with rapid-acting opioids such as remifentanil. A buckle tightened around the globe raises intraocular pressure; the surgeon checks that the central retinal artery is still pulsing. Buckle surgery is where the pain and nausea of this card concentrate.
+**Anaesthesia:** The oculocardiac reflex belongs to this step: traction on a rectus muscle produces sinus bradycardia, junctional rhythm or a pause within seconds. Have the surgeon release the traction, confirm depth and carbon dioxide, and give glycopyrronium 0.2-0.4 mg or atropine 0.6 mg IV if it recurs. The reflex is less frequent with an orbital block, anticholinergic and deeper inhaled anaesthesia, and more frequent with rapid-acting opioids such as remifentanil. A buckle tightened around the globe raises intraocular pressure; the surgeon checks that the central retinal artery is still pulsing. Buckle surgery is where the pain and nausea of this card concentrate.
 
 ### 8. Fluid-air exchange and gas
 **Why:** The eye is filled with air to flatten the retina, then the air is exchanged for a gas mixture at a concentration that will not expand (about 20% SF6 or 14% C3F8), or for oil.
@@ -121,7 +121,7 @@ The surgeon's requirements are a completely still eye during work on the retinal
 
 ### 9. Closure
 **Why:** Small-gauge ports seal themselves or take one absorbable suture; the conjunctiva is closed after a buckle; antibiotic and steroid are injected under the conjunctiva.
-**Anaesthesia:** If no block was given, ask the surgeon to inject long-acting local anaesthetic into the sub-Tenon space now: it takes ten seconds through the open conjunctiva and covers the first evening. Paracetamol and an NSAID intravenously unless contraindicated. Smooth emergence without coughing or retching, because the eye is full of gas at a set pressure and any surge is transmitted to the retinal circulation. A wristband or card stating the gas, the date and the warning about nitrous oxide goes on before the patient leaves theatre.
+**Anaesthesia:** If no block was given, have the surgeon inject long-acting local anaesthetic into the sub-Tenon space now: it takes ten seconds through the open conjunctiva and covers the first evening. Paracetamol and an NSAID intravenously unless contraindicated. Smooth emergence without coughing or retching, because the eye is full of gas at a set pressure and any surge is transmitted to the retinal circulation. A wristband or card stating the gas, the date and the warning about nitrous oxide goes on before the patient leaves theatre.
 
 ### 10. Posturing, discharge and later anaesthetics
 **Why:** A gas bubble floats; the patient is positioned so that it presses on the tear or the macular hole (face-down, or on one side) for days, as the surgeon directs.

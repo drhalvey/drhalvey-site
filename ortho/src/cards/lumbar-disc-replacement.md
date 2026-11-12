@@ -29,7 +29,7 @@ day_case: "no"
 drugs:
   antibiotic: "Cefazolin 2 g IV within 60 min of incision (3 g over 120 kg); an implant, so repeat at 4 h"
   txa: "Tranexamic acid 1 g IV before incision is widely used and reasonable; the expected loss is small and the benefit is insurance against venous ooze, not evidence from this operation"
-  vte: "Mechanical from induction; low molecular weight heparin from the first evening or day 1, because the left common iliac vein has been compressed under a retractor and no spinal canal has been opened"
+  vte: "Mechanical from induction; low molecular weight heparin from the first evening or day 1, because the left common iliac vein has been compressed under a retractor; the discectomy reaches the posterior ligament and the anterior epidural veins, so where the ligament was released or those veins bled the first dose waits for the surgeon's agreement"
   antiemetic: "Dexamethasone 8 mg IV at induction and ondansetron 4 mg IV before emergence; ileus is the gut's response to retroperitoneal retraction and opioid makes it worse"
 patient_line: "The disc is replaced from the front through a cut low on the tummy, so the back muscles are left alone; expect a sore abdomen for a few days, a bloated feeling until the bowel wakes up, and a left foot that feels warmer than the right."
 trap: "The bleeding in this operation is venous, sudden and at L4-5: the left common iliac vein tears during retraction or when the implant is impacted, the person who can repair it is the access surgeon, and they must still be in the building when the trial implants are going in"
