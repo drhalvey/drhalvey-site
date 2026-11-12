@@ -28,7 +28,7 @@ GROUPS = ['Upper limb', 'Hip and knee', 'Foot and ankle', 'Trauma', 'Spine', 'Tu
 REGIONS = MANIFEST.get('regions', REGIONS)
 GROUPS = MANIFEST.get('groups', GROUPS)
 BLOCK_FAMILIES = ['interscalene', 'brachial-plexus-distal', 'peripheral-upper-limb', 'lumbar-plexus-femoral',
-                  'adductor-canal', 'sciatic-popliteal', 'ipack-genicular', 'neuraxial', 'fascial-plane',
+                  'adductor-canal', 'sciatic-popliteal', 'ankle-block', 'ipack-genicular', 'neuraxial', 'fascial-plane',
                   'local-infiltration', 'paravertebral', 'head-neck', 'pudendal-penile-caudal', 'topical-regional-eye', 'none']
 CATHETER = ['routine', 'selective', 'rarely', 'no']
 YES_OPTION_NO = ['yes', 'option', 'no']
@@ -41,7 +41,7 @@ REBOUND = ['low', 'moderate', 'high']
 BLOCK_FAMILY_LABEL = {
     'interscalene': 'Interscalene / superior trunk', 'brachial-plexus-distal': 'Supraclavicular, infraclavicular, axillary',
     'peripheral-upper-limb': 'Distal upper limb or WALANT', 'lumbar-plexus-femoral': 'Femoral, fascia iliaca, PENG, lumbar plexus',
-    'adductor-canal': 'Adductor canal', 'sciatic-popliteal': 'Sciatic / popliteal', 'ipack-genicular': 'IPACK / genicular',
+    'adductor-canal': 'Adductor canal', 'sciatic-popliteal': 'Sciatic / popliteal', 'ankle-block': 'Ankle block', 'ipack-genicular': 'IPACK / genicular',
     'neuraxial': 'Neuraxial', 'fascial-plane': 'Fascial plane (ESP, QL, TAP)', 'local-infiltration': 'Local infiltration only', 'paravertebral': 'Paravertebral / intercostal', 'head-neck': 'Head and neck blocks', 'pudendal-penile-caudal': 'Pudendal, penile, caudal', 'topical-regional-eye': 'Eye blocks and topical', 'none': 'No block',
 }
 POSITION_LABEL = {

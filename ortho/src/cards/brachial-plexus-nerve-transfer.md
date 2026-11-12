@@ -4,17 +4,17 @@ title: "Brachial plexus exploration, nerve grafts and nerve transfers"
 subtitle: "Supraclavicular and infraclavicular exploration, sural nerve grafting, Oberlin, spinal accessory, intercostal and triceps-branch transfers, free functioning muscle transfer"
 aka: ["brachial plexus reconstruction", "brachial plexus injury", "BPI", "nerve transfer", "neurotisation", "Oberlin transfer", "double fascicular transfer", "spinal accessory to suprascapular", "Somsak transfer", "intercostal nerve transfer", "sural nerve graft", "root avulsion", "free functioning gracilis", "contralateral C7"]
 pain:
-  score: 3
-  trajectory: [3, 4, 4, 3, 3]
+  score: 2
+  trajectory: [3, 4, 3, 2, 2]
   mechanism: nerve
-  mechanism_text: "The surgical pain is modest: skin and muscle-splitting incisions in the neck, arm, chest wall and calf, with no bone. What the patient has is deafferentation pain from the injury itself, present before surgery in over half, burning and paroxysmal in an insensate limb, unchanged by the operation in the short term and joined by new dysaesthesia in donor nerve territories. The flat trajectory is the neuropathic baseline, not the wounds"
+  mechanism_text: "The surgical pain is modest: skin and muscle-splitting incisions in the neck, arm, chest wall and calf, with no bone. What the patient has is deafferentation pain from the injury itself, present before surgery in over half, burning and paroxysmal in an insensate limb, unchanged by the operation in the short term and joined by new dysaesthesia in donor nerve territories. The score and trajectory describe the wounds, which settle in about three days; the neuropathic baseline sits underneath them, is not captured by the scale and does not fall"
   rebound_risk: low
 block:
   primary: "No block. General anaesthesia with no neuromuscular blockade after intubation, remifentanil and low-dose ketamine, and surgeon infiltration of skin only at closure"
   family: none
   catheter: "no"
   catheter_text: "A plexus block or catheter on the operated side abolishes the motor responses the surgeon operates by and sits in the field; local anaesthetic is kept away from every nerve that will be stimulated until the last stimulation is done"
-  alternatives: ["Surgeon skin infiltration with ropivacaine at closure, away from coaptation sites", "Sural nerve harvest site infiltration, or a popliteal sciatic block placed after the harvest when both calves are used", "Erector spinae plane block after closure for intercostal nerve harvest", "Total intravenous anaesthesia when motor or somatosensory evoked potentials are used to test root continuity"]
+  alternatives: ["Surgeon skin infiltration with ropivacaine at closure, away from coaptation sites", "Sural nerve harvest site infiltration with ropivacaine 0.2% at closure, for one calf or both", "Erector spinae plane block after closure for intercostal nerve harvest", "Total intravenous anaesthesia when motor or somatosensory evoked potentials are used to test root continuity"]
   neuraxial: "no"
 position: supine-bump
 position_text: "Supine, bolster under the operative scapula, head turned away on a ring, table slightly head-up; whole arm, hemithorax and neck prepared, arm on a board and repositioned during the case; one or both legs prepared to the groin for sural nerve harvest, and a thigh for gracilis when a free muscle transfer is planned"
@@ -32,7 +32,7 @@ drugs:
   vte: "Mechanical throughout a long case; chemoprophylaxis from the evening of surgery, with the microvascular surgeon's own antithrombotic plan when a free muscle transfer is done"
   antiemetic: "Dexamethasone 8 mg IV and ondansetron 4 mg IV; propofol-based maintenance where evoked potentials or a long case favour it"
 patient_line: "The cuts themselves are not very painful, but the burning pain you already have in the arm will not go away with this operation and may flare for a while; we will keep your nerve pain medicines going and add to them."
-trap: "The surgeon navigates by muscle twitch: one top-up of neuromuscular blocker, a volatile-paralysed tourniquet limb or local anaesthetic near a donor nerve turns a working fascicle into an apparently dead one, and the wrong fascicle is cut or a recoverable nerve is sacrificed"
+trap: "The surgeon navigates by muscle twitch: one top-up of neuromuscular blocker, residual block that passes a twitch count but not a train-of-four ratio of 0.9, an ischaemic tourniquet limb or local anaesthetic near a donor nerve turns a working fascicle into an apparently dead one, and the wrong fascicle is cut or a recoverable nerve is sacrificed"
 sources:
   - title: "Li GY, Xie KQ, Luo J, Cai L, Xu EX, Sha K. Risk factors for poor physical and psychological outcomes after traumatic brachial plexus injury: a multicenter retrospective cohort study. Front Neurol 2026;17:1880509"
     url: "https://doi.org/10.3389/fneur.2026.1880509"
@@ -85,7 +85,7 @@ The pain logic is unlike any other card. The incisions are soft tissue and sever
 
 ### 2. Induction, airway and the rule about relaxants
 **Why:** The surgeon will stimulate nerves from the first half hour to the last and needs every response to be real.
-**Anaesthesia:** Intubate with a short-acting agent or without a relaxant: rocuronium 0.5 mg/kg IV at induction for a case where stimulation starts 45 min later is acceptable only if train-of-four on the opposite arm or a leg is back to four strong twitches before the surgeon stimulates, with sugammadex given if it is not. No top-ups. Stillness comes from remifentanil and adequate hypnotic depth. Reinforced tube taped to the side away from the neck incision, eyes padded, and the head turned only as far as a neck that may have been injured tolerates. A bite block if evoked potentials are run, and propofol-based maintenance in that case.
+**Anaesthesia:** Intubate without a relaxant (remifentanil and propofol) or with a single small dose of rocuronium. Suxamethonium is not the short-acting option here: months after a denervating injury, often with other trauma and disuse, extrajunctional acetylcholine receptors make a hyperkalaemic arrest a real risk, and it is avoided. Rocuronium 0.5 mg/kg IV at induction for a case where stimulation starts 45 min later is acceptable only if a quantitative train-of-four ratio measured on the opposite arm or a leg is 0.9 or more (ideally 1.0) before the surgeon stimulates, with sugammadex given if it is not and the ratio measured again. Four twitches counted by eye or felt by hand are not the test, because they coexist with a ratio well below 0.9 and a weakened response to the surgeon's stimulator. No top-ups. Stillness comes from remifentanil and adequate hypnotic depth. Reinforced tube taped to the side away from the neck incision, eyes padded, and the head turned only as far as a neck that may have been injured tolerates. A bite block if evoked potentials are run, and propofol-based maintenance in that case.
 
 ### 3. Lines and positioning for a long microsurgical case
 **Why:** The surgeon needs the neck, shoulder, arm, chest wall and one or both legs, and will move the arm from abduction to across the chest several times.
@@ -101,7 +101,7 @@ The pain logic is unlike any other card. The incisions are soft tissue and sever
 
 ### 6. Distal transfers in the arm
 **Why:** Through a medial arm incision the biceps motor branch is found on the musculocutaneous nerve and divided; the ulnar nerve is opened and its fascicles stimulated one at a time until one giving mainly wrist flexion is found, which is cut and turned to the biceps branch. The posterior approach repeats this for a triceps branch to the axillary nerve.
-**Anaesthesia:** This is the step where your contribution decides the result. The surgeon is choosing a fascicle to sacrifice on the strength of a twitch at 0.5 mA. Any residual neuromuscular block, a tourniquet that has been up for more than 20-30 min, or a cold hypoperfused limb degrades the response. Confirm four full twitches with the monitor on the non-operative side, keep the patient warm and normotensive, and say aloud that relaxant has not been given. The surgeon should not infiltrate local anaesthetic with adrenaline into this wound beforehand.
+**Anaesthesia:** This is the step where your contribution decides the result. The surgeon is choosing a fascicle to sacrifice on the strength of a twitch at 0.5 mA. Any residual neuromuscular block, a tourniquet that has been up for more than 20-30 min, or a cold hypoperfused limb degrades the response. Confirm a quantitative train-of-four ratio of 0.9 or more with the monitor on the non-operative side (never on the denervated limb, which reads falsely), keep the patient warm and normotensive, and say aloud that relaxant has not been given. The surgeon should not infiltrate local anaesthetic with adrenaline into this wound beforehand.
 
 ### 7. Intercostal nerve harvest
 **Why:** The third to sixth intercostal nerves are dissected from under their ribs through a curved inframammary incision, divided anteriorly and swung into the axilla to reach the musculocutaneous nerve directly.
@@ -131,7 +131,7 @@ Nociceptive: several soft-tissue wounds. Paracetamol and an NSAID regularly, sur
 
 Neuropathic: continue everything the patient was taking, on the day of surgery and every day after. Low-dose ketamine through the case and for 24-48 h is the author's practice in a patient with established deafferentation pain, on the general evidence for opioid-tolerant and neuropathic patients and not on a plexus-specific trial. Whether reconstruction itself reduces avulsion pain cannot be stated from the literature: a 2026 systematic review found pain reporting too inconsistent to pool. For pain that drugs fail, dorsal root entry zone lesioning gives meaningful relief in about 70% in pooled series and is the referral to know about.
 
-No block and no catheter on the operative side before or during surgery. The reasons are mechanical (the block is in the field), functional (it abolishes the responses the surgeon needs) and logical (the pain generator is central to the block). A regional technique for the leg is unnecessary for one sural harvest.
+No block and no catheter on the operative side before or during surgery. The reasons are mechanical (the block is in the field), functional (it abolishes the responses the surgeon needs) and logical (the pain generator is central to the block). A regional technique for the leg is unnecessary for one sural harvest, and when both calves are harvested the answer is still infiltration: bilateral popliteal sciatic blocks would leave two dropped feet in a patient who has one working arm to steady himself.
 
 Escalation: breathlessness is a pneumothorax or a diaphragm that was already paralysed; neck swelling is a haematoma or a chyle leak on the left; severe new pain in the hand after an Oberlin transfer is a donor nerve problem and goes to the surgeon.
 
