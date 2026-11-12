@@ -70,7 +70,7 @@ sources:
     note: "Consensus pathway graded by GRADE covering preoperative optimisation, multimodal opioid-sparing analgesia, nausea prophylaxis, euvolaemia, normothermia, early feeding, early catheter removal and mobilisation"
   - title: "Gerbershagen HJ, et al. Pain intensity on the first day after surgery: a prospective cohort study comparing 179 surgical procedures. Anesthesiology 2013;118:934-944"
     url: "https://doi.org/10.1097/ALN.0b013e31828866b3"
-    note: "Day 1 worst pain ranked across 179 procedures; pain after common abdominal and gynaecological operations was frequently higher than their perceived size would predict"
+    note: "Day 1 worst pain ranked across 179 procedures; the reference cohort for calibrating the pain scores in this book"
 ---
 
 ## What the surgeon is doing and why
