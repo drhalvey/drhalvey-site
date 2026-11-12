@@ -149,7 +149,7 @@ An epidural that is not working is common enough that a plan for it belongs in t
 3. For a narrow or patchy block, give a bolus of the infusion solution and reassess in 20-30 min. For a unilateral block, withdraw the catheter 1-2 cm and bolus.
 4. If one bolus has not produced a usable block, stop. Re-site early if the patient has days of need ahead and the anticoagulation timing allows, or convert to the fallback: opioid patient-controlled analgesia with ketamine or IV lidocaine, or wound or rectus sheath catheters placed by the surgeon or under ultrasound.
 
-A failing epidural with a new motor block is not a failure to be boluses through: a dense or progressive motor block on a thoracic epidural infusion is an epidural haematoma or abscess until imaging says otherwise.
+A failing epidural with a new motor block is not a failure to bolus through: a dense or progressive motor block on a thoracic epidural infusion is an epidural haematoma or abscess until imaging says otherwise.
 
 ### The rare disaster
 
