@@ -4,17 +4,17 @@ title: "Embolectomy and fasciotomy for acute limb ischaemia"
 subtitle: "Femoral and brachial balloon embolectomy, emergency bypass, and four-compartment leg fasciotomy"
 aka: ["embolectomy", "Fogarty", "thrombectomy", "acute limb ischaemia", "ALI", "cold leg", "fasciotomy", "compartment syndrome", "reperfusion injury", "brachial embolectomy"]
 pain:
-  score: 3
+  score: 4
   trajectory: [4, 5, 4, 4, 3]
   mechanism: muscle
-  mechanism_text: "The groin wound of an embolectomy is minor. The pain comes from the limb: ischaemic muscle and nerve before surgery, reperfusion swelling afterwards, and, where fasciotomy is done, two long wounds through skin and deep fascia left open over bulging muscle and re-provoked at every dressing change until closure or grafting at day 3-7"
+  mechanism_text: "The groin wound of an embolectomy is minor. The pain comes from the limb: ischaemic muscle and nerve before surgery, reperfusion swelling afterwards, and, where fasciotomy is done, two long wounds through skin and deep fascia left open over bulging muscle and re-provoked at every dressing change until closure or grafting at day 3-7. The score and trajectory describe the patient who has a fasciotomy; embolectomy alone with a well reperfused limb is a 2, with pain falling from day 1"
   rebound_risk: moderate
 block:
   primary: "Surgeon infiltration of the groin or antecubital fossa with lidocaine 1% and minimal sedation for embolectomy; general anaesthesia when fasciotomy, bypass or a long exploration is expected. The analgesic strategy afterwards is systemic and multimodal, chosen so that compartment syndrome can still declare itself"
   family: local-infiltration
   catheter: rarely
-  catheter_text: "A low-concentration sciatic or femoral catheter is considered only once fasciotomy has been done or the limb's fate is settled; before that, dense or prolonged blocks are avoided and neuraxial techniques are excluded by anticoagulation"
-  alternatives: ["General anaesthesia with a tracheal tube (unfasted emergency) or supraglottic airway", "Low-concentration single-shot femoral or sciatic block after completed fasciotomy", "PCA opioid with ketamine adjunct for open fasciotomy wounds", "Axillary or supraclavicular block for brachial embolectomy where anticoagulation and time allow"]
+  catheter_text: "A low-concentration sciatic or femoral catheter is considered only once fasciotomy has been done or the limb's fate is settled, and not after thrombolysis; before that, dense or prolonged blocks are avoided and neuraxial techniques are excluded by anticoagulation"
+  alternatives: ["General anaesthesia with a tracheal tube (unfasted emergency) or supraglottic airway", "Low-concentration single-shot femoral or sciatic block after completed fasciotomy, where no thrombolytic has been given", "PCA opioid with ketamine adjunct for open fasciotomy wounds", "Axillary block for brachial embolectomy where anticoagulation and time allow"]
   neuraxial: "no"
 position: supine
 position_text: "Supine with the whole affected leg and both groins prepared, foot visible in a clear bag; arm out on a board for brachial embolectomy; the table must take an image intensifier"
@@ -58,7 +58,7 @@ sources:
     note: "34 articles, mostly case reports: no good evidence that regional anaesthesia or PCA delays the diagnosis of compartment syndrome, and no adequate prospective studies"
   - title: "Gelman S. The pathophysiology of aortic cross-clamping and unclamping. Anesthesiology 1995;82:1026-1060"
     url: "https://doi.org/10.1097/00000542-199504000-00027"
-    note: "Standard review of the haemodynamic and metabolic consequences of releasing an arterial clamp onto ischaemic tissue; seen as a citation"
+    note: "Standard review of the haemodynamic and metabolic consequences of aortic cross-clamping and unclamping; applied to limb reperfusion on this card by extrapolation; seen as a citation"
 ---
 
 ## What the surgeon is doing and why
@@ -105,7 +105,7 @@ The pain logic has three layers. The surgical wound of an embolectomy is a small
 
 ### 7. The fasciotomy decision
 **Why:** The surgeon feels the calf after reperfusion. Prolonged or severe ischaemia, a tense calf, or poor venous return leads to fasciotomy now, since a prophylactic fasciotomy is far less morbid than a late one through necrotic muscle.
-**Anaesthesia:** If the case has been under local anaesthesia this is the point of conversion to general anaesthesia: in a heparinised, unfasted patient, with reperfusion products circulating, so check the potassium before giving suxamethonium and use rocuronium if it is raised. If the surgeon decides against fasciotomy, the limb is at risk for the next 24-48 h and the analgesic plan must preserve the ability to detect a compartment syndrome.
+**Anaesthesia:** If the case has been under local anaesthesia this is the point of conversion to general anaesthesia: in a heparinised, unfasted patient, with reperfusion products circulating, so the relaxant for this rapid sequence induction is rocuronium 1.2 mg/kg IV, with sugammadex available, and not suxamethonium. Potassium is rising minute by minute after reperfusion, muscle that has been ischaemic for hours releases more of it when depolarised, and a value measured a few minutes earlier does not describe the potassium the heart will see, so a normal result is no licence for suxamethonium. Repeat the gas after induction. If the surgeon decides against fasciotomy, the limb is at risk for the next 24-48 h and the analgesic plan must preserve the ability to detect a compartment syndrome.
 
 ### 8. Four-compartment fasciotomy
 **Why:** Two full-length incisions decompress all four compartments. Dead muscle that does not contract or bleed is excised. The wounds are left open under a dressing or negative-pressure system.
@@ -127,9 +127,9 @@ Before surgery: intravenous opioid titrated to comfort. Ischaemic pain is severe
 
 For embolectomy without fasciotomy: surgeon infiltration of the groin, regular paracetamol, and oral or PCA opioid in modest dose. Pain should fall after successful revascularisation. The plan must not obscure a compartment syndrome, so no dense or long-acting block of the leg is placed. The Association of Anaesthetists' guidance on the analogous problem in lower leg trauma is the nearest formal statement: avoid dense blocks whose duration greatly exceeds the surgery, and accept that low-concentration blocks have not been associated with delayed diagnosis where surveillance is effective. Systematic review finds no good evidence that PCA or regional analgesia delays the diagnosis, and no adequate prospective data either, so the caution is consensus and mechanism, not proof. In practice the reperfused, un-fasciotomised limb gets opioid by PCA, structured hourly limb observations, and a low threshold for compartment pressure measurement. Escalating opioid requirement is itself treated as a sign.
 
-After fasciotomy the compartments are open and the masking argument largely falls away, while the wounds are painful. PCA opioid with regular paracetamol is the base; low-dose ketamine by infusion (0.1-0.2 mg/kg/h) is the author's preferred adjunct for the first days and for dressing changes. A low-concentration sciatic or femoral block or catheter (ropivacaine 0.1-0.2%) becomes reasonable at this stage if anticoagulation and the puncture site permit, on the author's judgement that a superficial compressible site in a heparinised patient is acceptable where a deep or neuraxial one is not; the thigh compartments and the foot remain at risk and are still observed. Neuraxial techniques stay excluded throughout by therapeutic heparin and any thrombolysis. NSAIDs are withheld because of the kidney and the bleeding risk. Gabapentinoids are reasonable for the burning dysaesthesia of nerve recovery from day 2-3.
+After fasciotomy the compartments are open and the masking argument largely falls away, while the wounds are painful. PCA opioid with regular paracetamol is the base; low-dose ketamine by infusion (0.1-0.2 mg/kg/h) is the author's preferred adjunct for the first days and for dressing changes. A low-concentration sciatic or femoral block or catheter (ropivacaine 0.1-0.2%) becomes reasonable at this stage if no thrombolytic has been given and anticoagulation and the puncture site permit, on the author's judgement that a superficial compressible site in a heparinised patient is acceptable where a deep or neuraxial one is not; the thigh compartments and the foot remain at risk and are still observed. Neuraxial techniques stay excluded throughout by therapeutic heparin and any thrombolysis. NSAIDs are withheld because of the kidney and the bleeding risk. Gabapentinoids are reasonable for the burning dysaesthesia of nerve recovery from day 2-3.
 
-Expect pain to be highest on day 0-1 and to settle slowly, more slowly with fasciotomy, with spikes at dressing changes that need pre-emptive opioid or ketamine. Escalation triggers: pain rising after an initial improvement, pain on passive stretch of the toes, or a tense compartment in a limb without fasciotomy is compartment syndrome and needs the surgeon within minutes. Return of the original cold, white, painful limb is re-occlusion. Pain with dark urine and a rising creatinine is rhabdomyolysis.
+The score of 4 and the trajectory on this card are for the patient with a fasciotomy. After embolectomy alone, with a limb that reperfuses well, the pain is a 2: the ischaemic pain goes within hours, the groin wound is minor, and pain that does not fall is a finding. Expect pain to be highest on day 0-1 and to settle slowly, more slowly with fasciotomy, with spikes at dressing changes that need pre-emptive opioid or ketamine. Escalation triggers: pain rising after an initial improvement, pain on passive stretch of the toes, or a tense compartment in a limb without fasciotomy is compartment syndrome and needs the surgeon within minutes. Return of the original cold, white, painful limb is re-occlusion. Pain with dark urine and a rising creatinine is rhabdomyolysis.
 
 ## Pitfalls and variants
 
@@ -142,7 +142,7 @@ Expect pain to be highest on day 0-1 and to settle slowly, more slowly with fasc
 - Late presentation. A limb ischaemic for more than 12-24 h with fixed mottling is managed by primary amputation, and revascularisation attempted against advice is the scenario for fatal reperfusion. Resuscitate first, and be part of that decision.
 - Compartment syndrome under sedation or ventilation. In the intensive care patient who cannot report pain, the diagnosis depends on examination and pressure measurement; prophylactic fasciotomy is used more readily for that reason.
 - Fasciotomy for other causes. Trauma, crush, prolonged lithotomy and reperfusion after elective bypass produce the same operation; the anaesthetic considerations for the wound are the same, without the embolic comorbidity.
-- Returns to theatre. Second-look debridement and delayed closure are short procedures in an anticoagulated patient; general anaesthesia, with the heparin infusion paused according to the surgeon's instruction.
+- Returns to theatre. Second-look debridement and delayed closure are short procedures in an anticoagulated patient; general anaesthesia, with the heparin infusion paused according to the surgeon's instruction. Suxamethonium is avoided at these returns as well, because damaged and immobile muscle exaggerates its potassium release.
 
 ## Key sources
 
