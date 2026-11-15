@@ -152,6 +152,7 @@ async function send(){
 }
 
 (async()=>{
+  if(window.PREOP){P=window.PREOP;P.preview=true;render();return;}   // SIOP's approval preview: content handed in, nothing fetched or sent
   if(!t||!key){fail("This link is not complete. Please open it straight from the text message.");return;}
   try{const r=await fetch(BASE+"/api/get?t="+encodeURIComponent(t));const j=await r.json();
     if(j.done){m.innerHTML=`<div class="done"><div class="tick">✓</div><h1>All done</h1><p>Dr Halvey already has your answers. Thank you.</p></div>`;return;}
