@@ -1,6 +1,6 @@
 {
  "about": "General peri-operative medicine and fasting rules from drhalvey.com.au/medicine-timing.html. A general guide; the hospital's times come first. Built by scripts/build-rules.js; do not edit by hand.",
- "version": "77758c0deaf3",
+ "version": "d87caac9cee6",
  "source": "medicine-timing.html",
  "rules": {
   "CONTINUE": {
@@ -89,8 +89,8 @@
   },
   "SGLT2": {
    "kind": "stop",
-   "text": "Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. Restart only when you are eating, drinking and well.",
-   "html": "Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. Restart only when you are eating, drinking and well.",
+   "text": "Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. If you are having a day procedure with no bowel preparation, such as a gastroscopy on its own, you only need to skip it on the day of the procedure. If you are not sure which applies to you, use the 3-day date. Restart only when you are eating, drinking and well.",
+   "html": "Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. If you are having a day procedure with no bowel preparation, such as a gastroscopy on its own, you only need to skip it on the day of the procedure. If you are not sure which applies to you, use the 3-day date. Restart only when you are eating, drinking and well.",
    "lastDoseDaysBefore": 3,
    "dateLabel": "Last dose"
   },
