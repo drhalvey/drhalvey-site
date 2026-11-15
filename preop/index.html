@@ -63,7 +63,7 @@ const m=document.getElementById("m");
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const t=new URLSearchParams(location.search).get("t")||"";
 const key=new URLSearchParams(location.hash.slice(1)).get("k")||"";
-let P=null,PUB=null,A={rec:{},recNote:{},q:{},plan:false,anaes:false,ask:"",call:null,callTimes:[]};
+let P=null,PUB=null,A={rec:{},recNote:{},q:{},plan:false,anaes:false,ask:"",call:null};
 
 function fail(msg){m.innerHTML=`<h1>Your anaesthetic plan</h1><div class="card"><p>${msg}</p><p class="muted">If you need help, call the rooms on <a href="tel:0862676200">(08) 6267 6200</a>.</p></div>`;}
 
@@ -114,20 +114,18 @@ function render(){
     <textarea data-t="ask" placeholder="Type any question or worry (optional)">${esc(A.ask)}</textarea>
     <p class="q" style="margin-top:14px">Would you like Dr Halvey to call you before the day?</p>
     ${choice("call",["Yes, please call me","No, I'm happy"],A.call)}
-    ${A.call==="Yes, please call me"?`<p class="muted" style="margin-top:10px">Best times (tick any):</p>${choice("times",["Morning","Afternoon","Evening"],null)}<p class="muted">He will call from 0481 893 953.</p>`:""}
+    ${A.call==="Yes, please call me"?`<p class="muted" style="margin-top:10px">He will call you from 0481 893 953 when he can, so please keep an eye out for that number.</p>`:""}
   </div>
   <div id="err" class="err"></div><button class="big" id="go">Send to Dr Halvey</button>
   <p class="lock">Your answers are locked on this phone so only Dr Halvey can read them. This is not for urgent problems: if you are unwell call the rooms on (08) 6267 6200, or 000 in an emergency.</p>
   <footer>This page is for ${esc(P.first)} only. Please do not forward the link.</footer>`;
   m.innerHTML=h;
-  document.querySelectorAll('[data-g="times"] button').forEach(b=>{if(A.callTimes.includes(b.dataset.v))b.classList.add("on");});
   m.querySelectorAll("details").forEach((d,i)=>{if(OPEN.has(i))d.open=true;});
   wire();
 }
 
 function wire(){
   m.querySelectorAll(".yn button").forEach(b=>b.onclick=()=>{const g=b.parentElement.dataset.g,v=b.dataset.v;keepText();
-    if(g==="times"){const i=A.callTimes.indexOf(v);i<0?A.callTimes.push(v):A.callTimes.splice(i,1);b.classList.toggle("on");return;}
     const [k,id]=g.split(":");if(k==="rec")A.rec[id]=v;else if(k==="q"){A.q[id]=A.q[id]||{};A.q[id].c=v;}else if(k==="call")A.call=v;
     const y=scrollY;keepOpen();render();scrollTo(0,y);});
   m.querySelectorAll(".ack").forEach(d=>d.onclick=()=>{keepText();A[d.dataset.a]=!A[d.dataset.a];const y=scrollY;keepOpen();render();scrollTo(0,y);});
@@ -143,7 +141,7 @@ async function send(){
   if(!A.plan)miss.push("s3");if(!A.anaes)miss.push("s4");if(!A.call)miss.push("s5");
   if(miss.length){miss.forEach(i=>document.getElementById(i)&&document.getElementById(i).classList.add("miss"));
     e.textContent="Please finish the parts marked in red.";document.getElementById(miss[0]).scrollIntoView({behavior:"smooth",block:"center"});return;}
-  const out={v:1,at:new Date().toISOString(),rec:A.rec,recNote:A.recNote,q:A.q,plan:A.plan,anaes:A.anaes,ask:A.ask,call:A.call==="Yes, please call me",callTimes:A.callTimes};
+  const out={v:1,at:new Date().toISOString(),rec:A.rec,recNote:A.recNote,q:A.q,plan:A.plan,anaes:A.anaes,ask:A.ask,call:A.call==="Yes, please call me"};
   const b=document.getElementById("go");b.disabled=true;b.textContent="Sending…";
   try{
     if(P.preview){await new Promise(r=>setTimeout(r,400));}
