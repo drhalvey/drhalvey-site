@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Anaesthetic feedback - Dr Ed Halvey</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/fonts.css">
+<style>
+:root{color-scheme:light;--brand:#4e1d24;--brand-d:#3d161c;--brand-l:#f9f0ec;--ink:#241a18;--muted:#5b4d49;--line:#e7dcd2;--bg:#fbf6ef;--card:#fff;--bad:#9a2b2b}
+*{box-sizing:border-box}
+body{margin:0;font:17px/1.5 "Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+header{background:var(--brand);color:#fff;padding:14px 16px}
+header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:-.01em}
+main{max-width:620px;margin:0 auto;padding:18px 16px 64px}
+h1{font-size:24px;line-height:1.25;margin:10px 0 6px;letter-spacing:-.015em}
+.intro{color:var(--muted);margin:0 0 6px}
+.conf{background:var(--brand-l);border:1px solid #e6c6bd;border-radius:8px;padding:12px 14px;font-size:15px;color:var(--brand);margin:14px 0 6px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+.q{font-weight:650;margin:0 0 10px}
+.q .n{color:var(--muted);font-weight:600;margin-right:4px}
+.req{color:var(--bad);margin-left:2px}
+.opt{display:flex;gap:12px;align-items:center;min-height:48px;padding:8px 12px;border:1px solid var(--line);border-radius:10px;margin:8px 0;cursor:pointer;background:#fff}
+.opt input{width:22px;height:22px;accent-color:var(--brand);flex:0 0 auto;margin:0}
+.opt.on{border-color:var(--brand);background:var(--brand-l)}
+.scale{display:grid;grid-template-columns:repeat(11,1fr);gap:4px}
+.scale button{height:48px;border:1px solid var(--line);border-radius:8px;background:#fff;font:inherit;font-size:16px;color:var(--ink);padding:0;cursor:pointer}
+.scale button.on{background:var(--brand);color:#fff;border-color:var(--brand);font-weight:700}
+.anch{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);margin:6px 2px 0}
+input[type=text],input[type=date],textarea{width:100%;font:inherit;font-size:17px;padding:12px 14px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+textarea{min-height:110px;resize:vertical}
+input:focus,textarea:focus{outline:none;border-color:var(--brand)}
+.miss{outline:2px solid var(--bad);outline-offset:3px}
+.big{display:block;width:100%;height:56px;border:0;border-radius:12px;background:var(--brand);color:#fff;font:inherit;font-size:18px;font-weight:700;margin-top:20px;cursor:pointer}
+.big:disabled{opacity:.5}
+.err{color:var(--bad);font-weight:600;margin-top:12px}
+.done{text-align:center;padding:48px 10px}.tick{font-size:56px;color:var(--brand);line-height:1}
+footer{margin-top:36px;font-size:13px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header><a href="../">Dr Ed Halvey</a></header>
+<main id="m"><p class="intro">Loading...</p></main>
+<script>
+const API = "https://bbwjroytqxynborrqylr.supabase.co/functions/v1/feedback-web";
+const FORMS = {"general": {"title": "Anaesthetic Feedback Survey", "form": "General", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text", "req": true}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your operation?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "Did you feel sick or vomit after your anaesthetic?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "After waking up, did you have any of the following? (you can pick more than one)", "t": "many", "o": ["Sore throat", "Shivering", "Confusion or grogginess", "None of these"]}, {"q": "Before your operation, did the anaesthetist explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "hip": {"title": "Hip Replacement: Anaesthetic Feedback", "form": "Hip", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text", "req": true}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your operation?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "Did you feel sick or vomit after your anaesthetic?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "After waking up, did you have any of the following? (you can pick more than one)", "t": "many", "o": ["Sore throat", "Shivering", "Confusion or grogginess", "None of these"]}, {"q": "Before your operation, did the anaesthetist explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "knee": {"title": "Knee Replacement: Anaesthetic Feedback", "form": "Knee", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text"}, {"q": "What is your date of birth?", "t": "date"}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your operation?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "Did you feel sick or vomit after your anaesthetic?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "After waking up, did you have any of the following? (you can pick more than one)", "t": "many", "o": ["Sore throat", "Shivering", "Confusion or grogginess", "None of these"]}, {"q": "Before your operation, did the anaesthetist explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "caesarean": {"title": "Caesarean Anaesthetic Feedback", "form": "Caesarean", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text"}, {"q": "What is your date of birth?", "t": "date"}, {"q": "What is your date of birth? (DD/MM/YYYY)", "t": "text"}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your caesarean?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "During your caesarean, were you comfortable and free of pain?", "t": "one", "o": ["Yes, completely comfortable", "Mostly comfortable", "I felt some discomfort or pain", "I felt a lot of pain"]}, {"q": "Did you feel sick or vomit during or after your caesarean?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "Did you have itching after your spinal or epidural?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Since your spinal or epidural, have you had a headache that is worse when sitting or standing up, and better when lying down?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Do you have any numbness, tingling, or weakness in your legs now?", "t": "one", "o": ["No", "Mild and improving", "Yes, and it is not improving"]}, {"q": "Before your caesarean, did the team explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "epidural": {"title": "Epidural Feedback", "form": "Epidural", "intro": "This takes under a minute and helps us improve our care. Your answers are confidential.", "qs": [{"q": "Please enter your first and last name.", "t": "text"}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How good was the pain relief from your epidural?", "t": "one", "o": ["Excellent", "Good", "Okay", "Poor", "I did not get enough relief"]}, {"q": "Since your epidural, have you had a headache that is worse when sitting or standing up, and better when lying down?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Do you have any numbness, tingling, or weakness in your legs now?", "t": "one", "o": ["No", "Mild and improving", "Yes, and it is not improving"]}, {"q": "Do you have ongoing soreness at the injection site in your back?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Before your epidural, did the team explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}};
+const P = new URLSearchParams(location.search);
+const f = (P.get("f") || "").toLowerCase(), t = (P.get("t") || "").toLowerCase();
+const m = document.getElementById("m");
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const CONF = "Your answers are confidential and go only to Dr Halvey and his practice. They are never published anywhere.";
+function bad(msg) { m.innerHTML = '<h1>Anaesthetic feedback</h1><p class="intro">' + esc(msg) + '</p>'; }
+const answers = {};
+
+function render(form) {
+  let h = '<h1>' + esc(form.title) + '</h1><p class="intro">' + esc(form.intro) + '</p><div class="conf">' + CONF + '</div>';
+  form.qs.forEach((q, i) => {
+    h += '<section class="card" id="q' + i + '"><p class="q"><span class="n">' + (i + 1) + '.</span>' + esc(q.q) + (q.req ? '<span class="req" aria-label="required">*</span>' : '') + '</p>';
+    if (q.t === "text") h += '<input type="text" data-i="' + i + '" autocomplete="off">';
+    else if (q.t === "date") h += '<input type="date" data-i="' + i + '">';
+    else if (q.t === "long") h += '<textarea data-i="' + i + '"></textarea>';
+    else if (q.t === "nps") {
+      h += '<div class="scale" role="radiogroup">';
+      for (let v = 0; v <= 10; v++) h += '<button type="button" data-i="' + i + '" data-v="' + v + '" aria-label="' + v + '">' + v + '</button>';
+      h += '</div><div class="anch"><span>Not at all likely</span><span>Extremely likely</span></div>';
+    } else {
+      const type = q.t === "many" ? "checkbox" : "radio";
+      q.o.forEach((o, j) => { h += '<label class="opt"><input type="' + type + '" name="q' + i + '" data-i="' + i + '" value="' + esc(o) + '">' + esc(o) + '</label>'; });
+    }
+    h += '</section>';
+  });
+  h += '<button class="big" id="go">Submit</button><p class="err" id="err" hidden></p><footer>This form is for patients of Dr Ed Halvey, specialist anaesthetist, Perth. If you feel unwell, contact your GP or hospital, or call 000 in an emergency.</footer>';
+  m.innerHTML = h;
+  m.querySelectorAll(".scale button").forEach((b) => b.addEventListener("click", () => {
+    const i = b.dataset.i; m.querySelectorAll('.scale button[data-i="' + i + '"]').forEach((x) => x.classList.toggle("on", x === b));
+    answers[i] = b.dataset.v;
+  }));
+  m.querySelectorAll(".opt input").forEach((inp) => inp.addEventListener("change", () => {
+    const i = inp.dataset.i, q = form.qs[i];
+    if (q.t === "many") {
+      let picked = [...m.querySelectorAll('input[name="q' + i + '"]:checked')].map((x) => x.value);
+      if (inp.checked && inp.value === "None of these") { picked = ["None of these"]; m.querySelectorAll('input[name="q' + i + '"]').forEach((x) => { x.checked = x.value === "None of these"; }); }
+      else if (inp.checked) { picked = picked.filter((v) => v !== "None of these"); m.querySelectorAll('input[name="q' + i + '"]').forEach((x) => { if (x.value === "None of these") x.checked = false; }); }
+      answers[i] = picked.length ? JSON.stringify(picked) : undefined;
+    } else answers[i] = inp.value;
+    m.querySelectorAll('input[name="q' + i + '"]').forEach((x) => x.closest(".opt").classList.toggle("on", x.checked));
+  }));
+  m.querySelectorAll("input[type=text],input[type=date],textarea").forEach((el) => el.addEventListener("input", () => {
+    let v = el.value.trim();
+    if (el.type === "date" && v) { const [y, mo, d] = v.split("-"); v = d + "/" + mo + "/" + y; }
+    answers[el.dataset.i] = v || undefined;
+  }));
+  document.getElementById("go").addEventListener("click", () => submit(form));
+}
+
+async function submit(form) {
+  const err = document.getElementById("err"); err.hidden = true;
+  m.querySelectorAll(".miss").forEach((x) => x.classList.remove("miss"));
+  const missing = form.qs.map((q, i) => (q.req && !answers[i] ? i : -1)).filter((i) => i >= 0);
+  if (missing.length) { const el = document.getElementById("q" + missing[0]); el.classList.add("miss"); el.scrollIntoView({behavior: "smooth", block: "center"}); err.textContent = "Please answer the question marked *."; err.hidden = false; return; }
+  const out = {}; form.qs.forEach((q, i) => { if (answers[i] !== undefined && answers[i] !== "") out[q.q] = answers[i]; });
+  if (!Object.keys(out).length) { err.textContent = "Please answer at least one question."; err.hidden = false; return; }
+  const btn = document.getElementById("go"); btn.disabled = true; btn.textContent = "Sending...";
+  try {
+    const r = await fetch(API + "/api/submit", { method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({ t, f, answers: out }) });
+    if (r.status === 409) { thanks(true); return; }
+    if (!r.ok) throw new Error(String(r.status));
+    thanks(false);
+  } catch (e) {
+    btn.disabled = false; btn.textContent = "Submit";
+    err.textContent = "That did not send. Please check your connection and press Submit again."; err.hidden = false;
+  }
+}
+function thanks(already) {
+  window.scrollTo(0, 0);
+  m.innerHTML = '<div class="done"><div class="tick">&#10003;</div><h1>Thank you</h1><p class="intro">' + (already ? "We already have your answers for this link." : "Your answers have been sent to Dr Halvey. They are confidential and never published.") + '</p></div>';
+}
+
+(async () => {
+  if (!FORMS[f] || !/^[a-z0-9]{10,16}$/.test(t)) { bad("This feedback link is not complete. Please open the link from your text message again."); return; }
+  try {
+    const r = await fetch(API + "/api/check?t=" + encodeURIComponent(t));
+    if (r.status === 404) { bad("This feedback link is not valid. Please open the link from your text message again."); return; }
+    const j = await r.json();
+    if (j.done) { thanks(true); return; }
+    if (j.form !== f) { bad("This feedback link is not valid. Please open the link from your text message again."); return; }
+  } catch (e) { /* offline check: still show the form; submit will tell them */ }
+  render(FORMS[f]);
+})();
+</script>
+</body>
+</html>

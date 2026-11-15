@@ -4,5 +4,6 @@ User-agent: *
 Disallow: /tools/
 Disallow: /ortho/
 Disallow: /surgery/
+Disallow: /feedback/
 
 Sitemap: https://drhalvey.com.au/sitemap.xml
