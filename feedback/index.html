@@ -17,6 +17,8 @@ header a{color:#fff;text-decoration:none;font-weight:700;letter-spacing:-.01em}
 main{max-width:620px;margin:0 auto;padding:18px 16px 64px}
 h1{font-size:24px;line-height:1.25;margin:10px 0 6px;letter-spacing:-.015em}
 .intro{color:var(--muted);margin:0 0 6px}
+.hi{font-size:18px;font-weight:600;margin:14px 0 0;color:var(--brand)}
+.op{background:var(--brand-l);border-color:#e6c6bd}
 .conf{background:var(--brand-l);border:1px solid #e6c6bd;border-radius:8px;padding:12px 14px;font-size:15px;color:var(--brand);margin:14px 0 6px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
 .q{font-weight:650;margin:0 0 10px}
@@ -54,8 +56,11 @@ const CONF = "Your answers are confidential and go only to Dr Halvey and his pra
 function bad(msg) { m.innerHTML = '<h1>Anaesthetic feedback</h1><p class="intro">' + esc(msg) + '</p>'; }
 const answers = {};
 
+let PF = null;   // prefill from SIOP for this link only: first name, full name, date of birth, operation
 function render(form) {
-  let h = '<h1>' + esc(form.title) + '</h1><p class="intro">' + esc(form.intro) + '</p><div class="conf">' + CONF + '</div>';
+  let h = (PF && PF.first ? '<p class="hi">Hi ' + esc(PF.first) + ',</p>' : '') + '<h1>' + esc(form.title) + '</h1><p class="intro">' + esc(form.intro) + '</p>';
+  if (PF && PF.operation) h += '<div class="card op"><p class="q" style="margin:0 0 4px">Your operation</p><p style="margin:0">' + esc(PF.operation) + '</p></div>';
+  h += '<div class="conf">' + CONF + '</div>';
   form.qs.forEach((q, i) => {
     h += '<section class="card" id="q' + i + '"><p class="q"><span class="n">' + (i + 1) + '.</span>' + esc(q.q) + (q.req ? '<span class="req" aria-label="required">*</span>' : '') + '</p>';
     if (q.t === "text") h += '<input type="text" data-i="' + i + '" autocomplete="off">';
@@ -93,6 +98,17 @@ function render(form) {
     answers[el.dataset.i] = v || undefined;
   }));
   document.getElementById("go").addEventListener("click", () => submit(form));
+  if (PF) form.qs.forEach((q, i) => {
+    const el = m.querySelector('[data-i="' + i + '"]');
+    if (!el) return;
+    let v = null;
+    if (/first and last name/i.test(q.q) && PF.name) v = PF.name;
+    else if (/date of birth/i.test(q.q) && PF.dob) v = PF.dob;
+    if (v == null) return;
+    if (el.type === "date") { const [d, mo, y] = v.split("/"); el.value = y + "-" + mo + "-" + d; }
+    else el.value = v;
+    answers[i] = v;
+  });
 }
 
 async function submit(form) {
@@ -125,6 +141,7 @@ function thanks(already) {
     if (r.status === 404) { bad("This feedback link is not valid. Please open the link from your text message again."); return; }
     const j = await r.json();
     if (j.done) { thanks(true); return; }
+    PF = j.prefill || null;
     if (j.form !== f) { bad("This feedback link is not valid. Please open the link from your text message again."); return; }
   } catch (e) { /* offline check: still show the form; submit will tell them */ }
   render(FORMS[f]);
