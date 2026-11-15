@@ -21,6 +21,19 @@
   /* shared operation date (meds planner and week plan use the same one) */
   var today = new Date(); today.setHours(0, 0, 0, 0);
   var opDate = iso(today);
+  /* personal link from a text message: #d=2026-11-25&t=06:30 (arrival date and time only, never a name or number).
+     Read once, then removed from the address bar so it is not bookmarked, shared or sent anywhere. */
+  var LINK = (function () {
+    var h = (location.hash || '').replace(/^#/, ''), o = {};
+    if (!/(^|&)d=/.test(h)) return null;
+    h.split('&').forEach(function (kv) { var p = kv.split('='); o[p[0]] = decodeURIComponent(p[1] || ''); });
+    var out = {};
+    if (parseIso(o.d) && /^\d{4}-\d{2}-\d{2}$/.test(o.d)) out.date = o.d;
+    if (/^([01]\d|2[0-3]):[0-5]\d$/.test(o.t || '')) out.time = o.t;
+    try { history.replaceState(null, '', location.pathname + location.search); } catch (e) {}
+    return out.date ? out : null;
+  })();
+  if (LINK) opDate = LINK.date;
   var opListeners = [];
   function setOpDate(v) { if (!parseIso(v)) return; opDate = v; opListeners.forEach(function (f) { f(v); }); }
 
@@ -138,6 +151,17 @@
     if (medData) return cb(medData);
     medWaiters.push(cb); if (medWaiters.length > 1) return;
     var base = (document.documentElement.getAttribute('data-root') || '');
+    /* shared rules file first (the same file SIOP reads); the page scrape below is the fallback */
+    fetch(base + 'assets/periop-rules.json').then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (j) {
+      var rules = {};
+      Object.keys(j.rules).forEach(function (k) { rules[k] = { i: j.rules[k].text, d: j.rules[k].lastDoseDaysBefore }; });
+      rules.DOAC = { i: 'The stop date for this blood thinner depends on your kidney function. Use the full medicine planner, which asks one question and then gives you the date.', d: null, full: 1 };
+      rules.INSULIN = { i: 'Insulin doses change before surgery depending on the type of insulin. Use the full medicine planner, which asks which insulin you use.', d: null, full: 1 };
+      medData = { rules: rules, meds: j.medicines.map(function (x) { return [x.generic, x.brands, x.rule]; }) };
+      medWaiters.forEach(function (f) { f(medData); }); medWaiters = [];
+    }).catch(function () { scrapeMeds(base); });
+  }
+  function scrapeMeds(base) {
     fetch(base + 'medicine-timing.html').then(function (r) { return r.text(); }).then(function (src) {
       var rules = {}, meds = [];
       var ri = src.indexOf('var RULES={'), rj = src.indexOf('\n};', ri);
@@ -196,14 +220,14 @@
   $$('.lf-prep').forEach(function (el) {
     var parts = (el.getAttribute('data-parts') || 'fasting meds glp1').split(/\s+/);
     var html = '';
-    if (parts.indexOf('fasting') > -1) html += acc('Your fasting times', 'When to stop eating and drinking, worked out from your arrival time', '<div data-tool="fasting">' + fastingHTML() + '</div>', true);
+    if (parts.indexOf('fasting') > -1) html += acc('Your fasting times', 'When to stop eating and drinking, worked out from your arrival time', '<div data-tool="fasting">' + fastingHTML(LINK && LINK.time ? { time: LINK.time } : undefined) + '</div>', true);
     if (parts.indexOf('meds') > -1) html += acc('Your medicines', 'What to do with each medicine, and the date of your last dose', '<div data-tool="meds">' + medsHTML() + '</div>', false);
     if (parts.indexOf('glp1') > -1) html += acc('GLP-1 medicines', 'Ozempic, Wegovy, Mounjaro and similar', GLP1, false);
     el.innerHTML = html; wireAcc(el);
   });
-  $$('.lf-fasting').forEach(function (el) { el.innerHTML = '<div data-tool="fasting">' + fastingHTML() + '</div>'; });
+  $$('.lf-fasting').forEach(function (el) { el.innerHTML = '<div data-tool="fasting">' + fastingHTML(LINK && LINK.time ? { time: LINK.time } : undefined) + '</div>'; });
   $$('.lf-medsmini').forEach(function (el) { el.innerHTML = '<div data-tool="meds">' + medsHTML() + '</div>'; });
-  $$('[data-tool="fasting"]').forEach(function (el) { wireFasting(el); });
+  $$('[data-tool="fasting"]').forEach(function (el) { wireFasting(el, LINK || undefined); });
   $$('[data-tool="meds"]').forEach(function (el) { wireMeds(el); });
   /* the site search opens these tools inside its answer card, filled in from the patient's question */
   window.DRH_TOOLS = {

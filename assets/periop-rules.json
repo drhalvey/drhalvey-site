@@ -1,0 +1,2271 @@
+{
+ "about": "General peri-operative medicine and fasting rules from drhalvey.com.au/medicine-timing.html. A general guide; the hospital's times come first. Built by scripts/build-rules.js; do not edit by hand.",
+ "version": "77758c0deaf3",
+ "source": "medicine-timing.html",
+ "rules": {
+  "CONTINUE": {
+   "kind": "continue",
+   "text": "Continue as normal, including on the morning of surgery (with a small sip of water).",
+   "html": "Continue as normal, including on the morning of surgery (with a small sip of water).",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "ASPIRIN": {
+   "kind": "continue",
+   "text": "Low-dose aspirin is usually continued. Keep taking it unless Dr Halvey or your surgeon has told you to stop.",
+   "html": "Low-dose aspirin is usually continued. Keep taking it unless Dr Halvey or your surgeon has told you to stop.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "BRING": {
+   "kind": "continue",
+   "text": "Continue as normal and bring it to hospital with you.",
+   "html": "Continue as normal and bring it to hospital with you.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "SKIP_DAY": {
+   "kind": "stop",
+   "text": "Take as usual until the day before surgery. Do not take it on the morning of surgery.",
+   "html": "Take as usual until the day before surgery. Do not take it on the morning of surgery.",
+   "lastDoseDaysBefore": 1,
+   "dateLabel": "Last dose"
+  },
+  "DIAB_TABLET": {
+   "kind": "stop",
+   "text": "Take as usual until the night before surgery. Do not take it on the day of surgery. Restart when you are eating and drinking normally.",
+   "html": "Take as usual until the night before surgery. Do not take it on the day of surgery. Restart when you are eating and drinking normally.",
+   "lastDoseDaysBefore": 1,
+   "dateLabel": "Last dose"
+  },
+  "COX2": {
+   "kind": "continue",
+   "text": "This anti-inflammatory (a coxib) is usually fine to continue, as it has little effect on bleeding. Your anaesthetist may pause it if your kidneys are a concern.",
+   "html": "This anti-inflammatory (a coxib) is usually fine to continue, as it has little effect on bleeding. Your anaesthetist may pause it if your kidneys are a concern.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "NSAID": {
+   "kind": "stop",
+   "text": "Stop this anti-inflammatory 2 to 3 days before surgery, because it can increase bleeding.",
+   "html": "Stop this anti-inflammatory 2 to 3 days before surgery, because it can increase bleeding.",
+   "lastDoseDaysBefore": 3,
+   "dateLabel": "Last dose"
+  },
+  "STEROID": {
+   "kind": "continue",
+   "text": "Do not stop suddenly. Continue, and tell your anaesthetist - you may need extra 'stress' doses around surgery.",
+   "html": "Do not stop suddenly. Continue, and tell your anaesthetist - you may need extra 'stress' doses around surgery.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "CLONIDINE": {
+   "kind": "continue",
+   "text": "Continue as normal, including on the morning of surgery. Do not stop this suddenly - stopping can cause rebound high blood pressure.",
+   "html": "Continue as normal, including on the morning of surgery. Do not stop this suddenly - stopping can cause rebound high blood pressure.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "STOP7": {
+   "kind": "stop",
+   "text": "Stop at least 7 days before surgery.",
+   "html": "Stop at least 7 days before surgery.",
+   "lastDoseDaysBefore": 7,
+   "dateLabel": "Last dose"
+  },
+  "GLP1": {
+   "kind": "glp",
+   "text": "Keep taking this as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the medicines page.",
+   "html": "Keep taking this as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the <a href='medicines-before-surgery.html'>medicines page</a>.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "GLP1_ORAL": {
+   "kind": "glp",
+   "text": "Do not take your tablet on the morning of surgery - it is taken on an empty stomach with water and food afterwards, so it is skipped while fasting. Otherwise keep taking it as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the medicines page.",
+   "html": "Do not take your tablet on the morning of surgery - it is taken on an empty stomach with water and food afterwards, so it is skipped while fasting. Otherwise keep taking it as normal. On the day, follow the special fasting rules for these medicines: clear fluids only from 24 hours before, water only from 6 hours before (max 200 ml/hour), and nothing from 2 hours before. See the <a href='medicines-before-surgery.html'>medicines page</a>.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "SGLT2": {
+   "kind": "stop",
+   "text": "Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. Restart only when you are eating, drinking and well.",
+   "html": "Stop this medicine 3 days before surgery (none on the two days before, or the day of surgery) because of a risk of ketoacidosis. Restart only when you are eating, drinking and well.",
+   "lastDoseDaysBefore": 3,
+   "dateLabel": "Last dose"
+  },
+  "WARFARIN": {
+   "kind": "stop",
+   "text": "Stop warfarin 5 days before surgery. You will usually need an INR blood test, and some people need 'bridging' injections - the rooms or your warfarin clinic will arrange this.",
+   "html": "Stop warfarin 5 days before surgery. You will usually need an INR blood test, and some people need 'bridging' injections - the rooms or your warfarin clinic will arrange this.",
+   "lastDoseDaysBefore": 5,
+   "dateLabel": "Last dose"
+  },
+  "CLOPIDOGREL": {
+   "kind": "stop",
+   "text": "Stop 7 days before surgery. If you have a heart stent, do not stop without checking with the rooms first - it may need to continue.",
+   "html": "Stop 7 days before surgery. <b>If you have a heart stent, do not stop without checking with the rooms first</b> - it may need to continue.",
+   "lastDoseDaysBefore": 7,
+   "dateLabel": "Last dose"
+  },
+  "TICAGRELOR": {
+   "kind": "stop",
+   "text": "Stop 5 days before surgery. If you have a heart stent, do not stop without checking with the rooms first.",
+   "html": "Stop 5 days before surgery. <b>If you have a heart stent, do not stop without checking with the rooms first.</b>",
+   "lastDoseDaysBefore": 5,
+   "dateLabel": "Last dose"
+  },
+  "PRASUGREL": {
+   "kind": "stop",
+   "text": "Stop 7 days before surgery. If you have a heart stent, do not stop without checking with the rooms first.",
+   "html": "Stop 7 days before surgery. <b>If you have a heart stent, do not stop without checking with the rooms first.</b>",
+   "lastDoseDaysBefore": 7,
+   "dateLabel": "Last dose"
+  },
+  "DIPYRIDAMOLE": {
+   "kind": "stop",
+   "text": "Stop 2 days before surgery. If it is combined with aspirin (Asasantin), the aspirin part is usually continued - check with the rooms.",
+   "html": "Stop 2 days before surgery. If it is combined with aspirin (Asasantin), the aspirin part is usually continued - check with the rooms.",
+   "lastDoseDaysBefore": 2,
+   "dateLabel": "Last dose"
+  },
+  "LMWH": {
+   "kind": "stop",
+   "text": "If you take a low (preventive) dose: last dose at least 12 hours before surgery. If you take a high (treatment) dose: last dose at least 24 hours before. The rooms will confirm which applies to you.",
+   "html": "If you take a low (preventive) dose: last dose at least 12 hours before surgery. If you take a high (treatment) dose: last dose at least 24 hours before. The rooms will confirm which applies to you.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "LITHIUM": {
+   "kind": "stop",
+   "text": "Continue for minor surgery. For major surgery, take your last dose the day before (stop about 24 hours before). The rooms will confirm, and you may need a blood test.",
+   "html": "Continue for minor surgery. For major surgery, take your last dose the day before (stop about 24 hours before). The rooms will confirm, and you may need a blood test.",
+   "lastDoseDaysBefore": 1,
+   "dateLabel": "Last dose (major surgery)"
+  },
+  "HRT": {
+   "kind": "continue",
+   "text": "Usually continued, with measures to prevent blood clots. If you are at higher risk of clots, it may be stopped 4 to 6 weeks before surgery - the rooms will advise based on your operation and your risk.",
+   "html": "Usually continued, with measures to prevent blood clots. If you are at higher risk of clots, it may be stopped 4 to 6 weeks before surgery - the rooms will advise based on your operation and your risk.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "BIOLOGIC": {
+   "kind": "stop",
+   "text": "These are usually paused before surgery (often skipping 1 to 2 doses) to lower the risk of infection. Your specialist or the rooms will tell you which dose to skip.",
+   "html": "These are usually paused before surgery (often skipping 1 to 2 doses) to lower the risk of infection. Your specialist or the rooms will tell you which dose to skip.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "MAOI": {
+   "kind": "stop",
+   "text": "This older antidepressant needs to be stopped about 2 weeks before surgery, arranged together with your psychiatrist. Do not stop it on your own.",
+   "html": "This older antidepressant needs to be stopped about 2 weeks before surgery, arranged together with your psychiatrist. Do not stop it on your own.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "DOAC": {
+   "kind": "ask",
+   "text": "",
+   "html": "",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "INSULIN": {
+   "kind": "insulin",
+   "text": "",
+   "html": "",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "ASKROOMS": {
+   "kind": "ask",
+   "text": "The right plan for this medicine depends on why you take it and your operation. Please check with the rooms before surgery - do not stop it on your own.",
+   "html": "The right plan for this medicine depends on why you take it and your operation. Please <a href='contact.html'>check with the rooms</a> before surgery - do not stop it on your own.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "PARKINSONS": {
+   "kind": "continue",
+   "text": "Keep taking this on time, including on the morning of surgery with a sip of water. Timing matters a lot for Parkinson's medicines - tell your anaesthetist and the ward staff.",
+   "html": "Keep taking this on time, including on the morning of surgery with a sip of water. Timing matters a lot for Parkinson's medicines - tell your anaesthetist and the ward staff.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "TRANSPLANT": {
+   "kind": "continue",
+   "text": "Transplant anti-rejection medicines continue as normal - do not stop. Tell the rooms and the hospital you take it so doses and blood levels can be planned around surgery.",
+   "html": "Transplant anti-rejection medicines continue as normal - do not stop. Tell the rooms and the hospital you take it so doses and blood levels can be planned around surgery.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "EYEDROP": {
+   "kind": "continue",
+   "text": "Keep using your eye drops as normal, including on the day of surgery.",
+   "html": "Keep using your eye drops as normal, including on the day of surgery.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "TELL": {
+   "kind": "continue",
+   "text": "Continue as normal, and make sure your anaesthetist knows you take it - it can affect the anaesthetic plan.",
+   "html": "Continue as normal, and make sure your anaesthetist knows you take it - it can affect the anaesthetic plan.",
+   "lastDoseDaysBefore": null,
+   "dateLabel": null
+  },
+  "PDE5": {
+   "kind": "stop",
+   "text": "Do not take this on the day of surgery.",
+   "html": "Do not take this on the day of surgery.",
+   "lastDoseDaysBefore": 1,
+   "dateLabel": "Last dose"
+  },
+  "STIMULANT": {
+   "kind": "stop",
+   "text": "Take as usual until the day before surgery. Do not take it on the morning of surgery.",
+   "html": "Take as usual until the day before surgery. Do not take it on the morning of surgery.",
+   "lastDoseDaysBefore": 1,
+   "dateLabel": "Last dose"
+  }
+ },
+ "medicines": [
+  {
+   "generic": "perindopril",
+   "brands": [
+    "Coversyl"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "ramipril",
+   "brands": [
+    "Tritace"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "lisinopril",
+   "brands": [
+    "Zestril"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "enalapril",
+   "brands": [
+    "Renitec"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "captopril",
+   "brands": [
+    "Capoten"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "quinapril",
+   "brands": [
+    "Accupril"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "fosinopril",
+   "brands": [
+    "Monopril"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "trandolapril",
+   "brands": [
+    "Gopten",
+    "Odrik"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "irbesartan",
+   "brands": [
+    "Avapro",
+    "Karvea"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "candesartan",
+   "brands": [
+    "Atacand"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "valsartan",
+   "brands": [
+    "Diovan"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "telmisartan",
+   "brands": [
+    "Micardis"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "losartan",
+   "brands": [
+    "Cozaar"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "olmesartan",
+   "brands": [
+    "Olmetec"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "eprosartan",
+   "brands": [
+    "Teveten"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "atenolol",
+   "brands": [
+    "Tenormin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "metoprolol",
+   "brands": [
+    "Betaloc",
+    "Lopresor",
+    "Toprol"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "bisoprolol",
+   "brands": [
+    "Bicor"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "propranolol",
+   "brands": [
+    "Inderal"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "carvedilol",
+   "brands": [
+    "Dilatrend"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "nebivolol",
+   "brands": [
+    "Nebilet"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "sotalol",
+   "brands": [
+    "Sotacor"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "labetalol",
+   "brands": [],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "amlodipine",
+   "brands": [
+    "Norvasc"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "diltiazem",
+   "brands": [
+    "Cardizem",
+    "Vasocardol"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "verapamil",
+   "brands": [
+    "Isoptin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "felodipine",
+   "brands": [
+    "Plendil"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "nifedipine",
+   "brands": [
+    "Adalat"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "lercanidipine",
+   "brands": [
+    "Zanidip"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "digoxin",
+   "brands": [
+    "Lanoxin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "amiodarone",
+   "brands": [
+    "Cordarone"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "frusemide (furosemide)",
+   "brands": [
+    "Lasix",
+    "Frusid",
+    "Uremide"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "hydrochlorothiazide",
+   "brands": [
+    "Dithiazide"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "indapamide",
+   "brands": [
+    "Natrilix",
+    "Dapa-tabs"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "spironolactone",
+   "brands": [
+    "Aldactone",
+    "Spiractin"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "chlorthalidone",
+   "brands": [
+    "Hygroton"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "amiloride",
+   "brands": [
+    "Kaluril"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "eplerenone",
+   "brands": [
+    "Inspra"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "prazosin",
+   "brands": [
+    "Minipress"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "clonidine",
+   "brands": [
+    "Catapres"
+   ],
+   "rule": "CLONIDINE"
+  },
+  {
+   "generic": "methyldopa",
+   "brands": [
+    "Aldomet"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "hydralazine",
+   "brands": [],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "warfarin",
+   "brands": [
+    "Coumadin",
+    "Marevan"
+   ],
+   "rule": "WARFARIN"
+  },
+  {
+   "generic": "apixaban",
+   "brands": [
+    "Eliquis"
+   ],
+   "rule": "DOAC",
+   "sub": "AR"
+  },
+  {
+   "generic": "rivaroxaban",
+   "brands": [
+    "Xarelto"
+   ],
+   "rule": "DOAC",
+   "sub": "AR"
+  },
+  {
+   "generic": "edoxaban",
+   "brands": [
+    "Lixiana"
+   ],
+   "rule": "DOAC",
+   "sub": "AR"
+  },
+  {
+   "generic": "dabigatran",
+   "brands": [
+    "Pradaxa"
+   ],
+   "rule": "DOAC",
+   "sub": "DAB"
+  },
+  {
+   "generic": "clopidogrel",
+   "brands": [
+    "Plavix",
+    "Iscover"
+   ],
+   "rule": "CLOPIDOGREL"
+  },
+  {
+   "generic": "ticagrelor",
+   "brands": [
+    "Brilinta"
+   ],
+   "rule": "TICAGRELOR"
+  },
+  {
+   "generic": "prasugrel",
+   "brands": [
+    "Effient"
+   ],
+   "rule": "PRASUGREL"
+  },
+  {
+   "generic": "dipyridamole",
+   "brands": [
+    "Persantin",
+    "Asasantin"
+   ],
+   "rule": "DIPYRIDAMOLE"
+  },
+  {
+   "generic": "enoxaparin",
+   "brands": [
+    "Clexane"
+   ],
+   "rule": "LMWH"
+  },
+  {
+   "generic": "dalteparin",
+   "brands": [
+    "Fragmin"
+   ],
+   "rule": "LMWH"
+  },
+  {
+   "generic": "aspirin (low dose)",
+   "brands": [
+    "Cartia",
+    "Astrix",
+    "Cardiprin"
+   ],
+   "rule": "ASPIRIN"
+  },
+  {
+   "generic": "metformin",
+   "brands": [
+    "Diabex",
+    "Diaformin",
+    "Glucophage",
+    "Metex"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "gliclazide",
+   "brands": [
+    "Diamicron"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "glimepiride",
+   "brands": [
+    "Amaryl",
+    "Diapride"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "glipizide",
+   "brands": [
+    "Minidiab"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "sitagliptin",
+   "brands": [
+    "Januvia"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "linagliptin",
+   "brands": [
+    "Trajenta"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "vildagliptin",
+   "brands": [
+    "Galvus"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "saxagliptin",
+   "brands": [
+    "Onglyza"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "pioglitazone",
+   "brands": [
+    "Actos"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "acarbose",
+   "brands": [
+    "Glucobay"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "empagliflozin",
+   "brands": [
+    "Jardiance",
+    "Jardiamet",
+    "Glyxambi"
+   ],
+   "rule": "SGLT2"
+  },
+  {
+   "generic": "dapagliflozin",
+   "brands": [
+    "Forxiga",
+    "Xigduo",
+    "Qtern"
+   ],
+   "rule": "SGLT2"
+  },
+  {
+   "generic": "ertugliflozin",
+   "brands": [
+    "Steglatro",
+    "Segluromet",
+    "Steglujan"
+   ],
+   "rule": "SGLT2"
+  },
+  {
+   "generic": "semaglutide injection",
+   "brands": [
+    "Ozempic",
+    "Wegovy"
+   ],
+   "rule": "GLP1"
+  },
+  {
+   "generic": "semaglutide tablets",
+   "brands": [
+    "Rybelsus"
+   ],
+   "rule": "GLP1_ORAL"
+  },
+  {
+   "generic": "dulaglutide",
+   "brands": [
+    "Trulicity"
+   ],
+   "rule": "GLP1"
+  },
+  {
+   "generic": "tirzepatide",
+   "brands": [
+    "Mounjaro"
+   ],
+   "rule": "GLP1"
+  },
+  {
+   "generic": "exenatide",
+   "brands": [
+    "Byetta",
+    "Bydureon"
+   ],
+   "rule": "GLP1"
+  },
+  {
+   "generic": "liraglutide",
+   "brands": [
+    "Victoza",
+    "Saxenda"
+   ],
+   "rule": "GLP1"
+  },
+  {
+   "generic": "long-acting (basal) insulin",
+   "brands": [
+    "Lantus",
+    "Optisulin",
+    "Toujeo",
+    "Tresiba",
+    "Levemir",
+    "Semglee"
+   ],
+   "rule": "INSULIN",
+   "sub": "basal"
+  },
+  {
+   "generic": "short-acting / meal-time insulin",
+   "brands": [
+    "NovoRapid",
+    "Fiasp",
+    "Humalog",
+    "Apidra",
+    "Actrapid"
+   ],
+   "rule": "INSULIN",
+   "sub": "meal"
+  },
+  {
+   "generic": "intermediate-acting insulin",
+   "brands": [
+    "Protaphane",
+    "Humulin NPH",
+    "Hypurin Isophane"
+   ],
+   "rule": "INSULIN",
+   "sub": "intermediate"
+  },
+  {
+   "generic": "premixed insulin",
+   "brands": [
+    "NovoMix 30",
+    "Ryzodeg",
+    "Humalog Mix",
+    "Mixtard 30/70",
+    "Humulin 30/70"
+   ],
+   "rule": "INSULIN",
+   "sub": "premix"
+  },
+  {
+   "generic": "insulin pump",
+   "brands": [
+    "pump",
+    "CSII"
+   ],
+   "rule": "INSULIN",
+   "sub": "pump"
+  },
+  {
+   "generic": "atorvastatin",
+   "brands": [
+    "Lipitor"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "rosuvastatin",
+   "brands": [
+    "Crestor"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "simvastatin",
+   "brands": [
+    "Zocor",
+    "Lipex"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "pravastatin",
+   "brands": [
+    "Pravachol"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "fluvastatin",
+   "brands": [
+    "Lescol"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "ezetimibe",
+   "brands": [
+    "Ezetrol",
+    "Atozet",
+    "Vytorin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "fenofibrate",
+   "brands": [
+    "Lipidil"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "gemfibrozil",
+   "brands": [
+    "Lopid"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "sertraline",
+   "brands": [
+    "Zoloft"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "escitalopram",
+   "brands": [
+    "Lexapro"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "citalopram",
+   "brands": [
+    "Cipramil"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "fluoxetine",
+   "brands": [
+    "Prozac",
+    "Lovan"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "paroxetine",
+   "brands": [
+    "Aropax",
+    "Paxtine"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "venlafaxine",
+   "brands": [
+    "Efexor"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "desvenlafaxine",
+   "brands": [
+    "Pristiq"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "duloxetine",
+   "brands": [
+    "Cymbalta"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "mirtazapine",
+   "brands": [
+    "Avanza"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "amitriptyline",
+   "brands": [
+    "Endep"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "nortriptyline",
+   "brands": [
+    "Allegron"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "phenelzine (MAOI)",
+   "brands": [
+    "Nardil"
+   ],
+   "rule": "MAOI"
+  },
+  {
+   "generic": "tranylcypromine (MAOI)",
+   "brands": [
+    "Parnate"
+   ],
+   "rule": "MAOI"
+  },
+  {
+   "generic": "sodium valproate",
+   "brands": [
+    "Epilim"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "carbamazepine",
+   "brands": [
+    "Tegretol"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "levetiracetam",
+   "brands": [
+    "Keppra"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "lamotrigine",
+   "brands": [
+    "Lamictal"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "phenytoin",
+   "brands": [
+    "Dilantin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "topiramate",
+   "brands": [
+    "Topamax"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "gabapentin",
+   "brands": [
+    "Neurontin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "pregabalin",
+   "brands": [
+    "Lyrica"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "lithium",
+   "brands": [
+    "Lithicarb",
+    "Quilonum"
+   ],
+   "rule": "LITHIUM"
+  },
+  {
+   "generic": "salbutamol",
+   "brands": [
+    "Ventolin",
+    "Asmol"
+   ],
+   "rule": "BRING"
+  },
+  {
+   "generic": "fluticasone/salmeterol",
+   "brands": [
+    "Seretide"
+   ],
+   "rule": "BRING"
+  },
+  {
+   "generic": "budesonide/formoterol",
+   "brands": [
+    "Symbicort"
+   ],
+   "rule": "BRING"
+  },
+  {
+   "generic": "tiotropium",
+   "brands": [
+    "Spiriva"
+   ],
+   "rule": "BRING"
+  },
+  {
+   "generic": "budesonide",
+   "brands": [
+    "Pulmicort"
+   ],
+   "rule": "BRING"
+  },
+  {
+   "generic": "prednisone / prednisolone",
+   "brands": [
+    "Panafcort",
+    "Sone",
+    "Redipred"
+   ],
+   "rule": "STEROID"
+  },
+  {
+   "generic": "dexamethasone",
+   "brands": [],
+   "rule": "STEROID"
+  },
+  {
+   "generic": "hydrocortisone",
+   "brands": [
+    "Hysone"
+   ],
+   "rule": "STEROID"
+  },
+  {
+   "generic": "paracetamol",
+   "brands": [
+    "Panadol",
+    "Panamax"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "ibuprofen",
+   "brands": [
+    "Nurofen",
+    "Brufen",
+    "Advil"
+   ],
+   "rule": "NSAID"
+  },
+  {
+   "generic": "diclofenac",
+   "brands": [
+    "Voltaren"
+   ],
+   "rule": "NSAID"
+  },
+  {
+   "generic": "naproxen",
+   "brands": [
+    "Naprosyn",
+    "Aleve"
+   ],
+   "rule": "NSAID"
+  },
+  {
+   "generic": "indomethacin",
+   "brands": [
+    "Indocid"
+   ],
+   "rule": "NSAID"
+  },
+  {
+   "generic": "ketoprofen",
+   "brands": [
+    "Orudis"
+   ],
+   "rule": "NSAID"
+  },
+  {
+   "generic": "celecoxib",
+   "brands": [
+    "Celebrex"
+   ],
+   "rule": "COX2"
+  },
+  {
+   "generic": "etoricoxib",
+   "brands": [
+    "Arcoxia"
+   ],
+   "rule": "COX2"
+  },
+  {
+   "generic": "meloxicam",
+   "brands": [
+    "Mobic"
+   ],
+   "rule": "COX2"
+  },
+  {
+   "generic": "oxycodone",
+   "brands": [
+    "Endone",
+    "OxyContin",
+    "OxyNorm",
+    "Targin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "tapentadol",
+   "brands": [
+    "Palexia"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "tramadol",
+   "brands": [
+    "Tramal"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "buprenorphine",
+   "brands": [
+    "Norspan",
+    "Temgesic"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "morphine",
+   "brands": [
+    "MS Contin",
+    "Kapanol",
+    "Ordine"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "codeine",
+   "brands": [
+    "Panadeine Forte"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "oestrogen / HRT or the combined pill",
+   "brands": [
+    "Estalis",
+    "Femoston",
+    "Levlen",
+    "Microgynon",
+    "Yaz",
+    "Zoely",
+    "Premarin"
+   ],
+   "rule": "HRT"
+  },
+  {
+   "generic": "methotrexate",
+   "brands": [],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "adalimumab",
+   "brands": [
+    "Humira"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "etanercept",
+   "brands": [
+    "Enbrel"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "infliximab",
+   "brands": [
+    "Remicade"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "fish oil",
+   "brands": [
+    "Omega-3"
+   ],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "vitamin E",
+   "brands": [],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "garlic supplement",
+   "brands": [],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "ginkgo biloba",
+   "brands": [],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "ginseng",
+   "brands": [],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "St John's Wort",
+   "brands": [],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "turmeric / curcumin",
+   "brands": [],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "glucosamine",
+   "brands": [],
+   "rule": "STOP7"
+  },
+  {
+   "generic": "moxonidine",
+   "brands": [
+    "Physiotens"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "nicorandil",
+   "brands": [
+    "Ikorel"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "isosorbide mononitrate",
+   "brands": [
+    "Imdur",
+    "Monodur",
+    "Duride"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "glyceryl trinitrate (GTN)",
+   "brands": [
+    "Nitrolingual",
+    "Anginine",
+    "Transiderm-Nitro"
+   ],
+   "rule": "BRING"
+  },
+  {
+   "generic": "ivabradine",
+   "brands": [
+    "Coralan"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "flecainide",
+   "brands": [
+    "Tambocor"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "dronedarone",
+   "brands": [
+    "Multaq"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "bumetanide",
+   "brands": [
+    "Burinex"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "metolazone",
+   "brands": [
+    "Zaroxolyn"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "triamterene",
+   "brands": [
+    "Hydrene"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "doxazosin",
+   "brands": [
+    "Carduran"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "tamsulosin",
+   "brands": [
+    "Flomaxtra",
+    "Duodart"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "terazosin",
+   "brands": [
+    "Hytrin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "alfuzosin",
+   "brands": [
+    "Xatral"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "alogliptin",
+   "brands": [
+    "Nesina"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "glibenclamide",
+   "brands": [
+    "Daonil",
+    "Glimel"
+   ],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "tolbutamide",
+   "brands": [],
+   "rule": "DIAB_TABLET"
+  },
+  {
+   "generic": "canagliflozin",
+   "brands": [
+    "Invokana"
+   ],
+   "rule": "SGLT2"
+  },
+  {
+   "generic": "tinzaparin",
+   "brands": [
+    "Innohep"
+   ],
+   "rule": "LMWH"
+  },
+  {
+   "generic": "cilostazol",
+   "brands": [
+    "Pletal"
+   ],
+   "rule": "ASKROOMS"
+  },
+  {
+   "generic": "omeprazole",
+   "brands": [
+    "Losec",
+    "Maxor"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "esomeprazole",
+   "brands": [
+    "Nexium"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "pantoprazole",
+   "brands": [
+    "Somac"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "rabeprazole",
+   "brands": [
+    "Pariet"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "lansoprazole",
+   "brands": [
+    "Zoton"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "famotidine",
+   "brands": [
+    "Pepcid"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "nizatidine",
+   "brands": [
+    "Tazac"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "macrogol laxative",
+   "brands": [
+    "Movicol",
+    "OsmoLax"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "senna",
+   "brands": [
+    "Senokot",
+    "Coloxyl with Senna"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "docusate",
+   "brands": [
+    "Coloxyl"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "lactulose",
+   "brands": [
+    "Duphalac",
+    "Actilax"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "bisacodyl",
+   "brands": [
+    "Durolax",
+    "Bisalax"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "loperamide",
+   "brands": [
+    "Gastro-Stop",
+    "Imodium"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "mebeverine",
+   "brands": [
+    "Colofac"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "pancreatic enzymes",
+   "brands": [
+    "Creon"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "ursodeoxycholic acid",
+   "brands": [
+    "Ursofalk"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "levothyroxine (thyroid hormone)",
+   "brands": [
+    "Oroxine",
+    "Eutroxsig",
+    "Eltroxin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "liothyronine",
+   "brands": [
+    "Tertroxin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "carbimazole",
+   "brands": [
+    "Neo-Mercazole"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "propylthiouracil (PTU)",
+   "brands": [],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "olanzapine",
+   "brands": [
+    "Zyprexa"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "quetiapine",
+   "brands": [
+    "Seroquel"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "risperidone",
+   "brands": [
+    "Risperdal"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "aripiprazole",
+   "brands": [
+    "Abilify"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "amisulpride",
+   "brands": [
+    "Solian"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "paliperidone",
+   "brands": [
+    "Invega"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "clozapine",
+   "brands": [
+    "Clozaril",
+    "Clopine"
+   ],
+   "rule": "ASKROOMS"
+  },
+  {
+   "generic": "diazepam",
+   "brands": [
+    "Valium"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "temazepam",
+   "brands": [
+    "Temaze",
+    "Normison"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "oxazepam",
+   "brands": [
+    "Serepax"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "alprazolam",
+   "brands": [
+    "Kalma"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "clonazepam",
+   "brands": [
+    "Rivotril",
+    "Paxam"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "zolpidem",
+   "brands": [
+    "Stilnox"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "zopiclone",
+   "brands": [
+    "Imovane"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "levodopa/carbidopa",
+   "brands": [
+    "Sinemet",
+    "Kinson"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "levodopa/benserazide",
+   "brands": [
+    "Madopar"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "pramipexole",
+   "brands": [
+    "Sifrol"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "ropinirole",
+   "brands": [
+    "Repreve"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "rotigotine patch",
+   "brands": [
+    "Neupro"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "entacapone",
+   "brands": [
+    "Comtan",
+    "Stalevo"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "rasagiline",
+   "brands": [
+    "Azilect"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "selegiline",
+   "brands": [
+    "Eldepryl"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "safinamide",
+   "brands": [
+    "Xadago"
+   ],
+   "rule": "PARKINSONS"
+  },
+  {
+   "generic": "donepezil",
+   "brands": [
+    "Aricept"
+   ],
+   "rule": "TELL"
+  },
+  {
+   "generic": "galantamine",
+   "brands": [
+    "Reminyl"
+   ],
+   "rule": "TELL"
+  },
+  {
+   "generic": "rivastigmine",
+   "brands": [
+    "Exelon"
+   ],
+   "rule": "TELL"
+  },
+  {
+   "generic": "memantine",
+   "brands": [
+    "Ebixa",
+    "Memanxa"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "pyridostigmine",
+   "brands": [
+    "Mestinon"
+   ],
+   "rule": "TELL"
+  },
+  {
+   "generic": "methylphenidate",
+   "brands": [
+    "Ritalin",
+    "Concerta"
+   ],
+   "rule": "STIMULANT"
+  },
+  {
+   "generic": "dexamfetamine",
+   "brands": [],
+   "rule": "STIMULANT"
+  },
+  {
+   "generic": "lisdexamfetamine",
+   "brands": [
+    "Vyvanse"
+   ],
+   "rule": "STIMULANT"
+  },
+  {
+   "generic": "moclobemide",
+   "brands": [
+    "Aurorix"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "sumatriptan and other triptans",
+   "brands": [
+    "Imigran",
+    "Relpax",
+    "Maxalt",
+    "Zomig",
+    "Naramig"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "baclofen",
+   "brands": [
+    "Lioresal"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "tizanidine",
+   "brands": [],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "methadone",
+   "brands": [
+    "Physeptone",
+    "Biodone"
+   ],
+   "rule": "TELL"
+  },
+  {
+   "generic": "fentanyl patch",
+   "brands": [
+    "Durogesic",
+    "Denpax"
+   ],
+   "rule": "TELL"
+  },
+  {
+   "generic": "montelukast",
+   "brands": [
+    "Singulair"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "theophylline",
+   "brands": [
+    "Nuelin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "other inhalers (combination / once-daily)",
+   "brands": [
+    "Breo",
+    "Trelegy",
+    "Anoro",
+    "Spiolto",
+    "Incruse",
+    "Onbrez"
+   ],
+   "rule": "BRING"
+  },
+  {
+   "generic": "alendronate",
+   "brands": [
+    "Fosamax",
+    "Alendro"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "risedronate",
+   "brands": [
+    "Actonel"
+   ],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "ibandronate",
+   "brands": [],
+   "rule": "SKIP_DAY"
+  },
+  {
+   "generic": "raloxifene",
+   "brands": [
+    "Evista"
+   ],
+   "rule": "HRT"
+  },
+  {
+   "generic": "tamoxifen",
+   "brands": [
+    "Nolvadex"
+   ],
+   "rule": "ASKROOMS"
+  },
+  {
+   "generic": "anastrozole",
+   "brands": [
+    "Arimidex"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "letrozole",
+   "brands": [
+    "Femara"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "exemestane",
+   "brands": [
+    "Aromasin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "finasteride",
+   "brands": [
+    "Proscar"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "dutasteride",
+   "brands": [
+    "Avodart",
+    "Duodart"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "allopurinol",
+   "brands": [
+    "Zyloprim",
+    "Progout"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "febuxostat",
+   "brands": [
+    "Adenuric"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "colchicine",
+   "brands": [
+    "Colgout",
+    "Lengout"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "azathioprine",
+   "brands": [
+    "Imuran",
+    "Azasan"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "tacrolimus",
+   "brands": [
+    "Prograf",
+    "Advagraf"
+   ],
+   "rule": "TRANSPLANT"
+  },
+  {
+   "generic": "ciclosporin",
+   "brands": [
+    "Neoral",
+    "Sandimmun"
+   ],
+   "rule": "TRANSPLANT"
+  },
+  {
+   "generic": "mycophenolate",
+   "brands": [
+    "CellCept",
+    "Myfortic"
+   ],
+   "rule": "TRANSPLANT"
+  },
+  {
+   "generic": "hydroxychloroquine",
+   "brands": [
+    "Plaquenil"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "sulfasalazine",
+   "brands": [
+    "Salazopyrin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "leflunomide",
+   "brands": [
+    "Arava"
+   ],
+   "rule": "ASKROOMS"
+  },
+  {
+   "generic": "tofacitinib",
+   "brands": [
+    "Xeljanz"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "baricitinib",
+   "brands": [
+    "Olumiant"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "upadacitinib",
+   "brands": [
+    "Rinvoq"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "golimumab",
+   "brands": [
+    "Simponi"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "certolizumab",
+   "brands": [
+    "Cimzia"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "secukinumab",
+   "brands": [
+    "Cosentyx"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "ustekinumab",
+   "brands": [
+    "Stelara"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "ixekizumab",
+   "brands": [
+    "Taltz"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "abatacept",
+   "brands": [
+    "Orencia"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "anakinra",
+   "brands": [
+    "Kineret"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "guselkumab",
+   "brands": [
+    "Tremfya"
+   ],
+   "rule": "BIOLOGIC"
+  },
+  {
+   "generic": "glaucoma eye drops",
+   "brands": [
+    "Xalatan",
+    "Timoptol",
+    "Alphagan",
+    "Trusopt",
+    "Lumigan",
+    "Travatan",
+    "Ganfort",
+    "Combigan"
+   ],
+   "rule": "EYEDROP"
+  },
+  {
+   "generic": "desmopressin",
+   "brands": [
+    "Minirin"
+   ],
+   "rule": "ASKROOMS"
+  },
+  {
+   "generic": "varenicline",
+   "brands": [
+    "Champix"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "sildenafil",
+   "brands": [
+    "Viagra"
+   ],
+   "rule": "PDE5"
+  },
+  {
+   "generic": "tadalafil",
+   "brands": [
+    "Cialis"
+   ],
+   "rule": "PDE5"
+  },
+  {
+   "generic": "vardenafil",
+   "brands": [
+    "Levitra"
+   ],
+   "rule": "PDE5"
+  },
+  {
+   "generic": "mirabegron",
+   "brands": [
+    "Betmiga"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "oxybutynin",
+   "brands": [
+    "Ditropan"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "solifenacin",
+   "brands": [
+    "Vesicare"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "tolterodine",
+   "brands": [
+    "Detrusitol"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "progestogen-only pill (mini-pill)",
+   "brands": [
+    "Microlut",
+    "Noriday",
+    "Cerazette",
+    "Slinda"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "iron supplement",
+   "brands": [
+    "Ferro-Grad",
+    "Maltofer",
+    "Ferro-Liquid"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "vitamin D",
+   "brands": [
+    "Ostelin"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "calcium supplement",
+   "brands": [
+    "Caltrate",
+    "Citracal"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "folic acid",
+   "brands": [
+    "Megafol"
+   ],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "vitamin B12",
+   "brands": [],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "quinine (for cramps)",
+   "brands": [],
+   "rule": "CONTINUE"
+  },
+  {
+   "generic": "antihistamines",
+   "brands": [
+    "Claratyne",
+    "Zyrtec",
+    "Telfast",
+    "Aerius",
+    "Phenergan"
+   ],
+   "rule": "CONTINUE"
+  }
+ ],
+ "doac": {
+  "lastDoseDaysBefore": {
+   "dabigatran": {
+    "normalKidneys": 3,
+    "reducedKidneys": 5
+   },
+   "apixabanRivaroxabanEdoxaban": {
+    "normalKidneys": 3,
+    "reducedKidneys": 4
+   }
+  }
+ },
+ "insulin": {
+  "byType": {
+   "meal": "Do not take short-acting or meal-time insulin while you are fasting - you only take this insulin with food. Keep taking your background (long-acting) insulin as advised on its own card - add it to this list to see its instruction.",
+   "premix": "If you take an evening dose: take 80% of your usual dose the evening before surgery. On the morning of surgery: if your surgery is in the morning, do not take your morning premixed insulin while fasting - check your blood glucose and bring your insulin and monitor to hospital. If your surgery is in the afternoon (after 1 pm), have the early light breakfast the hospital allows and take half (50%) of your usual morning dose with it. Do not take any dose you would not normally take.",
+   "pump": "Do not stop or suspend your insulin pump. Continue your usual basal rate, and contact the rooms before surgery so the hospital can plan your pump and check your blood glucose."
+  },
+  "basalOrIntermediateByTiming": {
+   "am": "Take half (50%) of your usual morning dose on the morning of surgery, at your usual time. Do not take any other insulin dose you would not normally take. Check your blood glucose.",
+   "pm": "Take half (50%) of your usual evening dose the evening before surgery. You do not normally take a morning dose, so take no insulin on the morning of surgery. Check your blood glucose.",
+   "bd": "Take half (50%) of your usual evening dose the evening before surgery, and half (50%) of your usual morning dose on the morning of surgery. Check your blood glucose."
+  },
+  "type1Note": "Because you have type 1 diabetes, never stop your background (long-acting) insulin completely - the hospital will watch your blood glucose closely on the day, and may use an insulin drip for bigger operations. Please contact the rooms to confirm your plan."
+ },
+ "fasting": {
+  "foodHoursBeforeArrival": 6,
+  "clearFluidHoursBeforeArrival": 2
+ }
+}
