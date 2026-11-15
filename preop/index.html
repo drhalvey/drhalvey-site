@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer">
+<title>Your anaesthetic plan</title>
+<style>
+:root{color-scheme:light;--ink:#1d2a33;--muted:#5c6b75;--line:#d9e0e5;--acc:#0b6e6e;--accs:#e3f1f0;--bg:#f6f8f9;--warn:#8a5a00;--warnbg:#fff6e0;--bad:#c0392b}
+*{box-sizing:border-box}body{margin:0;font:18px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+main{max-width:640px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:25px;margin:6px 0 6px;line-height:1.2}h2{font-size:20px;margin:0 0 4px;color:var(--acc)}
+h3{font-size:17px;margin:14px 0 4px}p{margin:6px 0}.muted{color:var(--muted);font-size:16px}
+.who{font-size:15px;color:var(--muted);margin:0}
+.op{background:var(--accs);border-radius:14px;padding:12px 14px;margin:12px 0 4px;font-size:17px}
+.op b{display:block;font-size:18px}
+.steps{display:flex;gap:6px;margin:14px 0 4px}.steps span{flex:1;height:6px;border-radius:3px;background:var(--line)}.steps span.on{background:var(--acc)}
+.card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;margin:14px 0}
+.num{display:inline-block;width:26px;height:26px;border-radius:13px;background:var(--acc);color:#fff;text-align:center;font-size:15px;line-height:26px;font-weight:700;margin-right:6px}
+.item{border-top:1px solid var(--line);padding:12px 0}.item:first-of-type{border-top:0}
+.item .lab{font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+ul.rec{margin:4px 0 8px;padding-left:20px}ul.rec li{margin:2px 0}
+.yn{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.yn button{flex:1 1 30%;min-height:48px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:17px;color:var(--ink);padding:6px 8px}
+.yn button.on{background:var(--acc);color:#fff;border-color:var(--acc);font-weight:700}
+textarea,input[type=text]{width:100%;font:inherit;font-size:17px;border:1px solid var(--line);border-radius:10px;padding:10px;margin-top:8px;background:#fff;color:var(--ink)}
+textarea{min-height:76px;resize:vertical}
+.q{font-weight:600;margin:0}
+.plan{width:100%;border-collapse:collapse;font-size:16px;margin:6px 0}
+.plan td{border-top:1px solid var(--line);padding:9px 6px;vertical-align:top}.plan td:first-child{font-weight:600;width:42%}
+.tbc{display:inline-block;background:var(--warnbg);color:var(--warn);border-radius:6px;padding:1px 7px;font-size:14px;font-weight:600}
+.keep{color:var(--acc);font-weight:600}.stop{color:var(--bad);font-weight:600}
+.time{font-size:16px;margin:8px 0}.time b{display:block;margin-top:10px}.time span{display:block}
+.you{background:var(--warnbg);border-radius:12px;padding:10px 12px;margin:10px 0;font-size:16px}
+.risk{width:100%;border-collapse:collapse;font-size:15px}.risk td{border-top:1px solid var(--line);padding:7px 4px;vertical-align:top}.risk td:last-child{color:var(--muted);width:40%}
+details{margin:8px 0}summary{cursor:pointer;color:var(--acc);font-weight:600;font-size:16px;padding:6px 0}
+.ack{display:flex;gap:12px;align-items:flex-start;border:2px solid var(--line);border-radius:12px;padding:12px;margin-top:12px;cursor:pointer;font-weight:600}
+.ack.on{border-color:var(--acc);background:var(--accs)}.ack .box{flex:0 0 26px;height:26px;border:2px solid var(--acc);border-radius:6px;text-align:center;line-height:22px;color:#fff}
+.ack.on .box{background:var(--acc)}
+.miss{outline:2px solid var(--bad);outline-offset:3px;border-radius:12px}
+.big{display:block;width:100%;min-height:56px;border:0;border-radius:12px;background:var(--acc);color:#fff;font-size:19px;font-weight:700;margin-top:18px}
+.big:disabled{opacity:.5}.err{color:var(--bad);font-weight:600;margin-top:10px}
+.done{text-align:center;padding:40px 10px}.tick{font-size:56px;color:var(--acc)}
+.lock{font-size:13px;color:var(--muted);margin-top:8px}
+a{color:var(--acc)}footer{margin-top:36px;font-size:13px;color:var(--muted)}
+.preview{background:#222;color:#fff;font-size:14px;padding:8px 12px;border-radius:10px;margin-bottom:10px}
+</style></head><body><main id="m"><p class="muted">Loading your plan…</p></main>
+<script>
+// Personalised pre-op page. The plan travels encrypted: the server holds only ciphertext, the key is in the
+// link's #fragment (never sent to any server). Answers are sealed on this phone to Dr Halvey's public key.
+const BASE="https://bbwjroytqxynborrqylr.supabase.co/functions/v1/preop-web";
+const INFO=new TextEncoder().encode("preop-v1");
+const b64e=u8=>btoa(String.fromCharCode(...u8)).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+const b64d=s=>Uint8Array.from(atob(s.replace(/-/g,"+").replace(/_/g,"/")+"=".repeat((4-s.length%4)%4)),c=>c.charCodeAt(0));
+async function openPlan(keyB64,box){const k=await crypto.subtle.importKey("raw",b64d(keyB64),"AES-GCM",false,["decrypt"]);
+  const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64d(box.iv)},k,b64d(box.ct));return JSON.parse(new TextDecoder().decode(pt));}
+async function seal(pubJwk,obj){const pub=await crypto.subtle.importKey("jwk",{kty:"EC",crv:"P-256",x:pubJwk.x,y:pubJwk.y},{name:"ECDH",namedCurve:"P-256"},false,[]);
+  const eph=await crypto.subtle.generateKey({name:"ECDH",namedCurve:"P-256"},true,["deriveBits"]);
+  const bits=await crypto.subtle.deriveBits({name:"ECDH",public:pub},eph.privateKey,256);
+  const hk=await crypto.subtle.importKey("raw",bits,"HKDF",false,["deriveKey"]);
+  const aes=await crypto.subtle.deriveKey({name:"HKDF",hash:"SHA-256",salt:new Uint8Array(0),info:INFO},hk,{name:"AES-GCM",length:256},false,["encrypt"]);
+  const iv=crypto.getRandomValues(new Uint8Array(12));
+  const ct=await crypto.subtle.encrypt({name:"AES-GCM",iv},aes,new TextEncoder().encode(JSON.stringify(obj)));
+  const epk=await crypto.subtle.exportKey("jwk",eph.publicKey);return{v:1,epk:{x:epk.x,y:epk.y},iv:b64e(iv),ct:b64e(new Uint8Array(ct))};}
+
+const m=document.getElementById("m");
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const t=new URLSearchParams(location.search).get("t")||"";
+const key=new URLSearchParams(location.hash.slice(1)).get("k")||"";
+let P=null,PUB=null,A={rec:{},recNote:{},q:{},plan:false,anaes:false,ask:"",call:null,callTimes:[]};
+
+function fail(msg){m.innerHTML=`<h1>Your anaesthetic plan</h1><div class="card"><p>${msg}</p><p class="muted">If you need help, call the rooms on <a href="tel:0862676200">(08) 6267 6200</a>.</p></div>`;}
+
+function choice(id,opts,val){return `<div class="yn" data-g="${id}">`+opts.map(o=>`<button type="button" data-v="${esc(o)}" class="${val===o?"on":""}">${esc(o)}</button>`).join("")+`</div>`;}
+
+function render(){
+  const R=P.record,Q=P.questions||[],L=P.plan,N=P.anaesthetic;
+  let h=P.preview?`<div class="preview">PREVIEW for Dr Halvey. Not sent. Answers here go nowhere.</div>`:"";
+  h+=`<p class="who">From Dr Ed Halvey, your anaesthetist</p><h1>Hi ${esc(P.first)}, here is your anaesthetic plan</h1>
+  <div class="op"><b>${esc(P.operation)}</b>${esc(P.surgeon)}, ${esc(P.hospital)}<br>${esc(P.dateText)}</div>
+  <p class="muted">About 5 minutes. Five short parts. Your answers go only to Dr Halvey.</p>`;
+
+  // 1 record
+  h+=`<div class="card" id="s1"><h2><span class="num">1</span>Is this right?</h2><p class="muted">This is what I have about you from your hospital forms and records. Please tell me if anything is wrong or missing.</p>`;
+  for(const s of R){h+=`<div class="item" id="r_${s.id}"><div class="lab">${esc(s.label)}</div><ul class="rec">${s.items.map(i=>`<li>${esc(i)}</li>`).join("")}</ul>
+    ${choice("rec:"+s.id,["Correct","Something is wrong"],A.rec[s.id])}
+    ${A.rec[s.id]==="Something is wrong"?`<textarea data-t="recNote:${s.id}" placeholder="What should it say?">${esc(A.recNote[s.id]||"")}</textarea>`:""}</div>`;}
+  h+=`</div>`;
+
+  // 2 questions
+  if(Q.length){h+=`<div class="card" id="s2"><h2><span class="num">2</span>A few questions</h2><p class="muted">These are the things I would otherwise ask you on the phone.</p>`;
+    for(const q of Q){h+=`<div class="item" id="q_${q.id}"><p class="q">${esc(q.q)}</p>${q.hint?`<p class="muted">${esc(q.hint)}</p>`:""}
+      ${q.options?choice("q:"+q.id,q.options,(A.q[q.id]||{}).c):""}
+      ${(!q.options||q.text)?`<textarea data-t="q:${q.id}" placeholder="${esc(q.placeholder||"Your answer")}">${esc((A.q[q.id]||{}).t||"")}</textarea>`:""}</div>`;}
+    h+=`</div>`;}
+
+  // 3 plan
+  h+=`<div class="card" id="s3"><h2><span class="num">3</span>Your plan for the day</h2>
+    <h3>Arrive</h3><p><b>${esc(L.arrive)}</b></p>
+    <h3>Eating and drinking</h3>${L.fastingNote?`<p class="muted">${esc(L.fastingNote)}</p>`:""}
+    <div class="time">${L.fasting.map(f=>`<b>${esc(f.when)}</b><span>${esc(f.what)}</span>`).join("")}</div>
+    ${L.fastingLink?`<p class="muted"><a href="${esc(L.fastingLink)}">Why the special fasting rules</a></p>`:""}
+    <h3>Your medicines</h3><table class="plan">${L.meds.map(x=>`<tr><td>${esc(x.name)}</td><td>${x.tbc?`<span class="tbc">To confirm</span> `:""}<span class="${x.cls||""}">${esc(x.action)}</span>${x.detail?`<br><span class="muted">${esc(x.detail)}</span>`:""}</td></tr>`).join("")}</table>
+    ${L.note?`<p class="muted">${esc(L.note)}</p>`:""}
+    <div class="ack ${A.plan?"on":""}" data-a="plan"><span class="box">${A.plan?"✓":""}</span><span>I understand my plan for the day</span></div></div>`;
+
+  // 4 anaesthetic
+  h+=`<div class="card" id="s4"><h2><span class="num">4</span>Your anaesthetic</h2>${N.plan.map(p=>`<p>${esc(p)}</p>`).join("")}${N.painLink?`<p><a href="${esc(N.painLink.u)}">${esc(N.painLink.t)}</a></p>`:""}
+    ${N.forYou&&N.forYou.length?`<div class="you"><b>Things that matter for you</b><ul class="rec">${N.forYou.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+    <h3>Common and serious risks</h3><p class="muted">${esc(N.riskIntro)}</p>
+    ${N.risks.map(g=>`<details><summary>${esc(g.title)}</summary><table class="risk">${g.rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</table>${g.source?`<p class="muted">${esc(g.source)}</p>`:""}</details>`).join("")}
+    ${N.alternatives?`<h3>Other options</h3><p>${esc(N.alternatives)}</p>`:""}
+    <p class="muted">${(N.links||[]).map(l=>`<a href="${esc(l.u)}">${esc(l.t)}</a>`).join(" · ")}</p>
+    <div class="ack ${A.anaes?"on":""}" data-a="anaes"><span class="box">${A.anaes?"✓":""}</span><span>I have read this. I know I can ask questions, and I will go through it with Dr Halvey on the day.</span></div></div>`;
+
+  // 5 questions / call
+  h+=`<div class="card" id="s5"><h2><span class="num">5</span>Anything you would like to ask?</h2>
+    <textarea data-t="ask" placeholder="Type any question or worry (optional)">${esc(A.ask)}</textarea>
+    <p class="q" style="margin-top:14px">Would you like Dr Halvey to call you before the day?</p>
+    ${choice("call",["Yes, please call me","No, I'm happy"],A.call)}
+    ${A.call==="Yes, please call me"?`<p class="muted" style="margin-top:10px">Best times (tick any):</p>${choice("times",["Morning","Afternoon","Evening"],null)}<p class="muted">He will call from 0481 893 953.</p>`:""}
+  </div>
+  <div id="err" class="err"></div><button class="big" id="go">Send to Dr Halvey</button>
+  <p class="lock">Your answers are locked on this phone so only Dr Halvey can read them. This is not for urgent problems: if you are unwell call the rooms on (08) 6267 6200, or 000 in an emergency.</p>
+  <footer>This page is for ${esc(P.first)} only. Please do not forward the link.</footer>`;
+  m.innerHTML=h;
+  document.querySelectorAll('[data-g="times"] button').forEach(b=>{if(A.callTimes.includes(b.dataset.v))b.classList.add("on");});
+  m.querySelectorAll("details").forEach((d,i)=>{if(OPEN.has(i))d.open=true;});
+  wire();
+}
+
+function wire(){
+  m.querySelectorAll(".yn button").forEach(b=>b.onclick=()=>{const g=b.parentElement.dataset.g,v=b.dataset.v;keepText();
+    if(g==="times"){const i=A.callTimes.indexOf(v);i<0?A.callTimes.push(v):A.callTimes.splice(i,1);b.classList.toggle("on");return;}
+    const [k,id]=g.split(":");if(k==="rec")A.rec[id]=v;else if(k==="q"){A.q[id]=A.q[id]||{};A.q[id].c=v;}else if(k==="call")A.call=v;
+    const y=scrollY;keepOpen();render();scrollTo(0,y);});
+  m.querySelectorAll(".ack").forEach(d=>d.onclick=()=>{keepText();A[d.dataset.a]=!A[d.dataset.a];const y=scrollY;keepOpen();render();scrollTo(0,y);});
+  document.getElementById("go").onclick=send;
+}
+let OPEN=new Set();function keepOpen(){OPEN=new Set();m.querySelectorAll("details").forEach((d,i)=>{if(d.open)OPEN.add(i);});}
+function keepText(){m.querySelectorAll("textarea[data-t]").forEach(x=>{const [k,id]=x.dataset.t.split(":");
+  if(k==="ask")A.ask=x.value;else if(k==="recNote")A.recNote[id]=x.value;else if(k==="q"){A.q[id]=A.q[id]||{};A.q[id].t=x.value;}});}
+
+async function send(){
+  keepText();const e=document.getElementById("err");m.querySelectorAll(".miss").forEach(x=>x.classList.remove("miss"));
+  const miss=[];for(const s of P.record)if(!A.rec[s.id])miss.push("r_"+s.id);
+  if(!A.plan)miss.push("s3");if(!A.anaes)miss.push("s4");if(!A.call)miss.push("s5");
+  if(miss.length){miss.forEach(i=>document.getElementById(i)&&document.getElementById(i).classList.add("miss"));
+    e.textContent="Please finish the parts marked in red.";document.getElementById(miss[0]).scrollIntoView({behavior:"smooth",block:"center"});return;}
+  const out={v:1,at:new Date().toISOString(),rec:A.rec,recNote:A.recNote,q:A.q,plan:A.plan,anaes:A.anaes,ask:A.ask,call:A.call==="Yes, please call me",callTimes:A.callTimes};
+  const b=document.getElementById("go");b.disabled=true;b.textContent="Sending…";
+  try{
+    if(P.preview){await new Promise(r=>setTimeout(r,400));}
+    else{const sealed=await seal(PUB,out);const r=await fetch(BASE+"/api/submit",{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({t,sealed})});
+      const j=await r.json();if(!j.ok)throw new Error(j.error||"failed");}
+    m.innerHTML=`<div class="done"><div class="tick">✓</div><h1>Thank you, ${esc(P.first)}</h1><p>Dr Halvey has your answers.${out.call?" He will call you from 0481 893 953.":""}</p><p class="muted">You can close this page.</p></div>`;scrollTo(0,0);
+  }catch(x){b.disabled=false;b.textContent="Send to Dr Halvey";e.textContent="That did not send. Please check your connection and try again.";}
+}
+
+(async()=>{
+  if(!t||!key){fail("This link is not complete. Please open it straight from the text message.");return;}
+  try{const r=await fetch(BASE+"/api/get?t="+encodeURIComponent(t));const j=await r.json();
+    if(j.done){m.innerHTML=`<div class="done"><div class="tick">✓</div><h1>All done</h1><p>Dr Halvey already has your answers. Thank you.</p></div>`;return;}
+    if(!j.box){fail("This link has expired or is not valid.");return;}
+    PUB=j.pub;P=await openPlan(key,j.box);render();
+  }catch(x){fail("Sorry, your plan could not be opened.");}
+})();
+</script></body></html>
