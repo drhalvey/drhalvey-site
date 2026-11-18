@@ -40,6 +40,7 @@ details{margin:8px 0}summary{cursor:pointer;color:var(--acc);font-weight:600;fon
 .lock{font-size:13px;color:var(--muted);margin-top:8px}
 a{color:var(--acc)}footer{margin-top:36px;font-size:13px;color:var(--muted)}
 .preview{background:#222;color:#fff;font-size:14px;padding:8px 12px;border-radius:10px;margin-bottom:10px}
+.opts{display:flex;flex-direction:column;gap:10px;margin:8px 0 14px}.opt{display:flex;gap:12px;align-items:flex-start;padding:14px;border:2px solid #d6dde0;border-radius:12px;cursor:pointer;background:#fff}.opt.on{border-color:#1f6f6b;background:#eef7f6}.opt .box{flex:0 0 26px;height:26px;border:2px solid #1f6f6b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#1f6f6b}
 </style></head><body><main id="m"><p class="muted">Loading your plan…</p></main>
 <script>
 // Personalised pre-op page. The plan travels encrypted: the server holds only ciphertext, the key is in the
@@ -63,7 +64,7 @@ const m=document.getElementById("m");
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const t=new URLSearchParams(location.search).get("t")||"";
 const key=new URLSearchParams(location.hash.slice(1)).get("k")||"";
-let P=null,PUB=null,A={rec:{},recNote:{},q:{},plan:false,anaes:false,ask:"",call:null};
+let P=null,PUB=null,A={rec:{},recNote:{},q:{},plan:false,anaes:false,ask:"",call:null,opt:null};
 
 function fail(msg){m.innerHTML=`<h1>Your anaesthetic plan</h1><div class="card"><p>${msg}</p><p class="muted">If you need help, call the rooms on <a href="tel:0862676200">(08) 6267 6200</a>.</p></div>`;}
 
@@ -105,6 +106,7 @@ function render(){
     ${N.forYou&&N.forYou.length?`<div class="you"><b>Things that matter for you</b><ul class="rec">${N.forYou.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
     <h3>Common and serious risks</h3><p class="muted">${esc(N.riskIntro)}</p>
     ${N.risks.map(g=>`<details><summary>${esc(g.title)}</summary><table class="risk">${g.rows.map(r=>`<tr><td>${esc(r[0])}</td><td>${esc(r[1])}</td></tr>`).join("")}</table>${g.source?`<p class="muted">${esc(g.source)}</p>`:""}</details>`).join("")}
+    ${N.options&&N.options.length?`<h3>Which would you prefer?</h3><div class="opts" id="opts">${N.options.map(o=>typeof o==="string"?{label:o}:{label:o.label||o.name||o.title||o.t||o.option||"",text:o.text||o.detail||o.description||o.desc||o.d||""}).filter(o=>o.label).map((o,i)=>`<div class="opt ${A.opt===o.label?"on":""}" data-o="${esc(o.label)}"><span class="box">${A.opt===o.label?"✓":""}</span><span><b>Option ${i+1}: ${esc(o.label)}</b>${o.text?`<br><span class="muted">${esc(o.text)}</span>`:""}</span></div>`).join("")}<div class="opt ${A.opt==="Not sure yet"?"on":""}" data-o="Not sure yet"><span class="box">${A.opt==="Not sure yet"?"✓":""}</span><span><b>Not sure yet</b><br><span class="muted">I would like to talk it through with Dr Halvey.</span></span></div></div>`:""}
     ${N.alternatives?`<h3>Other options</h3><p>${esc(N.alternatives)}</p>`:""}
     <p class="muted">${(N.links||[]).map(l=>`<a href="${esc(l.u)}">${esc(l.t)}</a>`).join(" · ")}</p>
     <div class="ack ${A.anaes?"on":""}" data-a="anaes"><span class="box">${A.anaes?"✓":""}</span><span>I have read this. I know I can ask questions, and I will go through it with Dr Halvey on the day.</span></div></div>`;
@@ -121,9 +123,10 @@ function render(){
   <footer>This page is for ${esc(P.first)} only. Please do not forward the link.</footer>`;
   m.innerHTML=h;
   m.querySelectorAll("details").forEach((d,i)=>{if(OPEN.has(i))d.open=true;});
-  wire();
+  wire();wireOpts();
 }
 
+function wireOpts(){m.querySelectorAll(".opt").forEach(e=>e.onclick=()=>{A.opt=e.dataset.o;render();});}
 function wire(){
   m.querySelectorAll(".yn button").forEach(b=>b.onclick=()=>{const g=b.parentElement.dataset.g,v=b.dataset.v;keepText();
     const [k,id]=g.split(":");if(k==="rec")A.rec[id]=v;else if(k==="q"){A.q[id]=A.q[id]||{};A.q[id].c=v;}else if(k==="call")A.call=v;
@@ -141,7 +144,7 @@ async function send(){
   if(!A.plan)miss.push("s3");if(!A.anaes)miss.push("s4");if(!A.call)miss.push("s5");
   if(miss.length){miss.forEach(i=>document.getElementById(i)&&document.getElementById(i).classList.add("miss"));
     e.textContent="Please finish the parts marked in red.";document.getElementById(miss[0]).scrollIntoView({behavior:"smooth",block:"center"});return;}
-  const out={v:1,at:new Date().toISOString(),rec:A.rec,recNote:A.recNote,q:A.q,plan:A.plan,anaes:A.anaes,ask:A.ask,call:A.call==="Yes, please call me"};
+  const out={v:1,at:new Date().toISOString(),rec:A.rec,recNote:A.recNote,q:A.q,plan:A.plan,anaes:A.anaes,ask:A.ask,call:A.call==="Yes, please call me",anaesthetic_choice:A.opt};
   const b=document.getElementById("go");b.disabled=true;b.textContent="Sending…";
   try{
     if(P.preview){await new Promise(r=>setTimeout(r,400));}
