@@ -154,13 +154,18 @@ async function send(){
   }catch(x){b.disabled=false;b.textContent="Send to Dr Halvey";e.textContent="That did not send. Please check your connection and try again.";}
 }
 
+// Ed 19/11/2026 (a patient could not open his link and the server never heard from his phone): each step is reported
+// to the store as a short code (no key, no answers), so a failed open shows where it stopped.
+function ping(s){try{fetch(BASE+"/api/ping?t="+encodeURIComponent(t.slice(0,40))+"&s="+encodeURIComponent(s),{mode:"no-cors",keepalive:true}).catch(()=>{});}catch(e){}}
+window.addEventListener("error",e=>ping("jserr:"+String(e.message||"").slice(0,60)));
 (async()=>{
   if(window.PREOP){P=window.PREOP;P.preview=true;render();return;}   // SIOP's approval preview: content handed in, nothing fetched or sent
-  if(!t||!key){fail("This link is not complete. Please open it straight from the text message.");return;}
+  ping("load"+(key?"":"-nokey")+(window.crypto&&crypto.subtle?"":"-nocrypto"));
+  if(!t||!key){fail("This link is not complete. Please open it straight from the text message, or reply to the text and Dr Halvey will call you.");return;}
   try{const r=await fetch(BASE+"/api/get?t="+encodeURIComponent(t));const j=await r.json();
     if(j.done){m.innerHTML=`<div class="done"><div class="tick">✓</div><h1>All done</h1><p>Dr Halvey already has your answers. Thank you.</p></div>`;return;}
     if(!j.box){fail("This link has expired or is not valid.");return;}
-    PUB=j.pub;P=await openPlan(key,j.box);render();
-  }catch(x){fail("Sorry, your plan could not be opened.");}
+    PUB=j.pub;try{P=await openPlan(key,j.box);}catch(y){ping("decrypt:"+(y&&y.name||"?"));fail("Sorry, your plan could not be opened. Please reply to the text and Dr Halvey will call you.");return;}render();ping("shown");
+  }catch(x){ping("fetch:"+(x&&x.name||"?"));fail("Sorry, your plan could not be opened. Please check you are connected to the internet and try again, or reply to the text and Dr Halvey will call you.");}
 })();
 </script></body></html>
