@@ -182,7 +182,10 @@ window.addEventListener("error",e=>ping("jserr:"+String(e.message||"").slice(0,6
   try{const r=await fetch(BASE+"/api/get?t="+encodeURIComponent(t));const j=await r.json();
     if(j.done){m.innerHTML=`<div class="done"><div class="tick">✓</div><h1>All done</h1><p>Dr Halvey already has your answers. Thank you.</p></div>`;return;}
     if(!j.box){ping("get:"+r.status);fail(r.status===410?"This link has expired. Please reply to Dr Halvey's text and he will call you.":"This link is not working. Please open it straight from the text message. If you typed it in, check each letter and number.");return;}
-    PUB=j.pub;try{P=await openPlan(key,j.box);}catch(y){ping("decrypt:"+(y&&y.name||"?"));fail("Sorry, your plan could not be opened. Please reply to the text and Dr Halvey will call you.");return;}render();ping("shown");
+    PUB=j.pub;try{P=await openPlan(key,j.box);}catch(y){ping("decrypt:"+(y&&y.name||"?"));fail("Sorry, your plan could not be opened. Please reply to the text and Dr Halvey will call you.");return;}
+    // Ed 19/11/2026: a page that fails while drawing is not a connection problem; report it as render and say so plainly.
+    try{render();}catch(z){ping("render:"+String(z&&z.message||"?").slice(0,50));fail("Sorry, your plan could not be shown on this phone or tablet. Please reply to Dr Halvey's text and he will call you.");return;}
+    ping("shown");
   }catch(x){ping("fetch:"+(x&&x.name||"?"));fail("Sorry, your plan could not be opened. Please check you are connected to the internet and try again, or reply to the text and Dr Halvey will call you.");}
 })();
 </script></body></html>
