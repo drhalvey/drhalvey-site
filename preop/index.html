@@ -45,9 +45,10 @@ a{color:var(--acc)}footer{margin-top:36px;font-size:13px;color:var(--muted)}
 <script>
 // Ed 19/11/2026: plain old JavaScript that even an old phone runs. It reports that the page arrived, and if the main
 // script cannot run on this phone (nothing shown after 10 seconds) it says so and asks the patient to reply to the text.
-(function(){var t=(location.search.match(/[?&]t=([A-Za-z0-9_-]+)/)||[])[1]||"";
+(function(){var t=(location.search.match(/[?&]t=([A-Za-z0-9_-]+)/)||[])[1]||"",h=location.hash;
+if(!t&&h&&h.indexOf("k=")<0){t=h.slice(1).toUpperCase().replace(/O/g,"0").replace(/[IL]/g,"1").replace(/[^0-9A-Z]/g,"").slice(0,8);}
 function p(s){try{var x=new XMLHttpRequest();x.open("GET","https://bbwjroytqxynborrqylr.supabase.co/functions/v1/preop-web/api/ping?t="+t.slice(0,40)+"&s="+s);x.send();}catch(e){}}
-p("boot"+(location.hash.indexOf("k=")>-1?"":"-nokey"));
+p("boot"+(h.indexOf("k=")>-1||t.length===8?"":"-nokey"));
 setTimeout(function(){var m=document.getElementById("m");if(m&&m.innerHTML.indexOf("Loading your plan")>-1){p("stuck");
 m.innerHTML='<h1>Your anaesthetic plan</h1><div class="card"><p>Sorry, your plan will not open on this phone or tablet.</p><p>Please reply to Dr Halvey\'s text and he will call you.</p></div>';}},10000);})();
 </script>
@@ -58,7 +59,11 @@ const BASE="https://bbwjroytqxynborrqylr.supabase.co/functions/v1/preop-web";
 const INFO=new TextEncoder().encode("preop-v1");
 const b64e=u8=>btoa(String.fromCharCode(...u8)).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
 const b64d=s=>Uint8Array.from(atob(s.replace(/-/g,"+").replace(/_/g,"/")+"=".repeat((4-s.length%4)%4)),c=>c.charCodeAt(0));
-async function openPlan(keyB64,box){const k=await crypto.subtle.importKey("raw",b64d(keyB64),"AES-GCM",false,["decrypt"]);
+// Short links (Ed 19/11/2026): drhalvey.com.au/p/#XXXXXXXX + 26 more. Capitals and digits only (Crockford base32): the first
+// 8 are the page id, the last 26 the 128-bit key. Case, spaces and hyphens are ignored and O/0, I/L/1 read alike, so a retyped link still works.
+const C32="0123456789ABCDEFGHJKMNPQRSTVWXYZ";
+function c32d(s){let bits=0,val=0;const out=[];for(const ch of s){const v=C32.indexOf(ch);if(v<0)throw new Error("bad");val=((val<<5)|v)&0xffff;bits+=5;if(bits>=8){bits-=8;out.push((val>>bits)&255);}}return new Uint8Array(out.slice(0,16));}
+async function openPlan(keyStr,box){const k=await crypto.subtle.importKey("raw",SHORT?c32d(keyStr):b64d(keyStr),"AES-GCM",false,["decrypt"]);
   const pt=await crypto.subtle.decrypt({name:"AES-GCM",iv:b64d(box.iv)},k,b64d(box.ct));return JSON.parse(new TextDecoder().decode(pt));}
 async function seal(pubJwk,obj){const pub=await crypto.subtle.importKey("jwk",{kty:"EC",crv:"P-256",x:pubJwk.x,y:pubJwk.y},{name:"ECDH",namedCurve:"P-256"},false,[]);
   const eph=await crypto.subtle.generateKey({name:"ECDH",namedCurve:"P-256"},true,["deriveBits"]);
@@ -71,8 +76,11 @@ async function seal(pubJwk,obj){const pub=await crypto.subtle.importKey("jwk",{k
 
 const m=document.getElementById("m");
 const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const t=new URLSearchParams(location.search).get("t")||"";
-const key=new URLSearchParams(location.hash.slice(1)).get("k")||"";
+let t=new URLSearchParams(location.search).get("t")||"";
+let key=new URLSearchParams(location.hash.slice(1)).get("k")||"";
+let SHORT=false;
+if(!t&&!key&&location.hash.length>1){const c=location.hash.slice(1).toUpperCase().replace(/O/g,"0").replace(/[IL]/g,"1").replace(/[^0-9A-Z]/g,"");
+  SHORT=true;if(c.length>=34){t=c.slice(0,8);key=c.slice(8,34);}}
 let P=null,PUB=null,A={rec:{},recNote:{},q:{},plan:false,anaes:false,ask:"",call:null,opt:null};
 
 function fail(msg){m.innerHTML=`<h1>Your anaesthetic plan</h1><div class="card"><p>${msg}</p><p class="muted">If you need help, reply to Dr Halvey's text and he will call you.</p></div>`;}
@@ -173,7 +181,7 @@ window.addEventListener("error",e=>ping("jserr:"+String(e.message||"").slice(0,6
   if(!t||!key){fail("This link is not complete. Please open it straight from the text message, or reply to the text and Dr Halvey will call you.");return;}
   try{const r=await fetch(BASE+"/api/get?t="+encodeURIComponent(t));const j=await r.json();
     if(j.done){m.innerHTML=`<div class="done"><div class="tick">✓</div><h1>All done</h1><p>Dr Halvey already has your answers. Thank you.</p></div>`;return;}
-    if(!j.box){fail("This link has expired or is not valid.");return;}
+    if(!j.box){ping("get:"+r.status);fail(r.status===410?"This link has expired. Please reply to Dr Halvey's text and he will call you.":"This link is not working. Please open it straight from the text message. If you typed it in, check each letter and number.");return;}
     PUB=j.pub;try{P=await openPlan(key,j.box);}catch(y){ping("decrypt:"+(y&&y.name||"?"));fail("Sorry, your plan could not be opened. Please reply to the text and Dr Halvey will call you.");return;}render();ping("shown");
   }catch(x){ping("fetch:"+(x&&x.name||"?"));fail("Sorry, your plan could not be opened. Please check you are connected to the internet and try again, or reply to the text and Dr Halvey will call you.");}
 })();

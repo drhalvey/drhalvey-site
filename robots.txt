@@ -6,5 +6,6 @@ Disallow: /ortho/
 Disallow: /surgery/
 Disallow: /feedback/
 Disallow: /preop/
+Disallow: /p/
 
 Sitemap: https://drhalvey.com.au/sitemap.xml
