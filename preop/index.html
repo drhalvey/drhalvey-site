@@ -49,7 +49,7 @@ a{color:var(--acc)}footer{margin-top:36px;font-size:13px;color:var(--muted)}
 function p(s){try{var x=new XMLHttpRequest();x.open("GET","https://bbwjroytqxynborrqylr.supabase.co/functions/v1/preop-web/api/ping?t="+t.slice(0,40)+"&s="+s);x.send();}catch(e){}}
 p("boot"+(location.hash.indexOf("k=")>-1?"":"-nokey"));
 setTimeout(function(){var m=document.getElementById("m");if(m&&m.innerHTML.indexOf("Loading your plan")>-1){p("stuck");
-m.innerHTML='<h1>Your anaesthetic plan</h1><div class="card"><p>Sorry, your plan will not open on this phone or tablet.</p><p>Please reply to Dr Halvey\'s text and he will call you, or call the rooms on <a href="tel:0862676200">(08) 6267 6200</a>.</p></div>';}},10000);})();
+m.innerHTML='<h1>Your anaesthetic plan</h1><div class="card"><p>Sorry, your plan will not open on this phone or tablet.</p><p>Please reply to Dr Halvey\'s text and he will call you.</p></div>';}},10000);})();
 </script>
 <script>
 // Personalised pre-op page. The plan travels encrypted: the server holds only ciphertext, the key is in the
@@ -75,7 +75,7 @@ const t=new URLSearchParams(location.search).get("t")||"";
 const key=new URLSearchParams(location.hash.slice(1)).get("k")||"";
 let P=null,PUB=null,A={rec:{},recNote:{},q:{},plan:false,anaes:false,ask:"",call:null,opt:null};
 
-function fail(msg){m.innerHTML=`<h1>Your anaesthetic plan</h1><div class="card"><p>${msg}</p><p class="muted">If you need help, call the rooms on <a href="tel:0862676200">(08) 6267 6200</a>.</p></div>`;}
+function fail(msg){m.innerHTML=`<h1>Your anaesthetic plan</h1><div class="card"><p>${msg}</p><p class="muted">If you need help, reply to Dr Halvey's text and he will call you.</p></div>`;}
 
 function choice(id,opts,val){return `<div class="yn" data-g="${id}">`+opts.map(o=>`<button type="button" data-v="${esc(o)}" class="${val===o?"on":""}">${esc(o)}</button>`).join("")+`</div>`;}
 
@@ -128,7 +128,7 @@ function render(){
     ${A.call==="Yes, please call me"?`<p class="muted" style="margin-top:10px">He will call you from 0481 893 953 when he can, so please keep an eye out for that number.</p>`:""}
   </div>
   <div id="err" class="err"></div><button class="big" id="go">Send to Dr Halvey</button>
-  <p class="lock">Your answers are locked on this phone so only Dr Halvey can read them. This is not for urgent problems: if you are unwell call the rooms on (08) 6267 6200, or 000 in an emergency.</p>
+  <p class="lock">Your answers are locked on this phone so only Dr Halvey can read them. This is not for urgent problems: in an emergency call 000.</p>
   <footer>This page is for ${esc(P.first)} only. Please do not forward the link.</footer>`;
   m.innerHTML=h;
   m.querySelectorAll("details").forEach((d,i)=>{if(OPEN.has(i))d.open=true;});
