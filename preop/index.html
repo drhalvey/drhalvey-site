@@ -43,6 +43,15 @@ a{color:var(--acc)}footer{margin-top:36px;font-size:13px;color:var(--muted)}
 .opts{display:flex;flex-direction:column;gap:10px;margin:8px 0 14px}.opt{display:flex;gap:12px;align-items:flex-start;padding:14px;border:2px solid #d6dde0;border-radius:12px;cursor:pointer;background:#fff}.opt.on{border-color:#1f6f6b;background:#eef7f6}.opt .box{flex:0 0 26px;height:26px;border:2px solid #1f6f6b;border-radius:6px;display:flex;align-items:center;justify-content:center;font-weight:700;color:#1f6f6b}
 </style></head><body><main id="m"><p class="muted">Loading your plan…</p></main>
 <script>
+// Ed 19/11/2026: plain old JavaScript that even an old phone runs. It reports that the page arrived, and if the main
+// script cannot run on this phone (nothing shown after 10 seconds) it says so and asks the patient to reply to the text.
+(function(){var t=(location.search.match(/[?&]t=([A-Za-z0-9_-]+)/)||[])[1]||"";
+function p(s){try{var x=new XMLHttpRequest();x.open("GET","https://bbwjroytqxynborrqylr.supabase.co/functions/v1/preop-web/api/ping?t="+t.slice(0,40)+"&s="+s);x.send();}catch(e){}}
+p("boot"+(location.hash.indexOf("k=")>-1?"":"-nokey"));
+setTimeout(function(){var m=document.getElementById("m");if(m&&m.innerHTML.indexOf("Loading your plan")>-1){p("stuck");
+m.innerHTML='<h1>Your anaesthetic plan</h1><div class="card"><p>Sorry, your plan will not open on this phone or tablet.</p><p>Please reply to Dr Halvey\'s text and he will call you, or call the rooms on <a href="tel:0862676200">(08) 6267 6200</a>.</p></div>';}},10000);})();
+</script>
+<script>
 // Personalised pre-op page. The plan travels encrypted: the server holds only ciphertext, the key is in the
 // link's #fragment (never sent to any server). Answers are sealed on this phone to Dr Halvey's public key.
 const BASE="https://bbwjroytqxynborrqylr.supabase.co/functions/v1/preop-web";
