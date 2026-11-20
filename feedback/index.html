@@ -46,6 +46,15 @@ footer{margin-top:36px;font-size:13px;color:var(--muted)}
 <header><a href="../">Dr Ed Halvey</a></header>
 <main id="m"><p class="intro">Loading...</p></main>
 <script>
+// Ed 20/11/2026: plain old JavaScript that even an old phone runs. It reports that the page arrived and, if the form has
+// not appeared after 10 seconds (the main script cannot run on this phone), says so and reports it.
+(function(){var q=location.search,t=((q.match(/[?&]t=([A-Za-z0-9]+)/)||[])[1]||"").toLowerCase().slice(0,4),f=((q.match(/[?&]f=([a-z]+)/i)||[])[1]||"").toLowerCase();
+function p(s){try{var x=new XMLHttpRequest();x.open("GET","https://bbwjroytqxynborrqylr.supabase.co/functions/v1/feedback-web/api/ping?t="+t+"&f="+f+"&s="+s);x.send();}catch(e){}}
+p("boot");
+setTimeout(function(){var m=document.getElementById("m");if(m&&m.innerHTML.indexOf("Loading...")>-1){p("stuck");
+m.innerHTML='<h1>Anaesthetic feedback</h1><p class="intro">Sorry, this form will not open on this phone or tablet. You can reply to Dr Halvey\'s text instead. Thank you.</p>';}},10000);})();
+</script>
+<script>
 const API = "https://bbwjroytqxynborrqylr.supabase.co/functions/v1/feedback-web";
 const FORMS = {"general": {"title": "Anaesthetic Feedback Survey", "form": "General", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text", "req": true}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your operation?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "Did you feel sick or vomit after your anaesthetic?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "After waking up, did you have any of the following? (you can pick more than one)", "t": "many", "o": ["Sore throat", "Shivering", "Confusion or grogginess", "None of these"]}, {"q": "Before your operation, did the anaesthetist explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "hip": {"title": "Hip Replacement: Anaesthetic Feedback", "form": "Hip", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text", "req": true}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your operation?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "Did you feel sick or vomit after your anaesthetic?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "After waking up, did you have any of the following? (you can pick more than one)", "t": "many", "o": ["Sore throat", "Shivering", "Confusion or grogginess", "None of these"]}, {"q": "Before your operation, did the anaesthetist explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "knee": {"title": "Knee Replacement: Anaesthetic Feedback", "form": "Knee", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text"}, {"q": "What is your date of birth?", "t": "date"}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your operation?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "Did you feel sick or vomit after your anaesthetic?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "After waking up, did you have any of the following? (you can pick more than one)", "t": "many", "o": ["Sore throat", "Shivering", "Confusion or grogginess", "None of these"]}, {"q": "Before your operation, did the anaesthetist explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "caesarean": {"title": "Caesarean Anaesthetic Feedback", "form": "Caesarean", "intro": "This takes under a minute and helps us improve our care. Your answers are kept confidential within your care team.", "qs": [{"q": "Please enter your first and last name.", "t": "text"}, {"q": "What is your date of birth?", "t": "date"}, {"q": "What is your date of birth? (DD/MM/YYYY)", "t": "text"}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How well was your pain controlled after your caesarean?", "t": "one", "o": ["Very well", "Well", "Okay", "Poorly", "Very poorly"]}, {"q": "During your caesarean, were you comfortable and free of pain?", "t": "one", "o": ["Yes, completely comfortable", "Mostly comfortable", "I felt some discomfort or pain", "I felt a lot of pain"]}, {"q": "Did you feel sick or vomit during or after your caesarean?", "t": "one", "o": ["No", "Mild nausea", "Vomited once or twice", "Vomited several times"]}, {"q": "Did you have itching after your spinal or epidural?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Since your spinal or epidural, have you had a headache that is worse when sitting or standing up, and better when lying down?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Do you have any numbness, tingling, or weakness in your legs now?", "t": "one", "o": ["No", "Mild and improving", "Yes, and it is not improving"]}, {"q": "Before your caesarean, did the team explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect by the anaesthetic team?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}, "epidural": {"title": "Epidural Feedback", "form": "Epidural", "intro": "This takes under a minute and helps us improve our care. Your answers are confidential.", "qs": [{"q": "Please enter your first and last name.", "t": "text"}, {"q": "How likely are you to recommend our anaesthetic care to friends or family? (0 = not at all likely, 10 = extremely likely)", "t": "nps"}, {"q": "How good was the pain relief from your epidural?", "t": "one", "o": ["Excellent", "Good", "Okay", "Poor", "I did not get enough relief"]}, {"q": "Since your epidural, have you had a headache that is worse when sitting or standing up, and better when lying down?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Do you have any numbness, tingling, or weakness in your legs now?", "t": "one", "o": ["No", "Mild and improving", "Yes, and it is not improving"]}, {"q": "Do you have ongoing soreness at the injection site in your back?", "t": "one", "o": ["No", "Mild", "Moderate", "Severe"]}, {"q": "Before your epidural, did the team explain things clearly and answer your questions?", "t": "one", "o": ["Yes, completely", "Mostly", "Partly", "Not really"]}, {"q": "Were you treated with kindness and respect?", "t": "one", "o": ["Always", "Mostly", "Sometimes", "No"]}, {"q": "Is there anything we could have done better?", "t": "long"}]}};
 const P = new URLSearchParams(location.search);
@@ -55,6 +64,17 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",
 const CONF = "Your answers are confidential and go only to Dr Halvey and his practice. They are never published anywhere.";
 function bad(msg) { m.innerHTML = '<h1>Anaesthetic feedback</h1><p class="intro">' + esc(msg) + '</p>'; }
 const answers = {};
+// Ed 20/11/2026 ("do they get stuck, is the form shit"): anonymous step reports. Only the first 4 characters of the link,
+// the form, a step code (shown, ans:3 = question 3 first answered, miss:2, submit, sent, sendfail, hide:5 = left the page
+// after answering question 5, back) and the seconds since the form appeared. Never the answers.
+let SHOWN = 0, lastAns = 0, done = false;
+const seen = {};
+function ping(s) {
+  try { fetch(API + "/api/ping?t=" + encodeURIComponent(t.slice(0, 4)) + "&f=" + encodeURIComponent(f) + "&s=" + encodeURIComponent(s) + "&ms=" + (SHOWN ? Date.now() - SHOWN : 0), { mode: "no-cors", keepalive: true }).catch(() => {}); } catch (e) {}
+}
+function answered(i) { const n = Number(i) + 1; lastAns = Math.max(lastAns, n); if (!seen[n]) { seen[n] = 1; ping("ans:" + n); } }
+document.addEventListener("visibilitychange", () => { if (!SHOWN || done) return; ping(document.visibilityState === "hidden" ? "hide:" + lastAns : "back"); });
+window.addEventListener("error", (e) => ping("jserr:" + String(e.message || "").slice(0, 40)));
 
 let PF = null;   // prefill from SIOP for this link only: first name, full name, date of birth, operation
 function render(form) {
@@ -80,7 +100,7 @@ function render(form) {
   m.innerHTML = h;
   m.querySelectorAll(".scale button").forEach((b) => b.addEventListener("click", () => {
     const i = b.dataset.i; m.querySelectorAll('.scale button[data-i="' + i + '"]').forEach((x) => x.classList.toggle("on", x === b));
-    answers[i] = b.dataset.v;
+    answers[i] = b.dataset.v; answered(i);
   }));
   m.querySelectorAll(".opt input").forEach((inp) => inp.addEventListener("change", () => {
     const i = inp.dataset.i, q = form.qs[i];
@@ -90,14 +110,17 @@ function render(form) {
       else if (inp.checked) { picked = picked.filter((v) => v !== "None of these"); m.querySelectorAll('input[name="q' + i + '"]').forEach((x) => { if (x.value === "None of these") x.checked = false; }); }
       answers[i] = picked.length ? JSON.stringify(picked) : undefined;
     } else answers[i] = inp.value;
+    answered(i);
     m.querySelectorAll('input[name="q' + i + '"]').forEach((x) => x.closest(".opt").classList.toggle("on", x.checked));
   }));
   m.querySelectorAll("input[type=text],input[type=date],textarea").forEach((el) => el.addEventListener("input", () => {
     let v = el.value.trim();
     if (el.type === "date" && v) { const [y, mo, d] = v.split("-"); v = d + "/" + mo + "/" + y; }
     answers[el.dataset.i] = v || undefined;
+    if (v) answered(el.dataset.i);
   }));
   document.getElementById("go").addEventListener("click", () => submit(form));
+  SHOWN = Date.now(); ping("shown:" + form.qs.length + (PF ? ":prefilled" : ""));
   if (PF) form.qs.forEach((q, i) => {
     const el = m.querySelector('[data-i="' + i + '"]');
     if (!el) return;
@@ -115,16 +138,18 @@ async function submit(form) {
   const err = document.getElementById("err"); err.hidden = true;
   m.querySelectorAll(".miss").forEach((x) => x.classList.remove("miss"));
   const missing = form.qs.map((q, i) => (q.req && !answers[i] ? i : -1)).filter((i) => i >= 0);
-  if (missing.length) { const el = document.getElementById("q" + missing[0]); el.classList.add("miss"); el.scrollIntoView({behavior: "smooth", block: "center"}); err.textContent = "Please answer the question marked *."; err.hidden = false; return; }
+  if (missing.length) { ping("miss:" + (missing[0] + 1) + ":" + missing.length); const el = document.getElementById("q" + missing[0]); el.classList.add("miss"); el.scrollIntoView({behavior: "smooth", block: "center"}); err.textContent = "Please answer the question marked *."; err.hidden = false; return; }
   const out = {}; form.qs.forEach((q, i) => { if (answers[i] !== undefined && answers[i] !== "") out[q.q] = answers[i]; });
-  if (!Object.keys(out).length) { err.textContent = "Please answer at least one question."; err.hidden = false; return; }
+  if (!Object.keys(out).length) { ping("none"); err.textContent = "Please answer at least one question."; err.hidden = false; return; }
   const btn = document.getElementById("go"); btn.disabled = true; btn.textContent = "Sending...";
+  ping("submit");
   try {
     const r = await fetch(API + "/api/submit", { method: "POST", headers: {"content-type": "application/json"}, body: JSON.stringify({ t, f, answers: out }) });
-    if (r.status === 409) { thanks(true); return; }
+    if (r.status === 409) { done = true; ping("already"); thanks(true); return; }
     if (!r.ok) throw new Error(String(r.status));
-    thanks(false);
+    done = true; ping("sent"); thanks(false);
   } catch (e) {
+    ping("sendfail:" + String(e && e.message || "net").slice(0, 20));
     btn.disabled = false; btn.textContent = "Submit";
     err.textContent = "That did not send. Please check your connection and press Submit again."; err.hidden = false;
   }
@@ -136,14 +161,15 @@ function thanks(already) {
 
 (async () => {
   if (!FORMS[f] || !/^[a-z0-9]{10,16}$/.test(t)) { bad("This feedback link is not complete. Please open the link from your text message again."); return; }
+  ping("open");
   try {
     const r = await fetch(API + "/api/check?t=" + encodeURIComponent(t));
-    if (r.status === 404) { bad("This feedback link is not valid. Please open the link from your text message again."); return; }
+    if (r.status === 404) { ping("badlink"); bad("This feedback link is not valid. Please open the link from your text message again."); return; }
     const j = await r.json();
-    if (j.done) { thanks(true); return; }
+    if (j.done) { ping("reopened"); thanks(true); return; }
     PF = j.prefill || null;
     if (j.form !== f) { bad("This feedback link is not valid. Please open the link from your text message again."); return; }
-  } catch (e) { /* offline check: still show the form; submit will tell them */ }
+  } catch (e) { ping("checkfail"); /* offline check: still show the form; submit will tell them */ }
   render(FORMS[f]);
 })();
 </script>
